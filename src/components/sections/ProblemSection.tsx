@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function ProblemSection() {
   return (
     <section className="section problem-section" aria-labelledby="problema-title">
