@@ -61,36 +61,28 @@ export default function Header() {
         >
           {navigation.map((item) => {
             const hasChildren = !!item.children;
-            const isItemActive = isActive(item.href);
-            let liClassName = "";
-            if (hasChildren) {
-              liClassName = `nav-dropdown ${openDropdown === item.label ? "open" : ""}`;
-            } else if (isItemActive) {
-              liClassName = "active";
-            }
+            const isLinkActive = isActive(item.href);
 
-            return (
-              <li
-                key={item.label}
-                className={liClassName}
-              >
-                {hasChildren ? (
-                  <>
-                    <button
-                      className="nav-dropdown-toggle"
-                      aria-expanded={openDropdown === item.label}
-                      aria-haspopup="true"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setOpenDropdown(
-                          openDropdown === item.label ? null : item.label
-                        );
-                      }}
-                    >
-                      {item.label} <span className="arrow"></span>
-                    </button>
-                    <ul className="nav-dropdown-menu">
-                      {item.children?.map((child) => (
+            if (hasChildren) {
+              return (
+                <li
+                  key={item.label}
+                  className={`nav-dropdown ${openDropdown === item.label ? "open" : ""}`}
+                >
+                  <button
+                    className="nav-dropdown-toggle"
+                    aria-expanded={openDropdown === item.label}
+                    aria-haspopup="true"
+                    onClick={() =>
+                      setOpenDropdown(
+                        openDropdown === item.label ? null : item.label
+                      )
+                    }
+                  >
+                    {item.label} <span className="arrow"></span>
+                  </button>
+                  <ul className="nav-dropdown-menu">
+                    {item.children?.map((child) => (
                       <li key={child.label}>
                         <Link
                           href={child.href || "#"}
@@ -101,18 +93,22 @@ export default function Header() {
                       </li>
                     ))}
                   </ul>
-                </>
-              ) : (
+                </li>
+              );
+            }
+
+            return (
+              <li key={item.label} className={isLinkActive ? "active" : ""}>
                 <Link
                   href={item.href || "#"}
-                  aria-current={isActive(item.href) ? "page" : undefined}
+                  aria-current={isLinkActive ? "page" : undefined}
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
-              )}
-            </li>
-          ))}
+              </li>
+            );
+          })}
           <li>
             <a
               href={waDiagnostico()}
