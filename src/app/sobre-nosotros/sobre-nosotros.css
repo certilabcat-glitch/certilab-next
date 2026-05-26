@@ -1,0 +1,53 @@
+.hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 1.5rem;
+  background: var(--color-crema);
+}
+.hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-grey);
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--color-black);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+.hero-sub {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--color-dark);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.prose-block {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+.prose-block p {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-dark);
+  margin: 0 0 1.5rem;
+}
+@media (max-width: 767px) {
+  .hero {
+    padding: 4rem 1.5rem;
+    min-height: 50vh;
+  }
+}

@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-serif: 'Crimson Pro', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-terra: #8B6F47;
+  --color-terra-dark: #5C4A2A;
+  --color-terra-light: #C4A882;
+  --color-crema: #F5EFE6;
+  --color-verde: #4A7C59;
+  --color-black: #0A0A0A;
+  --color-dark: #333333;
+  --color-grey: #666666;
+  --color-border: #E8E4DD;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background: var(--color-crema);
+  color: var(--color-black);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Utilities ===== */
+.container-page {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== Trust bar ===== */
+.trust-bar {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  background: var(--color-crema);
+}
+
+/* ===== Trust block ===== */
+.trust-block {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.92rem;
+}
+
+/* ===== Highlight ===== */
+::selection {
+  background: var(--color-terra-light);
+  color: var(--color-black);
 }
