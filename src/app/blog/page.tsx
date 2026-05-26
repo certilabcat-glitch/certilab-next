@@ -3,19 +3,6 @@ import Link from "next/link";
 import { articles } from "@/data/articles";
 import "./blog.css";
 
-export const metadata: Metadata = {
-  title: "Blog de Consultoría Energética | Certilab",
-  description:
-    "Artículos sobre certificación energética, eficiencia en edificios, ayudas y normativa. Consultoría técnica independiente por Eva María González Gracia, Arquitecta Técnica Cateb 9457.",
-  alternates: { canonical: "https://www.certilab.cat/blog/" },
-  openGraph: {
-    title: "Blog de Consultoría Energética | Certilab",
-    description:
-      "Artículos sobre certificación energética, eficiencia en edificios, ayudas y normativa.",
-    url: "https://www.certilab.cat/blog/",
-  },
-};
-
 export default function BlogPage() {
   return (
     <>

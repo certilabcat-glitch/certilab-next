@@ -12,13 +12,11 @@ export default function Header() {
   const pathname = usePathname();
   const dropdownRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMenuOpen(false);
     setOpenDropdown(null);
   }, [pathname]);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (openDropdown) {
@@ -34,7 +32,8 @@ export default function Header() {
 
   const isActive = (href?: string) => {
     if (!href) return false;
-    return pathname === href || pathname.startsWith(href);
+    if (href === "/") return pathname === href;
+    return pathname.startsWith(href);
   };
 
   return (
@@ -59,42 +58,39 @@ export default function Header() {
         <ul
           className={`nav-menu ${menuOpen ? "is-open" : ""}`}
           id="nav-menu"
-          role="list"
-          aria-label="Navegación principal"
         >
-          {navigation.map((item) => (
-            <li
-              key={item.label}
-              className={
-                item.children
-                  ? `nav-dropdown ${openDropdown === item.label ? "open" : ""}`
-                  : isActive(item.href)
-                  ? "active"
-                  : ""
-              }
-              ref={(el) => {
-                if (item.children && el) {
-                  dropdownRefs.current.set(item.label, el as unknown as HTMLDivElement);
-                }
-              }}
-            >
-              {item.children ? (
-                <>
-                  <button
-                    className="nav-dropdown-toggle"
-                    aria-expanded={openDropdown === item.label}
-                    aria-haspopup="true"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpenDropdown(
-                        openDropdown === item.label ? null : item.label
-                      );
-                    }}
-                  >
-                    {item.label} <span className="arrow"></span>
-                  </button>
-                  <ul className="nav-dropdown-menu">
-                    {item.children.map((child) => (
+          {navigation.map((item) => {
+            const hasChildren = !!item.children;
+            const isItemActive = isActive(item.href);
+            let liClassName = "";
+            if (hasChildren) {
+              liClassName = `nav-dropdown ${openDropdown === item.label ? "open" : ""}`;
+            } else if (isItemActive) {
+              liClassName = "active";
+            }
+
+            return (
+              <li
+                key={item.label}
+                className={liClassName}
+              >
+                {hasChildren ? (
+                  <>
+                    <button
+                      className="nav-dropdown-toggle"
+                      aria-expanded={openDropdown === item.label}
+                      aria-haspopup="true"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setOpenDropdown(
+                          openDropdown === item.label ? null : item.label
+                        );
+                      }}
+                    >
+                      {item.label} <span className="arrow"></span>
+                    </button>
+                    <ul className="nav-dropdown-menu">
+                      {item.children?.map((child) => (
                       <li key={child.label}>
                         <Link
                           href={child.href || "#"}

@@ -1,5 +1,7 @@
 "use client";
 
+"use client";
+
 export default function ContrastSection() {
   return (
     <section className="section contraste-section" aria-labelledby="contraste-title">

@@ -1,5 +1,7 @@
 "use client";
 
+"use client";
+
 export default function DiffGrid() {
   const items = [
     {

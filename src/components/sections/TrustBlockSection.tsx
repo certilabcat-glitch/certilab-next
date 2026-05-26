@@ -1,5 +1,7 @@
 "use client";
 
+"use client";
+
 export default function TrustBlockSection() {
   return (
     <section className="trust-block" aria-label="Información profesional">

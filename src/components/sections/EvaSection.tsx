@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 export default function EvaSection() {
   return (
     <section className="eva-section" aria-labelledby="eva-title">

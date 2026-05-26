@@ -12,7 +12,6 @@ import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import CertiExpedienteForm from "@/components/forms/CertiExpedienteForm";
 import { homeFaq } from "@/data/faq";
 import { waDiagnostico } from "@/lib/wa";
-
 export default function HomePage() {
   return (
     <>
@@ -38,7 +37,7 @@ export default function HomePage() {
 
       <ProblemSection />
 
-      <div className="trust-bar" role="complementary" aria-label="Credenciales">
+      <div className="trust-bar" aria-label="Credenciales">
         <p>
           Eva María González Gracia · Arquitecta Técnica · Cateb 9457 ·
           Colegiada y habilitada · Especialista en eficiencia energética

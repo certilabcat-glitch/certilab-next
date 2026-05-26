@@ -1,5 +1,7 @@
 "use client";
 
+"use client";
+
 export default function HowItWorks() {
   const steps = [
     {
