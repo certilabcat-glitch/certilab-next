@@ -1,0 +1,147 @@
+/* Saas Layout styles */
+.saas-nav {
+  background: var(--color-crema);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.saas-nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 64px;
+}
+
+.saas-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.saas-logo-certilab {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--color-terra-light);
+}
+
+.saas-logo-saas {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-terra);
+  border: 1px solid var(--color-terra);
+  padding: 2px 6px;
+}
+
+.saas-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.saas-nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-grey);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.saas-nav-link:hover {
+  opacity: 0.6;
+}
+
+.saas-nav-cta {
+  display: inline-block;
+  background: var(--color-black);
+  color: var(--color-crema);
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.saas-nav-cta:hover {
+  opacity: 0.85;
+}
+
+.saas-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-crema);
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+.saas-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.saas-footer-col h4 {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+
+.saas-footer-col p {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-grey);
+  line-height: 1.6;
+}
+
+.saas-footer-col a {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-grey);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.saas-footer-col a:hover {
+  opacity: 0.6;
+}
+
+.saas-footer-bottom {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.saas-footer-bottom p {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-grey);
+}
+
+@media (max-width: 767px) {
+  .saas-footer-inner {
+    grid-template-columns: 1fr;
+  }
+  .saas-nav-links {
+    gap: 1rem;
+  }
+}

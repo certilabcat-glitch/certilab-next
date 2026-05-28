@@ -38,45 +38,45 @@ function setConsent(choice: "all" | "essential") {
   }
 }
 
+type FbqFn = {
+  (...args: unknown[]): void;
+  push?: FbqFn;
+  loaded?: boolean;
+  version?: string;
+  queue?: unknown[];
+};
+
 function loadMetaPixel() {
   if (typeof window === "undefined") return;
-  if ((window as Window & { fbq?: unknown }).fbq) return;
+  const w = window as Window & { fbq?: FbqFn; _fbq?: FbqFn };
+  if (typeof w.fbq === "function") return;
 
   const script = document.createElement("script");
   script.src = "https://connect.facebook.net/en_US/fbevents.js";
   script.async = true;
   document.head.appendChild(script);
 
-  // @ts-expect-error Facebook Pixel
-  window.fbq = function (...args: unknown[]) {
-    // @ts-expect-error Facebook Pixel
-    // eslint-disable-next-line prefer-rest-params
-    window.fbq.callMethod ? window.fbq.callMethod.apply(window.fbq, args) : window.fbq.queue.push(args);
+  const fbq: FbqFn = function (...args: unknown[]) {
+    fbq.queue!.push(args);
   };
-  // @ts-expect-error Facebook Pixel
-  if (!window._fbq) window._fbq = window.fbq;
-  // @ts-expect-error Facebook Pixel
-  window.fbq.push = window.fbq;
-  // @ts-expect-error Facebook Pixel
-  window.fbq.loaded = true;
-  // @ts-expect-error Facebook Pixel
-  window.fbq.version = "2.0";
-  // @ts-expect-error Facebook Pixel
-  window.fbq.queue = [];
-  // @ts-expect-error Facebook Pixel
-  window.fbq("init", META_PIXEL_ID);
-  // @ts-expect-error Facebook Pixel
-  window.fbq("track", "PageView");
+
+  fbq.push = fbq;
+  fbq.loaded = true;
+  fbq.version = "2.0";
+  fbq.queue = [];
+
+  w.fbq = fbq;
+  if (!w._fbq) w._fbq = fbq;
+  fbq("init", META_PIXEL_ID);
+  fbq("track", "PageView");
 }
 
 export default function CookieBanner() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState<boolean>(() => getConsent() === null);
 
   useEffect(() => {
     const consent = getConsent();
-    if (consent === null) {
-      setShow(true);
-    } else if (consent === "all") {
+    if (consent === "all") {
       loadMetaPixel();
     }
   }, []);

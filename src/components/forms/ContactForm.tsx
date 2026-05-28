@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { sendToWebhook } from "@/lib/webhook";
 import { waUrl } from "@/lib/wa";
+import { trackLeadComplete } from "@/lib/meta-pixel";
 
 interface FormData {
   nombre: string;
@@ -36,6 +37,18 @@ export default function ContactForm() {
       servicio: formData.servicio,
       origen: "formulario-diagnostico-express",
       timestamp: new Date().toISOString(),
+    });
+
+    // Meta: evento Lead (píxel + CAPI)
+    await trackLeadComplete({
+      contentName: "diagnostico-express",
+      email: formData.email || undefined,
+      phone: formData.telefono,
+      value: 0,
+      currency: "EUR",
+      customData: {
+        servicio: formData.servicio,
+      },
     });
 
     setSending(false);

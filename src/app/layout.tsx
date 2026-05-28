@@ -3,6 +3,7 @@ import { Crimson_Pro, Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/layout/CookieBanner";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const crimson = Crimson_Pro({
@@ -46,6 +47,9 @@ export const metadata: Metadata = {
     description:
       "Análisis técnico con responsabilidad profesional Cateb 9457. Sin algoritmos. Rigor forense real.",
     images: ["/og-image.jpg"],
+  },
+  other: {
+    "fb:app_id": "1271893388238243",
   },
   robots: {
     index: true,
@@ -129,6 +133,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );

@@ -1,17 +1,51 @@
 "use client";
 
+import { useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { waDiagnostico } from "@/lib/wa";
 
-export default function GraciasPage() {
+function GraciasContent() {
+  const searchParams = useSearchParams();
+  const magnet = searchParams.get("magnet");
+
+  useEffect(() => {
+    // Evento Lead en píxel + CAPI (servidor)
+    import("@/lib/meta-pixel").then((m) => {
+      m.trackLeadComplete({
+        contentName: magnet || "lead-general",
+        customData: { page: "gracias" },
+      });
+    });
+
+    // Redirigir a WhatsApp a los 3 segundos (solo si viene de landing)
+    if (magnet) {
+      const timer = setTimeout(() => {
+        window.location.href = waDiagnostico();
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [magnet]);
+
   return (
     <div className="gracias-page">
       <div className="gracias-card">
         <h1>¡Gracias por confiar en Certilab!</h1>
         <p className="gracias-texto">
-          Hemos recibido tu solicitud. Eva revisará tu caso personalmente y te
-          responderá en menos de 24 horas laborables.
+          {magnet
+            ? "Te hemos enviado el contenido solicitado por email. Revísalo en unos minutos."
+            : "Hemos recibido tu solicitud. Eva revisará tu caso personalmente y te responderá en menos de 24 horas laborables."}
         </p>
+
+        {magnet && (
+          <div className="gracias-redirect">
+            <p>
+              Te estamos redirigiendo a WhatsApp para que hables con Eva...
+            </p>
+            <div className="spinner" />
+          </div>
+        )}
+
         <div className="gracias-info">
           <p>
             <strong>Mientras tanto:</strong>
@@ -108,6 +142,29 @@ export default function GraciasPage() {
         .btn-primary:hover {
           opacity: 0.8;
         }
+        .gracias-redirect {
+          margin-bottom: 2rem;
+        }
+        .gracias-redirect p {
+          font-family: var(--font-sans);
+          font-size: 0.9rem;
+          color: var(--color-grey);
+          margin-bottom: 1rem;
+        }
+        .spinner {
+          width: 24px;
+          height: 24px;
+          border: 2px solid var(--color-border);
+          border-top-color: var(--color-terra);
+          border-radius: 50%;
+          animation: spin 0.8s linear infinite;
+          margin: 0 auto;
+        }
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
         .btn-secondary {
           display: block;
           font-family: var(--font-sans);
@@ -115,7 +172,15 @@ export default function GraciasPage() {
           color: var(--color-terra);
           text-decoration: underline;
         }
-      `}</style>
+  `}</style>
     </div>
+  );
+}
+
+export default function GraciasPage() {
+  return (
+    <Suspense fallback={<div>Cargando...</div>}>
+      <GraciasContent />
+    </Suspense>
   );
 }
