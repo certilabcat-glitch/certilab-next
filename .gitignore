@@ -32,6 +32,13 @@ build.log
 
 # debug
 npm-debug.log*
+
+# turbo
+.turbo/
+build.log
+
+# debug
+npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*

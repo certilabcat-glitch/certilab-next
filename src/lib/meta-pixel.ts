@@ -1,6 +1,6 @@
 "use client";
 
-import { getFbc, getFbp, useUtm } from "./utm";
+import { getFbc, getFbp, getUtm } from "./utm";
 
 declare global {
   interface Window {
@@ -75,7 +75,7 @@ export async function trackServerEvent(
         fbp: getFbp(),
         customData: {
           ...options?.customData,
-          utms: useUtm(),
+          utms: getUtm(),
         },
       }),
     });

@@ -1,0 +1,77 @@
+.hero-sobre {
+  text-align: center;
+  padding: 5rem 1.5rem 2rem;
+  background: var(--color-crema);
+}
+
+.hero-sobre .hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-terra);
+  margin-bottom: 1.5rem;
+}
+
+.hero-sobre h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 300;
+  color: var(--color-black);
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  line-height: 1.2;
+}
+
+.hero-sobre .hero-sub {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--color-grey);
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.prose-block {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.prose-block h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 1.5rem;
+}
+
+.prose-block p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-dark);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.prose-block ul {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-dark);
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-block li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .hero-sobre {
+    padding: 3rem 1.25rem 1.5rem;
+  }
+  .prose-block {
+    padding: 2rem 1.25rem;
+  }
+}

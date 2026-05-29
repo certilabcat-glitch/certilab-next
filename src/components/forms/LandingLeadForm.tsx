@@ -3,7 +3,7 @@
 import { useState, FormEvent, useEffect } from "react";
 import { sendToWebhook } from "@/lib/webhook";
 import { trackLeadComplete, trackViewContent } from "@/lib/meta-pixel";
-import { useUtm } from "@/lib/utm";
+import { getUtm } from "@/lib/utm";
 
 interface Props {
   leadMagnet: string;
@@ -25,11 +25,11 @@ export default function LandingLeadForm({ leadMagnet, utmCampaign }: Props) {
     });
   }, [leadMagnet]);
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
 
-    const utm = useUtm();
+    const utm = getUtm();
 
     // Enviar a n8n
     await sendToWebhook({

@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import CTASection from "@/components/sections/CTASection";
+import  type { Metadata } from "next";
 import { waUrl } from "@/lib/wa";
 
 export const metadata: Metadata = {

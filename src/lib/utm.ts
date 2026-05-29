@@ -21,6 +21,27 @@ export function useUtm(): Record<string, string> {
   return utm;
 }
 
+/** Versión no-hook de useUtm para usar fuera de componentes React */
+export function getUtm(): Record<string, string> {
+  if (typeof window === "undefined") return {};
+  const params = new URLSearchParams(window.location.search);
+  const keys = [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_content",
+    "utm_term",
+    "fbclid",
+    "gclid",
+  ];
+  const utm: Record<string, string> = {};
+  keys.forEach((key) => {
+    const val = params.get(key);
+    if (val) utm[key] = val;
+  });
+  return utm;
+}
+
 /** Convierte fbclid → fbc (Facebook Click ID) para CAPI */
 export function getFbc(): string | undefined {
   if (typeof window === "undefined") return undefined;

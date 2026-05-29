@@ -4,7 +4,6 @@ import HeroSection from "@/components/sections/HeroSection";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
 import StepsGrid from "@/components/sections/StepsGrid";
 import IncludesBox from "@/components/ui/IncludesBox";
-import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import { waDiagnostico } from "@/lib/wa";

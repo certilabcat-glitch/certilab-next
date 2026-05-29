@@ -8,8 +8,6 @@ import { waDiagnostico } from "@/lib/wa";
 function ResultadoContent() {
   const searchParams = useSearchParams();
   const direccion = searchParams.get("direccion");
-  const ts = searchParams.get("ts");
-
   return (
     <div className="resultado-page">
       <div className="resultado-card">

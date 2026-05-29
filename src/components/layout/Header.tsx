@@ -124,7 +124,7 @@ export default function Header() {
             ref={menuRef}
             className={`nav-menu ${menuOpen ? "is-open" : ""}`}
             id="nav-menu"
-            role="menubar"
+            role="navigation"
           >
             {navigation.map((item) => {
               const hasChildren = !!item.children;

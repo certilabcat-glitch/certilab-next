@@ -8,7 +8,6 @@ import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import { segundaOpinionFaq } from "@/data/faq";
-import { services } from "@/data/services";
 import { waDiagnostico } from "@/lib/wa";
 
 export const metadata: Metadata = {
