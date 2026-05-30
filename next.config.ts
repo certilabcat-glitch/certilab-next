@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
         destination: "/aviso-legal",
         permanent: true,
       },
+      // Redirigir guía certificados falsos al blog
+      {
+        source: "/por-que-no-emite-ce",
+        destination: "/blog/detectar-certificado-energetico-falso",
+        permanent: true,
+      },
     ];
   },
 };

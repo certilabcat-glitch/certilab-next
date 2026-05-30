@@ -11,7 +11,6 @@ export const navigation: NavItem[] = [
       { label: "Check-Up Inmobiliario (199€)", href: "/check-up-inmobiliario/" },
       { label: "Informe Técnico (399€)", href: "/informe-tecnico-energetico/" },
       { label: "Calculadora de ahorro", href: "/calculadoracat/" },
-      { label: "Por qué no emitimos CE", href: "/por-que-no-emite-ce/" },
       { label: "Ayudas energéticas", href: "/ayudas-eficiencia-energetica/" },
     ],
   },
@@ -38,7 +37,6 @@ export const footerServices = [
   { label: "Ayudas energéticas", href: "/ayudas-eficiencia-energetica/" },
   { label: "Calculadora ahorro", href: "/calculadoracat/" },
   { label: "Para profesionales", href: "/profesionales/" },
-  { label: "Por qué no emitimos certificados", href: "/por-que-no-emite-ce/" },
   { label: "Sobre nosotros", href: "/sobre-nosotros/" },
 ];
 

@@ -220,12 +220,6 @@ export default function Header() {
               >
                 Diagnóstico Gratis
               </a>
-              <Link
-                href="/por-que-no-emite-ce/"
-                className="nav-cta-secondary"
-              >
-                Por qué no emitimos CE
-              </Link>
             </li>
           </ul>
         </div>

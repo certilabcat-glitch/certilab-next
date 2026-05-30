@@ -182,6 +182,54 @@ Nuestro **Informe Técnico Energético** incluye orientación personalizada sobr
     readingTime: 5,
     featured: true,
   },
+  {
+    slug: "detectar-certificado-energetico-falso",
+    title: "¿Tu certificado energético es falso? Guía para detectarlo",
+    excerpt:
+      "Guía práctica para detectar si tu certificado energético es falso: 5 señales de alerta, precios orientativos, cómo reclamar y qué alternativas tienes.",
+    content: `
+## Señales de alerta: cómo detectar un certificado energético no fiable
+
+### 1. No incluye fecha de visita presencial
+
+El Real Decreto 390/2021 exige que el técnico visite el inmueble. Si tu certificado no menciona una visita in situ, probablemente se hizo sin pisar la vivienda.
+
+### 2. Precio inferior a 60€
+
+Un certificado energético real con visita presencial cuesta entre 80 y 200 €. Si pagaste menos de 60 €, es muy probable que no haya habido visita.
+
+### 3. Técnico no colegiado o no verificable
+
+El técnico debe estar colegiado. Busca su número en el registro del Colegio de Arquitectos Técnicos de tu provincia.
+
+### 4. Datos genéricos sin verificar
+
+Si el certificado usa solo datos del catastro sin mencionar reformas, aislamiento real o instalaciones específicas, es señal de que no hubo visita.
+
+### 5. Calificación sospechosamente alta
+
+Una vivienda antigua sin reformas difícilmente obtiene una A o B. Si la calificación parece inflada, puede estar ocultando el Brown Discount.
+
+## ¿Qué hacer si tu certificado no es fiable?
+
+1. **Solicita una Segunda Opinión** - Por 39€ analizamos tu certificado y te decimos si es fiable.
+2. **Reclama ante el colegio profesional** del técnico firmante.
+3. **Denuncia ante la administración** autonómica competente.
+
+## Alternativas que sí podemos ofrecerte
+
+Aunque no emitimos certificados energéticos oficiales (la ley exige visita presencial y nuestro modelo es 100% remoto), tenemos servicios que pueden ayudarte:
+- Segunda Opinión (39€) - Revisamos tu certificado actual
+- Segunda Opinión Express (79€) - Entrega en menos de 2h
+- Check-Up Inmobiliario (199€) - Análisis completo antes de comprar
+- Informe Técnico (399€) - Análisis profundo con propuestas de mejora
+    `,
+    date: "2026-05-30",
+    author: "Eva María González García",
+    tags: ["certificado energético", "falso", "guía", "reclamar"],
+    readingTime: 5,
+    featured: true,
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
