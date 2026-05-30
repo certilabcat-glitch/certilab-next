@@ -104,7 +104,8 @@ export default function Header() {
       <nav className="nav" role="navigation" aria-label="Navegación principal">
         <div className="nav-inner">
           <Link href="/" className="nav-logo" aria-label="Certilab — inicio">
-            <span>Certilab</span>
+            <span className="nav-logo-title">Certilab</span>
+            <span className="nav-logo-sub">Despacho de Auditoría Energética</span>
           </Link>
 
           <button
@@ -266,13 +267,29 @@ export default function Header() {
           flex-shrink: 0;
         }
 
-        .nav-logo span {
+        .nav-logo {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1px;
+          text-decoration: none;
+          flex-shrink: 0;
+        }
+        .nav-logo-title {
           font-family: var(--font-serif);
           font-size: 1.25rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           font-weight: 300;
           color: var(--color-terra);
+        }
+        .nav-logo-sub {
+          font-family: var(--font-sans);
+          font-size: 0.6rem;
+          letter-spacing: 0.05em;
+          color: var(--color-grey);
+          text-transform: none;
+          font-weight: 400;
         }
 
         /* ===== Hamburger ===== */

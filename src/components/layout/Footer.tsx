@@ -11,10 +11,9 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <p>
-            Consultoría energética técnica e independiente.
+            <strong>Certilab</strong> · Despacho de Auditoría Energética
             <br />
-            Eva María González García · Arquitecta Técnica colegiada · Colegio de Arquitectos Técnicos de Barcelona ·
-            Cateb
+            Eva María González García · Arquitecta Técnica colegiada · Colegio de Arquitectos Técnicos de Barcelona
           </p>
         </div>
 
