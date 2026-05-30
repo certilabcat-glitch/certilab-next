@@ -181,7 +181,7 @@ export default function SaasPage() {
 
           {/* Professional */}
           <div className="saas-pricing-card saas-pricing-featured">
-            <p className="saas-plan-badge">Más popular</p>
+            <p className="saas-plan-badge">Más solicitado</p>
             <h3 className="saas-plan-name">Professional</h3>
             <p className="saas-plan-desc">Para agencias pequeñas (2-5 agentes)</p>
             <p className="saas-plan-price">

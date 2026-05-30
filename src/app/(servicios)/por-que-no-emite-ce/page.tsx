@@ -161,7 +161,7 @@ export default function PorQueNoEmiteCEPage() {
         </p>
         <div className="alt-grid">
           <Link href="/segunda-opinion/" className="alt-card">
-            <span className="alt-badge">Más popular</span>
+            <span className="alt-badge">Más solicitado</span>
             <h3>Segunda Opinión (39€)</h3>
             <p>¿Ya tienes un certificado pero no te fías? Lo revisamos y te decimos si es fiable. Incluye detección de Brown Discount.</p>
             <span className="alt-link">Ver servicio →</span>

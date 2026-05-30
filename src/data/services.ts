@@ -7,7 +7,7 @@ export const services: Service[] = [
     description:
       "Tienes un certificado energético y quieres saber si es fiable. Revisamos la calificación, detectamos errores o inflados y te explicamos qué significa realmente para tu inmueble. Entrega en 24 h.",
     price: 39,
-    badge: "Más popular",
+    badge: "Más solicitado",
     href: "/segunda-opinion/",
     destacado: true,
     features: [

@@ -40,7 +40,7 @@ export default function SegundaOpinionPage() {
         eyebrow="Servicio estrella · El más solicitado"
         title="Segunda Opinión del Certificado Energético"
         subtitle="Tienes un certificado energético pero no te fías. Por 39€ revisamos la calificación, detectamos errores o inflados y te decimos si puedes confiar en él. Sin desplazamientos. Sin complicaciones."
-        badges={["Colegiada CATEB Barcelona", "24-48h", "100% remoto", "Más popular"]}
+        badges={["Colegiada CATEB Barcelona", "24-48h", "100% remoto", "Más solicitado"]}
         price="39 €"
         credentials="Eva María González García · Arquitecta Técnica colegiada"
         ctaPrimary={{ label: "Solicitar Segunda Opinión", href: waDiagnostico() }}

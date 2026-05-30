@@ -67,7 +67,7 @@ export default function PreciosPage() {
             key={plan.name}
             className={`pricing-card ${plan.highlighted ? "featured" : ""}`}
           >
-            {plan.highlighted && <span className="pricing-badge">Más popular</span>}
+            {plan.highlighted && <span className="pricing-badge">Más solicitado</span>}
             <h2 className="pricing-name">{plan.name}</h2>
             <p className="pricing-desc">{plan.desc}</p>
             <p className="pricing-price">
