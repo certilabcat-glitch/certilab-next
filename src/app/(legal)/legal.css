@@ -46,3 +46,9 @@
   color: var(--color-terra);
   text-decoration: underline;
 }
+@media (max-width: 767px) {
+  .legal-page { padding: 2.5rem 1rem; }
+  .legal-content h1 { font-size: 1.6rem; }
+  .legal-content h2 { font-size: 1.1rem; }
+  .legal-content p, .legal-content li { font-size: 0.9rem; }
+}

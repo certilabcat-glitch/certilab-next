@@ -47,7 +47,20 @@
 }
 @media (max-width: 767px) {
   .hero {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1rem;
     min-height: 50vh;
+  }
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  .hero-sub {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+  .prose-block {
+    padding: 2rem 1rem;
+  }
+  .prose-block p {
+    font-size: 0.95rem;
   }
 }

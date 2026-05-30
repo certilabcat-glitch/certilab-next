@@ -86,3 +86,11 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+@media (max-width: 767px) {
+  .blog-header { padding: 3rem 1rem 1.5rem; }
+  .blog-header h1 { font-size: 1.75rem; }
+  .blog-header p { font-size: 0.95rem; padding: 0 0.5rem; }
+  .blog-grid { padding: 0 1rem 3rem; gap: 1rem; }
+  .blog-card { padding: 1.5rem; }
+  .blog-card h2 { font-size: 1.15rem; }
+}
