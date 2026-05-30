@@ -2,7 +2,7 @@ import { FAQItem } from "@/types/service";
 
 export const homeFaq: FAQItem[] = [
   {
-    q: "¿Por qué Certilab no emite certificados energéticos oficiales?",
+    q: "¿Por qué Certilab no realiza certificados energéticos oficiales?",
     a: 'El RD 390/2021, art. 6.5, exige que el técnico realice una visita presencial al inmueble para la correcta realización del certificado de eficiencia energética. Nuestro modelo es 100% remoto, por lo que no podemos emitirlos legalmente. <a href="/por-que-no-emite-ce/" style="color:var(--color-terra);text-decoration:underline;">Explicación completa aquí.</a>',
   },
   {
@@ -15,7 +15,7 @@ export const homeFaq: FAQItem[] = [
   },
   {
     q: "¿El Check-Up Inmobiliario incluye el certificado energético?",
-    a: "No emitimos el certificado energético oficial (ver pregunta anterior), pero sí analizamos el certificado energético existente del inmueble, verificamos su fiabilidad y lo integramos en el informe junto con la Nota Simple, Catastral, análisis de cargas y evaluación técnica energética completa.",
+    a: "No realizamos el certificado energético oficial (ver pregunta anterior), pero sí analizamos el certificado energético existente del inmueble, verificamos su fiabilidad y lo integramos en el informe junto con la Nota Simple, Catastral, análisis de cargas y evaluación técnica energética completa.",
   },
   {
     q: "¿Trabajáis solo en el Garraf o en toda Cataluña?",
@@ -27,7 +27,7 @@ export const homeFaq: FAQItem[] = [
   },
   {
     q: "¿Qué garantías tengo con un análisis forense de Certilab?",
-    a: "Tres garantías concretas: (1) responsabilidad profesional real — Eva firma como arquitecta técnica Cateb 9457 con seguro RC; (2) secreto profesional — sujeta a código deontológico colegial; (3) independencia — no vendemos certificados ni tenemos conflictos de interés. Si el análisis contiene un error atribuible a nuestra revisión, respondemos.",
+    a: "Tres garantías concretas: (1) responsabilidad profesional real — la responsable técnica firma como arquitecta colegiada Cateb 9457 con seguro RC; (2) secreto profesional — sujeta a código deontológico colegial; (3) independencia — no vendemos certificados ni tenemos conflictos de interés. Si el análisis contiene un error atribuible a nuestra revisión, respondemos.",
   },
   {
     q: "¿Esto sustituye a una inspección presencial de un técnico?",

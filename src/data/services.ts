@@ -103,7 +103,7 @@ export const services: Service[] = [
     includes: [
       "Informe orientativo gratuito",
       "Recomendación del servicio adecuado",
-      "Primer contacto con Eva",
+      "Primer contacto con el equipo técnico",
     ],
   },
 ];

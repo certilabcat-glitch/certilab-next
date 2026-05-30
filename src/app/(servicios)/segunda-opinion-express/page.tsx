@@ -59,10 +59,10 @@ export default function SegundaOpinionExpressPage() {
 
       <FeaturesGrid
         features={[
-          { num: "I", title: "Mismo rigor técnico", text: "El análisis es idéntico al de la modalidad estándar. Eva revisa personalmente cada caso." },
+          { num: "I", title: "Mismo rigor técnico", text: "El análisis es idéntico al de la modalidad estándar. El equipo técnico revisa personalmente cada caso." },
           { num: "II", title: "Entrega récord", text: "Menos de 2 horas laborables desde que recibimos tu documentación." },
           { num: "III", title: "Para firmas inminentes", text: "Perfecto si tienes una compraventa, firma de hipoteca o fecha límite." },
-          { num: "IV", title: "Soporte prioritario", text: "Atención preferente durante todo el proceso. Habla directamente con Eva." },
+          { num: "IV", title: "Soporte prioritario", text: "Atención preferente durante todo el proceso. Habla directamente con el equipo técnico." },
         ]}
       />
 
@@ -126,7 +126,7 @@ export default function SegundaOpinionExpressPage() {
       <StepsGrid
         steps={[
           { title: "Solicita", text: "Contáctanos por WhatsApp con tu certificado y dirección." },
-          { title: "Analizamos", text: "Eva revisa tu caso de forma prioritaria y urgente." },
+          { title: "Analizamos", text: "El equipo técnico revisa tu caso de forma prioritaria y urgente." },
           { title: "Recibes", text: "En menos de 2h tienes tu dictamen técnico detallado." },
         ]}
       />

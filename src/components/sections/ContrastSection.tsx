@@ -28,7 +28,7 @@ export default function ContrastSection() {
             Análisis Forense Certilab
           </p>
           <ul>
-            <li>Revisado personalmente por Eva González, Cateb 9457</li>
+            <li>Revisado por arquitecta técnica colegiada, Cateb 9457</li>
             <li>Con seguro de responsabilidad civil profesional</li>
             <li>Análisis basado en documentación real de su inmueble</li>
             <li>Detecta el Brown Discount antes de que afecte a su precio</li>

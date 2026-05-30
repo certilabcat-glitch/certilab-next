@@ -25,7 +25,7 @@ const faq = [
 export const metadata: Metadata = {
   title: "Check-Up Inmobiliario Forense (199€) | Arquitectura Técnica | Certilab",
   description:
-    "No compre a ciegas. Auditoría técnica forense 100% remota que blinda su compraventa inmobiliaria. Detectamos Brown Discount, certificados fraudulentos y riesgos ocultos. Arquitecta Técnica Cateb 9457.",
+    "No compre a ciegas. Auditoría técnica forense 100% remota que blinda su compraventa inmobiliaria. Detectamos Brown Discount, certificados no fiables y riesgos ocultos. Arquitecta Técnica Cateb 9457.",
   alternates: { canonical: "https://www.certilab.cat/check-up-inmobiliario/" },
   openGraph: {
     title: "Check-Up Inmobiliario Forense (199€) | Certilab",

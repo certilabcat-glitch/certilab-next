@@ -22,7 +22,7 @@ const features = [
 
 const steps = [
   { title: "Envíanos tu certificado", text: "Sube tu certificado energético en PDF o imagen junto con la dirección del inmueble. Sin desplazamientos." },
-  { title: "Eva lo analiza", text: "Eva revisa personalmente cada caso. Sin algoritmos, sin automatismos. Con rigor técnico profesional." },
+  { title: "Analizamos tu certificado", text: "El equipo técnico revisa personalmente cada caso. Sin algoritmos, sin automatismos. Con rigor técnico profesional." },
   { title: "Recibes tu dictamen", text: "Informe PDF detallado con conclusiones, errores detectados, detección de Brown Discount y próximos pasos." },
 ];
 
@@ -86,7 +86,7 @@ export default function SegundaOpinionPage() {
           {
             label: "Segunda Opinión Certilab (39€)",
             items: [
-              "Revisado personalmente por Eva, CATEB Barcelona",
+              "Revisado por arquitecta técnica colegiada, CATEB Barcelona",
               "Con seguro de responsabilidad civil profesional",
               "Análisis basado en documentación real de tu inmueble",
               "Detecta el Brown Discount antes de que afecte a tu precio",

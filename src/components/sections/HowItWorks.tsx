@@ -14,7 +14,7 @@ export default function HowItWorks() {
     },
     {
       title: "Analizamos con rigor",
-      text: "Eva revisa personalmente cada caso. No hay automatismos ni plantillas genéricas.",
+      text: "El equipo técnico revisa personalmente cada caso. No hay automatismos ni plantillas genéricas.",
     },
     {
       title: "Recibes tu informe",
