@@ -7,12 +7,15 @@ export const navigation: NavItem[] = [
     children: [
       { label: "Diagnóstico Gratuito", href: "/formulario/" },
       { label: "Segunda Opinión (39€)", href: "/segunda-opinion/" },
-      { label: "Segunda Opinión Express", href: "/segunda-opinion-express/" },
+      { label: "Segunda Opinión Express (79€)", href: "/segunda-opinion-express/" },
       { label: "Check-Up Inmobiliario (199€)", href: "/check-up-inmobiliario/" },
       { label: "Informe Técnico (399€)", href: "/informe-tecnico-energetico/" },
+      { label: "Calculadora de ahorro", href: "/calculadoracat/" },
+      { label: "Por qué no emitimos CE", href: "/por-que-no-emite-ce/" },
+      { label: "Ayudas energéticas", href: "/ayudas-eficiencia-energetica/" },
     ],
   },
-  { label: "Por qué no emitimos CE", href: "/por-que-no-emite-ce/" },
+  { label: "SaaS · B2B", href: "/saas/" },
   {
     label: "Blog",
     children: [
@@ -25,7 +28,6 @@ export const navigation: NavItem[] = [
     ],
   },
   { label: "Sobre nosotros", href: "/sobre-nosotros/" },
-  { label: "Calculadora", href: "/calculadoracat/" },
 ];
 
 export const footerServices = [
