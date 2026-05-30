@@ -30,14 +30,10 @@ export const navigation: NavItem[] = [
 ];
 
 export const footerServices = [
-  { label: "Diagnóstico Express", href: "/formulario/" },
-  { label: "Segunda Opinión del Certificado Energético", href: "/segunda-opinion/" },
-  { label: "Check-Up Inmobiliario", href: "/check-up-inmobiliario/" },
-  { label: "Informe Técnico", href: "/informe-tecnico-energetico/" },
-  { label: "Ayudas energéticas", href: "/ayudas-eficiencia-energetica/" },
-  { label: "Calculadora ahorro", href: "/calculadoracat/" },
-  { label: "Para profesionales", href: "/profesionales/" },
-  { label: "Sobre nosotros", href: "/sobre-nosotros/" },
+  { label: "Segunda Opinión (39€)", href: "/segunda-opinion/" },
+  { label: "Segunda Opinión Express (79€)", href: "/segunda-opinion-express/" },
+  { label: "Check-Up Inmobiliario (199€)", href: "/check-up-inmobiliario/" },
+  { label: "Informe Técnico (399€)", href: "/informe-tecnico-energetico/" },
 ];
 
 export const footerLegal = [

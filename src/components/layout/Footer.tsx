@@ -1,9 +1,7 @@
 "use client";
 
-"use client";
-
 import Link from "next/link";
-import { footerServices, footerLegal } from "@/data/navigation";
+import { footerLegal } from "@/data/navigation";
 
 export default function Footer() {
   return (
@@ -15,34 +13,30 @@ export default function Footer() {
             <br />
             Eva María González García · Arquitecta Técnica colegiada · Colegio de Arquitectos Técnicos de Barcelona
           </p>
+          <div className="footer-contacto">
+            <a href="https://wa.me/34608515922">WhatsApp</a>
+            <a href="mailto:info@certilab.cat">info@certilab.cat</a>
+          </div>
         </div>
 
-        <nav className="footer-nav" aria-label="Navegación pie de página">
-          <ul>
-            {footerServices.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
+        <nav className="footer-servicios" aria-label="Servicios">
+          <h4>Servicios</h4>
+          <Link href="/segunda-opinion/">Segunda Opinión (39€)</Link>
+          <Link href="/segunda-opinion-express/">Express (79€)</Link>
+          <Link href="/check-up-inmobiliario/">Check-Up Inmobiliario (199€)</Link>
+          <Link href="/informe-tecnico-energetico/">Informe Técnico (399€)</Link>
         </nav>
 
-        <nav className="footer-legal" aria-label="Páginas legales">
-          <ul>
-            {footerLegal.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
+        <nav className="footer-legal" aria-label="Legal">
+          <h4>Legal</h4>
+          {footerLegal.map((item) => (
+            <Link key={item.label} href={item.href}>{item.label}</Link>
+          ))}
         </nav>
       </div>
 
       <p className="footer-copy">
-        © 2026 Certilab · Todos los derechos reservados ·
-        <Link href="/por-que-no-emite-ce/">
-          No emitimos certificados energéticos oficiales
-        </Link>
+        © 2026 Certilab · Todos los derechos reservados
       </p>
 
       <style jsx>{`
@@ -55,7 +49,7 @@ export default function Footer() {
           max-width: 1100px;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: 1fr 2fr 1fr;
+          grid-template-columns: 1.5fr 1fr 1fr;
           gap: 2rem;
         }
         .footer-brand p {
@@ -65,16 +59,33 @@ export default function Footer() {
           margin: 0;
           line-height: 1.5;
         }
-        .footer-nav ul,
-        .footer-legal ul {
-          list-style: none;
+        .footer-brand .footer-contacto {
+          display: flex;
+          gap: 1rem;
+          margin-top: 0.75rem;
+        }
+        .footer-brand .footer-contacto a {
+          font-family: var(--font-sans);
+          font-size: 0.85rem;
+          color: var(--color-terra);
+          text-decoration: underline;
+          text-underline-offset: 2px;
+        }
+        .footer-servicios h4,
+        .footer-legal h4 {
+          font-family: var(--font-serif);
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: var(--color-black);
+          margin-bottom: 1rem;
+        }
+        .footer-servicios,
+        .footer-legal {
           display: flex;
           flex-direction: column;
           gap: 0.6rem;
-          margin: 0;
-          padding: 0;
         }
-        .footer-nav a,
+        .footer-servicios a,
         .footer-legal a {
           font-family: var(--font-sans);
           font-size: 0.85rem;
@@ -82,12 +93,12 @@ export default function Footer() {
           text-decoration: none;
           transition: opacity 0.2s;
         }
-        .footer-nav a:hover,
+        .footer-servicios a:hover,
         .footer-legal a:hover {
           opacity: 0.6;
         }
         .footer-legal {
-          text-align: right;
+          text-align: left;
         }
         .footer-copy {
           font-family: var(--font-sans);
