@@ -10,7 +10,7 @@ export default function DiffGrid() {
     {
       num: "II",
       title: "Independencia total",
-      text: "No vendemos certificados, no tenemos incentivos para inflar calificaciones. Solo te decimos lo que hay.",
+      text: "Trabajamos con plena independencia. Sin conflictos de interés, nuestro único compromiso es con la precisión técnica.",
     },
     {
       num: "III",
@@ -20,7 +20,7 @@ export default function DiffGrid() {
     {
       num: "IV",
       title: "Informes que sirven",
-      text: "No un PDF de 2 páginas. Análisis técnico detallado con datos reales, riesgos y recomendaciones accionables.",
+      text: "Análisis técnico detallado con datos reales del inmueble, riesgos identificados y recomendaciones accionables.",
     },
   ];
 

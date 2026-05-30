@@ -14,24 +14,25 @@ export default function EvaSection() {
           de experiencia
         </p>
         <p className="eva-texto">
-          He visto cómo se emiten certificados energéticos sin pisar el
-          inmueble, con datos inventados o copiados de otros expedientes. He
-          visto informes de 2 páginas que no sirven ni para negociar un
-          descuento. He visto a compradores que descubren vicios ocultos cuando
-          ya es tarde.
+          Creo en un análisis energético riguroso, transparente y útil.
+          Cada informe que firmo es el resultado de una revisión cuidadosa,
+          basada en datos reales del inmueble y con el respaldo del Colegio de
+          Arquitectos Técnicos de Barcelona y del Ministerio para la Transición
+          Ecológica.
         </p>
         <p className="eva-texto">
-          No me dedico a emitir certificados. Me dedico a{" "}
+          Mi compromiso es ofrecerle una{" "}
           <strong>
-            analizar la verdad energética de los inmuebles
-          </strong>
-          . Con responsabilidad profesional real. Con el respaldo del Cateb. Con
-          un seguro RC que protege mi trabajo y a quien confía en él.
+            evaluación técnica independiente
+          </strong>{" "}
+          que le permita tomar decisiones con conocimiento de causa.
+          Con la responsabilidad profesional que otorga la colegiación
+          y un seguro de responsabilidad civil que protege nuestro trabajo.
         </p>
         <p className="eva-texto">
-          Si necesita un certificado oficial con visita presencial, le oriento
-          sin coste. Si necesita saber la verdad sobre su inmueble —o sobre el
-          inmueble que va a comprar—, está en el sitio correcto.
+          Si necesita un certificado energético oficial, le orientaré sobre
+          cómo obtenerlo. Si lo que busca es un análisis profundo y fiable de
+          su inmueble, está en el lugar adecuado.
         </p>
         <Link href="/sobre-nosotros/" className="eva-link">
           Conozca quién está detrás de su análisis

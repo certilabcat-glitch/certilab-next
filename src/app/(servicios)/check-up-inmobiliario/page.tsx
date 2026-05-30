@@ -10,7 +10,7 @@ import { waDiagnostico } from "@/lib/wa";
 const faq = [
   {
     q: "¿Qué incluye exactamente el Check-Up Inmobiliario?",
-    a: "Incluye: Nota Simple actualizada, certificado Catastral, análisis de cargas y gravámenes, revisión del certificado energético, análisis técnico energético del inmueble, detección de red flags, y audio-resumen con IA. Todo en un informe de 10-15 páginas.",
+    a: "Incluye: Nota Simple actualizada, certificado Catastral, análisis de cargas y gravámenes, revisión del certificado energético, análisis técnico energético del inmueble, detección de riesgos y anomalías, y resumen ejecutivo. Todo en un informe de 10-15 páginas.",
   },
   {
     q: "¿En cuánto tiempo recibo el informe?",
@@ -95,7 +95,7 @@ export default function CheckUpInmobiliarioPage() {
           { num: "I", title: "Nota Simple + Catastral", text: "Obtenemos y analizamos los registros oficiales del inmueble para detectar cargas, hipotecas y discrepancias." },
           { num: "II", title: "Análisis del CE", text: "Revisamos el certificado energético existente. Detectamos calificaciones infladas, errores y omisiones." },
           { num: "III", title: "Brown Discount", text: "Calculamos el impacto real de la calificación energética en el valor de mercado del inmueble." },
-          { num: "IV", title: "Audio-resumen IA", text: "Resumen auditivo del informe para que puedas compartirlo o escucharlo en el coche." },
+          { num: "IV", title: "Resumen ejecutivo", text: "Informe claro y directo con los hallazgos principales, riesgos detectados y recomendaciones para tu decisión." },
         ]}
       />
 
