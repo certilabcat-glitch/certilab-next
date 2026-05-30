@@ -16,7 +16,7 @@ export default function HomePage() {
       <HeroSection
         eyebrow="Arquitecta Técnica colegiada · Análisis forense"
         title='La verdad energética de tu inmueble,<br />con responsabilidad profesional real'
-        subtitle="Eva María González García, Arquitecta Técnica colegiada del Colegio de Arquitectos Técnicos de Barcelona, analiza tu certificado energético y detecta lo que otros informes ocultan. Sin algoritmos. Sin intermediarios."
+        subtitle="Eva María González García, Arquitecta Técnica colegiada por el Colegio de Arquitectos Técnicos de Barcelona, realiza un análisis riguroso e independiente de su certificado energético para que usted pueda tomar la mejor decisión."
         badges={[
           "Colegiada · Colegio Arquitectos Técnicos Barcelona",
           "20 años de experiencia",
@@ -28,7 +28,7 @@ export default function HomePage() {
           label: "Servicios →",
           href: "#servicios",
         }}
-        nota="Sin compromiso · Sin visita presencial · Sin alertar al vendedor"
+        nota="Sin compromiso · 100% remoto · Confidencial"
       />
 
       <ServicesGrid />

@@ -47,9 +47,9 @@ Si estás comprando una vivienda, asegúrate de que el certificado energético r
   },
   {
     slug: "cuanto-cuesta-certificado-energetico-2026",
-    title: "Precio del Certificado Energético 2026: lo barato sale caro",
+    title: "Precio del Certificado Energético 2026: claves para entender las diferencias",
     excerpt:
-      "¿Cuánto debería costar un certificado energético en 2026? Analizamos los precios del mercado y por qué los certificados de 30€ suelen ser un problema.",
+      "¿Cuánto debería costar un certificado energético en 2026? Analizamos los precios del mercado y las diferencias entre las distintas opciones disponibles.",
     content: `
 ## ¿Cuánto cuesta un certificado energético en 2026?
 

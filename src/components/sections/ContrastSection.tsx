@@ -16,11 +16,11 @@ export default function ContrastSection() {
         <div className="contraste-card contraste-algoritmico">
           <p className="contraste-label">Informe Algorítmico</p>
           <ul>
-            <li>Generado por software sin intervención técnica real</li>
-            <li>Sin responsabilidad profesional</li>
-            <li>Datos genéricos del catastro, sin verificación in situ</li>
-            <li>Sin garantía legal ni colegio profesional detrás</li>
-            <li>PDF de 2-3 páginas con plantilla estándar</li>
+            <li>Generado mediante software, sin intervención de un técnico colegiado</li>
+            <li>Sin verificación técnica personalizada</li>
+            <li>Datos genéricos del catastro, sin contraste con documentación real</li>
+            <li>Sin respaldo de un colegio profesional ni seguro de responsabilidad</li>
+            <li>Informe breve con formato estándar</li>
           </ul>
         </div>
         <div className="contraste-card contraste-forense">

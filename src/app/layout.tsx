@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Certilab | Arquitectura Técnica Forense",
     description:
-      "Análisis técnico con responsabilidad profesional Cateb 9457. Sin algoritmos. Rigor forense real.",
+      "Análisis técnico independiente con responsabilidad profesional real.",
     images: ["/og-image.jpg"],
   },
   other: {

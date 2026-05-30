@@ -31,19 +31,19 @@ export default function SobreNosotrosPage() {
 
       <section className="prose-block">
         <p>
-          Certilab nace de una convicción: el mercado de los informes energéticos
-          está roto, y alguien tenía que poner rigor donde hay algoritmo,
-          responsabilidad donde hay anonimato, y ética donde hay comisión.
+          Certilab nace de una vocación: ofrecer un análisis energético riguroso,
+          transparente y útil, donde cada informe está respaldado por la responsabilidad
+          de una arquitecta técnica colegiada.
         </p>
         <p>
-          No somos una plataforma. No somos un agregador de técnicos. No vendemos
-          certificados energéticos porque la ley no nos permite hacerlo sin visita
-          presencial, y no vamos a saltarnos la ley para ganar dinero.
+          No somos una plataforma ni un agregador de técnicos. Somos una consultoría
+          técnica independiente que prioriza el cumplimiento normativo y la calidad
+          del análisis sobre la velocidad comercial.
         </p>
         <p>
-          Somos una consultoría técnica independiente. Nuestro servicio estrella es
-          la segunda opinión: coger ese certificado que te han dado y decirte si es
-          fiable, si hay errores, si te están engañando.
+          Nuestro servicio consiste en analizar su certificado energético existente
+          para determinar si es fiable, si contiene errores y si la calificación
+          se ajusta a las características reales del inmueble.
         </p>
       </section>
 

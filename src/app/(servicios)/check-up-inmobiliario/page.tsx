@@ -48,7 +48,7 @@ export default function CheckUpInmobiliarioPage() {
       <HeroSection
         eyebrow="Antes de comprar"
         title="Check-Up Inmobiliario Forense"
-        subtitle="No compre a ciegas. Auditoría técnica forense 100% remota que blinda su compraventa inmobiliaria. Detectamos Brown Discount, certificados fraudulentos y riesgos ocultos antes de ir a Notaría."
+        subtitle="Evaluación técnica independiente de su futuro inmueble. Analizamos el certificado energético, la documentación registral y los riesgos que podrían afectar al valor de su inversión antes de formalizar la compra."
         badges={["Cateb 9457", "48-72h", "100% remoto"]}
         price="199 €"
         ctaPrimary={{ label: "Solicitar Check-Up", href: waDiagnostico() }}
@@ -102,7 +102,7 @@ export default function CheckUpInmobiliarioPage() {
       <FAQSection items={faq} />
       <CTASection
         title="¿Vas a comprar una vivienda?"
-        text="No firmes sin un Check-Up Forense. 199€ que pueden ahorrarte miles de euros."
+        text="Una inversión de 199€ que le proporciona la tranquilidad de conocer el estado real del inmueble antes de comprometerse."
         buttonText="Solicitar mi Check-Up"
         buttonHref={waDiagnostico()}
       />

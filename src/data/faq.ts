@@ -34,8 +34,8 @@ export const homeFaq: FAQItem[] = [
     a: "No. Nuestro análisis forense es complementario, no sustitutivo. La normativa exige visita presencial para emitir un certificado energético oficial (RD 390/2021, art. 6.5). Nuestro valor está en la segunda opinión y en detectar lo que otros informes ocultan o ignoran.",
   },
   {
-    q: "¿Por qué debería pagar 199€ por un Check-Up si hay informes más baratos?",
-    a: "Porque un informe algorítmico de 30€ no detecta vicios ocultos, no revisa cargas registrales, no analiza el certificado energético con criterio técnico y no está respaldado por un seguro RC profesional. El Check‑Up de 199€ es una inversión: un solo vicio oculto no detectado puede costarle 5.000€ o más.",
+    q: "¿Qué valor aporta el Check-Up Inmobiliario respecto a otras opciones?",
+    a: "El Check-Up Inmobiliario incluye una revisión exhaustiva de la documentación registral, catastral y del certificado energético que otros servicios no ofrecen. Además, incorpora la detección de posibles riesgos y un análisis del impacto del Brown Discount en el valor del inmueble. Es una inversión que le proporciona seguridad y conocimiento antes de formalizar una compra.",
   },
   {
     q: "¿Los informes de Certilab son válidos para un procedimiento judicial?",
