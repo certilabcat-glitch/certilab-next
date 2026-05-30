@@ -13,7 +13,7 @@ export default function Footer() {
           <p>
             Consultoría energética técnica e independiente.
             <br />
-            Eva María González Gracia · Arquitecta Técnica · Colegiada nº 9457 ·
+            Eva María González García · Arquitecta Técnica colegiada · Colegio de Arquitectos Técnicos de Barcelona ·
             Cateb
           </p>
         </div>

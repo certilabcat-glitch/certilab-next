@@ -90,7 +90,7 @@ export default function RootLayout({
                     "Consultoría energética forense. Análisis técnico con responsabilidad profesional Cateb 9457. Segunda opinión, Check-Up inmobiliario e Informe Técnico Energético.",
                   founder: {
                     "@type": "Person",
-                    name: "Eva María González Gracia",
+                    name: "Eva María González García",
                     jobTitle: "Arquitecta Técnica",
                     memberOf: {
                       "@type": "Organization",

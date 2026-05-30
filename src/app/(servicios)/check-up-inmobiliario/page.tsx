@@ -122,7 +122,7 @@ export default function CheckUpInmobiliarioPage() {
                 url: "https://www.certilab.cat",
                 founder: {
                   "@type": "Person",
-                  name: "Eva María González Gracia",
+                  name: "Eva María González García",
                   jobTitle: "Arquitecta Técnica",
                   identifier: "Cateb 9457",
                 },

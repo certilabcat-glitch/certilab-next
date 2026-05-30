@@ -32,7 +32,7 @@ export default function AyudasEficienciaPage() {
                 "Guía informativa sobre ayudas disponibles para mejorar la eficiencia energética de viviendas: fondos Next Generation, CAE, deducciones IRPF y subvenciones autonómicas.",
               author: {
                 "@type": "Person",
-                name: "Eva María González Gracia",
+                name: "Eva María González García",
                 jobTitle: "Arquitecta Técnica",
                 memberOf: { "@type": "Organization", name: "Cateb" },
               },

@@ -10,7 +10,7 @@ export default function EvaSection() {
           La profesional detrás de cada informe
         </p>
         <p className="eva-credenciales">
-          Eva María González Gracia · Arquitecta Técnica · Cateb 9457 · 20 años
+          Eva María González García · Arquitecta Técnica colegiada · Colegio de Arquitectos Técnicos de Barcelona · 20 años
           de experiencia
         </p>
         <p className="eva-texto">

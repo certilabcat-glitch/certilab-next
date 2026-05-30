@@ -8,7 +8,7 @@ export const N8N_WEBHOOK_URL =
   process.env.N8N_WEBHOOK_URL || "https://tu-n8n.com/webhook/lead-certilab";
 
 export const EVA_INFO = {
-  name: "Eva María González Gracia",
+  name: "Eva María González García",
   title: "Arquitecta Técnica",
   colegio: "Cateb 9457",
   experiencia: "20 años de experiencia",

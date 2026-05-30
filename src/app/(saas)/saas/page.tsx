@@ -11,18 +11,18 @@ export default function SaasPage() {
         <div className="saas-hero-content">
           <p className="saas-hero-eyebrow">B2B · Plataforma profesional</p>
           <h1 className="saas-hero-title">
-            Centraliza todos tus análisis energéticos en un solo lugar
+            Convierte certificados energéticos en confianza para tus clientes
           </h1>
           <p className="saas-hero-sub">
-            Deja de perder tiempo con múltiples técnicos. Sube expedientes en
-            lote, recibe informes periciales firmados y ofrece un servicio
-            profesional a tus clientes.
+            Agencias inmobiliarias y arquitectos técnicos: centraliza
+            expedientes, recibe informes periciales firmados en 24-48h y
+            cierra más ventas con la garantía de un análisis profesional.
           </p>
           <div className="saas-hero-ctas">
             <Link href={waSaas()} className="saas-btn-primary">
               Solicitar demo gratuita
             </Link>
-            <Link href="/saas/precios/" className="saas-btn-secondary">
+            <Link href="#precios" className="saas-btn-secondary">
               Ver planes →
             </Link>
           </div>
@@ -53,11 +53,70 @@ export default function SaasPage() {
               plataforma que centralice tu trabajo y te ayude a escalar.
             </p>
           </div>
-          <div className="saas-problem-card">
+            <div className="saas-problem-card">
             <h3>Administradores de fincas</h3>
             <p>
               Gestionas múltiples comunidades sin una herramienta unificada
               para evaluar su estado energético y acceder a ayudas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section className="saas-section saas-features-section">
+        <h2 className="saas-section-title">
+          Todo lo que necesitas para escalar tu negocio
+        </h2>
+        <div className="saas-features-grid">
+          <div className="saas-feature-card">
+            <h3>Informes periciales con validez legal</h3>
+            <p>
+              Cada informe está firmado por Eva María González García,
+              Arquitecta Técnica colegiada Cateb 9457, con seguro de
+              responsabilidad civil. Tus clientes obtienen un documento
+              profesional que pueden presentar ante notarías, bancos y
+              administraciones.
+            </p>
+          </div>
+          <div className="saas-feature-card">
+            <h3>Panel de equipo multi-usuario</h3>
+            <p>
+              Invita a tus colaboradores, asigna expedientes y haz seguimiento
+              del estado de cada análisis en tiempo real. Ideal para agencias
+              con 2-5 agentes que gestionan decenas de inmuebles al mes.
+            </p>
+          </div>
+          <div className="saas-feature-card">
+            <h3>API de integración con tu CRM</h3>
+            <p>
+              Conecta Certilab con tu CRM inmobiliario o software de gestión.
+              Automatiza la creación de expedientes y sincroniza los
+              resultados sin intervención manual.
+            </p>
+          </div>
+          <div className="saas-feature-card">
+            <h3>Subida en lote y plantillas</h3>
+            <p>
+              Sube múltiples expedientes a la vez con nuestras plantillas
+              CSV. Procesa carteras completas de inmuebles en minutos, no en
+              horas.
+            </p>
+          </div>
+          <div className="saas-feature-card">
+            <h3>Servicio Express 2h</h3>
+            <p>
+              ¿Urgencia? Activa el modo Express y recibe tu informe en menos
+              de 2 horas. Perfecto para cierres de venta inminentes o
+              segundas opiniones sobre la marcha.
+            </p>
+          </div>
+          <div className="saas-feature-card">
+            <h3>Historial completo de expedientes</h3>
+            <p>
+              Accede a todos tus análisis anteriores desde un mismo panel.
+              Descarga informes antiguos, compara resultados y genera
+              reportes para tus clientes recurrentes.
             </p>
           </div>
         </div>
@@ -95,7 +154,7 @@ export default function SaasPage() {
       </section>
 
       {/* PLANES */}
-      <section className="saas-section saas-pricing-section">
+      <section id="precios" className="saas-section saas-pricing-section">
         <h2 className="saas-section-title">Planes para cada profesional</h2>
         <p className="saas-section-sub">
           Elige el plan que mejor se adapte a tu volumen de trabajo
@@ -106,7 +165,7 @@ export default function SaasPage() {
             <h3 className="saas-plan-name">Starter</h3>
             <p className="saas-plan-desc">Para autónomos y agentes individuales</p>
             <p className="saas-plan-price">
-              29<span className="saas-plan-currency">€</span>
+              49<span className="saas-plan-currency">€</span>
               <span className="saas-plan-period">/mes</span>
             </p>
             <ul className="saas-plan-features">
@@ -115,7 +174,7 @@ export default function SaasPage() {
               <li>Soporte por WhatsApp</li>
               <li>Historial de expedientes</li>
             </ul>
-            <Link href={waSaas("Starter")} className="saas-btn-primary saas-btn-full">
+            <Link href="/saas/demo/" className="saas-btn-primary saas-btn-full">
               Empezar prueba gratis
             </Link>
           </div>
@@ -126,7 +185,7 @@ export default function SaasPage() {
             <h3 className="saas-plan-name">Professional</h3>
             <p className="saas-plan-desc">Para agencias pequeñas (2-5 agentes)</p>
             <p className="saas-plan-price">
-              79<span className="saas-plan-currency">€</span>
+              99<span className="saas-plan-currency">€</span>
               <span className="saas-plan-period">/mes</span>
             </p>
             <ul className="saas-plan-features">
@@ -136,7 +195,7 @@ export default function SaasPage() {
               <li>API de integración</li>
               <li>Informes personalizados</li>
             </ul>
-            <Link href={waSaas("Professional")} className="saas-btn-primary saas-btn-full">
+            <Link href="/saas/demo/" className="saas-btn-primary saas-btn-full">
               Empezar prueba gratis
             </Link>
           </div>
@@ -145,8 +204,9 @@ export default function SaasPage() {
           <div className="saas-pricing-card">
             <h3 className="saas-plan-name">Enterprise</h3>
             <p className="saas-plan-desc">Para grandes volúmenes</p>
-            <p className="saas-plan-price saas-plan-price-custom">
-              Personalizado
+            <p className="saas-plan-price">
+              199<span className="saas-plan-currency">€</span>
+              <span className="saas-plan-period">/mes</span>
             </p>
             <ul className="saas-plan-features">
               <li>Análisis ilimitados</li>
@@ -155,8 +215,8 @@ export default function SaasPage() {
               <li>Gestión de usuarios</li>
               <li>Soporte prioritario 24/7</li>
             </ul>
-            <Link href={waSaas("Enterprise")} className="saas-btn-secondary saas-btn-full">
-              Contactar
+              <Link href="/saas/demo/" className="saas-btn-secondary saas-btn-full">
+              Solicitar demo
             </Link>
           </div>
         </div>
@@ -221,30 +281,77 @@ export default function SaasPage() {
         </Link>
       </section>
 
-      {/* Schema.org Service */}
+      {/* Schema.org Service + Products */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "Certilab SaaS",
-            applicationCategory: "BusinessApplication",
-            operatingSystem: "Web",
-            offers: [
+            "@graph": [
               {
-                "@type": "Offer",
-                name: "Starter",
-                price: "29",
-                priceCurrency: "EUR",
-                description: "10 analysis per month",
+                "@type": "SoftwareApplication",
+                name: "Certilab SaaS",
+                applicationCategory: "BusinessApplication",
+                operatingSystem: "Web",
+                offers: [
+                  {
+                    "@type": "Offer",
+                    name: "Starter",
+                    price: "49",
+                    priceCurrency: "EUR",
+                    description: "10 análisis/mes con informes PDF firmados",
+                  },
+                  {
+                    "@type": "Offer",
+                    name: "Professional",
+                    price: "99",
+                    priceCurrency: "EUR",
+                    description: "50 análisis/mes con panel de equipo y API",
+                  },
+                  {
+                    "@type": "Offer",
+                    name: "Enterprise",
+                    price: "199",
+                    priceCurrency: "EUR",
+                    description: "Análisis ilimitados con soporte prioritario 24/7",
+                  },
+                ],
               },
               {
-                "@type": "Offer",
-                name: "Professional",
-                price: "79",
-                priceCurrency: "EUR",
-                description: "50 analysis per month",
+                "@type": "Product",
+                name: "Certilab SaaS - Starter",
+                description: "10 análisis/mes con informes periciales firmados. Ideal para autónomos y agentes individuales.",
+                offers: {
+                  "@type": "Offer",
+                  price: "49",
+                  priceCurrency: "EUR",
+                  priceValidUntil: "2027-12-31",
+                  availability: "https://schema.org/InStock",
+                },
+              },
+              {
+                "@type": "Product",
+                name: "Certilab SaaS - Professional",
+                description: "50 análisis/mes con panel de equipo multi-usuario y API de integración CRM.",
+                offers: {
+                  "@type": "Offer",
+                  price: "99",
+                  priceCurrency: "EUR",
+                  priceValidUntil: "2027-12-31",
+                  availability: "https://schema.org/InStock",
+                },
+              },
+              {
+                "@type": "Product",
+                name: "Certilab SaaS - Enterprise",
+                description: "Análisis ilimitados, API dedicada, gestión de usuarios y soporte prioritario 24/7.",
+                offers: {
+                  "@type": "Offer",
+                  price: "199",
+                  priceCurrency: "EUR",
+                  priceValidUntil: "2027-12-31",
+                  availability: "https://schema.org/InStock",
+                },
               },
             ],
           }),

@@ -6,7 +6,7 @@ export default function TrustBlockSection() {
   return (
     <section className="trust-block" aria-label="Información profesional">
       <p>
-        <strong>Eva María González Gracia</strong>
+        <strong>Eva María González García</strong>
       </p>
       <p>Arquitecta Técnica · Colegiada nº 9457 · Cateb</p>
       <p>Seguro RC Profesional · Servicio 100% online para toda España</p>

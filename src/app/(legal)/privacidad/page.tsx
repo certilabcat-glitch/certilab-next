@@ -16,7 +16,7 @@ export default function PrivacidadPage() {
         <p className="legal-update">Última actualización: mayo 2026</p>
 
         <h2>1. Responsable del tratamiento</h2>
-        <p><strong>Identidad:</strong> Eva María González Gracia (Certilab)</p>
+        <p><strong>Identidad:</strong> Eva María González García (Certilab)</p>
         <p><strong>Colegiada:</strong> Cateb nº 9457</p>
         <p><strong>Contacto:</strong> A través del formulario de la web o WhatsApp</p>
 

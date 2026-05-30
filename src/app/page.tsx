@@ -1,62 +1,59 @@
 import HeroSection from "@/components/sections/HeroSection";
-import ProblemSection from "@/components/sections/ProblemSection";
-import DiffGrid from "@/components/sections/DiffGrid";
 import ServicesGrid from "@/components/sections/ServicesGrid";
-import PrivacySection from "@/components/sections/PrivacySection";
+import ProblemSection from "@/components/sections/ProblemSection";
 import HowItWorks from "@/components/sections/HowItWorks";
-import ContrastSection from "@/components/sections/ContrastSection";
 import EvaSection from "@/components/sections/EvaSection";
+import ContrastSection from "@/components/sections/ContrastSection";
 import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
-import CertiExpedienteForm from "@/components/forms/CertiExpedienteForm";
 import { homeFaq } from "@/data/faq";
 import { waDiagnostico } from "@/lib/wa";
+
 export default function HomePage() {
   return (
     <>
       <HeroSection
-        eyebrow="Arquitectura Técnica Forense · Cateb 9457"
-        title='No contrate un papel.<br />Exija una <em>verdad técnica</em> con responsabilidad profesional.'
-        subtitle="Análisis energético e inmobiliario firmado por arquitecta técnica colegiada. Sin algoritmos opacos. Sin comerciales disfrazados de técnicos."
+        eyebrow="Arquitecta Técnica colegiada · Análisis forense"
+        title='La verdad energética de tu inmueble,<br />con responsabilidad profesional real'
+        subtitle="Eva María González García, Arquitecta Técnica colegiada del Colegio de Arquitectos Técnicos de Barcelona, analiza tu certificado energético y detecta lo que otros informes ocultan. Sin algoritmos. Sin intermediarios."
         badges={[
-          "Cateb 9457",
+          "Colegiada · Colegio Arquitectos Técnicos Barcelona",
           "20 años de experiencia",
           "Seguro RC Profesional",
-          "Privacidad por Diseño",
+          "100% remoto · Confidencial",
         ]}
-        ctaPrimary={{ label: "Análisis Forense Gratuito", href: waDiagnostico() }}
+        ctaPrimary={{ label: "Diagnóstico Gratuito", href: waDiagnostico() }}
         ctaSecondary={{
-          label: "Qué es el Brown Discount →",
-          href: "/blog/brown-discount-precio-vivienda/",
+          label: "Servicios →",
+          href: "#servicios",
         }}
-        nota="100% remoto · Sin visita presencial · Sin alertar al vendedor · Protegemos la intimidad de su hogar"
-      >
-        <CertiExpedienteForm />
-      </HeroSection>
+        nota="Sin compromiso · Sin visita presencial · Sin alertar al vendedor"
+      />
+
+      <ServicesGrid />
 
       <ProblemSection />
 
       <div className="trust-bar" aria-label="Credenciales">
         <p>
-          Eva María González Gracia · Arquitecta Técnica · Cateb 9457 ·
-          Colegiada y habilitada · Especialista en eficiencia energética
+          Eva María González García · Arquitecta Técnica colegiada ·
+          Colegio de Arquitectos Técnicos de Barcelona · 20 años de experiencia
         </p>
       </div>
 
-      <DiffGrid />
-      <ServicesGrid />
-      <PrivacySection />
       <HowItWorks />
-      <ContrastSection />
+
       <EvaSection />
+
+      <ContrastSection />
 
       <FAQSection items={homeFaq} />
 
       <CTASection
-        title="¿Listo para blindar su patrimonio?"
-        text="El Diagnóstico Express es gratuito y confidencial. En 5 minutos sabrá qué riesgos energéticos e inmobiliarios afectan a su caso. Sin compromiso. Sin presiones. Con secreto profesional."
-        buttonText="Abrir Expediente de Blindaje"
+        title="¿Listo para proteger tu inversión?"
+        text="El Diagnóstico Express es gratuito y confidencial. En 5 minutos sabrás qué riesgos energéticos e inmobiliarios afectan a tu caso. Sin compromiso. Sin presiones."
+        buttonText="Diagnóstico Gratuito"
         buttonHref={waDiagnostico()}
       />
 
