@@ -1,6 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import { articles } from "@/data/articles";
 import "./blog.css";
+
+export const metadata: Metadata = {
+  title: "Blog de Consultoría Energética | Certilab",
+  description:
+    "Artículos sobre certificación energética, eficiencia en edificios, ayudas, normativa y todo lo que necesitas saber para tomar decisiones informadas sobre tu vivienda.",
+  alternates: { canonical: "https://www.certilab.cat/blog/" },
+  openGraph: {
+    title: "Blog de Consultoría Energética | Certilab",
+    description:
+      "Artículos sobre certificación energética, eficiencia en edificios, ayudas y normativa.",
+    url: "https://www.certilab.cat/blog/",
+  },
+};
 
 export default function BlogPage() {
   return (

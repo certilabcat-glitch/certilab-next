@@ -31,9 +31,9 @@ export default function ServicesGrid() {
                 <span className="servicio-precio">
                   {service.price === 0
                     ? "Gratuito"
-                    : `Tarifa: ${service.price} €`}
+                    : `${service.price} €`}
                 </span>
-                <span className="card-link">Ver detalles →</span>
+                <span className="card-link">{service.ctaLabel || "Ver detalles"} →</span>
               </div>
             </div>
           </Link>

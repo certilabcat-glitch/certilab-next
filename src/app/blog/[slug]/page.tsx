@@ -1,9 +1,9 @@
-import { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles, getArticle, getRelatedArticles } from "@/data/articles";
 import { waDiagnostico } from "@/lib/wa";
-import { SITE_URL } from "@/lib/constants";
 import "./post.css";
 
 interface Props {
@@ -14,26 +14,6 @@ export async function generateStaticParams() {
   return articles.map((article) => ({
     slug: article.slug,
   }));
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const article = getArticle(slug);
-  if (!article) return { title: "Artículo no encontrado" };
-
-  return {
-    title: `${article.title} | Certilab Blog`,
-    description: article.excerpt,
-    alternates: { canonical: `${SITE_URL}/blog/${slug}/` },
-    openGraph: {
-      title: article.title,
-      description: article.excerpt,
-      url: `${SITE_URL}/blog/${slug}/`,
-      type: "article",
-      publishedTime: article.date,
-      authors: [article.author],
-    },
-  };
 }
 
 function formatContent(content: string): string {

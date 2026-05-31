@@ -9,6 +9,7 @@ export interface Service {
   features: string[];
   includes?: string[];
   faq?: FAQItem[];
+  ctaLabel?: string;
 }
 
 export interface FAQItem {

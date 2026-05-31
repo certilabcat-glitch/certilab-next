@@ -9,6 +9,20 @@ import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import { homeFaq } from "@/data/faq";
 import { waDiagnostico } from "@/lib/wa";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Certilab | Arquitectura Técnica Forense · Consultoría Energética",
+  description:
+    "Consultoría energética forense. Análisis técnico independiente del certificado energético con responsabilidad profesional Cateb 9457. Segunda opinión desde 39€.",
+  alternates: { canonical: "https://www.certilab.cat/" },
+  openGraph: {
+    title: "Certilab | Arquitectura Técnica Forense · Consultoría Energética",
+    description:
+      "Análisis técnico independiente de su certificado energético. Eva González, Arquitecta Técnica Cateb 9457.",
+    url: "https://www.certilab.cat/",
+  },
+};
 
 export default function HomePage() {
   return (
@@ -16,31 +30,23 @@ export default function HomePage() {
       <HeroSection
         eyebrow="Arquitecta Técnica colegiada · Análisis forense"
         title='La verdad energética de tu inmueble,<br />con responsabilidad profesional real'
-        subtitle="Eva María González García, Arquitecta Técnica colegiada por el Colegio de Arquitectos Técnicos de Barcelona, realiza un análisis riguroso e independiente de su certificado energético para que usted pueda tomar la mejor decisión."
+        subtitle="Analizamos su certificado energético de forma rigurosa e independiente. Sin sesgos. Con responsabilidad profesional."
         badges={[
           "Colegiada · Colegio Arquitectos Técnicos Barcelona",
           "20 años de experiencia",
           "Seguro RC Profesional",
-          "100% remoto · Confidencial",
         ]}
         ctaPrimary={{ label: "Diagnóstico Gratuito", href: waDiagnostico() }}
         ctaSecondary={{
-          label: "Servicios →",
+          label: "Cómo funciona →",
           href: "#servicios",
         }}
-        nota="Sin compromiso · 100% remoto · Confidencial"
+        nota="Sin compromiso · Confidencial"
       />
-
-      <ServicesGrid />
 
       <ProblemSection />
 
-      <div className="trust-bar" aria-label="Credenciales">
-        <p>
-          Eva María González García · Arquitecta Técnica colegiada ·
-          Colegio de Arquitectos Técnicos de Barcelona · 20 años de experiencia
-        </p>
-      </div>
+      <ServicesGrid />
 
       <HowItWorks />
 

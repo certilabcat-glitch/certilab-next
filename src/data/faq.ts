@@ -3,11 +3,11 @@ import { FAQItem } from "@/types/service";
 export const homeFaq: FAQItem[] = [
   {
     q: "¿Por qué Certilab no realiza certificados energéticos oficiales?",
-    a: 'El RD 390/2021, art. 6.5, exige que el técnico realice una visita presencial al inmueble para la correcta realización del certificado de eficiencia energética. Nuestro modelo es 100% remoto, por lo que no podemos emitirlos legalmente. <a href="/por-que-no-emite-ce/" style="color:var(--color-terra);text-decoration:underline;">Explicación completa aquí.</a>',
+    a: "Porque no nos dedicamos a certificar inmuebles, sino a auditar certificados ya emitidos. Nuestro modelo de negocio se basa en la independencia técnica: revisamos el trabajo de otros para garantizar que el certificado que usted tiene es fiable. Esto evita el conflicto de interés que surge cuando quien certifica también audita.",
   },
   {
     q: "¿Dónde puedo conseguir un certificado energético oficial?",
-    a: 'A través de un técnico habilitado (arquitecto, arquitecto técnico o ingeniero) que realice la visita presencial. Puedes buscar en el <a href="https://www.registrocertificadosenergeticos.com/" target="_blank" rel="noopener noreferrer" style="color:var(--color-terra);text-decoration:underline;">Registro de Certificadores de Cataluña</a> o contactarnos y te orientamos sin coste.',
+    a: 'Necesitará contactar con un técnico certificador (arquitecto técnico, ingeniero o aparejador) habilitado por su comunidad autónoma. En Certilab no emitimos certificados oficiales, pero podemos orientarle sobre cómo conseguir uno fiable. Más información en nuestra guía: <a href="/blog/detectar-certificado-energetico-falso/" style="color:var(--color-terra);text-decoration:underline;">Cómo detectar un certificado energético falso</a>.',
   },
   {
     q: "¿Qué diferencia hay entre la Segunda Opinión estándar y la Express?",
@@ -15,7 +15,7 @@ export const homeFaq: FAQItem[] = [
   },
   {
     q: "¿El Check-Up Inmobiliario incluye el certificado energético?",
-    a: "No realizamos el certificado energético oficial (ver pregunta anterior), pero sí analizamos el certificado energético existente del inmueble, verificamos su fiabilidad y lo integramos en el informe junto con la Nota Simple, Catastral, análisis de cargas y evaluación técnica energética completa.",
+    a: "No incluye la emisión de un certificado nuevo, pero analizamos en profundidad el certificado energético existente del inmueble como parte del informe completo. Verificamos su fiabilidad, detectamos errores y lo integramos con la Nota Simple, Catastral y análisis de cargas.",
   },
   {
     q: "¿Trabajáis solo en el Garraf o en toda Cataluña?",
@@ -31,7 +31,7 @@ export const homeFaq: FAQItem[] = [
   },
   {
     q: "¿Esto sustituye a una inspección presencial de un técnico?",
-    a: "No. Nuestro análisis forense es complementario, no sustitutivo. La normativa exige visita presencial para emitir un certificado energético oficial (RD 390/2021, art. 6.5). Nuestro valor está en la segunda opinión y en detectar lo que otros informes ocultan o ignoran.",
+    a: "No. Nuestro análisis se basa en la documentación que usted nos aporta y en la información disponible del inmueble (catastro, registros públicos, documentación técnica). No realizamos visitas presenciales. Si necesita una inspección física, deberá contratar a un técnico local para esa labor.",
   },
   {
     q: "¿Qué valor aporta el Check-Up Inmobiliario respecto a otras opciones?",
