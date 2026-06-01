@@ -39,19 +39,6 @@ export default function FAQSection({
       </div>
 
       <style jsx>{`
-        .section {
-          padding: 7.5rem 1.5rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .section-title {
-          font-family: var(--font-serif);
-          font-size: clamp(1.75rem, 3vw, 2.25rem);
-          font-weight: 400;
-          color: var(--color-black);
-          text-align: center;
-          margin-bottom: 0.75rem;
-        }
         .faq-list {
           max-width: 680px;
           margin: 3rem auto 0;
@@ -88,11 +75,6 @@ export default function FAQSection({
         details a {
           color: var(--color-black);
           text-decoration: underline;
-        }
-        @media (max-width: 767px) {
-          .section {
-            padding: 5rem 1.5rem;
-          }
         }
       `}</style>
     </section>

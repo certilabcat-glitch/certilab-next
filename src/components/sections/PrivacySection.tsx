@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 export default function PrivacySection() {
   const items = [
     {
@@ -46,28 +44,6 @@ export default function PrivacySection() {
       </div>
 
       <style jsx>{`
-        .section {
-          padding: 7.5rem 1.5rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .section-title {
-          font-family: var(--font-serif);
-          font-size: clamp(1.75rem, 3vw, 2.25rem);
-          font-weight: 400;
-          color: var(--color-black);
-          text-align: center;
-          margin-bottom: 0.75rem;
-        }
-        .section-sub {
-          text-align: center;
-          font-family: var(--font-sans);
-          font-size: 1.05rem;
-          color: var(--color-grey);
-          max-width: 550px;
-          margin: 0 auto 3rem;
-          line-height: 1.7;
-        }
         .privacidad-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -93,11 +69,6 @@ export default function PrivacySection() {
           color: var(--color-grey);
           line-height: 1.6;
           margin: 0;
-        }
-        @media (max-width: 767px) {
-          .section {
-            padding: 5rem 1.5rem;
-          }
         }
       `}</style>
     </section>

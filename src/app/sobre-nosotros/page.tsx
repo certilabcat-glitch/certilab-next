@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import EvaSection from "@/components/sections/EvaSection";
+import DespachoSection from "@/components/sections/DespachoSection";
 import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import { waDiagnostico } from "@/lib/wa";
@@ -47,7 +47,7 @@ export default function SobreNosotrosPage() {
         </p>
       </section>
 
-      <EvaSection />
+      <DespachoSection />
 
       <CTASection
         title="¿Hablamos?"

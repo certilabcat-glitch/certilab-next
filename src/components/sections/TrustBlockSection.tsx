@@ -1,26 +1,22 @@
 "use client";
 
-"use client";
-
 export default function TrustBlockSection() {
   return (
     <section className="trust-block" aria-label="Información profesional">
       <p>
-        <strong>Eva María González García</strong>
+        <strong>Certilab · Despacho de Auditoría Energética</strong>
       </p>
-      <p>Arquitecta Técnica · Colegiada nº 9457 · Cateb</p>
+      <p>Dirigido por Eva María González García · Arquitecta Técnica · Colegiada nº 9457 · Cateb</p>
       <p>Seguro RC Profesional · Servicio 100% online para toda España</p>
       <div className="trust-block-badges">
         <span>Cateb 9457</span>
         <span>Seguro RC</span>
-        <span>Consultoría energética independiente</span>
+        <span>Despacho de Auditoría Energética</span>
       </div>
       <p className="disclaimer">
-        Certilab no emite certificados energéticos oficiales con registro en
-        CCAA.
+        Servicio 100% online para toda España.
         <br />
-        Somos una consultoría energética independiente especializada en análisis
-        técnicos remotos.
+        Análisis técnicos remotos con responsabilidad profesional real.
       </p>
 
       <style jsx>{`

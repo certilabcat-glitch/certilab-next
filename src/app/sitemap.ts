@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/check-up-inmobiliario", priority: 0.8, freq: "monthly" as const },
     { path: "/informe-tecnico-energetico", priority: 0.8, freq: "monthly" as const },
     { path: "/diagnostico-express", priority: 0.9, freq: "monthly" as const },
-    { path: "/por-que-no-emite-ce", priority: 0.8, freq: "monthly" as const },
     { path: "/blog", priority: 0.7, freq: "weekly" as const },
     { path: "/sobre-nosotros", priority: 0.7, freq: "monthly" as const },
     { path: "/formulario", priority: 0.9, freq: "monthly" as const },

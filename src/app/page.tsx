@@ -2,7 +2,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import ProblemSection from "@/components/sections/ProblemSection";
 import HowItWorks from "@/components/sections/HowItWorks";
-import EvaSection from "@/components/sections/EvaSection";
+import DespachoSection from "@/components/sections/DespachoSection";
 import ContrastSection from "@/components/sections/ContrastSection";
 import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
@@ -28,11 +28,11 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        eyebrow="Arquitecta Técnica colegiada · Análisis forense"
+        eyebrow="Despacho de Auditoría Energética · Análisis forense"
         title='La verdad energética de tu inmueble,<br />con responsabilidad profesional real'
         subtitle="Analizamos su certificado energético de forma rigurosa e independiente. Sin sesgos. Con responsabilidad profesional."
         badges={[
-          "Colegiada · Colegio Arquitectos Técnicos Barcelona",
+          "Arquitecta Técnica colegiada · Cateb 9457",
           "20 años de experiencia",
           "Seguro RC Profesional",
         ]}
@@ -50,7 +50,7 @@ export default function HomePage() {
 
       <HowItWorks />
 
-      <EvaSection />
+      <DespachoSection />
 
       <ContrastSection />
 

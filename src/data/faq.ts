@@ -2,14 +2,6 @@ import { FAQItem } from "@/types/service";
 
 export const homeFaq: FAQItem[] = [
   {
-    q: "¿Por qué Certilab no realiza certificados energéticos oficiales?",
-    a: "Porque no nos dedicamos a certificar inmuebles, sino a auditar certificados ya emitidos. Nuestro modelo de negocio se basa en la independencia técnica: revisamos el trabajo de otros para garantizar que el certificado que usted tiene es fiable. Esto evita el conflicto de interés que surge cuando quien certifica también audita.",
-  },
-  {
-    q: "¿Dónde puedo conseguir un certificado energético oficial?",
-    a: 'Necesitará contactar con un técnico certificador (arquitecto técnico, ingeniero o aparejador) habilitado por su comunidad autónoma. En Certilab no emitimos certificados oficiales, pero podemos orientarle sobre cómo conseguir uno fiable. Más información en nuestra guía: <a href="/blog/detectar-certificado-energetico-falso/" style="color:var(--color-terra);text-decoration:underline;">Cómo detectar un certificado energético falso</a>.',
-  },
-  {
     q: "¿Qué diferencia hay entre la Segunda Opinión estándar y la Express?",
     a: "El análisis es idéntico. La diferencia es el plazo: la estándar (39 €) tiene entrega en 24 horas; la Express (79 €) en menos de 2 horas, disponible lunes a viernes de 9 a 18 h. Útil cuando tienes una firma inminente.",
   },

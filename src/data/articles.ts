@@ -216,9 +216,9 @@ Una vivienda antigua sin reformas difícilmente obtiene una A o B. Si la calific
 2. **Reclama ante el colegio profesional** del técnico firmante.
 3. **Denuncia ante la administración** autonómica competente.
 
-## Alternativas que sí podemos ofrecerte
+## Nuestros servicios para tu tranquilidad
 
-Aunque no emitimos certificados energéticos oficiales (la ley exige visita presencial y nuestro modelo es 100% remoto), tenemos servicios que pueden ayudarte:
+Nuestro análisis forense te permite saber, antes de tomar cualquier decisión, si tu certificado energético es fiable, si la calificación es real y si el valor de tu inmueble está protegido:
 - Segunda Opinión (39€) - Revisamos tu certificado actual
 - Segunda Opinión Express (79€) - Entrega en menos de 2h
 - Check-Up Inmobiliario (199€) - Análisis completo antes de comprar

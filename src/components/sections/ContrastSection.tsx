@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 export default function ContrastSection() {
   return (
     <section className="section contraste-section" aria-labelledby="contraste-title">
@@ -38,28 +36,6 @@ export default function ContrastSection() {
       </div>
 
       <style jsx>{`
-        .section {
-          padding: 7.5rem 1.5rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .section-title {
-          font-family: var(--font-serif);
-          font-size: clamp(1.75rem, 3vw, 2.25rem);
-          font-weight: 400;
-          color: var(--color-black);
-          text-align: center;
-          margin-bottom: 0.75rem;
-        }
-        .section-sub {
-          text-align: center;
-          font-family: var(--font-sans);
-          font-size: 1.05rem;
-          color: var(--color-grey);
-          max-width: 550px;
-          margin: 0 auto 3rem;
-          line-height: 1.7;
-        }
         .contraste-duo {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -100,9 +76,6 @@ export default function ContrastSection() {
           border-bottom: none;
         }
         @media (max-width: 700px) {
-          .section {
-            padding: 5rem 1.5rem;
-          }
           .contraste-duo {
             grid-template-columns: 1fr;
           }

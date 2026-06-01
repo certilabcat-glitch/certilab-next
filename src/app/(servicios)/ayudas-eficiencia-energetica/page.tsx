@@ -90,7 +90,7 @@ export default function AyudasEficienciaPage() {
           >
             Solicitar diagnóstico gratuito
           </a>
-          <Link href="/por-que-no-emite-ce/" className="btn-secondary">
+          <Link href="/blog/detectar-certificado-energetico-falso/" className="btn-secondary">
             Saber más
           </Link>
         </div>
