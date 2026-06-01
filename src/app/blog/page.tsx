@@ -1,6 +1,5 @@
-"use client";
-
 import Link from "next/link";
+import type { Metadata } from "next";
 import { articles } from "@/data/articles";
 import "./blog.css";
 
