@@ -10,6 +10,7 @@ interface HeroSectionProps {
   ctaPrimary?: { label: string; href: string };
   ctaSecondary?: { label: string; href: string };
   price?: string;
+  priceOld?: string;
   credentials?: string;
   nota?: string;
   children?: React.ReactNode;
@@ -23,6 +24,7 @@ export default function HeroSection({
   ctaPrimary,
   ctaSecondary,
   price,
+  priceOld,
   credentials,
   nota,
   children,
@@ -41,7 +43,12 @@ export default function HeroSection({
           ))}
         </div>
       )}
-      {price && <p className="hero-price">{price}</p>}
+      {(priceOld || price) && (
+        <p className="hero-price">
+          {priceOld && <span className="hero-price-old">{priceOld}</span>}
+          {price && <span className="hero-price-current">{price}</span>}
+        </p>
+      )}
       {credentials && <p className="hero-credentials">{credentials}</p>}
       {(ctaPrimary || ctaSecondary) && (
         <div className="hero-ctas">
@@ -115,10 +122,25 @@ export default function HeroSection({
           border: 1px solid var(--color-border);
         }
         .hero-price {
+          font-family: var(--font-sans);
+          font-size: clamp(1.8rem, 4vw, 2.5rem);
+          color: var(--color-terra);
+          margin: 1rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+        }
+        .hero-price-old {
+          font-size: clamp(1.2rem, 3vw, 1.6rem);
+          color: var(--color-grey);
+          text-decoration: line-through;
+          opacity: 0.6;
+        }
+        .hero-price-current {
           font-family: var(--font-serif);
           font-size: clamp(2rem, 4vw, 2.5rem);
           color: var(--color-terra);
-          margin: 1rem 0;
         }
         .hero-credentials {
           font-family: var(--font-sans);

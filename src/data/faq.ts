@@ -48,6 +48,42 @@ export const segundaOpinionFaq: FAQItem[] = [
     q: "¿Qué diferencia hay entre la estándar y la Express si el análisis es el mismo?",
     a: "El rigor técnico es idéntico. La única diferencia es el plazo de entrega y el precio. La Express está pensada para situaciones de urgencia, como una firma inminente.",
   },
+  {
+    q: "¿Esto sustituye a tener que pedir un certificado nuevo?",
+    a: "No. Si necesitas un certificado nuevo para vender o alquilar, la Segunda Opinión no lo reemplaza. Pero si ya tienes uno y no te fías, es la forma más barata y rápida de saber si es fiable antes de tomar decisiones.",
+  },
+  {
+    q: "¿Tenéis cobertura en toda España o solo en Cataluña?",
+    a: "Trabajamos con inmuebles de toda España. El análisis es 100% remoto basado en la documentación que nos aportas, sin necesidad de desplazamiento. Da igual si el piso está en Barcelona, Madrid o Sevilla.",
+  },
+  {
+    q: "¿Y si después de la Segunda Opinión quiero contratar otro servicio?",
+    a: "Si al recibir tu informe detectamos que necesitas un análisis más profundo, te lo indicamos y te damos opciones. Muchos clientes empiezan con la Segunda Opinión y, si es necesario, dan el salto al Check-Up Inmobiliario completo. Sin presión y con total transparencia.",
+  },
+  {
+    q: "¿Cómo puedo saber si mi certificado energético es incorrecto sin ser técnico?",
+    a: "Señales comunes: la calificación es muy alta para la antigüedad del inmueble, no coinciden los metros cuadrados, faltan datos como el año de construcción, o el certificado se hizo sin visita. Nuestra Segunda Opinión analiza todo esto por ti y te da una conclusión clara en 24-48h.",
+  },
+  {
+    q: "¿Qué pasa si tras la revisión el certificado resulta ser correcto?",
+    a: "Te devolvemos el dinero. La garantía de satisfacción funciona así: si tu certificado está bien emitido y la calificación es correcta, consideramos que nuestro trabajo está hecho y te reembolsamos los 39€. Sin preguntas.",
+  },
+  {
+    q: "¿Afecta el Brown Discount al valor de mi piso aunque no lo vaya a vender ahora?",
+    a: "Sí. El Brown Discount penaliza inmuebles con calificación E, F o G con una pérdida de valor del 5% al 15%, independientemente de cuándo pienses vender. Conocerlo a tiempo te permite planificar mejoras energéticas que aumenten la calificación y recuperen valor. En un piso de 270.000€, hablamos de hasta 40.000€ de diferencia.",
+  },
+  {
+    q: "¿Puedo usar el informe de Segunda Opinión para negociar el precio de compra de una vivienda?",
+    a: "Sí, y es uno de los usos más habituales. Si el certificado del vendedor está inflado y nuestro informe demuestra que la calificación real es menor, puedes argumentar una rebaja por el sobrecoste energético futuro y por el Brown Discount asociado. Es una herramienta de negociación real.",
+  },
+  {
+    q: "¿Puedo reclamar si compré un piso basándome en un certificado energético falso?",
+    a: "Nuestro informe no es un dictamen judicial, pero al estar firmado por una arquitecta técnica colegiada (CATEB 9457) con seguro de responsabilidad civil, tiene valor probatorio como prueba pericial de parte. Puedes aportarlo en una reclamación o procedimiento. Te recomendamos consultar con tu abogado para evaluar el caso concreto.",
+  },
+  {
+    q: "¿Necesito desplazarme o hacer alguna gestión presencial?",
+    a: "Ninguna. Todo el proceso es 100% remoto: nos envías el certificado por WhatsApp, lo analizamos y recibes el informe PDF. Sin visitas, sin llamadas, sin papeleo. Ideal si estás en otra ciudad o si el inmueble está alquilado y no puedes acceder.",
+  },
 ];
 
 export const checkUpFaq: FAQItem[] = [

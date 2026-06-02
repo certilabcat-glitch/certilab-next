@@ -1,0 +1,46 @@
+﻿90|C:\Users\achib\Documents\web-garraf\src\app\layout.tsx|"Consultoría energética forense. Análisis técnico con responsabilidad profesional Cateb 9457. Segunda opinión, Check-Up inmobiliario e Informe Técnico Energético.",
+106|C:\Users\achib\Documents\web-garraf\src\app\layout.tsx|"Segunda Opinión Certificado Energético",
+17|C:\Users\achib\Documents\web-garraf\src\app\page.tsx|"Consultoría energética forense. Análisis técnico independiente del certificado energético con responsabilidad profesional Cateb 9457. Segunda opinión desde 39€.",
+111|C:\Users\achib\Documents\web-garraf\src\app\(saas)\saas\page.tsx|segundas opiniones sobre la marcha.
+9|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\layout.tsx|"Servicios profesionales de análisis energético forense: Segunda Opinión, Check-Up Inmobiliario, Informe Técnico. Arquitecta Técnica Cateb 9457.",
+144|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\configurar-auditoria\page.tsx|¿Necesitas certificado, segunda opinión, check-up inmobiliario o informe técnico?
+5|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\profesionales\page.tsx|title: "Profesionales | Certilab — Segunda Opinión para Arquitectos e Inmobiliarias",
+7|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\profesionales\page.tsx|"Para arquitectos técnicos, agencias inmobiliarias y administradores de fincas. Segunda opinión técnica de certificados energéticos para tus clientes.",
+11|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\profesionales\page.tsx|description: "Segunda opinión técnica para profesionales del sector inmobiliario-energético.",
+23|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\profesionales\page.tsx|text: "Ofrece a tus compradores una segunda opinión independiente del certificado energético. Aumenta la confianza y reduce objeciones en la venta.",
+119|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\profesionales\page.tsx|para ofrecer segundas opiniones técnicas de certificados energéticos.
+13|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|import { segundaOpinionFaq } from "@/data/faq";
+29|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|export default function SegundaOpinionPage() {
+35|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|{ name: "Segunda Opinión", href: "/segunda-opinion/" },
+41|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|title="Segunda Opinión del Certificado Energético"
+46|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|ctaPrimary={{ label: "Solicitar Segunda Opinión", href: waDiagnostico() }}
+47|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|ctaSecondary={{ label: "Express 2h (79€) →", href: "/segunda-opinion-express/" }}
+53|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|<h2 className="section-title">¿Por qué necesitas una Segunda Opinión?</h2>
+73|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|title="Informe Algorítmico vs. Segunda Opinión Certilab"
+87|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|label: "Segunda Opinión Certilab (39€)",
+108|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|<Link href="/segunda-opinion-express/" className="cross-card">
+138|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|<FAQSection items={segundaOpinionFaq} title="Preguntas frecuentes sobre la Segunda Opinión" />
+156|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|name: "Segunda Opinión Certificado Energético",
+166|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|name: "Segunda Opinión Estándar",
+174|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|name: "Segunda Opinión Express",
+187|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion\page.tsx|{ "@type": "ListItem", position: 2, name: "Segunda Opinión Certificado Energético", item: "https://www.certilab.cat/segunda-opinion/" },
+28|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|title: "Segunda Opinión Express (79€) | Entrega en 2h | Certilab",
+30|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|"Segunda opinión de tu certificado energético con entrega urgente en menos de 2 horas. 79€. Mismo rigor técnico que la estándar. Arquitecta Técnica Cateb 9457.",
+31|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|alternates: { canonical: "https://www.certilab.cat/segunda-opinion-express/" },
+33|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|title: "Segunda Opinión Express (79€) | Entrega en 2h | Certilab",
+35|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|"Segunda opinión de tu certificado energético con entrega urgente en menos de 2 horas. 79€. Cateb 9457.",
+36|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|url: "https://www.certilab.cat/segunda-opinion-express/",
+40|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|export default function SegundaOpinionExpressPage() {
+46|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|{ name: "Segunda Opinión Express", href: "/segunda-opinion-express/" },
+52|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|title="Segunda Opinión Express"
+53|C:\Users\achib\Documents\web-garraf\src\app\(servicios)\segunda-opinion-express\page.tsx|subtitle="El mismo análisis que la Segunda Opinión estándar, pero con entrega en menos de 2 horas. Para cuando no puedes esperar."
+52|C:\Users\achib\Documents\web-garraf\src\app\buscador-certificado-energetico-catalunya\page.tsx|Solicita una Segunda Opinión en Certilab. Por 39€ revisamos tu
+55|C:\Users\achib\Documents\web-garraf\src\app\buscador-certificado-energetico-catalunya\page.tsx|<Link href="/segunda-opinion/" className="inline-link">
+56|C:\Users\achib\Documents\web-garraf\src\app\buscador-certificado-energetico-catalunya\page.tsx|Solicitar Segunda Opinión →
+55|C:\Users\achib\Documents\web-garraf\src\app\cercador-certificats-energetics\page.tsx|<Link href="/segunda-opinion/" className="inline-link">
+140|C:\Users\achib\Documents\web-garraf\src\components\forms\ContactForm.tsx|<option value="segunda-opinion">
+141|C:\Users\achib\Documents\web-garraf\src\components\forms\ContactForm.tsx|Segunda Opinión (39€)
+143|C:\Users\achib\Documents\web-garraf\src\components\forms\ContactForm.tsx|<option value="segunda-opinion-express">
+144|C:\Users\achib\Documents\web-garraf\src\components\forms\ContactForm.tsx|Segunda Opinión Express (79€)
+25|C:\Users\achib\Documents\web-garraf\src\components\layout\Footer.tsx|<Link href="/segunda-opinion/">Segunda Opinión (39€)</Link>
+26|C:\Users\achib\Documents\web-garraf\src\components\layout\Footer.tsx|<Link href="/segunda-opinion-express/">Express (79€)</Link>
