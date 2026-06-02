@@ -120,6 +120,9 @@ export default function Footer() {
             grid-template-columns: 1fr;
             text-align: center;
           }
+          .footer-brand .footer-contacto {
+            justify-content: center;
+          }
           .footer-legal {
             text-align: center;
           }
