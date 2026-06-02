@@ -19,41 +19,40 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
       return;
     }
     setError(false);
-    // Guardar en localStorage para analytics básico
     const interest = JSON.parse(localStorage.getItem("certilab-interest") || "[]");
     interest.push({ service: serviceName, email, date: new Date().toISOString() });
     localStorage.setItem("certilab-interest", JSON.stringify(interest));
     setSent(true);
   };
 
-  const mailtoHref = `mailto:info@certilab.cat?subject=Interés%20en%20${encodeURIComponent(serviceName)}&body=Hola,%20estoy%20interesado%20en%20el%20servicio%20${encodeURIComponent(serviceName)}%20(${serviceUrl}).%20Avisadme%20cuando%20esté%20disponible.%0A%0AMi%20email:%20${encodeURIComponent(email)}`;
+  const mailtoHref = `mailto:info@certilab.cat?subject=Interes%20en%20${encodeURIComponent(serviceName)}&body=Hola,%20estoy%20interesado%20en%20el%20servicio%20${encodeURIComponent(serviceName)}%20(${serviceUrl}).%20Avisadme%20cuando%20este%20disponible.%0A%0AMi%20email:%20${encodeURIComponent(email)}`;
 
   return (
     <section className="coming-soon-section" id="coming-soon">
       <div className="coming-soon-inner">
-        <span className="coming-soon-badge">Próximamente</span>
+        <span className="coming-soon-badge">En obras</span>
         <h2 className="coming-soon-title">
-          {serviceName} estará disponible pronto
+          {serviceName} estara disponible pronto
         </h2>
         <p className="coming-soon-sub">
           Estamos ultimando los detalles de este servicio. Si quieres que te
-          avisemos cuando esté activo, déjanos tu correo.
+          avisemos cuando este activo, dejame tu correo.
         </p>
 
         {sent ? (
           <div className="coming-soon-success">
             <p className="coming-soon-success-text">
-              ✅ ¡Gracias! Te avisaremos cuando {serviceName} esté disponible.
+              Gracias! Te avisaremos cuando {serviceName} este disponible.
             </p>
             <p className="coming-soon-success-extra">
               Mientras tanto, descubre nuestra{" "}
               <Link href="/segunda-opinion/">
-                Segunda Opinión del Certificado Energético por 39€
+                Segunda Opinion del Certificado Energetico por 39EUR
               </Link>
-              , el servicio que ya está activo y operativo.
+              , el servicio que ya esta activo y operativo.
             </p>
             <p className="coming-soon-success-wa">
-              También puedes escribirnos directamente por{" "}
+              Tambien puedes escribirnos directamente por{" "}
               <a
                 href="https://wa.me/34608515922?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de"
                 target="_blank"
@@ -76,7 +75,7 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
                 }}
                 placeholder="tu@email.com"
                 className={`coming-soon-input ${error ? "error" : ""}`}
-                aria-label="Tu correo electrónico"
+                aria-label="Tu correo electronico"
               />
               <button type="submit" className="coming-soon-button">
                 Avisarme
@@ -84,20 +83,20 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
             </div>
             {error && (
               <p className="coming-soon-error">
-                Introduce un correo electrónico válido.
+                Introduce un correo electronico valido.
               </p>
             )}
             <p className="coming-soon-note">
-              Sin spam. Solo te escribiremos cuando este servicio esté listo.
+              Sin spam. Solo te escribiremos cuando este servicio este listo.
             </p>
           </form>
         )}
 
         <div className="coming-soon-alternative">
           <p className="coming-soon-alt-text">
-            ⚡ El servicio que ya está activo:{" "}
+            El servicio que ya esta activo:{" "}
             <Link href="/segunda-opinion/">
-              Segunda Opinión del Certificado (39€)
+              Segunda Opinion del Certificado (39EUR)
             </Link>
           </p>
         </div>
@@ -118,11 +117,12 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
           display: inline-block;
           font-family: var(--font-sans);
           font-size: 0.7rem;
-          font-weight: 600;
-          letter-spacing: 0.12em;
+          font-weight: 700;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: var(--color-terra);
-          background: rgba(196, 168, 130, 0.15);
+          color: #000;
+          background: #ffc107;
+          border: 1px solid #e6a800;
           padding: 0.3rem 0.85rem;
           margin-bottom: 1rem;
         }

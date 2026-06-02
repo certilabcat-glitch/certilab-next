@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { services } from "@/data/services";
 
+const comingSoonSlugs = ["check-up-inmobiliario", "informe-tecnico-energetico"];
+
 export default function ServicesGrid() {
   return (
     <section className="servicios-section" aria-labelledby="servicios-title">
@@ -19,12 +21,17 @@ export default function ServicesGrid() {
           <Link
             key={service.slug}
             href={service.href}
-            className={`servicio-card ${service.destacado ? "destacado" : ""}`}
+            className={`servicio-card ${service.destacado ? "destacado" : ""} ${
+              comingSoonSlugs.includes(service.slug) ? "coming-soon-card" : ""
+            }`}
           >
             <div className="servicio-card-inner">
               <div className="servicio-card-top">
                 <p className="servicio-badge">{service.badge}</p>
                 <h3>{service.title}</h3>
+                {comingSoonSlugs.includes(service.slug) && (
+                  <p className="servicio-coming-badge">Proximamente</p>
+                )}
               </div>
               <p className="servicio-desc">{service.description}</p>
               <div className="servicio-card-footer">
@@ -33,7 +40,11 @@ export default function ServicesGrid() {
                     ? "Gratuito"
                     : `${service.price} €`}
                 </span>
-                <span className="card-link">{service.ctaLabel || "Ver detalles"} →</span>
+                {comingSoonSlugs.includes(service.slug) ? (
+                  <span className="card-link card-link-coming">Proximamente →</span>
+                ) : (
+                  <span className="card-link">{service.ctaLabel || "Ver detalles"} →</span>
+                )}
               </div>
             </div>
           </Link>
@@ -116,6 +127,20 @@ export default function ServicesGrid() {
           padding: 0.2rem 0.75rem;
           border-radius: 4px;
         }
+        .servicio-coming-badge {
+          display: inline-block;
+          font-family: var(--font-sans);
+          font-size: 0.6rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #000;
+          background: #ffc107;
+          padding: 0.2rem 0.6rem;
+          margin-left: 0.5rem;
+          vertical-align: middle;
+          line-height: 1.4;
+        }
         .servicio-card h3 {
           font-family: var(--font-serif);
           font-size: 1.35rem;
@@ -155,9 +180,20 @@ export default function ServicesGrid() {
           color: var(--color-terra);
           transition: gap 0.2s;
         }
+        .card-link-coming {
+          color: var(--color-grey);
+          opacity: 0.6;
+        }
         .servicio-card:hover .card-link {
           text-decoration: underline;
           text-underline-offset: 2px;
+        }
+        .coming-soon-card {
+          opacity: 0.7;
+          transition: opacity 0.3s;
+        }
+        .coming-soon-card:hover {
+          opacity: 1;
         }
         @media (max-width: 767px) {
           .servicios-section {

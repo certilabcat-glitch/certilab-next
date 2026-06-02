@@ -43,11 +43,11 @@ export default function SegundaOpinionPage() {
         subtitle="Por 39€ revisamos su certificado, detectamos calificaciones infladas, errores técnicos y Brown Discount. Le decimos si su certificado es fiable o si le están engañando. Sin desplazamientos."
         badges={["Colegiada CATEB Barcelona", "24-48h", "100% remoto"]}
         price="39 €"
-        priceOld="60 €"
+        priceOld="69 €"
         credentials="Eva María González García · Arquitecta Técnica colegiada"
         ctaPrimary={{ label: "Solicitar Segunda Opinión", href: waDiagnostico() }}
         ctaSecondary={{ label: "Express 2h (79€) →", href: "/segunda-opinion-express/" }}
-        nota="Precio cerrado sin sorpresas. Si necesita más profundidad, le recomendaremos el servicio adecuado."
+        nota="Precio cerrado sin sorpresas (sin IVA). Si lo necesita urgente, dispone de la Segunda Opinión Express con entrega en 2 horas."
       >
         <p className="hero-garantia">
           <span className="hero-garantia-icon">&#9432;</span>
