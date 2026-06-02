@@ -51,7 +51,7 @@ export default function SegundaOpinionPage() {
       >
         <p className="hero-garantia">
           <span className="hero-garantia-icon">&#9432;</span>
-          Garantía de satisfacción: si su certificado es correcto, le devolvemos el dinero.
+          Por 39 € obtienes tranquilidad: si tu certificado es correcto, lo validamos; si tiene errores, los detectamos. Sales ganando siempre.
         </p>
       </HeroSection>
 
