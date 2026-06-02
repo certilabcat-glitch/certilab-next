@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import IncludesBox from "@/components/ui/IncludesBox";
 import HeroSection from "@/components/sections/HeroSection";
@@ -201,32 +200,6 @@ export default function SegundaOpinionPage() {
             <h3>Sin esperas ni papeleo</h3>
             <p>100% online. Envíenos su PDF por WhatsApp y recibirá su informe en 24-48h. Sin desplazarse, sin llamadas, sin compromiso.</p>
           </div>
-        </div>
-      </section>
-
-      {/* CROSS-SELLING: OTROS SERVICIOS */}
-      <section className="section cross-section">
-        <h2 className="section-title">¿Necesita algo más completo?</h2>
-        <p className="section-sub">Si su caso requiere más profundidad, estos servicios son el siguiente paso natural.</p>
-        <div className="cross-grid">
-          <Link href="/segunda-opinion-express/" className="cross-card">
-            <span className="cross-badge">Urgente</span>
-            <h3>Express 2h (79€)</h3>
-            <p>El mismo análisis, pero con entrega en menos de 2 horas. Para firmas inminentes o plazos ajustados.</p>
-            <span className="cross-link">Ver servicio →</span>
-          </Link>
-          <Link href="/check-up-inmobiliario/" className="cross-card destacado">
-            <span className="cross-badge">Recomendado</span>
-            <h3>Check-Up Inmobiliario (199€)</h3>
-            <p>Incluye Nota Simple, Catastral, análisis de cargas, revisión del CE y detección completa de riesgos. Ideal antes de firmar.</p>
-            <span className="cross-link">Ver servicio →</span>
-          </Link>
-          <Link href="/informe-tecnico-energetico/" className="cross-card">
-            <span className="cross-badge">Máximo detalle</span>
-            <h3>Informe Técnico (399€)</h3>
-            <p>Análisis completo del comportamiento energético con propuestas de mejora y orientación sobre ayudas.</p>
-            <span className="cross-link">Ver servicio →</span>
-          </Link>
         </div>
       </section>
 
@@ -614,88 +587,6 @@ export default function SegundaOpinionPage() {
           margin: 0;
         }
 
-        /* CROSS-SELLING */
-        .cross-section {
-          background: var(--color-crema);
-          max-width: 100%;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-        .cross-section .section-title,
-        .cross-section .section-sub {
-          max-width: 1100px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .cross-section .section-sub {
-          margin-bottom: 3rem;
-        }
-        .cross-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1.5rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .cross-card {
-          display: block;
-          text-decoration: none;
-          color: inherit;
-          border: 1px solid var(--color-border);
-          padding: 2rem;
-          background: #fff;
-          position: relative;
-          transition: all 0.3s ease;
-        }
-        .cross-card:hover {
-          box-shadow: var(--shadow-card-hover);
-          transform: translateY(-2px);
-        }
-        .cross-card.destacado {
-          border: 2px solid var(--color-black);
-        }
-        .cross-badge {
-          display: inline-block;
-          font-family: var(--font-sans);
-          font-size: 0.7rem;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--color-terra);
-          font-weight: 600;
-          background: rgba(196, 168, 130, 0.15);
-          padding: 0.2rem 0.75rem;
-          border-radius: 4px;
-          margin-bottom: 1rem;
-        }
-        .cross-card h3 {
-          font-family: var(--font-serif);
-          font-size: 1.25rem;
-          font-weight: 500;
-          color: var(--color-black);
-          margin-bottom: 0.75rem;
-          transition: color 0.2s;
-        }
-        .cross-card:hover h3 {
-          color: var(--color-terra);
-        }
-        .cross-card p {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          line-height: 1.65;
-          margin-bottom: 1.5rem;
-        }
-        .cross-link {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          font-weight: 500;
-          color: var(--color-terra);
-        }
-        .cross-card:hover .cross-link {
-          text-decoration: underline;
-          text-underline-offset: 2px;
-        }
-
         /* STICKY CTA BAR */
         .sticky-cta-bar {
           display: none;
@@ -788,13 +679,11 @@ export default function SegundaOpinionPage() {
           :global(body) { padding-bottom: 5.5rem; }
           .problem-grid { grid-template-columns: 1fr; }
           .trust-reasons-grid { grid-template-columns: 1fr; }
-          .cross-grid { grid-template-columns: 1fr; }
           .preview-grid { grid-template-columns: 1fr; max-width: 400px; }
           .sticky-cta-bar { display: block; }
         }
         @media (min-width: 768px) and (max-width: 1023px) {
           .trust-reasons-grid { grid-template-columns: repeat(2, 1fr); }
-          .cross-grid { grid-template-columns: repeat(2, 1fr); }
           .preview-grid { grid-template-columns: repeat(2, 1fr); }
           .sticky-cta-bar { display: block; }
         }
