@@ -61,15 +61,15 @@ export default function SegundaOpinionPage() {
       {/* PROBLEMA QUE RESUELVE */}
       <section className="section problem-section">
         <h2 className="section-title">¿Por qué necesita una Segunda Opinión?</h2>
-        <p className="section-sub">El 30% de los certificados energéticos contienen errores que pueden costarle miles de euros.</p>
+        <p className="section-sub">El 30% de los certificados energéticos contienen errores. Si compras, puedes estar pagando de más. Si vendes, puedes estar regalando dinero.</p>
         <div className="problem-grid">
           <div className="problem-card">
             <h3>Calificaciones infladas</h3>
-            <p>El vendedor contrata un técnico que asigna una calificación superior a la real. Una B que debería ser una E puede ocultar un sobrecoste energético de miles de euros al año.</p>
+            <p>Una calificación superior a la real puede engañar a compradores o perjudicar a vendedores que infravaloran su inmueble. Una B que debería ser una E oculta un sobrecoste energético de miles de euros al año.</p>
           </div>
           <div className="problem-card">
             <h3>Brown Discount: pérdida de valor</h3>
-            <p>Un inmueble con calificación E, F o G puede perder entre un <strong>5% y un 15%</strong> de su valor de mercado. Son hasta <strong>40.000€</strong> en una vivienda de 270.000€. Nuestro informe detecta este riesgo.</p>
+            <p>Un inmueble con calificación E, F o G puede perder entre un <strong>5% y un 15%</strong> de su valor de mercado. Son hasta <strong>40.000€</strong> en una vivienda de 270.000€. Si vendes, puedes estar regalando dinero. Si compras, puedes estar pagando de más. Nuestro informe lo detecta.</p>
           </div>
           <div className="problem-card">
             <h3>Datos sin verificar</h3>
