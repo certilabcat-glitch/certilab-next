@@ -38,7 +38,7 @@ export default function SegundaOpinionPage() {
       />
 
       <HeroSection
-        eyebrow="¿No se fía de su certificado energético?"
+        eyebrow="¿Le han inflado la calificación de su certificado?"
         title="Segunda Opinión del Certificado Energético"
         subtitle="Por 39€ revisamos su certificado, detectamos calificaciones infladas, errores técnicos y Brown Discount. Le decimos si su certificado es fiable o si le están engañando. Sin desplazamientos."
         badges={["Colegiada CATEB Barcelona", "24-48h", "100% remoto"]}
@@ -57,6 +57,66 @@ export default function SegundaOpinionPage() {
 
       {/* TRUST INDICATORS */}
       <TrustNumbers />
+
+      {/* TARGET AUDIENCE — ¿ERES...? */}
+      <section className="section audience-section">
+        <h2 className="section-title">¿Estás en alguna de estas situaciones?</h2>
+        <p className="section-sub">Identifícate en 2 segundos. Cada caso tiene una respuesta distinta.</p>
+        <div className="audience-grid">
+          <div className="audience-card">
+            <div className="audience-icon">🏠</div>
+            <h3>Vas a comprar una vivienda</h3>
+            <p>El certificado del vendedor marca una A, pero ¿es real? Si la calificación está inflada, puedes estar pagando hasta un 15% más del valor real. Por 39€ lo comprobamos antes de firmar.</p>
+            <a href={waDiagnostico()} className="audience-link">Quiero verificar antes de comprar →</a>
+          </div>
+          <div className="audience-card">
+            <div className="audience-icon">💰</div>
+            <h3>Vas a vender tu piso</h3>
+            <p>Un certificado con errores te hace perder dinero. Si tu calificación real es mejor de lo que pone, estás regalando tu inmueble. Si es peor, puedes arreglarlo antes de ponerlo en venta.</p>
+            <a href={waDiagnostico()} className="audience-link">Quiero saber cuánto vale mi piso realmente →</a>
+          </div>
+          <div className="audience-card">
+            <div className="audience-icon">🔍</div>
+            <h3>Ya tienes un informe y no te fías</h3>
+            <p>Tu certificado te parece extraño. La calificación no cuadra con lo que sabes de tu casa. O simplemente quieres asegurarte de que es correcto antes de tomar decisiones importantes.</p>
+            <a href={waDiagnostico()} className="audience-link">Quiero una segunda opinión profesional →</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ROI CONTRAST — CUÁNTO PUEDES PERDER */}
+      <section className="section roi-contrast-section">
+        <h2 className="section-title">39€ de inversión vs. miles de euros de riesgo</h2>
+        <p className="section-sub">Esto es lo que está en juego si tu certificado no es fiable.</p>
+        <div className="roi-contrast-grid">
+          <div className="roi-contrast-card bad">
+            <div className="roi-contrast-label">Sin revisión</div>
+            <div className="roi-contrast-amount">Hasta 40.000€</div>
+            <div className="roi-contrast-desc">de pérdida por Brown Discount en una vivienda de 270.000€</div>
+            <ul className="roi-contrast-list">
+              <li>✗ No sabes si la calificación es real</li>
+              <li>✗ Pagas de más o vendes por menos</li>
+              <li>✗ Sin respaldo profesional</li>
+            </ul>
+          </div>
+          <div className="roi-contrast-divider">
+            <span className="roi-contrast-vs">VS</span>
+          </div>
+          <div className="roi-contrast-card good">
+            <div className="roi-contrast-label">Con Segunda Opinión</div>
+            <div className="roi-contrast-amount">39€</div>
+            <div className="roi-contrast-desc">inversión única. Recuperable si hay errores.</div>
+            <ul className="roi-contrast-list">
+              <li>✓ Sabes si tu certificado es fiable</li>
+              <li>✓ Detectamos errores y Brown Discount</li>
+              <li>✓ Informe firmado por arquitecta colegiada</li>
+            </ul>
+          </div>
+        </div>
+        <div className="roi-contrast-cta">
+          <a href={waDiagnostico()} className="roi-contrast-button">Proteger mi inversión por 39€ →</a>
+        </div>
+      </section>
 
       {/* PROBLEMA QUE RESUELVE */}
       <section className="section problem-section">
@@ -674,8 +734,167 @@ export default function SegundaOpinionPage() {
           opacity: 0.75;
         }
 
+        /* AUDIENCE SECTION */
+        .audience-section {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 5rem 1.5rem;
+        }
+        .audience-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+          margin-top: 2rem;
+        }
+        .audience-card {
+          background: #fff;
+          border: 1px solid var(--color-border);
+          padding: 2rem 1.75rem;
+          text-align: left;
+          transition: box-shadow 0.2s;
+        }
+        .audience-card:hover {
+          box-shadow: var(--shadow-card-hover);
+        }
+        .audience-icon {
+          font-size: 1.75rem;
+          margin-bottom: 1rem;
+        }
+        .audience-card h3 {
+          font-family: var(--font-serif);
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: var(--color-black);
+          margin-bottom: 0.75rem;
+        }
+        .audience-card p {
+          font-family: var(--font-sans);
+          font-size: 0.9rem;
+          color: var(--color-grey);
+          line-height: 1.65;
+          margin-bottom: 1.25rem;
+        }
+        .audience-link {
+          font-family: var(--font-sans);
+          font-size: 0.85rem;
+          font-weight: 500;
+          color: var(--color-terra);
+          text-decoration: underline;
+          text-underline-offset: 2px;
+        }
+        .audience-link:hover {
+          color: var(--color-terra-dark);
+        }
+
+        /* ROI CONTRAST */
+        .roi-contrast-section {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 5rem 1.5rem;
+          text-align: center;
+        }
+        .roi-contrast-grid {
+          display: flex;
+          align-items: stretch;
+          justify-content: center;
+          gap: 0;
+          margin: 0 auto;
+          max-width: 750px;
+        }
+        .roi-contrast-card {
+          flex: 1;
+          padding: 2rem;
+          text-align: left;
+          border: 1px solid var(--color-border);
+        }
+        .roi-contrast-card.bad {
+          background: #fff;
+        }
+        .roi-contrast-card.good {
+          background: var(--color-crema);
+          border-color: var(--color-terra);
+        }
+        .roi-contrast-divider {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 0.75rem;
+          flex-shrink: 0;
+        }
+        .roi-contrast-vs {
+          font-family: var(--font-sans);
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          color: var(--color-grey);
+          text-transform: uppercase;
+        }
+        .roi-contrast-label {
+          font-family: var(--font-sans);
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--color-grey);
+          margin-bottom: 0.5rem;
+        }
+        .roi-contrast-amount {
+          font-family: var(--font-serif);
+          font-size: 1.75rem;
+          font-weight: 500;
+          color: var(--color-black);
+          margin-bottom: 0.35rem;
+        }
+        .roi-contrast-card.good .roi-contrast-amount {
+          color: #2e7d32;
+        }
+        .roi-contrast-desc {
+          font-family: var(--font-sans);
+          font-size: 0.85rem;
+          color: var(--color-grey);
+          line-height: 1.5;
+          margin-bottom: 1.25rem;
+        }
+        .roi-contrast-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .roi-contrast-list li {
+          font-family: var(--font-sans);
+          font-size: 0.85rem;
+          color: var(--color-grey);
+          line-height: 1.6;
+          margin-bottom: 0.35rem;
+        }
+        .roi-contrast-cta {
+          margin-top: 2.5rem;
+        }
+        .roi-contrast-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          background: var(--color-black);
+          color: #fff;
+          font-family: var(--font-sans);
+          font-size: 0.95rem;
+          font-weight: 500;
+          text-decoration: none;
+          padding: 0.85rem 2rem;
+          border-radius: 6px;
+          transition: background 0.2s;
+        }
+        .roi-contrast-button:hover {
+          background: #333;
+        }
+
         @media (max-width: 767px) {
           .section { padding: 3rem 1.5rem; }
+          .audience-grid { grid-template-columns: 1fr; }
+          .audience-section { padding: 3rem 1.5rem; }
+          .roi-contrast-section { padding: 3rem 1.5rem; }
+          .roi-contrast-grid { flex-direction: column; max-width: 400px; }
+          .roi-contrast-divider { padding: 0.75rem 0; }
           :global(body) { padding-bottom: 5.5rem; }
           .problem-grid { grid-template-columns: 1fr; }
           .trust-reasons-grid { grid-template-columns: 1fr; }

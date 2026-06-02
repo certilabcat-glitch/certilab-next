@@ -3,9 +3,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
 import FAQSection from "@/components/sections/FAQSection";
-import CTASection from "@/components/sections/CTASection";
-import TrustBlockSection from "@/components/sections/TrustBlockSection";
-import { waDiagnostico } from "@/lib/wa";
+import ComingSoonSection from "@/components/ui/ComingSoonSection";
 
 const faq = [
   {
@@ -14,7 +12,7 @@ const faq = [
   },
   {
     q: "¿En cuánto tiempo recibo el informe?",
-    a: "El plazo estándar es de 48-72 horas laborables desde que recibimos toda la documentación necesaria.",
+    a: "El plazo estándar será de 48-72 horas laborables desde que recibamos toda la documentación necesaria.",
   },
   {
     q: "¿Esto sustituye a una inspección presencial?",
@@ -23,14 +21,14 @@ const faq = [
 ];
 
 export const metadata: Metadata = {
-  title: "Check-Up Inmobiliario Forense (199€) | Arquitectura Técnica | Certilab",
+  title: "Check-Up Inmobiliario Forense (199€) – Próximamente | Certilab",
   description:
-    "No compre a ciegas. Auditoría técnica forense 100% remota que blinda su compraventa inmobiliaria. Detectamos Brown Discount, certificados no fiables y riesgos ocultos. Arquitecta Técnica Cateb 9457.",
+    "Auditoría técnica forense 100% remota para blindar su compraventa inmobiliaria. Detectamos Brown Discount y riesgos ocultos. Próximamente disponible. Déjanos tu email y te avisamos.",
   alternates: { canonical: "https://www.certilab.cat/check-up-inmobiliario/" },
   openGraph: {
-    title: "Check-Up Inmobiliario Forense (199€) | Certilab",
+    title: "Check-Up Inmobiliario Forense – Próximamente | Certilab",
     description:
-      "Auditoría técnica forense 100% remota. Detecte el Brown Discount y los vicios ocultos antes de firmar. Cateb 9457.",
+      "Auditoría técnica forense 100% remota. Detecte el Brown Discount y los vicios ocultos antes de firmar. Próximamente disponible.",
     url: "https://www.certilab.cat/check-up-inmobiliario/",
   },
 };
@@ -46,12 +44,14 @@ export default function CheckUpInmobiliarioPage() {
       />
 
       <HeroSection
-        eyebrow="Antes de comprar"
+        eyebrow="Próximamente"
         title="Check-Up Inmobiliario Forense"
         subtitle="Evaluación técnica independiente de su futuro inmueble. Analizamos el certificado energético, la documentación registral y los riesgos que podrían afectar al valor de su inversión antes de formalizar la compra."
         badges={["Cateb 9457", "48-72h", "100% remoto"]}
         price="199 €"
-        ctaPrimary={{ label: "Solicitar Check-Up", href: waDiagnostico() }}
+        priceOld={undefined}
+        ctaPrimary={{ label: "Avisarme cuando esté disponible »", href: "#coming-soon" }}
+        nota="Servicio en preparación. Déjanos tu correo y te avisaremos cuando esté activo."
       />
 
       {/* ROI Grid */}
@@ -100,13 +100,11 @@ export default function CheckUpInmobiliarioPage() {
       />
 
       <FAQSection items={faq} />
-      <CTASection
-        title="¿Vas a comprar una vivienda?"
-        text="Una inversión de 199€ que le proporciona la tranquilidad de conocer el estado real del inmueble antes de comprometerse."
-        buttonText="Solicitar mi Check-Up"
-        buttonHref={waDiagnostico()}
+
+      <ComingSoonSection
+        serviceName="Check-Up Inmobiliario Forense (199€)"
+        serviceUrl="https://www.certilab.cat/check-up-inmobiliario/"
       />
-      <TrustBlockSection />
 
       <script
         type="application/ld+json"
@@ -133,6 +131,7 @@ export default function CheckUpInmobiliarioPage() {
                 price: "199",
                 priceCurrency: "EUR",
                 url: "https://www.certilab.cat/check-up-inmobiliario/",
+                availability: "https://schema.org/PreOrder",
               },
               areaServed: { "@type": "Country", name: "España" },
             },
