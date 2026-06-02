@@ -171,7 +171,7 @@ export default function SegundaOpinionPage() {
         </div>
         <p className="preview-note">
           <span className="preview-note-icon">📄</span>
-          Informe real de 5-10 páginas con validez jurídica. Recibirá un PDF listo para descargar e imprimir.
+          Informe real detallado firmado por arquitecta técnica colegiada. Con respaldo profesional y seguro de responsabilidad civil. Recibirá un PDF listo para descargar e imprimir.
         </p>
       </section>
 
