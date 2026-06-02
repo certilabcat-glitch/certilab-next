@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import DespachoSection from "@/components/sections/DespachoSection";
 import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import { waDiagnostico } from "@/lib/wa";
@@ -46,8 +45,6 @@ export default function SobreNosotrosPage() {
           se ajusta a las características reales del inmueble.
         </p>
       </section>
-
-      <DespachoSection />
 
       <CTASection
         title="¿Hablamos?"

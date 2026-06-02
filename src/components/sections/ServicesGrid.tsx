@@ -79,9 +79,8 @@ export default function ServicesGrid() {
           text-decoration: none;
           color: inherit;
           background: #fff;
-          border-radius: 12px;
           box-shadow: var(--shadow-card);
-          border: 1px solid var(--color-border);
+          border: 1px solid var(--color-terra-light);
           transition: all 0.3s ease;
         }
         .servicio-card:hover {

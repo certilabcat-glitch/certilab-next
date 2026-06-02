@@ -16,7 +16,6 @@ export default function Footer() {
             Eva María González García · Arquitecta Técnica colegiada · Colegio de Arquitectos Técnicos de Barcelona
           </p>
           <div className="footer-contacto">
-            <a href="https://wa.me/34608515922">WhatsApp</a>
             <a href="mailto:info@certilab.cat">info@certilab.cat</a>
           </div>
         </div>

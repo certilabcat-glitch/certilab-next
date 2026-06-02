@@ -45,7 +45,9 @@ export default function ContrastSection() {
         }
         .contraste-card {
           padding: 2.5rem 2rem;
-          border: 1px solid var(--color-border);
+          background: #fff;
+          box-shadow: var(--shadow-card);
+          border: 1px solid var(--color-terra-light);
         }
         .contraste-label {
           font-family: var(--font-sans);

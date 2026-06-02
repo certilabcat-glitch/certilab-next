@@ -781,7 +781,9 @@ img, video, iframe, table, pre, code {
   }
 }
 .problem-card {
-  border: 1px solid var(--color-border);
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-terra-light);
   padding: 2rem;
 }
 @media (max-width: 767px) {

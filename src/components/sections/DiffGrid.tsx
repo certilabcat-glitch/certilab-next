@@ -51,8 +51,11 @@ export default function DiffGrid() {
           gap: 2rem;
         }
         .diff-card {
-          padding: 2rem 0;
+          padding: 2rem;
           text-align: center;
+          background: #fff;
+          box-shadow: var(--shadow-card);
+          border: 1px solid var(--color-terra-light);
         }
         .diff-num {
           font-family: var(--font-serif);
