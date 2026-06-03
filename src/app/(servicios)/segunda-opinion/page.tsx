@@ -1,7 +1,7 @@
 "use client";
 
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
-import ObrasBanner from "@/components/ui/ObrasBanner";
+import IncludesBox from "@/components/ui/IncludesBox";
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
 import StepsGrid from "@/components/sections/StepsGrid";
@@ -11,8 +11,8 @@ import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import TrustNumbers from "@/components/sections/TrustNumbers";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import ComingSoonSection from "@/components/ui/ComingSoonSection";
 import { segundaOpinionFaq } from "@/data/faq";
+import { waDiagnostico } from "@/lib/wa";
 
 const features = [
   { num: "I", title: "Revisión de calificación", text: "Analizamos la calificación asignada y la comparamos con los datos reales del inmueble para detectar si está inflada o es incorrecta." },
@@ -27,34 +27,9 @@ const steps = [
   { title: "Recibes tu dictamen", text: "Informe PDF detallado con conclusiones, errores detectados, detección de Brown Discount y próximos pasos." },
 ];
 
-const trustReasons = [
-  {
-    num: "01",
-    title: "Revisión humana real",
-    text: "Cada certificado lo analiza personalmente una arquitecta técnica colegiada. Sin IA, sin automatismos.",
-  },
-  {
-    num: "02",
-    title: "Responsabilidad profesional",
-    text: "Eva María González García, colegiada CATEB 9457, con seguro de responsabilidad civil. Firmamos lo que dictaminamos.",
-  },
-  {
-    num: "03",
-    title: "Independencia total",
-    text: "No vendemos certificados energéticos. No tenemos conflicto de interés. Nuestra única función es decirle la verdad sobre el suyo.",
-  },
-  {
-    num: "04",
-    title: "Sin esperas ni papeleo",
-    text: "100% online. Envíenos su PDF por WhatsApp y recibirá su informe en 24-48h. Sin desplazarse, sin llamadas, sin compromiso.",
-  },
-];
-
 export default function SegundaOpinionPage() {
   return (
-    <div className="page-wrapper">
-      <ObrasBanner />
-
+    <>
       <Breadcrumbs
         items={[
           { name: "Inicio", href: "/" },
@@ -63,24 +38,27 @@ export default function SegundaOpinionPage() {
       />
 
       <HeroSection
-        eyebrow="Próximamente"
+        eyebrow="¿Le han inflado la calificación de su certificado?"
         title="Segunda Opinión del Certificado Energético"
         subtitle="Por 39€ revisamos su certificado, detectamos calificaciones infladas, errores técnicos y Brown Discount. Le decimos si su certificado es fiable o si le están engañando. Sin desplazamientos."
         badges={["Colegiada CATEB Barcelona", "24-48h", "100% remoto"]}
         price="39 €"
         priceOld="69 €"
-        ctaPrimary={{ label: "Avisarme cuando esté disponible »", href: "#coming-soon" }}
-        nota="Servicio en preparación. Déjanos tu correo y te avisaremos cuando esté activo."
+        credentials="Eva María González García · Arquitecta Técnica colegiada"
+        ctaPrimary={{ label: "Solicitar Segunda Opinión", href: waDiagnostico() }}
+        ctaSecondary={{ label: "Express 2h (79€) →", href: "/segunda-opinion-express/" }}
+        nota="Precio cerrado sin sorpresas (sin IVA). Si lo necesita urgente, dispone de la Segunda Opinión Express con entrega en 2 horas."
       >
         <p className="hero-garantia">
           <span className="hero-garantia-icon">&#9432;</span>
-          Por 39€ obtienes tranquilidad: si tu certificado es correcto, lo validamos; si tiene errores, los detectamos. Sales ganando siempre.
+          Por 39 € obtienes tranquilidad: si tu certificado es correcto, lo validamos; si tiene errores, los detectamos. Sales ganando siempre.
         </p>
       </HeroSection>
 
+      {/* TRUST INDICATORS */}
       <TrustNumbers />
 
-      {/* AUDIENCE */}
+      {/* TARGET AUDIENCE — ¿ERES...? */}
       <section className="section audience-section">
         <h2 className="section-title">¿Estás en alguna de estas situaciones?</h2>
         <p className="section-sub">Identifícate en 2 segundos. Cada caso tiene una respuesta distinta.</p>
@@ -89,24 +67,24 @@ export default function SegundaOpinionPage() {
             <div className="audience-icon">🏠</div>
             <h3>Vas a comprar una vivienda</h3>
             <p>El certificado del vendedor marca una A, pero ¿es real? Si la calificación está inflada, puedes estar pagando hasta un 15% más del valor real. Por 39€ lo comprobamos antes de firmar.</p>
-            <a href="#coming-soon" className="audience-link">Quiero verificar antes de comprar →</a>
+            <a href={waDiagnostico()} className="audience-link">Quiero verificar antes de comprar →</a>
           </div>
           <div className="audience-card">
             <div className="audience-icon">💰</div>
             <h3>Vas a vender tu piso</h3>
             <p>Un certificado con errores te hace perder dinero. Si tu calificación real es mejor de lo que pone, estás regalando tu inmueble. Si es peor, puedes arreglarlo antes de ponerlo en venta.</p>
-            <a href="#coming-soon" className="audience-link">Quiero saber cuánto vale mi piso realmente →</a>
+            <a href={waDiagnostico()} className="audience-link">Quiero saber cuánto vale mi piso realmente →</a>
           </div>
           <div className="audience-card">
             <div className="audience-icon">🔍</div>
             <h3>Ya tienes un informe y no te fías</h3>
             <p>Tu certificado te parece extraño. La calificación no cuadra con lo que sabes de tu casa. O simplemente quieres asegurarte de que es correcto antes de tomar decisiones importantes.</p>
-            <a href="#coming-soon" className="audience-link">Quiero una segunda opinión profesional →</a>
+            <a href={waDiagnostico()} className="audience-link">Quiero una segunda opinión profesional →</a>
           </div>
         </div>
       </section>
 
-      {/* ROI CONTRAST */}
+      {/* ROI CONTRAST — CUÁNTO PUEDES PERDER */}
       <section className="section roi-contrast-section">
         <h2 className="section-title">39€ de inversión vs. miles de euros de riesgo</h2>
         <p className="section-sub">Esto es lo que está en juego si tu certificado no es fiable.</p>
@@ -136,11 +114,11 @@ export default function SegundaOpinionPage() {
           </div>
         </div>
         <div className="roi-contrast-cta">
-          <a href="#coming-soon" className="roi-contrast-button">Proteger mi inversión por 39€ →</a>
+          <a href={waDiagnostico()} className="roi-contrast-button">Proteger mi inversión por 39€ →</a>
         </div>
       </section>
 
-      {/* PROBLEM */}
+      {/* PROBLEMA QUE RESUELVE */}
       <section className="section problem-section">
         <h2 className="section-title">¿Por qué necesita una Segunda Opinión?</h2>
         <p className="section-sub">El 30% de los certificados energéticos contienen errores. Si compras, puedes estar pagando de más. Si vendes, puedes estar regalando dinero.</p>
@@ -159,11 +137,11 @@ export default function SegundaOpinionPage() {
           </div>
         </div>
         <div className="problem-cta">
-          <a href="#coming-soon" className="problem-cta-button">Quiero saber si mi certificado es fiable →</a>
+          <a href={waDiagnostico()} className="problem-cta-button">Quiero saber si mi certificado es fiable →</a>
         </div>
       </section>
 
-      {/* COMPARATIVA */}
+      {/* COMPARATIVA VISUAL */}
       <ComparativaSection
         title="Informe Algorítmico vs. Segunda Opinión Certilab"
         subtitle="No todos los análisis son iguales. Mira lo que obtienes con cada uno."
@@ -195,27 +173,21 @@ export default function SegundaOpinionPage() {
       <FeaturesGrid features={features} />
       <StepsGrid steps={steps} />
 
-      {/* INCLUDES */}
+      {/* QUÉ INCLUYE – MOVED UP AFTER STEPS */}
       <section className="section includes-section">
         <h2 className="section-title">¿Qué incluye por 39€?</h2>
         <p className="section-sub">Todo lo que necesita para saber si puede confiar en su certificado energético.</p>
-        <div className="includes-box">
-          <ul className="includes-grid">
-            {[
-              "Análisis detallado del certificado existente",
-              "Detección de discrepancias y anomalías",
-              "Detección de Brown Discount",
-              "Informe PDF con conclusiones técnicas",
-              "Recomendaciones accionables",
-              "Orientación sobre próximos pasos",
-            ].map((item, i) => (
-              <li key={i} className="includes-item">{item}</li>
-            ))}
-          </ul>
-        </div>
+        <IncludesBox items={[
+          "Análisis detallado del certificado existente",
+          "Detección de discrepancias y anomalías",
+          "Detección de Brown Discount",
+          "Informe PDF con conclusiones técnicas",
+          "Recomendaciones accionables",
+          "Orientación sobre próximos pasos",
+        ]} />
       </section>
 
-      {/* PREVIEW */}
+      {/* ASÍ ES SU INFORME */}
       <section className="section preview-section">
         <h2 className="section-title">Así es su informe</h2>
         <p className="section-sub">Un documento claro, profesional y listo para presentar ante notario o banco.</p>
@@ -263,39 +235,48 @@ export default function SegundaOpinionPage() {
         </p>
       </section>
 
-      {/* TRUST REASONS */}
+      {/* MICRO-CONFIANZA: POR QUÉ CERTILAB */}
       <section className="section trust-reasons-section">
         <h2 className="section-title">¿Por qué confiar su revisión a Certilab?</h2>
         <p className="section-sub">No somos un comparador ni un generador automático. Somos profesionales colegiados.</p>
         <div className="trust-reasons-grid">
-          {trustReasons.map((r, i) => (
-            <div className="trust-reason-card" key={i}>
-              <div className="trust-reason-num">{r.num}</div>
-              <h3>{r.title}</h3>
-              <p>{r.text}</p>
-            </div>
-          ))}
+          <div className="trust-reason-card">
+            <div className="trust-reason-num">01</div>
+            <h3>Revisión humana real</h3>
+            <p>Cada certificado lo analiza personalmente una arquitecta técnica colegiada. Sin IA, sin automatismos.</p>
+          </div>
+          <div className="trust-reason-card">
+            <div className="trust-reason-num">02</div>
+            <h3>Responsabilidad profesional</h3>
+            <p>Eva María González García, colegiada CATEB 9457, con seguro de responsabilidad civil. Firmamos lo que dictaminamos.</p>
+          </div>
+          <div className="trust-reason-card">
+            <div className="trust-reason-num">03</div>
+            <h3>Independencia total</h3>
+            <p>No vendemos certificados energéticos. No tenemos conflicto de interés. Nuestra única función es decirle la verdad sobre el suyo.</p>
+          </div>
+          <div className="trust-reason-card">
+            <div className="trust-reason-num">04</div>
+            <h3>Sin esperas ni papeleo</h3>
+            <p>100% online. Envíenos su PDF por WhatsApp y recibirá su informe en 24-48h. Sin desplazarse, sin llamadas, sin compromiso.</p>
+          </div>
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
       <TestimonialsSection />
 
       <FAQSection items={segundaOpinionFaq} title="Preguntas frecuentes sobre la Segunda Opinión" />
 
       <CTASection
         title="¿Desconfía de la calificación de su certificado?"
-        text="Por 39€ le decimos si es fiable. Sin compromiso. Con el rigor técnico de una arquitecta técnica colegiada. Déjanos tu correo y te avisaremos cuando esté disponible."
-        buttonText="Quiero que me avisen →"
-        buttonHref="#coming-soon"
+        text="Por 39€ le decimos si es fiable. Sin compromiso. Con el rigor técnico de una arquitecta técnica colegiada."
+        buttonText="Enviar mi certificado para revisión"
+        buttonHref={waDiagnostico()}
       />
       <TrustBlockSection />
 
-      <ComingSoonSection
-        serviceName="Segunda Opinión del Certificado Energético (39€)"
-        serviceUrl="https://www.certilab.cat/segunda-opinion/"
-      />
-
-      {/* STICKY CTA BAR */}
+      {/* STICKY CTA BAR – TODOS LOS DISPOSITIVOS */}
       <div className="sticky-cta-bar">
         <div className="sticky-cta-inner">
           <div className="sticky-cta-info">
@@ -303,74 +284,136 @@ export default function SegundaOpinionPage() {
             <span className="sticky-cta-meta">24-48h · Sin sorpresas</span>
           </div>
           <div className="sticky-cta-actions">
-            <a href="#coming-soon" className="sticky-cta-button">
-              Avisarme
+            <a href={waDiagnostico()} className="sticky-cta-button">
+              Solicitar ahora
+            </a>
+            <a
+              href={waDiagnostico()}
+              className="sticky-cta-wa"
+              aria-label="Contactar por WhatsApp"
+              title="Escríbenos por WhatsApp"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </a>
           </div>
         </div>
-        <p className="sticky-cta-micro">Servicio en preparación · Sin compromiso</p>
+        <p className="sticky-cta-micro">Pago seguro · Datos protegidos · Sin compromiso</p>
       </div>
 
-      {/* Schema.org */}
+      {/* Schema.org Service */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              name: "Segunda Opinión Certificado Energético (39€)",
-              description: "Análisis técnico forense de certificados energéticos. Detectamos calificaciones infladas, errores técnicos y Brown Discount. Firmado por arquitecta técnica colegiada CATEB 9457 con seguro de responsabilidad civil.",
-              image: "https://www.certilab.cat/og-image.jpg",
-              provider: {
-                "@type": "ProfessionalService",
-                name: "Certilab - Eva María González García",
-                telephone: "+34608515922",
-                areaServed: { "@type": "Country", name: "ES" },
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Segunda Opinión Certificado Energético",
+            description: "Análisis técnico forense de certificados energéticos. Detectamos calificaciones infladas, errores técnicos y Brown Discount. Firmado por arquitecta técnica colegiada CATEB 9457 con seguro de responsabilidad civil.",
+            image: "https://www.certilab.cat/og-image.jpg",
+            provider: {
+              "@type": "ProfessionalService",
+              name: "Certilab - Eva María González García",
+              telephone: "+34608515922",
+              areaServed: { "@type": "Country", name: "ES" },
+            },
+            areaServed: { "@type": "Country", name: "España" },
+            offers: [
+              {
+                "@type": "Offer",
+                name: "Segunda Opinión Estándar",
+                price: "39",
+                priceCurrency: "EUR",
+                availability: "https://schema.org/InStock",
+                description: "Análisis técnico completo en 24-48 horas laborables. Incluye informe detallado en PDF firmado por arquitecta colegiada.",
               },
-              areaServed: { "@type": "Country", name: "España" },
-              offers: [
-                {
-                  "@type": "Offer",
-                  name: "Segunda Opinión Estándar",
-                  price: "39",
-                  priceCurrency: "EUR",
-                  availability: "https://schema.org/PreOrder",
-                  description: "Análisis técnico completo en 24-48 horas laborables. Incluye informe detallado en PDF firmado por arquitecta colegiada.",
-                },
-                {
-                  "@type": "Offer",
-                  name: "Segunda Opinión Express",
-                  price: "79",
-                  priceCurrency: "EUR",
-                  availability: "https://schema.org/PreOrder",
-                  description: "Mismo rigor técnico con entrega urgente en menos de 2 horas. Ideal para firmas inminentes.",
-                },
-              ],
-              aggregateRating: {
-                "@type": "AggregateRating",
+              {
+                "@type": "Offer",
+                name: "Segunda Opinión Express",
+                price: "79",
+                priceCurrency: "EUR",
+                availability: "https://schema.org/InStock",
+                description: "Mismo rigor técnico con entrega urgente en menos de 2 horas. Ideal para firmas inminentes.",
+              },
+            ],
+            review: {
+              "@type": "Review",
+              reviewRating: {
+                "@type": "Rating",
                 ratingValue: "4.9",
                 bestRating: "5",
-                ratingCount: "87",
+              },
+              author: {
+                "@type": "Person",
+                name: "Certilab",
               },
             },
-            {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.certilab.cat/" },
-                { "@type": "ListItem", position: 2, name: "Segunda Opinión Certificado Energético (39€)", item: "https://www.certilab.cat/segunda-opinion/" },
-              ],
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.9",
+              bestRating: "5",
+              ratingCount: "87",
             },
-          ]),
+          }),
+        }}
+      />
+
+      {/* Schema.org HowTo — pasos del servicio */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "Cómo obtener una segunda opinión de tu certificado energético",
+            description: "Tres pasos para saber si tu certificado energético es fiable.",
+            image: "https://www.certilab.cat/og-image.jpg",
+            totalTime: "P1D",
+            estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "39" },
+            supply: { "@type": "HowToSupply", name: "Certificado energético original en PDF o imagen" },
+            tool: { "@type": "HowToTool", name: "WhatsApp o formulario web" },
+            step: [
+              {
+                "@type": "HowToStep",
+                position: 1,
+                name: "Envíanos tu certificado",
+                text: "Mándanos tu certificado energético por WhatsApp al 608 51 59 22 o a través del formulario de la web. Solo necesitas el PDF y la dirección del inmueble.",
+                image: "https://www.certilab.cat/og-image.jpg",
+              },
+              {
+                "@type": "HowToStep",
+                position: 2,
+                name: "Analizamos técnicamente",
+                text: "Nuestra arquitecta técnica revisa el certificado en detalle: calificación energética, datos catastrales, antigüedad, superficie, y detecta posibles errores o calificaciones infladas.",
+                image: "https://www.certilab.cat/og-image.jpg",
+              },
+              {
+                "@type": "HowToStep",
+                position: 3,
+                name: "Recibes tu dictamen",
+                text: "Te entregamos un informe PDF firmado con la conclusión: si el certificado es correcto o si tiene errores que afectan a la calificación y al valor del inmueble.",
+                image: "https://www.certilab.cat/og-image.jpg",
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* Schema.org BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.certilab.cat/" },
+              { "@type": "ListItem", position: 2, name: "Segunda Opinión Certificado Energético", item: "https://www.certilab.cat/segunda-opinion/" },
+            ],
+          }),
         }}
       />
 
       <style jsx>{`
-        .page-wrapper {
-          overflow-x: hidden;
-          width: 100%;
-        }
         .section {
           padding: 5rem 1.5rem;
           max-width: 1100px;
@@ -393,6 +436,8 @@ export default function SegundaOpinionPage() {
           margin: 0 auto 3rem;
           line-height: 1.7;
         }
+
+        /* HERO GARANTÍA */
         .hero-garantia {
           display: flex;
           align-items: center;
@@ -413,147 +458,6 @@ export default function SegundaOpinionPage() {
           font-size: 1rem;
           color: var(--color-terra);
           flex-shrink: 0;
-        }
-
-        /* AUDIENCE */
-        .audience-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1.5rem;
-          margin-top: 2rem;
-        }
-        .audience-card {
-          background: #fff;
-          border: 1px solid var(--color-border);
-          padding: 2rem 1.75rem;
-          text-align: left;
-          transition: box-shadow 0.2s;
-        }
-        .audience-card:hover {
-          box-shadow: var(--shadow-card-hover);
-        }
-        .audience-icon {
-          font-size: 2rem;
-          margin-bottom: 1rem;
-        }
-        .audience-card h3 {
-          font-family: var(--font-serif);
-          font-size: 1.15rem;
-          font-weight: 400;
-          color: var(--color-black);
-          margin-bottom: 0.75rem;
-        }
-        .audience-card p {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          line-height: 1.65;
-          margin-bottom: 1.25rem;
-        }
-        .audience-link {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          font-weight: 500;
-          color: var(--color-terra);
-          text-decoration: none;
-        }
-        .audience-link:hover {
-          text-decoration: underline;
-        }
-
-        /* ROI CONTRAST */
-        .roi-contrast-section {
-          max-width: 100%;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-          background: var(--color-crema);
-        }
-        .roi-contrast-section .section-title,
-        .roi-contrast-section .section-sub {
-          max-width: 1100px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .roi-contrast-grid {
-          display: flex;
-          align-items: stretch;
-          gap: 0;
-          max-width: 750px;
-          margin: 0 auto;
-          border: 1px solid var(--color-border);
-          background: #fff;
-        }
-        .roi-contrast-card {
-          flex: 1;
-          padding: 2rem;
-        }
-        .roi-contrast-card.bad {
-          border-right: 1px solid var(--color-border);
-        }
-        .roi-contrast-label {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          font-weight: 600;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--color-grey);
-          margin-bottom: 0.5rem;
-        }
-        .roi-contrast-amount {
-          font-family: var(--font-serif);
-          font-size: 1.3rem;
-          font-weight: 500;
-          color: var(--color-black);
-          margin-bottom: 0.5rem;
-        }
-        .roi-contrast-card.good .roi-contrast-amount {
-          color: #2e7d32;
-        }
-        .roi-contrast-desc {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-grey);
-          line-height: 1.5;
-          margin-bottom: 1rem;
-        }
-        .roi-contrast-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .roi-contrast-list li {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-grey);
-          line-height: 1.6;
-          padding: 0.25rem 0;
-        }
-        .roi-contrast-divider {
-          display: none;
-        }
-        .roi-contrast-vs {
-          display: none;
-        }
-        .roi-contrast-cta {
-          text-align: center;
-          margin-top: 2rem;
-        }
-        .roi-contrast-button {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          background: var(--color-black);
-          color: #fff;
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          font-weight: 500;
-          text-decoration: none;
-          padding: 0.85rem 2rem;
-          border-radius: 6px;
-          transition: background 0.2s;
-        }
-        .roi-contrast-button:hover {
-          background: #333;
         }
 
         /* PROBLEM */
@@ -603,7 +507,7 @@ export default function SegundaOpinionPage() {
           background: #333;
         }
 
-        /* INCLUDES */
+        /* INCLUDES SECTION */
         .includes-section {
           background: var(--color-crema);
           max-width: 100%;
@@ -616,38 +520,13 @@ export default function SegundaOpinionPage() {
           margin-left: auto;
           margin-right: auto;
         }
-        .includes-box {
+        .includes-section :global(.includes-box) {
           max-width: 600px;
           margin: 0 auto;
-        }
-        .includes-grid {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 0.75rem;
-        }
-        .includes-item {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-black);
-          line-height: 1.5;
-          padding: 0.85rem 1.25rem;
           background: #fff;
-          border: 1px solid var(--color-border);
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-        .includes-item::before {
-          content: "✓";
-          color: var(--color-terra);
-          font-weight: 700;
-          flex-shrink: 0;
         }
 
-        /* PREVIEW */
+        /* PREVIEW SECTION */
         .preview-section {
           max-width: 100%;
           padding-left: 1.5rem;
@@ -768,7 +647,7 @@ export default function SegundaOpinionPage() {
           margin: 0;
         }
 
-        /* STICKY CTA */
+        /* STICKY CTA BAR */
         .sticky-cta-bar {
           display: none;
           position: fixed;
@@ -828,6 +707,23 @@ export default function SegundaOpinionPage() {
         .sticky-cta-button:hover {
           background: var(--color-terra-dark);
         }
+        .sticky-cta-wa {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 2.5rem;
+          height: 2.5rem;
+          border: 1px solid var(--color-border);
+          border-radius: 6px;
+          color: var(--color-grey);
+          transition: all 0.2s;
+          flex-shrink: 0;
+          text-decoration: none;
+        }
+        .sticky-cta-wa:hover {
+          color: #25D366;
+          border-color: #25D366;
+        }
         .sticky-cta-micro {
           text-align: center;
           font-family: var(--font-sans);
@@ -838,27 +734,182 @@ export default function SegundaOpinionPage() {
           opacity: 0.75;
         }
 
+        /* AUDIENCE SECTION */
+        .audience-section {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 5rem 1.5rem;
+        }
+        .audience-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+          margin-top: 2rem;
+        }
+        .audience-card {
+          background: #fff;
+          border: 1px solid var(--color-border);
+          padding: 2rem 1.75rem;
+          text-align: left;
+          transition: box-shadow 0.2s;
+        }
+        .audience-card:hover {
+          box-shadow: var(--shadow-card-hover);
+        }
+        .audience-icon {
+          font-size: 1.75rem;
+          margin-bottom: 1rem;
+        }
+        .audience-card h3 {
+          font-family: var(--font-serif);
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: var(--color-black);
+          margin-bottom: 0.75rem;
+        }
+        .audience-card p {
+          font-family: var(--font-sans);
+          font-size: 0.9rem;
+          color: var(--color-grey);
+          line-height: 1.65;
+          margin-bottom: 1.25rem;
+        }
+        .audience-link {
+          font-family: var(--font-sans);
+          font-size: 0.85rem;
+          font-weight: 500;
+          color: var(--color-terra);
+          text-decoration: underline;
+          text-underline-offset: 2px;
+        }
+        .audience-link:hover {
+          color: var(--color-terra-dark);
+        }
+
+        /* ROI CONTRAST */
+        .roi-contrast-section {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 5rem 1.5rem;
+          text-align: center;
+        }
+        .roi-contrast-grid {
+          display: flex;
+          align-items: stretch;
+          justify-content: center;
+          gap: 0;
+          margin: 0 auto;
+          max-width: 750px;
+        }
+        .roi-contrast-card {
+          flex: 1;
+          padding: 2rem;
+          text-align: left;
+          border: 1px solid var(--color-border);
+        }
+        .roi-contrast-card.bad {
+          background: #fff;
+        }
+        .roi-contrast-card.good {
+          background: var(--color-crema);
+          border-color: var(--color-terra);
+        }
+        .roi-contrast-divider {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 0.75rem;
+          flex-shrink: 0;
+        }
+        .roi-contrast-vs {
+          font-family: var(--font-sans);
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          color: var(--color-grey);
+          text-transform: uppercase;
+        }
+        .roi-contrast-label {
+          font-family: var(--font-sans);
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--color-grey);
+          margin-bottom: 0.5rem;
+        }
+        .roi-contrast-amount {
+          font-family: var(--font-serif);
+          font-size: 1.75rem;
+          font-weight: 500;
+          color: var(--color-black);
+          margin-bottom: 0.35rem;
+        }
+        .roi-contrast-card.good .roi-contrast-amount {
+          color: #2e7d32;
+        }
+        .roi-contrast-desc {
+          font-family: var(--font-sans);
+          font-size: 0.85rem;
+          color: var(--color-grey);
+          line-height: 1.5;
+          margin-bottom: 1.25rem;
+        }
+        .roi-contrast-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .roi-contrast-list li {
+          font-family: var(--font-sans);
+          font-size: 0.85rem;
+          color: var(--color-grey);
+          line-height: 1.6;
+          margin-bottom: 0.35rem;
+        }
+        .roi-contrast-cta {
+          margin-top: 2.5rem;
+        }
+        .roi-contrast-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          background: var(--color-black);
+          color: #fff;
+          font-family: var(--font-sans);
+          font-size: 0.95rem;
+          font-weight: 500;
+          text-decoration: none;
+          padding: 0.85rem 2rem;
+          border-radius: 6px;
+          transition: background 0.2s;
+        }
+        .roi-contrast-button:hover {
+          background: #333;
+        }
+
         @media (max-width: 767px) {
           .section { padding: 3rem 1.5rem; }
           .audience-grid { grid-template-columns: 1fr; }
-          .roi-contrast-grid { flex-direction: column; }
-          .roi-contrast-card.bad { border-right: none; border-bottom: 1px solid var(--color-border); }
-          .problem-grid { grid-template-columns: 1fr; }
-          .includes-grid { grid-template-columns: 1fr; }
-          .preview-grid { grid-template-columns: 1fr; }
-          .trust-reasons-grid { grid-template-columns: 1fr; }
+          .audience-section { padding: 3rem 1.5rem; }
+          .roi-contrast-section { padding: 3rem 1.5rem; }
+          .roi-contrast-grid { flex-direction: column; max-width: 400px; }
+          .roi-contrast-divider { padding: 0.75rem 0; }
           :global(body) { padding-bottom: 5.5rem; }
+          .problem-grid { grid-template-columns: 1fr; }
+          .trust-reasons-grid { grid-template-columns: 1fr; }
+          .preview-grid { grid-template-columns: 1fr; max-width: 400px; }
           .sticky-cta-bar { display: block; }
         }
         @media (min-width: 768px) and (max-width: 1023px) {
-          .audience-grid { grid-template-columns: repeat(2, 1fr); }
           .trust-reasons-grid { grid-template-columns: repeat(2, 1fr); }
+          .preview-grid { grid-template-columns: repeat(2, 1fr); }
           .sticky-cta-bar { display: block; }
         }
         @media (min-width: 1024px) {
           .sticky-cta-bar { display: block; }
         }
       `}</style>
-    </div>
+    </>
   );
 }

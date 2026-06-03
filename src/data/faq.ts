@@ -86,6 +86,41 @@ export const segundaOpinionFaq: FAQItem[] = [
   },
 ];
 
+export const informeTecnicoFaq: FAQItem[] = [
+  {
+    q: "¿Qué incluye exactamente el Informe Técnico Energético?",
+    a: "Incluye análisis detallado del comportamiento energético del inmueble, plan de mejora priorizado por coste-beneficio, cálculo de ahorro económico anual estimado, mapa de ayudas y subvenciones aplicables (Next Generation, CAE, IRPF, autonómicas), recomendaciones personalizadas y seguimiento post-entrega.",
+  },
+  {
+    q: "¿En qué se diferencia del certificado energético?",
+    a: "El certificado energético es un documento obligatorio para vender o alquilar que asigna una letra (A-G). El Informe Técnico Energético es un análisis voluntario mucho más profundo: no solo asigna una calificación, sino que detecta por qué consumes más de lo necesario, qué mejoras priorizar y qué ayudas puedes solicitar.",
+  },
+  {
+    q: "¿Cuánto cuesta y cuándo lo tendré listo?",
+    a: "399€. El plazo de entrega es de 5 a 7 días laborables desde que recibimos toda la documentación necesaria. Incluye una sesión de revisión de dudas posterior a la entrega.",
+  },
+  {
+    q: "¿Necesito visita presencial o puedo hacerlo todo online?",
+    a: "El proceso es 100% remoto. Te pediremos la documentación técnica del inmueble (planos si los tienes, facturas de suministros, información de instalaciones) y la revisamos en detalle. Sin desplazamientos, sin visitas.",
+  },
+  {
+    q: "¿Qué ayudas cubrís en el informe?",
+    a: "Analizamos todas las ayudas aplicables según tu caso: fondos Next Generation (Programa de Rehabilitación), Certificados de Ahorro Energético (CAE), deducciones en IRPF por obras de mejora, subvenciones autonómicas y locales. Te indicamos cuáles te corresponden, qué requisitos piden y qué documentación necesitas.",
+  },
+  {
+    q: "¿El informe me sirve para solicitar ayudas Next Generation?",
+    a: "Sí. El informe incluye orientación específica sobre ayudas Next Generation, pero no gestionamos la solicitud. Te explicamos qué ayudas aplican a tu caso y qué documentación te pedirán. Si necesitas ayuda con la tramitación, podemos orientarte sobre los pasos a seguir.",
+  },
+  {
+    q: "¿Cuánto puedo ahorrar realmente con las mejoras que proponéis?",
+    a: "Depende del estado actual del inmueble, pero los ahorros típicos oscilan entre un 20% y un 50% en la factura energética anual. En una vivienda media, hablamos de 300€ a 1.000€ al año según las actuaciones. El informe incluye el cálculo detallado para tu caso concreto.",
+  },
+  {
+    q: "¿Y si solo quiero saber qué ayudas me corresponden sin el análisis completo?",
+    a: "Nuestro servicio de Informe Técnico incluye las ayudas como parte del análisis global. Si solo necesitas información general sobre ayudas, puedes consultar nuestra página de <a href='/ayudas-eficiencia-energetica/' style='color:var(--color-terra);text-decoration:underline;'>Ayudas a la Eficiencia Energética</a>, donde explicamos las principales líneas disponibles.",
+  },
+];
+
 export const checkUpFaq: FAQItem[] = [
   {
     q: "¿Qué incluye exactamente el Check-Up Inmobiliario?",
