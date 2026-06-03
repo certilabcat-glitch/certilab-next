@@ -1,3 +1,5 @@
+"use client";
+
 interface Col {
   label: string;
   items: string[];
