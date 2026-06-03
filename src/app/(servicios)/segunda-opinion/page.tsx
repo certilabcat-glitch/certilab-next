@@ -39,8 +39,8 @@ export default function SegundaOpinionPage() {
       />
 
       <HeroSection
-        eyebrow="¿Le han inflado la calificación de su certificado?"
-        title="Segunda Opinión del Certificado Energético"
+        eyebrow="¿Confías en que la letra de tu certificado energético es real?"
+        title="La Segunda Opinión que te saca de dudas"
         subtitle="Por 39€ revisamos su certificado, detectamos calificaciones infladas, errores técnicos y Brown Discount. Le decimos si su certificado es fiable o si le están engañando. Sin desplazamientos."
         badges={["Colegiada CATEB Barcelona", "24-48h", "100% remoto"]}
         price="39 €"
