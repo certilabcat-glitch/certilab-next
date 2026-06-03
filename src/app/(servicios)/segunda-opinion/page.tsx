@@ -238,7 +238,7 @@ export default function SegundaOpinionPage() {
       {/* MICRO-CONFIANZA: POR QUÉ CERTILAB */}
       <section className="section trust-reasons-section">
         <h2 className="section-title">¿Por qué confiar su revisión a Certilab?</h2>
-        <p className="section-sub">No somos un comparador ni un generador automático. Somos profesionales colegiados.</p>
+        <p className="section-sub">No somos comprador, ni vendedor, ni agencia inmobiliaria. No tenemos interés en la operación. Somos profesionales independientes, como un juez técnico: nuestra única función es decir la verdad sobre su certificado.</p>
         <div className="trust-reasons-grid">
           <div className="trust-reason-card">
             <div className="trust-reason-num">01</div>
@@ -253,7 +253,7 @@ export default function SegundaOpinionPage() {
           <div className="trust-reason-card">
             <div className="trust-reason-num">03</div>
             <h3>Independencia total</h3>
-            <p>No vendemos certificados energéticos. No tenemos conflicto de interés. Nuestra única función es decirle la verdad sobre el suyo.</p>
+            <p>No compramos, no vendemos, no intermediarios. No somos agencia inmobiliaria. Actuamos como peritos independientes: no nos beneficia que compre, venda o alquile. Solo nos importa la verdad técnica de su certificado.</p>
           </div>
           <div className="trust-reason-card">
             <div className="trust-reason-num">04</div>
