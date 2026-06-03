@@ -11,6 +11,7 @@ import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import TrustNumbers from "@/components/sections/TrustNumbers";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import BDHelp from "@/components/ui/BDHelp";
 import { segundaOpinionFaq } from "@/data/faq";
 import { waDiagnostico } from "@/lib/wa";
 
@@ -64,22 +65,19 @@ export default function SegundaOpinionPage() {
         <p className="section-sub">Identifícate en 2 segundos. Cada caso tiene una respuesta distinta.</p>
         <div className="audience-grid">
           <div className="audience-card">
-            <div className="audience-icon">🏠</div>
             <h3>Vas a comprar una vivienda</h3>
             <p>El certificado del vendedor marca una A, pero ¿es real? Si la calificación está inflada, puedes estar pagando hasta un 15% más del valor real. Por 39€ lo comprobamos antes de firmar.</p>
             <a href={waDiagnostico()} className="audience-link">Quiero verificar antes de comprar →</a>
           </div>
           <div className="audience-card">
-            <div className="audience-icon">💰</div>
             <h3>Vas a vender tu piso</h3>
             <p>Un certificado con errores te hace perder dinero. Si tu calificación real es mejor de lo que pone, estás regalando tu inmueble. Si es peor, puedes arreglarlo antes de ponerlo en venta.</p>
             <a href={waDiagnostico()} className="audience-link">Quiero saber cuánto vale mi piso realmente →</a>
           </div>
           <div className="audience-card">
-            <div className="audience-icon">🔍</div>
-            <h3>Ya tienes un informe y no te fías</h3>
-            <p>Tu certificado te parece extraño. La calificación no cuadra con lo que sabes de tu casa. O simplemente quieres asegurarte de que es correcto antes de tomar decisiones importantes.</p>
-            <a href={waDiagnostico()} className="audience-link">Quiero una segunda opinión profesional →</a>
+            <h3>Vives en tu casa y quieres saber tu letra</h3>
+            <p>Saber tu calificación real te permite calcular cuánto gastas en energía, cuánto puedes ahorrar con mejoras, y si puedes acceder a subvenciones. ¿Has reformado? Quizás te corresponda una letra mejor. Con la Segunda Opinión descubres tu punto de partida real para tomar decisiones con conocimiento.</p>
+            <a href={waDiagnostico()} className="audience-link">Quiero saber mi letra y aprovechar las ayudas →</a>
           </div>
         </div>
       </section>
@@ -92,10 +90,10 @@ export default function SegundaOpinionPage() {
           <div className="roi-contrast-card bad">
             <div className="roi-contrast-label">Sin revisión</div>
             <div className="roi-contrast-amount">Hasta 40.000€</div>
-            <div className="roi-contrast-desc">de pérdida por Brown Discount en una vivienda de 270.000€</div>
+            <div className="roi-contrast-desc">de pérdida por <BDHelp /> en una vivienda de 270.000€</div>
             <ul className="roi-contrast-list">
               <li>✗ No sabes si la calificación es real</li>
-              <li>✗ Pagas de más o vendes por menos</li>
+              <li>✗ Pagas de más, vendes por menos o pierdes ayudas</li>
               <li>✗ Sin respaldo profesional</li>
             </ul>
           </div>
@@ -128,7 +126,7 @@ export default function SegundaOpinionPage() {
             <p>Una calificación superior a la real puede engañar a compradores o perjudicar a vendedores que infravaloran su inmueble. Una B que debería ser una E oculta un sobrecoste energético de miles de euros al año.</p>
           </div>
           <div className="problem-card">
-            <h3>Brown Discount: pérdida de valor</h3>
+            <h3><BDHelp />: pérdida de valor</h3>
             <p>Un inmueble con calificación E, F o G puede perder entre un <strong>5% y un 15%</strong> de su valor de mercado. Son hasta <strong>40.000€</strong> en una vivienda de 270.000€. Si vendes, puedes estar regalando dinero. Si compras, puedes estar pagando de más. Nuestro informe lo detecta.</p>
           </div>
           <div className="problem-card">
@@ -218,7 +216,7 @@ export default function SegundaOpinionPage() {
           </div>
           <div className="preview-card">
             <div className="preview-card-header">
-              <span className="preview-badge">Brown Discount</span>
+              <span className="preview-badge"><BDHelp /></span>
             </div>
             <div className="preview-card-body">
               <div className="preview-line preview-line-lg" />
@@ -229,10 +227,6 @@ export default function SegundaOpinionPage() {
             </div>
           </div>
         </div>
-        <p className="preview-note">
-          <span className="preview-note-icon">📄</span>
-          Informe real detallado firmado por arquitecta técnica colegiada. Con respaldo profesional y seguro de responsabilidad civil. Recibirá un PDF listo para descargar e imprimir.
-        </p>
       </section>
 
       {/* MICRO-CONFIANZA: POR QUÉ CERTILAB */}
@@ -578,21 +572,6 @@ export default function SegundaOpinionPage() {
         .preview-line-lg { width: 85%; }
         .preview-line-md { width: 65%; }
         .preview-line-sm { width: 45%; }
-        .preview-note {
-          text-align: center;
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-grey);
-          margin: 2rem auto 0;
-          max-width: 500px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
-        }
-        .preview-note-icon {
-          font-size: 1.1rem;
-        }
 
         /* TRUST REASONS */
         .trust-reasons-section {
@@ -755,10 +734,6 @@ export default function SegundaOpinionPage() {
         }
         .audience-card:hover {
           box-shadow: var(--shadow-card-hover);
-        }
-        .audience-icon {
-          font-size: 1.75rem;
-          margin-bottom: 1rem;
         }
         .audience-card h3 {
           font-family: var(--font-serif);
