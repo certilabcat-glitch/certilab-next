@@ -185,50 +185,6 @@ export default function SegundaOpinionPage() {
         ]} />
       </section>
 
-      {/* ASÍ ES SU INFORME */}
-      <section className="section preview-section">
-        <h2 className="section-title">Así es su informe</h2>
-        <p className="section-sub">Un documento claro, profesional y listo para presentar ante notario o banco.</p>
-        <div className="preview-grid">
-          <div className="preview-card">
-            <div className="preview-card-header">
-              <span className="preview-badge">Portada</span>
-            </div>
-            <div className="preview-card-body">
-              <div className="preview-line preview-line-lg" />
-              <div className="preview-line" />
-              <div className="preview-line preview-line-md" />
-              <div className="preview-line" />
-              <div className="preview-line preview-line-sm" />
-            </div>
-          </div>
-          <div className="preview-card">
-            <div className="preview-card-header">
-              <span className="preview-badge">Conclusiones</span>
-            </div>
-            <div className="preview-card-body">
-              <div className="preview-line" />
-              <div className="preview-line preview-line-lg" />
-              <div className="preview-line" />
-              <div className="preview-line preview-line-md" />
-              <div className="preview-line preview-line-sm" />
-            </div>
-          </div>
-          <div className="preview-card">
-            <div className="preview-card-header">
-              <span className="preview-badge"><BDHelp /></span>
-            </div>
-            <div className="preview-card-body">
-              <div className="preview-line preview-line-lg" />
-              <div className="preview-line" />
-              <div className="preview-line preview-line-md" />
-              <div className="preview-line" />
-              <div className="preview-line" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* MICRO-CONFIANZA: POR QUÉ CERTILAB */}
       <section className="section trust-reasons-section">
         <h2 className="section-title">¿Por qué confiar su revisión a Certilab?</h2>
@@ -520,59 +476,6 @@ export default function SegundaOpinionPage() {
           background: #fff;
         }
 
-        /* PREVIEW SECTION */
-        .preview-section {
-          max-width: 100%;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-        .preview-section .section-title,
-        .preview-section .section-sub {
-          max-width: 1100px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .preview-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1.5rem;
-          max-width: 900px;
-          margin: 0 auto;
-        }
-        .preview-card {
-          border: 1px solid var(--color-border);
-          background: #fff;
-          overflow: hidden;
-        }
-        .preview-card-header {
-          padding: 0.65rem 1rem;
-          border-bottom: 1px solid var(--color-border);
-          background: var(--color-crema);
-        }
-        .preview-badge {
-          font-family: var(--font-sans);
-          font-size: 0.7rem;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--color-grey);
-          font-weight: 600;
-        }
-        .preview-card-body {
-          padding: 1.25rem;
-          display: flex;
-          flex-direction: column;
-          gap: 0.6rem;
-        }
-        .preview-line {
-          height: 6px;
-          background: #e8e4de;
-          border-radius: 3px;
-          width: 100%;
-        }
-        .preview-line-lg { width: 85%; }
-        .preview-line-md { width: 65%; }
-        .preview-line-sm { width: 45%; }
-
         /* TRUST REASONS */
         .trust-reasons-section {
           background: var(--color-crema);
@@ -825,10 +728,13 @@ export default function SegundaOpinionPage() {
         }
         .roi-contrast-desc {
           font-family: var(--font-sans);
-          font-size: 0.85rem;
+          font-size: 0.9rem;
           color: var(--color-grey);
-          line-height: 1.5;
-          margin-bottom: 1.25rem;
+          line-height: 1.6;
+          margin-bottom: 1rem;
+        }
+        .roi-contrast-card.good .roi-contrast-desc {
+          color: #2e7d32;
         }
         .roi-contrast-list {
           list-style: none;
@@ -839,11 +745,12 @@ export default function SegundaOpinionPage() {
           font-family: var(--font-sans);
           font-size: 0.85rem;
           color: var(--color-grey);
-          line-height: 1.6;
-          margin-bottom: 0.35rem;
+          line-height: 1.8;
+          padding-left: 0;
         }
         .roi-contrast-cta {
-          margin-top: 2.5rem;
+          text-align: center;
+          margin-top: 2rem;
         }
         .roi-contrast-button {
           display: inline-flex;
@@ -863,26 +770,34 @@ export default function SegundaOpinionPage() {
           background: #333;
         }
 
-        @media (max-width: 767px) {
-          .section { padding: 3rem 1.5rem; }
-          .audience-grid { grid-template-columns: 1fr; }
-          .audience-section { padding: 3rem 1.5rem; }
-          .roi-contrast-section { padding: 3rem 1.5rem; }
-          .roi-contrast-grid { flex-direction: column; max-width: 400px; }
-          .roi-contrast-divider { padding: 0.75rem 0; }
-          :global(body) { padding-bottom: 5.5rem; }
-          .problem-grid { grid-template-columns: 1fr; }
-          .trust-reasons-grid { grid-template-columns: 1fr; }
-          .preview-grid { grid-template-columns: 1fr; max-width: 400px; }
-          .sticky-cta-bar { display: block; }
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+          .audience-grid,
+          .problem-grid {
+            grid-template-columns: 1fr;
+          }
+          .trust-reasons-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+          .sticky-cta-bar {
+            display: block;
+          }
+          .roi-contrast-grid {
+            flex-direction: column;
+            gap: 1rem;
+          }
+          .roi-contrast-divider {
+            padding: 0.5rem 0;
+          }
         }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          .trust-reasons-grid { grid-template-columns: repeat(2, 1fr); }
-          .preview-grid { grid-template-columns: repeat(2, 1fr); }
-          .sticky-cta-bar { display: block; }
-        }
-        @media (min-width: 1024px) {
-          .sticky-cta-bar { display: block; }
+        @media (max-width: 480px) {
+          .trust-reasons-grid {
+            grid-template-columns: 1fr;
+          }
+          .sticky-cta-button {
+            font-size: 0.85rem;
+            padding: 0.65rem 1.2rem;
+          }
         }
       `}</style>
     </>
