@@ -9,11 +9,15 @@ export const navigation: NavItem[] = [
       { label: "Segunda Opinión (39€)", href: "/segunda-opinion/" },
       { label: "Check-Up Inmobiliario (199€)", href: "/check-up-inmobiliario/" },
       { label: "Informe Técnico (399€)", href: "/informe-tecnico-energetico/" },
-      { label: "Calculadora de ahorro", href: "/calculadoracat/" },
-      { label: "Ayudas energéticas", href: "/ayudas-eficiencia-energetica/" },
     ],
   },
-  { label: "SaaS · B2B", href: "/saas/" },
+  {
+    label: "Recursos",
+    children: [
+      { label: "Calculadora de ahorro", href: "/calculadoracat/" },
+      { label: "Guía de ayudas energéticas", href: "/ayudas-eficiencia-energetica/" },
+    ],
+  },
   {
     label: "Blog",
     children: [
