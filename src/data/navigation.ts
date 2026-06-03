@@ -7,7 +7,6 @@ export const navigation: NavItem[] = [
     children: [
       { label: "Diagnóstico Gratuito", href: "/formulario/" },
       { label: "Segunda Opinión (39€)", href: "/segunda-opinion/" },
-      { label: "Segunda Opinión Express (79€)", href: "/segunda-opinion-express/" },
       { label: "Check-Up Inmobiliario (199€)", href: "/check-up-inmobiliario/" },
       { label: "Informe Técnico (399€)", href: "/informe-tecnico-energetico/" },
       { label: "Calculadora de ahorro", href: "/calculadoracat/" },
@@ -31,7 +30,6 @@ export const navigation: NavItem[] = [
 
 export const footerServices = [
   { label: "Segunda Opinión (39€)", href: "/segunda-opinion/" },
-  { label: "Segunda Opinión Express (79€)", href: "/segunda-opinion-express/" },
   { label: "Check-Up Inmobiliario (199€)", href: "/check-up-inmobiliario/" },
   { label: "Informe Técnico (399€)", href: "/informe-tecnico-energetico/" },
 ];

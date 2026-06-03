@@ -14,7 +14,7 @@ import { waDiagnostico } from "@/lib/wa";
 const faq = [
   {
     q: "¿El análisis Express tiene el mismo rigor que el estándar?",
-    a: "Sí, el análisis técnico es idéntico. La única diferencia es el plazo de entrega: menos de 2 horas en lugar de 24-48h.",
+    a: "Sí, el análisis técnico es idéntico. La única diferencia es el plazo de entrega: menos de 4 horas en lugar de 24-48h.",
   },
   {
     q: "¿En qué horario está disponible el servicio Express?",
@@ -39,8 +39,8 @@ export default function SegundaOpinionExpressPage() {
       <HeroSection
         eyebrow="Respuesta urgente"
         title="Segunda Opinión Express"
-        subtitle="El mismo análisis que la Segunda Opinión estándar, pero con entrega en menos de 2 horas. Para cuando no puedes esperar."
-        badges={["Colegiada CATEB Barcelona", "Entrega <2h", "Urgente"]}
+        subtitle="El mismo análisis que la Segunda Opinión estándar, pero con entrega en menos de 4 horas. Para cuando no puedes esperar."
+        badges={["Colegiada CATEB Barcelona", "Entrega <4h", "Urgente"]}
         price="79 €"
         credentials="Eva María González García · Arquitecta Técnica colegiada"
         ctaPrimary={{ label: "Solicitar Express", href: waDiagnostico() }}
@@ -49,7 +49,7 @@ export default function SegundaOpinionExpressPage() {
       >
         <p className="hero-garantia">
           <span className="hero-garantia-icon">&#9432;</span>
-          Mismo análisis riguroso que la Segunda Opinión estándar. Solo cambia el plazo: de 24-48h a menos de 2h.
+          Mismo análisis riguroso que la Segunda Opinión estándar. Solo cambia el plazo: de 24-48h a menos de 4h.
         </p>
       </HeroSection>
 
@@ -60,7 +60,7 @@ export default function SegundaOpinionExpressPage() {
       <FeaturesGrid
         features={[
           { num: "I", title: "Mismo rigor técnico", text: "El análisis es idéntico al de la modalidad estándar. El equipo técnico revisa personalmente cada caso." },
-          { num: "II", title: "Entrega récord", text: "Menos de 2 horas laborables desde que recibimos tu documentación." },
+          { num: "II", title: "Entrega rápida", text: "Menos de 4 horas laborables desde que recibimos tu documentación." },
           { num: "III", title: "Para firmas inminentes", text: "Perfecto si tienes una compraventa, firma de hipoteca o fecha límite." },
           { num: "IV", title: "Soporte prioritario", text: "Atención preferente durante todo el proceso. Habla directamente con el equipo técnico." },
         ]}
@@ -77,7 +77,7 @@ export default function SegundaOpinionExpressPage() {
           </div>
           <div className="schedule-item">
             <span className="schedule-label">Plazo de entrega</span>
-            <span className="schedule-value">Menos de 2 horas desde la recepción de documentos</span>
+            <span className="schedule-value">Menos de 4 horas desde la recepción de documentos</span>
           </div>
           <div className="schedule-item">
             <span className="schedule-label">Pedidos fuera de horario</span>
@@ -103,7 +103,7 @@ export default function SegundaOpinionExpressPage() {
               <tr>
                 <td className="comparison-highlight">Plazo de entrega</td>
                 <td>24-48 horas laborables</td>
-                <td>Menos de 2 horas</td>
+                <td>Menos de 4 horas</td>
               </tr>
               <tr>
                 <td className="comparison-highlight">Rigor técnico</td>
@@ -130,7 +130,7 @@ export default function SegundaOpinionExpressPage() {
         steps={[
           { title: "Solicita", text: "Contáctanos por WhatsApp con tu certificado y dirección." },
           { title: "Analizamos", text: "El equipo técnico revisa tu caso de forma prioritaria y urgente." },
-          { title: "Recibes", text: "En menos de 2h tienes tu dictamen técnico detallado." },
+          { title: "Recibes", text: "En menos de 4h tienes tu dictamen técnico detallado." },
         ]}
       />
 
@@ -154,7 +154,7 @@ export default function SegundaOpinionExpressPage() {
 
       <CTASection
         title="¿Necesitas una respuesta urgente?"
-        text="Para firmas inminentes, compraventas o plazos ajustados. Entrega en menos de 2 horas."
+        text="Para firmas inminentes, compraventas o plazos ajustados. Entrega en menos de 4 horas."
         buttonText="Solicitar Express ahora"
         buttonHref={waDiagnostico()}
       />
@@ -165,7 +165,7 @@ export default function SegundaOpinionExpressPage() {
         <div className="sticky-cta-inner">
           <div className="sticky-cta-info">
             <span className="sticky-cta-price">79€</span>
-            <span className="sticky-cta-meta">{'<'}2h · Urgente</span>
+            <span className="sticky-cta-meta">{'<'}4h · Urgente</span>
           </div>
           <div className="sticky-cta-actions">
             <a href={waDiagnostico()} className="sticky-cta-button">
@@ -192,7 +192,7 @@ export default function SegundaOpinionExpressPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             name: "Segunda Opinión Express Certificado Energético",
-            description: "Análisis técnico forense urgente de certificados energéticos con entrega en menos de 2 horas. Mismo rigor que la modalidad estándar. Firmado por arquitecta técnica colegiada CATEB 9457.",
+            description: "Análisis técnico forense urgente de certificados energéticos con entrega en menos de 4 horas. Mismo rigor que la modalidad estándar. Firmado por arquitecta técnica colegiada CATEB 9457.",
             image: "https://www.certilab.cat/og-image.jpg",
             provider: {
               "@type": "ProfessionalService",
@@ -208,7 +208,7 @@ export default function SegundaOpinionExpressPage() {
                 price: "79",
                 priceCurrency: "EUR",
                 availability: "https://schema.org/InStock",
-                description: "Análisis técnico completo con entrega urgente en menos de 2 horas. Ideal para firmas inminentes.",
+                description: "Análisis técnico completo con entrega urgente en menos de 4 horas. Ideal para firmas inminentes.",
               },
             ],
             review: {
@@ -241,9 +241,9 @@ export default function SegundaOpinionExpressPage() {
             "@context": "https://schema.org",
             "@type": "HowTo",
             name: "Cómo obtener una segunda opinión express de tu certificado energético",
-            description: "Tres pasos para saber si tu certificado energético es fiable en menos de 2 horas.",
+            description: "Tres pasos para saber si tu certificado energético es fiable en menos de 4 horas.",
             image: "https://www.certilab.cat/og-image.jpg",
-            totalTime: "PT2H",
+            totalTime: "PT4H",
             estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "79" },
             supply: { "@type": "HowToSupply", name: "Certificado energético original en PDF o imagen" },
             tool: { "@type": "HowToTool", name: "WhatsApp" },
@@ -263,7 +263,7 @@ export default function SegundaOpinionExpressPage() {
               {
                 "@type": "HowToStep",
                 position: 3,
-                name: "Recibes tu dictamen en menos de 2h",
+                name: "Recibes tu dictamen en menos de 4h",
                 text: "Te entregamos un informe PDF firmado con las conclusiones técnicas.",
               },
             ],

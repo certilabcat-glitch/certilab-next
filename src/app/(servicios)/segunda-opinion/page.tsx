@@ -47,8 +47,8 @@ export default function SegundaOpinionPage() {
         priceOld="69 €"
         credentials="Eva María González García · Arquitecta Técnica colegiada"
         ctaPrimary={{ label: "Solicitar Segunda Opinión", href: waDiagnostico() }}
-        ctaSecondary={{ label: "Express 2h (79€) →", href: "/segunda-opinion-express/" }}
-        nota="Precio cerrado sin sorpresas (sin IVA). Si lo necesita urgente, dispone de la Segunda Opinión Express con entrega en 2 horas."
+        ctaSecondary={{ label: "Express 4h (79€) →", href: "/segunda-opinion-express/" }}
+        nota="Precio cerrado sin sorpresas (sin IVA). Si lo necesita urgente, dispone de la Segunda Opinión Express con entrega en 4 horas."
       >
         <p className="hero-garantia">
           <span className="hero-garantia-icon">&#9432;</span>
@@ -326,7 +326,7 @@ export default function SegundaOpinionPage() {
                 price: "79",
                 priceCurrency: "EUR",
                 availability: "https://schema.org/InStock",
-                description: "Mismo rigor técnico con entrega urgente en menos de 2 horas. Ideal para firmas inminentes.",
+                description: "Mismo rigor técnico con entrega urgente en menos de 4 horas. Ideal para firmas inminentes.",
               },
             ],
             review: {
