@@ -66,7 +66,7 @@ export const segundaOpinionFaq: FAQItem[] = [
   },
   {
     q: "¿Qué pasa si tras la revisión el certificado resulta ser correcto?",
-    a: "Te devolvemos el dinero. La garantía de satisfacción funciona así: si tu certificado está bien emitido y la calificación es correcta, consideramos que nuestro trabajo está hecho y te reembolsamos los 39€. Sin preguntas.",
+    a: "Entonces has hecho la mejor inversión de 39 € posible. Si el certificado está bien emitido y la calificación es correcta, te entregamos un informe firmado que lo valida oficialmente. Esa validación te permite comprar, vender o firmar con total tranquilidad. Además, como reconocimiento a tu confianza, te damos un 30% de descuento en tu próximo servicio (Check‑Up Inmobiliario, Informe Técnico o el que necesites). Sales ganando siempre.",
   },
   {
     q: "¿Afecta el Brown Discount al valor de mi piso aunque no lo vaya a vender ahora?",
@@ -82,7 +82,7 @@ export const segundaOpinionFaq: FAQItem[] = [
   },
   {
     q: "¿Necesito desplazarme o hacer alguna gestión presencial?",
-    a: "Ninguna. Todo el proceso es 100% remoto: nos envías el certificado por WhatsApp, lo analizamos y recibes el informe PDF. Sin visitas, sin llamadas, sin papeleo. Ideal si estás en otra ciudad o si el inmueble está alquilado y no puedes acceder.",
+    a: "Ninguna. Todo el proceso es 100% remoto: rellenas un formulario online con tus datos y la dirección del inmueble, adjuntas el certificado en PDF y unas fotos del inmueble si las tienes, y nosotros lo analizamos. Recibirás el informe PDF sin necesidad de visitas, llamadas, ni papeleo. Ideal si estás en otra ciudad o si el inmueble está alquilado y no puedes acceder.",
   },
 ];
 
