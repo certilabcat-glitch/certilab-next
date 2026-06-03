@@ -22,9 +22,9 @@ export default function Footer() {
 
         <nav className="footer-servicios" aria-label="Servicios">
           <h4>Servicios</h4>
-          <Link href="/segunda-opinion/">Segunda Opinión (39€)</Link>
-          <Link href="/check-up-inmobiliario/">Check-Up Inmobiliario (199€)</Link>
-          <Link href="/informe-tecnico-energetico/">Informe Técnico (399€)</Link>
+          <Link href="/segunda-opinion/">Segunda Opinión</Link>
+          <Link href="/check-up-inmobiliario/">Check-Up Inmobiliario</Link>
+          <Link href="/informe-tecnico-energetico/">Informe Técnico</Link>
         </nav>
 
         <nav className="footer-legal" aria-label="Legal">
