@@ -784,10 +784,24 @@ export default function SegundaOpinionPage() {
           }
           .roi-contrast-grid {
             flex-direction: column;
-            gap: 1rem;
+            gap: 0;
+          }
+          .roi-contrast-card {
+            padding: 1.5rem;
           }
           .roi-contrast-divider {
-            padding: 0.5rem 0;
+            padding: 0.75rem 0;
+            position: relative;
+          }
+          .roi-contrast-vs {
+            display: block;
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--color-grey);
+            letter-spacing: 0.15em;
+          }
+          .roi-contrast-card.good {
+            border-color: var(--color-terra);
           }
         }
         @media (max-width: 480px) {

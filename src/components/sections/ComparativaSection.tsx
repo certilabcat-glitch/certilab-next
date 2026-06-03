@@ -86,7 +86,11 @@ export default function ComparativaSection({ cols, title, subtitle }: { cols: [C
         .comp-card li:last-child { border-bottom: none; }
         @media (max-width: 700px) {
           .section { padding: 3rem 1.5rem; }
-          .comp-grid { grid-template-columns: 1fr; }
+          .comp-grid { grid-template-columns: 1fr; gap: 1rem; }
+          .comp-card { padding: 1.5rem; }
+          .comp-card.destacado { border-width: 2px; }
+          .comp-label { margin-bottom: 1rem; }
+          .comp-card li { font-size: 0.85rem; padding: 0.4rem 0; }
         }
       `}</style>
     </section>
