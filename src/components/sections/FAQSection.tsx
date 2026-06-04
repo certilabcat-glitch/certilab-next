@@ -17,7 +17,28 @@ export default function FAQSection({
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className={`section ${className}`} aria-labelledby="faq-title">
+    <>
+      {/* Schema.org FAQPage */}
+      {items.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: items.map((item) => ({
+                "@type": "Question",
+                name: item.q,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.a.replace(/<[^>]*>/g, ""),
+                },
+              })),
+            }),
+          }}
+        />
+      )}
+      <section className={`section ${className}`} aria-labelledby="faq-title">
       <h2 className="section-title" id="faq-title">
         {title}
       </h2>
@@ -77,6 +98,9 @@ export default function FAQSection({
           text-decoration: underline;
         }
       `}</style>
-    </section>
+      </section>
+    </>
   );
 }
+
+

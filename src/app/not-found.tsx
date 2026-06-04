@@ -1,6 +1,12 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "404 — Página no encontrada | Certilab",
+  description:
+    "La página que buscas no existe o ha sido movida. Vuelve al inicio para encontrar lo que necesitas.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

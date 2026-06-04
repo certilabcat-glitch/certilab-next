@@ -73,6 +73,10 @@ export default function RootLayout({
           name="google-site-verification"
           content="vbxqc3rtusTH9zjcV54qo7HI9PV9D2exiFZ4VjhDyv4"
         />
+        {/* Hreflang self-referencing (monolingual site) */}
+        <link rel="alternate" href="https://www.certilab.cat/" hrefLang="es" />
+        <link rel="alternate" href="https://www.certilab.cat/" hrefLang="x-default" />
+
         {/* Schema.org ProfessionalService + WebSite */}
         <script
           type="application/ld+json"
@@ -82,10 +86,10 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "ProfessionalService",
-                  "@id": "https://certilab.cat/#organization",
+                  "@id": "https://www.certilab.cat/#organization",
                   name: "Certilab",
-                  url: "https://certilab.cat/",
-                  logo: "https://certilab.cat/favicon.png",
+                  url: "https://www.certilab.cat/",
+                  logo: "https://www.certilab.cat/favicon.png",
                   description:
                     "Consultoría energética forense. Análisis técnico con responsabilidad profesional Cateb 9457. Segunda opinión, Check-Up inmobiliario e Informe Técnico Energético.",
                   founder: {
@@ -114,13 +118,16 @@ export default function RootLayout({
                     addressRegion: "Cataluña",
                     addressCountry: "ES",
                   },
+                  sameAs: [
+                    "https://www.linkedin.com/company/certilab",
+                  ],
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://certilab.cat/#website",
-                  url: "https://certilab.cat/",
+                  "@id": "https://www.certilab.cat/#website",
+                  url: "https://www.certilab.cat/",
                   name: "Certilab",
-                  publisher: { "@id": "https://certilab.cat/#organization" },
+                  publisher: { "@id": "https://www.certilab.cat/#organization" },
                   inLanguage: "es",
                 },
               ],

@@ -1,0 +1,25 @@
+# Certilab - Consultoría Energética Forense
+> Arquitectura Técnica Forense · Consultoría Energética · Cateb 9457
+> https://www.certilab.cat
+
+## Servicios
+- Segunda Opinión Certificado Energético: https://www.certilab.cat/segunda-opinion
+- Check-Up Inmobiliario: https://www.certilab.cat/check-up-inmobiliario
+- Informe Técnico Energético: https://www.certilab.cat/informe-tecnico-energetico
+- Diagnóstico Express Energético: https://www.certilab.cat/segunda-opinion-express
+
+## Información legal
+- Aviso Legal: https://www.certilab.cat/aviso-legal
+- Privacidad: https://www.certilab.cat/privacidad
+- Cookies: https://www.certilab.cat/cookies
+
+## Buscadores
+- Buscador CE Catalunya: https://www.certilab.cat/buscador-certificado-energetico-catalunya
+- Cercador CE Catalunya (CAT): https://www.certilab.cat/cercador-certificats-energetics
+
+## Recursos
+- Guía errores CE: https://www.certilab.cat/landing/guia-errores-ce
+
+## Contacto
+- LinkedIn: https://www.linkedin.com/company/certilab
+- WhatsApp: https://wa.me/34692026067

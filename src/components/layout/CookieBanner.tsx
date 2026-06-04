@@ -95,113 +95,42 @@ export default function CookieBanner() {
   if (!show) return null;
 
   return (
-    <div id="cookie-banner" role="alert" aria-live="polite" className="cookie-banner">
-      <div className="cookie-banner-inner">
-        <p className="cookie-banner-text">
+    <div
+      id="cookie-banner"
+      role="alert"
+      aria-live="polite"
+      className="fixed bottom-0 left-0 right-0 z-[200] animate-[fadeIn_0.3s_ease] bg-[#0A0A0A] text-[#F5EFE6] px-6 py-5"
+    >
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+      <div className="max-w-[1100px] mx-auto flex items-center gap-6 flex-wrap justify-center">
+        <p className="font-sans text-sm leading-relaxed m-0 flex-1 min-w-[280px]">
           Utilizamos cookies técnicas esenciales para el funcionamiento del sitio
           y cookies analíticas (Meta Pixel) para medir resultados. Puedes aceptar
           todas o solo las técnicas.{" "}
-          <a href="/cookies/">Más info</a>
+          <a href="/cookies/" className="text-[#c4a97d] underline">
+            Más info
+          </a>
         </p>
-        <div className="cookie-banner-actions">
+        <div className="flex gap-3 shrink-0">
           <button
-            className="cookie-btn cookie-btn--secondary"
+            className="font-sans text-xs tracking-widest px-5 py-2.5 border-0 cursor-pointer uppercase font-medium transition-opacity duration-200 hover:opacity-80 bg-transparent text-[#F5EFE6] border border-solid border-[#F5EFE6]"
             onClick={handleEssential}
           >
             Solo técnicas
           </button>
           <button
-            className="cookie-btn cookie-btn--primary"
+            className="font-sans text-xs tracking-widest px-5 py-2.5 border-0 cursor-pointer uppercase font-medium transition-opacity duration-200 hover:opacity-80 bg-[#F5EFE6] text-[#0A0A0A]"
             onClick={handleAccept}
           >
             Aceptar todas
           </button>
         </div>
       </div>
-
-      <style jsx>{`
-        .cookie-banner {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: var(--color-black);
-          color: var(--color-crema);
-          z-index: 200;
-          padding: 1.5rem;
-          animation: fadeIn 0.3s ease;
-        }
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .cookie-banner-inner {
-          max-width: 1100px;
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          gap: 1.5rem;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        .cookie-banner-text {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          line-height: 1.6;
-          margin: 0;
-          flex: 1;
-          min-width: 280px;
-        }
-        .cookie-banner-text a {
-          color: var(--color-terra-light);
-          text-decoration: underline;
-        }
-        .cookie-banner-actions {
-          display: flex;
-          gap: 0.75rem;
-          flex-shrink: 0;
-        }
-        .cookie-btn {
-          font-family: var(--font-sans);
-          font-size: 0.8rem;
-          letter-spacing: 0.05em;
-          padding: 0.6rem 1.25rem;
-          border: none;
-          cursor: pointer;
-          text-transform: uppercase;
-          font-weight: 500;
-          transition: opacity 0.2s;
-        }
-        .cookie-btn:hover {
-          opacity: 0.8;
-        }
-        .cookie-btn--primary {
-          background: var(--color-crema);
-          color: var(--color-black);
-        }
-        .cookie-btn--secondary {
-          background: transparent;
-          color: var(--color-crema);
-          border: 1px solid var(--color-crema);
-        }
-
-        @media (max-width: 600px) {
-          .cookie-banner-inner {
-            flex-direction: column;
-            text-align: center;
-          }
-          .cookie-banner-actions {
-            width: 100%;
-            justify-content: center;
-          }
-        }
-      `}</style>
     </div>
   );
 }

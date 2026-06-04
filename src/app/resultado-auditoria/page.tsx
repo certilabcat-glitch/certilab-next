@@ -129,8 +129,11 @@ function ResultadoContent() {
 
 export default function ResultadoAuditoriaPage() {
   return (
-    <Suspense fallback={<div className="resultado-page" style={{ textAlign: "center", padding: "4rem" }}><p>Cargando...</p></div>}>
-      <ResultadoContent />
-    </Suspense>
+    <>
+      <meta name="robots" content="noindex, follow" />
+      <Suspense fallback={<div className="resultado-page" style={{ textAlign: "center", padding: "4rem" }}><p>Cargando...</p></div>}>
+        <ResultadoContent />
+      </Suspense>
+    </>
   );
 }

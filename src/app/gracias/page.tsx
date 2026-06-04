@@ -177,10 +177,19 @@ function GraciasContent() {
   );
 }
 
-export default function GraciasPage() {
+function GraciasPageContent() {
   return (
     <Suspense fallback={<div>Cargando...</div>}>
       <GraciasContent />
     </Suspense>
+  );
+}
+
+export default function GraciasPage() {
+  return (
+    <>
+      <meta name="robots" content="noindex, follow" />
+      <GraciasPageContent />
+    </>
   );
 }
