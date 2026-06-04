@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "404 - Página no encontrada | Certilab",
+  description: "La página que buscas no existe o ha sido movida. Vuelve al inicio de Certilab.",
+};
 
 export default function NotFound() {
   return (

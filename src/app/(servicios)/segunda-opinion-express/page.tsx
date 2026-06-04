@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
@@ -10,6 +9,25 @@ import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import TrustNumbers from "@/components/sections/TrustNumbers";
 import { waDiagnostico } from "@/lib/wa";
+
+export const metadata: Metadata = {
+  title: "Segunda Opinión Express | Certilab",
+  description:
+    "Análisis técnico forense urgente de certificados energéticos con entrega en menos de 4 horas. Mismo rigor que la modalidad estándar. Arquitecta técnica colegiada CATEB.",
+  alternates: {
+    canonical: "https://www.certilab.cat/segunda-opinion-express/",
+  },
+  openGraph: {
+    title: "Segunda Opinión Express | Certilab",
+    description:
+      "Análisis técnico forense urgente de certificados energéticos con entrega en menos de 4 horas. Mismo rigor que la modalidad estándar.",
+    url: "https://www.certilab.cat/segunda-opinion-express/",
+    siteName: "Certilab",
+    locale: "es_ES",
+    type: "website",
+    images: [{ url: "https://www.certilab.cat/og-image.jpg" }],
+  },
+};
 
 const faq = [
   {
@@ -25,6 +43,8 @@ const faq = [
     a: "El certificado energético en PDF o imagen y la dirección del inmueble. Misma documentación que la modalidad estándar.",
   },
 ];
+
+const waUrl = waDiagnostico();
 
 export default function SegundaOpinionExpressPage() {
   return (
@@ -43,7 +63,7 @@ export default function SegundaOpinionExpressPage() {
         badges={["Colegiada CATEB Barcelona", "Entrega <4h", "Urgente"]}
         price="79 €"
         credentials="Eva María González García · Arquitecta Técnica colegiada"
-        ctaPrimary={{ label: "Solicitar Express", href: waDiagnostico() }}
+        ctaPrimary={{ label: "Solicitar Express", href: waUrl }}
         ctaSecondary={{ label: "→ Volver a la estándar (39€)", href: "/segunda-opinion/" }}
         nota="Precio cerrado sin sorpresas (sin IVA). Servicio disponible lunes a viernes de 9:00 a 18:00 h."
       >
@@ -156,7 +176,7 @@ export default function SegundaOpinionExpressPage() {
         title="¿Necesitas una respuesta urgente?"
         text="Para firmas inminentes, compraventas o plazos ajustados. Entrega en menos de 4 horas."
         buttonText="Solicitar Express ahora"
-        buttonHref={waDiagnostico()}
+        buttonHref={waUrl}
       />
       <TrustBlockSection />
 
@@ -168,11 +188,11 @@ export default function SegundaOpinionExpressPage() {
             <span className="sticky-cta-meta">{'<'}4h · Urgente</span>
           </div>
           <div className="sticky-cta-actions">
-            <a href={waDiagnostico()} className="sticky-cta-button">
+            <a href={waUrl} className="sticky-cta-button">
               Solicitar Express
             </a>
             <a
-              href={waDiagnostico()}
+              href={waUrl}
               className="sticky-cta-wa"
               aria-label="Contactar por WhatsApp"
               title="Escríbenos por WhatsApp"
@@ -184,7 +204,7 @@ export default function SegundaOpinionExpressPage() {
         <p className="sticky-cta-micro">Pago seguro · Datos protegidos · Sin compromiso</p>
       </div>
 
-      {/* Schema.org Service */}
+      {/* Schema.org Service — renderizado estático desde Server Component */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -233,7 +253,7 @@ export default function SegundaOpinionExpressPage() {
         }}
       />
 
-      {/* Schema.org HowTo */}
+      {/* Schema.org HowTo — renderizado estático desde Server Component */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -271,7 +291,7 @@ export default function SegundaOpinionExpressPage() {
         }}
       />
 
-      {/* Schema.org BreadcrumbList */}
+      {/* Schema.org BreadcrumbList — renderizado estático desde Server Component */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -286,265 +306,6 @@ export default function SegundaOpinionExpressPage() {
         }}
       />
 
-      <style jsx>{`
-        .section {
-          padding: 5rem 1.5rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .section-title {
-          font-family: var(--font-serif);
-          font-size: clamp(1.5rem, 3vw, 2rem);
-          font-weight: 400;
-          color: var(--color-black);
-          text-align: center;
-          margin-bottom: 0.75rem;
-        }
-        .section-sub {
-          text-align: center;
-          font-family: var(--font-sans);
-          font-size: 1rem;
-          color: var(--color-grey);
-          max-width: 550px;
-          margin: 0 auto 3rem;
-          line-height: 1.7;
-        }
-
-        /* HERO GARANTÍA */
-        .hero-garantia {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-black);
-          margin-top: 1.5rem;
-          padding: 0.75rem 1.5rem;
-          border: 1px solid var(--color-terra);
-          background: rgba(196, 168, 130, 0.08);
-          max-width: 480px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .hero-garantia-icon {
-          font-size: 1rem;
-          color: var(--color-terra);
-          flex-shrink: 0;
-        }
-
-        /* SCHEDULE */
-        .schedule-section {
-          max-width: 1100px;
-          margin: 0 auto;
-          padding: 5rem 1.5rem;
-        }
-        .schedule-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 0;
-          max-width: 600px;
-          margin: 0 auto;
-          border: 1px solid var(--color-border);
-          background: #fff;
-        }
-        .schedule-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: baseline;
-          gap: 1rem;
-          padding: 1.25rem 1.5rem;
-          border-bottom: 1px solid var(--color-border);
-        }
-        .schedule-item:last-child {
-          border-bottom: 0;
-        }
-        .schedule-label {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          font-weight: 600;
-          color: var(--color-black);
-          white-space: nowrap;
-          flex-shrink: 0;
-        }
-        .schedule-value {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-grey);
-          text-align: right;
-        }
-
-        /* COMPARISON TABLE */
-        .comparison-section {
-          background: var(--color-crema);
-          max-width: 100%;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-        .comparison-section .section-title,
-        .comparison-section .section-sub {
-          max-width: 1100px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .comparison-table-wrap {
-          max-width: 700px;
-          margin: 0 auto;
-          overflow-x: auto;
-        }
-        .comparison-table {
-          width: 100%;
-          border-collapse: collapse;
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          background: #fff;
-          border: 1px solid var(--color-border);
-        }
-        .comparison-table th {
-          background: var(--color-black);
-          color: #fff;
-          font-weight: 500;
-          text-align: left;
-          padding: 0.85rem 1rem;
-          font-size: 0.85rem;
-        }
-        .comparison-table th:first-child {
-          width: 38%;
-        }
-        .comparison-table th + th {
-          width: 31%;
-        }
-        .comparison-table td {
-          padding: 0.85rem 1rem;
-          border-bottom: 1px solid var(--color-border);
-          color: var(--color-grey);
-        }
-        .comparison-table tbody tr:last-child td {
-          border-bottom: 0;
-        }
-        .comparison-highlight {
-          font-weight: 500;
-          color: var(--color-black);
-        }
-        .comparison-table td:last-child {
-          font-weight: 500;
-          color: var(--color-black);
-        }
-
-        /* INCLUDES */
-        .includes-section {
-          background: var(--color-crema);
-          max-width: 100%;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-        .includes-section .section-title,
-        .includes-section .section-sub {
-          max-width: 1100px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .includes-section :global(.includes-box) {
-          max-width: 600px;
-          margin: 0 auto;
-          background: #fff;
-        }
-
-        /* STICKY CTA BAR */
-        .sticky-cta-bar {
-          display: block;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: #fff;
-          border-top: 1px solid var(--color-border);
-          padding: 0.75rem 1rem 0.5rem;
-          z-index: 100;
-          box-shadow: 0 -4px 12px rgba(0,0,0,0.06);
-        }
-        .sticky-cta-inner {
-          max-width: 1100px;
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 1rem;
-        }
-        .sticky-cta-info {
-          display: flex;
-          flex-direction: column;
-          line-height: 1.3;
-        }
-        .sticky-cta-price {
-          font-family: var(--font-serif);
-          font-size: 1.25rem;
-          font-weight: 500;
-          color: var(--color-black);
-        }
-        .sticky-cta-meta {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          color: var(--color-grey);
-        }
-        .sticky-cta-actions {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-        .sticky-cta-button {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          background: var(--color-terra);
-          color: #fff;
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          font-weight: 500;
-          text-decoration: none;
-          padding: 0.7rem 1.5rem;
-          border-radius: 6px;
-          white-space: nowrap;
-          transition: background 0.2s;
-        }
-        .sticky-cta-button:hover {
-          background: var(--color-terra-dark);
-        }
-        .sticky-cta-wa {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 2.5rem;
-          height: 2.5rem;
-          border: 1px solid var(--color-border);
-          border-radius: 6px;
-          color: var(--color-grey);
-          transition: all 0.2s;
-          flex-shrink: 0;
-          text-decoration: none;
-        }
-        .sticky-cta-wa:hover {
-          color: #25D366;
-          border-color: #25D366;
-        }
-        .sticky-cta-micro {
-          text-align: center;
-          font-family: var(--font-sans);
-          font-size: 0.65rem;
-          color: var(--color-grey);
-          margin: 0.35rem 0 0;
-          line-height: 1;
-          opacity: 0.75;
-        }
-
-        @media (max-width: 767px) {
-          .section { padding: 3rem 1.5rem; }
-          .schedule-section { padding: 3rem 1.5rem; }
-          .schedule-item { flex-direction: column; gap: 0.25rem; }
-          .schedule-value { text-align: left; }
-          :global(body) { padding-bottom: 5.5rem; }
-        }
-      `}</style>
     </>
   );
 }

@@ -29,7 +29,7 @@ export default function HomePage() {
     <>
       <HeroSection
         eyebrow="Despacho de Auditoría Energética · Análisis forense"
-        title='La verdad energética de tu inmueble,<br />con responsabilidad profesional real'
+        title="Certilab · Arquitectura Técnica Forense y Consultoría Energética"
         subtitle="Analizamos su certificado energético de forma rigurosa e independiente. Sin sesgos. Con responsabilidad profesional."
         badges={[
           "Arquitecta Técnica colegiada · Cateb 9457",
