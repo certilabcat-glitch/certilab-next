@@ -698,6 +698,306 @@ En Certilab revisamos decenas de certificados cada semana. Nuestra recomendació
     readingTime: 7,
     featured: false,
   },
+  // ──────────────────────────────────────────
+  // Artículo 13 - Comunidad de vecinos
+  // ──────────────────────────────────────────
+  {
+    slug: "certificado-energetico-comunidades-vecinos",
+    title: "Certificado energético en comunidades de vecinos: obligación legal para zonas comunes",
+    excerpt:
+      "¿Sabías que las comunidades de vecinos también necesitan certificado energético para las zonas comunes? Descubre en qué casos es obligatorio, cómo obtenerlo y las sanciones por no tenerlo.",
+    content: `
+## ¿Obligan a las comunidades de vecinos a tener certificado energético?
+
+Sí. Desde la entrada en vigor del Real Decreto 390/2021, **las zonas comunes de los edificios de viviendas también necesitan su propio certificado energético** cuando se vendan o alquilen.
+
+### ¿Qué zonas comunes entran?
+
+El certificado debe incluir:
+
+- **Ascensores** y motores de elevación
+- **Iluminación de pasillos**, portales, escaleras y garajes
+- **Sistemas de climatización** centralizados (calefacción, aire acondicionado)
+- **Instalaciones de agua caliente sanitaria (ACS)** comunitarias
+- **Cubiertas y fachadas** (por su influencia en la demanda energética)
+
+> ⚠️ **Importante:** No es necesario un certificado separado para cada vecino. Basta con un único certificado para todo el edificio que incluya tanto las zonas comunes como las viviendas individuales.
+
+### ¿Cuándo es obligatorio?
+
+- **Venta de un piso:** El vendedor debe presentar el certificado del edificio completo (o al menos de la vivienda + su parte proporcional de comunes).
+- **Alquiler de un piso:** Igual que en venta, el arrendador debe entregar una copia al inquilino.
+- **Venta del edificio completo:** Es obligatorio el certificado del inmueble completo.
+
+### ¿Qué pasa si la comunidad no lo tiene?
+
+Si la comunidad de propietarios no dispone del certificado en el momento de vender o alquilar cualquier vivienda, **el propietario individual no podrá completar la operación**. Además, la comunidad podría enfrentarse a sanciones.
+
+### ¿Cómo obtenerlo?
+
+1. Contactar con un **técnico competente** (arquitecto, ingeniero o aparejador).
+2. El técnico realizará una visita para **inspeccionar las instalaciones comunes**.
+3. Calculará la calificación energética del edificio (de la A a la G).
+4. Registrará el certificado en el **organismo autonómico correspondiente**.
+
+> 💡 **Consejo:** Aprovecha la obtención del certificado comunitario para identificar mejoras de eficiencia que pueden beneficiar a todos los vecinos y acceder a ayudas públicas.
+
+[cta:segunda-opinion]
+
+## ¿Cuánto cuesta?
+
+El precio del certificado para comunidades varía según el tamaño y la complejidad del edificio, pero suele oscilar entre:
+- Edificio pequeño (hasta 10 viviendas): **300-500 €**
+- Edificio mediano (10-30 viviendas): **500-800 €**
+- Edificio grande (más de 30 viviendas): **800-1.200 €**
+
+## Resumen
+
+| Aspecto | Detalle |
+|---------|---------|
+| ¿Es obligatorio? | Sí, para venta o alquiler |
+| ¿Qué cubre? | Zonas comunes + viviendas |
+| ¿Cada cuánto renovar? | 10 años |
+| ¿Sanción por no tenerlo? | Desde 300 € hasta 6.000 € |
+
+Si tu comunidad aún no tiene el certificado energético, te recomendamos ponerte en marcha cuanto antes para evitar problemas legales en futuras operaciones inmobiliarias.
+`,
+    date: "2026-06-04",
+    author: "Eva María González García",
+    tags: ["certificado energético", "comunidades de vecinos", "obligación legal", "zonas comunes", "edificios", "viviendas"],
+    readingTime: 6,
+    featured: false,
+  },
+  // ──────────────────────────────────────────
+  // Artículo 14 - Vivienda eficiente sin A
+  // ──────────────────────────────────────────
+  {
+    slug: "vivienda-eficiente-sin-certificado-a",
+    title: "Vivienda eficiente sin certificado A: mitos y realidades sobre la calificación energética",
+    excerpt:
+      "¿Puede una vivienda ser eficiente aunque no tenga calificación A? Analizamos los mitos más comunes y te explicamos qué significan realmente las letras de la etiqueta energética.",
+    content: `
+## ¿Vale realmente la letra?
+
+Es habitual pensar que **si una vivienda no tiene calificación A, no es eficiente**. Pero la realidad es más compleja. La letra de la etiqueta energética depende de dos factores: el **consumo de energía** y las **emisiones de CO₂**, pero también del tipo de combustible y del sistema de calificación utilizado.
+
+### Mito 1: "Solo las casas nuevas pueden tener A"
+
+**Falso.** Aunque las viviendas de obra nueva suelen tener mejores calificaciones, una reforma integral bien planteada puede llevar una vivienda antigua de una G a una B o incluso A. Todo depende de las mejoras que se apliquen:
+
+- Sustitución de ventanas por **climalit con rotura de puente térmico**
+- Aislamiento de **fachadas y cubiertas**
+- Instalación de **aerotermia** o **bomba de calor**
+- Paneles solares para ACS
+
+> 💡 **Dato:** Una vivienda de los años 70 que se reforma con aislamiento y aerotermia puede pasar de una G a una B, reduciendo el consumo hasta un 70%.
+
+### Mito 2: "Si tengo C o D, mi casa es muy ineficiente"
+
+**Depende.** Una C es una calificación aceptable y no te penalizará en el mercado. Una D puede ser mejor que una A si esta última se ha obtenido con sistemas poco realistas. Lo importante no es solo la letra, sino **el consumo real en kWh/m² año**.
+
+| Calificación | Consumo orientativo | ¿Es eficiente? |
+|-------------|-------------------|---------------|
+| A | < 30 kWh/m² año | Excelente |
+| B | 30-50 kWh/m² año | Muy buena |
+| C | 50-80 kWh/m² año | Buena |
+| D | 80-120 kWh/m² año | Aceptable |
+| E | 120-160 kWh/m² año | Mejorable |
+| F-G | > 160 kWh/m² año | Necesita reforma |
+
+### Mito 3: "La etiqueta energética es siempre fiable"
+
+No siempre. Algunos certificados se elaboran sin visita o con datos incorrectos. Un **certificado mal hecho** puede:
+
+- Inflar la calificación (peligro si compras esperando una casa eficiente)
+- Dar una calificación más baja de la real (pérdida de valor injustificada)
+
+> ⚠️ **Precaución:** Si sospechas que tu certificado no refleja la realidad, solicita una Segunda Opinión profesional.
+
+### ¿Qué debes mirar realmente?
+
+1. **Consumo de energía primaria** (kWh/m² año) — cuanto más bajo, mejor.
+2. **Emisiones de CO₂** (kgCO₂/m² año) — importante para el medio ambiente.
+3. **Medidas de mejora** recomendadas — un buen certificado siempre incluye propuestas.
+4. **Que el técnico haya visitado la vivienda** — sin visita, el certificado no es válido.
+
+[cta:segunda-opinion]
+
+## Conclusión
+
+No te obsesiones con la letra. Una **C o D bien calculada** puede ser más fiable que una **A o B mal obtenida**. Si tienes dudas sobre tu certificado, pide una segunda opinión antes de tomar decisiones importantes.
+`,
+    date: "2026-06-04",
+    author: "Eva María González García",
+    tags: ["certificado energético", "eficiencia", "calificación", "mitos", "vivienda eficiente"],
+    readingTime: 7,
+    featured: false,
+  },
+  // ──────────────────────────────────────────
+  // Artículo 15 - Guía tramitar certificado Catalunya
+  // ──────────────────────────────────────────
+  {
+    slug: "guia-tramitar-certificado-energetico-catalunya",
+    title: "Guía completa para tramitar el certificado energético en Catalunya (2026)",
+    excerpt:
+      "¿Necesitas el certificado energético en Catalunya? Te explicamos paso a paso todo el proceso: desde pedir presupuesto hasta registrarlo en el ICAEN. Incluye plazos, precios y documentos necesarios.",
+    content: `
+## ¿Cómo obtener el certificado energético en Catalunya?
+
+Si vas a **vender o alquilar** tu vivienda en Catalunya, necesitas el certificado energético. Aquí te explicamos todo el proceso paso a paso.
+
+### Paso 1: Encuentra un técnico competente
+
+El certificado debe ser emitido por un **técnico certificador** con titulación habilitante:
+
+- Arquitecto o arquitecto técnico
+- Ingeniero o ingeniero técnico
+- Instalador habilitado
+
+> 💡 **Consejo:** Pide al menos **3 presupuestos** y asegúrate de que incluyen visita a la vivienda. Un certificado sin visita no es válido.
+
+### Paso 2: Prepara la documentación
+
+Antes de la visita del técnico, ten a mano:
+
+- **Datos del inmueble** (dirección, año de construcción, referencia catastral)
+- **Facturas de suministros** (electricidad, gas, gasoil) de los últimos 2-3 años
+- **Planos** de la vivienda (si los tienes)
+- **Documentación de reformas** realizadas (cambio de ventanas, aislamiento, caldera, etc.)
+
+### Paso 3: La visita técnica
+
+El técnico visitará tu vivienda para:
+
+- **Medir** superficies y volúmenes
+- **Identificar** los sistemas de climatización y ACS
+- **Comprobar** el tipo de cerramientos (ventanas, puertas, muros)
+- **Evaluar** el estado del aislamiento térmico
+
+La visita suele durar entre **30 y 60 minutos** para una vivienda tipo.
+
+### Paso 4: Emisión y registro
+
+Con los datos recogidos, el técnico:
+
+1. **Calcula** la calificación energética (de A a G) usando software homologado.
+2. **Genera** la etiqueta energética y el informe técnico.
+3. **Registra** el certificado en el **ICAEN** (Institut Català d'Energia) o en el órgano autonómico correspondiente.
+
+El registro es obligatorio y otorga al certificado validez legal.
+
+### Paso 5: Entrega al comprador o inquilino
+
+Una vez registrado, debes **entregar una copia** del certificado:
+
+- **En venta:** Al comprador, antes de la firma de la escritura.
+- **En alquiler:** Al inquilino, antes de la firma del contrato.
+
+> ⚠️ **Importante:** El incumplimiento puede conllevar sanciones de hasta 6.000 €.
+
+### Plazos y precios orientativos
+
+| Tipo de vivienda | Precio estimado | Plazo de emisión |
+|-----------------|----------------|-----------------|
+| Piso pequeño (< 70 m²) | 90-150 € | 2-5 días |
+| Piso mediano (70-100 m²) | 120-200 € | 2-5 días |
+| Casa unifamiliar | 200-350 € | 3-7 días |
+
+### ¿Cada cuánto hay que renovarlo?
+
+El certificado energético tiene una validez de **10 años**. Pasado ese tiempo, debe renovarse. También es recomendable renovarlo si haces reformas que mejoren la eficiencia.
+
+[cta:segunda-opinion]
+
+## Resumen rápido
+
+1. ✅ Busca técnico certificador homologado
+2. ✅ Prepara documentación del inmueble
+3. ✅ Facilita la visita del técnico
+4. ✅ Recibe la etiqueta y el informe
+5. ✅ Registro obligatorio en el ICAEN
+6. ✅ Entrega al comprador/inquilino
+
+Si tienes dudas sobre el proceso o sospechas que tu certificado no es correcto, solicita una Segunda Opinión antes de formalizar la operación.
+`,
+    date: "2026-06-04",
+    author: "Eva María González García",
+    tags: ["certificado energético", "Catalunya", "trámites", "guía", "ICAEN", "registro"],
+    readingTime: 8,
+    featured: false,
+  },
+  // ──────────────────────────────────────────
+  // Artículo 16 - Sanciones multas
+  // ──────────────────────────────────────────
+  {
+    slug: "sanciones-multas-no-tener-certificado-energetico",
+    title: "Sanciones y multas por no tener certificado energético: cuantías y riesgos legales",
+    excerpt:
+      "¿Cuánto puedes pagar si no tienes el certificado energético? Analizamos las sanciones reales en España y Catalunya, desde 300 € hasta 6.000 €, y cómo evitarlas.",
+    content: `
+## ¿Es ilegal no tener certificado energético?
+
+Sí. Desde la transposición de la Directiva Europea 2010/31/UE, es **obligatorio** disponer de un certificado energético válido y registrado para cualquier operación de **venta o alquiler** de un inmueble en España.
+
+### ¿Qué dice la ley?
+
+El **Real Decreto 390/2021**, por el que se aprueba el procedimiento básico para la certificación energética de edificios, establece:
+
+- **Artículo 12:** Obligación de exhibir la etiqueta energética en toda oferta de venta o alquiler.
+- **Artículo 13:** Obligación de entregar copia al comprador o inquilino.
+- **Disposición adicional cuarta:** Régimen sancionador.
+
+### ¿Cuánto son las multas?
+
+Las sanciones se clasifican en tres grados:
+
+| Tipo | Cuantía | ¿Por qué? |
+|------|--------|-----------|
+| **Leve** | 300 € - 1.000 € | No exhibir la etiqueta en anuncios |
+| **Grave** | 1.001 € - 2.000 € | No tener certificado en el momento de la compraventa |
+| **Muy grave** | 2.001 € - 6.000 € | Falsear datos del certificado o no registrarlo |
+
+> ⚠️ **Atención:** En Catalunya, la **Agència de l'Habitatge de Catalunya** puede iniciar expedientes sancionadores de oficio o a instancia de parte (por ejemplo, si un inquilino denuncia).
+
+### Casos reales y ejemplos
+
+**Caso 1:** Un propietario anuncia su piso en alquiler sin mencionar la calificación energética.
+→ Sanción leve: **600 €**.
+
+**Caso 2:** Un vendedor formaliza la escritura sin haber entregado el certificado al comprador.
+→ Sanción grave: **1.500 €**.
+
+**Caso 3:** Un técnico emite un certificado sin visitar la vivienda y con datos falsos.
+→ Sanción muy grave: **4.000 €** al técnico y **2.000 €** al propietario que lo contrató.
+
+### ¿Cómo detectar si te están engañando?
+
+Señales de alerta:
+
+- ❌ El técnico no visita la vivienda (solo con fotos o planos)
+- ❌ El certificado no tiene número de registro del ICAEN
+- ❌ La calificación es muy alta sin reformas evidentes
+- ❌ El precio es sospechosamente bajo (menos de 50 €)
+
+### ¿Qué hacer si te denuncian?
+
+1. **No ignorar la notificación** — las sanciones pueden aumentar con intereses.
+2. **Obtener el certificado cuanto antes** — si aún no lo tienes, consíguelo inmediatamente.
+3. **Solicitar una Segunda Opinión** si el certificado existente es incorrecto.
+4. **Alegar desconocimiento** solo funciona una vez; la reincidencia multiplica las sanciones.
+
+[cta:segunda-opinion]
+
+## Conclusión
+
+No tener el certificado energético puede salirte caro. Las multas empiezan en **300 €** y pueden llegar hasta **6.000 €** en casos graves. Si tienes dudas sobre tu certificado o necesitas obtenerlo, no esperes a que te sancionen.
+`,
+    date: "2026-06-04",
+    author: "Eva María González García",
+    tags: ["certificado energético", "sanciones", "multas", "riesgos legales", "obligación", "comunidades"],
+    readingTime: 7,
+    featured: false,
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
