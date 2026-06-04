@@ -45,6 +45,28 @@ const nextConfig: NextConfig = {
         destination: "/blog/detectar-certificado-energetico-falso",
         permanent: true,
       },
+      // Diagnóstico exprés (sinónimo de segunda-opinion-express)
+      {
+        source: "/diagnostico-express-energetico",
+        destination: "/segunda-opinion-express",
+        permanent: true,
+      },
+      // URLs legacy del plan de migración EasyPanel
+      {
+        source: "/auditoria-energetica-online",
+        destination: "/informe-tecnico-energetico",
+        permanent: true,
+      },
+      {
+        source: "/fondos-next-generation-2026",
+        destination: "/ayudas-eficiencia-energetica",
+        permanent: true,
+      },
+      {
+        source: "/certificadoenergeticoinflado",
+        destination: "/segunda-opinion",
+        permanent: true,
+      },
     ];
   },
 };

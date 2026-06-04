@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { articles } from "@/data/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.certilab.cat";
@@ -17,6 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/calculadoracat", priority: 0.7, freq: "monthly" as const },
     { path: "/configurar-auditoria", priority: 0.7, freq: "monthly" as const },
 
+    // Formulario contacto
+    { path: "/formulario", priority: 0.5, freq: "monthly" as const },
+
     // Secondary search tools
     { path: "/buscador-certificado-energetico-catalunya", priority: 0.5, freq: "monthly" as const },
     { path: "/cercador-certificats-energetics", priority: 0.5, freq: "monthly" as const },
@@ -32,10 +36,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/aviso-legal", priority: 0.3, freq: "yearly" as const },
   ];
 
-  return routes.map((route) => ({
+  const staticRoutes = routes.map((route) => ({
     url: `${baseUrl}${route.path}`,
     lastModified: new Date(),
     changeFrequency: route.freq,
     priority: route.priority,
   }));
+
+  const blogRoutes = articles.map((article) => ({
+    url: `${baseUrl}/blog/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...blogRoutes];
 }

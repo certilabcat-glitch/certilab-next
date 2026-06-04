@@ -1,0 +1,165 @@
+# Certilab - Consultoría Energética Forense
+> Arquitectura Técnica Forense · Consultoría Energética · Cateb 9457
+> https://www.certilab.cat
+
+---
+
+## Brown Discount: qué es y cómo afecta al precio de tu vivienda
+**URL:** https://www.certilab.cat/blog/brown-discount-precio-vivienda/
+**Fecha:** 2026-01-15
+**Autor:** Eva María González Gracia
+**Tags:** brown discount, calificación energética, compraventa
+
+### ¿Qué es el Brown Discount?
+El **Brown Discount** es el descuento que aplican los compradores informados (y los tasadores profesionales) sobre el precio de una vivienda con mala calificación energética (E, F o G).
+
+### ¿Cuánto puedes perder?
+Los estudios del sector inmobiliario europeo estiman que una vivienda con calificación E, F o G puede perder entre un **5% y un 15%** de su valor de mercado respecto a una vivienda equivalente con calificación A o B.
+
+**Ejemplo real:** Una vivienda valorada en 270.000€ con calificación G podría perder hasta **40.000€** de su valor.
+
+### ¿Por qué ocurre?
+1. **Costes energéticos mayores:** Una vivienda ineficiente gasta más en calefacción y electricidad.
+2. **Exigencia normativa:** La UE exige que todos los inmuebles tengan calificación energética para su venta o alquiler.
+3. **Acceso a hipotecas verdes:** Cada vez más bancos ofrecen mejores condiciones para viviendas eficientes.
+
+### ¿Cómo detectarlo?
+En Certilab incluimos la detección del Brown Discount en todos nuestros **Check-Up Inmobiliario** e **Informes Técnicos Energéticos**. Si estás comprando una vivienda, asegúrate de que el certificado energético refleja la realidad del inmueble. Una segunda opinión profesional puede ahorrarte miles de euros.
+
+---
+
+## Precio del Certificado Energético 2026: claves para entender las diferencias
+**URL:** https://www.certilab.cat/blog/cuanto-cuesta-certificado-energetico-2026/
+**Fecha:** 2026-02-20
+**Autor:** Eva María González Gracia
+**Tags:** certificado energético, precios, normativa
+
+### ¿Cuánto cuesta un certificado energético en 2026?
+Los precios de un certificado energético oficial en España varían según:
+- **Ubicación:** Entre 80€ y 200€ dependiendo de la comunidad autónoma
+- **Superficie del inmueble:** A mayor superficie, mayor precio
+- **Complejidad:** Viviendas unifamiliares o edificios completos tienen tarifas superiores
+
+### ¿Por qué hay certificados de 30€?
+Existen plataformas online que ofrecen certificados energéticos por menos de 50€. El problema es que **no incluyen visita presencial**, lo que incumple el artículo 6.5 del RD 390/2021.
+
+### Riesgos de un certificado barato
+1. **Nulo jurídicamente:** Al no cumplir la normativa, el certificado puede ser declarado nulo
+2. **Responsabilidad:** El técnico firmante puede ser sancionado
+3. **Para el comprador:** Una calificación incorrecta puede ocultar el Brown Discount
+
+### ¿Qué hacer?
+Si tienes un certificado dudoso, solicita una **Segunda Opinión** en Certilab. Por 39€ te decimos si es fiable.
+
+---
+
+## ¿Certificado Energético Gratis? Guía 2026
+**URL:** https://www.certilab.cat/blog/obtener-certificado-energetico-gratis/
+**Fecha:** 2026-03-10
+**Autor:** Eva María González Gracia
+**Tags:** certificado energético, gratis, guía
+
+### ¿Existe el certificado energético gratis?
+**No exactamente.** El certificado energético oficial requiere la intervención de un técnico colegiado con visita presencial, y ese trabajo tiene un coste.
+
+### ¿Qué puedes obtener gratis?
+En Certilab ofrecemos un **Diagnóstico Express gratuito** que incluye:
+- Análisis orientativo de tu situación energética
+- Recomendación del servicio más adecuado para tu caso
+- Primer contacto sin compromiso con Eva
+
+### Alternativas gratuitas
+- **Registro de Certificadores:** Puedes buscar técnicos habilitados en el registro autonómico
+- **Orientación:** Te ayudamos a entender qué necesitas sin coste
+
+### ¿Cuánto deberías pagar?
+Un certificado energético oficial con visita presencial cuesta entre **80€ y 200€**. Cualquier precio inferior a 60€ debería hacerte sospechar.
+
+---
+
+## Errores comunes en el certificado energético (y cómo detectarlos)
+**URL:** https://www.certilab.cat/blog/errores-certificado-energetico/
+**Fecha:** 2026-04-05
+**Autor:** Eva María González Gracia
+**Tags:** certificado energético, errores, guía
+
+### Los 5 errores más comunes en los certificados energéticos
+
+**1. Datos del catastro sin verificar**
+Muchos certificados se elaboran con los datos genéricos del catastro, sin comprobar si el inmueble tiene reformas, aislamiento adicional o cambios en las instalaciones.
+
+**2. Calificación inflada**
+Es el error más grave: asignar una calificación superior a la real para contentar al vendedor. Una A que debería ser una C, o una C que es una E.
+
+**3. Omisión de la fecha de visita**
+El certificado debe incluir la fecha de la visita presencial. Si no aparece, probablemente no se realizó.
+
+**4. Antigüedad del certificado**
+Los certificados tienen una validez de 10 años, pero si el inmueble ha tenido reformas, debería actualizarse.
+
+**5. Técnico no habilitado**
+El certificado debe estar firmado por un técnico competente (arquitecto, arquitecto técnico o ingeniero) colegiado.
+
+### ¿Cómo detectarlos?
+Solicita una **Segunda Opinión** en Certilab. Por 39€ revisamos tu certificado y te decimos si es fiable.
+
+---
+
+## Ayudas Next Generation para Rehabilitación Energética 2026
+**URL:** https://www.certilab.cat/blog/ayudas-next-generation-rehabilitacion-energetica-2026/
+**Fecha:** 2026-05-01
+**Autor:** Eva María González Gracia
+**Tags:** ayudas, next generation, rehabilitación, subvenciones
+
+### Ayudas Next Generation 2026 para rehabilitación energética
+Los fondos Next Generation EU incluyen partidas específicas para la rehabilitación energética de edificios en España.
+
+### ¿Qué ayudas están disponibles?
+1. **Programa de Rehabilitación Energética de Edificios (PREE)**
+2. **Programa de Ayudas para la Rehabilitación de Viviendas**
+3. **Deducción IRPF por obras de mejora energética**
+
+### Requisitos generales
+- La vivienda debe ser anterior a 2007 (en la mayoría de casos)
+- Las obras deben suponer una mejora de al menos un 30% en eficiencia
+- Es necesario contar con un informe técnico previo
+
+### ¿Cómo te ayudamos en Certilab?
+Nuestro **Informe Técnico Energético** incluye orientación personalizada sobre las ayudas aplicables a tu caso. No gestionamos las solicitudes, pero te explicamos qué necesitas y dónde pedirlas.
+
+---
+
+## ¿Tu certificado energético es falso? Guía para detectarlo
+**URL:** https://www.certilab.cat/blog/detectar-certificado-energetico-falso/
+**Fecha:** 2026-05-30
+**Autor:** Eva María González García
+**Tags:** certificado energético, falso, guía, reclamar
+
+### Señales de alerta: cómo detectar un certificado energético no fiable
+
+**1. No incluye fecha de visita presencial**
+El Real Decreto 390/2021 exige que el técnico visite el inmueble. Si tu certificado no menciona una visita in situ, probablemente se hizo sin pisar la vivienda.
+
+**2. Precio inferior a 60€**
+Un certificado energético real con visita presencial cuesta entre 80 y 200 €. Si pagaste menos de 60 €, es muy probable que no haya habido visita.
+
+**3. Técnico no colegiado o no verificable**
+El técnico debe estar colegiado. Busca su número en el registro del Colegio de Arquitectos Técnicos de tu provincia.
+
+**4. Datos genéricos sin verificar**
+Si el certificado usa solo datos del catastro sin mencionar reformas, aislamiento real o instalaciones específicas, es señal de que no hubo visita.
+
+**5. Calificación sospechosamente alta**
+Una vivienda antigua sin reformas difícilmente obtiene una A o B. Si la calificación parece inflada, puede estar ocultando el Brown Discount.
+
+### ¿Qué hacer si tu certificado no es fiable?
+1. **Solicita una Segunda Opinión** - Por 39€ analizamos tu certificado y te decimos si es fiable.
+2. **Reclama ante el colegio profesional** del técnico firmante.
+3. **Denuncia ante la administración** autonómica competente.
+
+### Nuestros servicios para tu tranquilidad
+Nuestro análisis forense te permite saber, antes de tomar cualquier decisión, si tu certificado energético es fiable, si la calificación es real y si el valor de tu inmueble está protegido:
+- Segunda Opinión (39€) - Revisamos tu certificado actual
+- Segunda Opinión Express (79€) - Entrega en menos de 2h
+- Check-Up Inmobiliario (199€) - Análisis completo antes de comprar
+- Informe Técnico (399€) - Análisis profundo con propuestas de mejora

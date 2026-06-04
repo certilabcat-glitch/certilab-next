@@ -230,6 +230,474 @@ Nuestro análisis forense te permite saber, antes de tomar cualquier decisión, 
     readingTime: 5,
     featured: true,
   },
+  // Artículo 7 — TOFU
+  {
+    slug: "multas-no-tener-certificado-energetico",
+    title: "Multas por no tener certificado energético: cuánto te puede costar en 2026",
+    excerpt:
+      "Las sanciones por no tener o no registrar el certificado energético pueden alcanzar los 6.000€. Te explicamos quién está obligado, qué riesgos corres y cómo evitarlos.",
+    content: `
+> ⚠️ **TL;DR:** La sanción por no tener certificado energético al vender o alquilar una vivienda puede ir de **300€ a 6.000€** en función de la gravedad. Además, desde 2025 la Inspección Técnica de Edificios (ITE) exige en muchas comunidades la calificación energética como requisito previo.
+
+---
+
+## ¿Es obligatorio el certificado energético?
+
+Sí, contundentemente. El **Real Decreto 390/2021** transpone la Directiva Europea de Eficiencia Energética y establece que **toda vivienda que se venda o alquile debe disponer de un certificado energético válido** registrado en el organismo autonómico correspondiente.
+
+La obligación no es nueva —existe desde 2013— pero las inspecciones y sanciones se han endurecido progresivamente. En 2026, las comunidades autónomas están coordinando campañas de inspección masiva cruzando datos catastrales con anuncios de venta y alquiler.
+
+> 📌 **Dato clave:** Según el IDAE, más del 40% de los anuncios inmobiliarios en España incumplen la obligación de mostrar la calificación energética. La administración lo sabe y está actuando.
+
+---
+
+## ¿Qué dice la ley?
+
+El artículo 62 de la Ley de Economía Sostenible (Ley 2/2011) y el Real Decreto 390/2021 establecen:
+
+| Obligación | ¿A quién aplica? | Sanción |
+|------------|-------------------|---------|
+| Tener certificado en vigor | Vendedores y arrendadores | 300€ – 6.000€ |
+| Registrar el certificado | Propietario (a través de técnico) | 300€ – 1.000€ |
+| Mostrar calificación en anuncios | Agencias y propietarios | 300€ – 1.000€ |
+| Entregar copia al comprador/inquilino | Vendedor/arrendador | 600€ – 6.000€ |
+
+---
+
+## ¿Quién inspecciona y cómo te pueden multar?
+
+Las inspecciones no son aleatorias. La administración autonómica utiliza varias vías:
+
+### 1. Cruzado de datos con anuncios online
+
+Los inspectores rastrean portales inmobiliarios (Fotocasa, Idealista, Habitaclia) y verifican si el anuncio incluye:
+- La **etiqueta energética** visible
+- El **número de registro** del certificado
+
+Si falta cualquiera de los dos, se inicia un expediente.
+
+[cta:segunda-opinion]
+
+### 2. Inspecciones en cambios de titularidad
+
+Cuando compras una vivienda, el notario está obligado a solicitar el certificado energético. Si no se presenta, se comunica a la administración autonómica.
+
+### 3. Denuncias de particulares
+
+Vecinos, inquilinos o compradores pueden denunciar la ausencia de certificado. Es más frecuente de lo que parece, sobre todo en casos de conflicto arrendaticio.
+
+> 🚨 **Atención:** Las denuncias de inquilinos son cada vez más comunes. Si tienes una vivienda alquilada sin certificado, cualquier reclamación del inquilino puede derivar en sanción.
+
+---
+
+## ¿Cuánto son las multas reales?
+
+Las sanciones se gradúan en tres niveles:
+
+### Leves (300€ – 1.000€)
+- No tener el certificado en la vivienda
+- No mostrar la calificación en el anuncio
+- Retraso en el registro
+
+### Graves (1.000€ – 2.000€)
+- No entregar copia al comprador o inquilino
+- Certificado caducado o sin registrar
+- Falsear datos de la calificación
+
+### Muy graves (2.000€ – 6.000€)
+- Reincidencia en infracciones graves
+- Certificado falso o emitido sin visita
+- Impedir la inspección
+
+---
+
+## ¿Y si alquilo sin certificado?
+
+Esta es una de las casuísticas más habituales y peligrosas. Alquilar sin certificado energético:
+
+1. **Te expone a multas** de 300€ a 6.000€
+2. **Permite al inquilino reclamar** la resolución del contrato si la vivienda no cumple condiciones mínimas de habitabilidad
+3. **Te impide actualizar la renta** en algunos contratos de alquiler de larga duración
+
+> 💡 **Consejo:** El certificado energético cuesta entre 60€ y 150€. Comparado con una multa mínima de 300€, no tiene sentido correr el riesgo.
+
+[cta:segunda-opinion]
+
+---
+
+## Casos reales documentados
+
+Según datos de las comunidades autónomas (2024-2025):
+
+| Comunidad | Sanciones anuales | Importe medio |
+|-----------|-------------------|---------------|
+| Cataluña | +2.500 | 1.200€ |
+| Madrid | +1.800 | 900€ |
+| Andalucía | +3.100 | 800€ |
+| Comunidad Valenciana | +1.200 | 1.100€ |
+
+Las cifras aumentan año a año. Si tienes una vivienda en alquiler o estás pensando en vender, no esperes a que te inspeccionen.
+
+---
+
+## Cómo evitar la multa (pasos prácticos)
+
+1. **Solicita tu certificado** a un técnico colegiado
+2. **Verifica** que el técnico realice la visita presencial obligatoria
+3. **Asegúrate** de que el certificado se registre en el órgano autonómico
+4. **Incluye la etiqueta** en todos tus anuncios de venta o alquiler
+5. **Entrega una copia** al comprador o inquilino antes de firmar
+
+Si ya tienes certificado pero dudas de si es válido o está correctamente registrado, una segunda opinión profesional te lo confirma en cuestión de horas.
+    `,
+    date: "2026-06-04",
+    author: "Eva María González García",
+    tags: ["certificado energético", "multas", "obligatorio", "sanciones", "alquiler"],
+    readingTime: 6,
+    featured: false,
+  },
+  // Artículo 8 — TOFU
+  {
+    slug: "certificado-energetico-obligatorio-alquiler",
+    title: "¿Es obligatorio el certificado energético para alquilar una vivienda en 2026?",
+    excerpt:
+      "Sí, el certificado energético es obligatorio para alquilar desde 2013. Te contamos qué dice la ley, las excepciones reales y qué pasa si alquilas sin él.",
+    content: `
+> 💡 **TL;DR:** El certificado energético **es obligatorio para alquilar cualquier vivienda** en España desde 2013. No hay excepción por antigüedad, tamaño o precio del alquiler. Si alquilas sin él, te expones a multas de hasta 6.000€ y el inquilino puede reclamar.
+
+---
+
+## La respuesta corta: sí, es obligatorio
+
+Desde la entrada en vigor del **Real Decreto 235/2013** (actualizado por el **Real Decreto 390/2021**), toda vivienda que se ponga en alquiler debe disponer de un certificado energético válido y registrado.
+
+La ley no distingue entre:
+- Pisos completos o habitaciones sueltas
+- Alquiler de temporada o de larga duración
+- Viviendas amuebladas o vacías
+- Primer alquiler o renovación
+
+Si hay contraprestación económica a cambio del uso de la vivienda, necesitas certificado.
+
+> 🚨 **Excepción importante:** El alquiler de **habitaciones individuales** en la vivienda habitual del propietario NO necesita certificado, según la interpretación del IDAE. Pero si alquilas el piso entero, sí.
+
+---
+
+## ¿Qué dice la normativa exactamente?
+
+El artículo 6 del RD 390/2021 establece que:
+
+> "El certificado de eficiencia energética del edificio o de la parte del mismo será necesario para la **venta o arrendamiento** del mismo, y deberá ponerse a disposición del adquirente o arrendatario."
+
+Es decir: **no basta con tenerlo**, además hay que **entregar una copia** al inquilino. Si no lo entregas, también estás incumpliendo.
+
+[cta:segunda-opinion]
+
+---
+
+## ¿Y para alquileres de temporada o vacacional?
+
+Esta es una de las dudas más frecuentes. La respuesta es **sí, también es obligatorio**:
+
+| Tipo de alquiler | ¿Obligatorio? | ¿Qué dice la ley? |
+|-----------------|---------------|-------------------|
+| Alquiler de larga duración (>1 año) | ✅ Sí | RD 390/2021 |
+| Alquiler de temporada (curso, trabajo) | ✅ Sí | Misma normativa |
+| Alquiler vacacional (días/semanas) | ✅ Sí | Además necesita licencia turística |
+| Habitaciones (con el dueño viviendo) | ❌ No | Interpretación IDAE |
+
+---
+
+## ¿Qué información debe aparecer en el anuncio?
+
+Desde 2021, los anuncios de alquiler deben incluir:
+
+1. La **etiqueta energética** (la letra de la A a la G)
+2. El **número de registro** del certificado
+3. El **consumo anual de energía** expresado en kWh/m²
+
+Si anuncias sin esta información, el portal inmobiliario puede retirar el anuncio y la administración puede sancionarte.
+
+> 💡 **Dato práctico:** Idealista, Fotocasa y Habitaclia ya exigen la etiqueta energética como campo obligatorio para publicar anuncios.
+
+---
+
+## ¿Qué pasa si alquilas sin certificado?
+
+Las consecuencias son varias y ninguna buena:
+
+### 1. Sanción económica
+Las multas van de **300€ a 6.000€** según la gravedad (como vimos en nuestro artículo sobre [multas del certificado energético](/blog/multas-no-tener-certificado-energetico/)).
+
+### 2. El inquilino puede reclamar
+Aunque el contrato de alquiler sigue siendo legal, el inquilino puede:
+- Solicitar la resolución del contrato si se demuestra que la vivienda no cumple condiciones mínimas
+- Reclamar daños y perjuicios si la falta de certificado le ha impedido acceder a ayudas o bonificaciones
+
+### 3. Problemas con el seguro
+Algunas aseguradoras están empezando a preguntar por el certificado energético como parte de la documentación del seguro de hogar. No tenerlo puede ser motivo de exclusión de cobertura en caso de siniestro.
+
+[cta:segunda-opinion]
+
+---
+
+## ¿Necesito certificado nuevo para cada inquilino?
+
+No necesitas uno nuevo si el certificado sigue en vigor. El certificado energético tiene una **validez de 10 años** (para viviendas con calificación A o B) o de **10 años también** (para el resto, aunque la recomendación es actualizarlo antes).
+
+Eso sí, debes entregar una copia a cada nuevo inquilino. Si alquilas la misma vivienda a distintas personas a lo largo del tiempo, usas el mismo certificado siempre que esté vigente.
+
+---
+
+## ¿Qué tengo que hacer si voy a alquilar?
+
+Si estás a punto de alquilar tu vivienda, estos son los pasos:
+
+1. **Contrata un técnico colegiado** que emita el certificado con visita presencial
+2. **Verifica el registro** en el organismo autonómico (Cataluña tiene su propio registro en la ICAEN)
+3. **Incluye la etiqueta** en tus anuncios
+4. **Entrega una copia** al inquilino junto con el contrato
+5. **Guarda el justificante** de entrega firmado
+
+Si ya tienes un certificado pero te han surgido dudas sobre su validez, podemos revisarlo por ti en nuestra [segunda opinión](/segunda-opinion/).
+    `,
+    date: "2026-06-04",
+    author: "Eva María González García",
+    tags: ["certificado energético", "alquiler", "obligatorio", "arrendamiento", "vivienda"],
+    readingTime: 6,
+    featured: false,
+  },
+  // Artículo 9 — TOFU
+  {
+    slug: "cuanto-dura-certificado-energetico",
+    title: "¿Cuánto dura el certificado energético? Validez, caducidad y renovación en 2026",
+    excerpt:
+      "El certificado energético tiene una validez máxima de 10 años. Pero hay casos en los que caduca antes. Te explicamos cuándo renovarlo y cómo saber si el tuyo sigue vigente.",
+    content: `
+> 💡 **TL;DR:** El certificado energético tiene una **validez máxima de 10 años**, pero hay circunstancias que obligan a renovarlo antes: obras de rehabilitación, cambios normativos o si el certificado contiene errores. En Cataluña, el plazo para calificaciones A y B puede ser de 10 años, pero para viviendas ineficientes conviene actualizarlo a los 5.
+
+---
+
+## Validez legal del certificado energético
+
+El **Real Decreto 390/2021** establece que el certificado de eficiencia energética tiene una vigencia máxima de:
+
+| Calificación | Validez máxima | ¿Cuándo renovar? |
+|-------------|----------------|-------------------|
+| A o B | 10 años | Al vender o alquilar, mejor renovar si quedan <2 años |
+| C o D | 10 años | Recomendable a los 5-7 años si ha habido cambios |
+| E, F o G | 10 años | Recomendable a los 5 años (el Brown Discount puede haber cambiado) |
+
+Pero ojo: **los 10 años son el máximo, no la garantía**. Hay situaciones que acortan ese plazo.
+
+> 📌 **Dato clave:** El plazo de validez comienza a contar desde la **fecha de registro** del certificado en el organismo autonómico, no desde la fecha de emisión ni desde la visita del técnico. Asegúrate de que tu certificado esté registrado.
+
+---
+
+## ¿Cuándo caduca antes de los 10 años?
+
+Hay **cuatro situaciones** que invalidan el certificado antes de su fecha teórica de caducidad:
+
+### 1. Obras de rehabilitación o mejora
+
+Si realizas obras que afectan a la envolvente térmica (fachadas, ventanas, cubierta) o a las instalaciones (caldera, aire acondicionado, iluminación), el certificado deja de reflejar el estado real de la vivienda. Legalmente, necesitas uno nuevo.
+
+### 2. Cambio normativo
+
+La normativa europea avanza rápido. Si entra en vigor una nueva directiva o real decreto que modifique los criterios de cálculo, los certificados antiguos pueden perder validez antes de su fecha de caducidad.
+
+[cta:segunda-opinion]
+
+### 3. Errores en el certificado
+
+Si se detectan errores en el certificado —como una calificación inflada, datos incorrectos del inmueble o la ausencia de visita presencial— el certificado puede ser declarado nulo. En ese caso, deja de tener validez aunque no hayan pasado los 10 años.
+
+### 4. Cambio de titularidad sin actualización
+
+Aunque el certificado es transferible al nuevo propietario, si se vende la vivienda varias veces sin actualizar el certificado, la administración puede requerir uno nuevo si el existente tiene más de 5 años.
+
+---
+
+## ¿Puedo usar el mismo certificado para alquilar y vender?
+
+Sí, siempre que esté en vigor. No necesitas certificados distintos para alquilar y para vender. El mismo certificado sirve para ambas operaciones.
+
+Eso sí: si primero alquilas y luego vendes, asegúrate de que:
+- El certificado sigue vigente (no ha caducado)
+- Está correctamente registrado
+- La calificación sigue siendo representativa del estado actual de la vivienda
+
+---
+
+## ¿Y en Cataluña? ¿Hay diferencias?
+
+Cataluña tiene su propio organismo regulador (ICAEN) y su registro autonómico. La validez legal es la misma (10 años), pero hay **particularidades importantes**:
+
+1. **Registro obligatorio** en el Registro General de Certificados de Cataluña (no vale solo con tenerlo firmado)
+2. La **etiqueta energética debe incluir el código de registro** específico de Cataluña
+3. Las **inspecciones son más frecuentes** que en otras comunidades
+
+Si tu certificado es de Cataluña, verifica que aparece el número de registro de la ICAEN. Si no está, puede que no sea válido aunque tenga menos de 10 años.
+
+[cta:segunda-opinion]
+
+---
+
+## ¿Cómo sé si mi certificado sigue vigente?
+
+Para comprobarlo:
+
+1. **Mira la fecha de registro** (no la de emisión)
+2. **Suma 10 años** desde esa fecha
+3. **Verifica** que el certificado sigue registrado en el organismo autonómico
+4. **Comprueba** que no ha habido cambios normativos que lo invaliden
+
+Si tienes dudas, en Certilab podemos revisar tu certificado y decirte si sigue siendo válido o necesitas renovarlo. Nuestra [segunda opinión](/segunda-opinion/) incluye esta verificación.
+
+---
+
+## Preguntas frecuentes sobre la validez
+
+**¿El certificado caduca si no lo uso?**
+No. El certificado caduca por tiempo, no por uso. Si pasan 10 años desde el registro, caduca aunque no hayas alquilado ni vendido.
+
+**¿Puedo renovar el certificado antes de que caduque?**
+Sí, y en muchos casos es recomendable, sobre todo si has hecho mejoras que pueden mejorar la calificación.
+
+**¿El certificado energético caduca si cambio de comunidad autónoma?**
+No. El certificado es válido en toda España independientemente de dónde se registrara, siempre que esté dentro del plazo de validez.
+
+**¿Cuánto cuesta renovar el certificado?**
+Lo mismo que el primero: entre 60€ y 150€, dependiendo del técnico y la comunidad. Es un coste asumible comparado con los riesgos de tenerlo caducado.
+    `,
+    date: "2026-06-04",
+    author: "Eva María González García",
+    tags: ["certificado energético", "validez", "caducidad", "renovar", "vigencia"],
+    readingTime: 6,
+    featured: false,
+  },
+  // Artículo 10 — TOFU
+  {
+    slug: "como-interpretar-certificado-energetico",
+    title: "Cómo interpretar tu certificado energético: guía visual para no perderte",
+    excerpt:
+      "¿Tu certificado energético parece chino? Te enseñamos a leer cada apartado: calificación, consumo, emisiones y el número de registro que lo hace válido.",
+    content: `
+> 💡 **TL;DR:** Un certificado energético tiene 5 partes clave: la etiqueta (calificación A-G), la escala de consumo, la escala de emisiones, los datos del técnico y el número de registro. Si falta alguno, el certificado puede no ser válido.
+
+---
+
+## La estructura del certificado energético
+
+Un certificado energético válido debe contener estos 5 bloques fundamentales:
+
+| Bloque | ¿Qué debe incluir? | ¿Por qué es importante? |
+|--------|-------------------|--------------------------|
+| 1. Etiqueta | Letra de calificación (A-G) + código de registro | Identifica visualmente la eficiencia |
+| 2. Consumo | kWh/m² año | Mide cuánta energía consume el inmueble |
+| 3. Emisiones | kg CO₂/m² año | Mide el impacto ambiental |
+| 4. Datos del técnico | Nombre, nº colegiado, firma | Verifica que es un profesional habilitado |
+| 5. Medidas de mejora | Recomendaciones del técnico | Te indica qué puedes hacer para mejorar |
+
+---
+
+## 1. La etiqueta energética
+
+Es la parte más famosa y la que se muestra en los anuncios. La etiqueta es una barra de colores que va del **verde oscuro (A)** al **rojo oscuro (G)**.
+
+La flecha negra indica la calificación actual de tu vivienda. Pero **atención**: la etiqueta no es suficiente. Necesitas que aparezca el **código de registro** asociado.
+
+> 🚨 **Error muy común:** Muchas inmobiliarias ponen una etiqueta genérica sin código de registro. Si no tiene código, no es el certificado real de la vivienda. Es un simple adorno.
+
+[cta:segunda-opinion]
+
+---
+
+## 2. El consumo de energía (kWh/m² año)
+
+Esta cifra es la más importante para tu bolsillo. Te dice cuánta energía consume tu vivienda por metro cuadrado al año.
+
+| Consumo | ¿Qué significa? | Coste anual estimado (80m²) |
+|---------|----------------|---------------------------|
+| < 50 kWh/m² | Muy eficiente | < 400€ |
+| 50-100 kWh/m² | Eficiente | 400-700€ |
+| 100-200 kWh/m² | Normal | 700-1.200€ |
+| > 200 kWh/m² | Ineficiente | > 1.200€ |
+
+Si tu consumo declarado en el certificado no se corresponde con tus facturas reales, es posible que el certificado tenga errores.
+
+---
+
+## 3. Las emisiones de CO₂ (kg CO₂/m² año)
+
+Este indicador es cada vez más relevante por:
+- **Exigencias normativas** (la UE endurece los límites)
+- **Acceso a ayudas** (muchas subvenciones exigen un máximo de emisiones)
+- **Valor de reventa** (los compradores informados miran esta cifra)
+
+💡 **Para que te hagas una idea:** Una vivienda con calificación G puede emitir hasta 5 veces más CO₂ que una con calificación A. Eso se traduce en un mayor impacto ambiental... y en una mayor factura energética.
+
+---
+
+## 4. Los datos del técnico (y por qué son críticos)
+
+El certificado debe identificar claramente al técnico que lo ha emitido:
+
+- **Nombre completo** del técnico
+- **Número de colegiado** (imprescindible)
+- **Colegio profesional** (Arquitectos, Aparejadores, Ingenieros)
+- **Firma digital o manuscrita**
+
+Si alguno de estos datos falta, el certificado puede ser declarado nulo. Como explicamos en nuestro artículo sobre [cómo detectar un certificado falso](/blog/detectar-certificado-energetico-falso/), la ausencia de técnico verificable es una de las señales de alerta más claras.
+
+[cta:segunda-opinion]
+
+---
+
+## 5. Las medidas de mejora
+
+Todo certificado energético debe incluir **al menos 2 medidas de mejora** recomendadas por el técnico. Estas medidas pueden ser:
+
+| Tipo de mejora | Ejemplo | Ahorro potencial |
+|---------------|---------|------------------|
+| Envolvente | Aislar fachada o cubierta | 20-40% |
+| Ventanas | Doble acristalamiento | 10-20% |
+| Climatización | Cambiar caldera por bomba de calor | 30-50% |
+| Iluminación | LED + sensores | 10-15% |
+
+Si tu certificado no incluye ninguna medida de mejora, es sospechoso. La normativa obliga a incluirlas.
+
+---
+
+## Errores frecuentes al leer el certificado
+
+### ❌ Confundir "fecha de emisión" con "fecha de registro"
+La fecha que cuenta para la validez del certificado es la de **registro**, no la de emisión. Puede haber semanas de diferencia.
+
+### ❌ No verificar que la calificación corresponde al consumo declarado
+Si la etiqueta muestra una A pero el consumo declarado es de 200 kWh/m², hay una incoherencia. La calificación debe corresponderse con los datos numéricos.
+
+### ❌ Ignorar la escala de emisiones
+Algunos certificados muestran una calificación buena en consumo pero mala en emisiones (o viceversa). La calificación final se calcula con ambas escalas.
+
+---
+
+## ¿Qué hago si mi certificado tiene errores?
+
+Si al leer tu certificado detectas alguna incoherencia, tienes varias opciones:
+
+1. **Solicitar una segunda opinión** — Por 39€ analizamos tu certificado y te decimos si es fiable
+2. **Reclamar al técnico** — Si el certificado tiene errores, el técnico debe corregirlos sin coste adicional
+3. **Denunciar ante el colegio profesional** — Si el técnico se niega a corregir errores graves
+
+En Certilab revisamos decenas de certificados cada semana. Nuestra recomendación: si tienes dudas, no las ignores. Un certificado con errores puede costarte mucho más que los 39€ de una [segunda opinión](/segunda-opinion/).
+    `,
+    date: "2026-06-04",
+    author: "Eva María González García",
+    tags: ["certificado energético", "interpretar", "leer", "guía", "calificación"],
+    readingTime: 7,
+    featured: false,
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
