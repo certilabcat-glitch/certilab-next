@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import IncludesBox from "@/components/ui/IncludesBox";
 import HeroSection from "@/components/sections/HeroSection";
@@ -14,6 +13,19 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import BDHelp from "@/components/ui/BDHelp";
 import { segundaOpinionFaq } from "@/data/faq";
 import { waDiagnostico } from "@/lib/wa";
+
+export const metadata: Metadata = {
+  title: "Segunda Opinión Certificado Energético (39€) | Certilab",
+  description:
+    "Revisamos tu certificado energético y detectamos calificaciones infladas, errores técnicos y Brown Discount. Informe forense en 24-48h. Eva Mª González, Arquitecta Técnica Cateb 9457.",
+  alternates: { canonical: "https://www.certilab.cat/segunda-opinion/" },
+  openGraph: {
+    title: "Segunda Opinión Certificado Energético | Certilab",
+    description:
+      "¿Confías en que la letra de tu certificado es real? Por 39€ revisamos tu certificado y te decimos si es fiable o si te están engañando.",
+    url: "https://www.certilab.cat/segunda-opinion/",
+  },
+};
 
 const features = [
   { num: "I", title: "Revisión de calificación", text: "Analizamos la calificación asignada y la comparamos con los datos reales del inmueble para detectar si está inflada o es incorrecta." },
@@ -363,7 +375,7 @@ export default function SegundaOpinionPage() {
         }}
       />
 
-      <style jsx>{`
+      <style>{`
         .section {
           padding: 5rem 1.5rem;
           max-width: 1100px;
@@ -684,9 +696,6 @@ export default function SegundaOpinionPage() {
           padding: 2rem;
           text-align: left;
           border: 1px solid var(--color-border);
-        }
-        .roi-contrast-card.bad {
-          background: #fff;
         }
         .roi-contrast-card.good {
           background: var(--color-crema);

@@ -840,12 +840,63 @@ img, video, iframe, table, pre, code {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
-.feature-card {
-  border: 1px solid var(--color-border);
-  padding: 2rem;
-}
+  .feature-card {
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+  }
 @media (max-width: 767px) {
   .feature-card {
     padding: 1.5rem;
   }
+}
+
+/* ===== Estilos Not Found (404) ===== */
+.not-found-page {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+.not-found-page__code {
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 300;
+  color: var(--color-terra-light);
+  line-height: 1;
+  margin: 0 0 0.5rem;
+}
+.not-found-page__subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  color: var(--color-black);
+  margin: 0 0 1rem;
+}
+.not-found-page__text {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-grey);
+  max-width: 400px;
+  margin: 0 0 2rem;
+  line-height: 1.7;
+}
+.not-found-page__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-black);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.not-found-page__link:hover {
+  background: #333;
 }
