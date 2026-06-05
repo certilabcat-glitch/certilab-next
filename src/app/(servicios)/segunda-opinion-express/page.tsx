@@ -231,18 +231,6 @@ export default function SegundaOpinionExpressPage() {
                 description: "Análisis técnico completo con entrega urgente en menos de 4 horas. Ideal para firmas inminentes.",
               },
             ],
-            review: {
-              "@type": "Review",
-              reviewRating: {
-                "@type": "Rating",
-                ratingValue: "4.9",
-                bestRating: "5",
-              },
-              author: {
-                "@type": "Person",
-                name: "Certilab",
-              },
-            },
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: "4.9",

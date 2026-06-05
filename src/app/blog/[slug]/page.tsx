@@ -30,13 +30,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://www.certilab.cat/blog/${slug}/`,
       type: "article",
       publishedTime: article.date,
+      modifiedTime: article.date,
       authors: [article.author],
       tags: article.tags,
+      images: [
+        {
+          url: article.image ?? "https://www.certilab.cat/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${article.title} | Certilab`,
       description: article.excerpt,
+      images: [article.image ?? "https://www.certilab.cat/og-image.jpg"],
     },
   };
 }
@@ -300,9 +310,12 @@ export default async function BlogPostPage({ params }: Props) {
             headline: article.title,
             description: article.excerpt,
             datePublished: article.date,
+            dateModified: article.date,
             author: {
               "@type": "Person",
               name: article.author,
+              url: "https://www.certilab.cat/sobre-nosotros/",
+              sameAs: ["https://www.linkedin.com/in/eva-mar%C3%ADa-gonz%C3%A1lez-gracia-7a53a094/"],
             },
             publisher: {
               "@type": "Organization",
@@ -314,6 +327,8 @@ export default async function BlogPostPage({ params }: Props) {
               "@type": "WebPage",
               "@id": `https://www.certilab.cat/blog/${article.slug}/`,
             },
+            image: article.image ?? "https://www.certilab.cat/og-image.jpg",
+            articleSection: article.tags.length > 0 ? article.tags[0] : undefined,
           }),
         }}
       />

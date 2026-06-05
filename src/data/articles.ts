@@ -8,6 +8,7 @@ export interface Article {
   tags: string[];
   readingTime: number;
   featured: boolean;
+  image?: string;
 }
 
 export const articles: Article[] = [
