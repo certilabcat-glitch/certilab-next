@@ -29,6 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/blog", priority: 0.7, freq: "weekly" as const },
     { path: "/sobre-nosotros", priority: 0.7, freq: "monthly" as const },
     { path: "/landing/guia-errores-ce", priority: 0.6, freq: "monthly" as const },
+    { path: "/landing/guia-detecta-falso-ce", priority: 0.6, freq: "monthly" as const },
+
+    // Result / Gracias pages
+    { path: "/gracias", priority: 0.3, freq: "yearly" as const },
+    { path: "/resultado-auditoria", priority: 0.3, freq: "yearly" as const },
+
+    // SaaS
+    { path: "/saas", priority: 0.7, freq: "monthly" as const },
+    { path: "/saas/demo", priority: 0.5, freq: "monthly" as const },
+    { path: "/saas/login", priority: 0.5, freq: "monthly" as const },
+    { path: "/saas/precios", priority: 0.8, freq: "monthly" as const },
+    { path: "/saas/register", priority: 0.5, freq: "monthly" as const },
 
     // Legal
     { path: "/privacidad", priority: 0.3, freq: "yearly" as const },
