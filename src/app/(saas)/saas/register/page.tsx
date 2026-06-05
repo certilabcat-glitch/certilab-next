@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import Link from "next/link";
+import styles from "../auth.module.css";
 
 export default function RegisterPage() {
   const [nombre, setNombre] = useState("");
@@ -15,15 +16,15 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="auth-page">
-      <div className="auth-card">
+    <div className={styles.authPage}>
+      <div className={styles.authCard}>
         <h1>Crear cuenta gratuita</h1>
-        <p className="auth-sub">
+        <p className={styles.authSub}>
           Empieza tu prueba de 7 días sin compromiso
         </p>
 
-        <form onSubmit={handleSubmit} className="auth-form">
-          <div className="auth-group">
+        <form onSubmit={handleSubmit}>
+          <div className={styles.authGroup}>
             <label htmlFor="nombre">Nombre completo</label>
             <input
               id="nombre"
@@ -34,7 +35,7 @@ export default function RegisterPage() {
               placeholder="Ej: María García"
             />
           </div>
-          <div className="auth-group">
+          <div className={styles.authGroup}>
             <label htmlFor="email">Email profesional</label>
             <input
               id="email"
@@ -45,7 +46,7 @@ export default function RegisterPage() {
               placeholder="maria@tuagencia.com"
             />
           </div>
-          <div className="auth-group">
+          <div className={styles.authGroup}>
             <label htmlFor="password">Contraseña</label>
             <input
               id="password"
@@ -56,98 +57,16 @@ export default function RegisterPage() {
               placeholder="Mínimo 8 caracteres"
             />
           </div>
-          <button type="submit" className="auth-btn">
+          <button type="submit" className={styles.authBtn}>
             Crear cuenta gratuita
           </button>
         </form>
 
-        <p className="auth-footer">
+        <p className={styles.authFooter}>
           ¿Ya tienes cuenta?{" "}
           <Link href="/saas/login/">Inicia sesión</Link>
         </p>
       </div>
-
-      <style jsx>{`
-        .auth-page {
-          min-height: 80vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 2rem;
-          background: var(--color-crema);
-        }
-        .auth-card {
-          max-width: 400px;
-          width: 100%;
-          border: 1px solid var(--color-border);
-          padding: 2.5rem;
-          background: white;
-        }
-        .auth-card h1 {
-          font-family: var(--font-serif);
-          font-size: 1.75rem;
-          font-weight: 300;
-          color: var(--color-black);
-          margin-bottom: 0.5rem;
-        }
-        .auth-sub {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          margin-bottom: 2rem;
-        }
-        .auth-group {
-          margin-bottom: 1.25rem;
-        }
-        .auth-group label {
-          display: block;
-          font-family: var(--font-sans);
-          font-size: 0.8rem;
-          font-weight: 500;
-          color: var(--color-dark);
-          margin-bottom: 0.4rem;
-        }
-        .auth-group input {
-          width: 100%;
-          padding: 0.7rem 1rem;
-          border: 1px solid var(--color-border);
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          color: var(--color-black);
-        }
-        .auth-group input:focus {
-          outline: none;
-          border-color: var(--color-terra);
-        }
-        .auth-btn {
-          width: 100%;
-          background: var(--color-black);
-          color: var(--color-crema);
-          padding: 0.85rem;
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          font-weight: 600;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          border: none;
-          cursor: pointer;
-          transition: opacity 0.2s;
-        }
-        .auth-btn:hover {
-          opacity: 0.85;
-        }
-        .auth-footer {
-          margin-top: 1.5rem;
-          text-align: center;
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-grey);
-        }
-        .auth-footer a {
-          color: var(--color-terra);
-          text-decoration: underline;
-        }
-      `}</style>
     </div>
   );
 }

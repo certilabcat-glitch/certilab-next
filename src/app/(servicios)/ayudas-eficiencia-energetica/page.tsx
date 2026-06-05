@@ -6,6 +6,7 @@ import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import { waDiagnostico } from "@/lib/wa";
 import { trackViewContent, trackContact } from "@/lib/meta-pixel";
+import styles from "./page.module.css";
 
 export default function AyudasEficienciaPage() {
   useEffect(() => {
@@ -66,48 +67,48 @@ export default function AyudasEficienciaPage() {
       />
 
       {/* S1: HERO */}
-      <header className="hero">
-        <div className="hero-eyebrow">Guía informativa · Actualizada a mayo 2026</div>
-        <h1 className="hero-title">
+      <header className={styles.hero}>
+        <div className={styles.heroEyebrow}>Guía informativa · Actualizada a mayo 2026</div>
+        <h1 className={styles.heroTitle}>
           Ayudas para la<br />
-          <span className="hero-title-light">Eficiencia Energética</span>
+          <span className={styles.heroTitleLight}>Eficiencia Energética</span>
         </h1>
-        <p className="hero-sub">
+        <p className={styles.heroSub}>
           Fondos Next Generation, CAE, deducciones IRPF y subvenciones autonómicas. Descubre
           qué ayudas aplican a tu vivienda y cómo solicitar tu plan de mejora profesional con
           Certilab.
         </p>
-        <div className="hero-credentials">
-          <span>Cateb 9457</span> <span className="dot">·</span>
-          <span>Información contrastada</span> <span className="dot">·</span>
+        <div className={styles.heroCredentials}>
+          <span>Cateb 9457</span> <span className={styles.dot}>·</span>
+          <span>Información contrastada</span> <span className={styles.dot}>·</span>
           <span>Sin intermediación</span>
         </div>
-        <div className="hero-ctas">
+        <div className={styles.heroCtas}>
           <a
             href={waDiagnostico()}
-            className="btn-primary"
+            className={styles.btnPrimary}
             onClick={() => trackContact({ content_name: "ayudas-whatsapp-cta" })}
           >
             Solicitar diagnóstico gratuito
           </a>
-          <Link href="/blog/detectar-certificado-energetico-falso/" className="btn-secondary">
+          <Link href="/blog/detectar-certificado-energetico-falso/" className={styles.btnSecondary}>
             Saber más
           </Link>
         </div>
       </header>
 
       {/* S2: PANORAMA */}
-      <section className="section" aria-labelledby="panorama-title">
-        <h2 id="panorama-title" className="section-title">
+      <section className={styles.section} aria-labelledby="panorama-title">
+        <h2 id="panorama-title" className={styles.sectionTitle}>
           ¿Qué ayudas están vigentes en 2026?
         </h2>
-        <p className="section-sub">
+        <p className={styles.sectionSub}>
           Cuatro líneas principales de financiación para mejorar la eficiencia energética
         </p>
 
-        <div className="features-grid">
-          <div className="feature">
-            <p className="feature-num">I</p>
+        <div className={styles.featuresGrid}>
+          <div className={styles.feature}>
+            <p className={styles.featureNum}>I</p>
             <h4>Fondos Next Generation EU</h4>
             <p>
               El Plan de Recuperación sigue financiando actuaciones de rehabilitación energética
@@ -115,8 +116,8 @@ export default function AyudasEficienciaPage() {
               para comunidades de propietarios y del 40% para viviendas unifamiliares.
             </p>
           </div>
-          <div className="feature">
-            <p className="feature-num">II</p>
+          <div className={styles.feature}>
+            <p className={styles.featureNum}>II</p>
             <h4>Sistema CAE</h4>
             <p>
               Certificados de Ahorro Energético: un sistema de incentivo económico donde el
@@ -124,8 +125,8 @@ export default function AyudasEficienciaPage() {
               compran. Para actuaciones de climatización, iluminación, envolvente y movilidad.
             </p>
           </div>
-          <div className="feature">
-            <p className="feature-num">III</p>
+          <div className={styles.feature}>
+            <p className={styles.featureNum}>III</p>
             <h4>Deducciones IRPF</h4>
             <p>
               Hasta el 60% de deducción en el IRPF por obras de mejora energética en vivienda
@@ -134,8 +135,8 @@ export default function AyudasEficienciaPage() {
               energía no renovable.
             </p>
           </div>
-          <div className="feature">
-            <p className="feature-num">IV</p>
+          <div className={styles.feature}>
+            <p className={styles.featureNum}>IV</p>
             <h4>Subvenciones autonómicas</h4>
             <p>
               Cada Comunidad Autónoma publica convocatorias propias de rehabilitación energética
@@ -147,13 +148,13 @@ export default function AyudasEficienciaPage() {
       </section>
 
       {/* S3: REQUISITOS */}
-      <section className="section section-cream" aria-labelledby="req-title">
-        <h2 id="req-title" className="section-title">
+      <section className={`${styles.section} ${styles.sectionCream}`} aria-labelledby="req-title">
+        <h2 id="req-title" className={styles.sectionTitle}>
           ¿Qué necesitas para solicitar ayudas?
         </h2>
-        <p className="section-sub">Documentación y condiciones habituales</p>
-        <div className="req-content">
-          <ul className="includes-list">
+        <p className={styles.sectionSub}>Documentación y condiciones habituales</p>
+        <div className={styles.reqContent}>
+          <ul className={styles.includesList}>
             <li>Certificado energético antes y después de la actuación (emitido por técnico competente)</li>
             <li>Proyecto o memoria técnica de la actuación</li>
             <li>Presupuesto detallado de las obras</li>
@@ -161,7 +162,7 @@ export default function AyudasEficienciaPage() {
             <li>Fotografías del antes y después</li>
             <li>Cumplir el porcentaje mínimo de mejora energética exigido por cada programa</li>
           </ul>
-          <p className="req-important">
+          <p className={styles.reqImportant}>
             <strong>Importante:</strong> Los certificados energéticos necesarios para solicitar
             ayudas deben ser emitidos por un técnico certificador con visita presencial
             obligatoria. <strong>Certilab no emite certificados energéticos oficiales.</strong>{' '}
@@ -177,45 +178,45 @@ export default function AyudasEficienciaPage() {
       </section>
 
       {/* S4: CÓMO TE AYUDAMOS */}
-      <section className="section" aria-labelledby="how-title">
-        <h2 id="how-title" className="section-title">
+      <section className={styles.section} aria-labelledby="how-title">
+        <h2 id="how-title" className={styles.sectionTitle}>
           Cómo te ayuda Certilab con las ayudas
         </h2>
-        <p className="section-sub">
+        <p className={styles.sectionSub}>
           No tramitamos solicitudes, pero te preparamos para llegar con todo
         </p>
-        <div className="features-grid">
-          <div className="feature">
-            <p className="feature-num">I</p>
+        <div className={styles.featuresGrid}>
+          <div className={styles.feature}>
+            <p className={styles.featureNum}>I</p>
             <h4>Informe Técnico Energético — 399€</h4>
             <p>
               Incluye un mapa de ayudas aplicables a tu caso concreto, con los requisitos de
               cada una y enlaces oficiales para la solicitud. Es el documento que necesitas para
               saber exactamente qué pedir y dónde.
             </p>
-            <Link href="/informe-tecnico-energetico/" className="feature-link">
+            <Link href="/informe-tecnico-energetico/" className={styles.featureLink}>
               Más información →
             </Link>
           </div>
-          <div className="feature">
-            <p className="feature-num">II</p>
+          <div className={styles.feature}>
+            <p className={styles.featureNum}>II</p>
             <h4>Calculadora de ahorro — 0€</h4>
             <p>
               Estima cuánto puedes ahorrar al año mejorando tu vivienda. Un primer paso gratuito
               para ver si te compensa solicitar ayudas.
             </p>
-            <Link href="/calculadoracat/" className="feature-link">
+            <Link href="/calculadoracat/" className={styles.featureLink}>
               Probar calculadora →
             </Link>
           </div>
-          <div className="feature">
-            <p className="feature-num">III</p>
+          <div className={styles.feature}>
+            <p className={styles.featureNum}>III</p>
             <h4>Diagnóstico Express — 0€</h4>
             <p>
               Cuéntanos tu caso y te orientamos sin compromiso sobre qué ayudas podrían aplicar
               a tu vivienda y qué servicio de Certilab te conviene más.
             </p>
-            <Link href="/formulario/" className="feature-link">
+            <Link href="/formulario/" className={styles.featureLink}>
               Solicitar →
             </Link>
           </div>
@@ -223,7 +224,7 @@ export default function AyudasEficienciaPage() {
       </section>
 
       {/* FAQ */}
-      <section className="faq-section" aria-labelledby="faq-title">
+      <section className={styles.faqSection} aria-labelledby="faq-title">
         <h2 id="faq-title">
           Preguntas frecuentes sobre ayudas a la eficiencia energética
         </h2>
@@ -294,256 +295,6 @@ export default function AyudasEficienciaPage() {
       />
 
       <TrustBlockSection />
-
-      <style jsx>{`
-        .hero {
-          text-align: center;
-          padding: 5rem 1.5rem 2rem;
-          background: var(--color-crema, #faf6f0);
-        }
-        .hero-eyebrow {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          text-transform: uppercase;
-          letter-spacing: 0.12em;
-          color: var(--color-terra, #b46a4a);
-          margin-bottom: 1.5rem;
-        }
-        .hero-title {
-          font-family: var(--font-serif);
-          font-size: clamp(2rem, 4vw, 2.75rem);
-          font-weight: 300;
-          color: var(--color-black);
-          max-width: 700px;
-          margin: 0 auto 1rem;
-          line-height: 1.2;
-        }
-        .hero-title-light {
-          font-family: var(--font-sans);
-          font-weight: 300;
-          font-size: clamp(1.8rem, 4vw, 3rem);
-        }
-        .hero-sub {
-          font-family: var(--font-sans);
-          font-size: 1.05rem;
-          color: var(--color-grey, #666);
-          max-width: 600px;
-          margin: 0 auto;
-          line-height: 1.7;
-        }
-        .hero-credentials {
-          display: flex;
-          justify-content: center;
-          gap: 0.5rem;
-          margin-top: 1.5rem;
-          font-size: 0.85rem;
-          color: var(--color-grey, #666);
-          font-family: var(--font-sans);
-          flex-wrap: wrap;
-        }
-        .dot {
-          color: var(--color-terra, #b46a4a);
-        }
-        .hero-ctas {
-          display: flex;
-          gap: 1rem;
-          justify-content: center;
-          margin-top: 2rem;
-          flex-wrap: wrap;
-        }
-        .btn-primary {
-          display: inline-flex;
-          align-items: center;
-          padding: 0.85rem 2rem;
-          border-radius: 2rem;
-          border: none;
-          background: var(--color-black);
-          color: var(--color-white);
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          font-weight: 600;
-          text-decoration: none;
-          transition: opacity 0.2s;
-          cursor: pointer;
-        }
-        .btn-primary:hover {
-          opacity: 0.85;
-        }
-        .btn-secondary {
-          display: inline-flex;
-          align-items: center;
-          padding: 0.85rem 2rem;
-          border-radius: 2rem;
-          border: 1px solid var(--color-border, #ddd);
-          background: transparent;
-          color: var(--color-black);
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          font-weight: 500;
-          text-decoration: none;
-          transition: border-color 0.2s;
-          cursor: pointer;
-        }
-        .btn-secondary:hover {
-          border-color: var(--color-black);
-        }
-        .section {
-          max-width: 900px;
-          margin: 0 auto;
-          padding: 4rem 1.5rem;
-        }
-        .section-cream {
-          background: var(--color-crema, #faf6f0);
-          max-width: 100%;
-          padding: 4rem 1.5rem;
-        }
-        .section-cream .section-title,
-        .section-cream .section-sub,
-        .section-cream .req-content {
-          max-width: 700px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .section-title {
-          font-family: var(--font-serif);
-          font-size: 1.75rem;
-          font-weight: 400;
-          color: var(--color-black);
-          text-align: center;
-          margin-bottom: 0.75rem;
-        }
-        .section-sub {
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          color: var(--color-grey, #666);
-          text-align: center;
-          margin-bottom: 2.5rem;
-        }
-        .features-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 2rem;
-        }
-        .feature {
-          padding: 1.5rem;
-        }
-        .feature-num {
-          font-family: var(--font-serif);
-          font-size: 1rem;
-          font-weight: 600;
-          color: var(--color-terra, #b46a4a);
-          margin-bottom: 0.5rem;
-        }
-        .feature h4 {
-          font-family: var(--font-serif);
-          font-size: 1.1rem;
-          font-weight: 400;
-          color: var(--color-black);
-          margin-bottom: 0.75rem;
-        }
-        .feature p {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-dark, #444);
-          line-height: 1.7;
-        }
-        .feature-link {
-          display: inline-block;
-          margin-top: 0.75rem;
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-terra, #b46a4a);
-          font-weight: 600;
-          text-decoration: none;
-        }
-        .req-content {
-          max-width: 700px;
-          margin: 0 auto;
-        }
-        .includes-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .includes-list li {
-          position: relative;
-          padding-left: 1.5rem;
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-dark, #444);
-          line-height: 1.7;
-          margin-bottom: 0.75rem;
-        }
-        .includes-list li::before {
-          content: "•";
-          position: absolute;
-          left: 0;
-          color: var(--color-terra, #b46a4a);
-          font-weight: bold;
-        }
-        .req-important {
-          margin-top: 1.5rem;
-          font-size: 0.9rem;
-          color: var(--color-grey, #666);
-          font-family: var(--font-sans);
-          line-height: 1.7;
-        }
-        .req-important a {
-          color: var(--color-terra, #b46a4a);
-          text-decoration: underline;
-        }
-        .faq-section {
-          max-width: 700px;
-          margin: 0 auto;
-          padding: 4rem 1.5rem;
-        }
-        .faq-section h2 {
-          font-family: var(--font-serif);
-          font-size: 1.5rem;
-          font-weight: 400;
-          color: var(--color-black);
-          text-align: center;
-          margin-bottom: 2rem;
-        }
-        .faq-section details {
-          border-bottom: 1px solid var(--color-border, #e5e5e5);
-          padding: 1rem 0;
-        }
-        .faq-section summary {
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          font-weight: 500;
-          color: var(--color-black);
-          cursor: pointer;
-          list-style: none;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        .faq-section summary::-webkit-details-marker {
-          display: none;
-        }
-        .faq-section summary::after {
-          content: "+";
-          font-size: 1.2rem;
-          color: var(--color-terra, #b46a4a);
-        }
-        .faq-section details[open] summary::after {
-          content: "−";
-        }
-        .faq-section p {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-dark, #444);
-          line-height: 1.7;
-          margin-top: 0.75rem;
-          padding-right: 1.5rem;
-        }
-        .faq-section a {
-          color: var(--color-terra, #b46a4a);
-          text-decoration: underline;
-        }
-      `}</style>
     </>
   );
 }

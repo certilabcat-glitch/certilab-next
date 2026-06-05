@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import styles from "./HeroSection.module.css";
 
 interface HeroSectionProps {
   eyebrow?: string;
@@ -30,28 +31,28 @@ export default function HeroSection({
   children,
 }: HeroSectionProps) {
   return (
-    <header className="hero" role="banner">
-      {eyebrow && <p className="hero-eyebrow">{eyebrow}</p>}
+    <header className={styles.hero} role="banner">
+      {eyebrow && <p className={styles["hero-eyebrow"]}>{eyebrow}</p>}
       <h1
         dangerouslySetInnerHTML={{ __html: title }}
       />
-      {subtitle && <p className="hero-sub">{subtitle}</p>}
+      {subtitle && <p className={styles["hero-sub"]}>{subtitle}</p>}
       {badges && badges.length > 0 && (
-        <div className="hero-badges">
+        <div className={styles["hero-badges"]}>
           {badges.map((badge) => (
             <span key={badge}>{badge}</span>
           ))}
         </div>
       )}
       {(priceOld || price) && (
-        <p className="hero-price">
-          {priceOld && <span className="hero-price-old">{priceOld}</span>}
-          {price && <span className="hero-price-current">{price}</span>}
+        <p className={styles["hero-price"]}>
+          {priceOld && <span className={styles["hero-price-old"]}>{priceOld}</span>}
+          {price && <span className={styles["hero-price-current"]}>{price}</span>}
         </p>
       )}
-      {credentials && <p className="hero-credentials">{credentials}</p>}
+      {credentials && <p className={styles["hero-credentials"]}>{credentials}</p>}
       {(ctaPrimary || ctaSecondary) && (
-        <div className="hero-ctas">
+        <div className={styles["hero-ctas"]}>
           {ctaPrimary && (
             <Link href={ctaPrimary.href} className="btn-primary">
               {ctaPrimary.label}
@@ -64,112 +65,8 @@ export default function HeroSection({
           )}
         </div>
       )}
-      {nota && <p className="hero-nota">{nota}</p>}
+      {nota && <p className={styles["hero-nota"]}>{nota}</p>}
       {children}
-
-      <style jsx>{`
-        .hero {
-          min-height: 80vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding: 6rem 1.5rem;
-          background: var(--color-crema);
-        }
-        .hero-eyebrow {
-          font-family: var(--font-sans);
-          font-size: 0.8rem;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
-          color: var(--color-grey);
-          margin-bottom: 1.5rem;
-          font-weight: 400;
-        }
-        .hero h1 {
-          font-family: var(--font-serif);
-          font-size: clamp(2.5rem, 6vw, 5rem);
-          font-weight: 300;
-          line-height: 1.1;
-          color: var(--color-black);
-          max-width: 800px;
-          margin: 0 auto 1.5rem;
-        }
-        .hero-sub {
-          font-family: var(--font-sans);
-          font-size: 1.15rem;
-          font-weight: 400;
-          color: var(--color-dark);
-          line-height: 1.7;
-          max-width: 560px;
-          margin: 0 auto 2.5rem;
-        }
-        .hero-badges {
-          display: flex;
-          gap: 1.5rem;
-          flex-wrap: wrap;
-          justify-content: center;
-          margin-bottom: 2rem;
-        }
-        .hero-badges span {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--color-grey);
-          padding: 0.4rem 1rem;
-          border: 1px solid var(--color-border);
-        }
-        .hero-price {
-          font-family: var(--font-sans);
-          font-size: clamp(1.8rem, 4vw, 2.5rem);
-          color: var(--color-terra);
-          margin: 1rem 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.75rem;
-        }
-        .hero-price-old {
-          font-size: clamp(1.2rem, 3vw, 1.6rem);
-          color: var(--color-grey);
-          text-decoration: line-through;
-          opacity: 0.6;
-        }
-        .hero-price-current {
-          font-family: var(--font-serif);
-          font-size: clamp(2rem, 4vw, 2.5rem);
-          color: var(--color-terra);
-        }
-        .hero-credentials {
-          font-family: var(--font-sans);
-          font-size: 0.8rem;
-          color: var(--color-grey);
-          margin: 1rem 0;
-          line-height: 1.6;
-        }
-        .hero-ctas {
-          display: flex;
-          gap: 2rem;
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        .hero-nota {
-          font-family: var(--font-sans);
-          font-size: 0.8rem;
-          color: var(--color-grey);
-          margin-top: 2rem;
-          max-width: 500px;
-        }
-        @media (max-width: 767px) {
-          .hero {
-            min-height: 70vh;
-            padding: 4rem 1.5rem;
-          }
-        }
-      `}</style>
     </header>
   );
 }

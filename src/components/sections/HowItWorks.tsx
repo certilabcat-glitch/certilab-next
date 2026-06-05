@@ -1,4 +1,5 @@
 "use client";
+import styles from "./HowItWorks.module.css";
 
 export default function HowItWorks() {
   const steps = [
@@ -28,64 +29,14 @@ export default function HowItWorks() {
       <p className="section-sub">
         Todo 100% remoto. Sin visitas, sin esperas, sin burocracia innecesaria.
       </p>
-      <div className="pasos-grid">
+      <div className={styles.pasosGrid}>
         {steps.map((step, i) => (
-          <div key={i} className="paso">
+          <div key={i} className={styles.paso}>
             <h3>{step.title}</h3>
             <p>{step.text}</p>
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .pasos-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 2rem;
-          counter-reset: paso;
-        }
-        .paso {
-          text-align: center;
-          counter-increment: paso;
-        }
-        .paso::before {
-          content: counter(paso);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 2.5rem;
-          height: 2.5rem;
-          font-family: var(--font-serif);
-          font-size: 1rem;
-          color: var(--color-grey);
-          margin: 0 auto 1rem;
-          border: 1px solid var(--color-border);
-        }
-        .paso h3 {
-          font-family: var(--font-serif);
-          font-size: 1.1rem;
-          font-weight: 400;
-          color: var(--color-black);
-          margin-bottom: 0.4rem;
-        }
-        .paso p {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          line-height: 1.6;
-          margin: 0;
-        }
-        @media (max-width: 767px) {
-          .pasos-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-        @media (min-width: 768px) {
-          .pasos-grid {
-            grid-template-columns: repeat(4, 1fr);
-          }
-        }
-      `}</style>
     </section>
   );
 }

@@ -1,165 +1,536 @@
 # Certilab - Consultoría Energética Forense
 > Arquitectura Técnica Forense · Consultoría Energética · Cateb 9457
 > https://www.certilab.cat
+> Next.js (App Router) · TypeScript · CSS Modules + globals.css
 
 ---
 
-## Brown Discount: qué es y cómo afecta al precio de tu vivienda
-**URL:** https://www.certilab.cat/blog/brown-discount-precio-vivienda/
-**Fecha:** 2026-01-15
-**Autor:** Eva María González Gracia
-**Tags:** brown discount, calificación energética, compraventa
+## 📊 RESUMEN EJECUTIVO
 
-### ¿Qué es el Brown Discount?
-El **Brown Discount** es el descuento que aplican los compradores informados (y los tasadores profesionales) sobre el precio de una vivienda con mala calificación energética (E, F o G).
+### Project Stats
+- **Total page.tsx:** 27
+- **Total layout.tsx:** 6
+- **Total components:** ~40 (sections, layout, forms, ui)
+- **CSS Modules migrados:** 5 (Footer, ComparativaSection, ServicesGrid, SegundaOpinion, SegundaOpinionExpress)
+- **CSS pendientes de migrar (style jsx):** 6 componentes + 3-4 páginas de servicio
+- **SEO Audit:** 86% completado, 4 issues pendientes
 
-### ¿Cuánto puedes perder?
-Los estudios del sector inmobiliario europeo estiman que una vivienda con calificación E, F o G puede perder entre un **5% y un 15%** de su valor de mercado respecto a una vivienda equivalente con calificación A o B.
-
-**Ejemplo real:** Una vivienda valorada en 270.000€ con calificación G podría perder hasta **40.000€** de su valor.
-
-### ¿Por qué ocurre?
-1. **Costes energéticos mayores:** Una vivienda ineficiente gasta más en calefacción y electricidad.
-2. **Exigencia normativa:** La UE exige que todos los inmuebles tengan calificación energética para su venta o alquiler.
-3. **Acceso a hipotecas verdes:** Cada vez más bancos ofrecen mejores condiciones para viviendas eficientes.
-
-### ¿Cómo detectarlo?
-En Certilab incluimos la detección del Brown Discount en todos nuestros **Check-Up Inmobiliario** e **Informes Técnicos Energéticos**. Si estás comprando una vivienda, asegúrate de que el certificado energético refleja la realidad del inmueble. Una segunda opinión profesional puede ahorrarte miles de euros.
+### Stack técnico actual
+- Next.js 14+ (App Router), TypeScript estricto
+- CSS: Modules + `<style jsx>` legacy + `globals.css` con variables CSS
+- Analytics: Meta Pixel (trackViewContent, trackContact)
+- Leads: WhatsApp API (waDiagnostico), formulario propio
+- Schema.org: JSON-LD inyectado con dangerouslySetInnerHTML
+- Despliegue: Vercel (certilab-next repo)
 
 ---
 
-## Precio del Certificado Energético 2026: claves para entender las diferencias
-**URL:** https://www.certilab.cat/blog/cuanto-cuesta-certificado-energetico-2026/
-**Fecha:** 2026-02-20
-**Autor:** Eva María González Gracia
-**Tags:** certificado energético, precios, normativa
+## 🔴 ISSUES CRÍTICOS PENDIENTES (pérdida directa de tráfico/posicionamiento)
 
-### ¿Cuánto cuesta un certificado energético en 2026?
-Los precios de un certificado energético oficial en España varían según:
-- **Ubicación:** Entre 80€ y 200€ dependiendo de la comunidad autónoma
-- **Superficie del inmueble:** A mayor superficie, mayor precio
-- **Complejidad:** Viviendas unifamiliares o edificios completos tienen tarifas superiores
+### CRIT-A: Páginas con `"use client"` que NO exportan metadata
+| Archivo | Problema | Acción requerida |
+|---------|----------|------------------|
+| `src/app/(servicios)/ayudas-eficiencia-energetica/page.tsx` | `"use client"` + sin `export metadata` → título genérico, sin description, sin canonical, sin Open Graph | Refactorizar a Server Component + añadir metadata (o split page/server layout) |
+| `src/app/landing/guia-detecta-falso-ce/page.tsx` | `"use client"` + sin `export metadata` | Refactorizar a Server Component + añadir metadata |
+| `src/app/landing/guia-errores-ce/layout.tsx` | Layout con metadata OK, pero la page es Client Component → ¿metadata se aplica? Verificar en producción | Verificar que el layout metadata se herede correctamente |
+| `src/app/blog/[slug]/page.tsx` | Client Component con `"use client"` + `export const metadata` (INCOMPATIBLE — Next.js descarta metadata en Client Components) | Refactorizar a Server Component o split con layout |
 
-### ¿Por qué hay certificados de 30€?
-Existen plataformas online que ofrecen certificados energéticos por menos de 50€. El problema es que **no incluyen visita presencial**, lo que incumple el artículo 6.5 del RD 390/2021.
+### CRIT-B: Schema.org en Client Components no se procesa
+| Archivo | Problema | Acción requerida |
+|---------|----------|------------------|
+| `src/app/(servicios)/ayudas-eficiencia-energetica/page.tsx` | JSON-LD inyectado via dangerouslySetInnerHTML dentro de Client Component → Google no lo procesa | Mover schema a Server Component o layout |
+| `src/app/landing/guia-detecta-falso-ce/page.tsx` | Same issue — Client Component con schema | Refactorizar |
+| `src/app/blog/[slug]/page.tsx` | Same issue — Client Component con schema | Refactorizar |
+| `src/app/formulario/page.tsx` | Verificar si tiene schema | Revisar |
 
-### Riesgos de un certificado barato
-1. **Nulo jurídicamente:** Al no cumplir la normativa, el certificado puede ser declarado nulo
-2. **Responsabilidad:** El técnico firmante puede ser sancionado
-3. **Para el comprador:** Una calificación incorrecta puede ocultar el Brown Discount
+### CRIT-C: Meta Pixel inline en páginas bloquea Server Components
+Varias páginas usan `useEffect` con `trackViewContent`/`trackContact` de Meta Pixel, lo que fuerza el uso de `"use client"`. La solución correcta es:
+1. Mover Meta Pixel a un componente wrapper (ej. `<MetaPixelTracker />`) que se importe en Server Components
+2. Separar metadata (Server) de tracking (Client)
 
-### ¿Qué hacer?
-Si tienes un certificado dudoso, solicita una **Segunda Opinión** en Certilab. Por 39€ te decimos si es fiable.
-
----
-
-## ¿Certificado Energético Gratis? Guía 2026
-**URL:** https://www.certilab.cat/blog/obtener-certificado-energetico-gratis/
-**Fecha:** 2026-03-10
-**Autor:** Eva María González Gracia
-**Tags:** certificado energético, gratis, guía
-
-### ¿Existe el certificado energético gratis?
-**No exactamente.** El certificado energético oficial requiere la intervención de un técnico colegiado con visita presencial, y ese trabajo tiene un coste.
-
-### ¿Qué puedes obtener gratis?
-En Certilab ofrecemos un **Diagnóstico Express gratuito** que incluye:
-- Análisis orientativo de tu situación energética
-- Recomendación del servicio más adecuado para tu caso
-- Primer contacto sin compromiso con Eva
-
-### Alternativas gratuitas
-- **Registro de Certificadores:** Puedes buscar técnicos habilitados en el registro autonómico
-- **Orientación:** Te ayudamos a entender qué necesitas sin coste
-
-### ¿Cuánto deberías pagar?
-Un certificado energético oficial con visita presencial cuesta entre **80€ y 200€**. Cualquier precio inferior a 60€ debería hacerte sospechar.
+Afecta a:
+- `ayudas-eficiencia-energetica/page.tsx`
+- `landing/guia-detecta-falso-ce/page.tsx`
+- `blog/[slug]/page.tsx`
 
 ---
 
-## Errores comunes en el certificado energético (y cómo detectarlos)
-**URL:** https://www.certilab.cat/blog/errores-certificado-energetico/
-**Fecha:** 2026-04-05
-**Autor:** Eva María González Gracia
-**Tags:** certificado energético, errores, guía
+## 🟡 ISSUES IMPORTANTES PENDIENTES
 
-### Los 5 errores más comunes en los certificados energéticos
+### IMP-1: Ruta `/diagnostico-express-energetico` no existe
+- Mencionada en sitemap pero sin implementación
+- Impacto: 404 si se referencia desde externo
+- Acción: Crear la página o redirección 301
 
-**1. Datos del catastro sin verificar**
-Muchos certificados se elaboran con los datos genéricos del catastro, sin comprobar si el inmueble tiene reformas, aislamiento adicional o cambios en las instalaciones.
+### IMP-2: Redirecciones 301 insuficientes en next.config.ts
+- Solo 4 redirecciones configuradas
+- URLs legacy del sitio antiguo no cubiertas → pérdida de link juice
+- Acción: Mapear todas las URLs del dominio anterior
 
-**2. Calificación inflada**
-Es el error más grave: asignar una calificación superior a la real para contentar al vendedor. Una A que debería ser una C, o una C que es una E.
+### IMP-3: Sitemap URLs sin verificar
+- 6 rutas en sitemap podrían no retornar 200: `/ayudas-eficiencia-energetica`, `/profesionales`, `/calculadoracat`, `/configurar-auditoria`, `/cercador-certificats-energetics`, `/landing/guia-errores-ce`
+- Acción: Crawlear y verificar cada una
 
-**3. Omisión de la fecha de visita**
-El certificado debe incluir la fecha de la visita presencial. Si no aparece, probablemente no se realizó.
+### IMP-4: Blog pages sin metadata dinámica real
+- `blog/[slug]/page.tsx` no puede exportar metadata dinámica (es Client Component)
+- Los artículos del blog no tienen title/description personalizados por artículo
+- Acción: Refactorizar como Server Component con `generateMetadata` + cargar datos del artículo
 
-**4. Antigüedad del certificado**
-Los certificados tienen una validez de 10 años, pero si el inmueble ha tenido reformas, debería actualizarse.
-
-**5. Técnico no habilitado**
-El certificado debe estar firmado por un técnico competente (arquitecto, arquitecto técnico o ingeniero) colegiado.
-
-### ¿Cómo detectarlos?
-Solicita una **Segunda Opinión** en Certilab. Por 39€ revisamos tu certificado y te decimos si es fiable.
-
----
-
-## Ayudas Next Generation para Rehabilitación Energética 2026
-**URL:** https://www.certilab.cat/blog/ayudas-next-generation-rehabilitacion-energetica-2026/
-**Fecha:** 2026-05-01
-**Autor:** Eva María González Gracia
-**Tags:** ayudas, next generation, rehabilitación, subvenciones
-
-### Ayudas Next Generation 2026 para rehabilitación energética
-Los fondos Next Generation EU incluyen partidas específicas para la rehabilitación energética de edificios en España.
-
-### ¿Qué ayudas están disponibles?
-1. **Programa de Rehabilitación Energética de Edificios (PREE)**
-2. **Programa de Ayudas para la Rehabilitación de Viviendas**
-3. **Deducción IRPF por obras de mejora energética**
-
-### Requisitos generales
-- La vivienda debe ser anterior a 2007 (en la mayoría de casos)
-- Las obras deben suponer una mejora de al menos un 30% en eficiencia
-- Es necesario contar con un informe técnico previo
-
-### ¿Cómo te ayudamos en Certilab?
-Nuestro **Informe Técnico Energético** incluye orientación personalizada sobre las ayudas aplicables a tu caso. No gestionamos las solicitudes, pero te explicamos qué necesitas y dónde pedirlas.
+### IMP-5: Landing pages sin canonical propio
+- `landing/guia-detecta-falso-ce/page.tsx` y `landing/guia-errores-ce/page.tsx` no tienen canonical explícito
+- Podrían heredar canonical incorrecto del layout raíz
+- Acción: Añadir `alternates.canonical` en metadata
 
 ---
 
-## ¿Tu certificado energético es falso? Guía para detectarlo
-**URL:** https://www.certilab.cat/blog/detectar-certificado-energetico-falso/
-**Fecha:** 2026-05-30
-**Autor:** Eva María González García
-**Tags:** certificado energético, falso, guía, reclamar
+## 🟢 CSS MODULES MIGRATION PENDIENTE
 
-### Señales de alerta: cómo detectar un certificado energético no fiable
+### Componentes con `<style jsx>` que deben migrarse a CSS Module
 
-**1. No incluye fecha de visita presencial**
-El Real Decreto 390/2021 exige que el técnico visite el inmueble. Si tu certificado no menciona una visita in situ, probablemente se hizo sin pisar la vivienda.
+| Componente | Archivo | Líneas style jsx | Prioridad |
+|------------|---------|------------------|-----------|
+| ProblemSection | `src/components/sections/ProblemSection.tsx` | ~30 líneas (línea 57+) | Alta |
+| ContrastSection | `src/components/sections/ContrastSection.tsx` | ~30 líneas (línea 38+) | Alta |
+| FeaturesGrid | `src/components/sections/FeaturesGrid.tsx` | ~50 líneas (línea 27+) | Alta |
+| ComingSoonSection | `src/components/ui/ComingSoonSection.tsx` | ~50 líneas (línea 105+) | Alta |
+| LandingLeadForm | `src/components/forms/LandingLeadForm.tsx` | ~55 líneas (línea 124+) | Media |
+| ContactForm | `src/components/forms/ContactForm.tsx` | ~113 líneas (líneas 66, 179) | Media |
 
-**2. Precio inferior a 60€**
-Un certificado energético real con visita presencial cuesta entre 80 y 200 €. Si pagaste menos de 60 €, es muy probable que no haya habido visita.
+### Páginas de servicio con `<style jsx>` pendientes
 
-**3. Técnico no colegiado o no verificable**
-El técnico debe estar colegiado. Busca su número en el registro del Colegio de Arquitectos Técnicos de tu provincia.
+| Página | Archivo | Líneas style jsx | Prioridad |
+|--------|---------|------------------|-----------|
+| Ayudas Eficiencia | `src/app/(servicios)/ayudas-eficiencia-energetica/page.tsx` | ~250 líneas (línea 298-546) | Alta |
+| Landing guia-detecta | `src/app/landing/guia-detecta-falso-ce/page.tsx` | ~130 líneas | Alta |
+| InformeTecnicoContent | `src/app/(servicios)/informe-tecnico-energetico/InformeTecnicoContent.tsx` | ~490 líneas (línea 314-806) | Baja (wrapper no-page) |
 
-**4. Datos genéricos sin verificar**
-Si el certificado usa solo datos del catastro sin mencionar reformas, aislamiento real o instalaciones específicas, es señal de que no hubo visita.
+### CSS Modules YA migrados (no tocar)
+- `Footer.module.css`
+- `ComparativaSection.module.css`
+- `ServicesGrid.module.css`
+- `SegundaOpinion.module.css`
+- `SegundaOpinionExpress.module.css`
 
-**5. Calificación sospechosamente alta**
-Una vivienda antigua sin reformas difícilmente obtiene una A o B. Si la calificación parece inflada, puede estar ocultando el Brown Discount.
+---
 
-### ¿Qué hacer si tu certificado no es fiable?
-1. **Solicita una Segunda Opinión** - Por 39€ analizamos tu certificado y te decimos si es fiable.
-2. **Reclama ante el colegio profesional** del técnico firmante.
-3. **Denuncia ante la administración** autonómica competente.
+## 📄 INVENTARIO COMPLETO DE PÁGINAS (27 page.tsx)
 
-### Nuestros servicios para tu tranquilidad
-Nuestro análisis forense te permite saber, antes de tomar cualquier decisión, si tu certificado energético es fiable, si la calificación es real y si el valor de tu inmueble está protegido:
-- Segunda Opinión (39€) - Revisamos tu certificado actual
-- Segunda Opinión Express (79€) - Entrega en menos de 2h
-- Check-Up Inmobiliario (199€) - Análisis completo antes de comprar
-- Informe Técnico (399€) - Análisis profundo con propuestas de mejora
+### Core pages (metadata OK ✅)
+| Ruta | Archivo | Tipo | Metadata | Schema | Style jsx |
+|------|---------|------|----------|--------|-----------|
+| `/` | `src/app/page.tsx` | Server | ✅ | ❌ No | ❌ |
+| `/sobre-nosotros` | `src/app/sobre-nosotros/page.tsx` | Server | ✅ | ❌ No | ❌ |
+| `/not-found` | `src/app/not-found.tsx` | Server | ✅ | N/A | ❌ |
+| `/formulario` | `src/app/formulario/page.tsx` | Client | ✅ (server layout?) | ? | ? |
+| `/gracias` | `src/app/gracias/page.tsx`| Server | ✅ | ❌ | ✅ Migrado a globals.css |
+| `/resultado-auditoria` | `src/app/resultado-auditoria/page.tsx` | Server | ✅ | ❌ | ✅ Migrado a globals.css |
+
+### Service pages (route group `(servicios)`)
+| Ruta | Archivo | Tipo | Metadata | Schema | Style jsx |
+|------|---------|------|----------|--------|-----------|
+| `/segunda-opinion` | `src/app/(servicios)/segunda-opinion/page.tsx` | Server | ✅ | ✅ Service | ❌ (CSS Module) |
+| `/segunda-opinion-express` | `src/app/(servicios)/segunda-opinion-express/page.tsx` | Server | ✅ | ✅ Service | ❌ (CSS Module) |
+| `/check-up-inmobiliario` | `src/app/(servicios)/check-up-inmobiliario/page.tsx` | Server | ✅ | ? | ❌ |
+| `/informe-tecnico-energetico` | `src/app/(servicios)/informe-tecnico-energetico/page.tsx` | Server | ✅ | ? (en client wrapper) | ❌ (data page sí) |
+| `/profesionales` | `src/app/(servicios)/profesionales/page.tsx` | Server | ✅ | ? | ? |
+| `/ayudas-eficiencia-energetica` | `src/app/(servicios)/ayudas-eficiencia-energetica/page.tsx` | **Client** | **❌** | **❌ CRITICAL** | **✅ 250 líneas** |
+| `/calculadoracat` | `src/app/(servicios)/calculadoracat/page.tsx` | Server | ✅ | ? | ? |
+| `/configurar-auditoria` | `src/app/(servicios)/configurar-auditoria/page.tsx` | Server | ✅ | ? | ? |
+
+### Legal pages (route group `(legal)`)
+| Ruta | Archivo | Tipo | Metadata | Style jsx |
+|------|---------|------|----------|-----------|
+| `/aviso-legal` | `src/app/(legal)/aviso-legal/page.tsx` | Server | ✅ | ❌ |
+| `/cookies` | `src/app/(legal)/cookies/page.tsx` | Server | ✅ | ❌ |
+| `/privacidad` | `src/app/(legal)/privacidad/page.tsx` | Server | ✅ | ❌ |
+
+### SAAS pages (route group `(saas)`)
+| Ruta | Archivo | Tipo | Metadata | Style jsx |
+|------|---------|------|----------|-----------|
+| `/saas` | `src/app/(saas)/saas/page.tsx` | Server | via layout | ❌ |
+| `/saas/demo` | `src/app/(saas)/saas/demo/page.tsx` | Server | via layout | ❌ |
+| `/saas/login` | `src/app/(saas)/saas/login/page.tsx` | Server | via layout | ❌ |
+| `/saas/precios` | `src/app/(saas)/saas/precios/page.tsx` | Server | via layout | ❌ |
+| `/saas/register` | `src/app/(saas)/saas/register/page.tsx` | Server | via layout | ❌ |
+
+### Blog pages
+| Ruta | Archivo | Tipo | Metadata | Style jsx |
+|------|---------|------|----------|-----------|
+| `/blog` | `src/app/blog/page.tsx` | Server | ✅ | ❌ |
+| `/blog/[slug]` | `src/app/blog/[slug]/page.tsx` | **Client** | **❌ CRITICAL** | **✅ (post.css)** |
+
+### Search tools
+| Ruta | Archivo | Tipo | Metadata | Style jsx |
+|------|---------|------|----------|-----------|
+| `/buscador-certificado-energetico-catalunya` | `src/app/buscador-certificado-energetico-catalunya/page.tsx` | Server | ✅ via layout | ❌ |
+| `/cercador-certificats-energetics` | `src/app/cercador-certificats-energetics/page.tsx` | Server | ✅ via layout | ❌ |
+
+### Landing pages
+| Ruta | Archivo | Tipo | Metadata | Style jsx |
+|------|---------|------|----------|-----------|
+| `/landing/guia-detecta-falso-ce` | `src/app/landing/guia-detecta-falso-ce/page.tsx` | **Client** | **❌** | **✅ 130 líneas** |
+| `/landing/guia-errores-ce` | `src/app/landing/guia-errores-ce/page.tsx` | Client? | via layout (OK?) | ? |
+
+---
+
+## 🔧 COMPONENTES (inventario)
+
+### Layout (shared)
+| Componente | Archivo | "use client" | style jsx | CSS Module |
+|------------|---------|--------------|-----------|------------|
+| Header | `src/components/layout/Header.tsx` | ❌ | ❌ | ❌ (globals.css) |
+| Footer | `src/components/layout/Footer.tsx` | ❌ | ❌ | ✅ Footer.module.css |
+
+### Sections (homepage)
+| Componente | Archivo | "use client" | style jsx | CSS Module |
+|------------|---------|--------------|-----------|------------|
+| HeroSection | `src/components/sections/HeroSection.tsx` | ❌ | ❌ | ❌ (globals.css) |
+| ProblemSection | `src/components/sections/ProblemSection.tsx` | ✅ | ✅ PENDIENTE | ❌ |
+| ServicesGrid | `src/components/sections/ServicesGrid.tsx` | ❌ | ❌ | ✅ ServicesGrid.module.css |
+| HowItWorks | `src/components/sections/HowItWorks.tsx` | ❌ | ❌ | ❌ (globals.css) |
+| ContrastSection | `src/components/sections/ContrastSection.tsx` | ✅ | ✅ PENDIENTE | ❌ |
+| FeaturesGrid | `src/components/sections/FeaturesGrid.tsx` | ✅ | ✅ PENDIENTE | ❌ |
+| ComparativaSection | `src/components/sections/ComparativaSection.tsx` | ❌ | ❌ | ✅ ComparativaSection.module.css |
+| TestimonialsSection | `src/components/sections/TestimonialsSection.tsx` | ❌ | ❌ | ❌ (globals.css) |
+| FAQSection | `src/components/sections/FAQSection.tsx` | ❌ | ❌ | ❌ (globals.css) |
+| CTASection | `src/components/sections/CTASection.tsx` | ❌ | ❌ | ❌ (globals.css) |
+| TrustBlockSection | `src/components/sections/TrustBlockSection.tsx` | ❌ | ❌ | ❌ (globals.css) |
+| PrivacySection | `src/components/sections/PrivacySection.tsx` | ❌ | ❌ | ❌ (globals.css) |
+
+### Forms
+| Componente | Archivo | "use client" | style jsx | CSS Module |
+|------------|---------|--------------|-----------|------------|
+| ContactForm | `src/components/forms/ContactForm.tsx` | ✅ | ✅ PENDIENTE (113 líneas) | ❌ |
+| LandingLeadForm | `src/components/forms/LandingLeadForm.tsx` | ✅ | ✅ PENDIENTE (55 líneas) | ❌ |
+
+### UI
+| Componente | Archivo | "use client" | style jsx | CSS Module |
+|------------|---------|--------------|-----------|------------|
+| ComingSoonSection | `src/components/ui/ComingSoonSection.tsx` | ✅ | ✅ PENDIENTE (50 líneas) | ❌ |
+
+---
+
+## 🧩 LAYOUT HIERARCHY
+
+```
+src/app/layout.tsx (RootLayout — Server, metadata: title template "%s | Certilab")
+├── src/app/(servicios)/layout.tsx (ServiceGroupLayout — Server, metadata override)
+├── src/app/(legal)/layout.tsx (legal layout — Server)
+├── src/app/(saas)/layout.tsx (SaaS layout — metadata override)
+├── src/app/buscador-certificado-energetico-catalunya/layout.tsx (Server, canonical metadata)
+├── src/app/cercador-certificats-energetics/layout.tsx (Server, canonical metadata)
+├── src/app/landing/guia-errores-ce/layout.tsx (Server, metadata)
+└── src/app/blog/[slug]/layout.tsx (if exists — need to check)
+```
+
+### Root Layout metadata:
+```ts
+title: { default: "Certilab | Arquitectura Técnica Forense · Consultoría Energética", template: "%s | Certilab" }
+description: "Certilab — Arquitectura Técnica Forense especializada en consultoría energética e inmobiliaria. Segunda opinión de certificados energéticos, informes técnicos y check-up inmobiliario."
+canonical: https://www.certilab.cat
+```
+
+### Known metadata overrides per subgroup:
+- `(servicios)`: title template "%s | Certilab"
+- `(saas)`: title "SaaS — Certilab"
+- `buscador-* / cercador-*`: custom metadata with canonical
+- `landing/guia-errores-ce`: layout metadata (server)
+
+---
+
+## 🏗️ ESTRUCTURA DE CSS
+
+### Variables CSS (src/app/globals.css):
+```css
+--font-serif: var(--font-playfair);
+--font-sans: var(--font-inter);
+--color-crema: #faf6f0;
+--color-terra: #b46a4a;
+--color-black: #1a1a1a;
+--color-grey: #666;
+--color-dark: #444;
+--color-white: #fff;
+--color-border: #e5e5e5;
+```
+
+### Patrón de CSS Module existente:
+```css
+.section { padding: 5rem 1.5rem; }
+.section-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 400; text-align: center; }
+.section-sub { font-family: var(--font-sans); font-size: 0.95rem; color: var(--color-grey); text-align: center; }
+```
+
+---
+
+## 🔧 META PIXEL SETUP
+
+### Funciones disponibles en `src/lib/meta-pixel`:
+- `trackViewContent({ content_name, content_category, content_type })`
+- `trackContact({ content_name })`
+- `trackLead()`
+- `trackInitiateCheckout()`
+- `trackAddToCart()`
+- `trackPurchase({ value, currency })`
+
+### Páginas que trackean:
+- `page.tsx` home → viewContent (homepage)
+- `ayudas-eficiencia-energetica/page.tsx` → viewContent (article) + contact (CTA clicks)
+- `landing/guia-detecta-falso-ce/page.tsx` → viewContent + contact
+- `blog/[slug]/page.tsx` → viewContent
+- `formulario/page.tsx` → viewContent + initiateCheckout + Lead
+- `gracias/page.tsx` → purchase
+- `check-up-inmobiliario/page.tsx` → viewContent + contact
+- `segunda-opinion-express/page.tsx` → viewContent + contact
+- `segunda-opinion/page.tsx` → viewContent + contact
+
+---
+
+## 📋 BLOG ARTICLES (src/data/articles.ts)
+22 artículos indexados. URLs: `/blog/[slug]/` con trailing slash.
+Temas principales: brown discount, certificado energético, ayudas, timos/estafas, check-up inmobiliario, normativa.
+
+---
+
+## 🔍 SEO AUDIT HISTORY
+
+### CRITICAL: ✅ RESUELTOS
+1. ~~4 pages con "use client" + metadata ignorada~~ → Refactorizadas a Server Component ✅
+2. ~~Schema.org en Client Components no procesado~~ → SegundaOpinionExpress corregido ✅
+3. ~~Home page sin H1~~ → Añadido ✅
+4. ~~Canonical incorrecta en Express e ITE~~ → Corregido ✅
+5. ~~review anidado dentro de aggregateRating en schema~~ → Eliminado ✅
+
+### IMPORTANT: ✅ RESUELTOS
+1. ~~Página 404 sin metadata~~ → Añadido ✅
+2. ~~Duplicación de marca en title tags~~ → Corregido ✅
+3. ~~Script check-seo desactualizado~~ → Actualizado ✅
+
+### LEVE: ✅ RESUELTOS
+1. ~~Footer con "use client" solo por styled-jsx~~ → Server Component ✅
+
+### PENDIENTES (sin resolver):
+1. ❌ Ruta `/diagnostico-express-energetico` no existe
+2. ❌ Redirecciones 301 insuficientes en next.config.ts
+3. ❌ Sitemap URLs sin verificar (6 rutas)
+4. ❌ Lighthouse audit post-correcciones
+
+### NUEVOS ISSUES DETECTADOS EN ESTE ANÁLISIS:
+5. ❌ CRITICAL: `ayudas-eficiencia-energetica/page.tsx` + `landing/*/page.tsx` + `blog/[slug]/page.tsx` son Client Components sin metadata export
+6. ❌ CRITICAL: Schema.org en estas mismas páginas no se procesa (Client Component)
+7. ❌ CRITICAL: Blog no tiene metadata dinámica por artículo
+8. ❌ IMPORTANT: 6 componentes con style jsx pendientes de migrar a CSS Module
+9. ❌ IMPORTANT: 3-4 páginas con style jsx inline pendientes de migrar
+10. ❌ LEVE: Landing pages sin canonical explícito
+
+---
+
+## 📝 NOTAS TÉCNICAS ADICIONALES
+
+### WhatsApp integration
+- `src/lib/wa.ts` → `waDiagnostico()` genera link: `https://wa.me/34692026067?text=...`
+- Usado en: Hero CTA, CTASection, páginas de servicio
+
+### Analytics
+- Meta Pixel ID: configurado en root layout via Next.js Script
+- Tracking events dispersos en componentes individuales (useEffect)
+- No hay Google Analytics / GA4 configurado visiblemente
+
+### Schema.org patterns
+- Service + HowTo + BreadcrumbList (segunda-opinion pages)
+- Article (blog pages, contenido educativo)
+- ProfessionalService + Person (about pages)
+
+### Build info
+- `next build` → 38 rutas estáticas generadas correctamente (último build exitoso)
+- Sin errores de compilación
+
+---
+
+## 🎯 PRIORIDADES DE ACCIÓN RECOMENDADAS
+
+### Fase 1 — CRÍTICO SEO
+1. Refactorizar `ayudas-eficiencia-energetica/page.tsx` → Server Component + metadata + schema estático + CSS Module
+2. Refactorizar `landing/guia-detecta-falso-ce/page.tsx` → Server Component + metadata + CSS Module
+3. Refactorizar `blog/[slug]/page.tsx` → Server Component + generateMetadata dinámico
+4. Verificar `landing/guia-errores-ce/page.tsx` — mismo patrón
+
+### Fase 2 — CSS Modules
+5. Migrar `ProblemSection.tsx` style jsx → ProblemSection.module.css
+6. Migrar `ContrastSection.tsx` style jsx → ContrastSection.module.css
+7. Migrar `FeaturesGrid.tsx` style jsx → FeaturesGrid.module.css
+8. Migrar `ComingSoonSection.tsx` style jsx → ComingSoonSection.module.css
+9. Migrar `ContactForm.tsx` style jsx → ContactForm.module.css
+10. Migrar `LandingLeadForm.tsx` style jsx → LandingLeadForm.module.css
+
+### Fase 3 — SEO Técnico
+11. Implementar/dirigir `/diagnostico-express-energetico`
+12. Ampliar redirecciones 301 en next.config.ts
+13. Verificar todas las URLs del sitemap
+14. Ejecutar Lighthouse audit
+15. Añadir canonical explícito en landing pages
+16. Considerar migrar Meta Pixel tracking a Server Component con Analytics wrapper
+
+---
+
+## 📄 LISTADO COMPLETO DE ARCHIVOS FUENTE
+
+### App Router (src/app/)
+```
+src/app/
+├── layout.tsx                    # Root layout
+├── page.tsx                      # Homepage
+├── not-found.tsx                 # 404
+├── sitemap.ts                    # Dynamic sitemap
+├── globals.css                   # Global styles + CSS vars
+├── (legal)/
+│   ├── aviso-legal/page.tsx
+│   ├── cookies/page.tsx
+│   └── privacidad/page.tsx
+├── (saas)/
+│   ├── layout.tsx
+│   └── saas/
+│       ├── page.tsx
+│       ├── demo/page.tsx
+│       ├── login/page.tsx
+│       ├── precios/page.tsx
+│       └── register/page.tsx
+├── (servicios)/
+│   ├── layout.tsx
+│   ├── ayudas-eficiencia-energetica/page.tsx
+│   ├── calculadoracat/page.tsx
+│   ├── check-up-inmobiliario/page.tsx
+│   ├── configurar-auditoria/page.tsx
+│   ├── informe-tecnico-energetico/
+│   │   ├── page.tsx
+│   │   └── InformeTecnicoContent.tsx
+│   ├── profesionales/page.tsx
+│   ├── segunda-opinion/
+│   │   ├── page.tsx
+│   │   └── SegundaOpinion.module.css
+│   └── segunda-opinion-express/
+│       ├── page.tsx
+│       └── SegundaOpinionExpress.module.css
+├── blog/
+│   ├── page.tsx
+│   └── [slug]/
+│       ├── page.tsx
+│       └── post.css
+├── buscador-certificado-energetico-catalunya/
+│   ├── layout.tsx
+│   └── page.tsx
+├── cercador-certificats-energetics/
+│   ├── layout.tsx
+│   └── page.tsx
+├── formulario/page.tsx
+├── gracias/
+│   ├── page.tsx
+│   └── GraciasContentClient.tsx
+├── landing/
+│   ├── guia-detecta-falso-ce/page.tsx
+│   └── guia-errores-ce/
+│       ├── layout.tsx
+│       └── page.tsx
+├── resultado-auditoria/
+│   ├── page.tsx
+│   └── ResultadoAuditoriaContent.tsx
+└── sobre-nosotros/page.tsx
+```
+
+### Components (src/components/)
+```
+src/components/
+├── layout/
+│   ├── Header.tsx
+│   └── Footer.tsx
+│   └── Footer.module.css
+├── sections/
+│   ├── BlogSection.tsx (NO EXISTE)
+│   ├── CTASection.tsx
+│   ├── ComingSoonSection.tsx (NO EXISTE — está en ui/)
+│   ├── ComparativaSection.tsx
+│   │   └── ComparativaSection.module.css
+│   ├── ContrastSection.tsx
+│   ├── FAQSection.tsx
+│   ├── FeaturesGrid.tsx
+│   ├── HeroSection.tsx
+│   ├── HowItWorks.tsx
+│   ├── PrivacySection.tsx
+│   ├── ProblemSection.tsx
+│   ├── ServicesGrid.tsx
+│   │   └── ServicesGrid.module.css
+│   ├── TestimonialsSection.tsx
+│   └── TrustBlockSection.tsx
+├── forms/
+│   ├── ContactForm.tsx
+│   └── LandingLeadForm.tsx
+└── ui/
+    └── ComingSoonSection.tsx
+```
+
+### Data, Lib, Types
+```
+src/data/
+├── articles.ts          # 22 blog articles data
+└── navigation.ts        # Nav links config
+
+src/lib/
+├── meta-pixel.ts        # Meta Pixel tracking functions
+└── wa.ts                # WhatsApp link generator
+
+src/types/
+└── (TypeScript types)
+```
+
+---
+
+## 🔗 RECURSOS EXTERNOS
+
+### URLs clave
+- Production: https://www.certilab.cat
+- Repo: https://github.com/certilabcat-glitch/certilab-next
+- Deploy: Vercel (automático desde main)
+
+### Config files
+- `next.config.ts` → redirecciones 301, headers, image domains
+- `vercel.json` → deploy config
+- `tsconfig.json` → strict mode, path aliases (@/)
+- `postcss.config.mjs` → PostCSS config
+- `eslint.config.mjs` → ESLint flat config
+
+### Docs folder (`docs/`)
+- `00-gap-analysis.md` — Gap analysis
+- `01-plan-redirects-easypanel.md` — Redirect plan from old hosting
+- `02-investigacion-nixpacks.md` — Nixpacks research
+- `10-mapa-keywords.md` — Keyword map/strategy
+- `11-estrategia-gbp.md` — Google Business Profile strategy
+- `99-merge-eliminacion-paso-a-paso.md` — Merge/deployment steps
+- `99-plan-merge-urgente.md` — Urgent merge plan
+- `BRIEFING-EVA.md` — Content brief for Eva
+- `PLAN-MAESTRO.md` — Master plan
+- `PROTOCOLO-RESPUESTA-LEADS.md` — Lead response protocol
+- `SEO-AUDIT-REPORT.md` — SEO audit (latest)
+
+---
+
+## ✅ CHECKLIST FINAL DEL EXPERTO IA
+
+- [ ] 1. Refactorizar `ayudas-eficiencia-energetica/page.tsx` a Server Component + metadata + CSS Module
+- [ ] 2. Refactorizar `landing/guia-detecta-falso-ce/page.tsx` a Server Component + metadata + CSS Module
+- [ ] 3. Refactorizar `blog/[slug]/page.tsx` a Server Component + generateMetadata dinámico
+- [ ] 4. Verificar `landing/guia-errores-ce/page.tsx` hereda metadata correctamente
+- [ ] 5. Migrar `ProblemSection.tsx` style jsx → CSS Module
+- [ ] 6. Migrar `ContrastSection.tsx` style jsx → CSS Module
+- [ ] 7. Migrar `FeaturesGrid.tsx` style jsx → CSS Module
+- [ ] 8. Migrar `ComingSoonSection.tsx` style jsx → CSS Module
+- [ ] 9. Migrar `ContactForm.tsx` style jsx → CSS Module
+- [ ] 10. Migrar `LandingLeadForm.tsx` style jsx → CSS Module
+- [ ] 11. Implementar `diagnostico-express-energetico` o redirección
+- [ ] 12. Ampliar redirecciones 301 en next.config.ts
+- [ ] 13. Verificar URLs del sitemap contra implementación real
+- [ ] 14. Añadir canonical explícito en landing pages
+- [ ] 15. Migrar Meta Pixel tracking a wrapper Server Component pattern
+- [ ] 16. Ejecutar Lighthouse audit post-correcciones
+
+---
+
+*Documento generado el 5 de junio de 2026 — Análisis completo del proyecto certilab-next para entrega a experto IA en SEO + rendimiento.*

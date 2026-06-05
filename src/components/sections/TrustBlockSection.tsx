@@ -1,64 +1,25 @@
 "use client";
 
+import styles from "./TrustBlockSection.module.css";
+
 export default function TrustBlockSection() {
   return (
-    <section className="trust-block" aria-label="Información profesional">
+    <section className={styles.trustBlock} aria-label="Información profesional">
       <p>
         <strong>Certilab · Despacho de Auditoría Energética</strong>
       </p>
       <p>Dirigido por Eva María González García · Arquitecta Técnica · Colegiada nº 9457 · Cateb</p>
       <p>Seguro RC Profesional · Servicio 100% online para toda España</p>
-      <div className="trust-block-badges">
+      <div className={styles.trustBlockBadges}>
         <span>Cateb 9457</span>
         <span>Seguro RC</span>
         <span>Despacho de Auditoría Energética</span>
       </div>
-      <p className="disclaimer">
+      <p className={styles.disclaimer}>
         Servicio 100% online para toda España.
         <br />
         Análisis técnicos remotos con responsabilidad profesional real.
       </p>
-
-      <style jsx>{`
-        .trust-block {
-          padding: 2.5rem 1.5rem;
-          text-align: center;
-          border-top: 1px solid var(--color-border);
-          font-size: 0.92rem;
-        }
-        .trust-block p {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          margin: 0.25rem 0;
-        }
-        .trust-block strong {
-          font-family: var(--font-serif);
-          font-weight: 400;
-          color: var(--color-black);
-        }
-        .trust-block .disclaimer {
-          font-size: 0.8rem;
-          font-style: italic;
-          margin-top: 0.8rem;
-        }
-        .trust-block-badges {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 1rem;
-          margin: 0.8rem 0;
-        }
-        .trust-block-badges span {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--color-grey);
-          padding: 0.4rem 1rem;
-          border: 1px solid var(--color-border);
-        }
-      `}</style>
     </section>
   );
 }

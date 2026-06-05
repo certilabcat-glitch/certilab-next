@@ -1,8 +1,7 @@
 "use client";
 
-"use client";
-
 import Link from "next/link";
+import styles from "./Breadcrumbs.module.css";
 
 interface BreadcrumbItem {
   name: string;
@@ -32,13 +31,12 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
           }),
         }}
       />
-      <nav aria-label="Breadcrumb" className="breadcrumbs">
+      <nav aria-label="Breadcrumb" className={styles.breadcrumbs}>
         <ol>
           {items.map((item, i) =>
             i < items.length - 1 ? (
               <li key={item.href}>
                 <Link href={item.href}>{item.name}</Link>
-                <span className="sep">/</span>
               </li>
             ) : (
               <li key={item.href} aria-current="page">
@@ -48,38 +46,6 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
           )}
         </ol>
       </nav>
-
-      <style jsx>{`
-        .breadcrumbs {
-          max-width: 1100px;
-          margin: 0 auto;
-          padding: 1rem 1.5rem;
-        }
-        ol {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        li {
-          font-family: var(--font-sans);
-          font-size: 0.8rem;
-          color: var(--color-grey);
-        }
-        a {
-          color: var(--color-terra);
-          text-decoration: none;
-        }
-        a:hover {
-          text-decoration: underline;
-        }
-        .sep {
-          margin-left: 0.5rem;
-          color: var(--color-border);
-        }
-      `}</style>
     </>
   );
 }

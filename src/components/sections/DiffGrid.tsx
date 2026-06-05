@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "./DiffGrid.module.css";
+
 export default function DiffGrid() {
   const items = [
     {
@@ -34,61 +36,15 @@ export default function DiffGrid() {
         técnica colegiada que trabaja con responsabilidad profesional real. Sin
         atajos.
       </p>
-      <div className="diff-grid">
+      <div className={styles.diffGrid}>
         {items.map((item) => (
-          <div key={item.num} className="diff-card">
-            <p className="diff-num">{item.num}</p>
+          <div key={item.num} className={styles.diffCard}>
+            <p className={styles.diffNum}>{item.num}</p>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .diff-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 2rem;
-        }
-        .diff-card {
-          padding: 2rem;
-          text-align: center;
-          background: #fff;
-          box-shadow: var(--shadow-card);
-          border: 1px solid var(--color-terra-light);
-        }
-        .diff-num {
-          font-family: var(--font-serif);
-          font-size: 1.2rem;
-          color: var(--color-grey);
-          margin-bottom: 1rem;
-          letter-spacing: 0.1em;
-        }
-        .diff-card h3 {
-          font-family: var(--font-serif);
-          font-size: 1.2rem;
-          font-weight: 400;
-          color: var(--color-black);
-          margin-bottom: 0.5rem;
-        }
-        .diff-card p {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          line-height: 1.6;
-          margin: 0;
-        }
-        @media (max-width: 767px) {
-          .diff-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          .diff-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-      `}</style>
     </section>
   );
 }

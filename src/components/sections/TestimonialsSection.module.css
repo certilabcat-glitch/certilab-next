@@ -1,0 +1,109 @@
+.testimonialsSection {
+  padding: 5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  color: var(--color-black);
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.sectionSub {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-grey);
+  max-width: 550px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testimonialCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialCard:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.quoteIcon {
+  color: var(--color-terra-light);
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.testimonialText {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  line-height: 1.7;
+  flex: 1;
+  margin: 0 0 1.5rem;
+}
+
+.testimonialFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.testimonialAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-terra-light);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.testimonialAuthor {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-black);
+  font-style: normal;
+  display: block;
+}
+
+.testimonialRole {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-grey);
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .testimonialsSection { padding: 3rem 1.5rem; }
+  .testimonialsGrid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .testimonialsGrid { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import styles from "./ProblemSection.module.css";
 
 export default function ProblemSection() {
   return (
@@ -38,13 +39,13 @@ export default function ProblemSection() {
           </p>
         </div>
       </div>
-      <p className="problem-afirmacion">
+      <p className={styles["problem-afirmacion"]}>
         En Certilab ofrecemos{" "}
         <strong>
           análisis técnico con responsabilidad profesional real.
         </strong>
       </p>
-      <p className="problem-data">
+      <p className={styles["problem-data"]}>
         <strong>Dato:</strong> Un inmueble con mala calificación energética (E,
         F o G) puede perder entre un <strong>5% y un 15%</strong> de su valor
         de mercado. Eso son hasta <strong>40.000€</strong> en una vivienda de
@@ -54,30 +55,6 @@ export default function ProblemSection() {
         </Link>
       </p>
 
-      <style jsx>{`
-        .problem-afirmacion {
-          text-align: center;
-          font-family: var(--font-serif);
-          font-size: 1.1rem;
-          color: var(--color-black);
-          margin-top: 3rem;
-        }
-        .problem-data {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          text-align: center;
-          margin-top: 1rem;
-          max-width: 600px;
-          margin-left: auto;
-          margin-right: auto;
-          line-height: 1.7;
-        }
-        .problem-data a {
-          color: var(--color-terra);
-          text-decoration: underline;
-        }
-      `}</style>
     </section>
   );
 }

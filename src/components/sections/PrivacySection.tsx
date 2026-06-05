@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "./PrivacySection.module.css";
+
 export default function PrivacySection() {
   const items = [
     {
@@ -33,44 +35,15 @@ export default function PrivacySection() {
         Nuestra metodología 100% remota no solo protege su intimidad: convierte
         cada análisis en un expediente con cadena de custodia profesional.
       </p>
-      <div className="privacidad-grid">
+      <div className={styles.privacidadGrid}>
         {items.map((item) => (
-          <div key={item.title} className="privacidad-card">
-            <p className="privacidad-icono">{item.icon}</p>
+          <div key={item.title} className={styles.privacidadCard}>
+            <p className={styles.privacidadIcono}>{item.icon}</p>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .privacidad-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 2rem;
-        }
-        .privacidad-card {
-          text-align: center;
-        }
-        .privacidad-icono {
-          font-size: 2rem;
-          margin-bottom: 1rem;
-        }
-        .privacidad-card h3 {
-          font-family: var(--font-serif);
-          font-size: 1.1rem;
-          font-weight: 400;
-          color: var(--color-black);
-          margin-bottom: 0.5rem;
-        }
-        .privacidad-card p {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          line-height: 1.6;
-          margin: 0;
-        }
-      `}</style>
     </section>
   );
 }

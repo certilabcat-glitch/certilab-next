@@ -1,0 +1,383 @@
+.hero {
+  background: var(--color-crema);
+  padding: 6rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heroContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.heroEyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-terra);
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--color-black);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.heroSub {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--color-grey);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.heroNota {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-grey);
+}
+
+.section {
+  padding: 5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  color: var(--color-black);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sectionSub {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-grey);
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.problemCard {
+  border: 1px solid var(--color-border);
+  padding: 2.5rem 2rem;
+}
+
+.problemCard h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 0.75rem;
+}
+
+.problemCard p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-grey);
+  line-height: 1.7;
+}
+
+.featuresSection {
+  max-width: 1100px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.featureCard {
+  border: 1px solid var(--color-border);
+  padding: 2.5rem 2rem;
+}
+
+.featureCard h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 0.75rem;
+}
+
+.featureCard p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-grey);
+  line-height: 1.7;
+}
+
+.howSection {
+  background: var(--color-crema);
+  max-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto 0;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stepNum {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-terra);
+  color: var(--color-terra);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 0.75rem;
+}
+
+.step p {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-grey);
+  line-height: 1.7;
+}
+
+.pricingSection {
+  max-width: 1100px;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.pricingCard {
+  border: 1px solid var(--color-border);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricingFeatured {
+  border: 2px solid var(--color-black);
+  position: relative;
+}
+
+.planBadge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-black);
+  color: var(--color-crema);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+}
+
+.planName {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 0.25rem;
+}
+
+.planDesc {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-grey);
+  margin-bottom: 1.5rem;
+}
+
+.planPrice {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-black);
+  margin-bottom: 1.5rem;
+}
+
+.planCurrency {
+  font-size: 1.5rem;
+  vertical-align: super;
+}
+
+.planPeriod {
+  font-size: 0.9rem;
+  color: var(--color-grey);
+  font-family: var(--font-sans);
+}
+
+.planPriceCustom {
+  font-size: 1.5rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+.planFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  flex-grow: 1;
+}
+
+.planFeatures li {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.planFeatures li:last-child {
+  border-bottom: none;
+}
+
+.faq {
+  max-width: 680px;
+  margin: 3rem auto 0;
+}
+
+.faqItem {
+  border-top: 1px solid var(--color-border);
+  padding: 1.2rem 0;
+}
+
+.faqItem:last-of-type {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faqItem summary {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-black);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqItem p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-grey);
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 6rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.btnPrimary {
+  display: inline-block;
+  background: var(--color-black);
+  color: var(--color-crema);
+  padding: 0.85rem 2.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+}
+
+.btnSecondary {
+  display: inline-block;
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
+  padding: 0.85rem 2.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btnSecondary:hover {
+  opacity: 0.6;
+}
+
+.btnFull {
+  width: 100%;
+  text-align: center;
+}
+
+.btnLarge {
+  padding: 1rem 3rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+}

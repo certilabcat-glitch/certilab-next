@@ -1,0 +1,24 @@
+.problem-afirmacion {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-black);
+  margin-top: 3rem;
+}
+
+.problem-data {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-grey);
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.problem-data a {
+  color: var(--color-terra);
+  text-decoration: underline;
+}

@@ -1,68 +1,17 @@
 "use client";
 
+import styles from "./ObrasBanner.module.css";
+
 export default function ObrasBanner() {
   return (
-    <div className="obras-banner">
-      <div className="obras-triangle">
-        <span className="obras-icon">!</span>
+    <div className={styles.banner}>
+      <div className={styles.triangle}>
+        <span className={styles.icon}>!</span>
       </div>
-      <div className="obras-text">
-        <span className="obras-label">EN OBRAS</span>
-        <span className="obras-desc">Página en construcción — Próximamente disponible</span>
+      <div className={styles.text}>
+        <span className={styles.label}>EN OBRAS</span>
+        <span className={styles.desc}>Página en construcción — Próximamente disponible</span>
       </div>
-      <style jsx>{`
-        .obras-banner {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          padding: 0.6rem 1.5rem;
-          background: #fff9e6;
-          border-bottom: 2px solid #f0c040;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        .obras-triangle {
-          width: 0;
-          height: 0;
-          border-left: 22px solid transparent;
-          border-right: 22px solid transparent;
-          border-bottom: 40px solid #e8a317;
-          position: relative;
-          flex-shrink: 0;
-        }
-        .obras-icon {
-          position: absolute;
-          top: 12px;
-          left: 50%;
-          transform: translateX(-50%);
-          font-family: var(--font-sans);
-          font-size: 1.3rem;
-          font-weight: 900;
-          color: #fff;
-          text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-          line-height: 1;
-        }
-        .obras-text {
-          display: flex;
-          flex-direction: column;
-          gap: 0.1rem;
-        }
-        .obras-label {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          font-weight: 800;
-          letter-spacing: 0.15em;
-          color: #b8860b;
-          text-transform: uppercase;
-          line-height: 1.2;
-        }
-        .obras-desc {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          color: #8b7355;
-          line-height: 1.3;
-        }
-      `}</style>
     </div>
   );
 }

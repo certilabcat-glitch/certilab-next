@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import styles from "./ComingSoonSection.module.css";
 
 interface Props {
   serviceName: string;
@@ -28,30 +29,30 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
   const mailtoHref = `mailto:info@certilab.cat?subject=Interes%20en%20${encodeURIComponent(serviceName)}&body=Hola,%20estoy%20interesado%20en%20el%20servicio%20${encodeURIComponent(serviceName)}%20(${serviceUrl}).%20Avisadme%20cuando%20este%20disponible.%0A%0AMi%20email:%20${encodeURIComponent(email)}`;
 
   return (
-    <section className="coming-soon-section" id="coming-soon">
-      <div className="coming-soon-inner">
-        <span className="coming-soon-badge">En obras</span>
-        <h2 className="coming-soon-title">
+    <section className={styles.comingSoonSection} id="coming-soon">
+      <div className={styles.comingSoonInner}>
+        <span className={styles.comingSoonBadge}>En obras</span>
+        <h2 className={styles.comingSoonTitle}>
           {serviceName} estara disponible pronto
         </h2>
-        <p className="coming-soon-sub">
+        <p className={styles.comingSoonSub}>
           Estamos ultimando los detalles de este servicio. Si quieres que te
           avisemos cuando este activo, dejame tu correo.
         </p>
 
         {sent ? (
-          <div className="coming-soon-success">
-            <p className="coming-soon-success-text">
+          <div className={styles.comingSoonSuccess}>
+            <p className={styles.comingSoonSuccessText}>
               Gracias! Te avisaremos cuando {serviceName} este disponible.
             </p>
-            <p className="coming-soon-success-extra">
+            <p className={styles.comingSoonSuccessExtra}>
               Mientras tanto, descubre nuestra{" "}
               <Link href="/segunda-opinion/">
                 Segunda Opinion del Certificado Energetico por 39EUR
               </Link>
               , el servicio que ya esta activo y operativo.
             </p>
-            <p className="coming-soon-success-wa">
+            <p className={styles.comingSoonSuccessWa}>
               Tambien puedes escribirnos directamente por{" "}
               <a
                 href="https://wa.me/34608515922?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de"
@@ -64,8 +65,8 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
             </p>
           </div>
         ) : (
-          <form className="coming-soon-form" onSubmit={handleSubmit}>
-            <div className="coming-soon-field">
+          <form className={styles.comingSoonForm} onSubmit={handleSubmit}>
+            <div className={styles.comingSoonField}>
               <input
                 type="email"
                 value={email}
@@ -74,26 +75,26 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
                   setError(false);
                 }}
                 placeholder="tu@email.com"
-                className={`coming-soon-input ${error ? "error" : ""}`}
+                className={`${styles.comingSoonInput} ${error ? styles.comingSoonInputError : ""}`}
                 aria-label="Tu correo electronico"
               />
-              <button type="submit" className="coming-soon-button">
+              <button type="submit" className={styles.comingSoonButton}>
                 Avisarme
               </button>
             </div>
             {error && (
-              <p className="coming-soon-error">
+              <p className={styles.comingSoonError}>
                 Introduce un correo electronico valido.
               </p>
             )}
-            <p className="coming-soon-note">
+            <p className={styles.comingSoonNote}>
               Sin spam. Solo te escribiremos cuando este servicio este listo.
             </p>
           </form>
         )}
 
-        <div className="coming-soon-alternative">
-          <p className="coming-soon-alt-text">
+        <div className={styles.comingSoonAlternative}>
+          <p className={styles.comingSoonAltText}>
             El servicio que ya esta activo:{" "}
             <Link href="/segunda-opinion/">
               Segunda Opinion del Certificado (39EUR)
@@ -102,161 +103,6 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
         </div>
       </div>
 
-      <style jsx>{`
-        .coming-soon-section {
-          background: var(--color-crema);
-          padding: 5rem 1.5rem;
-          border-top: 1px solid var(--color-border);
-        }
-        .coming-soon-inner {
-          max-width: 550px;
-          margin: 0 auto;
-          text-align: center;
-        }
-        .coming-soon-badge {
-          display: inline-block;
-          font-family: var(--font-sans);
-          font-size: 0.7rem;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: #000;
-          background: #ffc107;
-          border: 1px solid #e6a800;
-          padding: 0.3rem 0.85rem;
-          margin-bottom: 1rem;
-        }
-        .coming-soon-title {
-          font-family: var(--font-serif);
-          font-size: clamp(1.35rem, 2.5vw, 1.75rem);
-          font-weight: 400;
-          color: var(--color-black);
-          margin-bottom: 0.75rem;
-        }
-        .coming-soon-sub {
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          color: var(--color-grey);
-          line-height: 1.7;
-          margin-bottom: 2rem;
-        }
-        .coming-soon-form {
-          display: flex;
-          flex-direction: column;
-          gap: 0.75rem;
-        }
-        .coming-soon-field {
-          display: flex;
-          gap: 0.5rem;
-          max-width: 420px;
-          margin: 0 auto;
-          width: 100%;
-        }
-        .coming-soon-input {
-          flex: 1;
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          padding: 0.75rem 1rem;
-          border: 1px solid var(--color-border);
-          background: #fff;
-          outline: none;
-          transition: border-color 0.2s;
-          border-radius: 0;
-        }
-        .coming-soon-input:focus {
-          border-color: var(--color-terra);
-        }
-        .coming-soon-input.error {
-          border-color: #d32f2f;
-        }
-        .coming-soon-button {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          font-weight: 500;
-          color: #fff;
-          background: var(--color-black);
-          border: none;
-          padding: 0.75rem 1.5rem;
-          cursor: pointer;
-          white-space: nowrap;
-          transition: background 0.2s;
-          border-radius: 0;
-        }
-        .coming-soon-button:hover {
-          background: #333;
-        }
-        .coming-soon-error {
-          font-family: var(--font-sans);
-          font-size: 0.8rem;
-          color: #d32f2f;
-          margin: 0;
-        }
-        .coming-soon-note {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          color: var(--color-grey);
-          margin: 0;
-          opacity: 0.7;
-        }
-        .coming-soon-success {
-          text-align: center;
-        }
-        .coming-soon-success-text {
-          font-family: var(--font-sans);
-          font-size: 1rem;
-          color: #2e7d32;
-          font-weight: 500;
-          margin-bottom: 1rem;
-        }
-        .coming-soon-success-extra {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          line-height: 1.6;
-          margin-bottom: 0.5rem;
-        }
-        .coming-soon-success-extra a,
-        .coming-soon-success-wa a,
-        .coming-soon-alt-text a {
-          color: var(--color-terra);
-          text-decoration: underline;
-          text-underline-offset: 2px;
-        }
-        .coming-soon-success-extra a:hover,
-        .coming-soon-success-wa a:hover,
-        .coming-soon-alt-text a:hover {
-          color: var(--color-terra-dark);
-        }
-        .coming-soon-success-wa {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-grey);
-          margin: 0;
-        }
-        .coming-soon-alternative {
-          margin-top: 2.5rem;
-          padding-top: 1.5rem;
-          border-top: 1px solid var(--color-border);
-        }
-        .coming-soon-alt-text {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          margin: 0;
-        }
-
-        @media (max-width: 767px) {
-          .coming-soon-section {
-            padding: 3rem 1.5rem;
-          }
-          .coming-soon-field {
-            flex-direction: column;
-          }
-          .coming-soon-button {
-            width: 100%;
-          }
-        }
-      `}</style>
     </section>
   );
 }

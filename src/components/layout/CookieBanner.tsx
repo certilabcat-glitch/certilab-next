@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { META_PIXEL_ID } from "@/lib/constants";
+import styles from "./CookieBanner.module.css";
 
 const STORAGE_KEY = "certilab_cookies_accepted";
 const EXPIRY_DAYS = 365;
@@ -99,14 +100,8 @@ export default function CookieBanner() {
       id="cookie-banner"
       role="alert"
       aria-live="polite"
-      className="fixed bottom-0 left-0 right-0 z-[200] animate-[fadeIn_0.3s_ease] bg-[#0A0A0A] text-[#F5EFE6] px-6 py-5"
+      className={`fixed bottom-0 left-0 right-0 z-[200] bg-[#0A0A0A] text-[#F5EFE6] px-6 py-5 ${styles.banner}`}
     >
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
       <div className="max-w-[1100px] mx-auto flex items-center gap-6 flex-wrap justify-center">
         <p className="font-sans text-sm leading-relaxed m-0 flex-1 min-w-[280px]">
           Utilizamos cookies técnicas esenciales para el funcionamiento del sitio

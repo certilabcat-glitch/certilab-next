@@ -4,6 +4,7 @@ import { useState, FormEvent } from "react";
 import { sendToWebhook } from "@/lib/webhook";
 import { waUrl } from "@/lib/wa";
 import { trackLeadComplete } from "@/lib/meta-pixel";
+import styles from "./ContactForm.module.css";
 
 interface FormData {
   nombre: string;
@@ -61,29 +62,21 @@ export default function ContactForm() {
 
   if (sent) {
     return (
-      <div className="form-sent">
+      <div className={styles.formSent}>
         <p>Redirigiendo a WhatsApp...</p>
-        <style jsx>{`
-          .form-sent {
-            text-align: center;
-            padding: 2rem;
-            font-family: var(--font-sans);
-            color: var(--color-grey);
-          }
-        `}</style>
       </div>
     );
   }
 
   return (
-    <section className="form-section">
-      <div className="form-card">
+    <section className={styles.formSection}>
+      <div className={styles.formCard}>
         <h2>Solicita tu Diagnóstico Express Gratuito</h2>
-        <p className="form-sub">
+        <p className={styles.formSub}>
           En menos de 5 minutos te orientamos sin compromiso.
         </p>
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-group">
+        <form onSubmit={handleSubmit}>
+          <div className={styles.formGroup}>
             <label htmlFor="nombre">Nombre completo *</label>
             <input
               id="nombre"
@@ -97,7 +90,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="telefono">Teléfono *</label>
             <input
               id="telefono"
@@ -111,7 +104,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="email">Email</label>
             <input
               id="email"
@@ -124,7 +117,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="servicio">¿Qué necesitas? *</label>
             <select
               id="servicio"
@@ -153,7 +146,7 @@ export default function ContactForm() {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="mensaje">Cuéntanos tu caso</label>
             <textarea
               id="mensaje"
@@ -168,91 +161,13 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="btn-primary"
+            className={styles.btnPrimary}
             disabled={sending}
           >
             {sending ? "Enviando..." : "Solicitar Diagnóstico Gratuito"}
           </button>
         </form>
       </div>
-
-      <style jsx>{`
-        .form-section {
-          max-width: 600px;
-          margin: 0 auto;
-          padding: 2rem 1.5rem;
-        }
-        .form-card {
-          background: var(--color-crema);
-          border: 1px solid var(--color-border);
-          padding: 2.5rem;
-        }
-        .form-card h2 {
-          font-family: var(--font-serif);
-          font-size: 1.5rem;
-          font-weight: 400;
-          color: var(--color-black);
-          margin-bottom: 0.5rem;
-        }
-        .form-sub {
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          color: var(--color-grey);
-          margin-bottom: 2rem;
-        }
-        .form-group {
-          margin-bottom: 1.25rem;
-        }
-        .form-group label {
-          display: block;
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          font-weight: 500;
-          color: var(--color-dark);
-          margin-bottom: 0.4rem;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-          width: 100%;
-          padding: 0.75rem 1rem;
-          border: 1px solid var(--color-border);
-          background: white;
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          color: var(--color-black);
-          transition: border-color 0.2s;
-        }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-          outline: none;
-          border-color: var(--color-terra);
-        }
-        .btn-primary {
-          display: inline-block;
-          width: 100%;
-          background: var(--color-black);
-          color: var(--color-crema);
-          padding: 0.85rem 2rem;
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          font-weight: 600;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          text-decoration: none;
-          border: none;
-          cursor: pointer;
-          transition: opacity 0.2s;
-        }
-        .btn-primary:hover {
-          opacity: 0.85;
-        }
-        .btn-primary:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
-      `}</style>
     </section>
   );
 }

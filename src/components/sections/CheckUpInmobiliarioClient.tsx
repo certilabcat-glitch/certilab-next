@@ -9,6 +9,7 @@ import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import TrustNumbers from "@/components/sections/TrustNumbers";
 import ComingSoonSection from "@/components/ui/ComingSoonSection";
 import ObrasBanner from "@/components/ui/ObrasBanner";
+import styles from "./CheckUpInmobiliarioClient.module.css";
 
 const faq = [
   {
@@ -93,7 +94,7 @@ const trustReasons = [
 
 export default function CheckUpInmobiliarioClient() {
   return (
-    <div className="page-wrapper">
+    <div className={styles.pageWrapper}>
       <ObrasBanner />
 
       <Breadcrumbs
@@ -118,21 +119,21 @@ export default function CheckUpInmobiliarioClient() {
       <TrustNumbers />
 
       {/* PROBLEMA QUE RESUELVE */}
-      <section className="section problem-section">
-        <h2 className="section-title">¿Por qué necesitas un Check-Up Inmobiliario antes de comprar?</h2>
-        <p className="section-sub">
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>¿Por qué necesitas un Check-Up Inmobiliario antes de comprar?</h2>
+        <p className={styles.sectionSub}>
           Comprar una vivienda es la inversión más importante de tu vida. Y sin embargo, la mayoría de compradores firman basándose solo en lo que les cuenta el vendedor. Esto es lo que puede salir mal.
         </p>
-        <div className="problem-grid">
-          <div className="problem-card">
+        <div className={styles.problemGrid}>
+          <div className={styles.problemCard}>
             <h3>Calificaciones energéticas falsas</h3>
             <p>Hasta un 30% de los certificados energéticos contienen errores. Una calificación inflada (A o B cuando debería ser D o E) puede hacer que pagues hasta un 15% más del valor real del inmueble. Son miles de euros que no recuperarás.</p>
           </div>
-          <div className="problem-card">
+          <div className={styles.problemCard}>
             <h3>Cargas y deudas ocultas</h3>
             <p>Hipotecas no canceladas, embargos judiciales, usufructos no declarados, servidumbres que limitan el uso del inmueble. Si no aparecen en la nota simple que te entrega el vendedor, las acabas heredando tú. Pueden ascender a decenas de miles de euros.</p>
           </div>
-          <div className="problem-card">
+          <div className={styles.problemCard}>
             <h3>Vicios ocultos y deficiencias técnicas</h3>
             <p>Instalaciones eléctricas sin legalizar, calderas sin mantenimiento, humedades no declaradas, amianto, estructura deficiente. Todo ello sale a la luz después de la firma, cuando ya es tarde. El coste de reparación puede superar los 20.000€.</p>
           </div>
@@ -140,33 +141,33 @@ export default function CheckUpInmobiliarioClient() {
       </section>
 
       {/* ROI GRID */}
-      <section className="section roi-section">
-        <div className="roi-grid">
-          <div className="roi-box">
-            <p className="roi-label">Sin Certilab</p>
-            <p className="roi-price">Riesgo de hasta 40.000€</p>
-            <p className="roi-desc">Brown Discount (5-15% del valor), más cargas ocultas, más reparaciones imprevistas. Una compra a ciegas que puede salir muy cara.</p>
+      <section className={styles.roiSection}>
+        <div className={styles.roiGrid}>
+          <div className={styles.roiBox}>
+            <p className={styles.roiLabel}>Sin Certilab</p>
+            <p className={styles.roiPrice}>Riesgo de hasta 40.000€</p>
+            <p className={styles.roiDesc}>Brown Discount (5-15% del valor), más cargas ocultas, más reparaciones imprevistas. Una compra a ciegas que puede salir muy cara.</p>
           </div>
-          <div className="roi-box highlight">
-            <p className="roi-label">Con Certilab</p>
-            <p className="roi-price">199€ de inversión</p>
-            <p className="roi-desc">Auditoría forense integral. Detectamos Brown Discount, cargas registrales ocultas, vicios técnicos e irregularidades. Informe de 10-15 páginas con validez jurídica.</p>
+          <div className={styles.roiBoxHighlight}>
+            <p className={styles.roiLabel}>Con Certilab</p>
+            <p className={styles.roiPrice}>199€ de inversión</p>
+            <p className={styles.roiDesc}>Auditoría forense integral. Detectamos Brown Discount, cargas registrales ocultas, vicios técnicos e irregularidades. Informe de 10-15 páginas con validez jurídica.</p>
           </div>
         </div>
       </section>
 
       {/* CASOS REALES */}
-      <section className="section casos-section">
-        <h2 className="section-title">Casos reales que nos encontramos cada semana en Cataluña</h2>
-        <p className="section-sub">
+      <section className={styles.casosSection}>
+        <h2 className={styles.sectionTitle}>Casos reales que nos encontramos cada semana en Cataluña</h2>
+        <p className={styles.sectionSub}>
           Esto no es teoría. Son casos documentados de compradores que evitaron pérdidas gracias a nuestro análisis forense. Cada semana detectamos situaciones similares.
         </p>
-        <div className="casos-grid">
+        <div className={styles.casosGrid}>
           {casosReales.map((caso, i) => (
-            <div className="caso-card" key={i}>
-              <p className="caso-label">{caso.label}</p>
-              <p className="caso-title">{caso.title}</p>
-              <p className="caso-text">{caso.text}</p>
+            <div className={styles.casoCard} key={i}>
+              <p className={styles.casoLabel}>{caso.label}</p>
+              <p className={styles.casoTitle}>{caso.title}</p>
+              <p className={styles.casoText}>{caso.text}</p>
             </div>
           ))}
         </div>
@@ -183,10 +184,10 @@ export default function CheckUpInmobiliarioClient() {
       />
 
       {/* QUÉ INCLUYE */}
-      <section className="section includes-section">
-        <h2 className="section-title">¿Qué incluye el Check-Up Inmobiliario Forense por 199€?</h2>
-        <p className="section-sub">Un análisis completo que cubre todos los frentes de una compraventa inmobiliaria.</p>
-        <ul className="includes-grid">
+      <section className={styles.includesSection}>
+        <h2 className={styles.sectionTitle}>¿Qué incluye el Check-Up Inmobiliario Forense por 199€?</h2>
+        <p className={styles.sectionSub}>Un análisis completo que cubre todos los frentes de una compraventa inmobiliaria.</p>
+        <ul className={styles.includesGrid}>
           {[
             "Nota Simple del Registro de la Propiedad (titularidad, cargas, hipotecas, embargos)",
             "Certificado Catastral descriptivo y gráfico (superficie, linderos, usos)",
@@ -198,19 +199,19 @@ export default function CheckUpInmobiliarioClient() {
             "Resumen ejecutivo con recomendaciones accionables",
             "Orientación sobre próximos pasos y documentación adicional necesaria",
           ].map((item, i) => (
-            <li key={i} className="includes-item">{item}</li>
+            <li key={i} className={styles.includesItem}>{item}</li>
           ))}
         </ul>
       </section>
 
       {/* MICRO-CONFIANZA */}
-      <section className="section trust-reasons-section">
-        <h2 className="section-title">¿Por qué confiar tu Check-Up a Certilab?</h2>
-        <p className="section-sub">No somos una plataforma automática ni un comparador online. Somos profesionales colegiados con responsabilidad civil.</p>
-        <div className="trust-reasons-grid">
+      <section className={styles.trustReasonsSection}>
+        <h2 className={styles.sectionTitle}>¿Por qué confiar tu Check-Up a Certilab?</h2>
+        <p className={styles.sectionSub}>No somos una plataforma automática ni un comparador online. Somos profesionales colegiados con responsabilidad civil.</p>
+        <div className={styles.trustReasonsGrid}>
           {trustReasons.map((r, i) => (
-            <div className="trust-reason-card" key={i}>
-              <div className="trust-reason-num">{r.num}</div>
+            <div className={styles.trustReasonCard} key={i}>
+              <div className={styles.trustReasonNum}>{r.num}</div>
               <h3>{r.title}</h3>
               <p>{r.text}</p>
             </div>
@@ -236,19 +237,19 @@ export default function CheckUpInmobiliarioClient() {
       />
 
       {/* STICKY CTA BAR */}
-      <div className="sticky-cta-bar">
-        <div className="sticky-cta-inner">
-          <div className="sticky-cta-info">
-            <span className="sticky-cta-price">199€</span>
-            <span className="sticky-cta-meta">48-72h · Auditoría integral</span>
+      <div className={styles.stickyCtaBar}>
+        <div className={styles.stickyCtaInner}>
+          <div className={styles.stickyCtaInfo}>
+            <span className={styles.stickyCtaPrice}>199€</span>
+            <span className={styles.stickyCtaMeta}>48-72h · Auditoría integral</span>
           </div>
-          <div className="sticky-cta-actions">
-            <a href="#coming-soon" className="sticky-cta-button">
+          <div className={styles.stickyCtaActions}>
+            <a href="#coming-soon" className={styles.stickyCtaButton}>
               Avisarme
             </a>
           </div>
         </div>
-        <p className="sticky-cta-micro">Servicio en preparación · Sin compromiso</p>
+        <p className={styles.stickyCtaMicro}>Servicio en preparación · Sin compromiso</p>
       </div>
 
       {/* Schema.org */}
@@ -287,336 +288,6 @@ export default function CheckUpInmobiliarioClient() {
         }}
       />
 
-      <style jsx>{`
-        .page-wrapper {
-          overflow-x: hidden;
-          width: 100%;
-        }
-
-        .section {
-          padding: 5rem 1.5rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .section-title {
-          font-family: var(--font-serif);
-          font-size: clamp(1.5rem, 3vw, 2rem);
-          font-weight: 400;
-          color: var(--color-black);
-          text-align: center;
-          margin-bottom: 0.75rem;
-        }
-        .section-sub {
-          text-align: center;
-          font-family: var(--font-sans);
-          font-size: 1rem;
-          color: var(--color-grey);
-          max-width: 680px;
-          margin: 0 auto 3rem;
-          line-height: 1.7;
-        }
-
-        /* PROBLEM GRID */
-        .problem-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 2rem;
-          margin-top: 2rem;
-        }
-        .problem-card {
-          border: 1px solid var(--color-border);
-          padding: 2rem;
-        }
-        .problem-card h3 {
-          font-family: var(--font-serif);
-          font-size: 1.15rem;
-          font-weight: 400;
-          color: var(--color-black);
-          margin-bottom: 0.75rem;
-        }
-        .problem-card p {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          line-height: 1.65;
-          margin: 0;
-        }
-
-        /* ROI GRID */
-        .roi-section {
-          padding-top: 0;
-          padding-bottom: 2rem;
-        }
-        .roi-grid {
-          display: flex;
-          gap: 0;
-          max-width: 750px;
-          margin: 0 auto;
-          border: 1px solid var(--color-border);
-        }
-        .roi-box {
-          flex: 1;
-          padding: 2rem;
-        }
-        .roi-box.highlight {
-          background: var(--color-crema);
-          border-left: 1px solid var(--color-border);
-        }
-        .roi-label {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          font-weight: 600;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--color-grey);
-          margin-bottom: 0.5rem;
-        }
-        .roi-price {
-          font-family: var(--font-serif);
-          font-size: 1.3rem;
-          font-weight: 500;
-          color: var(--color-black);
-          margin-bottom: 0.5rem;
-        }
-        .roi-box.highlight .roi-price { color: #2e7d32; }
-        .roi-desc {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-grey);
-          line-height: 1.6;
-          margin: 0;
-        }
-
-        /* CASOS */
-        .casos-section {
-          background: var(--color-crema);
-          max-width: 100%;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-        .casos-section .section-title,
-        .casos-section .section-sub {
-          max-width: 1100px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .casos-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .caso-card {
-          background: #fff;
-          border: 1px solid var(--color-border);
-          padding: 2rem;
-          text-align: left;
-        }
-        .caso-label {
-          font-family: var(--font-sans);
-          font-size: 0.7rem;
-          font-weight: 600;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--color-terra);
-          margin: 0 0 0.5rem;
-        }
-        .caso-title {
-          font-family: var(--font-serif);
-          font-size: 1.1rem;
-          font-weight: 500;
-          color: var(--color-black);
-          margin-bottom: 0.75rem;
-        }
-        .caso-text {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          line-height: 1.65;
-          margin: 0;
-        }
-
-        /* INCLUDES */
-        .includes-section {
-          background: var(--color-crema);
-          max-width: 100%;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-        .includes-section .section-title,
-        .includes-section .section-sub {
-          max-width: 1100px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .includes-grid {
-          max-width: 750px;
-          margin: 0 auto;
-          list-style: none;
-          padding: 0;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 0.75rem;
-        }
-        .includes-item {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-black);
-          line-height: 1.5;
-          padding: 0.85rem 1.25rem;
-          background: #fff;
-          border: 1px solid var(--color-border);
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-        .includes-item::before {
-          content: "✓";
-          color: var(--color-terra);
-          font-weight: 700;
-          flex-shrink: 0;
-        }
-
-        /* TRUST REASONS */
-        .trust-reasons-section {
-          max-width: 100%;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-        .trust-reasons-section .section-title,
-        .trust-reasons-section .section-sub {
-          max-width: 1100px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .trust-reasons-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 1.5rem;
-          max-width: 1100px;
-          margin: 0 auto;
-        }
-        .trust-reason-card {
-          background: #fff;
-          border: 1px solid var(--color-border);
-          padding: 2rem 1.5rem;
-          text-align: center;
-        }
-        .trust-reason-num {
-          font-family: var(--font-sans);
-          font-size: 0.8rem;
-          font-weight: 600;
-          letter-spacing: 0.15em;
-          color: var(--color-terra);
-          margin-bottom: 0.75rem;
-          text-transform: uppercase;
-        }
-        .trust-reason-card h3 {
-          font-family: var(--font-serif);
-          font-size: 1.05rem;
-          font-weight: 500;
-          color: var(--color-black);
-          margin-bottom: 0.65rem;
-        }
-        .trust-reason-card p {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-grey);
-          line-height: 1.6;
-          margin: 0;
-        }
-
-        /* STICKY CTA BAR */
-        .sticky-cta-bar {
-          display: none;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: #fff;
-          border-top: 1px solid var(--color-border);
-          padding: 0.75rem 1rem 0.5rem;
-          z-index: 100;
-          box-shadow: 0 -4px 12px rgba(0,0,0,0.06);
-        }
-        .sticky-cta-inner {
-          max-width: 1100px;
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 1rem;
-        }
-        .sticky-cta-info {
-          display: flex;
-          flex-direction: column;
-          line-height: 1.3;
-        }
-        .sticky-cta-price {
-          font-family: var(--font-serif);
-          font-size: 1.25rem;
-          font-weight: 500;
-          color: var(--color-black);
-        }
-        .sticky-cta-meta {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          color: var(--color-grey);
-        }
-        .sticky-cta-actions {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-        .sticky-cta-button {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          background: var(--color-terra);
-          color: #fff;
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          font-weight: 500;
-          text-decoration: none;
-          padding: 0.7rem 1.5rem;
-          border-radius: 6px;
-          white-space: nowrap;
-          transition: background 0.2s;
-        }
-        .sticky-cta-button:hover {
-          background: var(--color-terra-dark);
-        }
-        .sticky-cta-micro {
-          text-align: center;
-          font-family: var(--font-sans);
-          font-size: 0.65rem;
-          color: var(--color-grey);
-          margin: 0.35rem 0 0;
-          line-height: 1;
-          opacity: 0.75;
-        }
-
-        @media (max-width: 767px) {
-          .section { padding: 3rem 1.5rem; }
-          .problem-grid { grid-template-columns: 1fr; }
-          .roi-grid { flex-direction: column; }
-          .roi-box.highlight { border-left: none; border-top: 1px solid var(--color-border); }
-          .casos-grid { grid-template-columns: 1fr; }
-          .includes-grid { grid-template-columns: 1fr; }
-          .trust-reasons-grid { grid-template-columns: 1fr; }
-          :global(body) { padding-bottom: 5.5rem; }
-          .sticky-cta-bar { display: block; }
-        }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          .trust-reasons-grid { grid-template-columns: repeat(2, 1fr); }
-          .casos-grid { grid-template-columns: 1fr; }
-          .sticky-cta-bar { display: block; }
-        }
-        @media (min-width: 1024px) {
-          .sticky-cta-bar { display: block; }
-        }
-      `}</style>
     </div>
   );
 }

@@ -1,0 +1,30 @@
+.privacidadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.privacidadCard {
+  text-align: center;
+}
+
+.privacidadIcono {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.privacidadCard h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+}
+
+.privacidadCard p {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-grey);
+  line-height: 1.6;
+  margin: 0;
+}

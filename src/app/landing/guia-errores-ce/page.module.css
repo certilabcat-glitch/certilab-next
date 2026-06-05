@@ -1,0 +1,55 @@
+.heroLanding {
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+  background: var(--color-crema);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.heroEyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-terra);
+  margin-bottom: 1.5rem;
+}
+
+.heroLanding h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 300;
+  color: var(--color-black);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.heroLight {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+}
+
+.heroSub {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-grey);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.heroBenefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 0.5rem;
+  max-width: 400px;
+  text-align: left;
+}
+
+.heroBenefits li {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  line-height: 1.7;
+  margin-bottom: 0.25rem;
+}

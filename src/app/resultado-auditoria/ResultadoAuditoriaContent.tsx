@@ -3,25 +3,26 @@
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { waDiagnostico } from "@/lib/wa";
+import styles from "./ResultadoAuditoriaContent.module.css";
 
 export default function ResultadoAuditoriaContent() {
   const searchParams = useSearchParams();
   const direccion = searchParams.get("direccion");
 
   return (
-    <div className="resultado-page">
-      <div className="resultado-card">
-        <h1>Expediente en proceso</h1>
+    <div className={styles.resultadoPage}>
+      <div className={styles.resultadoCard}>
+        <h1 className={styles.h1}>Expediente en proceso</h1>
         {direccion && (
-          <p className="direccion">
+          <p className={styles.direccion}>
             <strong>Dirección:</strong> {direccion}
           </p>
         )}
-        <div className="status">
-          <div className="status-dot"></div>
+        <div className={styles.status}>
+          <div className={styles.statusDot}></div>
           <p>Nuestro sistema está procesando su solicitud.</p>
         </div>
-        <p className="info">
+        <p className={styles.info}>
           Hemos recibido su expediente. En breve recibirá un análisis
           preliminar por WhatsApp. Si tiene cualquier duda, contáctenos
           directamente.
@@ -30,99 +31,14 @@ export default function ResultadoAuditoriaContent() {
           href={waDiagnostico()}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary"
+          className={styles.btnPrimary}
         >
           Hablar por WhatsApp
         </a>
-        <Link href="/" className="btn-secondary">
+        <Link href="/" className={styles.btnSecondary}>
           Volver al inicio
         </Link>
       </div>
-
-      <style jsx>{`
-        .resultado-page {
-          min-height: 70vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 4rem 1.5rem;
-        }
-        .resultado-card {
-          max-width: 500px;
-          text-align: center;
-          border: 1px solid var(--color-border);
-          padding: 3rem 2rem;
-          background: white;
-        }
-        h1 {
-          font-family: var(--font-serif);
-          font-size: 2rem;
-          font-weight: 300;
-          color: var(--color-black);
-          margin-bottom: 1.5rem;
-        }
-        .direccion {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-dark);
-          margin-bottom: 2rem;
-        }
-        .status {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.75rem;
-          margin-bottom: 1.5rem;
-        }
-        .status-dot {
-          width: 12px;
-          height: 12px;
-          background: var(--color-verde);
-          border-radius: 50%;
-          animation: pulse 1.5s ease-in-out infinite;
-        }
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.4; }
-        }
-        .status p {
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          color: var(--color-dark);
-          margin: 0;
-        }
-        .info {
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-grey);
-          line-height: 1.7;
-          margin-bottom: 2rem;
-        }
-        .btn-primary {
-          display: inline-block;
-          background: var(--color-black);
-          color: var(--color-crema);
-          padding: 0.75rem 2rem;
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          font-weight: 500;
-          letter-spacing: 0.05em;
-          text-transform: uppercase;
-          text-decoration: none;
-          transition: opacity 0.2s;
-          margin-bottom: 1rem;
-        }
-        .btn-primary:hover {
-          opacity: 0.8;
-        }
-        .btn-secondary {
-          display: block;
-          font-family: var(--font-sans);
-          font-size: 0.85rem;
-          color: var(--color-terra);
-          text-decoration: underline;
-        }
-      `}</style>
     </div>
   );
 }

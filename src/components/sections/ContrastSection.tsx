@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "./ContrastSection.module.css";
+
 export default function ContrastSection() {
   return (
     <section className="section contraste-section" aria-labelledby="contraste-title">
@@ -10,9 +12,9 @@ export default function ContrastSection() {
         Y su patrimonio no merece atajos. Compare lo que hay detrás de cada tipo
         de informe.
       </p>
-      <div className="contraste-duo">
-        <div className="contraste-card contraste-algoritmico">
-          <p className="contraste-label">Informe Algorítmico</p>
+      <div className={styles["contraste-duo"]}>
+        <div className={styles["contraste-card"]}>
+          <p className={styles["contraste-label"]}>Informe Algorítmico</p>
           <ul>
             <li>Generado mediante software, sin intervención de un técnico colegiado</li>
             <li>Sin verificación técnica personalizada</li>
@@ -21,8 +23,8 @@ export default function ContrastSection() {
             <li>Informe breve con formato estándar</li>
           </ul>
         </div>
-        <div className="contraste-card contraste-forense">
-          <p className="contraste-label contraste-label-destacado">
+        <div className={styles["contraste-card"]}>
+          <p className={`${styles["contraste-label"]} ${styles["contraste-label-destacado"]}`}>
             Análisis Forense Certilab
           </p>
           <ul>
@@ -35,54 +37,6 @@ export default function ContrastSection() {
         </div>
       </div>
 
-      <style jsx>{`
-        .contraste-duo {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 2rem;
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        .contraste-card {
-          padding: 2.5rem 2rem;
-          background: #fff;
-          box-shadow: var(--shadow-card);
-          border: 1px solid var(--color-terra-light);
-        }
-        .contraste-label {
-          font-family: var(--font-sans);
-          font-size: 0.8rem;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--color-grey);
-          margin-bottom: 1.5rem;
-        }
-        .contraste-label-destacado {
-          color: var(--color-terra);
-          font-weight: 600;
-        }
-        .contraste-card ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .contraste-card li {
-          font-family: var(--font-sans);
-          font-size: 0.9rem;
-          color: var(--color-grey);
-          line-height: 1.6;
-          padding: 0.5rem 0;
-          border-bottom: 1px solid var(--color-border);
-        }
-        .contraste-card li:last-child {
-          border-bottom: none;
-        }
-        @media (max-width: 700px) {
-          .contraste-duo {
-            grid-template-columns: 1fr;
-          }
-        }
-      `}</style>
     </section>
   );
 }

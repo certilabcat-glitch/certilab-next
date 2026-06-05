@@ -1,12 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import type { FAQItem } from "@/types/service";
+import styles from "./FAQSection.module.css";
 
 interface FAQSectionProps {
   title?: string;
   items: FAQItem[];
   className?: string;
+}
+
+/** Permite solo etiquetas HTML seguras: <strong>, <a>, <br>, <em> */
+function sanitizeHTML(html: string): string {
+  return html
+    .replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, "")
+    .replace(/<[^>]*on\w+\s*=\s*["'][^"']*["'][^>]*>/gi, "")
+    .replace(/<(\/?(?:strong|a|br|em|b|i|u)\b)[^>]*>/gi, "<$1>")
+    .replace(/<(?![\/]?(?:strong|a|br|em|b|i|u)\b)[^>]*>/gi, "");
 }
 
 export default function FAQSection({
@@ -42,10 +52,11 @@ export default function FAQSection({
       <h2 className="section-title" id="faq-title">
         {title}
       </h2>
-      <div className="faq-list" role="list">
+      <div className={styles.faqList} role="list">
         {items.map((item, index) => (
           <details
             key={index}
+            className={styles.details}
             open={openIndex === index}
             onToggle={(e) => {
               if ((e.target as HTMLDetailsElement).open) {
@@ -53,51 +64,11 @@ export default function FAQSection({
               }
             }}
           >
-            <summary>{item.q}</summary>
-            <p dangerouslySetInnerHTML={{ __html: item.a }} />
+            <summary className={styles.summary}>{item.q}</summary>
+            <p className={styles.answer} dangerouslySetInnerHTML={{ __html: sanitizeHTML(item.a) }} />
           </details>
         ))}
       </div>
-
-      <style jsx>{`
-        .faq-list {
-          max-width: 680px;
-          margin: 3rem auto 0;
-        }
-        details {
-          border-top: 1px solid var(--color-border);
-          padding: 1.2rem 0;
-        }
-        details:last-of-type {
-          border-bottom: 1px solid var(--color-border);
-        }
-        summary {
-          font-family: var(--font-sans);
-          font-size: 1rem;
-          font-weight: 500;
-          color: var(--color-black);
-          cursor: pointer;
-          list-style: none;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 1rem;
-        }
-        summary::-webkit-details-marker {
-          display: none;
-        }
-        details p {
-          margin: 1rem 0 0;
-          font-family: var(--font-sans);
-          font-size: 0.95rem;
-          color: var(--color-grey);
-          line-height: 1.7;
-        }
-        details a {
-          color: var(--color-black);
-          text-decoration: underline;
-        }
-      `}</style>
       </section>
     </>
   );
