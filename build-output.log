@@ -1,0 +1,57 @@
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 22.9s
+  Running TypeScript ...
+  Finished TypeScript in 23.3s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/47) ...
+  Generating static pages using 3 workers (11/47) 
+  Generating static pages using 3 workers (23/47) 
+  Generating static pages using 3 workers (35/47) 
+✓ Generating static pages using 3 workers (47/47) in 8.0s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/meta/capi
+├ ƒ /api/saas/demo
+├ ○ /aviso-legal
+├ ○ /ayudas-eficiencia-energetica
+├ ○ /blog
+├ ● /blog/[slug]
+│ ├ /blog/brown-discount-precio-vivienda
+│ ├ /blog/cuanto-cuesta-certificado-energetico-2026
+│ ├ /blog/obtener-certificado-energetico-gratis
+│ └ [+11 more paths]
+├ ○ /buscador-certificado-energetico-catalunya
+├ ○ /calculadoracat
+├ ○ /cercador-certificats-energetics
+├ ○ /check-up-inmobiliario
+├ ○ /configurar-auditoria
+├ ○ /cookies
+├ ○ /formulario
+├ ○ /gracias
+├ ○ /informe-tecnico-energetico
+├ ○ /landing/guia-detecta-falso-ce
+├ ○ /landing/guia-errores-ce
+├ ○ /privacidad
+├ ○ /profesionales
+├ ○ /resultado-auditoria
+├ ○ /robots.txt
+├ ○ /saas
+├ ○ /saas/demo
+├ ○ /saas/login
+├ ○ /saas/precios
+├ ○ /saas/register
+├ ○ /segunda-opinion
+├ ○ /segunda-opinion-express
+├ ○ /sitemap.xml
+└ ○ /sobre-nosotros
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

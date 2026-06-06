@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.certilab.cat/sitemap.xml
+Sitemap: https://www.certilab.cat/llms.txt
+Sitemap: https://www.certilab.cat/llms-full.txt

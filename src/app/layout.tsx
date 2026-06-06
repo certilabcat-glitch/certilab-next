@@ -113,11 +113,23 @@ export default function RootLayout({
                     "Diagnóstico Express Energético",
                   ],
                   priceRange: "0€ – 399€",
+                  telephone: "+34 722 437 675",
                   address: {
                     "@type": "PostalAddress",
+                    streetAddress: "C/ Pau Claris 163, 4º 2ª",
+                    addressLocality: "Barcelona",
                     addressRegion: "Cataluña",
+                    postalCode: "08037",
                     addressCountry: "ES",
                   },
+                  openingHoursSpecification: [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      opens: "09:00",
+                      closes: "18:00",
+                    },
+                  ],
                   sameAs: [
                     "https://www.linkedin.com/company/certilab",
                   ],
