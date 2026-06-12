@@ -198,6 +198,31 @@
   }
 }
 
+/* Aviso de PDF fallido */
+.fallbackWarning {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.925rem;
+  line-height: 1.5;
+  color: #664d03;
+}
+
+.fallbackIcon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 0.1em;
+}
+
+.fallbackWarning p {
+  margin: 0;
+}
+
 /* ===== FORMULARIO PAPEL ===== */
 .papelForm {
   /* container already set */

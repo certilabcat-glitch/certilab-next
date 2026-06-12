@@ -67,6 +67,7 @@ export default function ComprobadorEnergetico() {
   const [papelLetra, setPapelLetra] = useState("D");
   const [papelConsumo, setPapelConsumo] = useState("");
   const [papelEmisiones, setPapelEmisiones] = useState("");
+  const [pdfFallback, setPdfFallback] = useState(false);
 
   // Estado para formulario contexto
   const [ctxGasto, setCtxGasto] = useState("");
@@ -165,6 +166,18 @@ export default function ComprobadorEnergetico() {
           fechaMensaje: "",
         });
         setPaso("contexto");
+        setLoading(false);
+        return;
+      }
+
+      // No se pudo detectar la letra → redirigir a formulario manual
+      if (data.letraEncontrada === false) {
+        setCamino("papel");
+        setPaso("certificado");
+        setPdfFallback(true);
+        // Rellenar consumo/emisiones si se extrajeron
+        if (data.consumo) setPapelConsumo(String(data.consumo));
+        if (data.emisiones) setPapelEmisiones(String(data.emisiones));
         setLoading(false);
         return;
       }
@@ -364,9 +377,24 @@ export default function ComprobadorEnergetico() {
 
       {paso === "certificado" && camino === "papel" && (
         <div className={styles.papelForm}>
-          <h2 className={styles.subtitle}>Introduce los datos de tu etiqueta</h2>
+          {pdfFallback && (
+            <div className={styles.fallbackWarning}>
+              <span className={styles.fallbackIcon}>&#9888;&#65039;</span>
+              <p>
+                No se ha podido detectar la calificación energética en el PDF.
+                Introduce los datos manualmente.
+              </p>
+            </div>
+          )}
+          <h2 className={styles.subtitle}>
+            {pdfFallback
+              ? "Datos de tu etiqueta energética"
+              : "Introduce los datos de tu etiqueta"}
+          </h2>
           <p className={styles.desc}>
-            Busca estos tres valores en tu certificado energético en papel.
+            {pdfFallback
+              ? "Mira la etiqueta impresa que recibiste y copia los valores aquí."
+              : "Busca estos tres valores en tu certificado energético en papel."}
           </p>
           <form onSubmit={handlePapelSubmit} className={styles.form}>
             <div className={styles.field}>

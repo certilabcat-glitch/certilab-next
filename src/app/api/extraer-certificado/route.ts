@@ -65,14 +65,14 @@ export async function POST(request: NextRequest) {
     const datos = extraerDatos(textContent);
 
     if (!datos.letra) {
-      return NextResponse.json(
-        {
-          error:
-            "No se ha podido encontrar la calificación energética en el PDF. " +
-            "Prueba con la opción 'Lo tengo en papel' e introduce los datos manualmente.",
-        },
-        { status: 400 }
-      );
+      return NextResponse.json({
+        letraEncontrada: false,
+        consumo: datos.consumo,
+        emisiones: datos.emisiones,
+        fecha: datos.fecha || null,
+        mensaje:
+          "No se ha podido detectar la calificación energética en el PDF. Introduce los datos manualmente.",
+      });
     }
 
     return NextResponse.json(datos);
