@@ -152,6 +152,48 @@ export default function SegundaOpinionPage() {
         </div>
       </section>
 
+      {/* SECCIÓN REFORMISTA — conectar desde comprobador y segunda opinión */}
+      <section className={`${styles.section} ${styles["reforma-section"]}`}>
+        <h2 className={styles["section-title"]}>¿Tu certificado tiene letra E, F o G? Hay solución</h2>
+        <p className={styles["section-sub"]}>
+          Si tras la Segunda Opinión confirmamos que tu calificación es real pero baja, te explicamos qué reformas pueden mejorarla y cuánto puedes ahorrar.
+        </p>
+        <div className={styles["reforma-grid"]}>
+          <div className={styles["reforma-card"]}>
+            <div className={styles["reforma-icon"]}>🪟</div>
+            <h3>Sustitución de ventanas</h3>
+            <p>Cambiar ventanas por unas de doble acristalamiento con rotura de puente térmico puede mejorar hasta 2 letras. Ahorro estimado: 200–600 €/año en calefacción.</p>
+          </div>
+          <div className={styles["reforma-card"]}>
+            <div className={styles["reforma-icon"]}>🧱</div>
+            <h3>Aislamiento de fachada</h3>
+            <p>Añadir aislamiento térmico por el exterior (SATE) o interior reduce la demanda energética hasta un 50%. SUBVENCIONABLE con fondos Next Generation.</p>
+          </div>
+          <div className={styles["reforma-card"]}>
+            <div className={styles["reforma-icon"]}>☀️</div>
+            <h3>Energía solar fotovoltaica</h3>
+            <p>Instalar placas solares reduce el consumo de red hasta un 60%. Ayudas de hasta el 40% del coste. Tu certificado mejorará al menos 1 letra.</p>
+          </div>
+          <div className={styles["reforma-card"]}>
+            <div className={styles["reforma-icon"]}>🔥</div>
+            <h3>Caldera de biomasa o aerotermia</h3>
+            <p>Sustituir caldera de gasóleo o gas por aerotermia o biomasa reduce emisiones hasta un 70%. Ayudas de hasta 3.000 € disponibles.</p>
+          </div>
+        </div>
+        <div className={styles["reforma-cta"]}>
+          <p className={styles["reforma-cta-text"]}>
+            ¿Quieres saber qué reformas concretas necesita tu vivienda? Te hacemos un <strong>informe técnico personalizado</strong> con mejoras y ayudas disponibles.
+          </p>
+          <a href="/informe-tecnico-energetico/" className={styles["reforma-cta-button"]}>
+            Solicitar informe de reformas →
+          </a>
+          <span className={styles["reforma-cta-or"]}>o</span>
+          <a href="/comprobador-certificado-energetico/" className={styles["reforma-cta-secundaria"]}>
+            Probar el comprobador gratuito →
+          </a>
+        </div>
+      </section>
+
       {/* COMPARATIVA VISUAL */}
       <ComparativaSection
         title="Informe Algorítmico vs. Segunda Opinión Certilab"

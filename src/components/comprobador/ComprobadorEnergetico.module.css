@@ -1,0 +1,482 @@
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #111;
+}
+
+.desc {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.aviso {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #999;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ===== BARRA DE PROGRESO ===== */
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 0.25rem;
+}
+
+.progressStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.progressNum {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.progressLabel {
+  font-size: 0.65rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.progressActive .progressNum {
+  background: #0070f3;
+  color: #fff;
+}
+
+.progressActive .progressLabel {
+  color: #0070f3;
+  font-weight: 600;
+}
+
+.progressDone .progressNum {
+  background: #22c55e;
+  color: #fff;
+}
+
+.progressDone .progressLabel {
+  color: #22c55e;
+}
+
+/* ===== BOTÓN VOLVER ===== */
+.backBtn {
+  background: none;
+  border: none;
+  color: #0070f3;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.backBtn:hover {
+  text-decoration: underline;
+}
+
+/* ===== PASO ELEGIR ===== */
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.5rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.btn:hover {
+  border-color: #0070f3;
+  box-shadow: 0 4px 12px rgba(0, 112, 243, 0.1);
+}
+
+.btnIcon {
+  font-size: 2rem;
+}
+
+.btnLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.btnDesc {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ===== SUBIR PDF ===== */
+.pdfUpload {
+  text-align: center;
+}
+
+.dropZone {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 2.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #fafafa;
+  margin-top: 1rem;
+}
+
+.dropZone:hover {
+  border-color: #0070f3;
+  background: #f0f7ff;
+}
+
+.dropIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.dropHint {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.3rem;
+}
+
+/* ===== SPINNER ===== */
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: #555;
+}
+
+.spinnerCircle {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e0e0;
+  border-top-color: #0070f3;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== FORMULARIO PAPEL ===== */
+.papelForm {
+  /* container already set */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.fieldHint {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: -0.5rem;
+}
+
+.input,
+.select {
+  padding: 0.7rem 0.8rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #0070f3;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.submitBtn {
+  padding: 0.8rem 1.5rem;
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.submitBtn:hover {
+  background: #005bb5;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== SEMÁFORO ===== */
+.miniSemaforo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.semaforoVerde {
+  background: #e6f7e6;
+  color: #166534;
+  border: 1px solid #bbf7bb;
+}
+
+.semaforoAmarillo {
+  background: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #fde68a;
+}
+
+.semaforoRojo {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* ===== TABLA RESUMEN ===== */
+.tablaResumen {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.resumenRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.resumenRow:last-child {
+  border-bottom: none;
+}
+
+.resumenRow span {
+  color: #666;
+}
+
+.resumenRow strong {
+  color: #111;
+}
+
+/* ===== EMAIL FORM ===== */
+.emailForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.loadingTransition {
+  text-align: center;
+}
+
+/* ===== ALERTAS ===== */
+.pasoAlertas {
+  /* container */
+}
+
+.alertaCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: #fff;
+}
+
+.alertaHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.alertaIcon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.alertaTitulo {
+  font-size: 0.95rem;
+  color: #111;
+}
+
+.alertaDesc {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  margin-left: 1.8rem;
+}
+
+.alertaError {
+  border-color: #fecaca;
+  background: #fff5f5;
+}
+
+.alertaWarning {
+  border-color: #fde68a;
+  background: #fffcf0;
+}
+
+.alertaSuccess {
+  border-color: #bbf7bb;
+  background: #f0fdf0;
+}
+
+.alertaInfo {
+  border-color: #bfdbfe;
+  background: #f5faff;
+}
+
+/* ===== CTA ===== */
+.pasoCTA {
+  text-align: center;
+}
+
+.ctaCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.ctaCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.ctaCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.ctaCardIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.ctaCard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #111;
+}
+
+.ctaCard p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.ctaBtn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: #0070f3;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.ctaBtn:hover {
+  background: #005bb5;
+}
+
+.otraBtn {
+  background: none;
+  border: 1.5px solid #ddd;
+  color: #555;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+.otraBtn:hover {
+  border-color: #0070f3;
+  color: #0070f3;
+}
+
+/* ===== PASO CONTEXTO ===== */
+.pasoContexto {
+  /* container */
+}
+
+/* ===== EMAIL CTA ===== */
+.emailCta {
+  /* container */
+}

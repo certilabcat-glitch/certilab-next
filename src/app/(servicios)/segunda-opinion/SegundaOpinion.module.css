@@ -401,8 +401,109 @@
   background: #333;
 }
 
+/* REFORMA SECTION */
+.reforma-section {
+  background: #f8f6f3;
+  max-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.reforma-section .section-title,
+.reforma-section .section-sub {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reforma-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+}
+.reforma-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.reforma-card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+.reforma-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.reforma-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-black);
+  margin-bottom: 0.65rem;
+}
+.reforma-card p {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-grey);
+  line-height: 1.6;
+  margin: 0;
+}
+.reforma-cta {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.reforma-cta-text {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-grey);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+.reforma-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-terra);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.reforma-cta-button:hover {
+  background: var(--color-terra-dark);
+}
+.reforma-cta-or {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-grey);
+  margin: 0.75rem 0;
+}
+.reforma-cta-secundaria {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-black);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.reforma-cta-secundaria:hover {
+  color: var(--color-terra);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .reforma-grid {
+    grid-template-columns: 1fr 1fr;
+  }
   .audience-grid,
   .problem-grid {
     grid-template-columns: 1fr;
@@ -436,6 +537,9 @@
   }
 }
 @media (max-width: 480px) {
+  .reforma-grid {
+    grid-template-columns: 1fr;
+  }
   .trust-reasons-grid {
     grid-template-columns: 1fr;
   }
