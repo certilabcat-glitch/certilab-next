@@ -23,6 +23,13 @@ export default function Footer() {
           <Link href="/informe-tecnico-energetico/">Informe Técnico</Link>
         </nav>
 
+        <nav className="footer-servicios" aria-label="Herramientas">
+          <h4>Herramientas</h4>
+          <Link href="/comprobador-certificado-energetico/">Comprobador de CE</Link>
+          <Link href="/calculadoracat/">Calculadora de ahorro</Link>
+          <Link href="/ayudas-eficiencia-energetica/">Guía de ayudas</Link>
+        </nav>
+
         <nav className="footer-legal" aria-label="Legal">
           <h4>Legal</h4>
           {footerLegal.map((item) => (

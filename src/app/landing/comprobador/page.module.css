@@ -1,0 +1,170 @@
+.heroLanding {
+  padding: 4rem 1.5rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.heroEyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-muted, #666);
+  margin-bottom: 0.75rem;
+}
+
+.heroLight {
+  font-weight: 300;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-muted, #555);
+  max-width: 700px;
+  margin: 1rem auto 0;
+}
+
+.heroBenefits {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.ctaRow {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  background: var(--color-accent, #0055ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btnPrimary:hover {
+  background: var(--color-accent-dark, #003dcc);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: var(--color-accent, #0055ff);
+  border: 2px solid var(--color-accent, #0055ff);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btnSecondary:hover {
+  background: var(--color-accent, #0055ff);
+  color: #fff;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-muted, #999);
+  font-size: 0.85rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border, #ddd);
+}
+
+.formSection {
+  padding: 0 1.5rem 4rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formCard {
+  background: #fff;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.formCard h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.formSub {
+  color: var(--color-muted, #666);
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--color-border, #d1d5db);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--color-accent, #0055ff);
+  box-shadow: 0 0 0 3px rgba(0, 85, 255, 0.1);
+}
+
+.formNote {
+  font-size: 0.8rem;
+  color: var(--color-muted, #888);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.formSent {
+  text-align: center;
+  padding: 2rem;
+  color: #166534;
+  font-weight: 600;
+}

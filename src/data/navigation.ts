@@ -12,8 +12,9 @@ export const navigation: NavItem[] = [
     ],
   },
   {
-    label: "Recursos",
+    label: "Herramientas",
     children: [
+      { label: "Comprobador de CE", href: "/comprobador-certificado-energetico/" },
       { label: "Calculadora de ahorro", href: "/calculadoracat/" },
       { label: "Guía de ayudas energéticas", href: "/ayudas-eficiencia-energetica/" },
     ],
