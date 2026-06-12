@@ -419,6 +419,19 @@
   background: #f5faff;
 }
 
+.alertaLista {
+  margin: 0.6rem 0 0.6rem 1.8rem;
+  padding: 0;
+  list-style: disc;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.alertaLista li {
+  margin-bottom: 0.25rem;
+}
+
 /* ===== CTA ===== */
 .pasoCTA {
   text-align: center;

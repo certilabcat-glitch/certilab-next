@@ -16,8 +16,7 @@ type Paso =
   | "certificado"
   | "contexto"
   | "lead"
-  | "alertas"
-  | "cta";
+  | "alertas";
 
 interface DatosCertificado {
   letra: string;
@@ -40,7 +39,6 @@ const PASOS = [
   { key: "contexto", label: "Contexto" },
   { key: "lead", label: "Email" },
   { key: "alertas", label: "Alertas" },
-  { key: "cta", label: "Solución" },
 ] as const;
 
 export default function ComprobadorEnergetico() {
@@ -614,13 +612,35 @@ export default function ComprobadorEnergetico() {
               <div className={styles.alertaHeader}>
                 <span className={styles.alertaIcon}>✅</span>
                 <strong className={styles.alertaTitulo}>
-                  Sin alertas destacadas
+                  Sin alertas automáticas destacadas
                 </strong>
               </div>
               <p className={styles.alertaDesc}>
-                Tu certificado parece estar en orden. Si quieres un análisis
-                más profundo, solicita una segunda opinión profesional.
+                La calificación <strong>{certificado?.letra}</strong> de tu
+                certificado parece coherente con los datos extraídos, pero la
+                realidad es que muchos certificados reflejan una calificación
+                incorrecta por:
               </p>
+              <ul className={styles.alertaLista}>
+                <li>Errores del técnico al introducir los datos</li>
+                <li>
+                  Manipulación de parámetros para inflar la calificación
+                </li>
+                <li>
+                  Datos de partida que no se corresponden con la vivienda real
+                </li>
+              </ul>
+              <p className={styles.alertaDesc}>
+                La única forma de saber si el tuyo es fiable es que un técnico
+                independiente lo revise.
+              </p>
+              <a
+                href="/segunda-opinion"
+                className={styles.submitBtn}
+                style={{ display: "inline-block", textAlign: "center", marginTop: "1rem" }}
+              >
+                Solicitar revisión profesional →
+              </a>
             </div>
           )}
 
@@ -646,68 +666,6 @@ export default function ComprobadorEnergetico() {
               <p className={styles.alertaDesc}>{alerta.descripcion}</p>
             </div>
           ))}
-
-          <button className={styles.submitBtn} onClick={() => setPaso("cta")}>
-            Ver soluciones →
-          </button>
-        </div>
-      )}
-
-      {/* ===== PASO 5: CTA OFERTA ===== */}
-      {paso === "cta" && (
-        <div className={styles.pasoCTA}>
-          <h2 className={styles.subtitle}>
-            ¿Quieres resolverlo con profesionales?
-          </h2>
-          <p className={styles.desc}>
-            En CertiLab te ayudamos a interpretar tu certificado, conseguir
-            subvenciones y mejorar la eficiencia de tu vivienda.
-          </p>
-
-          <div className={styles.ctaCards}>
-            <div className={styles.ctaCard}>
-              <span className={styles.ctaCardIcon}>&#128221;</span>
-              <h3>Segunda opinión</h3>
-              <p>
-                Un técnico revisa tu certificado y te dice si es correcto o
-                tiene errores.
-              </p>
-              <a
-                href="/segunda-opinion"
-                className={styles.ctaBtn}
-              >
-                Solicitar
-              </a>
-            </div>
-            <div className={styles.ctaCard}>
-              <span className={styles.ctaCardIcon}>📋</span>
-              <h3>Informe Técnico</h3>
-              <p>
-                Análisis completo con plan de mejora, subvenciones y ahorro
-                estimado.
-              </p>
-              <a
-                href="/informe-tecnico-energetico"
-                className={styles.ctaBtn}
-              >
-                Solicitar
-              </a>
-            </div>
-            <div className={styles.ctaCard}>
-              <span className={styles.ctaCardIcon}>🏛️</span>
-              <h3>Gestión de ayudas</h3>
-              <p>
-                Te ayudamos a solicitar subvenciones Next Generation para tu
-                reforma.
-              </p>
-              <a
-                href="/ayudas-eficiencia-energetica"
-                className={styles.ctaBtn}
-              >
-                Información
-              </a>
-            </div>
-          </div>
 
           <button className={styles.otraBtn} onClick={resetear}>
             Comprobar otro certificado
