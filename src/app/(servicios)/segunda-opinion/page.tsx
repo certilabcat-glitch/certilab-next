@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import HeroSection from "@/components/sections/HeroSection";
-import ComparativaSection from "@/components/sections/ComparativaSection";
 import FAQSection from "@/components/sections/FAQSection";
-import CTASection from "@/components/sections/CTASection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import { segundaOpinionFaq } from "@/data/faq";
 import { waDiagnostico } from "@/lib/wa";
@@ -157,35 +155,6 @@ export default function SegundaOpinionPage() {
         </div>
       </section>
 
-      {/* ===== COMPARATIVA ===== */}
-      <ComparativaSection
-        title="Informe Algorítmico vs. Segunda Opinión Certilab"
-        subtitle="No todos los análisis son iguales. Mira lo que obtienes con cada uno."
-        cols={[
-          {
-            label: "Informe Algorítmico (30-50€)",
-            items: [
-              "Generado por software sin revisión técnica real",
-              "Sin responsabilidad profesional",
-              "Datos genéricos del catastro, sin verificar",
-              "Sin detección de Brown Discount",
-              "PDF de 2-3 páginas con plantilla estándar",
-            ],
-          },
-          {
-            label: "Segunda Opinión Certilab (39€)",
-            items: [
-              "Revisado por arquitecta técnica colegiada, CATEB Barcelona",
-              "Con seguro de responsabilidad civil profesional",
-              "Análisis basado en documentación real de tu inmueble",
-              "Detecta el Brown Discount antes de que afecte a tu precio",
-              "Informe de 5-10 páginas con validez ante notario y banco",
-            ],
-            destacado: true,
-          },
-        ]}
-      />
-
       {/* ===== POR QUÉ CERTILAB ===== */}
       <section className={`${styles.section} ${styles["trust-reasons-section"]}`}>
         <h2 className={styles["section-title"]}>¿Por qué confiar tu revisión a Certilab?</h2>
@@ -219,14 +188,6 @@ export default function SegundaOpinionPage() {
 
       {/* ===== FAQ ===== */}
       <FAQSection items={segundaOpinionFaq} title="Preguntas frecuentes sobre la Segunda Opinión" />
-
-      {/* ===== CTA FINAL ===== */}
-      <CTASection
-        title="¿Desconfías de la calificación de tu certificado?"
-        text="Por 39€ te decimos si es fiable. Sin compromiso. Con el rigor técnico de una arquitecta técnica colegiada."
-        buttonText="Enviar mi certificado para revisión"
-        buttonHref={waDiagnostico()}
-      />
 
       {/* ===== STICKY CTA BAR ===== */}
       <div className={styles["sticky-cta-bar"]}>
