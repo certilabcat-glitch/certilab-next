@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
-import IncludesBox from "@/components/ui/IncludesBox";
 import HeroSection from "@/components/sections/HeroSection";
-import FeaturesGrid from "@/components/sections/FeaturesGrid";
-import StepsGrid from "@/components/sections/StepsGrid";
 import ComparativaSection from "@/components/sections/ComparativaSection";
 import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
-import TrustBlockSection from "@/components/sections/TrustBlockSection";
-import TrustNumbers from "@/components/sections/TrustNumbers";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import BDHelp from "@/components/ui/BDHelp";
 import { segundaOpinionFaq } from "@/data/faq";
 import { waDiagnostico } from "@/lib/wa";
 import styles from "./SegundaOpinion.module.css";
@@ -27,19 +21,6 @@ export const metadata: Metadata = {
     url: "https://www.certilab.cat/segunda-opinion/",
   },
 };
-
-const features = [
-  { num: "I", title: "Revisión de calificación", text: "Analizamos la calificación asignada y la comparamos con los datos reales del inmueble para detectar si está inflada o es incorrecta." },
-  { num: "II", title: "Detección de errores", text: "Identificamos discrepancias, valores inventados, omisiones y cualquier anomalía que pueda afectar a la calificación." },
-  { num: "III", title: "Informe claro y útil", text: "Te explicamos en lenguaje sencillo qué significa realmente tu certificado y si puedes confiar en él para tu compra o venta." },
-  { num: "IV", title: "Detección de Brown Discount", text: "Identificamos si tu inmueble sufre el descuento por mala calificación energética, que puede restar hasta un 15% de su valor." },
-];
-
-const steps = [
-  { title: "Envíanos tu certificado", text: "Sube tu certificado energético en PDF o imagen junto con la dirección del inmueble. Sin desplazamientos." },
-  { title: "Analizamos tu certificado", text: "El equipo técnico revisa personalmente cada caso. Sin algoritmos, sin automatismos. Con rigor técnico profesional." },
-  { title: "Recibes tu dictamen", text: "Informe PDF detallado con conclusiones, errores detectados, detección de Brown Discount y próximos pasos." },
-];
 
 export default function SegundaOpinionPage() {
   return (
@@ -69,13 +50,12 @@ export default function SegundaOpinionPage() {
         </p>
       </HeroSection>
 
-      {/* TRUST INDICATORS */}
-      <TrustNumbers />
-
-      {/* TARGET AUDIENCE — ¿ERES...? */}
+      {/* ===== EL PROBLEMA ===== */}
       <section className={`${styles.section} ${styles["audience-section"]}`}>
-        <h2 className={styles["section-title"]}>¿Estás en alguna de estas situaciones?</h2>
-        <p className={styles["section-sub"]}>Identifícate en 2 segundos. Cada caso tiene una respuesta distinta.</p>
+        <h2 className={styles["section-title"]}>El problema que resuelve la Segunda Opinión</h2>
+        <p className={styles["section-sub"]}>
+          Cada situaci&oacute;n requiere una respuesta distinta. Descubre c&oacute;mo te afecta tu certificado energ&eacute;tico.
+        </p>
         <div className={styles["audience-grid"]}>
           <div className={styles["audience-card"]}>
             <h3>Vas a comprar una vivienda</h3>
@@ -89,13 +69,13 @@ export default function SegundaOpinionPage() {
           </div>
           <div className={styles["audience-card"]}>
             <h3>Vives en tu casa y quieres saber tu letra</h3>
-            <p>Saber tu calificación real te permite calcular cuánto gastas en energía, cuánto puedes ahorrar con mejoras, y si puedes acceder a subvenciones. ¿Has reformado? Quizás te corresponda una letra mejor. Con la Segunda Opinión descubres tu punto de partida real para tomar decisiones con conocimiento.</p>
-            <a href={waDiagnostico()} className={styles["audience-link"]}>Quiero saber mi letra y aprovechar las ayudas →</a>
+            <p>Saber tu calificación real te permite calcular cuánto gastas en energía, cuánto puedes ahorrar con mejoras, y si puedes acceder a subvenciones. ¿Has reformado? Quizás te corresponda una letra mejor.</p>
+            <a href={waDiagnostico()} className={styles["audience-link"]}>Quiero saber mi letra real →</a>
           </div>
         </div>
       </section>
 
-      {/* ROI CONTRAST — CUÁNTO PUEDES PERDER */}
+      {/* ===== ROI CONTRAST ===== */}
       <section className={`${styles.section} ${styles["roi-contrast-section"]}`}>
         <h2 className={styles["section-title"]}>39€ de inversión vs. miles de euros de riesgo</h2>
         <p className={styles["section-sub"]}>Esto es lo que está en juego si tu certificado no es fiable.</p>
@@ -103,7 +83,7 @@ export default function SegundaOpinionPage() {
           <div className={`${styles["roi-contrast-card"]} ${styles.bad}`}>
             <div className={styles["roi-contrast-label"]}>Sin revisión</div>
             <div className={styles["roi-contrast-amount"]}>Hasta 40.000€</div>
-            <div className={styles["roi-contrast-desc"]}>de pérdida por <BDHelp /> en una vivienda de 270.000€</div>
+            <div className={styles["roi-contrast-desc"]}>de pérdida por Brown Discount en una vivienda de 270.000€</div>
             <ul className={styles["roi-contrast-list"]}>
               <li>✗ No sabes si la calificación es real</li>
               <li>✗ Pagas de más, vendes por menos o pierdes ayudas</li>
@@ -129,72 +109,55 @@ export default function SegundaOpinionPage() {
         </div>
       </section>
 
-      {/* PROBLEMA QUE RESUELVE */}
-      <section className={`${styles.section} ${styles["problem-section"]}`}>
-        <h2 className={styles["section-title"]}>¿Por qué necesita una Segunda Opinión?</h2>
-        <p className={styles["section-sub"]}>El 30% de los certificados energéticos contienen errores. Si compras, puedes estar pagando de más. Si vendes, puedes estar regalando dinero.</p>
-        <div className={styles["problem-grid"]}>
-          <div className={styles["problem-card"]}>
-            <h3>Calificaciones infladas</h3>
-            <p>Una calificación superior a la real puede engañar a compradores o perjudicar a vendedores que infravaloran su inmueble. Una B que debería ser una E oculta un sobrecoste energético de miles de euros al año.</p>
-          </div>
-          <div className={styles["problem-card"]}>
-            <h3><BDHelp />: pérdida de valor</h3>
-            <p>Un inmueble con calificación E, F o G puede perder entre un <strong>5% y un 15%</strong> de su valor de mercado. Son hasta <strong>40.000€</strong> en una vivienda de 270.000€. Si vendes, puedes estar regalando dinero. Si compras, puedes estar pagando de más. Nuestro informe lo detecta.</p>
-          </div>
-          <div className={styles["problem-card"]}>
-            <h3>Datos sin verificar</h3>
-            <p>Muchos certificados se elaboran con datos genéricos del catastro, sin visita presencial. Si su certificado no es fiable, cualquier decisión que tome sobre él tampoco lo será.</p>
-          </div>
-        </div>
-        <div className={styles["problem-cta"]}>
-          <a href={waDiagnostico()} className={styles["problem-cta-button"]}>Quiero saber si mi certificado es fiable →</a>
-        </div>
-      </section>
-
-      {/* SECCIÓN REFORMISTA — conectar desde comprobador y segunda opinión */}
-      <section className={`${styles.section} ${styles["reforma-section"]}`}>
-        <h2 className={styles["section-title"]}>¿Tu certificado tiene letra E, F o G? Hay solución</h2>
+      {/* ===== QUÉ INCLUYE Y CÓMO FUNCIONA (fusionado) ===== */}
+      <section className={`${styles.section} ${styles["merged-section"]}`}>
+        <h2 className={styles["section-title"]}>Qué incluye y cómo funciona</h2>
         <p className={styles["section-sub"]}>
-          Si tras la Segunda Opinión confirmamos que tu calificación es real pero baja, te explicamos qué reformas pueden mejorarla y cuánto puedes ahorrar.
+          Todo lo que necesitas para saber si puedes confiar en tu certificado energético, explicado paso a paso.
         </p>
-        <div className={styles["reforma-grid"]}>
-          <div className={styles["reforma-card"]}>
-            <div className={styles["reforma-icon"]}>🪟</div>
-            <h3>Sustitución de ventanas</h3>
-            <p>Cambiar ventanas por unas de doble acristalamiento con rotura de puente térmico puede mejorar hasta 2 letras. Ahorro estimado: 200–600 €/año en calefacción.</p>
+        <div className={styles["merged-grid"]}>
+          <div className={styles["merged-include-col"]}>
+            <h3 className={styles["merged-col-title"]}>Incluye</h3>
+            <ul className={styles["merged-include-list"]}>
+              <li>Revisión de la calificación energética asignada</li>
+              <li>Detección de errores, discrepancias y valores inventados</li>
+              <li>Detección de Brown Discount (pérdida de valor del inmueble)</li>
+              <li>Informe PDF detallado con conclusiones técnicas</li>
+              <li>Recomendaciones accionables</li>
+              <li>Orientación sobre próximos pasos</li>
+            </ul>
           </div>
-          <div className={styles["reforma-card"]}>
-            <div className={styles["reforma-icon"]}>🧱</div>
-            <h3>Aislamiento de fachada</h3>
-            <p>Añadir aislamiento térmico por el exterior (SATE) o interior reduce la demanda energética hasta un 50%. SUBVENCIONABLE con fondos Next Generation.</p>
+          <div className={styles["merged-steps-col"]}>
+            <h3 className={styles["merged-col-title"]}>Cómo funciona</h3>
+            <div className={styles["merged-step"]}>
+              <span className={styles["merged-step-num"]}>1</span>
+              <div>
+                <h4>Envíanos tu certificado</h4>
+                <p>Sube tu certificado energético en PDF o imagen junto con la dirección del inmueble. Sin desplazamientos.</p>
+              </div>
+            </div>
+            <div className={styles["merged-step"]}>
+              <span className={styles["merged-step-num"]}>2</span>
+              <div>
+                <h4>Analizamos tu certificado</h4>
+                <p>El equipo técnico revisa personalmente cada caso. Sin algoritmos, sin automatismos. Con rigor técnico profesional.</p>
+              </div>
+            </div>
+            <div className={styles["merged-step"]}>
+              <span className={styles["merged-step-num"]}>3</span>
+              <div>
+                <h4>Recibes tu dictamen</h4>
+                <p>Informe PDF detallado con conclusiones, errores detectados, detección de Brown Discount y próximos pasos.</p>
+              </div>
+            </div>
+            <div className={styles["merged-step-cta"]}>
+              <a href={waDiagnostico()} className={styles["merged-step-button"]}>Solicitar Segunda Opinión →</a>
+            </div>
           </div>
-          <div className={styles["reforma-card"]}>
-            <div className={styles["reforma-icon"]}>☀️</div>
-            <h3>Energía solar fotovoltaica</h3>
-            <p>Instalar placas solares reduce el consumo de red hasta un 60%. Ayudas de hasta el 40% del coste. Tu certificado mejorará al menos 1 letra.</p>
-          </div>
-          <div className={styles["reforma-card"]}>
-            <div className={styles["reforma-icon"]}>🔥</div>
-            <h3>Caldera de biomasa o aerotermia</h3>
-            <p>Sustituir caldera de gasóleo o gas por aerotermia o biomasa reduce emisiones hasta un 70%. Ayudas de hasta 3.000 € disponibles.</p>
-          </div>
-        </div>
-        <div className={styles["reforma-cta"]}>
-          <p className={styles["reforma-cta-text"]}>
-            ¿Quieres saber qué reformas concretas necesita tu vivienda? Te hacemos un <strong>informe técnico personalizado</strong> con mejoras y ayudas disponibles.
-          </p>
-          <a href="/informe-tecnico-energetico/" className={styles["reforma-cta-button"]}>
-            Solicitar informe de reformas →
-          </a>
-          <span className={styles["reforma-cta-or"]}>o</span>
-          <a href="/comprobador-certificado-energetico/" className={styles["reforma-cta-secundaria"]}>
-            Probar el comprobador gratuito →
-          </a>
         </div>
       </section>
 
-      {/* COMPARATIVA VISUAL */}
+      {/* ===== COMPARATIVA ===== */}
       <ComparativaSection
         title="Informe Algorítmico vs. Segunda Opinión Certilab"
         subtitle="No todos los análisis son iguales. Mira lo que obtienes con cada uno."
@@ -223,27 +186,10 @@ export default function SegundaOpinionPage() {
         ]}
       />
 
-      <FeaturesGrid features={features} />
-      <StepsGrid steps={steps} />
-
-      {/* QUÉ INCLUYE – MOVED UP AFTER STEPS */}
-      <section className={`${styles.section} ${styles["includes-section"]}`}>
-        <h2 className={styles["section-title"]}>¿Qué incluye por 39€?</h2>
-        <p className={styles["section-sub"]}>Todo lo que necesita para saber si puede confiar en su certificado energético.</p>
-        <IncludesBox items={[
-          "Análisis detallado del certificado existente",
-          "Detección de discrepancias y anomalías",
-          "Detección de Brown Discount",
-          "Informe PDF con conclusiones técnicas",
-          "Recomendaciones accionables",
-          "Orientación sobre próximos pasos",
-        ]} />
-      </section>
-
-      {/* MICRO-CONFIANZA: POR QUÉ CERTILAB */}
+      {/* ===== POR QUÉ CERTILAB ===== */}
       <section className={`${styles.section} ${styles["trust-reasons-section"]}`}>
-        <h2 className={styles["section-title"]}>¿Por qué confiar su revisión a Certilab?</h2>
-        <p className={styles["section-sub"]}>No somos comprador, ni vendedor, ni agencia inmobiliaria. No tenemos interés en la operación. Somos profesionales independientes, como un juez técnico: nuestra única función es decir la verdad sobre su certificado.</p>
+        <h2 className={styles["section-title"]}>¿Por qué confiar tu revisión a Certilab?</h2>
+        <p className={styles["section-sub"]}>No somos comprador, ni vendedor, ni agencia inmobiliaria. No tenemos interés en la operación. Somos profesionales independientes, como un juez técnico: nuestra única función es decir la verdad sobre tu certificado.</p>
         <div className={styles["trust-reasons-grid"]}>
           <div className={styles["trust-reason-card"]}>
             <div className={styles["trust-reason-num"]}>01</div>
@@ -258,30 +204,31 @@ export default function SegundaOpinionPage() {
           <div className={styles["trust-reason-card"]}>
             <div className={styles["trust-reason-num"]}>03</div>
             <h3>Independencia total</h3>
-            <p>No compramos, no vendemos, no intermediarios. No somos agencia inmobiliaria. Actuamos como peritos independientes: no nos beneficia que compre, venda o alquile. Solo nos importa la verdad técnica de su certificado.</p>
+            <p>No compramos, no vendemos, no intermediarios. Actuamos como peritos independientes: no nos beneficia que compres, vendas o alquiles. Solo nos importa la verdad técnica de tu certificado.</p>
           </div>
           <div className={styles["trust-reason-card"]}>
             <div className={styles["trust-reason-num"]}>04</div>
             <h3>Sin esperas ni papeleo</h3>
-            <p>100% online. Envíenos su PDF por WhatsApp y recibirá su informe en 24-48h. Sin desplazarse, sin llamadas, sin compromiso.</p>
+            <p>100% online. Envíanos tu PDF por WhatsApp y recibe tu informe en 24-48h. Sin desplazarte, sin llamadas, sin compromiso.</p>
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* ===== TESTIMONIALS ===== */}
       <TestimonialsSection />
 
+      {/* ===== FAQ ===== */}
       <FAQSection items={segundaOpinionFaq} title="Preguntas frecuentes sobre la Segunda Opinión" />
 
+      {/* ===== CTA FINAL ===== */}
       <CTASection
-        title="¿Desconfía de la calificación de su certificado?"
-        text="Por 39€ le decimos si es fiable. Sin compromiso. Con el rigor técnico de una arquitecta técnica colegiada."
+        title="¿Desconfías de la calificación de tu certificado?"
+        text="Por 39€ te decimos si es fiable. Sin compromiso. Con el rigor técnico de una arquitecta técnica colegiada."
         buttonText="Enviar mi certificado para revisión"
         buttonHref={waDiagnostico()}
       />
-      <TrustBlockSection />
 
-      {/* STICKY CTA BAR – TODOS LOS DISPOSITIVOS */}
+      {/* ===== STICKY CTA BAR ===== */}
       <div className={styles["sticky-cta-bar"]}>
         <div className={styles["sticky-cta-inner"]}>
           <div className={styles["sticky-cta-info"]}>
@@ -350,7 +297,7 @@ export default function SegundaOpinionPage() {
         }}
       />
 
-      {/* Schema.org HowTo — pasos del servicio */}
+      {/* Schema.org HowTo */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -400,7 +347,7 @@ export default function SegundaOpinionPage() {
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.certilab.cat/" },
-              { "@type": "ListItem", position: 2, name: "Segunda Opinión Certificado Energético", item: "https://www.certilab.cat/segunda-opinion/" },
+              { "@type": "ListItem", position: 2, name: "Segunda Opinión", item: "https://www.certilab.cat/segunda-opinion/" },
             ],
           }),
         }}
