@@ -82,6 +82,22 @@ const nextConfig: NextConfig = {
         destination: "/segunda-opinion",
         permanent: true,
       },
+      // URLs fantasma — redirigir a home
+      {
+        source: "/en/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/fondos-next-generation-2026/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/obtener-certificado-energetico-gratis/:path*",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { articles, getArticle, getRelatedArticles } from "@/data/articles";
-import { waDiagnostico } from "@/lib/wa";
 import "./post.css";
 
 interface Props {
@@ -78,7 +77,7 @@ function formatContent(raw: string): string {
   // --- INLINE CTA: [cta:segunda-opinion] ---
   html = html.replace(
     /\[cta:segunda-opinion\]/g,
-    '</p><div class="post-cta-inline"><div class="post-cta-inline-icon">🔍</div><div class="post-cta-inline-body"><p><strong>¿Tienes dudas sobre tu certificado energético?</strong> Solicita una Segunda Opinión y descubre si es correcto antes de que te cueste dinero.</p><a href="/segunda-opinion/" class="post-cta-inline-link">Pedir Segunda Opinión</a></div></div><p class="post-p">'
+    '</p><div class="post-cta-inline"><div class="post-cta-inline-icon">🔍</div><div class="post-cta-inline-body"><p><strong>¿No te fías de tu certificado energético?</strong> Por 39€ un técnico lo revisa y te dice si es correcto.</p><a href="/segunda-opinion/" class="post-cta-inline-link">Revisar mi certificado →</a></div></div><p class="post-p">'
   );
 
   // --- PRE-PARSE (preserve TL;DR) ---
@@ -201,17 +200,10 @@ function getServiceCta(tags: string[]): { text: string; url: string; label: stri
       label: "Solicitar Check-Up →",
     };
   }
-  if (tags.some((t) => t.includes("errores") || t.includes("falso") || t.includes("guía") || t.includes("fraude"))) {
-    return {
-      text: "¿Tienes dudas sobre tu certificado energético? Solicita una Segunda Opinión.",
-      url: "/segunda-opinion/",
-      label: "Pedir Segunda Opinión →",
-    };
-  }
   return {
-    text: "¿Tienes dudas con tu certificado energético? Te ayudamos.",
+    text: "¿No te fías de tu certificado energético? Por 39€ un técnico lo revisa y te dice si es correcto.",
     url: "/segunda-opinion/",
-    label: "Pedir Segunda Opinión →",
+    label: "Revisar mi certificado →",
   };
 }
 
@@ -269,20 +261,6 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
 
-        <div className="post-cta">
-          <p>
-            ¿Tienes dudas sobre tu certificado energético?{" "}
-            <strong>Consulta gratis por WhatsApp</strong>
-          </p>
-          <a
-            href={waDiagnostico()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-          >
-            Consultar gratis
-          </a>
-        </div>
       </article>
 
       {related.length > 0 && (

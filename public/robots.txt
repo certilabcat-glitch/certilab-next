@@ -1,5 +1,17 @@
 User-agent: *
-Allow: /
+Disallow: /comprobador-certificado-energetico
+Disallow: /landing/comprobador
+Disallow: /saas
+Disallow: /saas/
+Disallow: /resultado-auditoria
+Disallow: /gracias
+Disallow: /ayudas-eficiencia-energetica
+Disallow: /profesionales
+Disallow: /calculadoracat
+Disallow: /configurar-auditoria
+Disallow: /formulario
+Disallow: /buscador-certificado-energetico-catalunya
+Disallow: /cercador-certificats-energetics
 
 Sitemap: https://www.certilab.cat/sitemap.xml
 Sitemap: https://www.certilab.cat/llms.txt
