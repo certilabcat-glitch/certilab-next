@@ -36,7 +36,7 @@ export default function HomePage() {
           "20 años de experiencia",
           "Seguro RC Profesional",
         ]}
-        ctaPrimary={{ label: "Diagnóstico Gratuito", href: waDiagnostico() }}
+        ctaPrimary={{ label: "Solicitar información", href: waDiagnostico() }}
         ctaSecondary={{
           label: "Cómo funciona →",
           href: "#servicios",
@@ -59,7 +59,7 @@ export default function HomePage() {
       <CTASection
         title="¿Listo para proteger tu inversión?"
         text="El Diagnóstico Express es gratuito y confidencial. En 5 minutos sabrás qué riesgos energéticos e inmobiliarios afectan a tu caso. Sin compromiso. Sin presiones."
-        buttonText="Diagnóstico Gratuito"
+        buttonText="Solicitar información"
         buttonHref={waDiagnostico()}
       />
 

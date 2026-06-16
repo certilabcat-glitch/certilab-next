@@ -164,7 +164,7 @@ export default function ContactForm() {
             className={styles.btnPrimary}
             disabled={sending}
           >
-            {sending ? "Enviando..." : "Solicitar Diagnóstico Gratuito"}
+            {sending ? "Enviando..." : "Solicitar información"}
           </button>
         </form>
       </div>

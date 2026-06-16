@@ -31,7 +31,7 @@ export default function DespachoSection() {
 
         <div className={styles.ctas}>
           <Link href="/#diagnostico" className="btn-primary">
-            Diagnóstico Gratuito
+            Solicitar información
           </Link>
           <Link href="/#servicios" className="btn-ghost">
             Servicios →

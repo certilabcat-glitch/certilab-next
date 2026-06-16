@@ -4,7 +4,6 @@ import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation } from "@/data/navigation";
-import { waDiagnostico } from "@/lib/wa";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -212,16 +211,6 @@ export default function Header() {
                 </li>
               );
             })}
-            <li className={styles["nav-ctas"]} role="none">
-              <a
-                href={waDiagnostico()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles["nav-cta"]}
-              >
-                Diagnóstico Gratis
-              </a>
-            </li>
           </ul>
         </div>
       </nav>
