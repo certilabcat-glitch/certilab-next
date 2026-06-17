@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
-import { waDiagnostico } from "@/lib/wa";
+import { waUrl } from "@/lib/wa";
 import "./sobre-nosotros.css";
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export default function SobreNosotrosPage() {
         title="¿Hablamos?"
         text="Si tienes cualquier duda sobre tu certificado energético o tu vivienda, escríbenos. Sin compromiso. Sin presión."
         buttonText="Hablar con Eva"
-        buttonHref={waDiagnostico()}
+        buttonHref={waUrl()}
       />
       <TrustBlockSection />
 

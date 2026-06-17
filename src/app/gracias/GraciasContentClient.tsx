@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { waDiagnostico } from "@/lib/wa";
+import { waUrl } from "@/lib/wa";
 import styles from "./GraciasContentClient.module.css";
 
 export default function GraciasContentClient() {
@@ -22,7 +22,7 @@ export default function GraciasContentClient() {
     // Redirigir a WhatsApp a los 3 segundos (solo si viene de landing)
     if (magnet) {
       const timer = setTimeout(() => {
-        window.location.href = waDiagnostico();
+        window.location.href = waUrl();
       }, 3000);
       return () => clearTimeout(timer);
     }
@@ -62,7 +62,7 @@ export default function GraciasContentClient() {
           </ul>
         </div>
         <a
-          href={waDiagnostico()}
+          href={waUrl()}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.btnPrimary}

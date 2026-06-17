@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import CTASection from "@/components/sections/CTASection";
-import { waDiagnostico } from "@/lib/wa";
+import { waUrl } from "@/lib/wa";
 import styles from "./page.module.css";
 
 export default function CercadorPage() {
@@ -65,7 +65,7 @@ export default function CercadorPage() {
         title="Necessites orientaci&oacute;?"
         text="T&rsquo;ajudem a trobar el que necessites, sense comprom&iacute;s."
         buttonText="Consultar gratis"
-        buttonHref={waDiagnostico()}
+        buttonHref={waUrl()}
       />
     </>
   );

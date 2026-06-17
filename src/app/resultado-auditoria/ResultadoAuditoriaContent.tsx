@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { waDiagnostico } from "@/lib/wa";
+import { waUrl } from "@/lib/wa";
 import styles from "./ResultadoAuditoriaContent.module.css";
 
 export default function ResultadoAuditoriaContent() {
@@ -28,7 +28,7 @@ export default function ResultadoAuditoriaContent() {
           directamente.
         </p>
         <a
-          href={waDiagnostico()}
+          href={waUrl()}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.btnPrimary}

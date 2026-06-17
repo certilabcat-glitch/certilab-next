@@ -82,6 +82,12 @@ const nextConfig: NextConfig = {
         destination: "/segunda-opinion",
         permanent: true,
       },
+      // Redirigir slug antiguo de sanciones al nuevo artículo fusionado
+      {
+        source: "/blog/sanciones-multas-no-tener-certificado-energetico",
+        destination: "/blog/multas-certificado-energetico",
+        permanent: true,
+      },
       // URLs fantasma — redirigir a home
       {
         source: "/en/:path*",

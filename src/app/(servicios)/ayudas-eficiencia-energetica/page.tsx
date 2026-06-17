@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
-import { waDiagnostico } from "@/lib/wa";
+import { waUrl } from "@/lib/wa";
 import { trackViewContent, trackContact } from "@/lib/meta-pixel";
 import styles from "./page.module.css";
 
@@ -85,7 +85,7 @@ export default function AyudasEficienciaPage() {
         </div>
         <div className={styles.heroCtas}>
           <a
-            href={waDiagnostico()}
+            href={waUrl()}
             className={styles.btnPrimary}
             onClick={() => trackContact({ content_name: "ayudas-whatsapp-cta" })}
           >
@@ -291,7 +291,7 @@ export default function AyudasEficienciaPage() {
         title="¿Quieres saber qué ayudas aplican a tu vivienda?"
         text="Solicita un diagnóstico gratuito y te orientamos sin compromiso."
         buttonText="Consultar gratis"
-        buttonHref={waDiagnostico()}
+        buttonHref={waUrl()}
       />
 
       <TrustBlockSection />
