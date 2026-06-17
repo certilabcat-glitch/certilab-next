@@ -5,7 +5,7 @@ export default function HowItWorks() {
   const steps = [
     {
       title: "Cuéntanos tu caso",
-      text: "Rellena el formulario o empieza con el Diagnóstico Express gratuito. En 5 minutos sabemos qué necesitas.",
+      text: "Rellena el formulario o explícanos tu situación. En 5 minutos sabemos qué necesitas.",
     },
     {
       title: "Enviamos documentación",

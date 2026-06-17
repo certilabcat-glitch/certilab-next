@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import CTASection from "@/components/sections/CTASection";
-import { waDiagnostico } from "@/lib/wa";
+import { waUrl } from "@/lib/wa";
 import styles from "./page.module.css";
 
 export default function BuscadorPage() {
@@ -62,7 +62,7 @@ export default function BuscadorPage() {
         title="¿Necesitas orientación?"
         text="Te ayudamos a encontrar lo que necesitas, sin compromiso."
         buttonText="Consultar gratis"
-        buttonHref={waDiagnostico()}
+        buttonHref={waUrl("Hola, quiero consultar sobre el buscador de certificados energéticos.")}
       />
     </>
   );

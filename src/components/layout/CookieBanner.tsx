@@ -83,7 +83,6 @@ export default function CookieBanner() {
   }, []);
 
   // Añade clase al body mientras el banner está visible
-  // para que CSS pueda ocultar sticky-cta-bars que interceptan clicks
   useEffect(() => {
     if (show) {
       document.body.classList.add("has-cookie-banner");

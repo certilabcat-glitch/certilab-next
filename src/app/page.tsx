@@ -8,7 +8,6 @@ import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import { homeFaq } from "@/data/faq";
-import { waDiagnostico } from "@/lib/wa";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -36,7 +35,7 @@ export default function HomePage() {
           "20 años de experiencia",
           "Seguro RC Profesional",
         ]}
-        ctaPrimary={{ label: "Solicitar información", href: waDiagnostico() }}
+        ctaPrimary={{ label: "Revisar mi certificado por 59€", href: "/segunda-opinion/" }}
         ctaSecondary={{
           label: "Cómo funciona →",
           href: "#servicios",
@@ -58,9 +57,9 @@ export default function HomePage() {
 
       <CTASection
         title="¿Listo para proteger tu inversión?"
-        text="El Diagnóstico Express es gratuito y confidencial. En 5 minutos sabrás qué riesgos energéticos e inmobiliarios afectan a tu caso. Sin compromiso. Sin presiones."
-        buttonText="Solicitar información"
-        buttonHref={waDiagnostico()}
+        text="Analizamos tu certificado energético de forma rigurosa e independiente. Recibe tu Segunda Opinión en 24h. Sin compromiso. Sin presiones."
+        buttonText="Revisar mi certificado por 59€"
+        buttonHref="/segunda-opinion/"
       />
 
       <TrustBlockSection />

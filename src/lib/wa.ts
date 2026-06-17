@@ -8,12 +8,6 @@ export function waUrl(message?: string): string {
   return base;
 }
 
-export function waDiagnostico(): string {
-  return waUrl(
-    "Hola, vengo desde certilab.cat. Quiero hacer el Diagnóstico Express gratuito."
-  );
-}
-
 export function waSaas(plan?: string): string {
   const msg = plan
     ? `Hola, vengo desde la web de Certilab SaaS. Me interesa el plan ${plan}.`

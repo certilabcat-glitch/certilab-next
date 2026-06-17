@@ -110,7 +110,6 @@ export default function RootLayout({
                     "Segunda Opinión Certificado Energético",
                     "Check-Up Inmobiliario",
                     "Informe Técnico Energético",
-                    "Diagnóstico Express Energético",
                   ],
                   priceRange: "0€ – 399€",
                   telephone: "+34 722 437 675",

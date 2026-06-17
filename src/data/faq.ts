@@ -10,8 +10,8 @@ export const homeFaq: FAQItem[] = [
     a: "No incluye la emisión de un certificado nuevo, pero analizamos en profundidad el certificado energético existente del inmueble como parte del informe completo. Verificamos su fiabilidad, detectamos errores y lo integramos con la Nota Simple, Catastral y análisis de cargas.",
   },
   {
-    q: "¿Trabajáis solo en el Garraf o en toda Cataluña?",
-    a: "Al ser servicios 100% remotos basados en documentación, trabajamos en toda España sin restricción geográfica. Nuestro análisis técnico es válido independientemente de la ubicación del inmueble.",
+    q: "¿Trabajáis en toda España?",
+    a: "Sí. Operamos 100% en remoto para toda España. Nos envías el certificado energético por email o WhatsApp y te devolvemos el informe en 24-48h sin importar dónde esté el inmueble.",
   },
   {
     q: "¿Puedo pedir el Informe Técnico si quiero solicitar ayudas Next Generation?",
