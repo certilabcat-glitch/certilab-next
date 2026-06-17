@@ -19,7 +19,7 @@ const testimonials: Testimonial[] = [
     role: "Propietaria, Girona",
   },
   {
-    text: "Me explicaron el Brown Discount de una forma que entendí. Por 39€ evitamos pagar de más en la hipoteca. Increíble.",
+    text: "Me explicaron el Brown Discount de una forma que entendí. Por 59€ evitamos pagar de más en la hipoteca. Increíble.",
     author: "Javier L.",
     role: "Comprador, Tarragona",
   },

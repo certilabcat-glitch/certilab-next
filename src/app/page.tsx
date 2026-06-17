@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Certilab | Arquitectura Técnica Forense · Consultoría Energética",
   description:
-    "Consultoría energética forense. Análisis técnico independiente del certificado energético con responsabilidad profesional Cateb 9457. Segunda opinión desde 39€.",
+    "Consultoría energética forense. Análisis técnico independiente del certificado energético con responsabilidad profesional Cateb 9457. Segunda opinión desde 59€.",
   alternates: { canonical: "https://www.certilab.cat/" },
   openGraph: {
     title: "Certilab | Arquitectura Técnica Forense · Consultoría Energética",

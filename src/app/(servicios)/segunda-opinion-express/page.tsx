@@ -64,7 +64,7 @@ export default function SegundaOpinionExpressPage() {
         price="79 €"
         credentials="Eva María González García · Arquitecta Técnica colegiada"
         ctaPrimary={{ label: "Solicitar Express", href: waUrl }}
-        ctaSecondary={{ label: "→ Volver a la estándar (39€)", href: "/segunda-opinion/" }}
+        ctaSecondary={{ label: "→ Volver a la estándar (59€)", href: "/segunda-opinion/" }}
         nota="Precio cerrado sin sorpresas (sin IVA). Servicio disponible lunes a viernes de 9:00 a 18:00 h."
       >
         <p className="hero-garantia">
@@ -115,7 +115,7 @@ export default function SegundaOpinionExpressPage() {
             <thead>
               <tr>
                 <th>Característica</th>
-                <th>Estándar (39€)</th>
+                <th>Estándar (59€)</th>
                 <th>Express (79€)</th>
               </tr>
             </thead>

@@ -50,7 +50,7 @@ export default function BuscadorPage() {
 
         <h3>¿Ya tienes un certificado y dudas de su fiabilidad?</h3>
         <p>
-          Solicita una Segunda Opinión en Certilab. Por 39€ revisamos tu
+          Solicita una Segunda Opinión en Certilab. Por 59€ revisamos tu
           certificado y te decimos si es correcto.
         </p>
         <Link href="/segunda-opinion/" className={styles.inlineLink}>

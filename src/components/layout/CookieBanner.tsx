@@ -82,6 +82,23 @@ export default function CookieBanner() {
     }
   }, []);
 
+  // Cuando el banner está visible, oculta sticky-cta bars para que no intercepten clicks
+  useEffect(() => {
+    const stickyBars = document.querySelectorAll<HTMLElement>(
+      '[class*="sticky-cta"], [class*="stickyCta"]'
+    );
+    const originals: { el: HTMLElement; display: string }[] = [];
+    stickyBars.forEach((el) => {
+      originals.push({ el, display: el.style.display });
+      el.style.display = "none";
+    });
+    return () => {
+      originals.forEach(({ el, display }) => {
+        el.style.display = display;
+      });
+    };
+  }, [show]);
+
   const handleAccept = () => {
     setConsent("all");
     setShow(false);

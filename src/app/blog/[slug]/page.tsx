@@ -77,7 +77,7 @@ function formatContent(raw: string): string {
   // --- INLINE CTA: [cta:segunda-opinion] ---
   html = html.replace(
     /\[cta:segunda-opinion\]/g,
-    '</p><div class="post-cta-inline"><div class="post-cta-inline-icon">🔍</div><div class="post-cta-inline-body"><p><strong>¿No te fías de tu certificado energético?</strong> Por 39€ un técnico lo revisa y te dice si es correcto.</p><a href="/segunda-opinion/" class="post-cta-inline-link">Revisar mi certificado →</a></div></div><p class="post-p">'
+    '</p><div class="post-cta-inline"><div class="post-cta-inline-icon">🔍</div><div class="post-cta-inline-body"><p><strong>¿No te fías de tu certificado energético?</strong> Por 59€ un técnico lo revisa y te dice si es correcto.</p><a href="/segunda-opinion/" class="post-cta-inline-link">Revisar mi certificado →</a></div></div><p class="post-p">'
   );
 
   // --- PRE-PARSE (preserve TL;DR) ---
@@ -201,7 +201,7 @@ function getServiceCta(tags: string[]): { text: string; url: string; label: stri
     };
   }
   return {
-    text: "¿No te fías de tu certificado energético? Por 39€ un técnico lo revisa y te dice si es correcto.",
+    text: "¿No te fías de tu certificado energético? Por 59€ un técnico lo revisa y te dice si es correcto.",
     url: "/segunda-opinion/",
     label: "Revisar mi certificado →",
   };

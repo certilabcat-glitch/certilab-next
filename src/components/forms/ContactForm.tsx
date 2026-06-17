@@ -131,7 +131,7 @@ export default function ContactForm() {
                 Diagnóstico Express (Gratuito)
               </option>
               <option value="segunda-opinion">
-                Segunda Opinión (39€)
+                Segunda Opinión (59€)
               </option>
               <option value="segunda-opinion-express">
                 Segunda Opinión Express (79€)

@@ -72,7 +72,7 @@ Existen plataformas online que ofrecen certificados energéticos por menos de 50
 
 ### ¿Qué hacer?
 
-Si tienes un certificado dudoso, solicita una **Segunda Opinión** en Certilab. Por 39€ te decimos si es fiable.
+Si tienes un certificado dudoso, solicita una **Segunda Opinión** en Certilab. Por 59€ te decimos si es fiable.
     `,
     date: "2026-02-20",
     author: "Eva María González Gracia",
@@ -143,7 +143,7 @@ El certificado debe estar firmado por un técnico competente (arquitecto, arquit
 
 ### ¿Cómo detectarlos?
 
-Solicita una **Segunda Opinión** en Certilab. Por 39€ revisamos tu certificado y te decimos si es fiable.
+Solicita una **Segunda Opinión** en Certilab. Por 59€ revisamos tu certificado y te decimos si es fiable.
     `,
     date: "2026-04-05",
     author: "Eva María González Gracia",
@@ -213,15 +213,15 @@ Una vivienda antigua sin reformas difícilmente obtiene una A o B. Si la calific
 
 ## ¿Qué hacer si tu certificado no es fiable?
 
-1. **Solicita una Segunda Opinión** - Por 39€ analizamos tu certificado y te decimos si es fiable.
+1. **Solicita una Segunda Opinión** - Por 59€ analizamos tu certificado y te decimos si es fiable.
 2. **Reclama ante el colegio profesional** del técnico firmante.
 3. **Denuncia ante la administración** autonómica competente.
 
 ## Nuestros servicios para tu tranquilidad
 
 Nuestro análisis forense te permite saber, antes de tomar cualquier decisión, si tu certificado energético es fiable, si la calificación es real y si el valor de tu inmueble está protegido:
-- Segunda Opinión (39€) - Revisamos tu certificado actual
-- Segunda Opinión Express (79€) - Entrega en menos de 2h
+- Segunda Opinión (59€) - Revisamos tu certificado actual
+- Segunda Opinión Express (79€) - Entrega en menos de 4h
 - Check-Up Inmobiliario (199€) - Análisis completo antes de comprar
 - Informe Técnico (399€) - Análisis profundo con propuestas de mejora
     `,
@@ -687,11 +687,11 @@ Algunos certificados muestran una calificación buena en consumo pero mala en em
 
 Si al leer tu certificado detectas alguna incoherencia, tienes varias opciones:
 
-1. **Solicitar una segunda opinión** — Por 39€ analizamos tu certificado y te decimos si es fiable
+1. **Solicitar una segunda opinión** — Por 59€ analizamos tu certificado y te decimos si es fiable
 2. **Reclamar al técnico** — Si el certificado tiene errores, el técnico debe corregirlos sin coste adicional
 3. **Denunciar ante el colegio profesional** — Si el técnico se niega a corregir errores graves
 
-En Certilab revisamos decenas de certificados cada semana. Nuestra recomendación: si tienes dudas, no las ignores. Un certificado con errores puede costarte mucho más que los 39€ de una [segunda opinión](/segunda-opinion/).
+En Certilab revisamos decenas de certificados cada semana. Nuestra recomendación: si tienes dudas, no las ignores. Un certificado con errores puede costarte mucho más que los 59€ de una [segunda opinión](/segunda-opinion/).
     `,
     date: "2026-06-04",
     author: "Eva María González García",

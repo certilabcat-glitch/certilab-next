@@ -38,7 +38,7 @@ const faq = [
   },
   {
     q: "¿Qué diferencia hay entre el Check-Up Inmobiliario y la Segunda Opinión?",
-    a: "La Segunda Opinión (39€) se centra exclusivamente en el certificado energético: detecta calificaciones infladas y Brown Discount. El Check-Up Inmobiliario (199€) es una auditoría integral: además del certificado energético, analiza la documentación registral, las cargas, las instalaciones técnicas y los riesgos ocultos. Es el servicio completo para blindar una compraventa.",
+    a: "La Segunda Opinión (59€) se centra exclusivamente en el certificado energético: detecta calificaciones infladas y Brown Discount. El Check-Up Inmobiliario (199€) es una auditoría integral: además del certificado energético, analiza la documentación registral, las cargas, las instalaciones técnicas y los riesgos ocultos. Es el servicio completo para blindar una compraventa.",
   },
   {
     q: "¿Esto sirve para cualquier tipo de inmueble?",

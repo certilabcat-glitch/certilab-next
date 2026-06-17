@@ -3,7 +3,7 @@ import { FAQItem } from "@/types/service";
 export const homeFaq: FAQItem[] = [
   {
     q: "¿Qué diferencia hay entre la Segunda Opinión estándar y la Express?",
-    a: "El análisis es idéntico. La diferencia es el plazo: la estándar (39 €) tiene entrega en 24 horas; la Express (79 €) en menos de 2 horas, disponible lunes a viernes de 9 a 18 h. Útil cuando tienes una firma inminente.",
+    a: "El análisis es idéntico. La diferencia es el plazo: la estándar (59 €) tiene entrega en 24 horas; la Express (79 €) en menos de 4 horas, disponible lunes a viernes de 9 a 18 h. Útil cuando tienes una firma inminente.",
   },
   {
     q: "¿El Check-Up Inmobiliario incluye el certificado energético?",
@@ -42,7 +42,7 @@ export const segundaOpinionFaq: FAQItem[] = [
   },
   {
     q: "¿Cuánto tarda el análisis?",
-    a: "La modalidad estándar (39€) tiene entrega en 24-48 horas laborables. La Express (79€) en menos de 2 horas, disponible de lunes a viernes de 9 a 18h.",
+    a: "La modalidad estándar (59€) tiene entrega en 24-48 horas laborables. La Express (79€) en menos de 4 horas, disponible de lunes a viernes de 9 a 18h.",
   },
   {
     q: "¿Qué diferencia hay entre la estándar y la Express si el análisis es el mismo?",
@@ -66,7 +66,7 @@ export const segundaOpinionFaq: FAQItem[] = [
   },
   {
     q: "¿Qué pasa si tras la revisión el certificado resulta ser correcto?",
-    a: "Entonces has hecho la mejor inversión de 39 € posible. Si el certificado está bien emitido y la calificación es correcta, te entregamos un informe firmado que lo valida oficialmente. Esa validación te permite comprar, vender o firmar con total tranquilidad. Además, como reconocimiento a tu confianza, te damos un 30% de descuento en tu próximo servicio (Check‑Up Inmobiliario, Informe Técnico o el que necesites). Sales ganando siempre.",
+    a: "Entonces has hecho la mejor inversión de 59 € posible. Si el certificado está bien emitido y la calificación es correcta, te entregamos un informe firmado que lo valida oficialmente. Esa validación te permite comprar, vender o firmar con total tranquilidad. Además, como reconocimiento a tu confianza, te damos un 30% de descuento en tu próximo servicio (Check‑Up Inmobiliario, Informe Técnico o el que necesites). Sales ganando siempre.",
   },
   {
     q: "¿Afecta el Brown Discount al valor de mi piso aunque no lo vaya a vender ahora?",
