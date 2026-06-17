@@ -1078,6 +1078,12 @@ img, video, iframe, table, pre, code {
   background: #fff;
 }
 
+/* Cuando el banner de cookies está visible, oculta sticky-cta-bars
+   para que no intercepten los clicks en móvil */
+body.has-cookie-banner .sticky-cta-bar {
+  display: none !important;
+}
+
 /* Sticky CTA bar */
 .sticky-cta-bar {
   display: block;
