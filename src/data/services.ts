@@ -52,7 +52,7 @@ export const services: Service[] = [
     description:
       "Para quien está a punto de firmar. Nota Simple, Catastral, cargas, certificado energético, análisis técnico y audio-resumen IA en un solo informe.",
     price: 199,
-    badge: "Antes de comprar",
+    badge: "Próximamente",
     href: "/check-up-inmobiliario/",
     ctaLabel: "Proteger mi compra",
     features: [
@@ -74,7 +74,7 @@ export const services: Service[] = [
     description:
       "Análisis completo del comportamiento energético con propuestas de mejora priorizadas, estimación de ahorro y ayudas disponibles.",
     price: 399,
-    badge: "Máximo detalle",
+    badge: "Próximamente",
     href: "/informe-tecnico-energetico/",
     ctaLabel: "Ver propuestas de mejora",
     features: [

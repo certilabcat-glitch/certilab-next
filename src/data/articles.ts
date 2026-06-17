@@ -231,132 +231,6 @@ Nuestro análisis forense te permite saber, antes de tomar cualquier decisión, 
     readingTime: 5,
     featured: true,
   },
-  // Artículo 7 — TOFU
-  {
-    slug: "multas-no-tener-certificado-energetico",
-    title: "Multas por no tener certificado energético: cuánto te puede costar en 2026",
-    excerpt:
-      "Las sanciones por no tener o no registrar el certificado energético pueden alcanzar los 6.000€. Te explicamos quién está obligado, qué riesgos corres y cómo evitarlos.",
-    content: `
-> ⚠️ **TL;DR:** La sanción por no tener certificado energético al vender o alquilar una vivienda puede ir de **300€ a 6.000€** en función de la gravedad. Además, desde 2025 la Inspección Técnica de Edificios (ITE) exige en muchas comunidades la calificación energética como requisito previo.
-
----
-
-## ¿Es obligatorio el certificado energético?
-
-Sí, contundentemente. El **Real Decreto 390/2021** transpone la Directiva Europea de Eficiencia Energética y establece que **toda vivienda que se venda o alquile debe disponer de un certificado energético válido** registrado en el organismo autonómico correspondiente.
-
-La obligación no es nueva —existe desde 2013— pero las inspecciones y sanciones se han endurecido progresivamente. En 2026, las comunidades autónomas están coordinando campañas de inspección masiva cruzando datos catastrales con anuncios de venta y alquiler.
-
-> 📌 **Dato clave:** Según el IDAE, más del 40% de los anuncios inmobiliarios en España incumplen la obligación de mostrar la calificación energética. La administración lo sabe y está actuando.
-
----
-
-## ¿Qué dice la ley?
-
-El artículo 62 de la Ley de Economía Sostenible (Ley 2/2011) y el Real Decreto 390/2021 establecen:
-
-| Obligación | ¿A quién aplica? | Sanción |
-|------------|-------------------|---------|
-| Tener certificado en vigor | Vendedores y arrendadores | 300€ – 6.000€ |
-| Registrar el certificado | Propietario (a través de técnico) | 300€ – 1.000€ |
-| Mostrar calificación en anuncios | Agencias y propietarios | 300€ – 1.000€ |
-| Entregar copia al comprador/inquilino | Vendedor/arrendador | 600€ – 6.000€ |
-
----
-
-## ¿Quién inspecciona y cómo te pueden multar?
-
-Las inspecciones no son aleatorias. La administración autonómica utiliza varias vías:
-
-### 1. Cruzado de datos con anuncios online
-
-Los inspectores rastrean portales inmobiliarios (Fotocasa, Idealista, Habitaclia) y verifican si el anuncio incluye:
-- La **etiqueta energética** visible
-- El **número de registro** del certificado
-
-Si falta cualquiera de los dos, se inicia un expediente.
-
-[cta:segunda-opinion]
-
-### 2. Inspecciones en cambios de titularidad
-
-Cuando compras una vivienda, el notario está obligado a solicitar el certificado energético. Si no se presenta, se comunica a la administración autonómica.
-
-### 3. Denuncias de particulares
-
-Vecinos, inquilinos o compradores pueden denunciar la ausencia de certificado. Es más frecuente de lo que parece, sobre todo en casos de conflicto arrendaticio.
-
-> 🚨 **Atención:** Las denuncias de inquilinos son cada vez más comunes. Si tienes una vivienda alquilada sin certificado, cualquier reclamación del inquilino puede derivar en sanción.
-
----
-
-## ¿Cuánto son las multas reales?
-
-Las sanciones se gradúan en tres niveles:
-
-### Leves (300€ – 1.000€)
-- No tener el certificado en la vivienda
-- No mostrar la calificación en el anuncio
-- Retraso en el registro
-
-### Graves (1.000€ – 2.000€)
-- No entregar copia al comprador o inquilino
-- Certificado caducado o sin registrar
-- Falsear datos de la calificación
-
-### Muy graves (2.000€ – 6.000€)
-- Reincidencia en infracciones graves
-- Certificado falso o emitido sin visita
-- Impedir la inspección
-
----
-
-## ¿Y si alquilo sin certificado?
-
-Esta es una de las casuísticas más habituales y peligrosas. Alquilar sin certificado energético:
-
-1. **Te expone a multas** de 300€ a 6.000€
-2. **Permite al inquilino reclamar** la resolución del contrato si la vivienda no cumple condiciones mínimas de habitabilidad
-3. **Te impide actualizar la renta** en algunos contratos de alquiler de larga duración
-
-> 💡 **Consejo:** El certificado energético cuesta entre 60€ y 150€. Comparado con una multa mínima de 300€, no tiene sentido correr el riesgo.
-
-[cta:segunda-opinion]
-
----
-
-## Casos reales documentados
-
-Según datos de las comunidades autónomas (2024-2025):
-
-| Comunidad | Sanciones anuales | Importe medio |
-|-----------|-------------------|---------------|
-| Cataluña | +2.500 | 1.200€ |
-| Madrid | +1.800 | 900€ |
-| Andalucía | +3.100 | 800€ |
-| Comunidad Valenciana | +1.200 | 1.100€ |
-
-Las cifras aumentan año a año. Si tienes una vivienda en alquiler o estás pensando en vender, no esperes a que te inspeccionen.
-
----
-
-## Cómo evitar la multa (pasos prácticos)
-
-1. **Solicita tu certificado** a un técnico colegiado
-2. **Verifica** que el técnico realice la visita presencial obligatoria
-3. **Asegúrate** de que el certificado se registre en el órgano autonómico
-4. **Incluye la etiqueta** en todos tus anuncios de venta o alquiler
-5. **Entrega una copia** al comprador o inquilino antes de firmar
-
-Si ya tienes certificado pero dudas de si es válido o está correctamente registrado, una segunda opinión profesional te lo confirma en cuestión de horas.
-    `,
-    date: "2026-06-04",
-    author: "Eva María González García",
-    tags: ["certificado energético", "multas", "obligatorio", "sanciones", "alquiler"],
-    readingTime: 6,
-    featured: false,
-  },
   // Artículo 8 — TOFU
   {
     slug: "certificado-energetico-obligatorio-alquiler",
@@ -428,7 +302,7 @@ Si anuncias sin esta información, el portal inmobiliario puede retirar el anunc
 Las consecuencias son varias y ninguna buena:
 
 ### 1. Sanción económica
-Las multas van de **300€ a 6.000€** según la gravedad (como vimos en nuestro artículo sobre [multas del certificado energético](/blog/multas-no-tener-certificado-energetico/)).
+Las multas van de **300€ a 6.000€** según la gravedad (como vimos en nuestro artículo sobre [multas del certificado energético](/blog/multas-certificado-energetico/)).
 
 ### 2. El inquilino puede reclamar
 Aunque el contrato de alquiler sigue siendo legal, el inquilino puede:
@@ -938,6 +812,17 @@ Si tienes dudas sobre el proceso o sospechas que tu certificado no es correcto, 
     content: `
 **TL;DR:** Sí, es ilegal vender o alquilar una vivienda sin certificado energético. Las sanciones van de 300€ a 6.000€ según la gravedad de la infracción. En 2026, las comunidades autónomas están coordinando campañas de inspección masiva cruzando datos catastrales con anuncios de venta y alquiler, y más del 40% de los anuncios inmobiliarios en España siguen incumpliendo la normativa.
 
+> 📌 **Dato IDAE:** Según el IDAE, más del **15% de los anuncios en portales inmobiliarios** no incluyen la referencia del certificado energético, lo que los convierte en objetivo prioritario de las inspecciones autonómicas.
+
+## ITE desde 2025: ¿afecta a las multas?
+
+Desde junio de 2025, la **Inspección Técnica de Edificios (ITE)** en Cataluña incluye un control específico del certificado energético. Si el edificio no tiene el certificado registrado, el técnico de la ITE lo comunicará automáticamente a la administración, que puede iniciar un expediente sancionador.
+
+**¿Qué significa para ti?** Si tu edificio pasa la ITE en 2025 o 2026, asegúrate de tener el certificado energético en regla antes de la inspección. No hacerlo puede resultar en:
+- Sanción adicional por incumplimiento de la ITE (300-1.000€)
+- Obligación de subsanar en plazo reducido
+- Posible comunicación al ICAEN para sanción autonómica
+
 ---
 
 ## ¿Es obligatorio el certificado energético?
@@ -1098,8 +983,8 @@ Antes de arriesgarte a una sanción, comprueba que tu certificado es correcto. S
 `,
     date: "2026-06-17",
     author: "Eva María González García",
-    tags: ["certificado energético", "sanciones", "multas", "inspección", "obligación", "riesgos legales"],
-    readingTime: 10,
+    tags: ["certificado energético", "sanciones", "multas", "inspección", "obligación", "riesgos legales", "ITE"],
+    readingTime: 11,
     featured: false,
   },
 ];

@@ -88,6 +88,12 @@ const nextConfig: NextConfig = {
         destination: "/blog/multas-certificado-energetico",
         permanent: true,
       },
+      // Redirigir slug antiguo de fusionado (solo multas) al artículo unificado
+      {
+        source: "/blog/multas-no-tener-certificado-energetico",
+        destination: "/blog/multas-certificado-energetico",
+        permanent: true,
+      },
       // URLs fantasma — redirigir a home
       {
         source: "/en/:path*",
