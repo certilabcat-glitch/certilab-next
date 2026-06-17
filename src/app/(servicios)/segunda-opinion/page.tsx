@@ -50,7 +50,7 @@ export default function SegundaOpinionPage() {
           <strong>Brown Discount:</strong> pérdida de valor del inmueble por mala calificación energética. Hasta un 15% menos en el precio de venta.
         </p>
         <p className={styles["hero-credentials"]}>
-          <strong>Eva María González García</strong> · Arquitecta Técnica colegiada CATEB 9457 · Seguro de responsabilidad civil
+          Revisado y firmado por <strong>Eva María González García</strong> · Arquitecta Técnica colegiada CATEB 9457 · Seguro de responsabilidad civil
         </p>
       </HeroSection>
 
