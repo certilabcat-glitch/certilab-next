@@ -8,14 +8,14 @@ import { waDiagnostico } from "@/lib/wa";
 import styles from "./SegundaOpinion.module.css";
 
 export const metadata: Metadata = {
-  title: "Segunda Opinión Certificado Energético (39€) | Certilab",
+  title: "Segunda Opinión Certificado Energético (59€ IVA incluido) | Certilab",
   description:
     "Revisamos tu certificado energético y detectamos calificaciones infladas, errores técnicos y Brown Discount. Informe forense en 24-48h. Eva Mª González, Arquitecta Técnica Cateb 9457.",
   alternates: { canonical: "https://www.certilab.cat/segunda-opinion/" },
   openGraph: {
     title: "Segunda Opinión Certificado Energético | Certilab",
     description:
-      "¿Confías en que la letra de tu certificado es real? Por 39€ revisamos tu certificado y te decimos si es fiable o si te están engañando.",
+      "¿Confías en que la letra de tu certificado es real? Por 59€ IVA incluido revisamos tu certificado y te decimos si refleja la realidad técnica de tu inmueble.",
     url: "https://www.certilab.cat/segunda-opinion/",
   },
 };
@@ -33,18 +33,24 @@ export default function SegundaOpinionPage() {
       <HeroSection
         eyebrow="¿Confías en que la letra de tu certificado energético es real?"
         title="La Segunda Opinión que te saca de dudas"
-        subtitle="Por 39€ revisamos su certificado, detectamos calificaciones infladas, errores técnicos y Brown Discount. Le decimos si su certificado es fiable o si le están engañando. Sin desplazamientos."
+        subtitle="Por 59€ IVA incluido revisamos su certificado, detectamos calificaciones infladas, errores técnicos y Brown Discount. Le decimos si su certificado refleja la realidad técnica de su inmueble o si contiene errores que le pueden costar dinero. Sin desplazamientos."
         badges={["Colegiada CATEB Barcelona", "24-48h", "100% remoto"]}
-        price="39 €"
+        price="59 €"
         priceOld="69 €"
-        credentials="Eva María González García · Arquitecta Técnica colegiada"
+        credentials=""
         ctaPrimary={{ label: "Solicitar Segunda Opinión", href: waDiagnostico() }}
         ctaSecondary={{ label: "Express 4h (79€) →", href: "/segunda-opinion-express/" }}
-        nota="Precio cerrado sin sorpresas (sin IVA). Si lo necesita urgente, dispone de la Segunda Opinión Express con entrega en 4 horas."
+        nota="Precio cerrado sin sorpresas (IVA incluido). Si lo necesita urgente, dispone de la Segunda Opinión Express con entrega en 4 horas."
       >
         <p className={styles["hero-garantia"]}>
           <span className={styles["hero-garantia-icon"]}>&#9432;</span>
-          Por 39 € obtienes tranquilidad: si tu certificado es correcto, lo validamos; si tiene errores, los detectamos. Sales ganando siempre.
+          Por 59 € obtienes tranquilidad: si tu certificado es correcto, lo validamos; si tiene errores, los detectamos. Sales ganando siempre.
+        </p>
+        <p className={styles["hero-nota"]}>
+          <strong>Brown Discount:</strong> pérdida de valor del inmueble por mala calificación energética. Hasta un 15% menos en el precio de venta.
+        </p>
+        <p className={styles["hero-credentials"]}>
+          <strong>Eva María González García</strong> · Arquitecta Técnica colegiada CATEB 9457 · Seguro de responsabilidad civil
         </p>
       </HeroSection>
 
@@ -57,7 +63,7 @@ export default function SegundaOpinionPage() {
         <div className={styles["audience-grid"]}>
           <div className={styles["audience-card"]}>
             <h3>Vas a comprar una vivienda</h3>
-            <p>El certificado del vendedor marca una A, pero ¿es real? Si la calificación está inflada, puedes estar pagando hasta un 15% más del valor real. Por 39€ lo comprobamos antes de firmar.</p>
+            <p>El certificado del vendedor marca una A, pero ¿es real? Si la calificación está inflada, puedes estar pagando hasta un 15% más del valor real. Por 59€ IVA incluido lo comprobamos antes de firmar.</p>
             <a href={waDiagnostico()} className={styles["audience-link"]}>Quiero verificar antes de comprar →</a>
           </div>
           <div className={styles["audience-card"]}>
@@ -75,7 +81,7 @@ export default function SegundaOpinionPage() {
 
       {/* ===== ROI CONTRAST ===== */}
       <section className={`${styles.section} ${styles["roi-contrast-section"]}`}>
-        <h2 className={styles["section-title"]}>39€ de inversión vs. miles de euros de riesgo</h2>
+        <h2 className={styles["section-title"]}>59€ de inversión vs. miles de euros de riesgo</h2>
         <p className={styles["section-sub"]}>Esto es lo que está en juego si tu certificado no es fiable.</p>
         <div className={styles["roi-contrast-grid"]}>
           <div className={`${styles["roi-contrast-card"]} ${styles.bad}`}>
@@ -93,7 +99,7 @@ export default function SegundaOpinionPage() {
           </div>
           <div className={`${styles["roi-contrast-card"]} ${styles.good}`}>
             <div className={styles["roi-contrast-label"]}>Con Segunda Opinión</div>
-            <div className={styles["roi-contrast-amount"]}>39€</div>
+            <div className={styles["roi-contrast-amount"]}>59€</div>
             <div className={styles["roi-contrast-desc"]}>inversión única. Recuperable si hay errores.</div>
             <ul className={styles["roi-contrast-list"]}>
               <li>✓ Sabes si tu certificado es fiable</li>
@@ -103,7 +109,7 @@ export default function SegundaOpinionPage() {
           </div>
         </div>
         <div className={styles["roi-contrast-cta"]}>
-          <a href={waDiagnostico()} className={styles["roi-contrast-button"]}>Proteger mi inversión por 39€ →</a>
+          <a href={waDiagnostico()} className={styles["roi-contrast-button"]}>Proteger mi inversión por 59€ →</a>
         </div>
       </section>
 
@@ -193,7 +199,7 @@ export default function SegundaOpinionPage() {
       <div className={styles["sticky-cta-bar"]}>
         <div className={styles["sticky-cta-inner"]}>
           <div className={styles["sticky-cta-info"]}>
-            <span className={styles["sticky-cta-price"]}>39€</span>
+            <span className={styles["sticky-cta-price"]}>59€</span>
             <span className={styles["sticky-cta-meta"]}>24-48h · Sin sorpresas</span>
           </div>
           <div className={styles["sticky-cta-actions"]}>
@@ -234,7 +240,7 @@ export default function SegundaOpinionPage() {
               {
                 "@type": "Offer",
                 name: "Segunda Opinión Estándar",
-                price: "39",
+                price: "59",
                 priceCurrency: "EUR",
                 availability: "https://schema.org/InStock",
                 description: "Análisis técnico completo en 24-48 horas laborables. Incluye informe detallado en PDF firmado por arquitecta colegiada.",
@@ -269,7 +275,7 @@ export default function SegundaOpinionPage() {
             description: "Tres pasos para saber si tu certificado energético es fiable.",
             image: "https://www.certilab.cat/og-image.jpg",
             totalTime: "P1D",
-            estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "39" },
+            estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "59" },
             supply: { "@type": "HowToSupply", name: "Certificado energético original en PDF o imagen" },
             tool: { "@type": "HowToTool", name: "WhatsApp o formulario web" },
             step: [
