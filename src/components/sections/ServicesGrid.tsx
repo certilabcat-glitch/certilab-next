@@ -13,7 +13,7 @@ export default function ServicesGrid() {
           Nuestros servicios
         </h2>
         <p className={styles.sectionSub}>
-          Cinco servicios diseñados para distintas necesidades. Sin letra
+          Cuatro servicios diseñados para distintas necesidades. Sin letra
           pequeña, sin sorpresas.
         </p>
       </div>
