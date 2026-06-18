@@ -83,15 +83,6 @@ export default function CookieBanner() {
   }, []);
 
   // Añade clase al body mientras el banner está visible
-  useEffect(() => {
-    if (show) {
-      document.body.classList.add("has-cookie-banner");
-    } else {
-      document.body.classList.remove("has-cookie-banner");
-    }
-    return () => document.body.classList.remove("has-cookie-banner");
-  }, [show]);
-
   const handleAccept = () => {
     setConsent("all");
     setShow(false);
@@ -106,22 +97,28 @@ export default function CookieBanner() {
   if (!show) return null;
 
   return (
-    <div
-      id="cookie-banner"
-      role="alert"
-      aria-live="polite"
-      className={`sticky bottom-0 left-0 right-0 z-[200] bg-[#0A0A0A] text-[#F5EFE6] px-6 py-5 ${styles.banner}`}
-    >
-      <div className="max-w-[1100px] mx-auto flex items-center gap-6 flex-wrap justify-center">
-        <p className="font-sans text-sm leading-relaxed m-0 flex-1 min-w-[280px]">
+    <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
+      {/* Overlay semitransparente */}
+      <div
+        className="absolute inset-0 bg-black/60"
+        onClick={() => {}} /* evita cerrar al hacer clic fuera */
+      />
+      {/* Modal */}
+      <div
+        id="cookie-banner"
+        role="alert"
+        aria-live="polite"
+        className={`relative max-w-[520px] w-full bg-[#0A0A0A] text-[#F5EFE6] p-8 shadow-2xl ${styles.banner}`}
+      >
+        <p className="font-sans text-sm leading-relaxed m-0 mb-5">
           Utilizamos cookies técnicas esenciales para el funcionamiento del sitio
           y cookies analíticas (Meta Pixel) para medir resultados. Puedes aceptar
           todas o solo las técnicas.{" "}
-          <a href="/cookies/" className="text-[#c4a97d] underline">
+          <a href="/cookies/" className="text-[#c4a97d] underline whitespace-nowrap">
             Más info
           </a>
         </p>
-        <div className="flex gap-3 shrink-0">
+        <div className="flex gap-3 justify-center">
           <button
             className="font-sans text-xs tracking-widest px-5 py-2.5 border-0 cursor-pointer uppercase font-medium transition-opacity duration-200 hover:opacity-80 bg-transparent text-[#F5EFE6] border border-solid border-[#F5EFE6]"
             onClick={handleEssential}

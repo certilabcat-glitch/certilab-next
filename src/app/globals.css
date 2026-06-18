@@ -48,11 +48,6 @@ body {
   width: 100%;
 }
 
-/* ===== Cookie Banner ===== */
-.has-cookie-banner {
-  /* sticky en el banner gestiona su posición, no necesita padding */
-}
-
 /* ===== Transiciones globales ===== */
 a, button, .btn, [role="button"] {
   transition: all 0.2s ease;
