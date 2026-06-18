@@ -73,16 +73,21 @@ function loadMetaPixel() {
 }
 
 export default function CookieBanner() {
-  const [show, setShow] = useState<boolean>(() => getConsent() === null);
+  // Estado inicial: en SSR (window undefined) devuelve false (no renderiza nada,
+  // evitando mismatch de hidratación). En cliente evalúa localStorage real.
+  const [show, setShow] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return getConsent() === null;
+  });
 
   useEffect(() => {
+    // Cargar Meta Pixel si ya había consentimiento previo "all"
     const consent = getConsent();
     if (consent === "all") {
       loadMetaPixel();
     }
   }, []);
 
-  // Añade clase al body mientras el banner está visible
   const handleAccept = () => {
     setConsent("all");
     setShow(false);
@@ -99,10 +104,7 @@ export default function CookieBanner() {
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
       {/* Overlay semitransparente */}
-      <div
-        className="absolute inset-0 bg-black/60"
-        onClick={() => {}} /* evita cerrar al hacer clic fuera */
-      />
+      <div className="absolute inset-0 bg-black/60" />
       {/* Modal */}
       <div
         id="cookie-banner"
