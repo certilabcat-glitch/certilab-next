@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useSyncExternalStore } from "react";
 import { META_PIXEL_ID } from "@/lib/constants";
 import styles from "./CookieBanner.module.css";
 
@@ -72,32 +72,54 @@ function loadMetaPixel() {
   fbq("track", "PageView");
 }
 
-export default function CookieBanner() {
-  // Estado inicial: en SSR (window undefined) devuelve false (no renderiza nada,
-  // evitando mismatch de hidratación). En cliente evalúa localStorage real.
-  const [show, setShow] = useState<boolean>(() => {
-    if (typeof window === "undefined") return false;
-    return getConsent() === null;
-  });
+const CONSENT_EVENT = "certilab-consent-change";
 
-  useEffect(() => {
-    // Cargar Meta Pixel si ya había consentimiento previo "all"
-    const consent = getConsent();
-    if (consent === "all") {
-      loadMetaPixel();
-    }
-  }, []);
+function subscribeToStorage(callback: () => void): () => void {
+  // Evento nativo solo se dispara en OTRAS pestañas
+  window.addEventListener("storage", callback);
+  // Evento personalizado para la MISMA pestaña
+  window.addEventListener(CONSENT_EVENT, callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener(CONSENT_EVENT, callback);
+  };
+}
+
+export default function CookieBanner() {
+  // useSyncExternalStore:
+  // - subscribe: escucha cambios en localStorage (storage event entre pestañas)
+  //   + callback propio para cuando setConsent se llama desde este componente
+  // - getConsent: lee snapshot actual
+  // - () => null: server snapshot (SSR) para evitar hydration mismatch
+  const consent = useSyncExternalStore(
+    subscribeToStorage,
+    getConsent,
+    () => null
+  );
+
+  // Cargar Meta Pixel si ya había consentimiento previo "all"
+  // Esto se ejecuta en cada cambio de consent, pero loadMetaPixel tiene guard
+  if (consent === "all") {
+    loadMetaPixel();
+  }
 
   const handleAccept = () => {
     setConsent("all");
-    setShow(false);
     loadMetaPixel();
+    // Notifica a useSyncExternalStore para re-render (misma + otras pestañas)
+    window.dispatchEvent(new Event(CONSENT_EVENT));
+    window.dispatchEvent(new Event("storage"));
   };
 
   const handleEssential = () => {
     setConsent("essential");
-    setShow(false);
+    window.dispatchEvent(new Event(CONSENT_EVENT));
+    window.dispatchEvent(new Event("storage"));
   };
+
+  // SSR: consent = null (server snapshot), pero show = false porque
+  // no hay window. En cliente, si consent es null, mostramos.
+  const show = typeof window !== "undefined" && consent === null;
 
   if (!show) return null;
 
