@@ -110,6 +110,57 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      // Artículos legacy (sin /blog/ prefijo) → rutas correctas con /blog/
+      {
+        source: "/certificado-energetico-vendedor-fiable",
+        destination: "/blog/certificado-energetico-vendedor-fiable",
+        permanent: true,
+      },
+      {
+        source: "/certificado-energetico-inflado-que-hacer",
+        destination: "/blog/certificado-energetico-inflado-que-hacer",
+        permanent: true,
+      },
+      {
+        source: "/reclamar-certificado-energetico-incorrecto",
+        destination: "/blog/reclamar-certificado-energetico-incorrecto",
+        permanent: true,
+      },
+      {
+        source: "/certificado-energetico-f-g-correcto",
+        destination: "/blog/certificado-energetico-f-g-correcto",
+        permanent: true,
+      },
+      {
+        source: "/certificado-energetico-negociar-precio",
+        destination: "/blog/certificado-energetico-negociar-precio",
+        permanent: true,
+      },
+      {
+        source: "/perder-dinero-certificado-energetico-mal-hecho",
+        destination: "/blog/perder-dinero-certificado-energetico-mal-hecho",
+        permanent: true,
+      },
+      {
+        source: "/certificado-energetico-hipoteca-verde",
+        destination: "/blog/certificado-energetico-hipoteca-verde",
+        permanent: true,
+      },
+      {
+        source: "/segunda-opinion-certificado-energetico",
+        destination: "/blog/segunda-opinion-certificado-energetico",
+        permanent: true,
+      },
+      {
+        source: "/errores-graves-certificado-energetico",
+        destination: "/blog/errores-graves-certificado-energetico",
+        permanent: true,
+      },
+      {
+        source: "/multas-certificado-energetico",
+        destination: "/blog/multas-certificado-energetico",
+        permanent: true,
+      },
     ];
   },
 };
