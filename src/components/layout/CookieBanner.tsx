@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { META_PIXEL_ID } from "@/lib/constants";
 import styles from "./CookieBanner.module.css";
 
@@ -97,11 +97,12 @@ export default function CookieBanner() {
     () => null
   );
 
-  // Cargar Meta Pixel si ya había consentimiento previo "all"
-  // Esto se ejecuta en cada cambio de consent, pero loadMetaPixel tiene guard
-  if (consent === "all") {
-    loadMetaPixel();
-  }
+  // Cargar Meta Pixel SOLO dentro de useEffect para no contaminar el render
+  useEffect(() => {
+    if (consent === "all") {
+      loadMetaPixel();
+    }
+  }, [consent]);
 
   const handleAccept = () => {
     setConsent("all");
