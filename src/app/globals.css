@@ -27,6 +27,17 @@
   --space-element: 1.5rem;
 }
 
+/* ===== Cookie Banner ===== */
+.has-cookie-banner {
+  padding-bottom: 140px;
+}
+
+@media (min-width: 640px) {
+  .has-cookie-banner {
+    padding-bottom: 80px;
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
