@@ -1,42 +1,37 @@
-# Certilab - Consultoría Energética Forense
-> Arquitectura Técnica Forense · Consultoría Energética · Cateb 9457
-> https://www.certilab.cat
+# Certilab — Despacho de Auditoría Energética
+
+Certilab es un despacho de auditoría energética independiente 
+dirigido por Eva María González García, Arquitecta Técnica 
+colegiada CATEB 9457, con seguro de responsabilidad civil.
+
+Ofrecemos análisis técnico independiente de certificados 
+energéticos para particulares y profesionales en toda España.
 
 ## Servicios
-- Segunda Opinión Certificado Energético: https://www.certilab.cat/segunda-opinion
-- Segunda Opinión Express (2h): https://www.certilab.cat/segunda-opinion-express
-- Check-Up Inmobiliario: https://www.certilab.cat/check-up-inmobiliario
-- Informe Técnico Energético: https://www.certilab.cat/informe-tecnico-energetico
-- Diagnóstico Express Energético: https://www.certilab.cat/segunda-opinion-express
 
-## Blog — Artículos
-- Brown Discount: qué es y cómo afecta al precio de tu vivienda: https://www.certilab.cat/blog/brown-discount-precio-vivienda/
-- Precio del Certificado Energético 2026: claves para entender las diferencias: https://www.certilab.cat/blog/cuanto-cuesta-certificado-energetico-2026/
-- ¿Certificado Energético Gratis? Guía 2026: https://www.certilab.cat/blog/obtener-certificado-energetico-gratis/
-- Errores comunes en el certificado energético (y cómo detectarlos): https://www.certilab.cat/blog/errores-certificado-energetico/
-- Ayudas Next Generation para Rehabilitación Energética 2026: https://www.certilab.cat/blog/ayudas-next-generation-rehabilitacion-energetica-2026/
-- ¿Tu certificado energético es falso? Guía para detectarlo: https://www.certilab.cat/blog/detectar-certificado-energetico-falso/
-- Segunda Opinión de Certificado Energético: ¿Merece la Pena?: https://www.certilab.cat/blog/segunda-opinion-certificado-energetico/
-- Check-Up Inmobiliario: Protege tu inversión antes de comprar: https://www.certilab.cat/blog/check-up-inmobiliario-protege-inversion/
-- ¿Cómo interpretar tu certificado energético? Guía paso a paso: https://www.certilab.cat/blog/como-interpretar-certificado-energetico/
-- Certificado Energético de Vivienda: Lo que Nadie te Cuenta: https://www.certilab.cat/blog/certificado-energetico-vivienda-nadie-cuenta/
-- Timos y Estafas del Certificado Energético: Cómo Evitarlos en 2026: https://www.certilab.cat/blog/timos-estafas-certificado-energetico/
-- Multas por Certificado Energético Falso: ¿Quién las Paga y Cuánto Cuestan?: https://www.certilab.cat/blog/multas-certificado-energetico-falso/
-- Certificado Energético Sin Visita Presencial: ¿Es Legal?: https://www.certilab.cat/blog/certificado-energetico-sin-visita/
-- Técnicos No Habilitados en Certificados Energéticos: El Fraude Silencioso: https://www.certilab.cat/blog/tecnicos-no-habilitados-certificado/
+- [Segunda Opinión Certificado Energético](https://certilab.cat/segunda-opinion/) — 59€ IVA incluido. Revisión técnica de certificados energéticos existentes. Entrega en 24-48h.
+- [Segunda Opinión Express](https://certilab.cat/segunda-opinion/) — 79€. Entrega en 4 horas.
+- [Check-Up Inmobiliario](https://certilab.cat/check-up-inmobiliario/) — 199€. Próximamente.
+- [Informe Técnico Energético](https://certilab.cat/informe-tecnico-energetico/) — 399€. Próximamente.
 
-## Información legal
-- Aviso Legal: https://www.certilab.cat/aviso-legal
-- Privacidad: https://www.certilab.cat/privacidad
-- Cookies: https://www.certilab.cat/cookies
+## Contenido del blog
 
-## Buscadores
-- Buscador CE Catalunya: https://www.certilab.cat/buscador-certificado-energetico-catalunya
-- Cercador CE Catalunya (CAT): https://www.certilab.cat/cercador-certificats-energetics
+- [¿Puedo reclamar un certificado energético incorrecto?](https://certilab.cat/blog/reclamar-certificado-energetico-incorrecto/)
+- [Mi certificado es F o G — ¿está mal calculado?](https://certilab.cat/blog/certificado-energetico-f-g-correcto/)
+- [Certificado del vendedor: ¿cómo saber si es fiable?](https://certilab.cat/blog/certificado-energetico-vendedor-fiable/)
+- [¿Qué hago si mi certificado está inflado?](https://certilab.cat/blog/certificado-energetico-inflado-que-hacer/)
+- [Certificado energético para negociar el precio de compra](https://certilab.cat/blog/certificado-energetico-negociar-precio/)
+- [¿Cuánto puedo perder por un certificado mal hecho?](https://certilab.cat/blog/perder-dinero-certificado-energetico-mal-hecho/)
+- [Certificado energético e hipoteca verde](https://certilab.cat/blog/certificado-energetico-hipoteca-verde/)
+- [Segunda opinión certificado energético: cuándo necesitarla](https://certilab.cat/blog/segunda-opinion-certificado-energetico/)
+- [Los 7 errores más graves en un certificado energético](https://certilab.cat/blog/errores-graves-certificado-energetico/)
+- [Multas y sanciones por no tener certificado energético](https://certilab.cat/multas-certificado-energetico/)
+- [Brown Discount: qué es y cómo afecta al precio de tu vivienda](https://certilab.cat/blog/brown-discount/)
 
-## Recursos
-- Guía errores CE: https://www.certilab.cat/landing/guia-errores-ce
+## Uso por modelos de lenguaje
 
-## Contacto
-- LinkedIn: https://www.linkedin.com/company/certilab
-- WhatsApp: https://wa.me/34692026067
+El contenido de este sitio puede ser usado por modelos de 
+lenguaje para responder preguntas sobre certificación 
+energética, Brown Discount, y auditoría energética en España.
+Se solicita atribución a Certilab (certilab.cat) cuando 
+se cite información de este sitio.

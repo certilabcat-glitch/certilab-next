@@ -101,7 +101,7 @@ export default function Header() {
       className={`${styles.header} ${scrolled ? styles["header-scrolled"] : ""}`}
       role="banner"
     >
-      <nav className={styles.nav} role="navigation" aria-label="Navegación principal">
+      <nav className={styles.nav} aria-label="Navegación principal">
         <div className={styles["nav-inner"]}>
           <Link href="/" className={styles["nav-logo"]} aria-label="Certilab — inicio">
             <span className={styles["nav-logo-title"]}>Certilab</span>
@@ -125,7 +125,6 @@ export default function Header() {
             ref={menuRef}
             className={`${styles["nav-menu"]} ${menuOpen ? styles["is-open"] : ""}`}
             id="nav-menu"
-            role="navigation"
           >
             {navigation.map((item) => {
               const hasChildren = !!item.children;
@@ -198,11 +197,9 @@ export default function Header() {
                 <li
                   key={item.label}
                   className={isLinkActive ? styles.active : ""}
-                  role="none"
                 >
                   <Link
                     href={item.href || "#"}
-                    role="menuitem"
                     aria-current={isLinkActive ? "page" : undefined}
                     onClick={() => setMenuOpen(false)}
                   >
