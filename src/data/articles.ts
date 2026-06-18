@@ -60,6 +60,13 @@ Sí, realizar mejoras de eficiencia energética (aislamiento, ventanas, climatiz
 Cada vez más. Los inquilinos informados también valoran la eficiencia energética, y las viviendas con mala calificación pueden tardar más en alquilarse o tener que hacerlo a un precio menor.
 
 ---
+
+## 📖 Más información relacionada
+
+- **[Certificado energético F o G: ¿es correcto o te están penalizando? →](/certificado-energetico-f-g-correcto/)**
+- **[¿Cuánto dinero puedes perder con un certificado energético mal hecho? →](/perder-dinero-certificado-energetico-mal-hecho/)**
+- **[Cómo negociar el precio con el certificado energético →](/certificado-energetico-negociar-precio/)**
+
 ## ¿Tienes dudas sobre tu certificado energético?
 Si sospechas que tu vivienda sufre Brown Discount por un certificado incorrecto, por 59€ te lo confirmamos con informe técnico firmado.
 [Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
@@ -268,7 +275,12 @@ Sí. Si la calificación inflada te llevó a pagar un sobreprecio, puedes reclam
 **¿Qué hago si mi certificado tiene errores pero ya lo he usado?**
 Si ya lo usaste para vender o alquilar, solicita una corrección inmediata al técnico. Si el error es grave, informa al comprador o inquilino para evitar reclamaciones futuras.
 
----
+
+## 📖 Más información útil
+
+- **[¿Puedo reclamar un certificado energético incorrecto? Guía 2026 →](/reclamar-certificado-energetico-incorrecto/)**
+- **[Los 7 errores más graves en un certificado energético →](/errores-graves-certificado-energetico/)**
+
 ## ¿Tienes dudas sobre tu certificado energético?
 ¿Tiene tu certificado alguno de estos errores? Por 59€ te lo confirmamos con informe técnico firmado en 24-48h.
 [Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
@@ -1915,7 +1927,11 @@ Sí. Si el certificado asigna una calificación peor de la real (por ejemplo, un
 **¿Cuánto cuesta saber si mi certificado me está costando dinero?**
 En Certilab ofrecemos la Segunda Opinión por 59€ IVA incluido. Recibes un informe técnico firmado por arquitecta colegiada (CATEB 9457) en 24-48h. Si detectamos errores, te indicamos la calificación correcta y los pasos a seguir.
 
----
+
+## 📖 Sigue leyendo
+
+- **[Brown Discount: ¿cuánto afecta la calificación energética al precio de tu vivienda? →](/brown-discount-precio-vivienda/)**
+- **[Cómo negociar el precio con el certificado energético →](/certificado-energetico-negociar-precio/)**
 
 **Por 59€ sabes si tu certificado te está costando dinero. Informe técnico firmado en 24-48h.**
 [Solicitar Segunda Opinión →](/segunda-opinion/)
@@ -2224,6 +2240,12 @@ Tiene validez técnica como informe pericial. No sustituye a un certificado regi
 
 ---
 
+
+## 📖 Artículos relacionados
+
+- **[¿Puedo reclamar un certificado energético incorrecto? →](/reclamar-certificado-energetico-incorrecto/)**
+- **[Certificado energético F o G: ¿es correcto o te están penalizando? →](/certificado-energetico-f-g-correcto/)**
+
 **Solicita tu Segunda Opinión por 59€ IVA incluido. Informe firmado por arquitecta colegiada CATEB 9457 en 24-48h.**
 [Solicitar Segunda Opinión →](/segunda-opinion/)
     `,
@@ -2397,7 +2419,11 @@ En Certilab ofrecemos la Segunda Opinión por 59€ IVA incluido. Revisamos tu c
 **¿El vendedor puede ser responsable si el certificado tiene errores?**
 Sí. Si el vendedor presenta un certificado con errores graves (especialmente calificación inflada) y el comprador demuestra que pagó un sobreprecio por ello, el vendedor puede ser considerado responsable solidario. El Brown Discount es la clave para demostrar el perjuicio económico.
 
----
+
+## 📖 Más información
+
+- **[¿Puedo reclamar un certificado energético incorrecto? →](/reclamar-certificado-energetico-incorrecto/)**
+- **[Segunda opinión para tu certificado energético: ¿cuándo la necesitas? →](/segunda-opinion-certificado-energetico/)**
 
 **¿Reconoces alguno de estos errores en tu certificado? Por 59€ te confirmamos si está bien hecho o no.**
 [Solicitar Segunda Opinión →](/segunda-opinion/)
