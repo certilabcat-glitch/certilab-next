@@ -52,23 +52,24 @@ export default function FAQSection({
       <h2 className="section-title" id="faq-title">
         {title}
       </h2>
-      <div className={styles.faqList} role="list">
+      <ul className={styles.faqList}>
         {items.map((item, index) => (
-          <details
-            key={index}
-            className={styles.details}
-            open={openIndex === index}
-            onToggle={(e) => {
-              if ((e.target as HTMLDetailsElement).open) {
-                setOpenIndex(index);
-              }
-            }}
-          >
-            <summary className={styles.summary}>{item.q}</summary>
-            <p className={styles.answer} dangerouslySetInnerHTML={{ __html: sanitizeHTML(item.a) }} />
-          </details>
+          <li key={index}>
+            <details
+              className={styles.details}
+              open={openIndex === index}
+              onToggle={(e) => {
+                if ((e.target as HTMLDetailsElement).open) {
+                  setOpenIndex(index);
+                }
+              }}
+            >
+              <summary className={styles.summary}>{item.q}</summary>
+              <p className={styles.answer} dangerouslySetInnerHTML={{ __html: sanitizeHTML(item.a) }} />
+            </details>
+          </li>
         ))}
-      </div>
+      </ul>
       </section>
     </>
   );
