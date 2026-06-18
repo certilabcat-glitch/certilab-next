@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const STORAGE_KEY = "certilab_cookies_accepted";
+const STORAGE_KEY = "certilab_cookies_v2";
 const EXPIRY_DAYS = 365;
 
 type Consent = "all" | "essential" | null;
