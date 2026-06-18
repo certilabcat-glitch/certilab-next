@@ -110,7 +110,7 @@ export default function CookieBanner() {
       id="cookie-banner"
       role="alert"
       aria-live="polite"
-      className={`fixed bottom-0 left-0 right-0 z-[200] bg-[#0A0A0A] text-[#F5EFE6] px-6 py-5 ${styles.banner}`}
+      className={`sticky bottom-0 left-0 right-0 z-[200] bg-[#0A0A0A] text-[#F5EFE6] px-6 py-5 ${styles.banner}`}
     >
       <div className="max-w-[1100px] mx-auto flex items-center gap-6 flex-wrap justify-center">
         <p className="font-sans text-sm leading-relaxed m-0 flex-1 min-w-[280px]">

@@ -27,32 +27,30 @@
   --space-element: 1.5rem;
 }
 
-/* ===== Cookie Banner ===== */
-.has-cookie-banner {
-  padding-bottom: 140px;
-}
-
-@media (min-width: 640px) {
-  .has-cookie-banner {
-    padding-bottom: 80px;
-  }
-}
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;
-  width: 100%;
+html {
+  height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: var(--font-sans);
   background: var(--color-crema);
   color: var(--color-black);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ===== Cookie Banner ===== */
+.has-cookie-banner {
+  /* sticky en el banner gestiona su posición, no necesita padding */
 }
 
 /* ===== Transiciones globales ===== */
