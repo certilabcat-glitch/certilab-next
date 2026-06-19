@@ -6,7 +6,7 @@
 |---|------|--------|-------|--------|
 | 1 | certificado-energetico-incorrecto | ✅ | 2026-06-18 | cee5247 |
 | 2 | certificado-energetico-inflado | ✅ | 2026-06-19 | - |
-| 3 | como-saber-si-certificado-energetico-esta-mal | ⏳ | - | - |
+| 3 | como-saber-si-certificado-energetico-esta-mal | ✅ | 2026-06-19 | - |
 | 4 | reclamar-certificado-energetico | ⏳ | - | - |
 | 5 | certificado-energetico-falso | ⏳ | - | - |
 | 6 | impugnar-certificado-energetico | ⏳ | - | - |
