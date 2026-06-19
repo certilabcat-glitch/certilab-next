@@ -46,6 +46,14 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# stray debris
+-1
+-1){
+console.log*
+links.txt
+certilab-next/
+certilab-next/src/
+
 # vercel
 .vercel
 
