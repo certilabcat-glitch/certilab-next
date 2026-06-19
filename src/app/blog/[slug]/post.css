@@ -191,6 +191,39 @@
   margin: 0;
 }
 
+/* ---- Autor bloque ---- */
+.autor-bloque {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--color-surface, #f9f7f4);
+  border-left: 3px solid var(--color-primary, #c8663a);
+  border-radius: 4px;
+  margin: 0 0 24px 0;
+}
+.autor-nombre {
+  font-weight: 700;
+  color: var(--color-text, #1a1a1a);
+  margin: 0 0 4px 0;
+}
+.autor-credencial {
+  font-size: 0.875rem;
+  color: var(--color-muted, #6b7280);
+  margin: 0 0 4px 0;
+}
+.autor-descripcion {
+  font-size: 0.875rem;
+  color: var(--color-text, #1a1a1a);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .autor-bloque {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
 /* ---- Post extra elements ---- */
 
 /* Inline links */

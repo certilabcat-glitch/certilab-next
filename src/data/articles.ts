@@ -139,7 +139,7 @@ Sí. Si contrataste un certificado sin visita presencial y te lo entregaron como
     slug: "obtener-certificado-energetico-gratis",
     title: "Certificado Energético Gratis: mitos y realidades en 2026",
     excerpt:
-      "¿Existe realmente el certificado energético gratis? Te explicamos qué puedes obtener sin coste y qué debes pagar.",
+      "¿Existe el certificado energético gratis en 2026? Te explicamos en qué casos es posible obtenerlo sin coste, qué trampas evitar y por qué los certificados gratuitos suelen tener errores que te pueden costar dinero.",
     content: `
 # Certificado Energético Gratis: mitos y realidades en 2026
 

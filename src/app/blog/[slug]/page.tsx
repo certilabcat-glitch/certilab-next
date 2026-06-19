@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AutorBloque from "@/components/blog/AutorBloque";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { articles, getArticle, getRelatedArticles } from "@/data/articles";
@@ -20,11 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return {};
 
   return {
-    title: `${article.title} | Certilab`,
+    title: article.title.length > 48
+      ? { absolute: article.title }
+      : article.title,
     description: article.excerpt,
     alternates: { canonical: `https://www.certilab.cat/blog/${slug}/` },
     openGraph: {
-      title: `${article.title} | Certilab`,
+      title: article.title,
       description: article.excerpt,
       url: `https://www.certilab.cat/blog/${slug}/`,
       type: "article",
@@ -43,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${article.title} | Certilab`,
+      title: article.title,
       description: article.excerpt,
       images: [article.image ?? "https://www.certilab.cat/og-image.jpg"],
     },
@@ -185,6 +188,28 @@ function formatContent(raw: string): string {
   return html;
 }
 
+function extractFAQs(content: string): { question: string; answer: string }[] {
+  const faqs: { question: string; answer: string }[] = [];
+
+  // Buscar la sección "## Preguntas frecuentes"
+  const faqSection = content.match(/## Preguntas frecuentes[\s\S]*?(?=\n---|\n## |$)/);
+  if (!faqSection) return [];
+
+  // Extraer pares **¿Pregunta?** \n\n Respuesta
+  const regex = /\*\*¿([^?]+)\?\*\*\n+([\s\S]*?)(?=\n\n\*\*¿|\n---|\n## |$)/g;
+  let match;
+  while ((match = regex.exec(faqSection[0])) !== null) {
+    const answer = match[2].trim();
+    if (answer) {
+      faqs.push({
+        question: match[1].trim(),
+        answer,
+      });
+    }
+  }
+  return faqs;
+}
+
 function getServiceCta(tags: string[]): { text: string; url: string; label: string } | null {
   if (tags.some((t) => t.includes("rehabilitación") || t.includes("ayudas") || t.includes("subvenciones"))) {
     return {
@@ -246,6 +271,12 @@ export default async function BlogPostPage({ params }: Props) {
             ))}
           </div>
         </header>
+
+        <AutorBloque
+          nombre="Eva María González García"
+          credencial="Arquitecta Técnica · Colegiada CATEB 9457 · Seguro RC Profesional"
+          descripcion="20 años de experiencia en certificación energética. Más de 1.000 expedientes tramitados en Cataluña y toda España."
+        />
 
         <div
           className="post-content"
@@ -310,6 +341,26 @@ export default async function BlogPostPage({ params }: Props) {
           }),
         }}
       />
+
+      {extractFAQs(article.content).length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: extractFAQs(article.content).map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
     </>
   );
 }
