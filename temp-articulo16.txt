@@ -1,0 +1,232 @@
+slug: "rebaja-precio-vivienda-certificado-energetico",
+title: "Cómo conseguir rebaja de precio usando el certificado energético",
+excerpt: "El certificado energético es tu mejor herramienta para negociar. Aprende a usarlo para conseguir descuentos reales.",
+content: `
+# Cómo conseguir rebaja de precio usando el certificado energético
+
+<div class="respuesta-directa">
+El certificado energético es tu mejor herramienta para negociar el precio de una vivienda. El Brown Discount permite calcular la pérdida de valor exacta según la calificación energética. En una vivienda de 270.000€ con calificación G, puedes negociar un descuento de 40.500€. Te explicamos la estrategia en 5 pasos para conseguir rebajas reales.
+</div>
+
+## El certificado energético es tu mejor arma de negociación
+
+Estás buscando vivienda.
+Encuentras una que te gusta.
+El precio es 270.000€.
+
+Pero el certificado muestra calificación G.
+
+¿Sabes cuánto dinero puedes ahorrar usando esa información?
+
+**Hasta 40.500€.**
+
+## Cómo funciona el Brown Discount
+
+El **Brown Discount** es la pérdida de valor que sufre una vivienda por tener una mala calificación energética.
+
+Es un concepto económico reconocido internacionalmente.
+Los bancos lo usan para valorar hipotecas.
+Los compradores inteligentes lo usan para negociar.
+
+### Tabla: Brown Discount por calificación
+
+| Calificación | Descuento sobre valor | Ejemplo 150.000€ | Ejemplo 270.000€ | Ejemplo 400.000€ |
+|-------------|----------------------|------------------|------------------|------------------|
+| A | 0% | 0€ | 0€ | 0€ |
+| B | 2-3% | 3.000€ - 4.500€ | 5.400€ - 8.100€ | 8.000€ - 12.000€ |
+| C | 3-5% | 4.500€ - 7.500€ | 8.100€ - 13.500€ | 12.000€ - 20.000€ |
+| D | 5-8% | 7.500€ - 12.000€ | 13.500€ - 21.600€ | 20.000€ - 32.000€ |
+| E | 8-12% | 12.000€ - 18.000€ | 21.600€ - 32.400€ | 32.000€ - 48.000€ |
+| F | 12-15% | 18.000€ - 22.500€ | 32.400€ - 40.500€ | 48.000€ - 60.000€ |
+| G | 15-20% | 22.500€ - 30.000€ | 40.500€ - 54.000€ | 60.000€ - 80.000€ |
+
+**Ejemplo:**
+- Vivienda: 270.000€
+- Calificación: G
+- Brown Discount: 15-20% = 40.500€ - 54.000€
+- Precio justo: 216.000€ - 229.500€
+
+## Estrategia de negociación: 5 pasos
+
+### Paso 1: Obtener el certificado del vendedor
+
+Antes de hacer una oferta, solicita el certificado energético.
+
+**Cómo hacerlo:**
+- Pregunta directamente al vendedor o agente
+- Pide que te lo envíe por email
+- Verifica que sea válido (no caducado)
+
+**Qué buscar:**
+- Número de registro autonómico
+- Fecha de emisión
+- Calificación energética
+- Consumo predicho
+
+### Paso 2: Verifica que el certificado es correcto
+
+No confíes en el certificado del vendedor.
+Solicita una Segunda Opinión.
+
+Por **59€**, un técnico independiente revisa el certificado y te confirma si es correcto.
+
+**El informe incluye:**
+- Análisis detallado del certificado
+- Identificación de errores (si los hay)
+- Calificación correcta estimada
+- Recomendaciones de actuación
+
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+
+**Tiempo:** 24-48 horas
+
+### Paso 3: Calcula el Brown Discount aplicable
+
+Con la calificación correcta, calcula el descuento que corresponde.
+
+**Fórmula:**
+- Precio de venta × Porcentaje de descuento = Descuento en euros
+
+**Ejemplo:**
+- Precio: 270.000€
+- Calificación: G (15-20% de descuento)
+- Descuento: 270.000€ × 0,15 = 40.500€ (mínimo)
+- Descuento: 270.000€ × 0,20 = 54.000€ (máximo)
+
+### Paso 4: Prepara argumentos técnicos
+
+No negocies solo con el Brown Discount.
+Prepara argumentos técnicos que justifiquen la rebaja.
+
+**Argumentos principales:**
+- "El certificado muestra calificación G, lo que significa consumo > 200 kWh/m² año"
+- "Según el Brown Discount, la vivienda pierde 40.500€ de valor"
+- "Tendré que invertir 15.000€ en rehabilitación para mejorar la eficiencia"
+- "Los bancos aplican descuentos en hipotecas verdes para viviendas eficientes"
+- "El mercado valora menos las viviendas con mala calificación"
+
+**Documentación:**
+- Certificado energético original
+- Informe de Segunda Opinión
+- Presupuestos de rehabilitación
+- Comparables de mercado
+
+### Paso 5: Haz una oferta informada
+
+Con toda la información, haz una oferta basada en datos.
+
+**Ejemplo de oferta:**
+"Ofrezco 229.500€ por la vivienda. El certificado muestra calificación G, lo que según el Brown Discount representa una pérdida de valor de 40.500€ sobre el precio de 270.000€. Además, necesitaré invertir 15.000€ en rehabilitación energética. Mi oferta refleja estos costes reales."
+
+## Tabla: Cálculo de descuento por vivienda
+
+| Precio | Calificación | Brown Discount | Precio justo | Ahorro |
+|--------|-------------|----------------|-------------|--------|
+| 150.000€ | G | 15-20% | 120.000€ - 127.500€ | 22.500€ - 30.000€ |
+| 200.000€ | F | 12-15% | 170.000€ - 176.000€ | 24.000€ - 30.000€ |
+| 270.000€ | G | 15-20% | 216.000€ - 229.500€ | 40.500€ - 54.000€ |
+| 300.000€ | E | 8-12% | 264.000€ - 276.000€ | 24.000€ - 36.000€ |
+| 400.000€ | G | 15-20% | 320.000€ - 340.000€ | 60.000€ - 80.000€ |
+
+## Casos reales de negociación exitosa
+
+### Caso 1: Descuento por calificación G
+
+**Situación:** Comprador encuentra piso de 270.000€ con certificado G.
+
+**Estrategia:**
+- Segunda Opinión: confirma calificación G
+- Brown Discount: 40.500€ - 54.000€
+- Presupuesto de rehabilitación: 12.000€
+- Oferta inicial: 229.500€
+
+**Resultado:** Vendedor acepta 240.000€ (descuento de 30.000€).
+
+**Ahorro:** 30.000€
+
+### Caso 2: Descuento por certificado sin visita
+
+**Situación:** Comprador encuentra casa de 400.000€. Segunda Opinión revela que el certificado no incluye reformas recientes.
+
+**Estrategia:**
+- Certificado original: Calificación E
+- Calificación correcta: Calificación C
+- Brown Discount diferencia: 5-8% = 20.000€ - 32.000€
+- Oferta inicial: 368.000€
+
+**Resultado:** Vendedor acepta 375.000€ (descuento de 25.000€).
+
+**Ahorro:** 25.000€
+
+### Caso 3: Descuento por calificación F
+
+**Situación:** Comprador encuentra piso de 200.000€ con certificado F.
+
+**Estrategia:**
+- Brown Discount: 12-15% = 24.000€ - 30.000€
+- Presupuesto de rehabilitación: 8.000€
+- Oferta inicial: 176.000€
+
+**Resultado:** Vendedor acepta 182.000€ (descuento de 18.000€).
+
+**Ahorro:** 18.000€
+
+## ¿Qué hacer si el vendedor se niega a negociar?
+
+### Opción 1: Buscar otra vivienda
+
+Si el vendedor no quiere negociar, hay otras opciones en el mercado.
+
+**Ventaja:** No pagas de más por una vivienda ineficiente.
+
+### Opción 2: Incluir condiciones en el contrato
+
+Si te gusta la vivienda, puedes incluir condiciones en el contrato de compraventa:
+
+**Ejemplos de condiciones:**
+- "El vendedor se compromete a realizar rehabilitación energética antes de la entrega"
+- "El vendedor retiene 15.000€ en garantía para rehabilitación"
+- "El comprador puede rescindir si el certificado resulta ser falso"
+
+### Opción 3: Aceptar pero con reservas
+
+Si aceptas el precio sin descuento, hazlo con reservas:
+
+**Reservas recomendadas:**
+- "Compra sujeta a verificación de certificado energético"
+- "Compra sujeta a inspección técnica de eficiencia energética"
+- "Compra con derecho a reclamación si el certificado es incorrecto"
+
+## Preguntas frecuentes
+
+**¿El Brown Discount es legal?**
+Sí. Es un concepto económico reconocido internacionalmente y usado por bancos, tasadores y compradores.
+
+**¿Puedo negociar si el certificado es A o B?**
+No. El Brown Discount solo aplica a calificaciones C-G. Para A y B, no hay descuento.
+
+**¿El vendedor está obligado a aceptar mi oferta?**
+No. El vendedor puede rechazar cualquier oferta. Pero si tu oferta está basada en datos técnicos, es más difícil de rechazar.
+
+**¿Cuánto tiempo tarda la negociación?**
+Entre 1 y 4 semanas, dependiendo de la disposición del vendedor.
+
+**¿Necesito un abogado para negociar?**
+No es obligatorio, pero es recomendable para redactar el contrato con las condiciones acordadas.
+
+---
+
+## 📖 Más información relacionada
+
+- **[¿Puedo reclamar al vendedor si el certificado está mal? →](/blog/puedo-reclamar-al-vendedor-certificado-energetico/)**
+- **[Consecuencias de un certificado energético falso →](/blog/consecuencias-certificado-energetico-falso/)**
+- **[Brown Discount: cómo calcular la pérdida de valor →](/blog/brown-discount-precio-vivienda/)**
+
+**¿Necesitas verificar el certificado antes de negociar? Por 59€ lo confirmamos con informe técnico.**
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+`,
+date: "2026-06-20",
+author: "Eva María González Gracia",
+tags: ["certificado energético", "negociación", "rebaja precio", "brown discount"],
+readingTime: 8,
+featured: false,

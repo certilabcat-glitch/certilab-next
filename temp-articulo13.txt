@@ -1,0 +1,238 @@
+slug: "vivienda-consume-mas-que-certificado-energetico",
+title: "Mi vivienda consume más que lo que dice el certificado: ¿por qué?",
+excerpt: "Pagas 200€/mes en energía pero el certificado dice que deberías pagar 100€. Guía para entender la discrepancia y actuar.",
+content: `
+# Mi vivienda consume más que lo que dice el certificado: ¿por qué?
+
+<div class="respuesta-directa">
+Si tu consumo real es significativamente más alto que el predicho por el certificado, hay 6 causas principales: 1) certificado sin visita presencial, 2) parámetros de cálculo optimistas, 3) reformas no registradas, 4) cambios en el uso (más personas, más calefacción), 5) instalaciones obsoletas no detectadas, 6) errores en el software. La brecha puede ser de hasta el 100%. Si es mayor al 20%, solicita una Segunda Opinión por 59€.
+</div>
+
+## El problema: pagas mucho más de lo que predice el certificado
+
+Tienes tu certificado energético.
+Predice un consumo de 80 kWh/m² año.
+Para una vivienda de 80m², eso significa unos 800€/año.
+
+Pero tu factura real es de 1.600€/año.
+**El doble.**
+
+¿Por qué tu vivienda consume el doble de lo predicho?
+
+## Las 6 causas principales de la discrepancia
+
+### Causa 1: Certificado sin visita presencial
+
+**La causa más grave.**
+
+Si el técnico no visitó tu vivienda, usó solo datos del catastro. Eso significa:
+
+- No verificó el estado real de ventanas, aislamiento o instalaciones
+- No detectó deficiencias que aumentan el consumo
+- Usó valores por defecto que pueden ser demasiado optimistas
+- No consideró puentes térmicos ni infiltraciones de aire
+
+**Consecuencia:** El consumo predicho es mucho más bajo del real.
+
+### Causa 2: Parámetros de cálculo optimistas
+
+El software de certificación permite usar valores por defecto. El técnico puede elegir los valores más favorables.
+
+**Ejemplos de parámetros optimistas:**
+- Aislamiento mejor del real
+- Ventanas con mejor rendimiento del que tienen
+- Caldera con mayor eficiencia de la real
+- Ausencia de puentes térmicos
+
+**Consecuencia:** El consumo predicho es más bajo del real.
+
+### Causa 3: Reformas no registradas
+
+Has hecho reformas, pero el certificado no las refleja. Usa datos del catastro sin verificar.
+
+**Ejemplos de reformas no registradas:**
+- Ventanas climalit nuevas
+- Aislamiento en fachada
+- Cambio de caldera
+- Instalación de aerotermia
+
+**Consecuencia:** El certificado predice un consumo más alto del real. Pero si tu consumo real es más alto, significa que hay otros problemas.
+
+### Causa 4: Cambios en el uso de la vivienda
+
+El certificado se calcula asumiendo un uso estándar. Pero tu uso real puede ser diferente.
+
+**Ejemplos de cambios en el uso:**
+- Mantienes la temperatura a 23°C en invierno (vs 21°C estándar)
+- Hay 5 personas en la vivienda (vs 2-3 estándar)
+- Usas más agua caliente
+- Tienes más electrodomésticos
+- Usas aire acondicionado en verano
+
+**Consecuencia:** Tu consumo real es más alto que el predicho, aunque el certificado sea correcto.
+
+### Causa 5: Instalaciones obsoletas no detectadas
+
+El técnico no detectó que las instalaciones son más antiguas o ineficientes de lo que parecen.
+
+**Ejemplos de instalaciones obsoletas:**
+- Caldera de gasoil de 25 años (rendimiento bajo)
+- Radiadores sin termostatos
+- Tuberías sin aislamiento
+- Sistemas de ACS ineficientes
+
+**Consecuencia:** El consumo real es más alto porque las instalaciones son ineficientes.
+
+### Causa 6: Errores en el software de cálculo
+
+El software de certificación es complejo. Un error en la introducción de datos puede cambiar el consumo predicho en un 20-30%.
+
+**Ejemplos de errores:**
+- Introducir "caldera de condensación" cuando es estándar
+- Declarar aislamiento que no existe
+- Omitir sistemas de climatización
+- Errores en la orientación de fachadas
+
+**Consecuencia:** El consumo predicho es incorrecto.
+
+## Tabla: Consumo esperado vs real
+
+| Calificación | Consumo predicho | Consumo real típico | Diferencia |
+|-------------|-----------------|-------------------|-----------|
+| A | < 30 kWh/m² | 40-50 kWh/m² | +33-67% |
+| B | 30-50 kWh/m² | 60-80 kWh/m² | +20-67% |
+| C | 50-80 kWh/m² | 100-120 kWh/m² | +20-40% |
+| D | 80-120 kWh/m² | 140-160 kWh/m² | +17-40% |
+| E | 120-160 kWh/m² | 180-220 kWh/m² | +15-38% |
+| F | 160-200 kWh/m² | 240-280 kWh/m² | +20-40% |
+| G | > 200 kWh/m² | > 300 kWh/m² | +20-50% |
+
+> **Dato clave:** Según el IDAE, la discrepancia media es del 25-35%. Si es mayor al 50%, probablemente hay un error en el certificado.
+
+## ¿Cuánto dinero pierdes por la discrepancia?
+
+Si tu consumo real es un 100% más alto que el predicho, estás pagando dinero extra cada mes.
+
+**Cálculo:**
+- Consumo predicho: 80 kWh/m² año
+- Consumo real: 160 kWh/m² año
+- Diferencia: 80 kWh/m² año
+- Coste por kWh: 0,25€ (media España)
+- Coste extra anual (80m²): 80 × 80 × 0,25 = **1.600€/año**
+- Coste extra en 20 años: **32.000€**
+
+Si la discrepancia es del 50%, el coste extra es de **16.000€ en 20 años**.
+
+## ¿Qué hacer si tu consumo real es mucho más alto?
+
+### Paso 1: Verifica que la discrepancia es real
+
+Antes de actuar, asegúrate de que la diferencia no se debe a cambios en tu uso:
+
+- ¿Has aumentado la temperatura de calefacción?
+- ¿Hay más personas viviendo en la vivienda?
+- ¿Usas más electrodomésticos?
+- ¿Has instalado aire acondicionado?
+- ¿Usas más agua caliente?
+
+Si la respuesta es no, la discrepancia probablemente se debe a un error en el certificado.
+
+### Paso 2: Calcula la discrepancia exacta
+
+Compara tu consumo real con el predicho:
+
+**Fórmula:**
+- Consumo real anual (kWh) ÷ Superficie (m²) = Consumo real (kWh/m² año)
+- Compara con el consumo predicho en el certificado
+
+**Ejemplo:**
+- Factura anual: 1.600€
+- Coste por kWh: 0,25€
+- Consumo real: 1.600 ÷ 0,25 = 6.400 kWh/año
+- Superficie: 80m²
+- Consumo real: 6.400 ÷ 80 = **80 kWh/m² año**
+- Consumo predicho: 40 kWh/m² año
+- Discrepancia: **100%**
+
+### Paso 3: Solicita una Segunda Opinión
+
+Por **59€**, un técnico independiente revisa tu certificado y te confirma si la discrepancia se debe a un error.
+
+El informe incluye:
+- Análisis del certificado original
+- Identificación de parámetros incorrectos
+- Consumo real estimado
+- Recomendaciones de actuación
+
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+
+### Paso 4: Reclama si hay error
+
+Si la Segunda Opinión confirma que el certificado tiene errores:
+
+- **Reclamar al técnico** para que lo corrija sin coste
+- **Reclamar ante el colegio profesional** si el técnico se niega
+- **Denunciar ante la administración** si hay fraude evidente
+
+## Casos reales de discrepancia alta
+
+### Caso 1: Certificado sin visita
+
+**Situación:** Piso con certificado D (consumo predicho 100 kWh/m² año), pero consumo real 200 kWh/m² año.
+
+**Causa:** El certificado se hizo sin visita presencial. Usaba datos del catastro.
+
+**Realidad:** Ventanas de aluminio simple, sin aislamiento, caldera de 20 años.
+
+**Solución:** Segunda Opinión confirmó el error. Nuevo certificado con calificación F.
+
+### Caso 2: Parámetros optimistas
+
+**Situación:** Casa con certificado C (consumo predicho 60 kWh/m² año), pero consumo real 150 kWh/m² año.
+
+**Causa:** El técnico usó parámetros demasiado optimistas (aislamiento mejor del real, ventanas mejor que las reales).
+
+**Realidad:** Calificación real era E.
+
+**Solución:** Nuevo certificado con parámetros realistas.
+
+### Caso 3: Cambios en el uso
+
+**Situación:** Piso con certificado D (consumo predicho 100 kWh/m² año), pero consumo real 140 kWh/m² año.
+
+**Causa:** El certificado asumía 2 personas. Ahora hay 4 personas en la vivienda.
+
+**Realidad:** El certificado es correcto, pero el uso ha cambiado.
+
+**Solución:** El certificado es válido. El consumo extra se debe al cambio de uso.
+
+## Preguntas frecuentes
+
+**¿Es normal que el consumo real sea más alto que el predicho?**
+Sí, es normal una discrepancia del 20-35%. Si es mayor al 50%, probablemente hay un error en el certificado.
+
+**¿Puedo reclamar si el consumo real es mucho más alto?**
+Sí, si demuestras que la discrepancia se debe a un error en el certificado (parámetros incorrectos, reformas no registradas, etc.). Necesitas un dictamen técnico que lo acredite.
+
+**¿Cuánto cuesta verificar si hay un error?**
+En Certilab, 59€ IVA incluido. Recibes un informe técnico firmado en 24-48h.
+
+**¿Qué hago si el técnico no responde a mi reclamación?**
+Presenta una denuncia ante el colegio profesional del técnico. El colegio puede abrir expediente disciplinario.
+
+---
+
+## 📖 Más información relacionada
+
+- **[¿Por qué mi consumo real no coincide con el certificado? →](/blog/diferencia-consumo-real-certificado-energetico/)**
+- **[¿Cómo saber si mi certificado está mal? 7 señales →](/blog/como-saber-si-certificado-energetico-esta-mal/)**
+- **[Cómo reclamar un certificado energético incorrecto →](/blog/reclamar-certificado-energetico/)**
+
+**¿Tu consumo real es mucho más alto? Por 59€ lo verificamos con informe técnico firmado.**
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+`,
+date: "2026-06-20",
+author: "Eva María González Gracia",
+tags: ["certificado energético", "consumo alto", "discrepancia", "factura energética"],
+readingTime: 8,
+featured: false,

@@ -1,0 +1,250 @@
+slug: "etiqueta-energetica-no-coincide-con-la-vivienda",
+title: "La etiqueta energética no coincide con mi vivienda: ¿qué significa?",
+excerpt: "Tu vivienda tiene ventanas nuevas pero la etiqueta muestra calificación G. Descubre qué está mal y cómo corregirlo.",
+content: `
+# La etiqueta energética no coincide con mi vivienda: ¿qué significa?
+
+<div class="respuesta-directa">
+Si la etiqueta energética no refleja el estado real de tu vivienda (por ejemplo, muestra G cuando tienes ventanas climalit nuevas), hay 5 causas principales: 1) reformas no registradas, 2) datos del catastro sin verificar, 3) errores en mediciones, 4) cambios en instalaciones, 5) certificado antiguo/caducado. La solución es una Segunda Opinión por 59€ que confirme la discrepancia y te permita reclamar.
+</div>
+
+## El problema: la etiqueta no refleja tu vivienda
+
+Tienes tu certificado energético en la mano.
+La etiqueta muestra una **G**.
+
+Pero tu vivienda tiene:
+- Ventanas climalit nuevas (instaladas hace 2 años)
+- Aislamiento en fachada (reformado hace 3 años)
+- Aerotermia (instalada hace 1 año)
+
+¿Cómo es posible que la calificación sea G?
+
+**La etiqueta no coincide con tu vivienda.**
+
+## Las 5 causas principales de la discrepancia
+
+### Causa 1: Reformas no registradas
+
+**La causa más frecuente.**
+
+Has invertido en mejorar tu vivienda, pero el certificado no lo refleja. Usa los datos del catastro, que no incluyen tus reformas.
+
+**Ejemplos de reformas no registradas:**
+- Ventanas climalit nuevas
+- Aislamiento en fachada o cubierta
+- Cambio de caldera por aerotermia
+- Instalación de placas solares
+- Cambio de iluminación a LED
+
+**Consecuencia:** El certificado predice un consumo más alto del real. Tu calificación es peor de lo que debería ser.
+
+### Causa 2: Datos del catastro sin verificar
+
+El técnico usó solo datos del catastro sin comprobar in situ si eran correctos.
+
+**Ejemplos de datos incorrectos del catastro:**
+- Año de construcción equivocado
+- Superficie mal declarada
+- Tipo de construcción incorrecto
+- Orientación de fachadas equivocada
+
+**Consecuencia:** El certificado se calcula sobre datos incorrectos. La calificación no refleja la realidad.
+
+### Causa 3: Errores en mediciones
+
+El técnico midió incorrectamente durante la visita.
+
+**Ejemplos de errores de medición:**
+- Superficie de ventanas mal medida
+- Grosor de aislamiento estimado incorrectamente
+- Altura de techos mal registrada
+
+**Consecuencia:** Los parámetros de cálculo son incorrectos. La calificación es errónea.
+
+### Causa 4: Cambios en instalaciones
+
+Las instalaciones de tu vivienda han cambiado desde que se emitió el certificado.
+
+**Ejemplos de cambios:**
+- Cambio de caldera (de gasoil a gas natural)
+- Instalación de aire acondicionado
+- Cambio de sistema de ACS
+- Instalación de placas solares
+
+**Consecuencia:** El certificado no refleja las instalaciones actuales. La calificación es incorrecta.
+
+### Causa 5: Certificado antiguo o caducado
+
+El certificado tiene más de 5-7 años. Aunque sea válido legalmente (hasta 10 años), puede no reflejar cambios en la vivienda.
+
+**Ejemplos de cambios en el tiempo:**
+- Reformas realizadas después de la emisión del certificado
+- Cambios en el uso de la vivienda
+- Deterioro de instalaciones antiguas
+
+**Consecuencia:** El certificado es antiguo. No refleja el estado actual de la vivienda.
+
+## Cómo verificar si la etiqueta coincide con tu vivienda
+
+### Checklist de 8 puntos
+
+Responde sí o no a cada pregunta:
+
+1. **¿El año de construcción del certificado coincide con el real?**
+   - Sí ✅ | No ❌
+
+2. **¿La superficie declarada coincide con tu escritura?**
+   - Sí ✅ | No ❌
+
+3. **¿Las ventanas del certificado coinciden con las reales?**
+   - Sí ✅ | No ❌
+
+4. **¿La caldera/sistema de calefacción es el mismo que declara el certificado?**
+   - Sí ✅ | No ❌
+
+5. **¿El aislamiento declarado coincide con lo que ves en tu vivienda?**
+   - Sí ✅ | No ❌
+
+6. **¿El certificado incluye todas las reformas que has hecho?**
+   - Sí ✅ | No ❌
+
+7. **¿El certificado tiene menos de 5 años?**
+   - Sí ✅ | No ❌
+
+8. **¿Tu consumo real coincide con el predicho por el certificado?**
+   - Sí ✅ | No ❌
+
+**Resultado:**
+- 7-8 síes: La etiqueta probablemente coincide
+- 5-6 síes: Hay discrepancias menores
+- 3-4 síes: Hay discrepancias importantes
+- 0-2 síes: La etiqueta no coincide con tu vivienda
+
+### Comparación con viviendas similares
+
+Busca viviendas similares a la tuya (mismo año, zona, tamaño) y compara sus calificaciones.
+
+**Ejemplo:**
+- Tu vivienda: 1980, 80m², piso, calificación G
+- Vivienda similar 1: 1980, 85m², piso, calificación E
+- Vivienda similar 2: 1982, 75m², piso, calificación F
+
+Si tu calificación es significativamente peor, probablemente hay un error.
+
+### Análisis de consumo real
+
+Compara tu consumo real con el predicho por el certificado.
+
+**Tabla de coherencia:**
+
+| Calificación | Consumo predicho | Consumo real típico | ¿Coincide? |
+|-------------|-----------------|-------------------|-----------|
+| A | < 30 kWh/m² | 40-50 kWh/m² | ❌ No |
+| B | 30-50 kWh/m² | 60-80 kWh/m² | ❌ No |
+| C | 50-80 kWh/m² | 100-120 kWh/m² | ❌ No |
+| D | 80-120 kWh/m² | 140-160 kWh/m² | ❌ No |
+| E | 120-160 kWh/m² | 180-220 kWh/m² | ❌ No |
+| F | 160-200 kWh/m² | 240-280 kWh/m² | ❌ No |
+| G | > 200 kWh/m² | > 300 kWh/m² | ❌ No |
+
+> **Nota:** Una discrepancia del 20-35% es normal. Si es mayor, hay un error.
+
+## ¿Qué hacer si la etiqueta no coincide?
+
+### Paso 1: Documenta la discrepancia
+
+Recopila evidencia de que la etiqueta no coincide:
+- Fotos de ventanas, aislamiento, instalaciones
+- Facturas de reformas realizadas
+- Facturas de consumo real
+- Comparación con viviendas similares
+
+### Paso 2: Solicita una Segunda Opinión
+
+Por **59€**, un técnico independiente revisa tu certificado y confirma si hay discrepancias.
+
+El informe incluye:
+- Análisis de cada parámetro
+- Identificación de reformas no registradas
+- Calificación correcta estimada
+- Recomendaciones de actuación
+
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+
+### Paso 3: Reclama si hay error
+
+Si la Segunda Opinión confirma que hay discrepancias importantes:
+
+- **Reclamar al técnico** para que corrija el certificado sin coste
+- **Solicitar un nuevo certificado** con la calificación correcta
+- **Reclamar ante el colegio profesional** si el técnico se niega
+
+### Paso 4: Solicita un nuevo certificado
+
+Si el técnico original no responde, contrata a otro técnico para emitir un certificado nuevo que refleje el estado actual de tu vivienda.
+
+**Coste:** 80-200€ según la zona
+
+## Casos reales de discrepancia
+
+### Caso 1: Reformas no registradas
+
+**Situación:** Piso con certificado G, pero con ventanas climalit nuevas y aerotermia.
+
+**Discrepancia:** Calificación G vs realidad C.
+
+**Causa:** El certificado usaba datos del catastro sin verificar las reformas.
+
+**Solución:** Segunda Opinión confirmó el error. Nuevo certificado con calificación C. Vendedor pudo vender a precio justo.
+
+### Caso 2: Certificado antiguo
+
+**Situación:** Casa con certificado de 2015 (calificación F), pero con reformas en 2020.
+
+**Discrepancia:** Calificación F vs realidad C.
+
+**Causa:** El certificado no incluía las reformas de 2020.
+
+**Solución:** Nuevo certificado con calificación C. Acceso a hipoteca verde con mejores condiciones.
+
+### Caso 3: Datos del catastro incorrectos
+
+**Situación:** Piso con certificado E, pero el catastro tenía la superficie mal declarada.
+
+**Discrepancia:** Calificación E vs realidad C.
+
+**Causa:** El certificado usaba superficie incorrecta del catastro.
+
+**Solución:** Corrección de datos catastrales. Nuevo certificado con calificación C.
+
+## Preguntas frecuentes
+
+**¿Puedo reclamar si la etiqueta no coincide con mi vivienda?**
+Sí. Si demuestras que hay discrepancias importantes (reformas no registradas, datos incorrectos), puedes reclamar al técnico para que corrija el certificado sin coste.
+
+**¿Cuánto cuesta verificar si la etiqueta coincide?**
+En Certilab, 59€ IVA incluido. Recibes un informe técnico firmado en 24-48h que confirma si hay discrepancias.
+
+**¿Qué hago si ya vendí con un certificado que no coincidía?**
+Si el comprador descubre la discrepancia, puede reclamarte. Es mejor corregir el certificado antes de vender.
+
+**¿El certificado antiguo es válido aunque no coincida?**
+Legalmente sí (hasta 10 años), pero si hay cambios importantes en la vivienda, es recomendable actualizarlo.
+
+---
+
+## 📖 Más información relacionada
+
+- **[¿Por qué mi consumo real no coincide con el certificado? →](/blog/diferencia-consumo-real-certificado-energetico/)**
+- **[¿Cómo saber si mi certificado está mal? 7 señales →](/blog/como-saber-si-certificado-energetico-esta-mal/)**
+- **[Certificado energético incorrecto: cómo detectarlo →](/blog/certificado-energetico-incorrecto/)**
+
+**¿Tu etiqueta no coincide con tu vivienda? Por 59€ lo verificamos con informe técnico firmado.**
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+`,
+date: "2026-06-20",
+author: "Eva María González Gracia",
+tags: ["certificado energético", "etiqueta", "reformas", "discrepancia", "no coincide"],
+readingTime: 8,
+featured: false,

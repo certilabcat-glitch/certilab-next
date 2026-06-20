@@ -297,16 +297,16 @@ export default async function BlogPostPage({ params }: Props) {
       {related.length > 0 && (
         <section className="related">
           <h2>También te puede interesar</h2>
-          <div className="related-grid">
-            {related.map((r) => (
-              <div key={r.slug} className="related-card">
-                <h3>
-                  <Link href={`/blog/${r.slug}/`}>{r.title}</Link>
-                </h3>
-                <p>{r.excerpt}</p>
-              </div>
-            ))}
-          </div>
+           <div className="related-grid">
+             {related.map((r) => (
+               <div key={r.slug} className="related-card">
+                 <h3>
+                   <Link href={`/blog/${r.slug}/`}>{r.title}</Link>
+                 </h3>
+                 <p>{r.excerpt}</p>
+               </div>
+             ))}
+           </div>
         </section>
       )}
 

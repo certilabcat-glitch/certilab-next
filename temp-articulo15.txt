@@ -1,0 +1,279 @@
+slug: "puedo-reclamar-al-vendedor-certificado-energetico",
+title: "¿Puedo reclamar al vendedor si el certificado energético está mal?",
+excerpt: "Sí, puedes reclamar. Te explicamos cómo, cuánto tiempo tienes y cuánto puedes recuperar.",
+content: `
+# ¿Puedo reclamar al vendedor si el certificado energético está mal?
+
+<div class="respuesta-directa">
+Sí, puedes reclamar al vendedor si el certificado energético está mal. Tienes 6 meses desde la compra para reclamar por vicios ocultos, o 3 años para reclamar por responsabilidad profesional del técnico. Puedes recuperar el sobreprecio pagado (5-15% del valor) más los costes de rehabilitación. En una vivienda de 270.000€, la reclamación puede superar los 60.000€.
+</div>
+
+## Sí, el vendedor es responsable si el certificado está mal
+
+Compraste una vivienda.
+El certificado decía que era eficiente.
+Pero resulta que no lo es.
+
+¿Puedes reclamar?
+
+**Sí. Absolutamente.**
+
+El vendedor es responsable de que el certificado sea correcto.
+
+## Cuándo puedes reclamar: 3 casos principales
+
+### Caso 1: Calificación inflada
+
+El certificado muestra una calificación mejor de la que realmente tiene la vivienda.
+
+**Ejemplos:**
+- Certificado: Calificación C
+- Realidad: Calificación F
+- Diferencia: 3 letras
+
+**¿Puedes reclamar?** Sí. El vendedor es responsable de que la calificación sea correcta.
+
+### Caso 2: Reformas no registradas
+
+El certificado no incluye reformas que el vendedor realizó.
+
+**Ejemplos:**
+- Certificado: Sin aislamiento
+- Realidad: Aislamiento de 8cm en fachada
+- Impacto: Calificación debería ser 2 letras mejor
+
+**¿Puedes reclamar?** Sí. El vendedor debería haber actualizado el certificado.
+
+### Caso 3: Certificado sin visita presencial
+
+El técnico no visitó la vivienda. Usó solo datos del catastro.
+
+**Consecuencia:** El certificado no refleja el estado real de la vivienda.
+
+**¿Puedes reclamar?** Sí. El vendedor es responsable de contratar a un técnico que realice una visita presencial.
+
+## Plazo de reclamación: cuánto tiempo tienes
+
+### Plazo 1: Vicios ocultos (6 meses)
+
+Si el certificado oculta un vicio (deficiencia energética), tienes **6 meses desde la compra** para reclamar.
+
+**Ejemplo:**
+- Compra: 1 de enero de 2024
+- Descubrimiento del vicio: 15 de febrero de 2024
+- Plazo para reclamar: hasta el 1 de julio de 2024
+
+**Ventaja:** Plazo corto pero muy favorable para el comprador.
+
+### Plazo 2: Responsabilidad profesional (3 años)
+
+Si el error se debe a responsabilidad profesional del técnico, tienes **3 años desde la compra** para reclamar.
+
+**Ejemplo:**
+- Compra: 1 de enero de 2024
+- Descubrimiento del error: 15 de febrero de 2025
+- Plazo para reclamar: hasta el 1 de enero de 2027
+
+**Ventaja:** Plazo más largo para investigar y preparar la reclamación.
+
+### Plazo 3: Denuncia administrativa (4 años)
+
+Si el certificado contiene datos falsos, puedes denunciar a la administración dentro de **4 años**.
+
+**Ejemplo:**
+- Emisión del certificado: 1 de enero de 2024
+- Denuncia: hasta el 1 de enero de 2028
+
+**Ventaja:** Plazo largo para investigar y recopilar pruebas.
+
+## Tabla: Plazos de reclamación
+
+| Tipo de reclamación | Plazo | Desde cuándo | Contra quién |
+|-------------------|-------|-------------|-------------|
+| Vicios ocultos | 6 meses | Compra | Vendedor |
+| Responsabilidad profesional | 3 años | Compra | Técnico |
+| Denuncia administrativa | 4 años | Emisión | Administración |
+| Reclamación al colegio | 4 años | Emisión | Colegio profesional |
+
+## Proceso de reclamación: 4 pasos
+
+### Paso 1: Obtener una Segunda Opinión
+
+Por **59€**, un técnico independiente revisa el certificado y confirma si hay errores.
+
+El informe incluye:
+- Análisis detallado del certificado
+- Identificación de errores
+- Calificación correcta estimada
+- Recomendaciones de actuación
+
+**Tiempo:** 24-48 horas
+
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+
+### Paso 2: Reclamar al vendedor
+
+Con el informe de Segunda Opinión en la mano, contacta al vendedor:
+
+**Carta de reclamación:**
+- Referencia del certificado
+- Errores identificados (con informe técnico)
+- Sobreprecio pagado (cálculo del Brown Discount)
+- Costes de rehabilitación estimados
+- Plazo para responder (15 días)
+
+**Ejemplo de reclamación:**
+"Compramos la vivienda el 1 de enero de 2024 por 270.000€. El certificado mostraba calificación C. Una Segunda Opinión confirma que la calificación real es F. Según el Brown Discount, pagamos 27.000€ de más. Reclamamos esta cantidad más 15.000€ de costes de rehabilitación."
+
+### Paso 3: Reclamar al técnico
+
+Si el vendedor no responde, reclama al técnico:
+
+**Opciones:**
+- Contacto directo (carta certificada)
+- Reclamación ante el colegio profesional
+- Demanda civil
+
+**Cuantía:** Sobreprecio + costes de rehabilitación
+
+### Paso 4: Denunciar a la administración
+
+Si hay fraude evidente, denuncia a la administración autonómica:
+
+**Dónde denunciar:**
+- Consejería de Energía (o equivalente)
+- Colegio profesional del técnico
+- Policía (si hay delito)
+
+**Resultado:** Multa al técnico y/o vendedor
+
+## Cuánto puedes recuperar: tabla de sobreprecio
+
+### Brown Discount: pérdida de valor por calificación
+
+El **Brown Discount** es la pérdida de valor que sufre una vivienda por tener una mala calificación energética.
+
+**Tabla: Brown Discount por calificación**
+
+| Calificación | Descuento sobre valor | Ejemplo 270.000€ |
+|-------------|----------------------|------------------|
+| A | 0% | 0€ |
+| B | 2-3% | 5.400€ - 8.100€ |
+| C | 3-5% | 8.100€ - 13.500€ |
+| D | 5-8% | 13.500€ - 21.600€ |
+| E | 8-12% | 21.600€ - 32.400€ |
+| F | 12-15% | 32.400€ - 40.500€ |
+| G | 15-20% | 40.500€ - 54.000€ |
+
+**Ejemplo:**
+- Compraste por: 270.000€
+- Certificado decía: Calificación C (descuento 3-5%)
+- Realidad: Calificación F (descuento 12-15%)
+- Diferencia: 9-10% = 24.300€ - 27.000€
+
+### Costes de rehabilitación
+
+Además del sobreprecio, puedes reclamar los costes de rehabilitación:
+
+**Ejemplos de costes:**
+- Aislamiento de fachada: 5.000€ - 8.000€
+- Ventanas climalit: 3.000€ - 5.000€
+- Cambio de caldera: 2.000€ - 4.000€
+- Aerotermia: 4.000€ - 7.000€
+
+**Total potencial:** 14.000€ - 24.000€
+
+### Cuantía total de la reclamación
+
+**Ejemplo 1: Vivienda de 150.000€**
+- Sobreprecio (Brown Discount): 7.500€ - 15.000€
+- Costes de rehabilitación: 10.000€
+- **Total:** 17.500€ - 25.000€
+
+**Ejemplo 2: Vivienda de 270.000€**
+- Sobreprecio (Brown Discount): 13.500€ - 40.500€
+- Costes de rehabilitación: 15.000€
+- **Total:** 28.500€ - 55.500€
+
+**Ejemplo 3: Vivienda de 400.000€**
+- Sobreprecio (Brown Discount): 20.000€ - 60.000€
+- Costes de rehabilitación: 20.000€
+- **Total:** 40.000€ - 80.000€
+
+## Casos reales de reclamación exitosa
+
+### Caso 1: Calificación inflada
+
+**Situación:** Comprador pagó 270.000€ por piso con certificado C. Realidad: calificación F.
+
+**Reclamación:**
+- Segunda Opinión: 59€
+- Sobreprecio (Brown Discount): 27.000€
+- Costes de rehabilitación: 12.000€
+- **Total reclamado:** 39.000€
+
+**Resultado:** Vendedor aceptó pagar 35.000€ en acuerdo extrajudicial.
+
+**Tiempo:** 3 meses
+
+### Caso 2: Certificado sin visita
+
+**Situación:** Comprador pagó 400.000€ por casa. Certificado sin visita presencial.
+
+**Reclamación:**
+- Segunda Opinión: 59€
+- Sobreprecio (Brown Discount): 40.000€
+- Costes de rehabilitación: 18.000€
+- **Total reclamado:** 58.000€
+
+**Resultado:** Litigio. Sentencia favorable al comprador: 52.000€.
+
+**Tiempo:** 18 meses
+
+### Caso 3: Reformas no registradas
+
+**Situación:** Comprador pagó 200.000€. Certificado no incluía reformas de 10.000€.
+
+**Reclamación:**
+- Segunda Opinión: 59€
+- Sobreprecio (Brown Discount): 8.000€
+- Costes de rehabilitación: 0€ (reformas ya hechas)
+- **Total reclamado:** 8.000€
+
+**Resultado:** Vendedor pagó 8.000€ en acuerdo.
+
+**Tiempo:** 1 mes
+
+## Preguntas frecuentes
+
+**¿Cuál es el plazo más importante para reclamar?**
+El plazo de 6 meses por vicios ocultos. Es el más corto pero también el más favorable para el comprador.
+
+**¿Necesito un abogado para reclamar?**
+Para reclamaciones menores (< 10.000€), puedes hacerlo tú mismo. Para reclamaciones mayores, es recomendable contratar un abogado.
+
+**¿Cuánto cuesta un abogado?**
+Entre 1.000€ y 3.000€ por reclamación, dependiendo de la complejidad.
+
+**¿Puedo reclamar si ya pasaron 6 meses?**
+Sí, pero con el plazo de 3 años por responsabilidad profesional del técnico. Es más difícil pero posible.
+
+**¿El vendedor puede negar la reclamación?**
+Sí, pero si tienes un informe técnico que acredita el error, tienes muchas probabilidades de ganar en juicio.
+
+---
+
+## 📖 Más información relacionada
+
+- **[Consecuencias de un certificado energético falso →](/blog/consecuencias-certificado-energetico-falso/)**
+- **[Cómo conseguir rebaja de precio con el certificado →](/blog/rebaja-precio-vivienda-certificado-energetico/)**
+- **[Brown Discount: cómo calcular la pérdida de valor →](/blog/brown-discount-precio-vivienda/)**
+
+**¿Necesitas verificar si el certificado está mal? Por 59€ lo confirmamos con informe técnico.**
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+`,
+date: "2026-06-20",
+author: "Eva María González Gracia",
+tags: ["certificado energético", "reclamación", "vendedor", "vicios ocultos", "plazo"],
+readingTime: 9,
+featured: false,

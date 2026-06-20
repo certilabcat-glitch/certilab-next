@@ -1,0 +1,93 @@
+/* ===== Sticky CTA ===== */
+.stickyCTA {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 30%);
+  padding: 1.5rem 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.ctaButton {
+  flex: 1;
+  display: inline-block;
+  background: #0A0A0A;
+  color: #fff;
+  padding: 0.85rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.2s;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaButton:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+.ctaPrice {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ===== Desktop (hide) ===== */
+@media (min-width: 768px) {
+  .stickyCTA {
+    display: none;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+  .stickyCTA {
+    padding: 1rem 1rem 0.75rem;
+  }
+
+  .ctaButton {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .ctaPrice {
+    font-size: 0.8rem;
+  }
+}
+
+/* ===== Respeta preferencias de movimiento reducido ===== */
+@media (prefers-reduced-motion: reduce) {
+  .stickyCTA {
+    animation: none;
+  }
+
+  .ctaButton:hover {
+    transform: none;
+  }
+}

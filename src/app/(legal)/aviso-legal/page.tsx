@@ -1,40 +1,125 @@
 import type { Metadata } from "next";
-import "../legal.css";
 
 export const metadata: Metadata = {
   title: "Aviso Legal | Certilab",
-  description: "Aviso legal de Certilab. Información sobre titularidad, condiciones de uso y responsabilidades.",
-  alternates: { canonical: "https://www.certilab.cat/aviso-legal/" },
-  robots: { index: true, follow: true },
+  description: "Aviso legal de Certilab. Información sobre responsabilidades, limitaciones de uso y condiciones de acceso.",
+  robots: "index, follow",
 };
 
-export default function AvisoLegalPage() {
+export default function AvisoLegal() {
   return (
-    <main className="legal-page">
-      <div className="legal-content">
-        <h1>Aviso Legal</h1>
-        <p className="legal-update">Última actualización: mayo 2026</p>
+    <div className="legal-page">
+      <h1>Aviso Legal</h1>
 
-        <h2>1. Titularidad</h2>
-        <p><strong>Titular:</strong> Eva María González Gracia</p>
-        <p><strong>Colegiada:</strong> Cateb nº 9457</p>
-        <p><strong>Actividad:</strong> Arquitectura Técnica · Consultoría Energética Forense</p>
-        <p><strong>Contacto:</strong> A través del formulario de la web</p>
+      <h2>1. Identificación del Responsable</h2>
+      <p>
+        <strong>Denominación:</strong> Certilab
+      </p>
+      <p>
+        <strong>Responsable:</strong> Eva María González García
+      </p>
+      <p>
+        <strong>Colegiación Profesional:</strong> Arquitecta Técnica colegiada en CATEB nº 9457
+      </p>
+      <p>
+        <strong>Domicilio:</strong> C/ Pau Claris 163, 4º 2ª, 08037 Barcelona (España)
+      </p>
+      <p>
+        <strong>Teléfono:</strong> +34 722 437 675
+      </p>
+      <p>
+        <strong>Email:</strong> info@certilab.cat
+      </p>
 
-        <h2>2. Propiedad intelectual</h2>
-        <p>Todos los contenidos de esta web (textos, imágenes, diseño, logotipos) son propiedad de Certilab o se utilizan con licencia. Queda prohibida la reproducción total o parcial sin autorización expresa.</p>
+      <h2>2. Objeto del Sitio Web</h2>
+      <p>
+        Este sitio web tiene como objeto la prestación de servicios de consultoría energética forense, análisis técnico de certificados energéticos, auditorías inmobiliarias e informes técnicos energéticos.
+      </p>
+      <p>
+        Certilab actúa como profesional independiente con responsabilidad profesional verificable, sin intermediarios ni algoritmos opacos.
+      </p>
 
-        <h2>3. Responsabilidad</h2>
-        <p>Los informes y análisis emitidos por Certilab tienen carácter de consultoría técnica forense. No constituyen un certificado energético oficial con registro en CCAA. El usuario es responsable de verificar la aplicabilidad de las recomendaciones a su caso concreto.</p>
+      <h2>3. Condiciones de Uso</h2>
+      <p>
+        El acceso y uso de este sitio web está condicionado a la aceptación de este aviso legal y de las condiciones de uso que se detallan a continuación.
+      </p>
+      <p>
+        El usuario se compromete a utilizar el sitio web de forma lícita y leal, respetando la legislación vigente y los derechos de terceros.
+      </p>
 
-        <h2>4. Enlaces externos</h2>
-        <p>Esta web puede contener enlaces a sitios externos. Certilab no se responsabiliza del contenido ni de las políticas de privacidad de terceros.</p>
+      <h2>4. Responsabilidad de Contenidos</h2>
+      <p>
+        Certilab se esfuerza por mantener la información contenida en este sitio web actualizada y precisa. Sin embargo, no garantiza la exactitud, integridad o actualización de los contenidos.
+      </p>
+      <p>
+        Los contenidos de este sitio web tienen carácter informativo y no constituyen asesoramiento legal, fiscal o profesional específico. Para cuestiones que requieran asesoramiento profesional personalizado, se recomienda contactar directamente con Certilab.
+      </p>
 
-        <h2>5. Legislación aplicable</h2>
-        <p>Este aviso legal se rige por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de la provincia de Barcelona.</p>
-      </div>
+      <h2>5. Limitación de Responsabilidad</h2>
+      <p>
+        Certilab no será responsable de:
+      </p>
+      <ul>
+        <li>Daños y perjuicios de cualquier naturaleza derivados del acceso, uso o imposibilidad de uso del sitio web.</li>
+        <li>Daños causados por virus, malware u otros elementos nocivos que puedan afectar los sistemas informáticos del usuario.</li>
+        <li>Interrupciones, errores o fallos en el funcionamiento del sitio web.</li>
+        <li>Pérdida de datos o información del usuario.</li>
+      </ul>
 
+      <h2>6. Propiedad Intelectual</h2>
+      <p>
+        Todos los contenidos de este sitio web (textos, imágenes, gráficos, logos, iconos, botones, software, código fuente, etc.) están protegidos por derechos de propiedad intelectual e industrial.
+      </p>
+      <p>
+        El usuario se compromete a no reproducir, distribuir, modificar, transmitir o utilizar los contenidos sin autorización expresa de Certilab, salvo para uso personal y no comercial.
+      </p>
 
-    </main>
+      <h2>7. Enlaces a Terceros</h2>
+      <p>
+        Este sitio web puede contener enlaces a sitios web de terceros. Certilab no es responsable del contenido, exactitud o legalidad de los sitios web enlazados.
+      </p>
+      <p>
+        La inclusión de un enlace no implica aprobación, recomendación o asociación con el sitio web enlazado.
+      </p>
+
+      <h2>8. Modificación del Aviso Legal</h2>
+      <p>
+        Certilab se reserva el derecho de modificar este aviso legal en cualquier momento. Los cambios serán efectivos desde su publicación en el sitio web.
+      </p>
+      <p>
+        El uso continuado del sitio web después de la publicación de cambios constituye aceptación de los mismos.
+      </p>
+
+      <h2>9. Legislación Aplicable</h2>
+      <p>
+        Este aviso legal se rige por la legislación española, en particular:
+      </p>
+      <ul>
+        <li>Ley 34/1988, de 11 de noviembre, de Publicidad.</li>
+        <li>Ley 3/1991, de 10 de enero, de Competencia Desleal.</li>
+        <li>Real Decreto Legislativo 1/1996, de 12 de abril, por el que se aprueba el Texto Refundido de la Ley de Propiedad Intelectual.</li>
+        <li>Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).</li>
+        <li>Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016 (RGPD).</li>
+      </ul>
+
+      <h2>10. Jurisdicción y Competencia</h2>
+      <p>
+        Para cualquier controversia derivada del uso de este sitio web, las partes se someten a la jurisdicción de los juzgados y tribunales de Barcelona (España).
+      </p>
+
+      <h2>11. Contacto</h2>
+      <p>
+        Para cualquier duda o consulta sobre este aviso legal, puede contactar con Certilab a través de:
+      </p>
+      <ul>
+        <li>Email: info@certilab.cat</li>
+        <li>Teléfono: +34 722 437 675</li>
+        <li>Formulario de contacto: disponible en el sitio web</li>
+      </ul>
+
+      <p style={{ marginTop: "3rem", fontSize: "0.85rem", color: "#999" }}>
+        Última actualización: {new Date().toLocaleDateString("es-ES")}
+      </p>
+    </div>
   );
 }

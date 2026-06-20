@@ -1,0 +1,242 @@
+FASE 2 — SATÉLITES (7 ARTÍCULOS)
+================================
+
+Artículos 10-16: Satélites de alta conversión
+Enfoque: Variaciones de la búsqueda principal con ángulos específicos
+Estructura: Problema específico → Datos → Solución → CTA
+
+---
+
+ARTÍCULO 10
+===========
+slug: "diferencia-consumo-real-certificado-energetico"
+title: "¿Por qué mi consumo real no coincide con el certificado energético?"
+excerpt: "Tu factura energética es el 50% más alta de lo que dice el certificado. Descubre por qué ocurre y qué significa para tu vivienda."
+
+Estructura:
+- Intro: "Pagas 1.500€/año pero el certificado dice que deberías pagar 800€"
+- Causas principales (5):
+  1. Certificado sin visita presencial
+  2. Parámetros de cálculo incorrectos
+  3. Reformas no registradas
+  4. Cambios en el uso de la vivienda
+  5. Errores en el software de cálculo
+- Tabla: Consumo real vs certificado (ejemplos)
+- Qué hacer: Segunda Opinión + reclamación
+- FAQ: ¿Es normal? ¿Puedo reclamar? ¿Cuánto cuesta?
+- CTA: Segunda Opinión 59€
+
+---
+
+ARTÍCULO 11
+===========
+slug: "calificacion-energetica-manipulada"
+title: "Calificación energética manipulada: cómo detectarla y qué hacer"
+excerpt: "Algunos técnicos modifican los parámetros para inflar la calificación. Aprende a detectar la manipulación y protégete antes de comprar."
+
+Estructura:
+- Intro: "El 20% de los certificados contienen manipulaciones deliberadas"
+- Métodos de manipulación (4):
+  1. Cambiar parámetros de aislamiento
+  2. Ignorar deficiencias visibles
+  3. Usar valores por defecto favorables
+  4. Omitir puentes térmicos
+- Señales de manipulación (6):
+  1. Calificación A/B en vivienda antigua
+  2. No hay fecha de visita
+  3. Precio < 60€
+  4. Técnico no verificable
+  5. Datos genéricos
+  6. Consumo real no coincide
+- Casos reales: 3 ejemplos de manipulación detectada
+- Cómo protegerse: Segunda Opinión
+- CTA: Segunda Opinión 59€
+
+---
+
+ARTÍCULO 12
+===========
+slug: "etiqueta-energetica-no-coincide-con-la-vivienda"
+title: "La etiqueta energética no coincide con mi vivienda: ¿qué significa?"
+excerpt: "Tu vivienda tiene ventanas nuevas pero la etiqueta muestra calificación G. Descubre qué está mal y cómo corregirlo."
+
+Estructura:
+- Intro: "La etiqueta dice una cosa pero tu vivienda es otra"
+- Causas de discrepancia (5):
+  1. Reformas no registradas
+  2. Datos del catastro sin verificar
+  3. Errores en mediciones
+  4. Cambios en instalaciones
+  5. Certificado antiguo/caducado
+- Cómo verificar si coincide:
+  - Checklist de 8 puntos
+  - Comparación con viviendas similares
+  - Análisis de consumo real
+- Qué hacer si no coincide:
+  - Paso 1: Segunda Opinión
+  - Paso 2: Reclamar
+  - Paso 3: Nuevo certificado
+- CTA: Segunda Opinión 59€
+
+---
+
+ARTÍCULO 13
+===========
+slug: "vivienda-consume-mas-que-certificado-energetico"
+title: "Mi vivienda consume más que lo que dice el certificado: ¿por qué?"
+excerpt: "Pagas 200€/mes en energía pero el certificado dice que deberías pagar 100€. Guía para entender la discrepancia y actuar."
+
+Estructura:
+- Intro: "La brecha entre consumo real y certificado puede ser de hasta el 100%"
+- Causas principales (6):
+  1. Certificado sin visita
+  2. Parámetros de cálculo optimistas
+  3. Reformas no registradas
+  4. Cambios en el uso (más personas, más calefacción)
+  5. Instalaciones obsoletas no detectadas
+  6. Errores en el software
+- Tabla: Consumo esperado vs real (ejemplos)
+- Cálculo: "¿Cuánto dinero pierdes?"
+  - Ejemplo: 100€/mes extra × 12 meses × 20 años = 24.000€
+- Qué hacer:
+  - Verificar consumo real
+  - Solicitar Segunda Opinión
+  - Reclamar si hay error
+- CTA: Segunda Opinión 59€
+
+---
+
+ARTÍCULO 14
+===========
+slug: "consecuencias-certificado-energetico-falso"
+title: "Consecuencias de un certificado energético falso: multas, reclamaciones y más"
+excerpt: "Un certificado falso puede costarte desde 300€ en multas hasta 60.000€ en sobreprecio. Descubre todas las consecuencias."
+
+Estructura:
+- Intro: "Las consecuencias de un certificado falso van mucho más allá de una multa"
+- Consecuencias económicas (4):
+  1. Multas administrativas (300-6.000€)
+  2. Sobreprecio pagado (5-15% del valor)
+  3. Costes de rehabilitación no previstos
+  4. Pérdida de acceso a hipotecas verdes
+- Consecuencias legales (3):
+  1. Reclamación del comprador
+  2. Responsabilidad del vendedor
+  3. Responsabilidad del técnico
+- Tabla: Consecuencias por tipo de error
+- Casos reales: 4 ejemplos con cifras
+- Cómo evitarlas: Segunda Opinión
+- CTA: Segunda Opinión 59€
+
+---
+
+ARTÍCULO 15
+===========
+slug: "puedo-reclamar-al-vendedor-certificado-energetico"
+title: "¿Puedo reclamar al vendedor si el certificado energético está mal?"
+excerpt: "Sí, puedes reclamar. Te explicamos cómo, cuánto tiempo tienes y cuánto puedes recuperar."
+
+Estructura:
+- Intro: "Sí, el vendedor es responsable si el certificado está mal"
+- Cuándo puedes reclamar (3 casos):
+  1. Calificación inflada
+  2. Reformas no registradas
+  3. Certificado sin visita
+- Plazo de reclamación:
+  - Vicios ocultos: 6 meses desde compra
+  - Responsabilidad profesional: 3 años
+  - Denuncia administrativa: 4 años
+- Proceso de reclamación (4 pasos):
+  1. Obtener Segunda Opinión
+  2. Reclamar al vendedor
+  3. Reclamar al técnico
+  4. Denunciar a la administración
+- Cuánto puedes recuperar:
+  - Tabla: Sobreprecio por Brown Discount
+  - Ejemplos: 150.000€, 270.000€, 400.000€
+- CTA: Segunda Opinión 59€
+
+---
+
+ARTÍCULO 16
+===========
+slug: "rebaja-precio-vivienda-certificado-energetico"
+title: "Cómo conseguir rebaja de precio usando el certificado energético"
+excerpt: "El certificado energético es tu mejor herramienta para negociar. Aprende a usarlo para conseguir descuentos reales."
+
+Estructura:
+- Intro: "El Brown Discount es tu argumento más fuerte en la negociación"
+- Cómo funciona el Brown Discount:
+  - Tabla: Descuento por calificación (A-G)
+  - Ejemplos: 150.000€, 270.000€, 400.000€
+- Estrategia de negociación (5 pasos):
+  1. Obtener el certificado del vendedor
+  2. Verificar que es correcto (Segunda Opinión)
+  3. Calcular el Brown Discount aplicable
+  4. Preparar argumentos técnicos
+  5. Hacer oferta informada
+- Tabla: Cálculo de descuento por vivienda
+- Casos reales: 3 negociaciones exitosas
+- Qué hacer si el vendedor se niega:
+  - Buscar otra vivienda
+  - Incluir condiciones en el contrato
+  - Aceptar pero con reservas
+- CTA: Segunda Opinión 59€
+
+---
+
+ESTRUCTURA COMÚN PARA TODOS (FASE 2):
+====================================
+
+1. INTRO (50-100 palabras)
+   - Problema específico del lector
+   - Dato de impacto económico
+   - Promesa de solución
+
+2. DESARROLLO (800-1.200 palabras)
+   - 3-5 secciones temáticas
+   - Tablas con datos concretos
+   - Ejemplos reales con cifras
+   - Casos prácticos
+
+3. SOLUCIÓN (200-300 palabras)
+   - Pasos accionables
+   - Segunda Opinión como herramienta
+   - Alternativas si es necesario
+
+4. FAQ (150-200 palabras)
+   - 4-5 preguntas frecuentes
+   - Respuestas concisas
+
+5. CTA (50 palabras)
+   - Segunda Opinión 59€
+   - Enlace a /segunda-opinion/
+
+TONO:
+- Conversacional pero técnico
+- Datos objetivos
+- Ejemplos con cifras reales
+- Empatía con el problema del lector
+- Urgencia sin presión
+
+LONGITUD OBJETIVO:
+- 1.500-2.000 palabras
+- 7-9 minutos de lectura
+- 3-4 tablas/listas
+- 2-3 casos reales
+
+KEYWORDS SECUNDARIAS:
+- Artículo 10: consumo real, discrepancia, factura energética
+- Artículo 11: manipulación, fraude, detectar
+- Artículo 12: etiqueta, no coincide, reformas
+- Artículo 13: consume más, discrepancia, dinero
+- Artículo 14: consecuencias, multas, reclamación
+- Artículo 15: reclamar vendedor, vicios ocultos, plazo
+- Artículo 16: rebaja precio, negociar, brown discount
+
+ENLACES INTERNOS:
+- Todos → /segunda-opinion/
+- Todos → /blog/certificado-energetico-incorrecto/
+- Todos → /blog/brown-discount-precio-vivienda/
+- Artículos 14-16 → /blog/multas-certificado-energetico/
+- Artículos 10-13 → /blog/como-saber-si-certificado-energetico-esta-mal/

@@ -7,12 +7,12 @@
 | 1 | certificado-energetico-incorrecto | ✅ | 2026-06-18 | cee5247 |
 | 2 | certificado-energetico-inflado | ✅ | 2026-06-19 | - |
 | 3 | como-saber-si-certificado-energetico-esta-mal | ✅ | 2026-06-19 | - |
-| 4 | reclamar-certificado-energetico | ⏳ | - | - |
-| 5 | certificado-energetico-falso | ⏳ | - | - |
-| 6 | impugnar-certificado-energetico | ⏳ | - | - |
-| 7 | quien-responde-certificado-energetico-incorrecto | ⏳ | - | - |
-| 8 | multas-certificado-energetico-falso | ⏳ | - | - |
-| 9 | comprar-casa-certificado-energetico-incorrecto | ⏳ | - | - |
+| 4 | reclamar-certificado-energetico | ✅ | 2026-06-19 | - |
+| 5 | certificado-energetico-falso | ✅ | 2026-06-20 | - |
+| 6 | impugnar-certificado-energetico | ✅ | 2026-06-20 | - |
+| 7 | quien-responde-certificado-energetico-incorrecto | ✅ | 2026-06-20 | - |
+| 8 | multas-certificado-energetico-falso | ✅ | 2026-06-20 | - |
+| 9 | comprar-casa-certificado-energetico-incorrecto | ✅ | 2026-06-20 | - |
 
 ## FASE 2 — Satélites (7 artículos)
 
@@ -51,9 +51,9 @@
 ## ESTADÍSTICAS
 
 - **Total artículos:** 26
-- **Completados:** 2
-- **Pendientes:** 24
-- **Progreso:** 7.7%
+- **Completados:** 6
+- **Pendientes:** 20
+- **Progreso:** 23.1%
 
 ---
 

@@ -1,0 +1,246 @@
+slug: "quien-responde-certificado-energetico-incorrecto",
+title: "¿Quién responde si el certificado energético está incorrecto? Guía legal 2026",
+excerpt: "¿Quién es responsable si tu certificado energético tiene errores? Te explicamos quién responde (técnico, vendedor, administración) y cómo reclamar a cada uno. Incluye casos reales.",
+content: `
+# ¿Quién responde si el certificado energético está incorrecto? Guía legal 2026
+
+<div class="respuesta-directa">
+Si tu certificado energético está incorrecto, hay tres responsables potenciales: 1) el técnico certificador (responsabilidad profesional y civil), 2) el vendedor (si conocía el error o debía saberlo), 3) la administración autonómica (si no fiscalizó correctamente). Cada uno tiene un régimen de responsabilidad diferente y requiere un procedimiento distinto para reclamar. La clave es tener un dictamen técnico independiente que acredite los errores.
+</div>
+
+## ¿Quién es responsable de un certificado energético incorrecto?
+
+Cuando descubres que tu certificado energético tiene errores graves, la pregunta natural es: **¿a quién le reclamo?** La respuesta no es simple porque hay múltiples responsables potenciales, cada uno con un régimen de responsabilidad diferente.
+
+### Los tres responsables principales
+
+| Responsable | Tipo de responsabilidad | Plazo de reclamación | Procedimiento |
+|------------|----------------------|-------------------|--------------|
+| **Técnico certificador** | Profesional y civil | 3 años | Reclamación directa + colegio profesional |
+| **Vendedor** | Civil (vicios ocultos) | 6 meses (compraventa) | Reclamación judicial |
+| **Administración** | Administrativa | 4 años | Denuncia ante organismo autonómico |
+
+## Responsabilidad 1: El técnico certificador
+
+**El responsable principal es siempre el técnico que emitió el certificado.**
+
+El técnico certificador tiene dos tipos de responsabilidad:
+
+### A) Responsabilidad profesional
+
+El técnico está obligado por ley (RD 390/2021) a:
+- Realizar una **visita presencial** obligatoria
+- Verificar los datos del inmueble in situ
+- Usar software homologado para el cálculo
+- Registrar el certificado en el organismo autonómico
+- Firmar el certificado bajo su responsabilidad
+
+Si incumple cualquiera de estas obligaciones, comete una **falta profesional** que puede conllevar:
+- Expediente disciplinario del colegio profesional
+- Multa profesional de 600€ a 6.000€
+- Suspensión temporal o inhabilitación definitiva
+- Obligación de emitir un certificado correcto sin coste
+
+### B) Responsabilidad civil
+
+El técnico es responsable de los daños económicos causados por el certificado incorrecto:
+- Si el certificado está inflado y el comprador paga de más: el técnico debe indemnizar
+- Si el certificado está deflactado y el vendedor pierde valor: el técnico debe indemnizar
+- Si el certificado es nulo y causa paralización de la operación: el técnico debe indemnizar
+
+**Plazo de reclamación:** 3 años desde que descubres el error (Ley de Consumo)
+
+## Responsabilidad 2: El vendedor
+
+**El vendedor puede ser responsable solidario si conocía o debía conocer el error.**
+
+### ¿Cuándo es responsable el vendedor?
+
+El vendedor es responsable en estos casos:
+
+1. **Conocía el error y lo ocultó** — Fraude
+2. **Debía saber que el certificado era incorrecto** — Negligencia
+3. **Encargó un certificado fraudulento a sabiendas** — Complicidad
+4. **No entregó el certificado al comprador** — Incumplimiento de obligación legal
+
+### Tipo de responsabilidad: Vicios ocultos
+
+Si el certificado incorrecto oculta deficiencias energéticas reales, el comprador puede reclamar al vendedor por **vicios ocultos** (Código Civil, artículos 1484-1490):
+
+- **Plazo:** 6 meses desde la entrega de la vivienda
+- **Acción:** Reclamación de daños y perjuicios
+- **Cuantía:** El sobreprecio pagado por el Brown Discount + costes de rehabilitación
+
+### Ejemplo práctico
+
+Una vivienda se vende por 270.000€ con certificado D (calificación inflada). La realidad es una F. El comprador pagó 27.000€ de más por el Brown Discount oculto.
+
+- **Responsable:** El vendedor (si sabía o debía saber)
+- **Reclamación:** 27.000€ + costes de rehabilitación
+- **Plazo:** 6 meses desde la compra
+- **Procedimiento:** Demanda civil
+
+## Responsabilidad 3: La administración autonómica
+
+**La administración tiene responsabilidad limitada pero puede ser denunciada.**
+
+La administración autonómica (ICAEN en Cataluña, Industria en otras comunidades) es responsable de:
+- Fiscalizar que los técnicos cumplen la normativa
+- Investigar denuncias sobre certificados fraudulentos
+- Sancionar a técnicos y propietarios que incumplen
+
+### ¿Cuándo puedes reclamar a la administración?
+
+Puedes denunciar a la administración cuando:
+- El técnico no está habilitado o no es verificable
+- El certificado no está registrado
+- Hay evidencia de fraude evidente
+- La administración no actúa ante una denuncia previa
+
+**Plazo:** 4 años desde la emisión del certificado
+
+**Procedimiento:** Denuncia ante el organismo autonómico competente
+
+## Tabla de responsabilidades según el tipo de error
+
+| Tipo de error | Responsable principal | Responsable secundario | Plazo | Cuantía potencial |
+|--------------|----------------------|----------------------|-------|------------------|
+| Sin visita presencial | Técnico | Vendedor (si lo sabía) | 3 años | Coste certificado + daños |
+| Calificación inflada | Técnico | Vendedor (si lo sabía) | 3 años | Brown Discount (5-15%) |
+| Superficie mal declarada | Técnico | Vendedor (si lo sabía) | 3 años | Diferencia de valor |
+| Reformas no registradas | Técnico | Vendedor (si lo sabía) | 3 años | Brown Discount (5-15%) |
+| Técnico no habilitado | Técnico + Administración | Vendedor (si lo sabía) | 3 años | Certificado nulo + daños |
+| No registrado | Técnico | Vendedor (si lo sabía) | 3 años | Certificado nulo + daños |
+
+## Casos reales: quién respondió y cuánto pagó
+
+### Caso 1: Técnico sin visita presencial
+
+**Situación:** Piso en Barcelona, certificado por 45€, sin fecha de visita.
+**Responsable:** El técnico certificador.
+**Reclamación:** Propietario reclama ante el CAATEEB (Colegio de Aparejadores).
+**Resultado:** 
+- Expediente disciplinario al técnico
+- Sanción de 1.500€ por el colegio
+- Obligación de emitir certificado correcto sin coste
+- Indemnización al propietario: 45€ (coste del certificado incorrecto)
+**Tiempo:** 4 meses
+
+### Caso 2: Calificación inflada en compraventa
+
+**Situación:** Casa unifamiliar, certificado B (falso), realidad F. Comprador pagó 32.000€ de más.
+**Responsables:** Técnico + Vendedor (conocía el error).
+**Reclamación:** Demanda civil contra vendedor y técnico.
+**Resultado:**
+- Técnico sancionado por colegio: 3.000€
+- Vendedor condenado a devolver: 25.000€ (sobreprecio)
+- Técnico condenado a indemnizar: 7.000€ (responsabilidad solidaria)
+- Total recuperado por comprador: 32.000€
+**Tiempo:** 8 meses (acuerdo extrajudicial)
+
+### Caso 3: Técnico no habilitado
+
+**Situación:** Certificado firmado por persona que no es arquitecto ni ingeniero.
+**Responsables:** Técnico (intrusismo) + Administración (falta de fiscalización).
+**Reclamación:** Denuncia ante ICAEN + denuncia penal.
+**Resultado:**
+- Multa de 6.000€ al falso técnico por administración
+- Certificado declarado nulo
+- Denuncia penal por intrusismo profesional
+- Obligación de emitir certificado válido
+**Tiempo:** 10 meses (administrativo) + proceso penal pendiente
+
+### Caso 4: Reformas no registradas
+
+**Situación:** Vendedor hizo reformas (ventanas, aislamiento) pero el certificado no las refleja. Vende con calificación G cuando debería ser C.
+**Responsable:** Técnico (no verificó las reformas).
+**Reclamación:** Vendedor reclama al técnico por negligencia.
+**Resultado:**
+- Técnico emite certificado nuevo con calificación C sin coste
+- Vendedor puede vender a precio justo
+- Indemnización por pérdida de valor: 18.000€
+**Tiempo:** 1 mes (resolución rápida)
+
+## ¿Cómo reclamar a cada responsable?
+
+### Reclamación al técnico certificador
+
+**Paso 1:** Envía burofax o email certificado con:
+- Identificación del certificado
+- Dictamen técnico independiente que acredite los errores
+- Solicitud: corrección sin coste o devolución del importe
+- Plazo de respuesta: 15 días hábiles
+
+**Paso 2:** Si no responde, reclama ante el colegio profesional:
+- Escrito de reclamación
+- Certificado original
+- Dictamen técnico independiente
+- Comunicaciones con el técnico
+
+**Plazo de resolución:** 3-6 meses
+
+### Reclamación al vendedor
+
+**Paso 1:** Intenta acuerdo extrajudicial:
+- Carta de reclamación con dictamen técnico
+- Propuesta de indemnización basada en Brown Discount
+- Plazo de respuesta: 15 días
+
+**Paso 2:** Si no acepta, demanda civil:
+- Necesitas abogado
+- Presenta el dictamen técnico como prueba
+- Cuantifica el daño (sobreprecio + costes)
+
+**Plazo de resolución:** 1-3 años (según complejidad)
+
+### Denuncia a la administración
+
+**Paso 1:** Presenta denuncia ante el organismo autonómico:
+- Formulario de denuncia
+- Certificado original
+- Dictamen técnico independiente
+- Pruebas del incumplimiento
+
+**Paso 2:** La administración abre expediente sancionador:
+- Notificación al técnico/propietario
+- Período de alegaciones
+- Resolución
+
+**Plazo de resolución:** 6-12 meses
+
+## Preguntas frecuentes sobre responsabilidad
+
+**¿El vendedor es siempre responsable si el certificado está mal?**
+No. El vendedor es responsable solo si conocía el error o debía saberlo. Si el vendedor fue engañado por el técnico, la responsabilidad principal es del técnico.
+
+**¿Puedo reclamar a varios responsables a la vez?**
+Sí. Puedes reclamar al técnico, al vendedor y denunciar a la administración simultáneamente. Pero la indemnización no se suma: recibirás el daño real una sola vez.
+
+**¿Cuánto tiempo tengo para reclamar?**
+Depende del responsable:
+- Técnico: 3 años desde que descubres el error
+- Vendedor (vicios ocultos): 6 meses desde la compra
+- Administración: 4 años desde la emisión del certificado
+
+**¿Necesito abogado para reclamar?**
+No es obligatorio para reclamar al técnico o al colegio profesional. Sí es recomendable si vas a demandar al vendedor por daños superiores a 10.000€.
+
+**¿Qué pasa si el técnico no tiene seguro de responsabilidad civil?**
+Todos los técnicos colegiados deben tener seguro obligatorio. Si no lo tiene, el colegio puede responder subsidiariamente.
+
+---
+
+## 📖 Más información relacionada
+
+- **[Cómo impugnar un certificado energético →](/blog/impugnar-certificado-energetico/)**
+- **[Cómo reclamar un certificado energético incorrecto →](/blog/reclamar-certificado-energetico/)**
+- **[Multas y sanciones por certificado energético →](/blog/multas-certificado-energetico/)**
+
+**¿Necesitas un dictamen técnico para reclamar? Por 59€ te lo entregamos en 24-48h con firma de arquitecta colegiada.**
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+`,
+date: "2026-06-20",
+author: "Eva María González Gracia",
+tags: ["certificado energético", "responsabilidad", "reclamación", "técnico", "vendedor", "guía legal"],
+readingTime: 11,
+featured: true,

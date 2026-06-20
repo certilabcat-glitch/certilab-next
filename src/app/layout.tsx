@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Crimson_Pro, Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CookieConsent from "@/components/layout/CookieConsent";
+import StickyCTA from "@/components/layout/StickyCTA";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
@@ -149,6 +151,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CookieConsent />
+        <StickyCTA />
         <Analytics />
       </body>
     </html>
