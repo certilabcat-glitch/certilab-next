@@ -109,11 +109,6 @@ Sí. El plazo de prescripción es de 3 años desde que descubres el error. Si de
 
 **¿El vendedor tiene obligación de decirme si el certificado está inflado?**
 Legalmente no, pero el certificado debe reflejar fielmente las características de la vivienda. Si el vendedor conocía la manipulación, puede ser considerado responsable solidario.
-
----
-
-**¿Sospechas que tu certificado está inflado? Por 59€ lo verificamos y te damos un informe firmado.**
-[Solicitar Segunda Opinión →](/segunda-opinion/)
     `,
     date: "2026-06-19",
     author: "Eva María González Gracia",
