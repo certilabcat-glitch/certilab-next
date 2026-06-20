@@ -296,30 +296,14 @@ export default function SegundaOpinionPage() {
         }}
       />
 
-      {/* ===== QUIERO SABER MÁS (enlaces a blog) ===== */}
-      <section className={`${styles.section} ${styles["audience-section"]}`}>
-        <h2 className={styles["section-title"]}>¿Quieres saber más antes de decidir?</h2>
-        <p className={styles["section-sub"]}>
-          Explora nuestros artículos del blog para entender mejor el certificado energético y cómo afecta a tu bolsillo.
-        </p>
-        <div className={styles["audience-grid"]}>
-          <div className={styles["audience-card"]}>
-            <h3>Segunda opinión para tu certificado energético</h3>
-            <p>Descubre en qué casos necesitas una segunda opinión y cómo puede ahorrarte miles de euros en tu operación inmobiliaria.</p>
-            <a href="/segunda-opinion-certificado-energetico/" className={styles["audience-link"]}>Leer artículo →</a>
-          </div>
-          <div className={styles["audience-card"]}>
-            <h3>Cómo verificar el certificado del vendedor</h3>
-            <p>Si estás comprando una vivienda, aprende a detectar si el certificado del vendedor es fiable o si te están ocultando el Brown Discount.</p>
-            <a href="/certificado-energetico-f-g-correcto/" className={styles["audience-link"]}>Leer artículo →</a>
-          </div>
-          <div className={styles["audience-card"]}>
-            <h3>Brown Discount: cómo afecta al precio</h3>
-            <p>La mala calificación energética puede reducir el valor de tu vivienda hasta un 15%. Descubre cómo detectarlo y qué hacer.</p>
-            <a href="/brown-discount-precio-vivienda/" className={styles["audience-link"]}>Leer artículo →</a>
-          </div>
-        </div>
-      </section>
+       {/* ===== CTA FINAL ===== */}
+       <section className={`${styles.section}`} style={{ textAlign: 'center', paddingTop: '3rem', paddingBottom: '3rem' }}>
+         <h2 className={styles["section-title"]}>¿Listo para saber la verdad sobre tu certificado?</h2>
+         <p className={styles["section-sub"]} style={{ marginBottom: '2rem' }}>
+           Por 59€ IVA incluido, un técnico colegiado revisa tu certificado en 24-48 horas.
+         </p>
+         <a href={waUrl("Hola, quiero solicitar la Segunda Opinión de mi certificado energético (59€).")} className={styles["roi-contrast-button"]} style={{ display: 'inline-block' }}>Solicitar Segunda Opinión por 59€ →</a>
+       </section>
     </>
   );
 }
