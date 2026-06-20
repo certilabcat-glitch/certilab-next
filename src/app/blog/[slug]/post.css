@@ -259,6 +259,9 @@
 .post-table-wrapper {
   overflow-x: auto;
   margin: 1.5rem 0;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
 }
 .post-table {
   width: 100%;
@@ -266,10 +269,11 @@
   font-family: var(--font-sans);
   font-size: 0.9rem;
   line-height: 1.5;
+  min-width: 500px;
 }
 .post-table th,
 .post-table td {
-  padding: 0.6rem 0.75rem;
+  padding: 0.75rem;
   border: 1px solid var(--color-border);
   text-align: left;
   vertical-align: top;
@@ -281,9 +285,31 @@
   font-size: 0.85rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .post-table td {
   color: var(--color-dark);
+  word-break: break-word;
+}
+
+/* Mobile table optimization */
+@media (max-width: 768px) {
+  .post-table-wrapper {
+    margin: 1.5rem -1.5rem;
+    border: none;
+    border-radius: 0;
+  }
+  .post-table {
+    min-width: 100%;
+    font-size: 0.8rem;
+  }
+  .post-table th,
+  .post-table td {
+    padding: 0.5rem;
+  }
+  .post-table th {
+    font-size: 0.75rem;
+  }
 }
 
 /* Callout blocks */
