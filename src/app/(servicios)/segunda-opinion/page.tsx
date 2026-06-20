@@ -64,17 +64,17 @@ export default function SegundaOpinionPage() {
           <div className={styles["audience-card"]}>
             <h3>Vas a comprar una vivienda</h3>
             <p>El certificado del vendedor marca una A, pero ¿es real? Si la calificación está inflada, puedes estar pagando hasta un 15% más del valor real. Por 59€ IVA incluido lo comprobamos antes de firmar.</p>
-            <a href={waUrl("Hola, quiero verificar el certificado energético de la vivienda que voy a comprar.")} className={styles["audience-link"]}>Quiero verificar antes de comprar →</a>
+            <a href="#" className={styles["audience-link"]}>Quiero verificar antes de comprar →</a>
           </div>
           <div className={styles["audience-card"]}>
             <h3>Vas a vender tu piso</h3>
             <p>Un certificado con errores te hace perder dinero. Si tu calificación real es mejor de lo que pone, estás regalando tu inmueble. Si es peor, puedes arreglarlo antes de ponerlo en venta.</p>
-            <a href={waUrl("Hola, quiero saber si mi certificado energético es correcto antes de vender.")} className={styles["audience-link"]}>Quiero saber cuánto vale mi piso realmente →</a>
+            <a href="#" className={styles["audience-link"]}>Quiero saber cuánto vale mi piso realmente →</a>
           </div>
           <div className={styles["audience-card"]}>
             <h3>Vives en tu casa y quieres saber tu letra</h3>
             <p>Saber tu calificación real te permite calcular cuánto gastas en energía, cuánto puedes ahorrar con mejoras, y si puedes acceder a subvenciones. ¿Has reformado? Quizás te corresponda una letra mejor.</p>
-            <a href={waUrl("Hola, quiero saber la calificación energética real de mi vivienda.")} className={styles["audience-link"]}>Quiero saber mi letra real →</a>
+            <a href="#" className={styles["audience-link"]}>Quiero saber mi letra real →</a>
           </div>
         </div>
       </section>
