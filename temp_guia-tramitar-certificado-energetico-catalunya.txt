@@ -1,0 +1,90 @@
+    content: `
+# Guía completa para tramitar el certificado energético en Catalunya (2026)
+
+<div class="respuesta-directa">
+Para obtener el certificado energético en Catalunya necesitas contratar a un técnico colegiado (arquitecto o ingeniero) que realice una visita presencial a tu vivienda, calcule la calificación energética y registre el certificado en el ICAEN. El proceso completo tarda entre 2 y 7 días y cuesta entre 90€ y 350€ según el tipo de inmueble. Sin el registro en el ICAEN, el certificado no tiene validez legal.
+</div>
+
+## ¿Cómo obtener el certificado energético en Catalunya?
+
+Si vas a **vender o alquilar** tu vivienda en Catalunya, necesitas el certificado energético. Aquí te explicamos todo el proceso paso a paso.
+
+### Paso 1: Encuentra un técnico competente
+
+El certificado debe ser emitido por un **técnico certificador** con titulación habilitante:
+
+- Arquitecto o arquitecto técnico
+- Ingeniero o ingeniero técnico
+- Instalador habilitado
+
+**Consejo:** Pide al menos 3 presupuestos y asegúrate de que incluyen visita a la vivienda. Un certificado sin visita no es válido.
+
+### Paso 2: Prepara la documentación
+
+Antes de la visita del técnico, ten a mano:
+
+- **Datos del inmueble** (dirección, año de construcción, referencia catastral)
+- **Facturas de suministros** (electricidad, gas, gasoil) de los últimos 2-3 años
+- **Planos** de la vivienda (si los tienes)
+- **Documentación de reformas** realizadas (cambio de ventanas, aislamiento, caldera, etc.)
+
+### Paso 3: La visita técnica
+
+El técnico visitará tu vivienda para:
+
+- **Medir** superficies y volúmenes
+- **Identificar** los sistemas de climatización y ACS
+- **Comprobar** el tipo de cerramientos (ventanas, puertas, muros)
+- **Evaluar** el estado del aislamiento térmico
+
+La visita suele durar entre **30 y 60 minutos** para una vivienda tipo.
+
+### Paso 4: Emisión y registro
+
+Con los datos recogidos, el técnico:
+
+1. **Calcula** la calificación energética (de A a G) usando software homologado
+2. **Genera** la etiqueta energética y el informe técnico
+3. **Registra** el certificado en el **ICAEN** (Institut Català d'Energia) o en el órgano autonómico correspondiente
+
+El registro es obligatorio y otorga al certificado validez legal.
+
+### Paso 5: Entrega al comprador o inquilino
+
+Una vez registrado, debes **entregar una copia** del certificado:
+
+- **En venta:** Al comprador, antes de la firma de la escritura
+- **En alquiler:** Al inquilino, antes de la firma del contrato
+
+**Importante:** El incumplimiento puede conllevar sanciones de hasta 6.000€. Como explicamos en nuestra guía sobre [multas del certificado energético](/blog/multas-certificado-energetico/), la administración cruza datos de anuncios y notarías para detectar incumplimientos.
+
+### Plazos y precios orientativos
+
+- **Piso pequeño** (< 70 m²): 90-150€. Plazo de emisión: 2-5 días
+- **Piso mediano** (70-100 m²): 120-200€. Plazo de emisión: 2-5 días
+- **Casa unifamiliar**: 200-350€. Plazo de emisión: 3-7 días
+
+### ¿Cada cuánto hay que renovarlo?
+
+El certificado energético tiene una validez de **10 años**. Pasado ese tiempo, debe renovarse. También es recomendable renovarlo si haces reformas que mejoren la eficiencia.
+
+Un aspecto que pocos conocen es el Brown Discount: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+
+## Preguntas frecuentes sobre el certificado energético en Catalunya
+
+**¿Es obligatorio registrar el certificado en el ICAEN?**
+Sí, sin registro en el ICAEN el certificado no tiene validez legal en Catalunya. El registro es competencia del técnico que emite el certificado. Asegúrate de que el número de registro aparece en la etiqueta energética.
+
+**¿Cuánto tarda el ICAEN en registrar el certificado?**
+El ICAEN suele registrar el certificado en un plazo de 2 a 5 días hábiles desde la presentación de la documentación completa. En periodos de alta demanda puede alargarse hasta 10 días.
+
+**¿Puedo contratar un técnico de fuera de Catalunya para el certificado?**
+Sí, cualquier técnico colegiado en España puede emitir un certificado para una vivienda en Catalunya. Sin embargo, debe conocer la normativa catalana específica y registrar el certificado en el ICAEN.
+
+---
+
+## ¿Tienes dudas sobre tu certificado energético?
+¿Tu certificado está registrado correctamente en el ICAEN? Verificamos que todo es correcto por 59€ →
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+---
+    `,

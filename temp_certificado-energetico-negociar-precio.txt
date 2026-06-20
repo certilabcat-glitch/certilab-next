@@ -1,0 +1,143 @@
+    content: `
+# Certificado energético para negociar el precio de compra: guía práctica 2026
+
+<div class="respuesta-directa">
+El certificado energético es una herramienta de negociación real en la compra de una vivienda. Si la calificación es E, F o G, puedes argumentar un descuento del 5% al 15% sobre el precio de venta aplicando el concepto de Brown Discount. Con un informe técnico independiente en la mano, tienes datos objetivos para sentarte a negociar. En una vivienda de 270.000€, eso puede suponer un ahorro de entre 13.500€ y 40.500€.
+</div>
+
+## ¿El certificado energético sirve para negociar el precio?
+
+La respuesta corta es **sí, y es una de las estrategias más efectivas que existen hoy en día**. El certificado energético no es solo un trámite obligatorio para comprar o alquilar. Es un **documento técnico con valor legal** que contiene datos objetivos sobre el consumo energético real del inmueble.
+
+Cuando compras una vivienda, el certificado te dice:
+
+- **La calificación energética** (de la A a la G)
+- **El consumo anual en kWh/m²**
+- **Las emisiones de CO₂ en kg/m²**
+- **Las medidas de mejora** recomendadas
+
+Y cada uno de estos datos puede traducirse a euros en tu negociación.
+
+## El Brown Discount: tu argumento estrella
+
+El **Brown Discount** es el descuento que el mercado aplica sobre el precio de una vivienda con mala calificación energética (E, F o G). No es una teoría: es un fenómeno real documentado por estudios del sector inmobiliario europeo.
+
+### ¿Cómo se calcula?
+
+| Calificación energética | Descuento estimado sobre valor de mercado |
+|------------------------|------------------------------------------|
+| A o B | 0% (no aplica descuento) |
+| C o D | 0-3% |
+| **E** | **5-8%** |
+| **F** | **8-12%** |
+| **G** | **10-15%** |
+
+### Ejemplos con cifras reales
+
+**Caso 1: Piso de 150.000€ con calificación G**
+- Descuento aplicable: 10-15%
+- Ahorro potencial en la negociación: **15.000€ – 22.500€**
+
+**Caso 2: Vivienda de 270.000€ con calificación F**
+- Descuento aplicable: 8-12%
+- Ahorro potencial en la negociación: **21.600€ – 32.400€**
+
+**Caso 3: Casa de 400.000€ con calificación E**
+- Descuento aplicable: 5-8%
+- Ahorro potencial en la negociación: **20.000€ – 32.000€**
+
+> **Nota importante:** Estos descuentos no son automáticos. Dependen de tu capacidad para argumentarlos con datos objetivos. Y ahí entra el certificado energético y, sobre todo, una segunda opinión independiente.
+
+## ¿Cómo usar el certificado en la mesa de negociación?
+
+### Paso 1: Consigue el certificado antes de la oferta
+
+Si el vendedor ya tiene el certificado, pídelo antes de hacer ninguna oferta. Es tu derecho como comprador. Si no lo tiene, es una señal de alerta: puede estar ocultando una mala calificación.
+
+### Paso 2: Verifica que el certificado es correcto
+
+Aquí está la clave. **No todos los certificados son fiables.** Como explicamos en nuestro artículo sobre cómo detectar un certificado falso, algunos certificados inflan la calificación para beneficiar al vendedor.
+
+¿Qué significa esto? Que el vendedor puede presentar un certificado con calificación C cuando la realidad es una E. Si negocias sobre esa C, pagarás de más.
+
+**La solución:** Solicita una Segunda Opinión independiente. Por 59€, un técnico colegiado revisa el certificado y te confirma si la calificación es real o está inflada.
+
+### Paso 3: Prepara tus argumentos con datos
+
+Cuando te sientes a negociar, no digas "creo que la calificación es mala". Presenta datos:
+
+- "El certificado indica un consumo de 220 kWh/m² año, lo que supone un gasto estimado de 1.500€ anuales en climatización."
+- "Según los estudios del sector, una vivienda con calificación F tiene un Brown Discount del 8-12%, lo que en este inmueble supone entre X e Y euros."
+- "Adjunto un informe técnico independiente que confirma que la calificación es correcta y que las medidas de mejora necesarias ascienden a Z euros."
+
+### Paso 4: Calcula el coste de las mejoras necesarias
+
+El certificado incluye medidas de mejora recomendadas. Pide a un técnico que te presupueste las más relevantes:
+
+| Mejora | Coste estimado | Ahorro anual |
+|--------|---------------|--------------|
+| Aislamiento de fachada | 5.000-8.000€ | 300-500€ |
+| Ventanas climalit | 3.000-5.000€ | 200-400€ |
+| Bomba de calor aerotermia | 4.000-7.000€ | 400-700€ |
+| Placas solares ACS | 2.000-4.000€ | 200-300€ |
+
+Suma el coste de las mejoras necesarias y úsalo como argumento de descuento adicional.
+
+### Paso 5: Haz una oferta informada
+
+Con toda esta información, tu oferta puede estructurarse así:
+
+- **Precio de venta:** 270.000€
+- **Brown Discount aplicable (10%):** -27.000€
+- **Coste estimado de mejoras necesarias:** -15.000€
+- **Tu oferta inicial:** **228.000€** (15,5% de descuento)
+
+> Esto no es una oferta agresiva. Es una oferta informada basada en datos objetivos. El vendedor puede rechazarla, pero tendrá difícil argumentar que los datos son incorrectos si tienes un informe técnico firmado.
+
+## El caso del certificado inflado: cómo detectarlo
+
+El mayor riesgo como comprador es que el certificado del vendedor muestre una calificación mejor de la real. Esto se llama **calificación inflada** y es más común de lo que parece.
+
+### Señales de alerta
+
+- La vivienda es anterior a 1980 sin reformas visibles y tiene calificación B o C
+- El certificado no incluye fecha de visita presencial
+- El precio del certificado fue inferior a 60€
+- El técnico no es verificable en el colegio profesional
+
+### ¿Qué hacer si sospechas que el certificado está inflado?
+
+1. **No hagas una oferta basada en esa calificación**
+2. **Solicita una Segunda Opinión** a un técnico independiente
+3. **Presenta el informe al vendedor** como base para renegociar
+
+Si la segunda opinión confirma que la calificación real es dos o tres letras inferior, tienes un argumento sólido para pedir un descuento adicional.
+
+## ¿Y si el vendedor se niega a negociar?
+
+Si el vendedor no acepta el descuento basado en el Brown Discount, tienes dos opciones:
+
+1. **Buscar otra vivienda** — hay muchas opciones en el mercado y no todas tienen calificaciones penalizables
+2. **Aceptar el precio pero con condiciones** — por ejemplo, que el vendedor asuma el coste de las mejoras necesarias antes de la compra
+
+En cualquier caso, el informe técnico independiente te habrá ahorrado tomar una decisión equivocada.
+
+## Preguntas frecuentes sobre negociar con el certificado energético
+
+**¿Puedo usar el certificado energético para negociar el precio de alquiler?**
+Sí, aunque el impacto es menor. En alquiler, el Brown Discount se traduce en una reducción de la renta mensual, normalmente entre un 5% y un 10%, para compensar el mayor coste energético que asumirá el inquilino.
+
+**¿El vendedor está obligado a aceptar el descuento por Brown Discount?**
+No, el vendedor no está obligado. Pero los datos objetivos del certificado y del informe independiente le dificultan argumentar que la calificación no afecta al valor del inmueble. En la práctica, la mayoría de vendedores aceptan un descuento razonable cuando se presenta con documentación técnica.
+
+**¿Cuánto cuesta el informe técnico que necesito para negociar?**
+En Certilab ofrecemos la Segunda Opinión por 59€ IVA incluido. Recibes un informe técnico firmado por arquitecta colegiada (CATEB 9457) en 24-48h, listo para presentar en cualquier negociación.
+
+**¿Puedo negociar si el certificado tiene calificación D?**
+El Brown Discount es menos agresivo en calificaciones D (0-3%), pero si el certificado está mal hecho y la calificación real es E o inferior, el descuento aplicable es mayor. Por eso es importante verificar que el certificado es correcto antes de negociar.
+
+---
+
+**Por 59€ obtienes el informe técnico firmado que necesitas para negociar con argumentos. Respuesta en 24-48h.**
+[Solicitar Segunda Opinión →](/segunda-opinion/)
+    `,

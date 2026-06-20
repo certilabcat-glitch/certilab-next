@@ -1,0 +1,70 @@
+    content: `
+# Vivienda eficiente sin certificado A: mitos y realidades sobre la calificación energética
+
+<div class="respuesta-directa">
+No necesitas una calificación A para tener una vivienda eficiente. Muchas viviendas con calificación C o D pueden ser perfectamente eficientes si su consumo real es bajo. Lo que realmente importa no es la letra, sino los datos de consumo en kWh/m² año y las emisiones de CO₂. Un certificado con calificación A mal calculado puede ser menos fiable que una C obtenida con una visita real del técnico.
+</div>
+
+## ¿Vale realmente la letra?
+
+Es habitual pensar que **si una vivienda no tiene calificación A, no es eficiente**. Pero la realidad es más compleja. La letra de la etiqueta energética depende de dos factores: el **consumo de energía** y las **emisiones de CO₂**, pero también del tipo de combustible y del sistema de calificación utilizado.
+
+Un aspecto que pocos conocen es el Brown Discount: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+
+## Mito 1: "Solo las casas nuevas pueden tener A"
+
+**Falso.** Aunque las viviendas de obra nueva suelen tener mejores calificaciones, una reforma integral bien planteada puede llevar una vivienda antigua de una G a una B o incluso A. Todo depende de las mejoras que se apliquen:
+
+- Sustitución de ventanas por **climalit con rotura de puente térmico**
+- Aislamiento de **fachadas y cubiertas**
+- Instalación de **aerotermia** o **bomba de calor**
+- Paneles solares para ACS
+
+**Dato clave:** Una vivienda de los años 70 que se reforma con aislamiento y aerotermia puede pasar de una G a una B, reduciendo el consumo hasta un 70%.
+
+## Mito 2: "Si tengo C o D, mi casa es muy ineficiente"
+
+**Depende.** Una C es una calificación aceptable y no te penalizará en el mercado. Una D puede ser mejor que una A si esta última se ha obtenido con sistemas poco realistas. Lo importante no es solo la letra, sino **el consumo real en kWh/m² año**.
+
+- **A** — < 30 kWh/m² año. Calificación: Excelente
+- **B** — 30-50 kWh/m² año. Calificación: Muy buena
+- **C** — 50-80 kWh/m² año. Calificación: Buena
+- **D** — 80-120 kWh/m² año. Calificación: Aceptable
+- **E** — 120-160 kWh/m² año. Calificación: Mejorable
+- **F-G** — > 160 kWh/m² año. Calificación: Necesita reforma
+
+## Mito 3: "La etiqueta energética es siempre fiable"
+
+No siempre. Algunos certificados se elaboran sin visita o con datos incorrectos. Un **certificado mal hecho** puede:
+
+- Inflar la calificación (peligro si compras esperando una casa eficiente)
+- Dar una calificación más baja de la real (pérdida de valor injustificada)
+
+**Precaución:** Si sospechas que tu certificado no refleja la realidad, solicita una Segunda Opinión profesional.
+
+## ¿Qué debes mirar realmente?
+
+Estos son los 4 puntos clave que debes verificar:
+
+1. **Consumo de energía primaria** (kWh/m² año) — cuanto más bajo, mejor
+2. **Emisiones de CO₂** (kgCO₂/m² año) — importante para el medio ambiente
+3. **Medidas de mejora** recomendadas — un buen certificado siempre incluye propuestas
+4. **Que el técnico haya visitado la vivienda** — sin visita, el certificado no es válido
+
+## Preguntas frecuentes sobre vivienda eficiente sin certificado A
+
+**¿Puede una vivienda con calificación C ser más eficiente que una con A?**
+En términos prácticos, sí. Una C de una vivienda con mediciones reales puede ser más fiable que una A obtenida con parámetros forzados. Lo crucial es el consumo en kWh/m² año más que la letra.
+
+**¿Merece la pena reformar para subir de calificación?**
+Depende del objetivo. Si vas a vender, subir de una E a una C puede aumentar el valor de la vivienda y reducir el Brown Discount. Si es para uso propio, las mejoras reducen tu factura mensual, independientemente de la letra.
+
+**¿Qué calificación necesita mi vivienda para acceder a ayudas?**
+Cada ayuda tiene requisitos específicos, pero muchas exigen mejorar al menos dos letras (por ejemplo, pasar de E a C) o alcanzar un consumo máximo de 80 kWh/m² año. Consulta los requisitos de cada convocatoria.
+
+---
+
+## ¿Tienes dudas sobre tu certificado energético?
+¿Tu letra no refleja lo que has invertido? Puede haber un error. Por 59€ lo comprobamos.
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
+    `,
