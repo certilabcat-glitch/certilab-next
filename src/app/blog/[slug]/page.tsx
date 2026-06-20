@@ -210,6 +210,26 @@ function extractFAQs(content: string): { question: string; answer: string }[] {
   return faqs;
 }
 
+function renderFAQsAsDropdowns(faqs: { question: string; answer: string }[]): string {
+  if (faqs.length === 0) return "";
+  
+  let html = '<div class="post-faqs-section"><h2 class="post-h2">Preguntas frecuentes</h2><ul class="post-faqs-list">';
+  
+  faqs.forEach((faq, index) => {
+    html += `
+      <li>
+        <details class="post-faq-item">
+          <summary class="post-faq-question">${faq.question}</summary>
+          <div class="post-faq-answer">${processInline(faq.answer)}</div>
+        </details>
+      </li>
+    `;
+  });
+  
+  html += '</ul></div>';
+  return html;
+}
+
 function getServiceCta(tags: string[]): { text: string; url: string; label: string } | null {
   if (tags.some((t) => t.includes("rehabilitación") || t.includes("ayudas") || t.includes("subvenciones"))) {
     return {
@@ -282,6 +302,13 @@ export default async function BlogPostPage({ params }: Props) {
           className="post-content"
           dangerouslySetInnerHTML={{ __html: formatContent(article.content) }}
         />
+
+        {extractFAQs(article.content).length > 0 && (
+          <div
+            className="post-faqs-wrapper"
+            dangerouslySetInnerHTML={{ __html: renderFAQsAsDropdowns(extractFAQs(article.content)) }}
+          />
+        )}
 
         {serviceCta && (
           <div className="post-cta" style={{ marginTop: "2rem" }}>

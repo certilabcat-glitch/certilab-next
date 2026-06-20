@@ -42,11 +42,11 @@ Los técnicos recurren a varios métodos para inflar la calificación:
 
 ### Indicadores principales
 
-1. **Calificación A o B en vivienda anterior a 2006** sin reformas integrales de eficiencia
-2. **Discrepancia con el consumo real**: si pagas 1.200€/año en calefacción y electricidad, tu vivienda no puede tener una A
-3. **El certificado cuesta menos de 50€** → casi seguro que no incluyó visita presencial
-4. **El técnico no responde preguntas** sobre cómo obtuvo la calificación
-5. **La calificación no coincide** con viviendas similares en tu misma zona y antigüedad
+1. Calificación A o B en vivienda anterior a 2006 sin reformas integrales de eficiencia
+2. Discrepancia con el consumo real: si pagas 1.200€/año en calefacción y electricidad, tu vivienda no puede tener una A
+3. El certificado cuesta menos de 50€ (casi seguro que no incluyó visita presencial)
+4. El técnico no responde preguntas sobre cómo obtuvo la calificación
+5. La calificación no coincide con viviendas similares en tu misma zona y antigüedad
 
 ### Comparativa orientativa
 
@@ -257,7 +257,7 @@ En Certilab:
 - **Registro oficial** en el ICAEN (Catalunya)
 - **Desde 89€** según superficie y ubicación
 
-[Solicitar Certificado Nuevo desde 89€ →](/certificado-energetico/)
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
 
 ### Paso 4: Reclama daños si ya compraste
 
