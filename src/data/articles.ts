@@ -3207,7 +3207,7 @@ Los técnicos recurren a varios métodos para inflar la calificación:
 - **Usar valores por defecto favorables** → El software permite "optimizar" ciertos parámetros
 - **No considerar puentes térmicos** → Omitir puntos débiles de la envolvente térmica
 
-> ⚠️ **Importante:** Inflar un certificado no solo es poco ético, sino que puede ser considerado **fraude documental** con consecuencias legales para el técnico y el vendedor.
+> **Importante:** Inflar un certificado no solo es poco ético, sino que puede ser considerado **fraude documental** con consecuencias legales para el técnico y el vendedor.
 
 ## ¿Cómo detectar si tu certificado está inflado?
 
@@ -3444,16 +3444,16 @@ La respuesta corta es **sí**, pero con matices importantes. Reclamar un certifi
 No todos los errores tienen la misma gravedad. Estos son los que puedes reclamar:
 
 **Errores graves (invalidan el certificado):**
-- ❌ Ausencia de visita presencial (art. 6.5 RD 390/2021)
-- ❌ Calificación inflada o deflactada sin justificación técnica
-- ❌ Técnico no colegiado o no habilitado
-- ❌ Datos del catastro sin verificar, ignorando reformas reales
-- ❌ Falta de registro en el organismo autonómico
+- Ausencia de visita presencial (art. 6.5 RD 390/2021)
+- Calificación inflada o deflactada sin justificación técnica
+- Técnico no colegiado o no habilitado
+- Datos del catastro sin verificar, ignorando reformas reales
+- Falta de registro en el organismo autonómico
 
 **Errores leves (subsanables):**
-- ⚠️ Errores en la superficie declarada
-- ⚠️ Omisión de alguna medida de mejora recomendada
-- ⚠️ Pequeñas discrepancias en los datos del inmueble
+- Errores en la superficie declarada
+- Omisión de alguna medida de mejora recomendada
+- Pequeñas discrepancias en los datos del inmueble
 
 > **Dato clave:** Según el IDAE, aproximadamente un **15-20% de los certificados energéticos** presentan errores graves que los invalidan. En certificados de menos de 50€ (sin visita presencial), esa cifra supera el **90%**.
 
@@ -3514,7 +3514,7 @@ El proceso completo tiene 4 pasos:
 | 3 | Si no responde, reclamar ante el colegio profesional | 1-3 meses |
 | 4 | Denunciar ante la administración autonómica (ICAEN en Cataluña) | 3-6 meses |
 
-> ⚠️ **Atención:** El paso 1 es el más importante. Sin un dictamen técnico firmado por un profesional independiente, los pasos 2, 3 y 4 no tienen base sólida. La administración rechazará tu reclamación si no presentas un informe pericial que demuestre los errores.
+> **Atención:** El paso 1 es el más importante. Sin un dictamen técnico firmado por un profesional independiente, los pasos 2, 3 y 4 no tienen base sólida. La administración rechazará tu reclamación si no presentas un informe pericial que demuestre los errores.
 
 ## ¿Qué documentos necesitas para reclamar?
 

@@ -97,7 +97,7 @@ export default function RootLayout({
                   url: "https://www.certilab.cat/",
                   logo: "https://www.certilab.cat/favicon.png",
                   description:
-                    "Consultoría energética forense. Análisis técnico con responsabilidad profesional Cateb 9457. Segunda opinión, Check-Up inmobiliario e Informe Técnico Energético.",
+                    "Consultoría energética forense 100% online y remota. Análisis técnico independiente con responsabilidad profesional Cateb 9457.",
                   founder: {
                     "@type": "Person",
                     name: "Eva María González García",
@@ -119,22 +119,6 @@ export default function RootLayout({
                   ],
                   priceRange: "0€ – 399€",
                   telephone: "+34 722 437 675",
-                  address: {
-                    "@type": "PostalAddress",
-                    streetAddress: "C/ Pau Claris 163, 4º 2ª",
-                    addressLocality: "Barcelona",
-                    addressRegion: "Cataluña",
-                    postalCode: "08037",
-                    addressCountry: "ES",
-                  },
-                  openingHoursSpecification: [
-                    {
-                      "@type": "OpeningHoursSpecification",
-                      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                      opens: "09:00",
-                      closes: "18:00",
-                    },
-                  ],
                   sameAs: [
                     "https://www.linkedin.com/company/certilab",
                   ],

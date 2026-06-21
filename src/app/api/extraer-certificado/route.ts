@@ -3,18 +3,22 @@ import { NextRequest, NextResponse } from "next/server";
 /**
  * Endpoint para extraer datos de un certificado energético en PDF.
  *
- * Por ahora implementa:
- * - Recepción del archivo
- * - Simulación de extracción (para desarrollo sin pdfplumber en Node)
- * - Detección de PDF imagen
- *
- * En producción se conectaría con un microservicio Python (pdfplumber)
- * o se usaría pdf-parse en Node.
+ * Estrategia de timeout:
+ * - Vercel Serverless Functions tienen límite de 10-60s según el plan.
+ * - Si el PDF es imagen → OCR puede exceder el timeout.
+ * - Devolvemos un error amigable si el procesamiento se alarga.
  */
+
+export const maxDuration = 30;
 
 export async function POST(request: NextRequest) {
   try {
+    // Timeout interno para evitar 504
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 25000); // 25s de margen
+
     const formData = await request.formData();
+    clearTimeout(timeoutId);
     const file = formData.get("file") as File | null;
 
     if (!file) {

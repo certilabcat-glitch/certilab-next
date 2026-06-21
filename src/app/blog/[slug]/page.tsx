@@ -64,6 +64,8 @@ function processInline(text: string): string {
   let t = text;
   // Bold **text**
   t = t.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  // Italic *text*
+  t = t.replace(/(?<!\*)\*(?!\*)(.*?)(?<!\*)\*(?!\*)/g, "<em>$1</em>");
   // Inline links [text](url)
   t = t.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
@@ -74,76 +76,49 @@ function processInline(text: string): string {
 }
 
 function formatContent(raw: string): string {
-  // Escape HTML first
-  let html = escapeHtml(raw);
+  // 1) Strip the FAQ section to avoid duplicate rendering (text + dropdowns)
+  const textToProcess = raw.replace(/## Preguntas frecuentes[\s\S]*?(?=\n---|\n## |$)/, "");
 
-  // --- INLINE CTA: [cta:segunda-opinion] ---
-  html = html.replace(
-    /\[cta:segunda-opinion\]/g,
-    '</p><div class="post-cta-inline"><div class="post-cta-inline-icon">🔍</div><div class="post-cta-inline-body"><p><strong>¿No te fías de tu certificado energético?</strong> Por 59€ un técnico lo revisa y te dice si es correcto.</p><a href="/segunda-opinion/" class="post-cta-inline-link">Revisar mi certificado →</a></div></div><p class="post-p">'
-  );
+  // 2) Split into blocks by double newlines
+  const blocks = textToProcess.split("\n\n");
 
-  // --- PRE-PARSE (preserve TL;DR) ---
-  html = html.replace(
-    /^\*\*TL;DR:\*\*(.*)$/gm,
-    '</p><div class="post-tldr"><strong>TL;DR:</strong>$1</div><p class="post-p">'
-  );
+  const result = blocks.map((block) => {
+    const trimmed = block.trim();
+    if (!trimmed) return "";
 
-  // Horizontal rules
-  html = html.replace(/^---$/gm, '</p><hr class="post-hr" /><p class="post-p">');
-
-  // Headings (H2, H3)
-  html = html.replace(/^## (.*)$/gm, '<h2 class="post-h2">$1</h2>');
-  html = html.replace(/^### (.*)$/gm, '<h3 class="post-h3">$1</h3>');
-
-  // Tables: detect rows like | col1 | col2 |
-  // We'll process them in a multi-step: collect all consecutive table rows
-  html = html.replace(
-    /((?:\|.+\|\n?)+)/g,
-    (match: string) => {
-      const lines = match.trim().split("\n");
-      // If any line doesn't start with |, skip
-      if (!lines.every((l) => l.trim().startsWith("|"))) return match;
-      let output = '<div class="post-table-wrapper"><table class="post-table">';
-      let hasHeader = false;
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
-        const cells = line
-          .split("|")
-          .map((c) => c.trim())
-          .filter((c) => c.length > 0);
-        if (cells.length === 0) continue;
-        // Detect separator row e.g. |---|---|
-        if (cells.every((c) => /^-+$/.test(c))) {
-          hasHeader = true;
-          continue;
-        }
-        const processed = cells.map((c) => processInline(c));
-        if (!hasHeader && i === 0) {
-          output += `<thead><tr>${processed
-            .map((c) => `<th>${c}</th>`)
-            .join("")}</tr></thead>`;
-        } else if (hasHeader && i === 0) {
-          output += `<thead><tr>${processed
-            .map((c) => `<th>${c}</th>`)
-            .join("")}</tr></thead>`;
-        } else {
-          if (!output.includes("<tbody>")) output += "<tbody>";
-          output += `<tr>${processed
-            .map((c) => `<td>${c}</td>`)
-            .join("")}</tr>`;
-        }
-      }
-      if (output.includes("<tbody>")) output += "</tbody>";
-      output += "</table></div>";
-      return output;
+    // --- INLINE CTA: [cta:segunda-opinion] ---
+    if (trimmed === "[cta:segunda-opinion]") {
+      return `<div class="post-cta-inline"><div class="post-cta-inline-icon">🔍</div><div class="post-cta-inline-body"><p><strong>¿No te fías de tu certificado energético?</strong> Por 59€ un técnico lo revisa y te dice si es correcto.</p><a href="/segunda-opinion/" class="post-cta-inline-link">Revisar mi certificado →</a></div></div>`;
     }
-  );
 
-  // Callout blockquotes: > ⚠️ text, > 💡 text, > ✅ text, etc.
-  html = html.replace(
-    /^>\s*(⚠️|💡|✅|📌|🚨|❌|ℹ️|💰)\s*(.*)$/gm,
-    (_m: string, icon: string, text: string) => {
+    // --- TL;DR ---
+    const tldrMatch = trimmed.match(/^\*\*TL;DR:\*\*([\s\S]*)$/);
+    if (tldrMatch) {
+      return `<div class="post-tldr"><strong>TL;DR:</strong>${processInline(tldrMatch[1])}</div>`;
+    }
+
+    // --- Horizontal rule ---
+    if (/^---$/.test(trimmed)) {
+      return '<hr class="post-hr" />';
+    }
+
+    // --- Heading H2 ---
+    const h2Match = trimmed.match(/^## (.+)$/);
+    if (h2Match) {
+      return `<h2 class="post-h2">${processInline(h2Match[1])}</h2>`;
+    }
+
+    // --- Heading H3 ---
+    const h3Match = trimmed.match(/^### (.+)$/);
+    if (h3Match) {
+      return `<h3 class="post-h3">${processInline(h3Match[1])}</h3>`;
+    }
+
+    // --- Callout blockquotes: > ⚠️ text, > 💡 text, etc. ---
+    const calloutMatch = trimmed.match(/^>\s*(⚠️|💡|✅|📌|🚨|❌|ℹ️|💰)\s*([\s\S]*)$/);
+    if (calloutMatch) {
+      const icon = calloutMatch[1];
+      const text = calloutMatch[2];
       const cls = icon === "⚠️" ? "callout-warning"
         : icon === "💡" ? "callout-tip"
         : icon === "✅" ? "callout-success"
@@ -153,39 +128,54 @@ function formatContent(raw: string): string {
         : icon === "ℹ️" ? "callout-info"
         : icon === "💰" ? "callout-money"
         : "callout-default";
-      return `</p><div class="post-callout ${cls}"><span class="callout-icon">${icon}</span><div class="callout-body">${processInline(text)}</div></div><p class="post-p">`;
+      return `<div class="post-callout ${cls}"><span class="callout-icon">${icon}</span><div class="callout-body">${processInline(text)}</div></div>`;
     }
-  );
 
-  // Regular blockquotes (> text)
-  html = html.replace(
-    /^> (.*)$/gm,
-    (_m: string, text: string) =>
-      `</p><blockquote class="post-blockquote"><p>${processInline(text)}</p></blockquote><p class="post-p">`
-  );
+    // --- Regular blockquotes (> text) ---
+    if (trimmed.startsWith("> ")) {
+      const text = trimmed.replace(/^> /gm, "").trim();
+      return `<blockquote class="post-blockquote"><p>${processInline(text)}</p></blockquote>`;
+    }
 
-  // Unordered lists (- item)
-  html = html.replace(/^- (.*)$/gm, (_m: string, text: string) => {
-    return `<li>${processInline(text)}</li>`;
+    // --- Tables: rows like | col1 | col2 | ---
+    if (trimmed.startsWith("|")) {
+      const lines = trimmed.split("\n");
+      if (lines.every((l) => l.trim().startsWith("|"))) {
+        let output = '<div class="post-table-wrapper"><table class="post-table">';
+        let hasHeader = false;
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i].trim();
+          const cells = line.split("|").map((c) => c.trim()).filter((c) => c.length > 0);
+          if (cells.length === 0) continue;
+          if (cells.every((c) => /^-+$/.test(c))) {
+            hasHeader = true;
+            continue;
+          }
+          const processed = cells.map((c) => processInline(c));
+          const tag = (!hasHeader && i === 0) || (hasHeader && i === 0) ? "th" : "td";
+          if (tag === "td" && !output.includes("<tbody>")) output += "<tbody>";
+          output += `<tr>${processed.map((c) => `<${tag}>${c}</${tag}>`).join("")}</tr>`;
+        }
+        if (output.includes("<tbody>")) output += "</tbody>";
+        output += "</table></div>";
+        return output;
+      }
+    }
+
+    // --- Unordered list (- item) ---
+    if (/^- .+/.test(trimmed)) {
+      const items = trimmed.split("\n").filter((l) => l.startsWith("- ")).map((l) => {
+        const text = l.replace(/^- /, "");
+        return `<li>${processInline(text)}</li>`;
+      });
+      return `<ul class="post-ul">${items.join("")}</ul>`;
+    }
+
+    // --- Paragraph (default) ---
+    return `<p class="post-p">${processInline(trimmed.replace(/\n/g, "<br/>"))}</p>`;
   });
-  html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul class="post-ul">$&</ul>');
-  html = html.replace(/(<ul class="post-ul">){2,}/g, '<ul class="post-ul">');
-  html = html.replace(/(<\/ul>){2,}/g, "</ul>");
 
-  // Paragraphs (split by double newlines)
-  html = html.replace(/\n\n/g, '</p><p class="post-p">');
-  // Remaining single newlines as <br/>
-  html = html.replace(/\n/g, "<br/>");
-
-  // Wrap in paragraph if not already wrapped
-  if (!html.startsWith("<")) {
-    html = `<p class="post-p">${html}</p>`;
-  }
-
-  // Clean empty paragraphs
-  html = html.replace(/<p class="post-p"><\/p>/g, "");
-
-  return html;
+  return result.join("\n");
 }
 
 function extractFAQs(content: string): { question: string; answer: string }[] {
@@ -295,7 +285,7 @@ export default async function BlogPostPage({ params }: Props) {
         <AutorBloque
           nombre="Eva María González García"
           credencial="Arquitecta Técnica · Colegiada CATEB 9457 · Seguro RC Profesional"
-          descripcion="20 años de experiencia en certificación energética. Más de 1.000 expedientes tramitados en Cataluña y toda España."
+          descripcion="20 años de experiencia en certificación energética. Más de 1.000 expedientes tramitados en toda España mediante auditoría forense 100% online y remota."
         />
 
         <div
@@ -351,7 +341,7 @@ export default async function BlogPostPage({ params }: Props) {
               "@type": "Person",
               name: article.author,
               url: "https://www.certilab.cat/sobre-nosotros/",
-              sameAs: ["https://www.linkedin.com/in/eva-mar%C3%ADa-gonz%C3%A1lez-gracia-7a53a094/"],
+              sameAs: ["https://www.linkedin.com/in/eva-mar%C3%ADa-gonz%C3%A1lez-garcia-7a53a094/"],
             },
             publisher: {
               "@type": "Organization",
