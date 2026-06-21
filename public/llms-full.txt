@@ -1,536 +1,1088 @@
-# Certilab - Consultoría Energética Forense
-> Arquitectura Técnica Forense · Consultoría Energética · Cateb 9457
-> https://www.certilab.cat
-> Next.js (App Router) · TypeScript · CSS Modules + globals.css
+# Certilab — Contenido completo para LLMs
+
+Este archivo contiene el contenido completo de todos los artículos del blog 
+de Certilab para que los modelos de lenguaje puedan acceder al conocimiento 
+técnico sobre certificación energética, Brown Discount, y auditoría energética.
 
 ---
 
-## 📊 RESUMEN EJECUTIVO
+## Ayudas Next Generation para Rehabilitación Energética 2026: guía completa
 
-### Project Stats
-- **Total page.tsx:** 27
-- **Total layout.tsx:** 6
-- **Total components:** ~40 (sections, layout, forms, ui)
-- **CSS Modules migrados:** 5 (Footer, ComparativaSection, ServicesGrid, SegundaOpinion, SegundaOpinionExpress)
-- **CSS pendientes de migrar (style jsx):** 6 componentes + 3-4 páginas de servicio
-- **SEO Audit:** 86% completado, 4 issues pendientes
+**URL:** https://www.certilab.cat/blog/ayudas-next-generation-rehabilitacion-energetica-2026/
 
-### Stack técnico actual
-- Next.js 14+ (App Router), TypeScript estricto
-- CSS: Modules + `<style jsx>` legacy + `globals.css` con variables CSS
-- Analytics: Meta Pixel (trackViewContent, trackContact)
-- Leads: WhatsApp API (waDiagnostico), formulario propio
-- Schema.org: JSON-LD inyectado con dangerouslySetInnerHTML
-- Despliegue: Vercel (certilab-next repo)
+Guía completa de las ayudas Next Generation EU para rehabilitación energética de viviendas. ¿Cumples los requisitos? ¿Cómo solicitarlas?
 
 ---
 
-## 🔴 ISSUES CRÍTICOS PENDIENTES (pérdida directa de tráfico/posicionamiento)
+## Brown Discount: qué es y cómo afecta al precio de tu vivienda
 
-### CRIT-A: Páginas con `"use client"` que NO exportan metadata
-| Archivo | Problema | Acción requerida |
-|---------|----------|------------------|
-| `src/app/(servicios)/ayudas-eficiencia-energetica/page.tsx` | `"use client"` + sin `export metadata` → título genérico, sin description, sin canonical, sin Open Graph | Refactorizar a Server Component + añadir metadata (o split page/server layout) |
-| `src/app/landing/guia-detecta-falso-ce/page.tsx` | `"use client"` + sin `export metadata` | Refactorizar a Server Component + añadir metadata |
-| `src/app/landing/guia-errores-ce/layout.tsx` | Layout con metadata OK, pero la page es Client Component → ¿metadata se aplica? Verificar en producción | Verificar que el layout metadata se herede correctamente |
-| `src/app/blog/[slug]/page.tsx` | Client Component con `"use client"` + `export const metadata` (INCOMPATIBLE — Next.js descarta metadata en Client Components) | Refactorizar a Server Component o split con layout |
+**URL:** https://www.certilab.cat/blog/brown-discount-precio-vivienda/
 
-### CRIT-B: Schema.org en Client Components no se procesa
-| Archivo | Problema | Acción requerida |
-|---------|----------|------------------|
-| `src/app/(servicios)/ayudas-eficiencia-energetica/page.tsx` | JSON-LD inyectado via dangerouslySetInnerHTML dentro de Client Component → Google no lo procesa | Mover schema a Server Component o layout |
-| `src/app/landing/guia-detecta-falso-ce/page.tsx` | Same issue — Client Component con schema | Refactorizar |
-| `src/app/blog/[slug]/page.tsx` | Same issue — Client Component con schema | Refactorizar |
-| `src/app/formulario/page.tsx` | Verificar si tiene schema | Revisar |
-
-### CRIT-C: Meta Pixel inline en páginas bloquea Server Components
-Varias páginas usan `useEffect` con `trackViewContent`/`trackContact` de Meta Pixel, lo que fuerza el uso de `"use client"`. La solución correcta es:
-1. Mover Meta Pixel a un componente wrapper (ej. `<MetaPixelTracker />`) que se importe en Server Components
-2. Separar metadata (Server) de tracking (Client)
-
-Afecta a:
-- `ayudas-eficiencia-energetica/page.tsx`
-- `landing/guia-detecta-falso-ce/page.tsx`
-- `blog/[slug]/page.tsx`
+El Brown Discount es la pérdida de valor de una vivienda por su mala calificación energética. Descubre cómo detectarlo y qué hacer si estás comprando o vendiendo.
 
 ---
 
-## 🟡 ISSUES IMPORTANTES PENDIENTES
+## Certificado energético en comunidades de vecinos: todo lo que debes saber
 
-### IMP-1: Ruta `/diagnostico-express-energetico` no existe
-- Mencionada en sitemap pero sin implementación
-- Impacto: 404 si se referencia desde externo
-- Acción: Crear la página o redirección 301
+**URL:** https://www.certilab.cat/blog/certificado-energetico-comunidades-vecinos/
 
-### IMP-2: Redirecciones 301 insuficientes en next.config.ts
-- Solo 4 redirecciones configuradas
-- URLs legacy del sitio antiguo no cubiertas → pérdida de link juice
-- Acción: Mapear todas las URLs del dominio anterior
-
-### IMP-3: Sitemap URLs sin verificar
-- 6 rutas en sitemap podrían no retornar 200: `/ayudas-eficiencia-energetica`, `/profesionales`, `/calculadoracat`, `/configurar-auditoria`, `/cercador-certificats-energetics`, `/landing/guia-errores-ce`
-- Acción: Crawlear y verificar cada una
-
-### IMP-4: Blog pages sin metadata dinámica real
-- `blog/[slug]/page.tsx` no puede exportar metadata dinámica (es Client Component)
-- Los artículos del blog no tienen title/description personalizados por artículo
-- Acción: Refactorizar como Server Component con `generateMetadata` + cargar datos del artículo
-
-### IMP-5: Landing pages sin canonical propio
-- `landing/guia-detecta-falso-ce/page.tsx` y `landing/guia-errores-ce/page.tsx` no tienen canonical explícito
-- Podrían heredar canonical incorrecto del layout raíz
-- Acción: Añadir `alternates.canonical` en metadata
+Guía completa sobre el certificado energético en comunidades de vecinos. Obligaciones legales, zonas comunes incluidas, precios, sanciones y preguntas frecuentes.
 
 ---
 
-## 🟢 CSS MODULES MIGRATION PENDIENTE
+## Certificado energético F o G: ¿es correcto o está mal?
 
-### Componentes con `<style jsx>` que deben migrarse a CSS Module
+**URL:** https://www.certilab.cat/blog/certificado-energetico-f-g-correcto/
 
-| Componente | Archivo | Líneas style jsx | Prioridad |
-|------------|---------|------------------|-----------|
-| ProblemSection | `src/components/sections/ProblemSection.tsx` | ~30 líneas (línea 57+) | Alta |
-| ContrastSection | `src/components/sections/ContrastSection.tsx` | ~30 líneas (línea 38+) | Alta |
-| FeaturesGrid | `src/components/sections/FeaturesGrid.tsx` | ~50 líneas (línea 27+) | Alta |
-| ComingSoonSection | `src/components/ui/ComingSoonSection.tsx` | ~50 líneas (línea 105+) | Alta |
-| LandingLeadForm | `src/components/forms/LandingLeadForm.tsx` | ~55 líneas (línea 124+) | Media |
-| ContactForm | `src/components/forms/ContactForm.tsx` | ~113 líneas (líneas 66, 179) | Media |
+---
+slug: "certificado-energetico-f-g-correcto-o-error"
+title: "Certificado energético F o G: ¿es correcto o está mal calculado?"
+excerpt: "Una calificación F o G en tu certificado puede ser correcta o un error del técnico. Descubre cómo saberlo y qué hacer en cada caso, con un dictamen técnico por 59€."
+date: "2026-06-19"
+author: "Eva María González García"
+tags: ["certificado energético", "calificación F", "calificación G", "error técnico", "Segunda Opinión"]
+readingTime: 8
+featured: false
+---
 
-### Páginas de servicio con `<style jsx>` pendientes
+# Certificado energético F o G: ¿es correcto o está mal?
 
-| Página | Archivo | Líneas style jsx | Prioridad |
-|--------|---------|------------------|-----------|
-| Ayudas Eficiencia | `src/app/(servicios)/ayudas-eficiencia-energetica/page.tsx` | ~250 líneas (línea 298-546) | Alta |
-| Landing guia-detecta | `src/app/landing/guia-detecta-falso-ce/page.tsx` | ~130 líneas | Alta |
-| InformeTecnicoContent | `src/app/(servicios)/informe-tecnico-energetico/InformeTecnicoContent.tsx` | ~490 líneas (línea 314-806) | Baja (wrapper no-page) |
 
-### CSS Modules YA migrados (no tocar)
-- `Footer.module.css`
-- `ComparativaSection.module.css`
-- `ServicesGrid.module.css`
-- `SegundaOpinion.module.css`
-- `SegundaOpinionExpress.module.css`
+Una calificación F o G en tu certificado energético puede ser correcta si la vivienda carece de aislamiento, tiene ventanas antiguas, usa calefacción ineficiente o no ha recibido reformas. Pero también puede ser un error del técnico si no realizó visita presencial, usó datos del catastro sin verificar o ignoró reformas reales. La única forma de saberlo con certeza es una segunda opinión técnica independiente.
+
+
+## ¿Tu certificado F o G es correcto o hay un error?
+
+Si acabas de recibir tu certificado energético y ves una **F o una G**, la primera reacción suele ser de incredulidad. "No puede ser, mi casa no es tan ineficiente", piensas. Y a veces tienes razón.
+
+La realidad es que aproximadamente el **70% de los certificados en España** otorgan calificaciones E, F o G. Pero dentro de ese 70%, hay un porcentaje significativo de certificados **mal calculados** que asignan una letra peor de la que realmente corresponde.
+
+## ¿Qué factores determinan una calificación F o G?
+
+Para que una vivienda obtenga F o G, deben darse varias de estas condiciones:
+
+| Factor | Impacto en la calificación |
+|--------|---------------------------|
+| **Aislamiento inexistente** | Fachadas sin cámara de aire, cubiertas sin aislamiento |
+| **Ventanas de simple vidrio** | Sin rotura de puente térmico, carpintería metálica sin sellado |
+| **Caldera antigua** | De gasoil o gas natural con más de 15 años, rendimiento bajo |
+| **Sin climatización renovable** | Ausencia de aerotermia, geotermia o biomasa |
+| **Puente térmico no tratado** | Uniones entre forjados y fachada sin aislamiento |
+| **Orientación desfavorable** | Fachada norte sin protección, pocas horas de sol |
+| **Zona climática fría** | Mayor demanda de calefacción |
+
+Si tu vivienda cumple **3 o más** de estos factores, una F o G puede ser correcta. Si solo cumple 1 o 2, el certificado podría estar mal calculado.
+
+## ¿Cuándo una calificación F o G es correcta?
+
+Una F o G es correcta cuando la vivienda realmente tiene un consumo energético muy alto. Estos son los casos típicos:
+
+- **Viviendas anteriores a 1980** sin reformas de aislamiento
+- **Pisos sin calefacción central** que usan radiadores eléctricos viejos
+- **Casas unifamiliares** con caldera de gasoil antigua y sin aislamiento en cubierta
+- **Locales comerciales** sin climatización eficiente ni aislamiento
+
+En estos casos, la calificación refleja la realidad y el propietario debería considerar reformas para mejorar la eficiencia y evitar el **Brown Discount** al vender.
+
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+
+## ¿Cuándo una F o G es un error del técnico?
+
+Los errores más comunes que llevan a una calificación F o G incorrecta:
+
+### 1. El técnico no visitó la vivienda
+
+Es el error más grave y más frecuente. Si el certificado se hizo sin visita presencial (art. 6.5 RD 390/2021), los datos del catastro no reflejan reformas como:
+- Ventanas climalit instaladas hace 5 años
+- Aislamiento en fachada o cubierta
+- Cambio de caldera por bomba de calor
+
+**Consecuencia:** Una vivienda que debería tener C o D aparece con F o G.
+
+### 2. No se comprobó el estado real de las instalaciones
+
+El técnico asume valores por defecto del catastro sin verificar:
+- La caldera ya no es la original
+- Se instaló aire acondicionado con bomba de calor
+- Hay placas solares para ACS
+
+### 3. Error en la superficie declarada
+
+Si el técnico declara una superficie mayor de la real, el consumo por metro cuadrado se dispara y la calificación baja artificialmente.
+
+### 4. Uso de valores incorrectos en el software
+
+Una mala introducción de datos en el programa de cálculo puede cambiar la calificación en 1 o 2 letras.
+
+## Tabla de consecuencias económicas
+
+| Situación | Efecto en tu bolsillo |
+|-----------|----------------------|
+| F/G correcta → vendes con descuento | Pérdida del 5-15% del valor (Brown Discount) |
+| F/G incorrecta → debería ser C/D | Has perdido valor de venta sin motivo |
+| F/G incorrecta → compraste con esa letra | Pagaste menos, pero puedes tener problemas al revender |
+| F/G correcta → haces reformas | Puedes subir 2-3 letras y recuperar valor |
+
+## ¿Qué debes hacer si tienes una F o G?
+
+### Paso 1: No entres en pánico
+
+Una F o G no es el fin del mundo. Muchas viviendas en España tienen esta calificación y se venden o alquilan sin problemas. El problema real es **si la calificación es incorrecta**.
+
+### Paso 2: Revisa los datos del certificado
+
+Comprueba estos puntos en tu certificado:
+- ¿Aparece fecha de visita presencial?
+- ¿Los datos de superficie coinciden con la realidad?
+- ¿Se mencionan reformas que has hecho?
+- ¿El técnico está colegiado?
+
+### Paso 3: Solicita una segunda opinión
+
+Si algo no cuadra, la única forma de saber si tu F o G es correcta es pedir a otro técnico que revise el certificado.
+
+### Paso 4: Si es incorrecto, reclama
+
+Si la segunda opinión confirma que hay errores, puedes reclamar ante el técnico original y, si no responde, ante el colegio profesional. Para este paso necesitas un **informe técnico firmado** que acredite los errores.
+
+## Preguntas frecuentes sobre certificados F y G
+
+**¿Todas las viviendas antiguas tienen F o G?**
+No necesariamente. Una vivienda de los años 70 con reformas (ventanas climalit, aislamiento, caldera eficiente) puede alcanzar una C o incluso una B. La antigüedad no determina por sí sola la calificación.
+
+**¿Puedo vender mi piso con calificación F o G?**
+Sí, puedes venderlo. La calificación F o G no impide la venta, pero sí afecta al precio. Los compradores informados aplicarán el Brown Discount y pedirán un descuento del 5% al 15%.
+
+**¿Mejorar la calificación de F a C aumenta el valor de mi vivienda?**
+Sí, y de forma significativa. Pasar de G a C puede aumentar el valor de tu vivienda entre 13.500€ y 40.500€ (para un piso de 270.000€), además de reducir tu factura energética.
+
+**¿Cuánto cuesta saber si mi F o G es correcta?**
+En Certilab ofrecemos la Segunda Opinión por 59€ IVA incluido. Revisamos tu certificado y te emitimos un informe técnico firmado en 24-48h. Si la calificación es incorrecta, te decimos qué letra debería tener y qué pasos seguir.
 
 ---
 
-## 📄 INVENTARIO COMPLETO DE PÁGINAS (27 page.tsx)
-
-### Core pages (metadata OK ✅)
-| Ruta | Archivo | Tipo | Metadata | Schema | Style jsx |
-|------|---------|------|----------|--------|-----------|
-| `/` | `src/app/page.tsx` | Server | ✅ | ❌ No | ❌ |
-| `/sobre-nosotros` | `src/app/sobre-nosotros/page.tsx` | Server | ✅ | ❌ No | ❌ |
-| `/not-found` | `src/app/not-found.tsx` | Server | ✅ | N/A | ❌ |
-| `/formulario` | `src/app/formulario/page.tsx` | Client | ✅ (server layout?) | ? | ? |
-| `/gracias` | `src/app/gracias/page.tsx`| Server | ✅ | ❌ | ✅ Migrado a globals.css |
-| `/resultado-auditoria` | `src/app/resultado-auditoria/page.tsx` | Server | ✅ | ❌ | ✅ Migrado a globals.css |
-
-### Service pages (route group `(servicios)`)
-| Ruta | Archivo | Tipo | Metadata | Schema | Style jsx |
-|------|---------|------|----------|--------|-----------|
-| `/segunda-opinion` | `src/app/(servicios)/segunda-opinion/page.tsx` | Server | ✅ | ✅ Service | ❌ (CSS Module) |
-| `/segunda-opinion-express` | `src/app/(servicios)/segunda-opinion-express/page.tsx` | Server | ✅ | ✅ Service | ❌ (CSS Module) |
-| `/check-up-inmobiliario` | `src/app/(servicios)/check-up-inmobiliario/page.tsx` | Server | ✅ | ? | ❌ |
-| `/informe-tecnico-energetico` | `src/app/(servicios)/informe-tecnico-energetico/page.tsx` | Server | ✅ | ? (en client wrapper) | ❌ (data page sí) |
-| `/profesionales` | `src/app/(servicios)/profesionales/page.tsx` | Server | ✅ | ? | ? |
-| `/ayudas-eficiencia-energetica` | `src/app/(servicios)/ayudas-eficiencia-energetica/page.tsx` | **Client** | **❌** | **❌ CRITICAL** | **✅ 250 líneas** |
-| `/calculadoracat` | `src/app/(servicios)/calculadoracat/page.tsx` | Server | ✅ | ? | ? |
-| `/configurar-auditoria` | `src/app/(servicios)/configurar-auditoria/page.tsx` | Server | ✅ | ? | ? |
-
-### Legal pages (route group `(legal)`)
-| Ruta | Archivo | Tipo | Metadata | Style jsx |
-|------|---------|------|----------|-----------|
-| `/aviso-legal` | `src/app/(legal)/aviso-legal/page.tsx` | Server | ✅ | ❌ |
-| `/cookies` | `src/app/(legal)/cookies/page.tsx` | Server | ✅ | ❌ |
-| `/privacidad` | `src/app/(legal)/privacidad/page.tsx` | Server | ✅ | ❌ |
-
-### SAAS pages (route group `(saas)`)
-| Ruta | Archivo | Tipo | Metadata | Style jsx |
-|------|---------|------|----------|-----------|
-| `/saas` | `src/app/(saas)/saas/page.tsx` | Server | via layout | ❌ |
-| `/saas/demo` | `src/app/(saas)/saas/demo/page.tsx` | Server | via layout | ❌ |
-| `/saas/login` | `src/app/(saas)/saas/login/page.tsx` | Server | via layout | ❌ |
-| `/saas/precios` | `src/app/(saas)/saas/precios/page.tsx` | Server | via layout | ❌ |
-| `/saas/register` | `src/app/(saas)/saas/register/page.tsx` | Server | via layout | ❌ |
-
-### Blog pages
-| Ruta | Archivo | Tipo | Metadata | Style jsx |
-|------|---------|------|----------|-----------|
-| `/blog` | `src/app/blog/page.tsx` | Server | ✅ | ❌ |
-| `/blog/[slug]` | `src/app/blog/[slug]/page.tsx` | **Client** | **❌ CRITICAL** | **✅ (post.css)** |
-
-### Search tools
-| Ruta | Archivo | Tipo | Metadata | Style jsx |
-|------|---------|------|----------|-----------|
-| `/buscador-certificado-energetico-catalunya` | `src/app/buscador-certificado-energetico-catalunya/page.tsx` | Server | ✅ via layout | ❌ |
-| `/cercador-certificats-energetics` | `src/app/cercador-certificats-energetics/page.tsx` | Server | ✅ via layout | ❌ |
-
-### Landing pages
-| Ruta | Archivo | Tipo | Metadata | Style jsx |
-|------|---------|------|----------|-----------|
-| `/landing/guia-detecta-falso-ce` | `src/app/landing/guia-detecta-falso-ce/page.tsx` | **Client** | **❌** | **✅ 130 líneas** |
-| `/landing/guia-errores-ce` | `src/app/landing/guia-errores-ce/page.tsx` | Client? | via layout (OK?) | ? |
+**Si tu vivienda tiene calificación F o G y crees que no es justo, por 59€ te confirmamos si es correcto o hay un error que puedes corregir.**
+[Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
 
 ---
 
-## 🔧 COMPONENTES (inventario)
+## Certificado energético F o G: ¿es correcto o está mal calculado?
 
-### Layout (shared)
-| Componente | Archivo | "use client" | style jsx | CSS Module |
-|------------|---------|--------------|-----------|------------|
-| Header | `src/components/layout/Header.tsx` | ❌ | ❌ | ❌ (globals.css) |
-| Footer | `src/components/layout/Footer.tsx` | ❌ | ❌ | ✅ Footer.module.css |
+**URL:** https://www.certilab.cat/blog/certificado-energetico-f-g-correcto-o-error/
 
-### Sections (homepage)
-| Componente | Archivo | "use client" | style jsx | CSS Module |
-|------------|---------|--------------|-----------|------------|
-| HeroSection | `src/components/sections/HeroSection.tsx` | ❌ | ❌ | ❌ (globals.css) |
-| ProblemSection | `src/components/sections/ProblemSection.tsx` | ✅ | ✅ PENDIENTE | ❌ |
-| ServicesGrid | `src/components/sections/ServicesGrid.tsx` | ❌ | ❌ | ✅ ServicesGrid.module.css |
-| HowItWorks | `src/components/sections/HowItWorks.tsx` | ❌ | ❌ | ❌ (globals.css) |
-| ContrastSection | `src/components/sections/ContrastSection.tsx` | ✅ | ✅ PENDIENTE | ❌ |
-| FeaturesGrid | `src/components/sections/FeaturesGrid.tsx` | ✅ | ✅ PENDIENTE | ❌ |
-| ComparativaSection | `src/components/sections/ComparativaSection.tsx` | ❌ | ❌ | ✅ ComparativaSection.module.css |
-| TestimonialsSection | `src/components/sections/TestimonialsSection.tsx` | ❌ | ❌ | ❌ (globals.css) |
-| FAQSection | `src/components/sections/FAQSection.tsx` | ❌ | ❌ | ❌ (globals.css) |
-| CTASection | `src/components/sections/CTASection.tsx` | ❌ | ❌ | ❌ (globals.css) |
-| TrustBlockSection | `src/components/sections/TrustBlockSection.tsx` | ❌ | ❌ | ❌ (globals.css) |
-| PrivacySection | `src/components/sections/PrivacySection.tsx` | ❌ | ❌ | ❌ (globals.css) |
-
-### Forms
-| Componente | Archivo | "use client" | style jsx | CSS Module |
-|------------|---------|--------------|-----------|------------|
-| ContactForm | `src/components/forms/ContactForm.tsx` | ✅ | ✅ PENDIENTE (113 líneas) | ❌ |
-| LandingLeadForm | `src/components/forms/LandingLeadForm.tsx` | ✅ | ✅ PENDIENTE (55 líneas) | ❌ |
-
-### UI
-| Componente | Archivo | "use client" | style jsx | CSS Module |
-|------------|---------|--------------|-----------|------------|
-| ComingSoonSection | `src/components/ui/ComingSoonSection.tsx` | ✅ | ✅ PENDIENTE (50 líneas) | ❌ |
+Una calificación F o G en tu certificado puede ser correcta o un error del técnico. Descubre cómo saberlo y qué hacer en cada caso, con un dictamen técnico por 59€.
 
 ---
 
-## 🧩 LAYOUT HIERARCHY
+## Certificado energético e hipoteca verde: lo que el banco no te cuenta
 
-```
-src/app/layout.tsx (RootLayout — Server, metadata: title template "%s | Certilab")
-├── src/app/(servicios)/layout.tsx (ServiceGroupLayout — Server, metadata override)
-├── src/app/(legal)/layout.tsx (legal layout — Server)
-├── src/app/(saas)/layout.tsx (SaaS layout — metadata override)
-├── src/app/buscador-certificado-energetico-catalunya/layout.tsx (Server, canonical metadata)
-├── src/app/cercador-certificats-energetics/layout.tsx (Server, canonical metadata)
-├── src/app/landing/guia-errores-ce/layout.tsx (Server, metadata)
-└── src/app/blog/[slug]/layout.tsx (if exists — need to check)
-```
+**URL:** https://www.certilab.cat/blog/certificado-energetico-hipoteca-verde/
 
-### Root Layout metadata:
-```ts
-title: { default: "Certilab | Arquitectura Técnica Forense · Consultoría Energética", template: "%s | Certilab" }
-description: "Certilab — Arquitectura Técnica Forense especializada en consultoría energética e inmobiliaria. Segunda opinión de certificados energéticos, informes técnicos y check-up inmobiliario."
-canonical: https://www.certilab.cat
-```
-
-### Known metadata overrides per subgroup:
-- `(servicios)`: title template "%s | Certilab"
-- `(saas)`: title "SaaS — Certilab"
-- `buscador-* / cercador-*`: custom metadata with canonical
-- `landing/guia-errores-ce`: layout metadata (server)
+Cada vez más bancos ofrecen hipotecas verdes con condiciones preferentes para viviendas con calificación A o B. Si tu certificado está mal hecho, puedes perder esos beneficios durante 20-30 años de hipoteca.
 
 ---
 
-## 🏗️ ESTRUCTURA DE CSS
+## Certificado Energético Incorrecto: Cómo Detectarlo
 
-### Variables CSS (src/app/globals.css):
-```css
---font-serif: var(--font-playfair);
---font-sans: var(--font-inter);
---color-crema: #faf6f0;
---color-terra: #b46a4a;
---color-black: #1a1a1a;
---color-grey: #666;
---color-dark: #444;
---color-white: #fff;
---color-border: #e5e5e5;
-```
+**URL:** https://www.certilab.cat/blog/certificado-energetico-incorrecto/
 
-### Patrón de CSS Module existente:
-```css
-.section { padding: 5rem 1.5rem; }
-.section-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 400; text-align: center; }
-.section-sub { font-family: var(--font-sans); font-size: 0.95rem; color: var(--color-grey); text-align: center; }
-```
+---
+title: Certificado energético incorrecto: cómo detectarlo y reclamar
+description: ¿Tu certificado energético tiene errores? Detecta un certificado incorrecto antes de comprar o vender. Guía práctica con pasos para reclamar. 2026.
+slug: certificado-energetico-incorrecto
+keywords: certificado energético incorrecto, certificado energético mal hecho, certificado energético con errores, revisar certificado energético, segunda opinión certificado energético
+datePublished: 2026-06-21
+author: Eva María González García
+canonicalUrl: https://certilab.cat/blog/certificado-energetico-incorrecto/
+---
+
+# Certificado energético incorrecto: cómo detectarlo y reclamar
+
+
+  Eva María González García
+  
+    Arquitecta Técnica · Colegiada CATEB 9457 · Seguro RC Profesional · 20 años de experiencia
+  
+
+
+Tu certificado energético puede estar mal. Y puede costarte hasta 40.000€ en una vivienda de 270.000€. Los errores en certificados son más frecuentes de lo que crees — y la mayoría de propietarios los descubren demasiado tarde.
+
+
+Un certificado energético incorrecto es aquel que no refleja la realidad energética del inmueble. Puede contener datos inventados, calificaciones infladas o errores técnicos graves. Según el RD 390/2021, un certificado sin visita presencial del técnico es nulo de pleno derecho. Se puede detectar y reclamar.
+
+
+## ¿Cuándo es incorrecto un certificado energético?
+
+Un certificado es incorrecto cuando no coincide con la realidad del inmueble.
+
+Las causas más frecuentes son:
+
+- Datos introducidos sin visitar la vivienda
+- Calificación inflada para facilitar la venta
+- Superficie mal declarada
+- Instalaciones que no existen o están obsoletas
+- Software de cálculo mal configurado
+- Reformas no registradas que cambiarían la nota real
+
+El RD 390/2021 es claro: el técnico certificador está obligado a realizar una visita presencial para comprobar las características reales del inmueble. Sin visita, el certificado carece de validez legal.
+
+### Error subsanable vs error invalidante
+
+Error subsanable: dato administrativo incorrecto que no afecta la calificación. Se corrige sin coste.
+
+Error invalidante: dato técnico que cambia la calificación energética. Requiere nuevo procedimiento de certificación.
+
+
+  ¿No sabes si tu certificado tiene errores? Te lo confirmamos por 59€ →
+
+
+## ¿Cómo detectar un certificado energético incorrecto?
+
+Hay señales que cualquier propietario puede identificar sin ser técnico.
+
+### Señales de alerta evidentes
+
+El técnico no visitó la vivienda. Si te enviaron el certificado sin pisar el inmueble, es inválido según la normativa vigente.
+
+El precio fue inferior a 50€. Un certificado bien hecho cuesta entre 80 y 120€. Por menos de 50€ raramente hay visita real.
+
+La calificación es sorprendentemente buena. Una vivienda de los años 70 sin reformas de aislamiento no puede tener calificación B o C.
+
+El certificado no especifica detalles técnicos. Un certificado correcto incluye marca y modelo de la caldera, grosor real de muros, tipo de ventanas y orientación exacta.
+
+No hay recomendaciones de mejora. Todo certificado correcto incluye propuestas concretas de mejora energética.
+
+### Errores técnicos que invalidan el certificado
+
+Superficie incorrecta: si el certificado indica 85m² y tu vivienda tiene 95m², la calificación es matemáticamente incorrecta.
+
+Orientación equivocada: una vivienda orientada al norte con calificación B es técnicamente sospechosa.
+
+Instalaciones que no existen: si el certificado menciona caldera de condensación y tienes una caldera estándar de 15 años, los datos son falsos.
+
+Aislamiento inventado: si indica aislamiento térmico de 6cm y tus muros son de ladrillo simple sin cámara de aire, es fraudulento.
+
+
+  
+    Revisar mi certificado por 59€ →
+  
+  
+    Firmado por Eva María González García · CATEB 9457 · Respuesta en 24-48h · 59€ IVA incluido
+  
+
+
+## ¿Cuánto dinero puedes perder?
+
+Un certificado incorrecto tiene consecuencias económicas reales y cuantificables.
+
+### El Brown Discount que no te aplicaron
+
+Si el vendedor te presenta un certificado con calificación C pero la calificación real es F, estás pagando el precio de una vivienda eficiente por una que no lo es.
+
+La pérdida estimada: entre el 5% y el 15% del valor de la vivienda.
+
+En una vivienda de 270.000€: entre 13.500€ y 40.500€ pagados de más.
+
+### Casos reales con cifras
+
+Caso 1. Compra en Barcelona por 285.000€ con certificado D. Calificación real tras auditoría: F. Pérdida: 28.500€ por Brown Discount no aplicado.
+
+Caso 2. Venta con certificado emitido sin visita por 45€. Industria detectó el fraude. Multa de 3.000€ y certificado nuevo obligatorio antes de cerrar.
+
+Caso 3. Alquiler con certificado C. Calificación real D. Inquilino reclamó 4.200€ por sobrecostes energéticos durante dos años.
+
+
+  ¿Tu vivienda puede tener Brown Discount? Lo comprobamos por 59€ →
+
+
+## ¿Qué hacer si crees que tu certificado está mal?
+
+Estos son los pasos que debes seguir, en orden.
+
+Paso 1. Solicita una segunda opinión técnica.
+Antes de reclamar necesitas un dictamen profesional que documente los errores. Sin ese informe, cualquier reclamación carece de base técnica. Por 59€ IVA incluido revisamos tu certificado y te entregamos un informe firmado en 24-48h. Solo necesitas enviarnos el PDF.
+
+Paso 2. Reclama al técnico certificador.
+Con el informe en mano, exige la corrección sin coste. Si se niega, reclama ante su colegio profesional.
+
+Paso 3. Denuncia ante la administración.
+Si hay fraude evidente, denuncia ante la consejería de Industria. Sanciones de 300€ a 6.000€.
+
+Paso 4. Reclama daños si ya compraste.
+Puedes reclamar al vendedor por vicios ocultos hasta 6 meses después de la entrega de la vivienda.
+
+## Preguntas frecuentes
+
+¿Puedo reclamar si compré hace más de 6 meses?
+El plazo de vicios ocultos es de 6 meses desde la entrega. Pero si el certificado era fraudulento, puedes reclamar responsabilidad profesional al técnico hasta 10 años después de la emisión.
+
+¿Cómo sé si mi certificado tiene visita presencial real?
+Pide al técnico la fecha exacta y las fotografías tomadas durante la inspección. Si no puede aportarlas, es una señal de alerta.
+
+¿Un certificado incorrecto anula la compraventa?
+No anula la venta, pero te permite reclamar daños al vendedor por la diferencia entre el valor declarado y el real.
+
+¿Qué pasa si vendo con un certificado incorrecto?
+Responsabilidad legal ante el comprador, multa de Industria de hasta 6.000€ y obligación de emitir certificado correcto.
+
+¿Puedo solicitar la segunda opinión antes de comprar?
+Sí. Es la mejor inversión antes de firmar. Por 59€ verificamos el certificado del vendedor antes de que te comprometas.
+
+¿Cuánto tarda la segunda opinión?
+La respuesta estándar es en 24-48h. La modalidad Express la entrega en 4 horas por 79€.
+
+¿Qué documentos necesito enviar?
+Solo el PDF del certificado energético. Nada más.
+
+¿El informe de segunda opinión tiene validez legal?
+Sí. Está firmado por arquitecta técnica colegiada con seguro de responsabilidad civil. Puede usarse como base para reclamaciones.
+
+## Conclusión
+
+Un certificado energético incorrecto puede costarte decenas de miles de euros. Detectarlo antes de que cause daño es posible y accesible. Por 59€ y en menos de 48 horas tienes la certeza que necesitas para actuar.
+
+
+  ¿Tienes dudas sobre tu certificado energético?
+  Si sospechas que tu certificado no refleja la realidad de tu vivienda, no esperes a que el error te cueste dinero. Por 59€ te lo confirmamos con un informe técnico firmado.
+  
+    Solicitar Segunda Opinión por 59€ →
+  
+  
+    Firmado por Eva María González García · CATEB 9457 · Respuesta en 24-48h · Sin compromiso · 100% remoto
+  
+
+
+## También te puede interesar
+
+
+  
+    Brown Discount: cómo afecta al precio de tu vivienda
+    Qué es el Brown Discount y cuánto puede restar al valor de tu inmueble.
+  
+  
+    Certificado energético inflado: qué hacer
+    Pasos concretos si sospechas que tu calificación está inflada.
+  
+  
+    Multas por certificado energético
+    Cuánto puedes pagar si tu certificado no cumple la normativa.
+  
+
 
 ---
 
-## 🔧 META PIXEL SETUP
+## Metadatos SEO
 
-### Funciones disponibles en `src/lib/meta-pixel`:
-- `trackViewContent({ content_name, content_category, content_type })`
-- `trackContact({ content_name })`
-- `trackLead()`
-- `trackInitiateCheckout()`
-- `trackAddToCart()`
-- `trackPurchase({ value, currency })`
+**Meta title:** Certificado energético incorrecto: detectarlo y reclamar 2026
+**Meta description:** ¿Tu certificado energético tiene errores? Detecta un certificado incorrecto antes de comprar o vender. Guía práctica con pasos para reclamar. 2026.
+**URL:** /blog/certificado-energetico-incorrecto/
 
-### Páginas que trackean:
-- `page.tsx` home → viewContent (homepage)
-- `ayudas-eficiencia-energetica/page.tsx` → viewContent (article) + contact (CTA clicks)
-- `landing/guia-detecta-falso-ce/page.tsx` → viewContent + contact
-- `blog/[slug]/page.tsx` → viewContent
-- `formulario/page.tsx` → viewContent + initiateCheckout + Lead
-- `gracias/page.tsx` → purchase
-- `check-up-inmobiliario/page.tsx` → viewContent + contact
-- `segunda-opinion-express/page.tsx` → viewContent + contact
-- `segunda-opinion/page.tsx` → viewContent + contact
+**Keywords secundarias:**
+- certificado energético mal hecho
+- certificado energético con errores
+- certificado energético erróneo
+- revisar certificado energético
+- segunda opinión certificado energético
+- certificado energético nulo
+- certificado energético sin visita
 
----
+**Long tail keywords (baja competencia, intención alta):**
+- cómo saber si mi certificado energético está mal
+- qué hacer si el certificado energético tiene errores
+- certificado energético sin visita presencial es válido
+- puedo reclamar certificado energético incorrecto
+- certificado energético calificación incorrecta qué hacer
+- técnico certificado energético no visitó la vivienda
+- certificado energético datos falsos qué hago
+- segunda opinión certificado energético precio
+- revisar certificado energético antes de comprar
+- certificado energético inflado cómo detectarlo
 
-## 📋 BLOG ARTICLES (src/data/articles.ts)
-22 artículos indexados. URLs: `/blog/[slug]/` con trailing slash.
-Temas principales: brown discount, certificado energético, ayudas, timos/estafas, check-up inmobiliario, normativa.
-
----
-
-## 🔍 SEO AUDIT HISTORY
-
-### CRITICAL: ✅ RESUELTOS
-1. ~~4 pages con "use client" + metadata ignorada~~ → Refactorizadas a Server Component ✅
-2. ~~Schema.org en Client Components no procesado~~ → SegundaOpinionExpress corregido ✅
-3. ~~Home page sin H1~~ → Añadido ✅
-4. ~~Canonical incorrecta en Express e ITE~~ → Corregido ✅
-5. ~~review anidado dentro de aggregateRating en schema~~ → Eliminado ✅
-
-### IMPORTANT: ✅ RESUELTOS
-1. ~~Página 404 sin metadata~~ → Añadido ✅
-2. ~~Duplicación de marca en title tags~~ → Corregido ✅
-3. ~~Script check-seo desactualizado~~ → Actualizado ✅
-
-### LEVE: ✅ RESUELTOS
-1. ~~Footer con "use client" solo por styled-jsx~~ → Server Component ✅
-
-### PENDIENTES (sin resolver):
-1. ❌ Ruta `/diagnostico-express-energetico` no existe
-2. ❌ Redirecciones 301 insuficientes en next.config.ts
-3. ❌ Sitemap URLs sin verificar (6 rutas)
-4. ❌ Lighthouse audit post-correcciones
-
-### NUEVOS ISSUES DETECTADOS EN ESTE ANÁLISIS:
-5. ❌ CRITICAL: `ayudas-eficiencia-energetica/page.tsx` + `landing/*/page.tsx` + `blog/[slug]/page.tsx` son Client Components sin metadata export
-6. ❌ CRITICAL: Schema.org en estas mismas páginas no se procesa (Client Component)
-7. ❌ CRITICAL: Blog no tiene metadata dinámica por artículo
-8. ❌ IMPORTANT: 6 componentes con style jsx pendientes de migrar a CSS Module
-9. ❌ IMPORTANT: 3-4 páginas con style jsx inline pendientes de migrar
-10. ❌ LEVE: Landing pages sin canonical explícito
+**People Also Ask:**
+- ¿Qué pasa si el certificado energético tiene errores?
+- ¿Cómo sé si mi certificado energético es correcto?
+- ¿Puedo reclamar un certificado energético incorrecto?
+- ¿Es obligatoria la visita presencial para el certificado energético?
+- ¿Qué es un certificado energético inflado?
+- ¿Cuánto cuesta corregir un certificado energético?
+- ¿Quién responde por un certificado energético incorrecto?
+- ¿Puedo anular una compraventa por certificado energético falso?
+- ¿Cuánto tiempo tengo para reclamar un certificado energético?
+- ¿Qué es el Brown Discount?
+- ¿Cómo afecta el certificado energético al precio de la vivienda?
+- ¿Qué pasa si el técnico no visitó la vivienda?
+- ¿Puedo verificar el certificado energético del vendedor?
+- ¿Qué documentos necesito para reclamar un certificado?
+- ¿Cuánto vale una segunda opinión de certificado energético?
+- ¿El certificado energético incorrecto invalida la venta?
+- ¿Qué sanciones tiene emitir un certificado falso?
+- ¿Cómo denunciar un certificado energético fraudulento?
+- ¿Cuánto tarda una segunda opinión energética?
+- ¿Qué incluye el informe de segunda opinión?
 
 ---
 
-## 📝 NOTAS TÉCNICAS ADICIONALES
+## JSON-LD
 
-### WhatsApp integration
-- `src/lib/wa.ts` → `waDiagnostico()` genera link: `https://wa.me/34692026067?text=...`
-- Usado en: Hero CTA, CTASection, páginas de servicio
-
-### Analytics
-- Meta Pixel ID: configurado en root layout via Next.js Script
-- Tracking events dispersos en componentes individuales (useEffect)
-- No hay Google Analytics / GA4 configurado visiblemente
-
-### Schema.org patterns
-- Service + HowTo + BreadcrumbList (segunda-opinion pages)
-- Article (blog pages, contenido educativo)
-- ProfessionalService + Person (about pages)
-
-### Build info
-- `next build` → 38 rutas estáticas generadas correctamente (último build exitoso)
-- Sin errores de compilación
-
----
-
-## 🎯 PRIORIDADES DE ACCIÓN RECOMENDADAS
-
-### Fase 1 — CRÍTICO SEO
-1. Refactorizar `ayudas-eficiencia-energetica/page.tsx` → Server Component + metadata + schema estático + CSS Module
-2. Refactorizar `landing/guia-detecta-falso-ce/page.tsx` → Server Component + metadata + CSS Module
-3. Refactorizar `blog/[slug]/page.tsx` → Server Component + generateMetadata dinámico
-4. Verificar `landing/guia-errores-ce/page.tsx` — mismo patrón
-
-### Fase 2 — CSS Modules
-5. Migrar `ProblemSection.tsx` style jsx → ProblemSection.module.css
-6. Migrar `ContrastSection.tsx` style jsx → ContrastSection.module.css
-7. Migrar `FeaturesGrid.tsx` style jsx → FeaturesGrid.module.css
-8. Migrar `ComingSoonSection.tsx` style jsx → ComingSoonSection.module.css
-9. Migrar `ContactForm.tsx` style jsx → ContactForm.module.css
-10. Migrar `LandingLeadForm.tsx` style jsx → LandingLeadForm.module.css
-
-### Fase 3 — SEO Técnico
-11. Implementar/dirigir `/diagnostico-express-energetico`
-12. Ampliar redirecciones 301 en next.config.ts
-13. Verificar todas las URLs del sitemap
-14. Ejecutar Lighthouse audit
-15. Añadir canonical explícito en landing pages
-16. Considerar migrar Meta Pixel tracking a Server Component con Analytics wrapper
-
----
-
-## 📄 LISTADO COMPLETO DE ARCHIVOS FUENTE
-
-### App Router (src/app/)
-```
-src/app/
-├── layout.tsx                    # Root layout
-├── page.tsx                      # Homepage
-├── not-found.tsx                 # 404
-├── sitemap.ts                    # Dynamic sitemap
-├── globals.css                   # Global styles + CSS vars
-├── (legal)/
-│   ├── aviso-legal/page.tsx
-│   ├── cookies/page.tsx
-│   └── privacidad/page.tsx
-├── (saas)/
-│   ├── layout.tsx
-│   └── saas/
-│       ├── page.tsx
-│       ├── demo/page.tsx
-│       ├── login/page.tsx
-│       ├── precios/page.tsx
-│       └── register/page.tsx
-├── (servicios)/
-│   ├── layout.tsx
-│   ├── ayudas-eficiencia-energetica/page.tsx
-│   ├── calculadoracat/page.tsx
-│   ├── check-up-inmobiliario/page.tsx
-│   ├── configurar-auditoria/page.tsx
-│   ├── informe-tecnico-energetico/
-│   │   ├── page.tsx
-│   │   └── InformeTecnicoContent.tsx
-│   ├── profesionales/page.tsx
-│   ├── segunda-opinion/
-│   │   ├── page.tsx
-│   │   └── SegundaOpinion.module.css
-│   └── segunda-opinion-express/
-│       ├── page.tsx
-│       └── SegundaOpinionExpress.module.css
-├── blog/
-│   ├── page.tsx
-│   └── [slug]/
-│       ├── page.tsx
-│       └── post.css
-├── buscador-certificado-energetico-catalunya/
-│   ├── layout.tsx
-│   └── page.tsx
-├── cercador-certificats-energetics/
-│   ├── layout.tsx
-│   └── page.tsx
-├── formulario/page.tsx
-├── gracias/
-│   ├── page.tsx
-│   └── GraciasContentClient.tsx
-├── landing/
-│   ├── guia-detecta-falso-ce/page.tsx
-│   └── guia-errores-ce/
-│       ├── layout.tsx
-│       └── page.tsx
-├── resultado-auditoria/
-│   ├── page.tsx
-│   └── ResultadoAuditoriaContent.tsx
-└── sobre-nosotros/page.tsx
-```
-
-### Components (src/components/)
-```
-src/components/
-├── layout/
-│   ├── Header.tsx
-│   └── Footer.tsx
-│   └── Footer.module.css
-├── sections/
-│   ├── BlogSection.tsx (NO EXISTE)
-│   ├── CTASection.tsx
-│   ├── ComingSoonSection.tsx (NO EXISTE — está en ui/)
-│   ├── ComparativaSection.tsx
-│   │   └── ComparativaSection.module.css
-│   ├── ContrastSection.tsx
-│   ├── FAQSection.tsx
-│   ├── FeaturesGrid.tsx
-│   ├── HeroSection.tsx
-│   ├── HowItWorks.tsx
-│   ├── PrivacySection.tsx
-│   ├── ProblemSection.tsx
-│   ├── ServicesGrid.tsx
-│   │   └── ServicesGrid.module.css
-│   ├── TestimonialsSection.tsx
-│   └── TrustBlockSection.tsx
-├── forms/
-│   ├── ContactForm.tsx
-│   └── LandingLeadForm.tsx
-└── ui/
-    └── ComingSoonSection.tsx
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Certificado energético incorrecto: cómo detectarlo y reclamar",
+  "description": "Guía completa para detectar errores en un certificado energético y reclamarlos paso a paso.",
+  "author": {
+    "@type": "Person",
+    "name": "Eva María González García",
+    "jobTitle": "Arquitecta Técnica",
+    "identifier": "CATEB 9457"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Certilab",
+    "url": "https://certilab.cat"
+  },
+  "datePublished": "2026-06-21",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://certilab.cat/blog/certificado-energetico-incorrecto/"
+  }
+}
 ```
 
-### Data, Lib, Types
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Puedo reclamar si compré hace más de 6 meses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El plazo de vicios ocultos es de 6 meses desde la entrega. Pero si el certificado era fraudulento, puedes reclamar responsabilidad profesional al técnico hasta 10 años después de la emisión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Un certificado incorrecto anula la compraventa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No anula la venta, pero te permite reclamar daños al vendedor por la diferencia entre el valor declarado y el real del inmueble."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tarda la segunda opinión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La respuesta estándar es en 24-48h. La modalidad Express la entrega en 4 horas por 79€."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué documentos necesito enviar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo el PDF del certificado energético. No necesitas ningún documento adicional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El informe de segunda opinión tiene validez legal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Está firmado por arquitecta técnica colegiada con seguro de responsabilidad civil y puede usarse como base para reclamaciones ante el colegio profesional o la administración."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé si mi certificado tiene visita presencial real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pide al técnico la fecha exacta de la visita y las fotografías tomadas durante la inspección. Si no puede aportarlas, es una señal de alerta clara."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si vendo con un certificado incorrecto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Te expones a responsabilidad legal ante el comprador, multa de Industria de hasta 6.000€ y obligación de emitir un certificado correcto a tu costa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo solicitar la segunda opinión antes de comprar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Es la mejor inversión antes de firmar. Por 59€ verificamos el certificado del vendedor antes de que te comprometas con la operación."
+      }
+    }
+  ]
+}
 ```
-src/data/
-├── articles.ts          # 22 blog articles data
-└── navigation.ts        # Nav links config
 
-src/lib/
-├── meta-pixel.ts        # Meta Pixel tracking functions
-└── wa.ts                # WhatsApp link generator
-
-src/types/
-└── (TypeScript types)
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://certilab.cat"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://certilab.cat/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Certificado energético incorrecto",
+      "item": "https://certilab.cat/blog/certificado-energetico-incorrecto/"
+    }
+  ]
+}
 ```
 
 ---
 
-## 🔗 RECURSOS EXTERNOS
+## Certificado energético incorrecto: cómo detectarlo y reclamar
 
-### URLs clave
-- Production: https://www.certilab.cat
-- Repo: https://github.com/certilabcat-glitch/certilab-next
-- Deploy: Vercel (automático desde main)
+**URL:** https://www.certilab.cat/blog/certificado-energetico-incorrecto-nuevo/
 
-### Config files
-- `next.config.ts` → redirecciones 301, headers, image domains
-- `vercel.json` → deploy config
-- `tsconfig.json` → strict mode, path aliases (@/)
-- `postcss.config.mjs` → PostCSS config
-- `eslint.config.mjs` → ESLint flat config
-
-### Docs folder (`docs/`)
-- `00-gap-analysis.md` — Gap analysis
-- `01-plan-redirects-easypanel.md` — Redirect plan from old hosting
-- `02-investigacion-nixpacks.md` — Nixpacks research
-- `10-mapa-keywords.md` — Keyword map/strategy
-- `11-estrategia-gbp.md` — Google Business Profile strategy
-- `99-merge-eliminacion-paso-a-paso.md` — Merge/deployment steps
-- `99-plan-merge-urgente.md` — Urgent merge plan
-- `BRIEFING-EVA.md` — Content brief for Eva
-- `PLAN-MAESTRO.md` — Master plan
-- `PROTOCOLO-RESPUESTA-LEADS.md` — Lead response protocol
-- `SEO-AUDIT-REPORT.md` — SEO audit (latest)
+¿Tu certificado energético tiene errores? Detecta un certificado incorrecto antes de comprar o vender. Guía práctica con pasos para reclamar. 2026.
 
 ---
 
-## ✅ CHECKLIST FINAL DEL EXPERTO IA
+## Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026
 
-- [ ] 1. Refactorizar `ayudas-eficiencia-energetica/page.tsx` a Server Component + metadata + CSS Module
-- [ ] 2. Refactorizar `landing/guia-detecta-falso-ce/page.tsx` a Server Component + metadata + CSS Module
-- [ ] 3. Refactorizar `blog/[slug]/page.tsx` a Server Component + generateMetadata dinámico
-- [ ] 4. Verificar `landing/guia-errores-ce/page.tsx` hereda metadata correctamente
-- [ ] 5. Migrar `ProblemSection.tsx` style jsx → CSS Module
-- [ ] 6. Migrar `ContrastSection.tsx` style jsx → CSS Module
-- [ ] 7. Migrar `FeaturesGrid.tsx` style jsx → CSS Module
-- [ ] 8. Migrar `ComingSoonSection.tsx` style jsx → CSS Module
-- [ ] 9. Migrar `ContactForm.tsx` style jsx → CSS Module
-- [ ] 10. Migrar `LandingLeadForm.tsx` style jsx → CSS Module
-- [ ] 11. Implementar `diagnostico-express-energetico` o redirección
-- [ ] 12. Ampliar redirecciones 301 en next.config.ts
-- [ ] 13. Verificar URLs del sitemap contra implementación real
-- [ ] 14. Añadir canonical explícito en landing pages
-- [ ] 15. Migrar Meta Pixel tracking a wrapper Server Component pattern
-- [ ] 16. Ejecutar Lighthouse audit post-correcciones
+**URL:** https://www.certilab.cat/blog/certificado-energetico-inflado/
+
+---
+slug: "certificado-energetico-inflado-que-hacer"
+title: "Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026"
+excerpt: "¿Sospechas que tu certificado energético tiene la calificación inflada? Te explicamos cómo detectarlo, qué consecuencias tiene y cómo reclamar con un dictamen técnico firmado."
+date: "2026-06-18"
+author: "Eva María González García"
+tags: ["certificado energético", "calificación inflada", "reclamar", "fraude", "Segunda Opinión"]
+readingTime: 9
+featured: false
+---
+
+# Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026
+
+
+Un certificado energético inflado es aquel que muestra una calificación mejor de la que realmente corresponde a la vivienda. Si sospechas que el tuyo está inflado, el primer paso es obtener un dictamen técnico independiente (Segunda Opinión por 59€) que lo confirme. Con ese informe, puedes reclamar al técnico, al vendedor y, si es necesario, ante la administración.
+
+
+## ¿Qué es un certificado energético inflado?
+
+Un certificado energético está **inflado** cuando la calificación mostrada (A, B, C, D...) es mejor de la que realmente corresponde a la vivienda según sus características constructivas y sistemas instalados.
+
+### ¿Cómo se infla un certificado?
+
+Los técnicos recurren a varios métodos para inflar la calificación:
+
+- **Modificar parámetros de aislamiento** → Declarar un aislamiento mejor del real
+- **Ignorar reformas no realizadas** → Dar por hecho mejoras que no existen
+- **Usar valores por defecto favorables** → El software permite "optimizar" ciertos parámetros
+- **No considerar puentes térmicos** → Omitir puntos débiles de la envolvente térmica
+
+> ⚠️ **Importante:** Inflar un certificado no solo es poco ético, sino que puede ser considerado **fraude documental** con consecuencias legales para el técnico y el vendedor.
+
+## ¿Cómo detectar si tu certificado está inflado?
+
+### Indicadores principales
+
+1. **Calificación A o B en vivienda anterior a 2006** sin reformas integrales de eficiencia
+2. **Discrepancia con el consumo real**: si pagas 1.200€/año en calefacción y electricidad, tu vivienda no puede tener una A
+3. **El certificado cuesta menos de 50€** → casi seguro que no incluyó visita presencial
+4. **El técnico no responde preguntas** sobre cómo obtuvo la calificación
+5. **La calificación no coincide** con viviendas similares en tu misma zona y antigüedad
+
+### Comparativa orientativa
+
+| Tipo de vivienda | Calificación típica real | Calificación inflada común |
+|-----------------|------------------------|---------------------------|
+| Piso 1960-1980 sin reformas | G-F | D-C |
+| Piso 1980-2000 con caldera antigua | F-E | C-B |
+| Piso 2000-2010 sin reformas recientes | D-E | B-A |
+| Casa 1970 sin aislamiento | G | D-C |
+
+## Consecuencias de un certificado inflado
+
+### Para el comprador
+
+- **Paga de más** por la vivienda (Brown Discount oculto)
+- **Asume costes imprevistos** de rehabilitación energética
+- **Dificultad para vender** en el futuro si el comprador descubre la calificación real
+
+### Para el vendedor
+
+- **Riesgo de reclamación** por parte del comprador
+- **Posible sanción** administrativa por certificado fraudulento
+- **Responsabilidad solidaria** si el comprador demuestra el sobreprecio
+
+### Para el técnico
+
+- **Expediente del colegio profesional** que puede conllevar sanción o inhabilitación
+- **Responsabilidad civil** por los daños causados
+- **Posible delito de falsedad documental** en casos graves
+
+## ¿Qué hacer si crees que tu certificado está inflado?
+
+### Paso 1: No uses ese certificado
+
+Si estás en proceso de compraventa y sospechas que el certificado está inflado, no lo uses. Un certificado incorrecto puede invalidar la operación.
+
+### Paso 2: Solicita una Segunda Opinión
+
+Contrata a un técnico independiente para que revise el certificado original. En Certilab lo hacemos por 59€ y te entregamos un informe firmado en 24-48h.
+
+### Paso 3: Reclama al técnico original
+
+Con el informe de Segunda Opinión en mano, presenta una reclamación formal al técnico que emitió el certificado. El técnico tiene 15 días para responder según la legislación de consumo.
+
+### Paso 4: Reclama al colegio profesional
+
+Si el técnico no responde o no rectifica, presenta el caso ante su colegio profesional (Arquitectos, Aparejadores o Ingenieros). El colegio puede abrir expediente disciplinario.
+
+### Paso 5: Denuncia ante la administración
+
+Como último recurso, denuncia ante el organismo autonómico competente (ICAEN en Catalunya). La administración puede imponer sanciones de 600€ a 6.000€.
+
+## Preguntas frecuentes
+
+**¿Cuánto cuesta todo el proceso de reclamación?**
+El dictamen técnico cuesta 59€ con Certilab. Las reclamaciones ante el colegio profesional o la administración no tienen coste de tramitación.
+
+**¿Puedo reclamar si ya compré la vivienda?**
+Sí. El plazo de prescripción es de 3 años desde que descubres el error. Si demostramos que el certificado estaba inflado, puedes reclamar el sobreprecio pagado.
+
+**¿El vendedor tiene obligación de decirme si el certificado está inflado?**
+Legalmente no, pero el certificado debe reflejar fielmente las características de la vivienda. Si el vendedor conocía la manipulación, puede ser considerado responsable solidario.
 
 ---
 
-*Documento generado el 5 de junio de 2026 — Análisis completo del proyecto certilab-next para entrega a experto IA en SEO + rendimiento.*
+**¿Sospechas que tu certificado está inflado? Por 59€ lo verificamos y te damos un informe firmado.**
+[Solicitar Segunda Opinión →](/segunda-opinion/)
+
+---
+
+## Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026
+
+**URL:** https://www.certilab.cat/blog/certificado-energetico-inflado-que-hacer/
+
+¿Sospechas que tu certificado energético tiene la calificación inflada? Te explicamos cómo detectarlo, qué consecuencias tiene y cómo reclamar con un dictamen técnico firmado.
+
+---
+
+## Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026
+
+**URL:** https://www.certilab.cat/blog/certificado-energetico-inflado-que-hacer/
+
+¿Sospechas que tu certificado energético tiene la calificación inflada? Te explicamos cómo detectarlo, qué consecuencias tiene y cómo reclamar con un dictamen técnico firmado.
+
+---
+
+## Certificado energético para negociar el precio de compra: guía práctica 2026
+
+**URL:** https://www.certilab.cat/blog/certificado-energetico-negociar-precio/
+
+¿Sabías que el certificado energético puede ser tu mejor herramienta para negociar el precio de compra de una vivienda? Te explicamos cómo usar el Brown Discount como argumento y cuánto puedes ahorrar.
+
+---
+
+## ¿Es obligatorio el certificado energético para alquilar una vivienda en 2026?
+
+**URL:** https://www.certilab.cat/blog/certificado-energetico-obligatorio-alquiler/
+
+Sí, el certificado energético es obligatorio para alquilar desde 2013. Te contamos qué dice la ley, las excepciones reales y qué pasa si alquilas sin él.
+
+---
+
+## Certificado energético del vendedor: ¿es fiable? Guía para compradores 2026
+
+**URL:** https://www.certilab.cat/blog/certificado-energetico-vendedor-fiable/
+
+¿Te fías del certificado energético que te entrega el vendedor? Te explicamos los riesgos de calificaciones infladas, cómo detectarlas y por qué una Segunda Opinión puede ahorrarte miles de euros.
+
+---
+
+## Cómo interpretar tu certificado energético paso a paso
+
+**URL:** https://www.certilab.cat/blog/como-interpretar-certificado-energetico/
+
+Aprende a leer tu certificado energético: calificación, consumo, emisiones, datos del técnico y número de registro. Guía práctica con errores frecuentes y FAQ.
+
+---
+
+## Cómo obtener el certificado energético en España: guía completa paso a paso (2026)
+
+**URL:** https://www.certilab.cat/blog/como-obtener-certificado-energetico/
+
+Guía completa para obtener el certificado energético en cualquier comunidad autónoma de España. Proceso paso a paso, precios orientativos, documentos necesarios y plazos. Incluye tabla de organismos autonómicos.
+
+---
+
+## ¿Cómo saber si mi certificado energético está mal? 7 señales de alerta
+
+**URL:** https://www.certilab.cat/blog/como-saber-si-certificado-energetico-esta-mal/
+
+7 señales claras para detectar si tu certificado energético tiene errores graves. Desde la falta de visita presencial hasta calificaciones sospechosas. Guía práctica 2026.
+
+---
+
+## Precio del Certificado Energético 2026: claves para entender las diferencias
+
+**URL:** https://www.certilab.cat/blog/cuanto-cuesta-certificado-energetico-2026/
+
+¿Cuánto debería costar un certificado energético en 2026? Analizamos los precios del mercado y las diferencias entre las distintas opciones disponibles.
+
+---
+
+## Certificado energético: ¿cuánto dura y cuándo caduca?
+
+**URL:** https://www.certilab.cat/blog/cuanto-dura-certificado-energetico/
+
+El certificado energético tiene una validez máxima de 10 años, pero hay casos en los que caduca antes. Descubre cuándo renovarlo y evita problemas legales.
+
+---
+
+## ¿Tu certificado energético es falso? 5 señales para detectarlo
+
+**URL:** https://www.certilab.cat/blog/detectar-certificado-energetico-falso/
+
+Guía práctica para detectar si tu certificado energético es falso: 5 señales de alerta, precios orientativos, cómo reclamar y qué alternativas tienes.
+
+---
+
+## Errores comunes en el certificado energético: cómo detectarlos y solucionarlos
+
+**URL:** https://www.certilab.cat/blog/errores-certificado-energetico/
+
+Los 5 errores más frecuentes que encontramos en los certificados energéticos y cómo identificarlos antes de que te cuesten dinero.
+
+---
+
+## Los 7 errores más graves en un certificado energético (y cómo detectarlos)
+
+**URL:** https://www.certilab.cat/blog/errores-graves-certificado-energetico/
+
+Los 7 errores más graves que invalidan un certificado energético: falta de visita, calificación inflada, superficie mal declarada, reformas no registradas y más. Cada uno puede costarte miles de euros. Aprende a detectarlos.
+
+---
+
+## Guía completa para tramitar el certificado energético en Catalunya (2026)
+
+**URL:** https://www.certilab.cat/blog/guia-tramitar-certificado-energetico-catalunya/
+
+¿Necesitas el certificado energético en Catalunya? Guía paso a paso: presupuesto, visita técnica, registro ICAEN, plazos y precios. Certificado en regla sin errores.
+
+---
+
+## Multas y sanciones por no tener certificado energético en 2026: guía completa
+
+**URL:** https://www.certilab.cat/blog/multas-certificado-energetico/
+
+¿Te pueden multar por no tener certificado energético? Sanciones de 300€ a 6.000€. Quién inspecciona, cómo reclamar y cómo evitarlo. Segunda opinión por 59€.
+
+---
+
+## Certificado Energético Gratis: mitos y realidades en 2026
+
+**URL:** https://www.certilab.cat/blog/obtener-certificado-energetico-gratis/
+
+¿Existe el certificado energético gratis en 2026? Te explicamos en qué casos es posible obtenerlo sin coste, qué trampas evitar y por qué los certificados gratuitos suelen tener errores que te pueden costar dinero.
+
+---
+
+## ¿Cuánto puedo perder por un certificado energético mal hecho?
+
+**URL:** https://www.certilab.cat/blog/perder-dinero-certificado-energetico-mal-hecho/
+
+Un certificado energético mal hecho puede costarte entre 7.500€ y 60.000€. Calcula tu riesgo real en función del valor de tu vivienda y descubre si tu certificado te está costando dinero.
+
+---
+
+## ¿Puedo reclamar un certificado energético incorrecto? Guía 2026
+
+**URL:** https://www.certilab.cat/blog/reclamar-certificado-energetico-incorrecto/
+
+---
+slug: "reclamar-certificado-energetico-incorrecto"
+title: "¿Puedo reclamar un certificado energético incorrecto? Guía 2026"
+excerpt: "Sí, puedes reclamar un certificado energético incorrecto. Pero necesitas un dictamen técnico firmado que acredite los errores. Te explicamos el proceso completo paso a paso."
+date: "2026-06-20"
+author: "Eva María González García"
+tags: ["certificado energético", "reclamar", "errores", "dictamen técnico", "Segunda Opinión"]
+readingTime: 8
+featured: false
+---
+
+# ¿Puedo reclamar un certificado energético incorrecto? Guía 2026
+
+
+Sí, puedes reclamar un certificado energético incorrecto ante el técnico firmante, el colegio profesional y la administración autonómica. Sin embargo, el primer paso obligatorio antes de cualquier reclamación es contar con un dictamen técnico firmado que acredite los errores del certificado original. Sin ese informe, tu reclamación carece de base técnica y será rechazada en todos los casos.
+
+
+## ¿Se puede reclamar un certificado energético incorrecto?
+
+La respuesta corta es **sí**, pero con matices importantes. Reclamar un certificado energético no es como reclamar un producto defectuoso en una tienda. Necesitas un **procedimiento técnico previo** que demuestre, con datos objetivos, que el certificado original contiene errores.
+
+### ¿Qué errores son reclamables?
+
+No todos los errores tienen la misma gravedad. Estos son los que puedes reclamar:
+
+**Errores graves (invalidan el certificado):**
+- ❌ Ausencia de visita presencial (art. 6.5 RD 390/2021)
+- ❌ Calificación inflada o deflactada sin justificación técnica
+- ❌ Técnico no colegiado o no habilitado
+- ❌ Datos del catastro sin verificar, ignorando reformas reales
+- ❌ Falta de registro en el organismo autonómico
+
+**Errores leves (subsanables):**
+- ⚠️ Errores en la superficie declarada
+- ⚠️ Omisión de alguna medida de mejora recomendada
+- ⚠️ Pequeñas discrepancias en los datos del inmueble
+
+> **Dato clave:** Según el IDAE, aproximadamente un **15-20% de los certificados energéticos** presentan errores graves que los invalidan. En certificados de menos de 50€ (sin visita presencial), esa cifra supera el **90%**.
+
+## ¿Por qué ocurren los errores en los certificados?
+
+La mayoría de errores en certificados energéticos tienen tres causas principales:
+
+### 1. Certificados sin visita presencial
+
+Es la causa más frecuente. El técnico elabora el certificado usando solo los datos del catastro, sin pisar la vivienda. Esto incumple el artículo 6.5 del RD 390/2021 y genera errores en cadena: superficies incorrectas, calificación basada en valores por defecto, ausencia de reformas reales.
+
+**Consecuencia:** El certificado no refleja el estado real de la vivienda. Una vivienda con ventanas climalit y aislamiento puede aparecer con calificación G cuando debería tener una C o D.
+
+### 2. Calificación inflada para contentar al cliente
+
+Algunos técnicos modifican los parámetros de cálculo para obtener la letra que el cliente quiere ver, en lugar de la que realmente corresponde.
+
+**¿A quién perjudica?**
+- Al **comprador**: paga de más porque el Brown Discount se oculta tras una calificación falsa
+- Al **vendedor honesto**: compite en desventaja contra vendedores que inflan certificados
+
+### 3. Desconocimiento técnico del certificador
+
+No todos los técnicos tienen la misma experiencia. Un error en la introducción de datos en el software de cálculo puede cambiar la calificación en una o dos letras.
+
+## Consecuencias de un certificado incorrecto
+
+Las consecuencias económicas de un certificado con errores son significativas:
+
+| Tipo de error | Consecuencia económica |
+|--------------|----------------------|
+| Calificación inflada (Ej: G → C) | El comprador paga entre 13.500€ y 40.500€ de más (Brown Discount del 5-15% sobre 270.000€) |
+| Calificación deflactada (Ej: C → G) | El vendedor pierde entre 13.500€ y 40.500€ de valor de venta |
+| Certificado inválido | Sanción de 600€ a 6.000€ por usar un certificado no válido |
+| Retraso en compraventa | La operación se bloquea hasta tener un certificado válido |
+
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+
+## ¿Qué puedes hacer por tu cuenta antes de reclamar?
+
+Antes de iniciar una reclamación formal, puedes hacer estas comprobaciones rápidas:
+
+1. **Verifica el número de colegiado** del técnico en el colegio profesional correspondiente (Arquitectos, Aparejadores o Ingenieros)
+2. **Comprueba la fecha de visita presencial** — si no aparece, el certificado es nulo
+3. **Busca el número de registro** autonómico — sin registro, no tiene validez legal
+4. **Compara la calificación con el consumo real** — si tu factura es de 400€/año y el certificado dice G (consumo >200 kWh/m²), algo no cuadra
+
+Sin embargo, para una reclamación formal necesitas algo más: **un dictamen técnico firmado por otro profesional**. Y ahí es donde entra la Segunda Opinión de Certilab.
+
+## ¿Cómo es el proceso legal de reclamación?
+
+El proceso completo tiene 4 pasos:
+
+| Paso | Acción | Plazo |
+|------|--------|-------|
+| 1 | Obtener dictamen técnico firmado que acredite los errores | 24-48h |
+| 2 | Reclamar por escrito al técnico que emitió el certificado | El técnico tiene 15 días para responder |
+| 3 | Si no responde, reclamar ante el colegio profesional | 1-3 meses |
+| 4 | Denunciar ante la administración autonómica (ICAEN en Cataluña) | 3-6 meses |
+
+> ⚠️ **Atención:** El paso 1 es el más importante. Sin un dictamen técnico firmado por un profesional independiente, los pasos 2, 3 y 4 no tienen base sólida. La administración rechazará tu reclamación si no presentas un informe pericial que demuestre los errores.
+
+## ¿Qué documentos necesitas para reclamar?
+
+Para que tu reclamación prospere, necesitas:
+
+1. **El certificado original** que consideras incorrecto
+2. **Un dictamen técnico firmado** que identifique los errores concretos — este es el documento crítico
+3. **Facturas de consumos** (si las tienes) para demostrar la discrepancia
+4. **Fotografías** de la vivienda que acrediten reformas no reflejadas en el certificado
+5. **Justificante de pago** del certificado original
+
+## Preguntas frecuentes sobre reclamar el certificado energético
+
+**¿Puedo reclamar si el certificado lo pagó el vendedor?**
+Sí, como comprador puedes reclamar aunque no hayas pagado el certificado. El perjuicio económico (Brown Discount) es tuyo si la calificación inflada te hizo pagar de más.
+
+**¿Cuánto cuesta reclamar un certificado incorrecto?**
+El coste principal es el dictamen técnico independiente (59€ con Certilab). Las reclamaciones ante el colegio profesional o la administración no tienen coste de tramitación, pero requieren tiempo y paciencia.
+
+**¿Prescriben las reclamaciones por certificado incorrecto?**
+Sí, el plazo general de prescripción es de **3 años** desde que conoces el error. No dejes pasar el tiempo: cuanto antes actúes, más fácil será demostrar el perjuicio.
+
+---
+
+**Antes de reclamar necesitas un dictamen técnico firmado. La Segunda Opinión de Certilab te da ese documento por 59€ IVA incluido en 24-48h.**
+[Solicitar Segunda Opinión →](/segunda-opinion/)
+
+---
+
+## ¿Puedo reclamar un certificado energético incorrecto? Guía 2026
+
+**URL:** https://www.certilab.cat/blog/reclamar-certificado-energetico-incorrecto/
+
+---
+slug: "reclamar-certificado-energetico-incorrecto"
+title: "¿Puedo reclamar un certificado energético incorrecto? Guía 2026"
+excerpt: "Sí, puedes reclamar un certificado energético incorrecto. Pero necesitas un dictamen técnico firmado que acredite los errores. Te explicamos el proceso completo paso a paso."
+date: "2026-06-20"
+author: "Eva María González García"
+tags: ["certificado energético", "reclamar", "errores", "dictamen técnico", "Segunda Opinión"]
+readingTime: 8
+featured: false
+---
+
+# ¿Puedo reclamar un certificado energético incorrecto? Guía 2026
+
+
+Sí, puedes reclamar un certificado energético incorrecto ante el técnico firmante, el colegio profesional y la administración autonómica. Sin embargo, el primer paso obligatorio antes de cualquier reclamación es contar con un dictamen técnico firmado que acredite los errores del certificado original. Sin ese informe, tu reclamación carece de base técnica y será rechazada en todos los casos.
+
+
+## ¿Se puede reclamar un certificado energético incorrecto?
+
+La respuesta corta es **sí**, pero con matices importantes. Reclamar un certificado energético no es como reclamar un producto defectuoso en una tienda. Necesitas un **procedimiento técnico previo** que demuestre, con datos objetivos, que el certificado original contiene errores.
+
+### ¿Qué errores son reclamables?
+
+No todos los errores tienen la misma gravedad. Estos son los que puedes reclamar:
+
+**Errores graves (invalidan el certificado):**
+- ❌ Ausencia de visita presencial (art. 6.5 RD 390/2021)
+- ❌ Calificación inflada o deflactada sin justificación técnica
+- ❌ Técnico no colegiado o no habilitado
+- ❌ Datos del catastro sin verificar, ignorando reformas reales
+- ❌ Falta de registro en el organismo autonómico
+
+**Errores leves (subsanables):**
+- ⚠️ Errores en la superficie declarada
+- ⚠️ Omisión de alguna medida de mejora recomendada
+- ⚠️ Pequeñas discrepancias en los datos del inmueble
+
+> **Dato clave:** Según el IDAE, aproximadamente un **15-20% de los certificados energéticos** presentan errores graves que los invalidan. En certificados de menos de 50€ (sin visita presencial), esa cifra supera el **90%**.
+
+## ¿Por qué ocurren los errores en los certificados?
+
+La mayoría de errores en certificados energéticos tienen tres causas principales:
+
+### 1. Certificados sin visita presencial
+
+Es la causa más frecuente. El técnico elabora el certificado usando solo los datos del catastro, sin pisar la vivienda. Esto incumple el artículo 6.5 del RD 390/2021 y genera errores en cadena: superficies incorrectas, calificación basada en valores por defecto, ausencia de reformas reales.
+
+**Consecuencia:** El certificado no refleja el estado real de la vivienda. Una vivienda con ventanas climalit y aislamiento puede aparecer con calificación G cuando debería tener una C o D.
+
+### 2. Calificación inflada para contentar al cliente
+
+Algunos técnicos modifican los parámetros de cálculo para obtener la letra que el cliente quiere ver, en lugar de la que realmente corresponde.
+
+**¿A quién perjudica?**
+- Al **comprador**: paga de más porque el Brown Discount se oculta tras una calificación falsa
+- Al **vendedor honesto**: compite en desventaja contra vendedores que inflan certificados
+
+### 3. Desconocimiento técnico del certificador
+
+No todos los técnicos tienen la misma experiencia. Un error en la introducción de datos en el software de cálculo puede cambiar la calificación en una o dos letras.
+
+## Consecuencias de un certificado incorrecto
+
+Las consecuencias económicas de un certificado con errores son significativas:
+
+| Tipo de error | Consecuencia económica |
+|--------------|----------------------|
+| Calificación inflada (Ej: G → C) | El comprador paga entre 13.500€ y 40.500€ de más (Brown Discount del 5-15% sobre 270.000€) |
+| Calificación deflactada (Ej: C → G) | El vendedor pierde entre 13.500€ y 40.500€ de valor de venta |
+| Certificado inválido | Sanción de 600€ a 6.000€ por usar un certificado no válido |
+| Retraso en compraventa | La operación se bloquea hasta tener un certificado válido |
+
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+
+## ¿Qué puedes hacer por tu cuenta antes de reclamar?
+
+Antes de iniciar una reclamación formal, puedes hacer estas comprobaciones rápidas:
+
+1. **Verifica el número de colegiado** del técnico en el colegio profesional correspondiente (Arquitectos, Aparejadores o Ingenieros)
+2. **Comprueba la fecha de visita presencial** — si no aparece, el certificado es nulo
+3. **Busca el número de registro** autonómico — sin registro, no tiene validez legal
+4. **Compara la calificación con el consumo real** — si tu factura es de 400€/año y el certificado dice G (consumo >200 kWh/m²), algo no cuadra
+
+Sin embargo, para una reclamación formal necesitas algo más: **un dictamen técnico firmado por otro profesional**. Y ahí es donde entra la Segunda Opinión de Certilab.
+
+## ¿Cómo es el proceso legal de reclamación?
+
+El proceso completo tiene 4 pasos:
+
+| Paso | Acción | Plazo |
+|------|--------|-------|
+| 1 | Obtener dictamen técnico firmado que acredite los errores | 24-48h |
+| 2 | Reclamar por escrito al técnico que emitió el certificado | El técnico tiene 15 días para responder |
+| 3 | Si no responde, reclamar ante el colegio profesional | 1-3 meses |
+| 4 | Denunciar ante la administración autonómica (ICAEN en Cataluña) | 3-6 meses |
+
+> ⚠️ **Atención:** El paso 1 es el más importante. Sin un dictamen técnico firmado por un profesional independiente, los pasos 2, 3 y 4 no tienen base sólida. La administración rechazará tu reclamación si no presentas un informe pericial que demuestre los errores.
+
+## ¿Qué documentos necesitas para reclamar?
+
+Para que tu reclamación prospere, necesitas:
+
+1. **El certificado original** que consideras incorrecto
+2. **Un dictamen técnico firmado** que identifique los errores concretos — este es el documento crítico
+3. **Facturas de consumos** (si las tienes) para demostrar la discrepancia
+4. **Fotografías** de la vivienda que acrediten reformas no reflejadas en el certificado
+5. **Justificante de pago** del certificado original
+
+## Preguntas frecuentes sobre reclamar el certificado energético
+
+**¿Puedo reclamar si el certificado lo pagó el vendedor?**
+Sí, como comprador puedes reclamar aunque no hayas pagado el certificado. El perjuicio económico (Brown Discount) es tuyo si la calificación inflada te hizo pagar de más.
+
+**¿Cuánto cuesta reclamar un certificado incorrecto?**
+El coste principal es el dictamen técnico independiente (59€ con Certilab). Las reclamaciones ante el colegio profesional o la administración no tienen coste de tramitación, pero requieren tiempo y paciencia.
+
+**¿Prescriben las reclamaciones por certificado incorrecto?**
+Sí, el plazo general de prescripción es de **3 años** desde que conoces el error. No dejes pasar el tiempo: cuanto antes actúes, más fácil será demostrar el perjuicio.
+
+---
+
+**Antes de reclamar necesitas un dictamen técnico firmado. La Segunda Opinión de Certilab te da ese documento por 59€ IVA incluido en 24-48h.**
+[Solicitar Segunda Opinión →](/segunda-opinion/)
+
+---
+
+## Segunda opinión certificado energético: cuándo necesitarla y cómo funciona
+
+**URL:** https://www.certilab.cat/blog/segunda-opinion-certificado-energetico/
+
+¿Tu certificado energético es correcto? La Segunda Opinión de Certilab analiza tu certificado actual y te dice si la calificación es real o tiene errores. Informe técnico firmado en 24-48h por 59€.
+
+---
+
+## Vivienda eficiente sin certificado A: mitos y realidades sobre la calificación energética
+
+**URL:** https://www.certilab.cat/blog/vivienda-eficiente-sin-certificado-a/
+
+¿Puede una vivienda ser eficiente aunque no tenga calificación A? Analizamos los mitos más comunes y te explicamos qué significan realmente las letras de la etiqueta energética.
+
+---
+
