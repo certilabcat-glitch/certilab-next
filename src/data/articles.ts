@@ -13,6 +13,190 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "certificado-energetico-incorrecto-nuevo",
+    title: "Certificado energético incorrecto: cómo detectarlo y reclamar",
+    excerpt: "¿Tu certificado energético tiene errores? Detecta un certificado incorrecto antes de comprar o vender. Guía práctica con pasos para reclamar. 2026.",
+    content: `
+# Certificado energético incorrecto: cómo detectarlo y reclamar
+
+<div class="autor-bloque">
+  <p class="autor-nombre">Eva María González García</p>
+  <p class="autor-credencial">
+    Arquitecta Técnica · Colegiada CATEB 9457 · Seguro RC Profesional · 20 años de experiencia
+  </p>
+</div>
+
+Tu certificado energético puede estar mal. Y puede costarte hasta <strong>40.000€</strong> en una vivienda de 270.000€. Los errores en certificados son más frecuentes de lo que crees — y la mayoría de propietarios los descubren demasiado tarde.
+
+<div class="respuesta-directa">
+Un certificado energético incorrecto es aquel que no refleja la realidad energética del inmueble. Puede contener datos inventados, calificaciones infladas o errores técnicos graves. Según el RD 390/2021, un certificado sin visita presencial del técnico es nulo de pleno derecho. Se puede detectar y reclamar.
+</div>
+
+## ¿Cuándo es incorrecto un certificado energético?
+
+Un certificado es incorrecto cuando no coincide con la realidad del inmueble.
+
+Las causas más frecuentes son:
+
+- Datos introducidos sin visitar la vivienda
+- Calificación inflada para facilitar la venta
+- Superficie mal declarada
+- Instalaciones que no existen o están obsoletas
+- Software de cálculo mal configurado
+- Reformas no registradas que cambiarían la nota real
+
+El RD 390/2021 es claro: el técnico certificador está <strong>obligado a realizar una visita presencial</strong> para comprobar las características reales del inmueble. Sin visita, el certificado carece de validez legal.
+
+### Error subsanable vs error invalidante
+
+<strong>Error subsanable:</strong> dato administrativo incorrecto que no afecta la calificación. Se corrige sin coste.
+
+<strong>Error invalidante:</strong> dato técnico que cambia la calificación energética. Requiere nuevo procedimiento de certificación.
+
+<a href="/segunda-opinion/" class="cta-link">
+  ¿No sabes si tu certificado tiene errores? Te lo confirmamos por 59€ →
+</a>
+
+## ¿Cómo detectar un certificado energético incorrecto?
+
+Hay señales que cualquier propietario puede identificar sin ser técnico.
+
+### Señales de alerta evidentes
+
+<strong>El técnico no visitó la vivienda.</strong> Si te enviaron el certificado sin pisar el inmueble, es inválido según la normativa vigente.
+
+<strong>El precio fue inferior a 50€.</strong> Un certificado bien hecho cuesta entre 80 y 120€. Por menos de 50€ raramente hay visita real.
+
+<strong>La calificación es sorprendentemente buena.</strong> Una vivienda de los años 70 sin reformas de aislamiento no puede tener calificación B o C.
+
+<strong>El certificado no especifica detalles técnicos.</strong> Un certificado correcto incluye marca y modelo de la caldera, grosor real de muros, tipo de ventanas y orientación exacta.
+
+<strong>No hay recomendaciones de mejora.</strong> Todo certificado correcto incluye propuestas concretas de mejora energética.
+
+### Errores técnicos que invalidan el certificado
+
+<strong>Superficie incorrecta:</strong> si el certificado indica 85m² y tu vivienda tiene 95m², la calificación es matemáticamente incorrecta.
+
+<strong>Orientación equivocada:</strong> una vivienda orientada al norte con calificación B es técnicamente sospechosa.
+
+<strong>Instalaciones que no existen:</strong> si el certificado menciona caldera de condensación y tienes una caldera estándar de 15 años, los datos son falsos.
+
+<strong>Aislamiento inventado:</strong> si indica aislamiento térmico de 6cm y tus muros son de ladrillo simple sin cámara de aire, es fraudulento.
+
+<div class="cta-bloque">
+  <a href="/segunda-opinion/" class="cta-button">
+    Revisar mi certificado por 59€ →
+  </a>
+  <p class="cta-subtexto">
+    Firmado por Eva María González García · CATEB 9457 · Respuesta en 24-48h · 59€ IVA incluido
+  </p>
+</div>
+
+## ¿Cuánto dinero puedes perder?
+
+Un certificado incorrecto tiene consecuencias económicas reales y cuantificables.
+
+### El Brown Discount que no te aplicaron
+
+Si el vendedor te presenta un certificado con calificación C pero la calificación real es F, estás pagando el precio de una vivienda eficiente por una que no lo es.
+
+La pérdida estimada: entre el <strong>5% y el 15%</strong> del valor de la vivienda.
+
+En una vivienda de 270.000€: entre <strong>13.500€ y 40.500€</strong> pagados de más.
+
+### Casos reales con cifras
+
+<strong>Caso 1.</strong> Compra en Barcelona por 285.000€ con certificado D. Calificación real tras auditoría: F. Pérdida: 28.500€ por Brown Discount no aplicado.
+
+<strong>Caso 2.</strong> Venta con certificado emitido sin visita por 45€. Industria detectó el fraude. Multa de 3.000€ y certificado nuevo obligatorio antes de cerrar.
+
+<strong>Caso 3.</strong> Alquiler con certificado C. Calificación real D. Inquilino reclamó 4.200€ por sobrecostes energéticos durante dos años.
+
+<a href="/segunda-opinion/" class="cta-link">
+  ¿Tu vivienda puede tener Brown Discount? Lo comprobamos por 59€ →
+</a>
+
+## ¿Qué hacer si crees que tu certificado está mal?
+
+Estos son los pasos que debes seguir, en orden.
+
+<strong>Paso 1. Solicita una segunda opinión técnica.</strong>
+Antes de reclamar necesitas un dictamen profesional que documente los errores. Sin ese informe, cualquier reclamación carece de base técnica. Por <strong>59€ IVA incluido</strong> revisamos tu certificado y te entregamos un informe firmado en 24-48h. Solo necesitas enviarnos el PDF.
+
+<strong>Paso 2. Reclama al técnico certificador.</strong>
+Con el informe en mano, exige la corrección sin coste. Si se niega, reclama ante su colegio profesional.
+
+<strong>Paso 3. Denuncia ante la administración.</strong>
+Si hay fraude evidente, denuncia ante la consejería de Industria. Sanciones de 300€ a 6.000€.
+
+<strong>Paso 4. Reclama daños si ya compraste.</strong>
+Puedes reclamar al vendedor por vicios ocultos hasta <strong>6 meses</strong> después de la entrega de la vivienda.
+
+## Preguntas frecuentes
+
+<strong>¿Puedo reclamar si compré hace más de 6 meses?</strong>
+El plazo de vicios ocultos es de 6 meses desde la entrega. Pero si el certificado era fraudulento, puedes reclamar responsabilidad profesional al técnico hasta 10 años después de la emisión.
+
+<strong>¿Cómo sé si mi certificado tiene visita presencial real?</strong>
+Pide al técnico la fecha exacta y las fotografías tomadas durante la inspección. Si no puede aportarlas, es una señal de alerta.
+
+<strong>¿Un certificado incorrecto anula la compraventa?</strong>
+No anula la venta, pero te permite reclamar daños al vendedor por la diferencia entre el valor declarado y el real.
+
+<strong>¿Qué pasa si vendo con un certificado incorrecto?</strong>
+Responsabilidad legal ante el comprador, multa de Industria de hasta 6.000€ y obligación de emitir certificado correcto.
+
+<strong>¿Puedo solicitar la segunda opinión antes de comprar?</strong>
+Sí. Es la mejor inversión antes de firmar. Por <strong>59€</strong> verificamos el certificado del vendedor antes de que te comprometas.
+
+<strong>¿Cuánto tarda la segunda opinión?</strong>
+La respuesta estándar es en <strong>24-48h</strong>. La modalidad Express la entrega en <strong>4 horas</strong> por 79€.
+
+<strong>¿Qué documentos necesito enviar?</strong>
+Solo el PDF del certificado energético. Nada más.
+
+<strong>¿El informe de segunda opinión tiene validez legal?</strong>
+Sí. Está firmado por arquitecta técnica colegiada con seguro de responsabilidad civil. Puede usarse como base para reclamaciones.
+
+## Conclusión
+
+Un certificado energético incorrecto puede costarte decenas de miles de euros. Detectarlo antes de que cause daño es posible y accesible. Por <strong>59€</strong> y en menos de 48 horas tienes la certeza que necesitas para actuar.
+
+<div class="cta-bloque-final">
+  <h2>¿Tienes dudas sobre tu certificado energético?</h2>
+  <p>Si sospechas que tu certificado no refleja la realidad de tu vivienda, no esperes a que el error te cueste dinero. Por 59€ te lo confirmamos con un informe técnico firmado.</p>
+  <a href="/segunda-opinion/" class="cta-button">
+    Solicitar Segunda Opinión por 59€ →
+  </a>
+  <p class="cta-subtexto">
+    Firmado por Eva María González García · CATEB 9457 · Respuesta en 24-48h · Sin compromiso · 100% remoto
+  </p>
+</div>
+
+## También te puede interesar
+
+<ul class="enlaces-relacionados">
+  <li>
+    <a href="/blog/brown-discount-precio-vivienda/">Brown Discount: cómo afecta al precio de tu vivienda</a>
+    <p>Qué es el Brown Discount y cuánto puede restar al valor de tu inmueble.</p>
+  </li>
+  <li>
+    <a href="/blog/certificado-energetico-inflado-que-hacer/">Certificado energético inflado: qué hacer</a>
+    <p>Pasos concretos si sospechas que tu calificación está inflada.</p>
+  </li>
+  <li>
+    <a href="/blog/multas-certificado-energetico/">Multas por certificado energético</a>
+    <p>Cuánto puedes pagar si tu certificado no cumple la normativa.</p>
+  </li>
+</ul>
+    `,
+    date: "2026-06-21",
+    author: "Eva María González García",
+    tags: ["certificado energético", "errores", "reclamación", "compraventa"],
+    readingTime: 12,
+    featured: true,
+  },
+  {
     slug: "certificado-energetico-inflado",
     title: "Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026",
     excerpt: "¿Sospechas que tu certificado energético tiene la calificación inflada? Te explicamos cómo detectarlo, qué consecuencias tiene y cómo reclamar con un dictamen técnico firmado.",
