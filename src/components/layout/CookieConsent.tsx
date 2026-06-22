@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react';
 import styles from './CookieConsent.module.css';
 
 export default function CookieConsent() {
+  // 1. TODOS LOS ESTADOS PRIMERO
   const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
-  if (!mounted) return null;
   const [isVisible, setIsVisible] = useState(() => {
     // Inicializar estado desde localStorage
     if (typeof window === 'undefined') return false;
@@ -14,10 +13,16 @@ export default function CookieConsent() {
     return !hasConsent;
   });
 
+  // 2. TODOS LOS EFECTOS DESPUÉS
+  useEffect(() => { 
+    setMounted(true); 
+  }, []);
+
   useEffect(() => {
     // Solo para sincronización con cambios externos
   }, []);
 
+  // 3. FUNCIONES MANEJADORAS
   const handleAccept = () => {
     localStorage.setItem('cookie-consent', 'accepted');
     setIsVisible(false);
@@ -28,8 +33,11 @@ export default function CookieConsent() {
     setIsVisible(false);
   };
 
+  // 4. RETORNOS ANTICIPADOS (Siempre después de los Hooks)
+  if (!mounted) return null;
   if (!isVisible) return null;
 
+  // 5. RENDERIZADO VISUAL
   return (
     <div className={styles.cookieConsent}>
       <div className={styles.cookieContent}>
