@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react';
 import styles from './CookieConsent.module.css';
 
 export default function CookieConsent() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+  if (!mounted) return null;
   const [isVisible, setIsVisible] = useState(() => {
     // Inicializar estado desde localStorage
     if (typeof window === 'undefined') return false;

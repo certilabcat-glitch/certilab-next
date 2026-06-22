@@ -63,9 +63,9 @@ function escapeHtml(text: string): string {
 function processInline(text: string): string {
   let t = text;
   // Bold **text**
-  t = t.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  t = t.replace(/\*\*([\s\S]*?)\*\*/g, "<strong>$1</strong>");
   // Italic *text*
-  t = t.replace(/(?<!\*)\*(?!\*)(.*?)(?<!\*)\*(?!\*)/g, "<em>$1</em>");
+  t = t.replace(/(?<!\*)\*(?!\*)([\s\S]*?)(?<!\*)\*(?!\*)/g, "<em>$1</em>");
   // Inline links [text](url)
   t = t.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
@@ -169,6 +169,11 @@ function formatContent(raw: string): string {
         return `<li>${processInline(text)}</li>`;
       });
       return `<ul class="post-ul">${items.join("")}</ul>`;
+    }
+
+    // --- HTML Blocks ---
+    if (trimmed.startsWith("<")) {
+      return processInline(trimmed);
     }
 
     // --- Paragraph (default) ---

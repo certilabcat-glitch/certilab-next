@@ -1,0 +1,702 @@
+Un certificado energético está **inflado** cuando la calificación mostrada (A, B, C, D...) es mejor de la que realmente corresponde a la vivienda según sus características constructivas y sistemas instalados.
+- **Modificar parámetros de aislamiento** → Declarar un aislamiento mejor del real
+- **Ignorar reformas no realizadas** → Dar por hecho mejoras que no existen
+- **Usar valores por defecto favorables** → El software permite "optimizar" ciertos parámetros
+- **No considerar puentes térmicos** → Omitir puntos débiles de la envolvente térmica
+> Atención: **Importante:** Inflar un certificado no solo es poco ético, sino que puede ser considerado **fraude documental** con consecuencias legales para el técnico y el vendedor.
+- **Paga de más** por la vivienda (Brown Discount oculto)
+- **Asume costes imprevistos** de rehabilitación energética
+- **Dificultad para vender** en el futuro si el comprador descubre la calificación real
+- **Riesgo de reclamación** por parte del comprador
+- **Posible sanción** administrativa por certificado fraudulento
+- **Responsabilidad solidaria** si el comprador demuestra el sobreprecio
+- **Expediente del colegio profesional** que puede conllevar sanción o inhabilitación
+- **Responsabilidad civil** por los daños causados
+- **Posible delito de falsedad documental** en casos graves
+**¿Cuánto cuesta todo el proceso de reclamación?**
+**¿Puedo reclamar si ya compré la vivienda?**
+**¿El vendedor tiene obligación de decirme si el certificado está inflado?**
+El **Brown Discount** es el descuento que aplican los compradores informados (y los tasadores profesionales) sobre el precio de una vivienda con mala calificación energética (E, F o G).
+Los estudios del sector inmobiliario europeo estiman que una vivienda con calificación E, F o G puede perder entre un **5% y un 15%** de su valor de mercado respecto a una vivienda equivalente con calificación A o B.
+**Ejemplo real:** Una vivienda valorada en 270.000€ con calificación G podría perder hasta **40.000€** de su valor.
+- **Costes energéticos mayores:** Una vivienda ineficiente gasta más en calefacción y electricidad.
+- **Exigencia normativa:** La UE exige que todos los inmuebles tengan calificación energética para su venta o alquiler.
+- **Acceso a hipotecas verdes:** Cada vez más bancos ofrecen mejores condiciones para viviendas eficientes.
+En Certilab incluimos la detección del Brown Discount en todos nuestros **Check-Up Inmobiliario** e **Informes Técnicos Energéticos**.
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+**¿El Brown Discount afecta a todas las viviendas con calificación baja?**
+**¿Puedo evitar el Brown Discount si mejoro la calificación de mi vivienda?**
+**¿El Brown Discount se aplica también al alquiler?**
+- **[Certificado energético F o G: ¿es correcto o te están penalizando? →](/certificado-energetico-f-g-correcto/)**
+- **[¿Cuánto dinero puedes perder con un certificado energético mal hecho? →](/perder-dinero-certificado-energetico-mal-hecho/)**
+- **[Cómo negociar el precio con el certificado energético →](/certificado-energetico-negociar-precio/)**
+- **Ubicación:** Entre 80€ y 200€ dependiendo de la comunidad autónoma
+- **Superficie del inmueble:** A mayor superficie, mayor precio
+- **Complejidad:** Viviendas unifamiliares o edificios completos tienen tarifas superiores
+Existen plataformas online que ofrecen certificados energéticos por menos de 50€. El problema es que **no incluyen visita presencial**, lo que incumple el artículo 6.5 del RD 390/2021.
+- **Nulo jurídicamente:** Al no cumplir la normativa, el certificado puede ser declarado nulo
+- **Responsabilidad:** El técnico firmante puede ser sancionado
+- **Para el comprador:** Una calificación incorrecta puede ocultar el Brown Discount y hacerte pagar de más por la vivienda
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+Si tienes un certificado dudoso, solicita una **Segunda Opinión** en Certilab. Por 59€ te decimos si es fiable.
+**¿Es mejor pagar más por un certificado energético?**
+**¿Los certificados baratos son siempre ilegales?**
+**¿Puedo reclamar si pagué por un certificado que no sirve?**
+**No exactamente.** El certificado energético oficial requiere la intervención de un técnico colegiado con visita presencial, y ese trabajo tiene un coste.
+En Certilab ofrecemos un **Diagnóstico Express gratuito** que incluye:
+- **Análisis orientativo** de tu situación energética
+- **Recomendación** del servicio más adecuado para tu caso
+- **Primer contacto** sin compromiso con Eva
+- **Registro de Certificadores:** Puedes buscar técnicos habilitados en el registro autonómico
+- **Orientación:** Te ayudamos a entender qué necesitas sin coste
+- **Nulo legalmente:** La ausencia de visita presencial lo invalida según el artículo 6.5 del RD 390/2021
+- **Calificación incorrecta:** Puede ocultar problemas reales de eficiencia y el Brown Discount
+- **Responsabilidad compartida:** El propietario también puede ser sancionado por usar un certificado no válido
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+Un certificado energético oficial con visita presencial cuesta entre **80€ y 200€**. Cualquier precio inferior a 60€ debería hacerte sospechar.
+**¿Alguna comunidad autónoma ofrece certificados gratuitos?**
+**¿Qué riesgo tiene usar un certificado gratuito?**
+**¿Puedo conseguir un descuento en el certificado energético?**
+Muchos certificados se elaboran con los datos genéricos del catastro, sin comprobar si el inmueble tiene **reformas**, **aislamiento adicional** o **cambios en las instalaciones**. El artículo 6.5 del RD 390/2021 exige visita presencial obligatoria.
+**Consecuencia:** El certificado no refleja el estado real de la vivienda, lo que puede perjudicar tanto al vendedor (calificación injustamente baja) como al comprador (calificación inflada que oculta ineficiencias).
+**¿Por qué ocurre?** Porque algunos técnicos, para conseguir el trabajo, adaptan los parámetros de cálculo hasta obtener la letra que el cliente quiere ver. Esto es especialmente grave cuando:
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+El certificado debe incluir la **fecha de la visita presencial**. Si no aparece, probablemente no se realizó. Y si no hubo visita, el certificado es nulo de pleno derecho.
+El certificado debe estar firmado por un técnico competente (**arquitecto**, **arquitecto técnico** o **ingeniero**) colegiado y con la especialidad correspondiente. Si no puedes verificar su número de colegiado, desconfía.
+Tener el certificado firmado por el técnico **no es suficiente**. Debe estar registrado en el organismo autonómico (en Cataluña, el ICAEN). Sin registro, no tiene validez legal.
+-  **Precio inferior a 50€** — imposible que incluya visita presencial
+-  **No aparece fecha de visita** — probablemente no se realizó
+-  **Calificación muy alta** para una vivienda antigua sin reformas
+-  **Técnico no verificable** en el colegio profesional correspondiente
+-  **Sin número de registro** autonómico
+1. **Reclamar al técnico** que lo emitió para que lo corrija sin coste
+2. **Denunciar ante el colegio profesional** si el técnico se niega
+3. **Solicitar una segunda opinión** para confirmar si el error es grave
+**¿Cómo sé si mi certificado energético tiene errores?**
+**¿Puedo reclamar si compré una vivienda con un certificado con errores?**
+**¿Qué hago si mi certificado tiene errores pero ya lo he usado?**
+- **[¿Puedo reclamar un certificado energético incorrecto? Guía 2026 →](/reclamar-certificado-energetico-incorrecto/)**
+- **[Los 7 errores más graves en un certificado energético →](/errores-graves-certificado-energetico/)**
+El PREE financia actuaciones en **edificios existentes** con una ayuda que cubre entre el **30% y el 80%** del coste de las obras, dependiendo del tipo de intervención y del ahorro energético conseguido.
+**Actuaciones subvencionables:**
+- Mejora de la **envolvente térmica** (fachadas, cubiertas, suelos)
+- Sustitución de **ventanas y cerramientos**
+- Instalación de **sistemas de climatización renovable**
+- Instalación de **paneles solares** para ACS o electricidad
+Gestionado por las comunidades autónomas, cubre **obras de mejora de la eficiencia energética** en viviendas unifamiliares y pisos. La ayuda puede alcanzar hasta **12.000€ por vivienda**.
+- La vivienda debe ser **anterior a 2007** (en la mayoría de casos)
+- Las obras deben suponer una mejora de **al menos un 30% en eficiencia energética**
+- Es necesario contar con un **informe técnico previo** y un **certificado energético** antes y después de las obras
+| **Total** | **18.500€** | **7.400€** |
+| **Ahorro anual en factura** | — | **1.200€/año** |
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+1. **Obtén un certificado energético** actual de tu vivienda (o una segunda opinión si ya tienes uno dudoso)
+2. **Solicita un informe técnico** que detalle las mejoras necesarias y el ahorro estimado
+3. **Presenta la solicitud** en el organismo autonómico correspondiente dentro del plazo de convocatoria
+4. **Ejecuta las obras** con empresas habilitadas
+5. **Justifica la inversión** con facturas y el certificado energético posterior a las obras
+**¿El certificado energético está cubierto por las ayudas?**
+**¿Las comunidades de vecinos pueden solicitar las ayudas?**
+**¿Cuándo caducan estas ayudas?**
+El Real Decreto 390/2021 exige visita presencial obligatoria del técnico al inmueble (artículo 6.5). Si tu certificado no menciona una fecha de visita in situ, probablemente se hizo sin pisar la vivienda y **carece de validez legal**.
+Un certificado energético real con visita presencial cuesta entre **80€ y 200€**. Si pagaste menos de 60€, es muy probable que no haya habido visita. Nadie puede cubrir sus costes (desplazamiento, mediciones, software, registro) por menos de ese importe.
+Si el certificado usa solo datos del catastro sin mencionar **reformas realizadas**, **aislamiento real** o **instalaciones específicas**, es señal de que no hubo visita. Un certificado serio debe reflejar el estado real de la vivienda, no los datos por defecto del catastro.
+Una vivienda antigua sin reformas difícilmente obtiene una A o B. Si la calificación parece inflada, puede estar ocultando el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética.
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+1. **Solicita una Segunda Opinión** — Por 59€ analizamos tu certificado y te decimos si es fiable con informe técnico firmado en 24-48h
+2. **Reclama ante el colegio profesional** del técnico firmante
+3. **Denuncia ante la administración** autonómica competente (en Cataluña, el ICAEN)
+4. **No uses ese certificado** para vender o alquilar hasta que se confirme su validez
+**¿Puedo reclamar si pagué por un certificado que resultó falso?**
+**¿Un certificado falso sirve para vender o alquilar?**
+**¿Qué hago si ya usé un certificado falso para vender?**
+Desde la entrada en vigor del **Real Decreto 235/2013** (actualizado por el **Real Decreto 390/2021**), toda vivienda que se ponga en alquiler debe disponer de un certificado energético válido y registrado.
+**Excepción importante:** El alquiler de **habitaciones individuales** en la vivienda habitual del propietario NO necesita certificado, según la interpretación del IDAE. Pero si alquilas el piso entero, sí.
+> "El certificado de eficiencia energética del edificio o de la parte del mismo será necesario para la **venta o arrendamiento** del mismo, y deberá ponerse a disposición del adquirente o arrendatario."
+Es decir: **no basta con tenerlo**, además hay que **entregar una copia** al inquilino. Si no lo entregas, también estás incumpliendo.
+Esta es una de las dudas más frecuentes. La respuesta es **sí, también es obligatorio**:
+1. La **etiqueta energética** (la letra de la A a la G)
+2. El **número de registro** del certificado
+3. El **consumo anual de energía** expresado en kWh/m²
+**Dato práctico:** Idealista, Fotocasa y Habitaclia ya exigen la etiqueta energética como campo obligatorio para publicar anuncios.
+Las multas van de **300€ a 6.000€** según la gravedad (como vimos en nuestro artículo sobre [multas del certificado energético](/blog/multas-certificado-energetico/)).
+No necesitas uno nuevo si el certificado sigue en vigor. El certificado energético tiene una **validez de 10 años** (para viviendas con calificación A o B) o de **10 años también** (para el resto, aunque la recomendación es actualizarlo antes).
+1. **Contrata un técnico colegiado** que emita el certificado con visita presencial
+2. **Verifica el registro** en el organismo autonómico (Cataluña tiene su propio registro en la ICAEN)
+3. **Incluye la etiqueta** en tus anuncios
+4. **Entrega una copia** al inquilino junto con el contrato
+5. **Guarda el justificante** de entrega firmado
+**¿El certificado caduca si cambio de inquilino?**
+**¿El alquiler vacacional necesita el mismo certificado que uno de larga duración?**
+**¿Puedo anunciar mi piso en alquiler sin la etiqueta energética?**
+El **Real Decreto 390/2021** establece que el certificado de eficiencia energética tiene una vigencia máxima de 10 años para todas las calificaciones. Pero ojo: los 10 años son el máximo, no la garantía. Hay situaciones que acortan ese plazo.
+- **Calificación A o B:** 10 años de validez máxima. Si vas a vender o alquilar, mejor renovar si quedan menos de 2 años.
+- **Calificación C o D:** 10 años de validez máxima. Recomendable renovar a los 5-7 años si ha habido cambios.
+- **Calificación E, F o G:** 10 años de validez máxima. Recomendable renovar a los 5 años, ya que el Brown Discount puede haber cambiado.
+**Dato clave:** El plazo de validez comienza a contar desde la **fecha de registro** del certificado en el organismo autonómico, no desde la fecha de emisión ni desde la visita del técnico. Asegúrate de que tu certificado esté registrado.
+Hay **cuatro situaciones** que invalidan el certificado antes de su fecha teórica de caducidad:
+Cataluña tiene su propio organismo regulador (ICAEN) y su registro autonómico. La validez legal es la misma (10 años), pero hay **particularidades importantes**:
+1. **Registro obligatorio** en el Registro General de Certificados de Cataluña (no vale solo con tenerlo firmado)
+2. La **etiqueta energética debe incluir el código de registro** específico de Cataluña
+3. Las **inspecciones son más frecuentes** que en otras comunidades
+1. **Mira la fecha de registro** (no la de emisión)
+2. **Suma 10 años** desde esa fecha
+3. **Verifica** que el certificado sigue registrado en el organismo autonómico
+4. **Comprueba** que no ha habido cambios normativos que lo invaliden
+**¿El certificado caduca si no lo uso?**
+**¿Puedo renovar el certificado antes de que caduque?**
+**¿El certificado energético caduca si cambio de comunidad autónoma?**
+- **1. Etiqueta** — Letra de calificación (A-G) + código de registro. Identifica visualmente la eficiencia.
+- **2. Consumo** — kWh/m² año. Mide cuánta energía consume el inmueble.
+- **3. Emisiones** — kg CO₂/m² año. Mide el impacto ambiental.
+- **4. Datos del técnico** — Nombre, nº colegiado, firma. Verifica que es un profesional habilitado.
+- **5. Medidas de mejora** — Recomendaciones del técnico. Te indica qué puedes hacer para mejorar.
+Es la parte más famosa y la que se muestra en los anuncios. La etiqueta es una barra de colores que va del **verde oscuro (A)** al **rojo oscuro (G)**.
+La flecha negra indica la calificación actual de tu vivienda. Pero **atención**: la etiqueta no es suficiente. Necesitas que aparezca el **código de registro** asociado.
+**Error muy común:** Muchas inmobiliarias ponen una etiqueta genérica sin código de registro. Si no tiene código, no es el certificado real de la vivienda. Es un simple adorno.
+- **< 50 kWh/m²** — Muy eficiente. Coste anual estimado (80m²): < 400€
+- **50-100 kWh/m²** — Eficiente. Coste anual estimado (80m²): 400-700€
+- **100-200 kWh/m²** — Normal. Coste anual estimado (80m²): 700-1.200€
+- **> 200 kWh/m²** — Ineficiente. Coste anual estimado (80m²): > 1.200€
+- **Exigencias normativas** (la UE endurece los límites)
+- **Acceso a ayudas** (muchas subvenciones exigen un máximo de emisiones)
+- **Valor de reventa** (los compradores informados miran esta cifra)
+**Para que te hagas una idea:** Una vivienda con calificación G puede emitir hasta 5 veces más CO₂ que una con calificación A. Eso se traduce en un mayor impacto ambiental y en una mayor factura energética.
+- **Nombre completo** del técnico
+- **Número de colegiado** (imprescindible)
+- **Colegio profesional** (Arquitectos, Aparejadores, Ingenieros)
+- **Firma digital o manuscrita**
+Todo certificado energético debe incluir **al menos 2 medidas de mejora** recomendadas por el técnico. Estas medidas pueden ser:
+- **Envolvente** — Aislar fachada o cubierta. Ahorro potencial: 20-40%
+- **Ventanas** — Doble acristalamiento. Ahorro potencial: 10-20%
+- **Climatización** — Cambiar caldera por bomba de calor. Ahorro potencial: 30-50%
+- **Iluminación** — LED + sensores. Ahorro potencial: 10-15%
+La fecha que cuenta para la validez del certificado es la de **registro**, no la de emisión. Puede haber semanas de diferencia.
+Sí. Desde la entrada en vigor del Real Decreto 390/2021, **las zonas comunes de los edificios de viviendas también necesitan su propio certificado energético** cuando se vendan o alquilen viviendas en el edificio.
+- **Ascensores** y motores de elevación
+- **Iluminación de pasillos**, portales, escaleras y garajes
+- **Sistemas de climatización** centralizados (calefacción, aire acondicionado)
+- **Instalaciones de agua caliente sanitaria (ACS)** comunitarias
+- **Cubiertas y fachadas** (por su influencia en la demanda energética)
+**Importante:** No es necesario un certificado separado para cada vecino. Basta con un único certificado para todo el edificio que incluya tanto las zonas comunes como las viviendas individuales.
+- **Venta de un piso:** El vendedor debe presentar el certificado del edificio completo (o al menos de la vivienda + su parte proporcional de comunes)
+- **Alquiler de un piso:** Igual que en venta, el arrendador debe entregar una copia al inquilino
+- **Venta del edificio completo:** Es obligatorio el certificado del inmueble completo
+Si la comunidad de propietarios no dispone del certificado en el momento de vender o alquilar cualquier vivienda, **el propietario individual no podrá completar la operación**. Además, la comunidad podría enfrentarse a sanciones de 300€ a 6.000€.
+1. Contactar con un **técnico competente** (arquitecto, ingeniero o aparejador)
+2. El técnico realizará una visita para **inspeccionar las instalaciones comunes**
+4. Registrará el certificado en el **organismo autonómico correspondiente**
+**Consejo:** Aprovecha la obtención del certificado comunitario para identificar mejoras de eficiencia que pueden beneficiar a todos los vecinos y acceder a ayudas públicas.
+- **Edificio pequeño** (hasta 10 viviendas): 300-500€
+- **Edificio mediano** (10-30 viviendas): 500-800€
+- **Edificio grande** (más de 30 viviendas): 800-1.200€
+**¿El certificado de la comunidad caduca igual que el de una vivienda?**
+**¿Puede un vecino solicitar el certificado por su cuenta?**
+**¿Las viviendas individuales necesitan su propio certificado además del comunitario?**
+Es habitual pensar que **si una vivienda no tiene calificación A, no es eficiente**. Pero la realidad es más compleja. La letra de la etiqueta energética depende de dos factores: el **consumo de energía** y las **emisiones de CO₂**, pero también del tipo de combustible y del sistema de calificación utilizado.
+**Falso.** Aunque las viviendas de obra nueva suelen tener mejores calificaciones, una reforma integral bien planteada puede llevar una vivienda antigua de una G a una B o incluso A. Todo depende de las mejoras que se apliquen:
+- Sustitución de ventanas por **climalit con rotura de puente térmico**
+- Aislamiento de **fachadas y cubiertas**
+- Instalación de **aerotermia** o **bomba de calor**
+**Dato clave:** Una vivienda de los años 70 que se reforma con aislamiento y aerotermia puede pasar de una G a una B, reduciendo el consumo hasta un 70%.
+**Depende.** Una C es una calificación aceptable y no te penalizará en el mercado. Una D puede ser mejor que una A si esta última se ha obtenido con sistemas poco realistas. Lo importante no es solo la letra, sino **el consumo real en kWh/m² año**.
+- **A** — < 30 kWh/m² año. Calificación: Excelente
+- **B** — 30-50 kWh/m² año. Calificación: Muy buena
+- **C** — 50-80 kWh/m² año. Calificación: Buena
+- **D** — 80-120 kWh/m² año. Calificación: Aceptable
+- **E** — 120-160 kWh/m² año. Calificación: Mejorable
+- **F-G** — > 160 kWh/m² año. Calificación: Necesita reforma
+No siempre. Algunos certificados se elaboran sin visita o con datos incorrectos. Un **certificado mal hecho** puede:
+**Precaución:** Si sospechas que tu certificado no refleja la realidad, solicita una Segunda Opinión profesional.
+1. **Consumo de energía primaria** (kWh/m² año) — cuanto más bajo, mejor
+2. **Emisiones de CO₂** (kgCO₂/m² año) — importante para el medio ambiente
+3. **Medidas de mejora** recomendadas — un buen certificado siempre incluye propuestas
+4. **Que el técnico haya visitado la vivienda** — sin visita, el certificado no es válido
+**¿Puede una vivienda con calificación C ser más eficiente que una con A?**
+**¿Merece la pena reformar para subir de calificación?**
+**¿Qué calificación necesita mi vivienda para acceder a ayudas?**
+Si vas a **vender o alquilar** tu piso, casa o local, el certificado energético es un documento obligatorio. Aquí te explicamos cómo obtenerlo paso a paso, aplicable en cualquier comunidad autónoma de España.
+El certificado debe ser emitido por un **profesional competente** colegiado:
+- **Arquitecto o arquitecto técnico**
+- **Ingeniero o ingeniero técnico industrial**
+- **Instalador habilitado** en instalaciones térmicas
+**Atención: Importante:** El técnico está obligado a realizar una **visita presencial** al inmueble (art. 6.5 del RD 390/2021). Si te ofrecen un certificado sin visita, es ilegal y puede acarrearte problemas legales.
+- **Datos del inmueble:** dirección completa, año de construcción, referencia catastral y superficie útil
+- **Facturas de suministros:** electricidad, gas o gasoil de los últimos 2-3 años (si están disponibles)
+- **Planos** de la vivienda (si los tienes, facilitan el trabajo)
+- **Documentación de reformas:** cambio de ventanas, instalación de aislamiento, sustitución de caldera o instalación de placas solares
+- **Certificado anterior** si estás renovando uno existente
+1. **Medición** de superficies útiles y construidas de cada estancia
+2. **Identificación** de los sistemas de climatización (calefacción y refrigeración)
+3. **Inspección** del sistema de ACS (agua caliente sanitaria)
+4. **Evaluación** de los cerramientos: ventanas (material, tipo de acristalamiento, rotura de puente térmico), puertas y muros
+5. **Comprobación** del aislamiento térmico en fachadas, cubiertas y suelos
+6. **Revisión** de las instalaciones de iluminación (en terciario)
+La visita suele durar entre **30 y 60 minutos** para una vivienda estándar.
+1. **Calcular** la calificación energética del inmueble, que va de la **A** (más eficiente) a la **G** (menos eficiente)
+2. **Generar** la etiqueta energética y el informe técnico con las recomendaciones de mejora
+3. **Registrar** el certificado en el organismo autonómico correspondiente
+>  **¿Sabías que más del 70% de los certificados emitidos en España tienen calificación E, F o G?** Esto significa que la mayoría de las viviendas españolas tienen un potencial de mejora energética significativo.
+El registro del certificado es **obligatorio** y se realiza en el organismo competente de cada comunidad autónoma. Sin este registro, el certificado carece de validez legal.
+Una vez registrado, debes **entregar una copia** del certificado:
+- **En venta:** Al comprador, antes de la firma de la escritura pública ante notario
+- **En alquiler:** Al inquilino, antes de la firma del contrato de arrendamiento
+Además, el certificado debe aparecer **visible en todos los anuncios** de venta o alquiler. La omisión de la etiqueta energética puede conllevar sanciones de 300€ a 1.000€ por anuncio.
+> **Atención:** Los precios por debajo de 50€ suelen ser sospechosos. Un certificado tan barato probablemente no incluye visita presencial o el registro oficial, lo que lo invalida. Como explicamos en nuestro artículo sobre [errores comunes del certificado energético](/blog/errores-comunes-certificado-energetico/), esto es una de las señales de alerta más habituales.
+Sí, el certificado energético tiene una validez de **10 años** desde su fecha de emisión. Sin embargo, si realizas reformas que mejoren significativamente la eficiencia energética, es recomendable renovarlo, ya que la calificación podría haber cambiado.
+Vender o alquilar sin certificado energético es ilegal en toda España. Las sanciones van de **300€ a 6.000€** según el tipo de infracción y la comunidad autónoma. En nuestro artículo sobre [multas del certificado energético](/blog/multas-certificado-energetico/) detallamos todas las sanciones y cómo evitarlas.
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. Si tu certificado tiene una calificación E, F o G, podrías estar perdiendo entre un 5% y un 15% del valor de tu inmueble. [Descubre cómo te afecta →](/brown-discount/)
+**¿Cuánto se tarda en obtener el certificado energético?**
+El proceso completo, desde que contactas al técnico hasta que recibes el certificado registrado, suele tardar entre **2 y 7 días**. La visita presencial se programa en 1-3 días y la emisión del certificado con el cálculo energético lleva entre 1 y 4 días adicionales.
+**¿Puedo hacer yo mismo el certificado energético de mi vivienda?**
+**¿El certificado energético es lo mismo que la cédula de habitabilidad?**
+No. Son documentos distintos. El **certificado energético** acredita la eficiencia energética del inmueble (escala de la A a la G) y es obligatorio para vender o alquilar. La **cédula de habitabilidad** acredita que la vivienda cumple los requisitos mínimos de superficie y salubridad para ser habitada. En algunas comunidades, como Catalunya, se necesita la cédula para contratar suministros, pero no debe confundirse con el certificado energético.
+Si vas a **vender o alquilar** tu vivienda en Catalunya, necesitas el certificado energético. Aquí te explicamos todo el proceso paso a paso.
+El certificado debe ser emitido por un **técnico certificador** con titulación habilitante:
+**Consejo:** Pide al menos 3 presupuestos y asegúrate de que incluyen visita a la vivienda. Un certificado sin visita no es válido.
+- **Datos del inmueble** (dirección, año de construcción, referencia catastral)
+- **Facturas de suministros** (electricidad, gas, gasoil) de los últimos 2-3 años
+- **Planos** de la vivienda (si los tienes)
+- **Documentación de reformas** realizadas (cambio de ventanas, aislamiento, caldera, etc.)
+- **Medir** superficies y volúmenes
+- **Identificar** los sistemas de climatización y ACS
+- **Comprobar** el tipo de cerramientos (ventanas, puertas, muros)
+- **Evaluar** el estado del aislamiento térmico
+La visita suele durar entre **30 y 60 minutos** para una vivienda tipo.
+1. **Calcula** la calificación energética (de A a G) usando software homologado
+2. **Genera** la etiqueta energética y el informe técnico
+3. **Registra** el certificado en el **ICAEN** (Institut Català d'Energia) o en el órgano autonómico correspondiente
+Una vez registrado, debes **entregar una copia** del certificado:
+- **En venta:** Al comprador, antes de la firma de la escritura
+- **En alquiler:** Al inquilino, antes de la firma del contrato
+**Importante:** El incumplimiento puede conllevar sanciones de hasta 6.000€. Como explicamos en nuestra guía sobre [multas del certificado energético](/blog/multas-certificado-energetico/), la administración cruza datos de anuncios y notarías para detectar incumplimientos.
+- **Piso pequeño** (< 70 m²): 90-150€. Plazo de emisión: 2-5 días
+- **Piso mediano** (70-100 m²): 120-200€. Plazo de emisión: 2-5 días
+- **Casa unifamiliar**: 200-350€. Plazo de emisión: 3-7 días
+El certificado energético tiene una validez de **10 años**. Pasado ese tiempo, debe renovarse. También es recomendable renovarlo si haces reformas que mejoren la eficiencia.
+**¿Es obligatorio registrar el certificado en el ICAEN?**
+**¿Cuánto tarda el ICAEN en registrar el certificado?**
+**¿Puedo contratar un técnico de fuera de Catalunya para el certificado?**
+**TL;DR:** Sí, es ilegal vender o alquilar una vivienda sin certificado energético. Las sanciones van de 300€ a 6.000€ según la gravedad de la infracción. En 2026, las comunidades autónomas están coordinando campañas de inspección masiva cruzando datos catastrales con anuncios de venta y alquiler, y más del 40% de los anuncios inmobiliarios en España siguen incumpliendo la normativa.
+>  **Dato IDAE:** Según el IDAE, más del **15% de los anuncios en portales inmobiliarios** no incluyen la referencia del certificado energético, lo que los convierte en objetivo prioritario de las inspecciones autonómicas.
+Desde junio de 2025, la **Inspección Técnica de Edificios (ITE)** en Cataluña incluye un control específico del certificado energético. Si el edificio no tiene el certificado registrado, el técnico de la ITE lo comunicará automáticamente a la administración, que puede iniciar un expediente sancionador.
+**¿Qué significa para ti?** Si tu edificio pasa la ITE en 2025 o 2026, asegúrate de tener el certificado energético en regla antes de la inspección. No hacerlo puede resultar en:
+Sí, contundentemente. El **Real Decreto 390/2021** (que actualiza el RD 235/2013) transpone la Directiva Europea de Eficiencia Energética y establece que **toda vivienda que se venda o alquile debe disponer de un certificado energético válido** registrado en el organismo autonómico correspondiente.
+- **Artículo 12:** Obligación de exhibir la etiqueta energética en toda oferta de venta o alquiler.
+- **Artículo 13:** Obligación de entregar copia al comprador o inquilino.
+- **Disposición adicional cuarta:** Régimen sancionador.
+>  **Dato clave:** Según el IDAE, más del 40% de los anuncios inmobiliarios en España incumplen la obligación de mostrar la calificación energética. La administración lo sabe y está actuando.
+- La **etiqueta energética** visible
+- El **número de registro** del certificado
+> Importante: **Atención:** Las denuncias de inquilinos son cada vez más comunes. Si tienes una vivienda alquilada sin certificado, cualquier reclamación del inquilino puede derivar en sanción.
+1. **Te expone a multas** de 300€ a 6.000€
+2. **Permite al inquilino reclamar** la resolución del contrato si la vivienda no cumple condiciones mínimas de habitabilidad
+3. **Te impide actualizar la renta** en algunos contratos de alquiler de larga duración
+>  **Consejo:** El certificado energético cuesta entre 60€ y 150€. Comparado con una multa mínima de 300€, no tiene sentido correr el riesgo.
+**Ejemplos concretos:**
+- **Caso 1:** Un propietario anuncia su piso en alquiler sin mencionar la calificación energética. → Sanción leve: **600€**.
+- **Caso 2:** Un vendedor formaliza la escritura sin haber entregado el certificado al comprador. → Sanción grave: **1.500€**.
+- **Caso 3:** Un técnico emite un certificado sin visitar la vivienda y con datos falsos. → Sanción muy grave: **4.000€** al técnico y **2.000€** al propietario que lo contrató.
+-  El técnico **no visita la vivienda** (solo con fotos o planos) — incumple el art. 6.5 del RD 390/2021
+-  El certificado **no tiene número de registro** del organismo autonómico
+-  La **calificación es muy alta** sin reformas evidentes (posible calificación inflada)
+-  El **precio es sospechosamente bajo** (menos de 50€)
+1. **No ignorar la notificación** — las sanciones pueden aumentar con intereses y recargos.
+2. **Obtener el certificado cuanto antes** — si aún no lo tienes, consíguelo inmediatamente con un técnico colegiado que realice visita presencial.
+3. **Solicitar una Segunda Opinión** si el certificado existente es incorrecto o dudas de su validez.
+4. **Alegar desconocimiento** solo funciona una vez; la reincidencia multiplica las sanciones.
+5. **Verifica el registro** en el ICAEN (Cataluña) o en el organismo autonómico correspondiente.
+1. **Solicita tu certificado** a un técnico colegiado con visita presencial obligatoria
+2. **Asegúrate** de que el certificado se registre en el órgano autonómico
+3. **Incluye la etiqueta** en todos tus anuncios de venta o alquiler
+4. **Entrega una copia** al comprador o inquilino antes de firmar
+5. **Guarda el justificante** de entrega firmado
+**¿Pueden multarme si tengo el certificado pero no lo he registrado?**
+**¿Qué pasa si el inquilino denuncia que no tengo certificado?**
+**¿Las inmobiliarias también pueden ser multadas?**
+**¿El certificado energético caduca? ¿Me pueden multar si está caducado?**
+La respuesta corta es **sí**, pero con matices importantes. Reclamar un certificado energético no es como reclamar un producto defectuoso en una tienda. Necesitas un **procedimiento técnico previo** que demuestre, con datos objetivos, que el certificado original contiene errores.
+**Errores graves (invalidan el certificado):**
+**Errores leves (subsanables):**
+> **Dato clave:** Según el IDAE, aproximadamente un **15-20% de los certificados energéticos** presentan errores graves que los invalidan. En certificados de menos de 50€ (sin visita presencial), esa cifra supera el **90%**.
+**Consecuencia:** El certificado no refleja el estado real de la vivienda. Una vivienda con ventanas climalit y aislamiento puede aparecer con calificación G cuando debería tener una C o D.
+**¿A quién perjudica?**
+- Al **comprador**: paga de más porque el Brown Discount se oculta tras una calificación falsa
+- Al **vendedor honesto**: compite en desventaja contra vendedores que inflan certificados
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+1. **Verifica el número de colegiado** del técnico en el colegio profesional correspondiente (Arquitectos, Aparejadores o Ingenieros)
+2. **Comprueba la fecha de visita presencial** — si no aparece, el certificado es nulo
+3. **Busca el número de registro** autonómico — sin registro, no tiene validez legal
+4. **Compara la calificación con el consumo real** — si tu factura es de 400€/año y el certificado dice G (consumo >200 kWh/m²), algo no cuadra
+Sin embargo, para una reclamación formal necesitas algo más: **un dictamen técnico firmado por otro profesional**. Y ahí es donde entra la Segunda Opinión de Certilab.
+> Atención: **Atención:** El paso 1 es el más importante. Sin un dictamen técnico firmado por un profesional independiente, los pasos 2, 3 y 4 no tienen base sólida. La administración rechazará tu reclamación si no presentas un informe pericial que demuestre los errores.
+1. **El certificado original** que consideras incorrecto
+2. **Un dictamen técnico firmado** que identifique los errores concretos — este es el documento crítico
+3. **Facturas de consumos** (si las tienes) para demostrar la discrepancia
+4. **Fotografías** de la vivienda que acrediten reformas no reflejadas en el certificado
+5. **Justificante de pago** del certificado original
+**¿Puedo reclamar si el certificado lo pagó el vendedor?**
+**¿Cuánto cuesta reclamar un certificado incorrecto?**
+**¿Prescriben las reclamaciones por certificado incorrecto?**
+Sí, el plazo general de prescripción es de **3 años** desde que conoces el error. No dejes pasar el tiempo: cuanto antes actúes, más fácil será demostrar el perjuicio.
+**Antes de reclamar necesitas un dictamen técnico firmado. La Segunda Opinión de Certilab te da ese documento por 59€ IVA incluido en 24-48h.**
+Si acabas de recibir tu certificado energético y ves una **F o una G**, la primera reacción suele ser de incredulidad. "No puede ser, mi casa no es tan ineficiente", piensas. Y a veces tienes razón.
+La realidad es que aproximadamente el **70% de los certificados en España** otorgan calificaciones E, F o G. Pero dentro de ese 70%, hay un porcentaje significativo de certificados **mal calculados** que asignan una letra peor de la que realmente corresponde.
+| **Aislamiento inexistente** | Fachadas sin cámara de aire, cubiertas sin aislamiento |
+| **Ventanas de simple vidrio** | Sin rotura de puente térmico, carpintería metálica sin sellado |
+| **Caldera antigua** | De gasoil o gas natural con más de 15 años, rendimiento bajo |
+| **Sin climatización renovable** | Ausencia de aerotermia, geotermia o biomasa |
+| **Puente térmico no tratado** | Uniones entre forjados y fachada sin aislamiento |
+| **Orientación desfavorable** | Fachada norte sin protección, pocas horas de sol |
+| **Zona climática fría** | Mayor demanda de calefacción |
+Si tu vivienda cumple **3 o más** de estos factores, una F o G puede ser correcta. Si solo cumple 1 o 2, el certificado podría estar mal calculado.
+- **Viviendas anteriores a 1980** sin reformas de aislamiento
+- **Pisos sin calefacción central** que usan radiadores eléctricos viejos
+- **Casas unifamiliares** con caldera de gasoil antigua y sin aislamiento en cubierta
+- **Locales comerciales** sin climatización eficiente ni aislamiento
+En estos casos, la calificación refleja la realidad y el propietario debería considerar reformas para mejorar la eficiencia y evitar el **Brown Discount** al vender.
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+**Consecuencia:** Una vivienda que debería tener C o D aparece con F o G.
+Una F o G no es el fin del mundo. Muchas viviendas en España tienen esta calificación y se venden o alquilan sin problemas. El problema real es **si la calificación es incorrecta**.
+Si la segunda opinión confirma que hay errores, puedes reclamar ante el técnico original y, si no responde, ante el colegio profesional. Para este paso necesitas un **informe técnico firmado** que acredite los errores.
+**¿Todas las viviendas antiguas tienen F o G?**
+**¿Puedo vender mi piso con calificación F o G?**
+**¿Mejorar la calificación de F a C aumenta el valor de mi vivienda?**
+**¿Cuánto cuesta saber si mi F o G es correcta?**
+**Si tu vivienda tiene calificación F o G y crees que no es justo, por 59€ te confirmamos si es correcto o hay un error que puedes corregir.**
+La respuesta corta es **sí, y es una de las estrategias más efectivas que existen hoy en día**. El certificado energético no es solo un trámite obligatorio para comprar o alquilar. Es un **documento técnico con valor legal** que contiene datos objetivos sobre el consumo energético real del inmueble.
+- **La calificación energética** (de la A a la G)
+- **El consumo anual en kWh/m²**
+- **Las emisiones de CO₂ en kg/m²**
+- **Las medidas de mejora** recomendadas
+El **Brown Discount** es el descuento que el mercado aplica sobre el precio de una vivienda con mala calificación energética (E, F o G). No es una teoría: es un fenómeno real documentado por estudios del sector inmobiliario europeo.
+| **E** | **5-8%** |
+| **F** | **8-12%** |
+| **G** | **10-15%** |
+**Caso 1: Piso de 150.000€ con calificación G**
+- Ahorro potencial en la negociación: **15.000€ – 22.500€**
+**Caso 2: Vivienda de 270.000€ con calificación F**
+- Ahorro potencial en la negociación: **21.600€ – 32.400€**
+**Caso 3: Casa de 400.000€ con calificación E**
+- Ahorro potencial en la negociación: **20.000€ – 32.000€**
+> **Nota importante:** Estos descuentos no son automáticos. Dependen de tu capacidad para argumentarlos con datos objetivos. Y ahí entra el certificado energético y, sobre todo, una segunda opinión independiente.
+Aquí está la clave. **No todos los certificados son fiables.** Como explicamos en nuestro artículo sobre cómo detectar un certificado falso, algunos certificados inflan la calificación para beneficiar al vendedor.
+**La solución:** Solicita una Segunda Opinión independiente. Por 59€, un técnico colegiado revisa el certificado y te confirma si la calificación es real o está inflada.
+- **Precio de venta:** 270.000€
+- **Brown Discount aplicable (10%):** -27.000€
+- **Coste estimado de mejoras necesarias:** -15.000€
+- **Tu oferta inicial:** **228.000€** (15,5% de descuento)
+El mayor riesgo como comprador es que el certificado del vendedor muestre una calificación mejor de la real. Esto se llama **calificación inflada** y es más común de lo que parece.
+1. **No hagas una oferta basada en esa calificación**
+2. **Solicita una Segunda Opinión** a un técnico independiente
+3. **Presenta el informe al vendedor** como base para renegociar
+1. **Buscar otra vivienda** — hay muchas opciones en el mercado y no todas tienen calificaciones penalizables
+2. **Aceptar el precio pero con condiciones** — por ejemplo, que el vendedor asuma el coste de las mejoras necesarias antes de la compra
+**¿Puedo usar el certificado energético para negociar el precio de alquiler?**
+**¿El vendedor está obligado a aceptar el descuento por Brown Discount?**
+**¿Cuánto cuesta el informe técnico que necesito para negociar?**
+**¿Puedo negociar si el certificado tiene calificación D?**
+**Por 59€ obtienes el informe técnico firmado que necesitas para negociar con argumentos. Respuesta en 24-48h.**
+- **Si vendes:** pérdida del 5% al 15% del valor de tu vivienda por Brown Discount
+- **Si compras:** sobreprecio del 5% al 15% porque el certificado inflado oculta la ineficiencia real
+- **Si alquilas:** renta mensual menor o mayor dificultad para encontrar inquilino
+- **Si necesitas reclamar:** coste del dictamen técnico (59€ con Certilab) más tiempo y gestión
+| **Pérdida como comprador** | **15.000€ – 22.500€** |
+| **Pérdida como vendedor** | **15.000€ – 22.500€** |
+| **Pérdida como comprador** | **21.600€ – 32.400€** |
+| **Pérdida como vendedor** | **21.600€ – 32.400€** |
+| **Pérdida como comprador** | **20.000€ – 32.000€** |
+| **Pérdida como vendedor** | **20.000€ – 32.000€** |
+>  **Dato clave:** En los tres casos, el coste de la Segunda Opinión (59€) es inferior al 0,04% del valor de la vivienda. La relación coste-beneficio es de entre 1:127 y 1:1.016. Por cada euro que inviertes en verificar, puedes ahorrar entre 127 y 1.016 euros.
+1. **El certificado declara datos incorrectos** — superficie equivocada, instalaciones no verificadas, reformas no registradas
+2. **La calificación resultante no refleja la realidad** — puede ser mejor (inflada) o peor (deflactada)
+3. **El mercado aplica el Brown Discount** sobre esa calificación incorrecta
+4. **El resultado es una transferencia de miles de euros** — del comprador al vendedor si está inflada, o del vendedor al comprador si está deflactada
+- El comprador ha perdido **27.000€** por no verificar
+**Coste típico:** 5-15% del valor de la vivienda (Brown Discount)
+**¿Te suena?** [Descubre el Brown Discount →](/brown-discount/)
+**Coste típico:** 5-15% del valor para el comprador
+**¿Quieres detectarlo?** Lee nuestra guía de [certificados falsos](/blog/detectar-certificado-energetico-falso/)
+**Coste típico:** Variable según la desviación
+**Coste típico:** El certificado no tiene validez legal. Multas de 300€ a 6.000€ si lo usas.
+**¿Es mejor pagar 59€ por una segunda opinión que arriesgarme a perder miles de euros?**
+**¿Puedo reclamar si perdí dinero por un certificado mal hecho?**
+**¿El vendedor también puede perder dinero por un certificado mal hecho?**
+**¿Cuánto cuesta saber si mi certificado me está costando dinero?**
+- **[Brown Discount: ¿cuánto afecta la calificación energética al precio de tu vivienda? →](/brown-discount-precio-vivienda/)**
+- **[Cómo negociar el precio con el certificado energético →](/certificado-energetico-negociar-precio/)**
+**Por 59€ sabes si tu certificado te está costando dinero. Informe técnico firmado en 24-48h.**
+- **Triodos Bank** — Pionero, condiciones vinculadas a calificación A o B
+- **BBVA** — Hipoteca Sostenible, descuento del 0.25% con certificado A
+- **CaixaBank** — Hipoteca con condiciones preferentes para viviendas eficientes
+- **ING** — Descuentos en función de la calificación
+- **Banco Santander** — Hipoteca Smart Green
+- **Kutxabank** — Hipoteca verde con bonificaciones
+> **Dato clave:** Según un informe del Banco de España de 2025, las hipotecas verdes representan ya el 12% de las nuevas contrataciones, y se espera que alcancen el 30% en 2028.
+| **A o B** |  Sí | Interés reducido 0.25-0.50%, 0% comisiones |
+| **C** | Atención: Depende del banco | Condiciones estándar o mejora parcial |
+| **D** |  No | Condiciones estándar |
+| **E, F o G** |  No | Condiciones estándar o restricciones |
+La mayoría de bancos exigen calificación **A o B** para acceder a las mejores condiciones. Algunos empiezan a ofrecer bonificaciones parciales para calificación C. Pero ninguno ofrece condiciones verdes para calificaciones D, E, F o G.
+Aquí está el punto crítico que el banco no te va a contar: **si tu certificado energético tiene errores, puedes estar perdiendo estas ventajas sin saberlo**.
+**Pérdida económica:**
+- **Coste extra total:** aproximadamente **10.500€** en 25 años
+- **Coste mensual adicional:** unos **35€/mes**
+> **Traducción:** Un certificado energético mal hecho que infravalora tu calificación puede costarte **más de 10.000€** a lo largo de la hipoteca. Por 59€ puedes saber si tu certificado es correcto.
+- **Si ya tienes la hipoteca verde contratada:** el banco puede revisar el contrato si descubre que la calificación no se corresponde con la realidad. Algunos bancos incluyen cláusulas que permiten modificar las condiciones si cambia la calificación.
+- **Si estás tramitando la hipoteca:** el banco puede solicitar una verificación independiente del certificado. Si detecta irregularidades, puede denegar la hipoteca verde o incluso la hipoteca completa.
+**¿Se puede renegociar?**
+1. **Obtén un informe técnico independiente** que acredite la calificación real de tu vivienda
+2. **Solicita un nuevo certificado energético** con la calificación corregida
+3. **Regístra el nuevo certificado** en el organismo autonómico (ICAEN en Cataluña)
+4. **Presenta la documentación al banco** solicitando la revisión de condiciones
+5. **Negocia las nuevas condiciones** basadas en la calificación real
+> Atención: **Importante:** El banco no está obligado a aceptar la revisión. Pero si demuestras que el error era del certificado original (no tuyo), tienes más posibilidades de éxito.
+1. **Revisión del contrato:** el banco puede modificar las condiciones para ajustarlas a la calificación real
+2. **Exigencia de subsanación:** te pedirán un certificado correcto en un plazo determinado
+3. **En casos graves:** el banco podría considerar que hubo mala fe y rescindir el contrato
+**Cómo evitarlo:** Antes de contratar una hipoteca verde, verifica que tu certificado es correcto con una Segunda Opinión independiente.
+**¿Qué calificación necesito para acceder a una hipoteca verde?**
+**¿Puedo contratar una hipoteca verde si el certificado está en trámite?**
+**¿El banco verifica el certificado energético antes de conceder la hipoteca?**
+**Si reformo mi vivienda después de contratar la hipoteca, ¿puedo mejorar las condiciones?**
+**¿Las hipotecas verdes tienen algún inconveniente?**
+**Si tu certificado puede estar mal calculado, por 59€ lo comprobamos antes de firmar la hipoteca.**
+La Segunda Opinión es un **servicio de verificación técnica independiente** sobre tu certificado energético actual. No es un certificado nuevo ni lo sustituye. Es un **informe pericial** que analiza el certificado que ya tienes y determina si los datos, los cálculos y la calificación final son correctos.
+| Precio | 80€ - 200€ | **59€** |
+| Tiempo de entrega | 2-7 días | **24-48h** |
+**Riesgo:** Si el certificado está inflado, puedes estar pagando entre 13.500€ y 40.500€ de más (Brown Discount).
+- **Datos del inmueble:** superficie, orientación, año de construcción
+- **Envolvente térmica:** cerramientos, ventanas, cubiertas
+- **Instalaciones:** calefacción, ACS, refrigeración, iluminación
+- **Cálculos:** coherencia entre los parámetros introducidos y el resultado
+- **Normativa:** cumplimiento del RD 390/2021 y la normativa autonómica
+En 24-48 horas recibes un **informe técnico detallado** que incluye:
+-  **Análisis** del certificado original
+-  **Identificación de errores** (si los hay), con base técnica
+-  **Calificación correcta estimada** en caso de error
+-  **Recomendaciones** de actuación (reclamar, pedir nuevo certificado, etc.)
+-  **Firmado digitalmente** por Eva María González García, arquitecta CATEB 9457
+- **Negociar** el precio de compra con datos objetivos
+- **Reclamar** al técnico que emitió el certificado original
+- **Solicitar** un nuevo certificado con la calificación corregida
+- **Tranquilizarte** si el certificado es correcto y no hay errores
+**59€ IVA incluido.** Sin sorpresas, sin costes ocultos, sin cargos adicionales.
+| **Total** | **59€** |
+Eva María González García, arquitecta colegiada con el número **CATEB 9457** en el Col·legi d'Arquitectes de Catalunya. Con más de 10 años de experiencia en certificación energética, eficiencia energética y rehabilitación de edificios.
+Cada informe se emite bajo su responsabilidad profesional, lo que le otorga **validez técnica** para ser presentado en:
+**¿Es lo mismo que un certificado energético nuevo?**
+**¿Puedo usarlo para reclamar ante el técnico original?**
+**¿Qué pasa si el certificado es correcto?**
+**¿Cuánto tarda el proceso?**
+El plazo estándar es de **24 a 48 horas** desde que recibimos tu certificado. En casos complejos (edificios completos, locales comerciales grandes) puede alargarse hasta 72 horas.
+**¿Cómo envío mi certificado?**
+**¿La Segunda Opinión tiene validez legal?**
+- **[¿Puedo reclamar un certificado energético incorrecto? →](/reclamar-certificado-energetico-incorrecto/)**
+- **[Certificado energético F o G: ¿es correcto o te están penalizando? →](/certificado-energetico-f-g-correcto/)**
+**Solicita tu Segunda Opinión por 59€ IVA incluido. Informe firmado por arquitecta colegiada CATEB 9457 en 24-48h.**
+**El error más grave y más frecuente.**
+El artículo 6.5 del Real Decreto 390/2021 exige que el técnico realice una **visita presencial** al inmueble para elaborar el certificado. Sin visita, el certificado es nulo de pleno derecho.
+**¿Cómo detectarlo?**
+**Consecuencia económica:**
+> **Señal de alerta:** Abre tu certificado y busca la frase "fecha de visita" o "inspección presencial". Si no aparece, es muy probable que no se realizara.
+**El error que más dinero cuesta al comprador.**
+**¿Cómo detectarlo?**
+**Consecuencia económica:**
+> **Señal de alerta:** Si la calificación te parece demasiado buena para ser verdad, probablemente lo sea. Compara con viviendas similares de la misma zona y año de construcción.
+**Un error técnico con consecuencias económicas.**
+**¿Cómo detectarlo?**
+**Consecuencia económica:**
+> **Señal de alerta:** Compara la superficie de tu certificado con la de tu escritura. Si difieren más de un 5%, el certificado puede tener un error grave.
+**El error que perjudica al vendedor.**
+**¿Cómo detectarlo?**
+**Consecuencia económica:**
+> **Señal de alerta:** Si has hecho reformas y el certificado no las menciona, es muy probable que la calificación sea incorrecta. Revisa el apartado de "instalaciones" y "envolvente térmica" de tu certificado.
+**El error que invalida el certificado.**
+**¿Cómo detectarlo?**
+**Consecuencia económica:**
+> **Señal de alerta:** Busca el nombre del técnico en el colegio profesional correspondiente (Arquitectos, Aparejadores o Ingenieros). Si no aparece, el certificado es papel mojado.
+**El error que genera errores en cadena.**
+**¿Cómo detectarlo?**
+**Consecuencia económica:**
+> **Señal de alerta:** Si tu certificado parece una plantilla genérica y no hay ninguna referencia a las características específicas de tu vivienda, es probable que los datos no se hayan verificado.
+**El error técnico menos visible pero más traicionero.**
+**¿Cómo detectarlo?**
+**Consecuencia económica:**
+> **Señal de alerta:** Si tu consumo real es de 400-600€/año y el certificado te da una G, algo no cuadra. El software puede tener un error de entrada de datos.
+**¿Qué hago si detecto alguno de estos errores en mi certificado?**
+**¿Puedo reclamar si mi certificado tiene errores graves?**
+**¿Cuánto cuesta verificar si mi certificado tiene errores graves?**
+**¿El vendedor puede ser responsable si el certificado tiene errores?**
+- **[¿Puedo reclamar un certificado energético incorrecto? →](/reclamar-certificado-energetico-incorrecto/)**
+- **[Segunda opinión para tu certificado energético: ¿cuándo la necesitas? →](/segunda-opinion-certificado-energetico/)**
+**¿Reconoces alguno de estos errores en tu certificado? Por 59€ te confirmamos si está bien hecho o no.**
+Cuando compras una vivienda, el vendedor está obligado por ley a entregarte un certificado energético válido y registrado. Sin embargo, existe un **conflicto de interés inherente**: el vendedor quiere que su vivienda tenga la mejor calificación posible para venderla al mejor precio.
+La **calificación inflada** es la práctica de algunos técnicos de modificar parámetros del cálculo para obtener una mejor letra. Esto sucede porque:
+1. **El vendedor paga al técnico** → El técnico puede sentirse presionado a "ayudar" al cliente
+2. **El vendedor puede cambiar de técnico** → Si el primer certificado da una G, busca otro que dé una C
+3. **No hay consecuencias inmediatas** → La administración raramente verifica certificados salvo denuncia
+> Atención: **Dato clave:** Según estimaciones del sector, entre un **15-20% de los certificados energéticos** en España presentan errores graves. En certificados de menos de 50€ (sin visita presencial), la cifra supera el **90%**.
+El **Brown Discount** es la pérdida de valor que sufre una vivienda por tener una mala calificación energética. Si el certificado está inflado, el comprador paga de más:
+-  **Precio sospechosamente bajo** (< 50€) → casi seguro sin visita presencial
+-  **Calificación A o B** en una vivienda de más de 20 años sin reformas recientes
+-  **No aparece fecha de visita presencial** → el certificado es nulo
+-  **Falta número de registro** autonómico → no tiene validez legal
+-  **El vendedor no permite contactar al técnico** para hacer preguntas
+-  **El certificado es genérico** (parece una plantilla sin datos específicos de la vivienda)
+**¿El vendedor puede negarse a que revise el certificado?**
+**¿Qué hago si descubro que el certificado está inflado después de comprar?**
+**¿El vendedor es responsable si el certificado está inflado?**
+**¿Vas a comprar una vivienda? No te la juegues. Por 59€ verificamos que el certificado energético es correcto.**
+Un certificado energético está **inflado** cuando la calificación mostrada (A, B, C, D...) es mejor de la que realmente corresponde a la vivienda según sus características constructivas y sistemas instalados.
+- **Modificar parámetros de aislamiento** → Declarar un aislamiento mejor del real
+- **Ignorar reformas no realizadas** → Dar por hecho mejoras que no existen
+- **Usar valores por defecto favorables** → El software permite "optimizar" ciertos parámetros
+- **No considerar puentes térmicos** → Omitir puntos débiles de la envolvente térmica
+> Atención: **Importante:** Inflar un certificado no solo es poco ético, sino que puede ser considerado **fraude documental** con consecuencias legales para el técnico y el vendedor.
+1. **Calificación A o B en vivienda anterior a 2006** sin reformas integrales de eficiencia
+2. **Discrepancia con el consumo real**: si pagas 1.200€/año en calefacción y electricidad, tu vivienda no puede tener una A
+3. **El certificado cuesta menos de 50€** → casi seguro que no incluyó visita presencial
+4. **El técnico no responde preguntas** sobre cómo obtuvo la calificación
+5. **La calificación no coincide** con viviendas similares en tu misma zona y antigüedad
+- **Paga de más** por la vivienda (Brown Discount oculto)
+- **Asume costes imprevistos** de rehabilitación energética
+- **Dificultad para vender** en el futuro si el comprador descubre la calificación real
+- **Riesgo de reclamación** por parte del comprador
+- **Posible sanción** administrativa por certificado fraudulento
+- **Responsabilidad solidaria** si el comprador demuestra el sobreprecio
+- **Expediente del colegio profesional** que puede conllevar sanción o inhabilitación
+- **Responsabilidad civil** por los daños causados
+- **Posible delito de falsedad documental** en casos graves
+**¿Cuánto cuesta todo el proceso de reclamación?**
+**¿Puedo reclamar si ya compré la vivienda?**
+**¿El vendedor tiene obligación de decirme si el certificado está inflado?**
+**¿Sospechas que tu certificado está inflado? Por 59€ lo verificamos y te damos un informe firmado.**
+**¿Cómo saber si está bien o mal?**
+**La señal más grave y más fácil de detectar.**
+El artículo 6.5 del RD 390/2021 es claro: el técnico **debe realizar una visita presencial** al inmueble. Sin visita, el certificado es nulo.
+Si no aparece ninguna de estas menciones, **el certificado no es válido**.
+**Consecuencia:** La calificación no refleja la realidad de tu vivienda.
+**Un precio sospechosamente bajo es señal de certificado sin visita.**
+**Piso menor de 70m²:** Precio con visita 80-120€ | Precio sin visita (ilegal) 30-50€
+**Piso 70-100m²:** Precio con visita 90-180€ | Precio sin visita (ilegal) 35-60€
+**Casa unifamiliar:** Precio con visita 180-350€ | Precio sin visita (ilegal) 50-80€
+> Atención: **Importante:** Los certificados baratos no solo son ilegales. También te exponen a multas de 300€ a 6.000€ si los usas para vender o alquilar.
+**Tu factura energética te dice la verdad.**
+**Consumo anual (vivienda 80m²):** Menos de 400€ → Calificación esperada A o B
+**Consumo anual (vivienda 80m²):** 400-700€ → Calificación esperada C o D
+**Consumo anual (vivienda 80m²):** 700-1.200€ → Calificación esperada E
+**Consumo anual (vivienda 80m²):** 1.200-1.800€ → Calificación esperada F
+**Consumo anual (vivienda 80m²):** Más de 1.800€ → Calificación esperada G
+**¿Cómo comprobarlo?**
+**Un certificado sin técnico colegiado no tiene validez.**
+Si el número no aparece o no es verificable, **el certificado no es válido**.
+**Un certificado genérico es un certificado falso.**
+ **Debe aparecer:**
+ **Señales de alarma:**
+**Sin registro, el certificado no existe legalmente.**
+**Catalunya:** ICAEN
+**Madrid:** Dirección General de Industria
+**Andalucía:** Agencia Andaluza de la Energía
+**Valencia:** IVACE
+Si no aparece, el certificado no está registrado y **no tiene validez legal**.
+**Tu intuición suele tener razón.**
+**Probable:** Calificación inflada para facilitar la venta.
+**Probable:** El técnico no registró las reformas.
+Por **59€** un técnico independiente revisa tu certificado y te confirma si es correcto o tiene errores.
+- **Reclama al técnico original** para que lo corrija gratis
+- **Solicita un certificado nuevo** si el técnico no responde
+- **Reclama ante el colegio profesional** si hay mala praxis
+**Situación:** Piso en Barcelona, certificado por 45€, calificación D.
+**Señales detectadas:** No aparece fecha de visita, precio bajo, datos genéricos.
+**Realidad:** El técnico nunca visitó la vivienda. Usó plantilla del catastro.
+**Consecuencia:** Multa de 1.200€ al vendedor + certificado nuevo obligatorio.
+**Situación:** Casa unifamiliar 1975, certificado B, sin reformas visibles.
+**Señales detectadas:** Calificación sospechosa, consumo real no coincide.
+**Realidad:** Calificación real era F. El comprador pagó 32.000€ de más.
+**Consecuencia:** Reclamación exitosa al vendedor y al técnico.
+**Situación:** Piso con ventanas climalit nuevas, aerotermia, certificado G.
+**Señales detectadas:** Calificación demasiado mala, reformas no mencionadas.
+**Realidad:** Calificación correcta era C. Pérdida de 18.000€ en la venta.
+**Consecuencia:** Segunda opinión confirmó el error. Nuevo certificado con C.
+**¿Puedo confiar en el certificado que me da el vendedor?**
+**¿Cuánto cuesta verificar si mi certificado está mal?**
+**¿Qué hago si ya compré con un certificado incorrecto?**
+**¿El certificado incorrecto anula la compraventa?**
+- **[Certificado energético incorrecto: cómo detectarlo →](/blog/certificado-energetico-incorrecto/)**
+- **[Certificado energético inflado: qué hacer →](/blog/certificado-energetico-inflado/)**
+- **[Los 7 errores más graves en un certificado energético →](/blog/errores-graves-certificado-energetico/)**
+**¿Detectas alguna de estas señales en tu certificado? Por 59€ te confirmamos si está bien o mal.**
+Un certificado energético está **inflado** cuando la calificación mostrada (A, B, C, D...) es mejor de la que realmente corresponde a la vivienda según sus características constructivas y sistemas instalados.
+- **Modificar parámetros de aislamiento** → Declarar un aislamiento mejor del real
+- **Ignorar reformas no realizadas** → Dar por hecho mejoras que no existen
+- **Usar valores por defecto favorables** → El software permite "optimizar" ciertos parámetros
+- **No considerar puentes térmicos** → Omitir puntos débiles de la envolvente térmica
+> **Importante:** Inflar un certificado no solo es poco ético, sino que puede ser considerado **fraude documental** con consecuencias legales para el técnico y el vendedor.
+1. **Calificación A o B en vivienda anterior a 2006** sin reformas integrales de eficiencia
+2. **Discrepancia con el consumo real**: si pagas 1.200€/año en calefacción y electricidad, tu vivienda no puede tener una A
+3. **El certificado cuesta menos de 50€** → casi seguro que no incluyó visita presencial
+4. **El técnico no responde preguntas** sobre cómo obtuvo la calificación
+5. **La calificación no coincide** con viviendas similares en tu misma zona y antigüedad
+- **Paga de más** por la vivienda (Brown Discount oculto)
+- **Asume costes imprevistos** de rehabilitación energética
+- **Dificultad para vender** en el futuro si el comprador descubre la calificación real
+- **Riesgo de reclamación** por parte del comprador
+- **Posible sanción** administrativa por certificado fraudulento
+- **Responsabilidad solidaria** si el comprador demuestra el sobreprecio
+- **Expediente del colegio profesional** que puede conllevar sanción o inhabilitación
+- **Responsabilidad civil** por los daños causados
+- **Posible delito de falsedad documental** en casos graves
+**¿Cuánto cuesta todo el proceso de reclamación?**
+**¿Puedo reclamar si ya compré la vivienda?**
+**¿El vendedor tiene obligación de decirme si el certificado está inflado?**
+**¿Sospechas que tu certificado está inflado? Por 59€ lo verificamos y te damos un informe firmado.**
+Si acabas de recibir tu certificado energético y ves una **F o una G**, la primera reacción suele ser de incredulidad. "No puede ser, mi casa no es tan ineficiente", piensas. Y a veces tienes razón.
+La realidad es que aproximadamente el **70% de los certificados en España** otorgan calificaciones E, F o G. Pero dentro de ese 70%, hay un porcentaje significativo de certificados **mal calculados** que asignan una letra peor de la que realmente corresponde.
+| **Aislamiento inexistente** | Fachadas sin cámara de aire, cubiertas sin aislamiento |
+| **Ventanas de simple vidrio** | Sin rotura de puente térmico, carpintería metálica sin sellado |
+| **Caldera antigua** | De gasoil o gas natural con más de 15 años, rendimiento bajo |
+| **Sin climatización renovable** | Ausencia de aerotermia, geotermia o biomasa |
+| **Puente térmico no tratado** | Uniones entre forjados y fachada sin aislamiento |
+| **Orientación desfavorable** | Fachada norte sin protección, pocas horas de sol |
+| **Zona climática fría** | Mayor demanda de calefacción |
+Si tu vivienda cumple **3 o más** de estos factores, una F o G puede ser correcta. Si solo cumple 1 o 2, el certificado podría estar mal calculado.
+- **Viviendas anteriores a 1980** sin reformas de aislamiento
+- **Pisos sin calefacción central** que usan radiadores eléctricos viejos
+- **Casas unifamiliares** con caldera de gasoil antigua y sin aislamiento en cubierta
+- **Locales comerciales** sin climatización eficiente ni aislamiento
+En estos casos, la calificación refleja la realidad y el propietario debería considerar reformas para mejorar la eficiencia y evitar el **Brown Discount** al vender.
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+**Consecuencia:** Una vivienda que debería tener C o D aparece con F o G.
+Una F o G no es el fin del mundo. Muchas viviendas en España tienen esta calificación y se venden o alquilan sin problemas. El problema real es **si la calificación es incorrecta**.
+Si la segunda opinión confirma que hay errores, puedes reclamar ante el técnico original y, si no responde, ante el colegio profesional. Para este paso necesitas un **informe técnico firmado** que acredite los errores.
+**¿Todas las viviendas antiguas tienen F o G?**
+**¿Puedo vender mi piso con calificación F o G?**
+**¿Mejorar la calificación de F a C aumenta el valor de mi vivienda?**
+**¿Cuánto cuesta saber si mi F o G es correcta?**
+**Si tu vivienda tiene calificación F o G y crees que no es justo, por 59€ te confirmamos si es correcto o hay un error que puedes corregir.**
+La respuesta corta es **sí**, pero con matices importantes. Reclamar un certificado energético no es como reclamar un producto defectuoso en una tienda. Necesitas un **procedimiento técnico previo** que demuestre, con datos objetivos, que el certificado original contiene errores.
+**Errores graves (invalidan el certificado):**
+**Errores leves (subsanables):**
+> **Dato clave:** Según el IDAE, aproximadamente un **15-20% de los certificados energéticos** presentan errores graves que los invalidan. En certificados de menos de 50€ (sin visita presencial), esa cifra supera el **90%**.
+**Consecuencia:** El certificado no refleja el estado real de la vivienda. Una vivienda con ventanas climalit y aislamiento puede aparecer con calificación G cuando debería tener una C o D.
+**¿A quién perjudica?**
+- Al **comprador**: paga de más porque el Brown Discount se oculta tras una calificación falsa
+- Al **vendedor honesto**: compite en desventaja contra vendedores que inflan certificados
+Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
+1. **Verifica el número de colegiado** del técnico en el colegio profesional correspondiente (Arquitectos, Aparejadores o Ingenieros)
+2. **Comprueba la fecha de visita presencial** — si no aparece, el certificado es nulo
+3. **Busca el número de registro** autonómico — sin registro, no tiene validez legal
+4. **Compara la calificación con el consumo real** — si tu factura es de 400€/año y el certificado dice G (consumo >200 kWh/m²), algo no cuadra
+Sin embargo, para una reclamación formal necesitas algo más: **un dictamen técnico firmado por otro profesional**. Y ahí es donde entra la Segunda Opinión de Certilab.
+> **Atención:** El paso 1 es el más importante. Sin un dictamen técnico firmado por un profesional independiente, los pasos 2, 3 y 4 no tienen base sólida. La administración rechazará tu reclamación si no presentas un informe pericial que demuestre los errores.
+1. **El certificado original** que consideras incorrecto
+2. **Un dictamen técnico firmado** que identifique los errores concretos — este es el documento crítico
+3. **Facturas de consumos** (si las tienes) para demostrar la discrepancia
+4. **Fotografías** de la vivienda que acrediten reformas no reflejadas en el certificado
+5. **Justificante de pago** del certificado original
+**¿Puedo reclamar si el certificado lo pagó el vendedor?**
+**¿Cuánto cuesta reclamar un certificado incorrecto?**
+**¿Prescriben las reclamaciones por certificado incorrecto?**
+Sí, el plazo general de prescripción es de **3 años** desde que conoces el error. No dejes pasar el tiempo: cuanto antes actúes, más fácil será demostrar el perjuicio.
+**Antes de reclamar necesitas un dictamen técnico firmado. La Segunda Opinión de Certilab te da ese documento por 59€ IVA incluido en 24-48h.**

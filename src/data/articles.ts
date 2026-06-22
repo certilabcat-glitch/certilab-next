@@ -17,14 +17,8 @@ export const articles: Article[] = [
     title: "Certificado energético incorrecto: cómo detectarlo y reclamar",
     excerpt: "¿Tu certificado energético tiene errores? Detecta un certificado incorrecto antes de comprar o vender. Guía práctica con pasos para reclamar. 2026.",
     content: `
-# Certificado energético incorrecto: cómo detectarlo y reclamar
 
-<div class="autor-bloque">
-  <p class="autor-nombre">Eva María González García</p>
-  <p class="autor-credencial">
-    Arquitecta Técnica · Colegiada CATEB 9457 · Seguro RC Profesional · 20 años de experiencia
-  </p>
-</div>
+
 
 Tu certificado energético puede estar mal. Y puede costarte hasta <strong>40.000€</strong> en una vivienda de 270.000€. Los errores en certificados son más frecuentes de lo que crees — y la mayoría de propietarios los descubren demasiado tarde.
 
@@ -196,12 +190,11 @@ Un certificado energético incorrecto puede costarte decenas de miles de euros. 
     readingTime: 12,
     featured: true,
   },
-  {
+{
     slug: "certificado-energetico-inflado",
     title: "Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026",
     excerpt: "¿Sospechas que tu certificado energético tiene la calificación inflada? Te explicamos cómo detectarlo, qué consecuencias tiene y cómo reclamar con un dictamen técnico firmado.",
     content: `
-# Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026
 
 <div class="respuesta-directa">
 Un certificado energético inflado es aquel que muestra una calificación mejor de la que realmente corresponde a la vivienda. Si sospechas que el tuyo está inflado, el primer paso es obtener un dictamen técnico independiente (Segunda Opinión por 59€) que lo confirme. Con ese informe, puedes reclamar al técnico, al vendedor y, si es necesario, ante la administración.
@@ -300,13 +293,12 @@ Legalmente no, pero el certificado debe reflejar fielmente las características 
     readingTime: 9,
     featured: true,
   },
-  {
+{
     slug: "brown-discount-precio-vivienda",
     title: "Brown Discount: qué es y cómo afecta al precio de tu vivienda",
     excerpt:
       "El Brown Discount es la pérdida de valor de una vivienda por su mala calificación energética. Descubre cómo detectarlo y qué hacer si estás comprando o vendiendo.",
     content: `
-# Brown Discount: qué es y cómo afecta al precio de tu vivienda
 
 <div class="respuesta-directa">
 El Brown Discount es la pérdida de valor que sufre una vivienda por tener una mala calificación energética (E, F o G). Según estudios del sector inmobiliario europeo, este descuento puede alcanzar entre el 5% y el 15% del valor de mercado del inmueble.
@@ -365,13 +357,12 @@ Si sospechas que tu vivienda sufre Brown Discount por un certificado incorrecto,
     readingTime: 6,
     featured: true,
   },
-  {
+{
     slug: "cuanto-cuesta-certificado-energetico-2026",
     title: "Precio del Certificado Energético 2026: claves para entender las diferencias",
     excerpt:
       "¿Cuánto debería costar un certificado energético en 2026? Analizamos los precios del mercado y las diferencias entre las distintas opciones disponibles.",
     content: `
-# Precio del Certificado Energético 2026: claves para entender las diferencias
 
 <div class="respuesta-directa">
 El precio de un certificado energético en 2026 oscila entre 80€ y 200€ dependiendo de la ubicación, superficie y complejidad del inmueble. Los certificados por menos de 50€ suelen carecer de visita presencial, lo que los invalida legalmente según el RD 390/2021.
@@ -423,13 +414,12 @@ Sí. Si contrataste un certificado sin visita presencial y te lo entregaron como
     readingTime: 6,
     featured: true,
   },
-  {
+{
     slug: "obtener-certificado-energetico-gratis",
     title: "Certificado Energético Gratis: mitos y realidades en 2026",
     excerpt:
       "¿Existe el certificado energético gratis en 2026? Te explicamos en qué casos es posible obtenerlo sin coste, qué trampas evitar y por qué los certificados gratuitos suelen tener errores que te pueden costar dinero.",
     content: `
-# Certificado Energético Gratis: mitos y realidades en 2026
 
 <div class="respuesta-directa">
 No existe un certificado energético oficial completamente gratis. El coste real mínimo de un certificado válido con visita presencial es de 80€, según el RD 390/2021. Los certificados gratuitos o por menos de 50€ suelen carecer de visita, lo que los invalida legalmente.
@@ -488,13 +478,12 @@ Los certificados gratuitos suelen tener errores. ¿Tienes dudas del tuyo? Segund
     readingTime: 5,
     featured: false,
   },
-  {
+{
     slug: "errores-certificado-energetico",
     title: "Errores comunes en el certificado energético: cómo detectarlos y solucionarlos",
     excerpt:
       "Los 5 errores más frecuentes que encontramos en los certificados energéticos y cómo identificarlos antes de que te cuesten dinero.",
     content: `
-# Errores comunes en el certificado energético: cómo detectarlos y solucionarlos
 
 <div class="respuesta-directa">
 Los 5 errores más frecuentes en los certificados energéticos son: datos catastrales sin verificar en visita presencial, calificación inflada que oculta el Brown Discount, omisión de la fecha de visita, técnico no habilitado o sin colegiación visible, y falta de registro en el organismo autonómico. Cualquiera de estos errores invalida el certificado legalmente.
@@ -579,13 +568,12 @@ Si ya lo usaste para vender o alquilar, solicita una corrección inmediata al t�
     readingTime: 6,
     featured: false,
   },
-  {
+{
     slug: "ayudas-next-generation-rehabilitacion-energetica-2026",
     title: "Ayudas Next Generation para Rehabilitación Energética 2026: guía completa",
     excerpt:
       "Guía completa de las ayudas Next Generation EU para rehabilitación energética de viviendas. ¿Cumples los requisitos? ¿Cómo solicitarlas?",
     content: `
-# Ayudas Next Generation para Rehabilitación Energética 2026: guía completa
 
 <div class="respuesta-directa">
 Los fondos Next Generation EU financian hasta el 80% de la rehabilitación energética en España en 2026. Las principales vías son el Programa PREE (para edificios existentes), las ayudas para rehabilitación de viviendas y las deducciones en el IRPF. Para acceder necesitas un certificado energético previo y que la vivienda sea anterior a 2007.
@@ -670,13 +658,12 @@ La mayoría de programas Next Generation tienen como fecha límite diciembre de 
     readingTime: 7,
     featured: true,
   },
-  {
+{
     slug: "detectar-certificado-energetico-falso",
     title: "¿Tu certificado energético es falso? 5 señales para detectarlo",
     excerpt:
       "Guía práctica para detectar si tu certificado energético es falso: 5 señales de alerta, precios orientativos, cómo reclamar y qué alternativas tienes.",
     content: `
-# ¿Tu certificado energético es falso? 5 señales para detectarlo
 
 <div class="respuesta-directa">
 Las 5 señales de alerta de un certificado energético falso son: precio inferior a 60€, ausencia de fecha de visita presencial, técnico no colegiado o no verificable, datos genéricos del catastro sin comprobar reformas, y calificación sospechosamente alta que oculta el Brown Discount. Si tu certificado cumple 2 o más de estas señales, probablemente no es válido legalmente.
@@ -744,7 +731,6 @@ Debes informar al comprador lo antes posible y gestionar un certificado válido.
     excerpt:
       "Sí, el certificado energético es obligatorio para alquilar desde 2013. Te contamos qué dice la ley, las excepciones reales y qué pasa si alquilas sin él.",
     content: `
-# ¿Es obligatorio el certificado energético para alquilar una vivienda en 2026?
 
 <div class="respuesta-directa">
 Sí, el certificado energético es obligatorio para alquilar cualquier vivienda en España desde la entrada en vigor del Real Decreto 235/2013, actualizado por el RD 390/2021. No hay excepción por antigüedad, tamaño o precio del alquiler. La única excepción real es el alquiler de habitaciones individuales en la vivienda habitual del propietario. Si alquilas sin certificado, te expones a multas de 300€ a 6.000€.
@@ -855,7 +841,6 @@ Técnicamente puedes publicarlo, pero Idealista, Fotocasa y Habitaclia exigen la
     excerpt:
       "El certificado energético tiene una validez máxima de 10 años, pero hay casos en los que caduca antes. Descubre cuándo renovarlo y evita problemas legales.",
     content: `
-# Certificado energético: ¿cuánto dura y cuándo caduca?
 
 <div class="respuesta-directa">
 El certificado energético tiene una validez máxima de 10 años desde su fecha de registro en el organismo autonómico. Sin embargo, hay situaciones que lo invalidan antes: obras de rehabilitación, cambios normativos, errores en el certificado o múltiples cambios de titularidad. Si tu certificado se acerca a los 10 años o ha habido cambios en la vivienda, conviene renovarlo.
@@ -1073,7 +1058,6 @@ Si algo no cuadra con tu certificado, pide una Segunda Opinión. 59€ IVA inclu
     excerpt:
       "Guía completa sobre el certificado energético en comunidades de vecinos. Obligaciones legales, zonas comunes incluidas, precios, sanciones y preguntas frecuentes.",
     content: `
-# Certificado energético en comunidades de vecinos: obligaciones, precios y sanciones
 
 <div class="respuesta-directa">
 Sí, las comunidades de vecinos necesitan un certificado energético para las zonas comunes desde el Real Decreto 390/2021. El certificado debe incluir ascensores, iluminación de pasillos, climatización centralizada y cubiertas. El precio oscila entre 300€ y 1.200€ según el tamaño del edificio, y las sanciones por no tenerlo van de 300€ a 6.000€.
@@ -1160,7 +1144,6 @@ Depende de la comunidad autónoma. En general, si el certificado del edificio in
     excerpt:
       "¿Puede una vivienda ser eficiente aunque no tenga calificación A? Analizamos los mitos más comunes y te explicamos qué significan realmente las letras de la etiqueta energética.",
     content: `
-# Vivienda eficiente sin certificado A: mitos y realidades sobre la calificación energética
 
 <div class="respuesta-directa">
 No necesitas una calificación A para tener una vivienda eficiente. Muchas viviendas con calificación C o D pueden ser perfectamente eficientes si su consumo real es bajo. Lo que realmente importa no es la letra, sino los datos de consumo en kWh/m² año y las emisiones de CO₂. Un certificado con calificación A mal calculado puede ser menos fiable que una C obtenida con una visita real del técnico.
@@ -1244,7 +1227,6 @@ Cada ayuda tiene requisitos específicos, pero muchas exigen mejorar al menos do
     excerpt:
       "Guía completa para obtener el certificado energético en cualquier comunidad autónoma de España. Proceso paso a paso, precios orientativos, documentos necesarios y plazos. Incluye tabla de organismos autonómicos.",
     content: `
-# Cómo obtener el certificado energético en España: guía completa paso a paso (2026)
 
 <div class="respuesta-directa">
 Para obtener el certificado energético de tu vivienda en España necesitas contratar a un técnico certificador colegiado (arquitecto, ingeniero o instalador habilitado) que realice una visita presencial, calcule la eficiencia del inmueble y registre el certificado en el organismo autonómico correspondiente. El proceso completo cuesta entre 60€ y 350€ según el tipo de vivienda y tarda entre 2 y 7 días. Sin el registro oficial, el certificado no tiene validez legal.
@@ -1390,7 +1372,6 @@ No. Son documentos distintos. El **certificado energético** acredita la eficien
     excerpt:
       "¿Necesitas el certificado energético en Catalunya? Guía paso a paso: presupuesto, visita técnica, registro ICAEN, plazos y precios. Certificado en regla sin errores.",
     content: `
-# Guía completa para tramitar el certificado energético en Catalunya (2026)
 
 <div class="respuesta-directa">
 Para obtener el certificado energético en Catalunya necesitas contratar a un técnico colegiado (arquitecto o ingeniero) que realice una visita presencial a tu vivienda, calcule la calificación energética y registre el certificado en el ICAEN. El proceso completo tarda entre 2 y 7 días y cuesta entre 90€ y 350€ según el tipo de inmueble. Sin el registro en el ICAEN, el certificado no tiene validez legal.
@@ -1679,7 +1660,6 @@ Antes de arriesgarte a una sanción, comprueba que tu certificado es correcto. S
     excerpt:
       "Si sospechas que tu certificado energético tiene errores, te explicamos el proceso legal y técnico para reclamarlo. Necesitas un dictamen pericial firmado antes de actuar.",
     content: `
-# ¿Puedo reclamar un certificado energético incorrecto? Guía 2026
 
 <div class="respuesta-directa">
 Sí, puedes reclamar un certificado energético incorrecto ante el técnico firmante, el colegio profesional y la administración autonómica. Sin embargo, el primer paso obligatorio antes de cualquier reclamación es contar con un dictamen técnico firmado que acredite los errores del certificado original. Sin ese informe, tu reclamación carece de base técnica y será rechazada en todos los casos.
@@ -1804,7 +1784,6 @@ Sí, el plazo general de prescripción es de **3 años** desde que conoces el er
     excerpt:
       "Si tu vivienda tiene calificación F o G y crees que no es justo, te explicamos qué factores la determinan y cuándo puede ser un error del técnico. Por 59€ lo verificamos.",
     content: `
-# Certificado energético F o G: ¿es correcto o está mal?
 
 <div class="respuesta-directa">
 Una calificación F o G en tu certificado energético puede ser correcta si la vivienda carece de aislamiento, tiene ventanas antiguas, usa calefacción ineficiente o no ha recibido reformas. Pero también puede ser un error del técnico si no realizó visita presencial, usó datos del catastro sin verificar o ignoró reformas reales. La única forma de saberlo con certeza es una segunda opinión técnica independiente.
@@ -1930,7 +1909,6 @@ En Certilab ofrecemos la Segunda Opinión por 59€ IVA incluido. Revisamos tu c
     excerpt:
       "¿Sabías que el certificado energético puede ser tu mejor herramienta para negociar el precio de compra de una vivienda? Te explicamos cómo usar el Brown Discount como argumento y cuánto puedes ahorrar.",
     content: `
-# Certificado energético para negociar el precio de compra: guía práctica 2026
 
 <div class="respuesta-directa">
 El certificado energético es una herramienta de negociación real en la compra de una vivienda. Si la calificación es E, F o G, puedes argumentar un descuento del 5% al 15% sobre el precio de venta aplicando el concepto de Brown Discount. Con un informe técnico independiente en la mano, tienes datos objetivos para sentarte a negociar. En una vivienda de 270.000€, eso puede suponer un ahorro de entre 13.500€ y 40.500€.
@@ -2087,7 +2065,6 @@ El Brown Discount es menos agresivo en calificaciones D (0-3%), pero si el certi
     excerpt:
       "Un certificado energético mal hecho puede costarte entre 7.500€ y 60.000€. Calcula tu riesgo real en función del valor de tu vivienda y descubre si tu certificado te está costando dinero.",
     content: `
-# ¿Cuánto puedo perder por un certificado energético mal hecho?
 
 <div class="respuesta-directa">
 Un certificado energético mal hecho puede costarte entre 7.500€ y 60.000€ dependiendo del valor de tu vivienda y del error en la calificación. Si el certificado infla la letra (pone una C cuando es una G), comprarás pagando de más. Si la deflacta (pone una G cuando es una C), venderás por menos de lo que vale. En ambos casos, el Brown Discount es el mecanismo que traduce el error a euros.
@@ -2239,7 +2216,6 @@ En Certilab ofrecemos la Segunda Opinión por 59€ IVA incluido. Recibes un inf
     excerpt:
       "Cada vez más bancos ofrecen hipotecas verdes con condiciones preferentes para viviendas con calificación A o B. Si tu certificado está mal hecho, puedes perder esos beneficios durante 20-30 años de hipoteca.",
     content: `
-# Certificado energético e hipoteca verde: lo que el banco no te cuenta
 
 <div class="respuesta-directa">
 Cada vez más bancos ofrecen hipotecas verdes con condiciones preferentes (0,25-0,50% menos de interés, eliminación de comisiones) para viviendas con calificación energética A o B. Si tu certificado está mal hecho y muestra una calificación inferior a la real, estás perdiendo esas ventajas durante toda la vida de la hipoteca. En una hipoteca de 200.000€ a 25 años, un 0,25% de diferencia supone unos 7.500€ extra. Y si el certificado está inflado (calificación A falsa), el riesgo de que el banco lo descubra puede costarte aún más.
@@ -2388,7 +2364,6 @@ El principal es que suelen requerir calificación A o B, lo que excluye a la may
     excerpt:
       "¿Tu certificado energético es correcto? La Segunda Opinión de Certilab analiza tu certificado actual y te dice si la calificación es real o tiene errores. Informe técnico firmado en 24-48h por 59€.",
     content: `
-# Segunda opinión certificado energético: cuándo necesitarla y cómo funciona
 
 <div class="respuesta-directa">
 La Segunda Opinión de Certilab es un informe técnico firmado por arquitecta colegiada (CATEB 9457) que analiza tu certificado energético actual y determina si la calificación es correcta o contiene errores. Por 59€ IVA incluido, recibes el informe en 24-48h. Si el certificado está mal, te indicamos la calificación correcta y los pasos a seguir para reclamar o corregirlo.
@@ -2552,7 +2527,6 @@ Tiene validez técnica como informe pericial. No sustituye a un certificado regi
     excerpt:
       "Los 7 errores más graves que invalidan un certificado energético: falta de visita, calificación inflada, superficie mal declarada, reformas no registradas y más. Cada uno puede costarte miles de euros. Aprende a detectarlos.",
     content: `
-# Los 7 errores más graves en un certificado energético (y cómo detectarlos)
 
 <div class="respuesta-directa">
 Los 7 errores más graves que invalidan un certificado energético son:  1) falta de visita presencial, 2) calificación inflada, 3) superficie mal declarada, 4) reformas no registradas, 5) técnico no habilitado, 6) datos genéricos del catastro sin verificar, 7) errores en el software de cálculo. Cada uno puede costarte entre 7.500€ y 60.000€ en una operación media. Te explicamos cómo detectar cada error en tu certificado.
@@ -2731,7 +2705,6 @@ Sí. Si el vendedor presenta un certificado con errores graves (especialmente ca
     excerpt:
       "¿Te fías del certificado energético que te entrega el vendedor? Te explicamos los riesgos de calificaciones infladas, cómo detectarlas y por qué una Segunda Opinión puede ahorrarte miles de euros.",
     content: `
-# Certificado energético del vendedor: ¿es fiable? Guía para compradores 2026
 
 <div class="respuesta-directa">
 No, no debes fiarte sin más del certificado energético que te entrega el vendedor. Hasta un 20% de los certificados contienen errores graves, y muchos vendedores tienen incentivos económicos para presentar una calificación mejor de la real (calificación inflada). Contratar una Segunda Opinión independiente por 59€ es la única forma de estar seguro antes de comprar.
@@ -2826,7 +2799,6 @@ Sí. Si demuestras que el vendedor sabía o debía saber que el certificado era 
     excerpt:
       "¿Sospechas que tu certificado energético tiene la calificación inflada? Te explicamos cómo detectarlo, qué consecuencias tiene y cómo reclamar con un dictamen técnico firmado.",
     content: `
-# Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026
 
 <div class="respuesta-directa">
 Un certificado energético inflado es aquel que muestra una calificación mejor de la que realmente corresponde a la vivienda. Si sospechas que el tuyo está inflado, el primer paso es obtener un dictamen técnico independiente (Segunda Opinión por 59€) que lo confirme. Con ese informe, puedes reclamar al técnico, al vendedor y, si es necesario, ante la administración.
@@ -2930,12 +2902,11 @@ Legalmente no, pero el certificado debe reflejar fielmente las características 
     readingTime: 9,
     featured: false,
   },
-  {
+{
     slug: "como-saber-si-certificado-energetico-esta-mal",
     title: "¿Cómo saber si mi certificado energético está mal? 7 señales de alerta",
     excerpt: "7 señales claras para detectar si tu certificado energético tiene errores graves. Desde la falta de visita presencial hasta calificaciones sospechosas. Guía práctica 2026.",
     content: `
-# ¿Cómo saber si mi certificado energético está mal? 7 señales de alerta
 
 <div class="respuesta-directa">
 Puedes detectar si tu certificado energético está mal verificando estas 7 señales: 1) no hay fecha de visita presencial, 2) costó menos de 60€, 3) la calificación no coincide con el consumo real, 4) el técnico no es verificable, 5) faltan datos específicos de tu vivienda, 6) no tiene número de registro, 7) la calificación parece demasiado buena o demasiado mala. Si detectas 2 o más señales, solicita una Segunda Opinión por 59€.
@@ -3182,13 +3153,12 @@ No anula la compraventa, pero puedes reclamar daños y perjuicios si demuestras 
     readingTime: 10,
     featured: true,
   },
-  {
+{
     slug: "certificado-energetico-inflado-que-hacer",
     title: "Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026",
     excerpt:
       "¿Sospechas que tu certificado energético tiene la calificación inflada? Te explicamos cómo detectarlo, qué consecuencias tiene y cómo reclamar con un dictamen técnico firmado.",
     content: `
-# Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2026
 
 <div class="respuesta-directa">
 Un certificado energético inflado es aquel que muestra una calificación mejor de la que realmente corresponde a la vivienda. Si sospechas que el tuyo está inflado, el primer paso es obtener un dictamen técnico independiente (Segunda Opinión por 59€) que lo confirme. Con ese informe, puedes reclamar al técnico, al vendedor y, si es necesario, ante la administración.
@@ -3292,13 +3262,12 @@ Legalmente no, pero el certificado debe reflejar fielmente las características 
     readingTime: 9,
     featured: false,
   },
-  {
+{
     slug: "certificado-energetico-f-g-correcto-o-error",
     title: "Certificado energético F o G: ¿es correcto o está mal calculado?",
     excerpt:
       "Una calificación F o G en tu certificado puede ser correcta o un error del técnico. Descubre cómo saberlo y qué hacer en cada caso, con un dictamen técnico por 59€.",
     content: `
-# Certificado energético F o G: ¿es correcto o está mal?
 
 <div class="respuesta-directa">
 Una calificación F o G en tu certificado energético puede ser correcta si la vivienda carece de aislamiento, tiene ventanas antiguas, usa calefacción ineficiente o no ha recibido reformas. Pero también puede ser un error del técnico si no realizó visita presencial, usó datos del catastro sin verificar o ignoró reformas reales. La única forma de saberlo con certeza es una segunda opinión técnica independiente.
@@ -3423,13 +3392,12 @@ En Certilab ofrecemos la Segunda Opinión por 59€ IVA incluido. Revisamos tu c
     readingTime: 8,
     featured: false,
   },
-  {
+{
     slug: "reclamar-certificado-energetico-incorrecto",
     title: "¿Puedo reclamar un certificado energético incorrecto? Guía 2026",
     excerpt:
       "Sí, puedes reclamar un certificado energético incorrecto. Pero necesitas un dictamen técnico firmado que acredite los errores. Te explicamos el proceso completo paso a paso.",
     content: `
-# ¿Puedo reclamar un certificado energético incorrecto? Guía 2026
 
 <div class="respuesta-directa">
 Sí, puedes reclamar un certificado energético incorrecto ante el técnico firmante, el colegio profesional y la administración autonómica. Sin embargo, el primer paso obligatorio antes de cualquier reclamación es contar con un dictamen técnico firmado que acredite los errores del certificado original. Sin ese informe, tu reclamación carece de base técnica y será rechazada en todos los casos.
