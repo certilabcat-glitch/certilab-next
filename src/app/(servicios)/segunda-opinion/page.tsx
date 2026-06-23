@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import HeroSection from "@/components/sections/HeroSection";
 import FAQSection from "@/components/sections/FAQSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import ServicesComparison from "@/components/sections/ServicesComparison";
 import { segundaOpinionFaq } from "@/data/faq";
 import { waUrl } from "@/lib/wa";
 import styles from "./SegundaOpinion.module.css";
@@ -38,6 +39,7 @@ export default function SegundaOpinionPage() {
         price="59 €"
         priceOld="69 €"
         credentials=""
+        rating={{ value: 4.9, count: 87 }}
         ctaPrimary={{ label: "Solicitar Segunda Opinión", href: waUrl("Hola, quiero solicitar la Segunda Opinión de mi certificado energético (59€).") }}
         ctaSecondary={{ label: "Express 4h (79€) →", href: "/segunda-opinion-express/" }}
         nota="Precio cerrado sin sorpresas (IVA incluido). Si lo necesita urgente, dispone de la Segunda Opinión Express con entrega en 4 horas."
@@ -195,50 +197,54 @@ export default function SegundaOpinionPage() {
       {/* ===== FAQ ===== */}
       <FAQSection items={segundaOpinionFaq} title="Preguntas frecuentes sobre la Segunda Opinión" />
 
-      {/* Schema.org Service */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Segunda Opinión Certificado Energético",
-            description: "Análisis técnico forense de certificados energéticos. Detectamos calificaciones infladas, errores técnicos y Brown Discount. Firmado por arquitecta técnica colegiada CATEB 9457 con seguro de responsabilidad civil.",
-            image: "https://www.certilab.cat/og-image.jpg",
-            provider: {
-              "@type": "ProfessionalService",
-              name: "Certilab - Eva María González García",
-              telephone: "+34608515922",
-              areaServed: { "@type": "Country", name: "ES" },
-            },
-            areaServed: { "@type": "Country", name: "España" },
-            offers: [
-              {
-                "@type": "Offer",
-                name: "Segunda Opinión Estándar",
-                price: "59",
-                priceCurrency: "EUR",
-                availability: "https://schema.org/InStock",
-                description: "Análisis técnico completo en 24-48 horas laborables. Incluye informe detallado en PDF firmado por arquitecta colegiada.",
-              },
-              {
-                "@type": "Offer",
-                name: "Segunda Opinión Express",
-                price: "79",
-                priceCurrency: "EUR",
-                availability: "https://schema.org/InStock",
-                description: "Mismo rigor técnico con entrega urgente en menos de 4 horas. Ideal para firmas inminentes.",
-              },
-            ],
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              bestRating: "5",
-              ratingCount: "87",
-            },
-          }),
-        }}
-      />
+       {/* Schema.org Service */}
+       <script
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{
+           __html: JSON.stringify({
+             "@context": "https://schema.org",
+             "@type": "Service",
+             name: "Segunda Opinión Certificado Energético",
+             description: "Análisis técnico forense de certificados energéticos. Detectamos calificaciones infladas, errores técnicos y Brown Discount. Firmado por arquitecta técnica colegiada CATEB 9457 con seguro de responsabilidad civil.",
+             image: "https://www.certilab.cat/og-image.jpg",
+             url: "https://www.certilab.cat/segunda-opinion/",
+             provider: {
+               "@type": "ProfessionalService",
+               name: "Certilab - Eva María González García",
+               telephone: "+34608515922",
+               email: "info@certilab.cat",
+               areaServed: { "@type": "Country", name: "ES" },
+             },
+             areaServed: { "@type": "Country", name: "España" },
+             offers: [
+               {
+                 "@type": "Offer",
+                 name: "Segunda Opinión Estándar",
+                 price: "59",
+                 priceCurrency: "EUR",
+                 availability: "https://schema.org/InStock",
+                 description: "Análisis técnico completo en 24-48 horas laborables. Incluye informe detallado en PDF firmado por arquitecta colegiada.",
+                 url: "https://www.certilab.cat/segunda-opinion/",
+               },
+               {
+                 "@type": "Offer",
+                 name: "Segunda Opinión Express",
+                 price: "79",
+                 priceCurrency: "EUR",
+                 availability: "https://schema.org/InStock",
+                 description: "Mismo rigor técnico con entrega urgente en menos de 4 horas. Ideal para firmas inminentes.",
+                 url: "https://www.certilab.cat/segunda-opinion-express/",
+               },
+             ],
+             aggregateRating: {
+               "@type": "AggregateRating",
+               ratingValue: "4.9",
+               bestRating: "5",
+               ratingCount: "87",
+             },
+           }),
+         }}
+       />
 
       {/* Schema.org HowTo */}
       <script
@@ -281,29 +287,42 @@ export default function SegundaOpinionPage() {
         }}
       />
 
-      {/* Schema.org BreadcrumbList */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.certilab.cat/" },
-              { "@type": "ListItem", position: 2, name: "Segunda Opinión", item: "https://www.certilab.cat/segunda-opinion/" },
-            ],
-          }),
-        }}
-      />
+       {/* Schema.org BreadcrumbList */}
+       <script
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{
+           __html: JSON.stringify({
+             "@context": "https://schema.org",
+             "@type": "BreadcrumbList",
+             itemListElement: [
+               { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.certilab.cat/" },
+               { "@type": "ListItem", position: 2, name: "Segunda Opinión", item: "https://www.certilab.cat/segunda-opinion/" },
+             ],
+           }),
+         }}
+       />
 
-       {/* ===== CTA FINAL ===== */}
-       <section className={`${styles.section}`} style={{ textAlign: 'center', paddingTop: '3rem', paddingBottom: '3rem' }}>
-         <h2 className={styles["section-title"]}>¿Listo para saber la verdad sobre tu certificado?</h2>
-         <p className={styles["section-sub"]} style={{ marginBottom: '2rem' }}>
-           Por 59€ IVA incluido, un técnico colegiado revisa tu certificado en 24-48 horas.
-         </p>
-         <a href={waUrl("Hola, quiero solicitar la Segunda Opinión de mi certificado energético (59€).")} className={styles["roi-contrast-button"]} style={{ display: 'inline-block' }}>Solicitar Segunda Opinión por 59€ →</a>
-       </section>
+       {/* Schema.org FAQ */}
+       <script
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{
+           __html: JSON.stringify({
+             "@context": "https://schema.org",
+             "@type": "FAQPage",
+             mainEntity: segundaOpinionFaq.map((item) => ({
+               "@type": "Question",
+               name: item.q,
+               acceptedAnswer: {
+                 "@type": "Answer",
+                 text: item.a,
+               },
+             })),
+           }),
+         }}
+       />
+
+       {/* ===== COMPARATIVA DE SERVICIOS ===== */}
+       <ServicesComparison />
     </>
   );
 }

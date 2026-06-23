@@ -156,7 +156,7 @@
   margin-bottom: 0.5rem;
 }
 
-.feature h4 {
+.feature h3 {
   font-family: var(--font-serif);
   font-size: 1.1rem;
   font-weight: 400;
@@ -223,6 +223,78 @@
   text-decoration: underline;
 }
 
+.problemaContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.problemaContent p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-dark, #444);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.problemaContent strong {
+  color: var(--color-black);
+}
+
+.problemaContent a {
+  color: var(--color-terra, #b46a4a);
+  text-decoration: underline;
+}
+
+.centeredCta {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.ctaNote {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-grey, #666);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.linksList li {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-crema, #faf6f0);
+  border-radius: 8px;
+}
+
+.linksList a {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-terra, #b46a4a);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+
+.linksList a:hover {
+  text-decoration: underline;
+}
+
+.linkDesc {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-grey, #666);
+  line-height: 1.5;
+}
+
 .faqSection {
   max-width: 700px;
   margin: 0 auto;
@@ -281,4 +353,42 @@
 .faqSection a {
   color: var(--color-terra, #b46a4a);
   text-decoration: underline;
+}
+
+.faqSection strong {
+  color: var(--color-black);
+}
+
+.ctaSection {
+  padding: 4rem 1.5rem;
+  background: var(--color-crema, #faf6f0);
+}
+
+.ctaBlock {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-dark, #444);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }

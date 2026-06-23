@@ -100,12 +100,19 @@ export default function RootLayout({
                     "Consultoría energética forense 100% online y remota. Análisis técnico independiente con responsabilidad profesional Cateb 9457.",
                   founder: {
                     "@type": "Person",
+                    "@id": "https://www.certilab.cat/#person",
                     name: "Eva María González García",
                     jobTitle: "Arquitecta Técnica",
+                    description: "Arquitecta Técnica especializada en análisis forense de certificados energéticos y consultoría energética. Colegiada CATEB 9457 con seguro de responsabilidad civil.",
                     memberOf: {
                       "@type": "Organization",
                       name: "Cateb",
                       identifier: "9457",
+                    },
+                    worksFor: {
+                      "@type": "Organization",
+                      "@id": "https://www.certilab.cat/#organization",
+                      name: "Certilab",
                     },
                   },
                   areaServed: {
@@ -119,6 +126,12 @@ export default function RootLayout({
                   ],
                   priceRange: "0€ – 399€",
                   telephone: "+34 722 437 675",
+                  email: "info@certilab.cat",
+                  address: {
+                    "@type": "PostalAddress",
+                    addressCountry: "ES",
+                    addressRegion: "Cataluña",
+                  },
                   sameAs: [
                     "https://www.linkedin.com/company/certilab",
                   ],

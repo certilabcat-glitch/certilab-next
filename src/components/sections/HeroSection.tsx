@@ -14,6 +14,7 @@ interface HeroSectionProps {
   priceOld?: string;
   credentials?: string;
   nota?: string;
+  rating?: { value: number; count: number };
   children?: React.ReactNode;
 }
 
@@ -28,6 +29,7 @@ export default function HeroSection({
   priceOld,
   credentials,
   nota,
+  rating,
   children,
 }: HeroSectionProps) {
   return (
@@ -63,6 +65,13 @@ export default function HeroSection({
               {ctaSecondary.label}
             </Link>
           )}
+        </div>
+      )}
+      {rating && (
+        <div className={styles["hero-rating"]}>
+          <span className={styles["hero-rating-stars"]}>★★★★★</span>
+          <span className={styles["hero-rating-value"]}>{rating.value}</span>
+          <span className={styles["hero-rating-count"]}>({rating.count} reseñas)</span>
         </div>
       )}
       {nota && <p className={styles["hero-nota"]}>{nota}</p>}

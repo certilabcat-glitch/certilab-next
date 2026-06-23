@@ -62,9 +62,10 @@ export default function SegundaOpinionExpressPage() {
         badges={["Colegiada CATEB Barcelona", "Entrega <4h", "Urgente"]}
         price="79 €"
         credentials="Eva María González García · Arquitecta Técnica colegiada"
+        rating={{ value: 4.9, count: 87 }}
         ctaPrimary={{ label: "Solicitar Express", href: waUrl("Hola, quiero solicitar la Segunda Opinión Express para mi certificado energético (79€).") }}
         ctaSecondary={{ label: "→ Volver a la estándar (59€)", href: "/segunda-opinion/" }}
-        nota="Precio cerrado sin sorpresas (sin IVA). Servicio disponible lunes a viernes de 9:00 a 18:00 h."
+        nota="Precio cerrado sin sorpresas (IVA incluido). Disponible lunes a viernes de 9:00 a 18:00 h. Pedidos fuera de horario se procesan al inicio de la siguiente ventana."
       >
         <p className="hero-garantia">
           <span className="hero-garantia-icon">&#9432;</span>
@@ -179,42 +180,45 @@ export default function SegundaOpinionExpressPage() {
       />
       <TrustBlockSection />
 
-      {/* Schema.org Service — renderizado estático desde Server Component */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Segunda Opinión Express Certificado Energético",
-            description: "Análisis técnico forense urgente de certificados energéticos con entrega en menos de 4 horas. Mismo rigor que la modalidad estándar. Firmado por arquitecta técnica colegiada CATEB 9457.",
-            image: "https://www.certilab.cat/og-image.jpg",
-            provider: {
-              "@type": "ProfessionalService",
-              name: "Certilab - Eva María González García",
-              telephone: "+34608515922",
-              areaServed: { "@type": "Country", name: "ES" },
-            },
-            areaServed: { "@type": "Country", name: "España" },
-            offers: [
-              {
-                "@type": "Offer",
-                name: "Segunda Opinión Express",
-                price: "79",
-                priceCurrency: "EUR",
-                availability: "https://schema.org/InStock",
-                description: "Análisis técnico completo con entrega urgente en menos de 4 horas. Ideal para firmas inminentes.",
-              },
-            ],
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              bestRating: "5",
-              ratingCount: "87",
-            },
-          }),
-        }}
-      />
+       {/* Schema.org Service — renderizado estático desde Server Component */}
+       <script
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{
+           __html: JSON.stringify({
+             "@context": "https://schema.org",
+             "@type": "Service",
+             name: "Segunda Opinión Express Certificado Energético",
+             description: "Análisis técnico forense urgente de certificados energéticos con entrega en menos de 4 horas. Mismo rigor que la modalidad estándar. Firmado por arquitecta técnica colegiada CATEB 9457.",
+             image: "https://www.certilab.cat/og-image.jpg",
+             url: "https://www.certilab.cat/segunda-opinion-express/",
+             provider: {
+               "@type": "ProfessionalService",
+               name: "Certilab - Eva María González García",
+               telephone: "+34608515922",
+               email: "info@certilab.cat",
+               areaServed: { "@type": "Country", name: "ES" },
+             },
+             areaServed: { "@type": "Country", name: "España" },
+             offers: [
+               {
+                 "@type": "Offer",
+                 name: "Segunda Opinión Express",
+                 price: "79",
+                 priceCurrency: "EUR",
+                 availability: "https://schema.org/InStock",
+                 description: "Análisis técnico completo con entrega urgente en menos de 4 horas. Ideal para firmas inminentes.",
+                 url: "https://www.certilab.cat/segunda-opinion-express/",
+               },
+             ],
+             aggregateRating: {
+               "@type": "AggregateRating",
+               ratingValue: "4.9",
+               bestRating: "5",
+               ratingCount: "87",
+             },
+           }),
+         }}
+       />
 
       {/* Schema.org HowTo — renderizado estático desde Server Component */}
       <script
@@ -265,6 +269,25 @@ export default function SegundaOpinionExpressPage() {
               { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.certilab.cat/" },
               { "@type": "ListItem", position: 2, name: "Segunda Opinión Express", item: "https://www.certilab.cat/segunda-opinion-express/" },
             ],
+          }),
+        }}
+      />
+
+      {/* Schema.org FAQ */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faq.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.a,
+              },
+            })),
           }),
         }}
       />

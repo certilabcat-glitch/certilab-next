@@ -29,7 +29,7 @@
   color: var(--color-border);
 }
 .post {
-  max-width: 760px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
@@ -308,7 +308,8 @@ table {
   .post-table-wrapper {
     border: none;
     border-radius: 0;
-    margin: 1.5rem -1.5rem;
+    margin: 1.5rem calc(-1.5rem - 1px);
+    width: calc(100% + 3rem + 2px);
   }
 
   .post-table {

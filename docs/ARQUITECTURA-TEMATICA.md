@@ -14,7 +14,7 @@
 | 2 | `certificado-energetico-obligatorio` | ¿Es obligatorio? | Normativa | — | — |
 | 3 | `certificado-energetico-inflado` | Certificado inflado: guía | Inflados | — | — |
 | 4 | `multas-certificado-energetico` | Multas: cuantías y riesgos | Normativa | — | — |
-| 5 | `certificado-energetico-f-g-correcto` | Certificado F/G correcto | Incorrectos | — | — |
+| 5 | `certificado-energetico-f-g-correcto-o-error` | Certificado F/G: correcto o error | Incorrectos | — | — |
 | 6 | `como-obtener-certificado-energetico` | Cómo obtenerlo | Normativa | — | — |
 | 7 | `brown-discount-precio-vivienda` | Brown Discount: pérdida de valor | Económicas | — | — |
 | 8 | `certificado-energetico-alquiler` | Certificado en alquiler | Compraventa | — | — |

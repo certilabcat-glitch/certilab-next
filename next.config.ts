@@ -127,9 +127,15 @@ const nextConfig: NextConfig = {
         destination: "/blog/reclamar-certificado-energetico-incorrecto",
         permanent: true,
       },
+      // Redirigir slug antiguo de F/G al artículo fusionado
+      {
+        source: "/blog/certificado-energetico-f-g-correcto",
+        destination: "/blog/certificado-energetico-f-g-correcto-o-error",
+        permanent: true,
+      },
       {
         source: "/certificado-energetico-f-g-correcto",
-        destination: "/blog/certificado-energetico-f-g-correcto",
+        destination: "/blog/certificado-energetico-f-g-correcto-o-error",
         permanent: true,
       },
       {

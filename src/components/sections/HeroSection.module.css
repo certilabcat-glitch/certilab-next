@@ -97,6 +97,33 @@
   justify-content: center;
 }
 
+.hero-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-grey);
+}
+
+.hero-rating-stars {
+  color: #ffc107;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-rating-value {
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.hero-rating-count {
+  font-size: 0.85rem;
+  color: var(--color-grey);
+}
+
 .hero-nota {
   font-family: var(--font-sans);
   font-size: 0.8rem;
@@ -109,5 +136,14 @@
   .hero {
     min-height: 70vh;
     padding: 4rem 1.5rem;
+  }
+
+  .hero-rating {
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .hero-rating-stars {
+    font-size: 0.9rem;
   }
 }

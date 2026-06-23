@@ -15,6 +15,8 @@ featured: false
 Sí, puedes reclamar un certificado energético incorrecto ante el técnico firmante, el colegio profesional y la administración autonómica. Sin embargo, el primer paso obligatorio antes de cualquier reclamación es contar con un dictamen técnico firmado que acredite los errores del certificado original. Sin ese informe, tu reclamación carece de base técnica y será rechazada en todos los casos.
 </div>
 
+Si todavía no sabes si tu certificado tiene errores, [descubre las señales de alerta aquí](/blog/certificado-energetico-incorrecto/).
+
 ## ¿Se puede reclamar un certificado energético incorrecto?
 
 La respuesta corta es **sí**, pero con matices importantes. Reclamar un certificado energético no es como reclamar un producto defectuoso en una tienda. Necesitas un **procedimiento técnico previo** que demuestre, con datos objetivos, que el certificado original contiene errores.
@@ -36,52 +38,6 @@ No todos los errores tienen la misma gravedad. Estos son los que puedes reclamar
 - ⚠️ Pequeñas discrepancias en los datos del inmueble
 
 > **Dato clave:** Según el IDAE, aproximadamente un **15-20% de los certificados energéticos** presentan errores graves que los invalidan. En certificados de menos de 50€ (sin visita presencial), esa cifra supera el **90%**.
-
-## ¿Por qué ocurren los errores en los certificados?
-
-La mayoría de errores en certificados energéticos tienen tres causas principales:
-
-### 1. Certificados sin visita presencial
-
-Es la causa más frecuente. El técnico elabora el certificado usando solo los datos del catastro, sin pisar la vivienda. Esto incumple el artículo 6.5 del RD 390/2021 y genera errores en cadena: superficies incorrectas, calificación basada en valores por defecto, ausencia de reformas reales.
-
-**Consecuencia:** El certificado no refleja el estado real de la vivienda. Una vivienda con ventanas climalit y aislamiento puede aparecer con calificación G cuando debería tener una C o D.
-
-### 2. Calificación inflada para contentar al cliente
-
-Algunos técnicos modifican los parámetros de cálculo para obtener la letra que el cliente quiere ver, en lugar de la que realmente corresponde.
-
-**¿A quién perjudica?**
-- Al **comprador**: paga de más porque el Brown Discount se oculta tras una calificación falsa
-- Al **vendedor honesto**: compite en desventaja contra vendedores que inflan certificados
-
-### 3. Desconocimiento técnico del certificador
-
-No todos los técnicos tienen la misma experiencia. Un error en la introducción de datos en el software de cálculo puede cambiar la calificación en una o dos letras.
-
-## Consecuencias de un certificado incorrecto
-
-Las consecuencias económicas de un certificado con errores son significativas:
-
-| Tipo de error | Consecuencia económica |
-|--------------|----------------------|
-| Calificación inflada (Ej: G → C) | El comprador paga entre 13.500€ y 40.500€ de más (Brown Discount del 5-15% sobre 270.000€) |
-| Calificación deflactada (Ej: C → G) | El vendedor pierde entre 13.500€ y 40.500€ de valor de venta |
-| Certificado inválido | Sanción de 600€ a 6.000€ por usar un certificado no válido |
-| Retraso en compraventa | La operación se bloquea hasta tener un certificado válido |
-
-Un aspecto que pocos conocen es el **Brown Discount**: la pérdida de valor que sufre una vivienda por tener una mala calificación energética. [Descubre cómo te afecta →](/brown-discount/)
-
-## ¿Qué puedes hacer por tu cuenta antes de reclamar?
-
-Antes de iniciar una reclamación formal, puedes hacer estas comprobaciones rápidas:
-
-1. **Verifica el número de colegiado** del técnico en el colegio profesional correspondiente (Arquitectos, Aparejadores o Ingenieros)
-2. **Comprueba la fecha de visita presencial** — si no aparece, el certificado es nulo
-3. **Busca el número de registro** autonómico — sin registro, no tiene validez legal
-4. **Compara la calificación con el consumo real** — si tu factura es de 400€/año y el certificado dice G (consumo >200 kWh/m²), algo no cuadra
-
-Sin embargo, para una reclamación formal necesitas algo más: **un dictamen técnico firmado por otro profesional**. Y ahí es donde entra la Segunda Opinión de Certilab.
 
 ## ¿Cómo es el proceso legal de reclamación?
 
@@ -106,6 +62,30 @@ Para que tu reclamación prospere, necesitas:
 4. **Fotografías** de la vivienda que acrediten reformas no reflejadas en el certificado
 5. **Justificante de pago** del certificado original
 
+## Responsabilidades legales del técnico certificador
+
+El técnico que firma un certificado incorrecto asume varias responsabilidades legales y profesionales.
+
+**Responsabilidad civil profesional.** El técnico responde con su patrimonio si el certificado erróneo causa daños económicos. Por ejemplo, si un comprador paga de más por una calificación inflada, puede reclamar esa diferencia al técnico directamente.
+
+**Responsabilidad ante el colegio profesional.** El colegio profesional puede abrir expediente disciplinario, suspender la colegiación temporalmente o imponer sanciones económicas. Esto afecta directamente a su capacidad de ejercer la profesión.
+
+**Responsabilidad administrativa.** La administración autonómica (ICAEN en Cataluña) puede sancionar con multas de **300€ a 6.000€** por certificados fraudulentos, sin visita presencial o con datos falsos. Las sanciones más graves pueden llegar a **10.000€**.
+
+**Responsabilidad penal.** En casos de fraude grave o falsificación de datos, el técnico puede enfrentar cargos penales por estafa o falsedad documental.
+
+**Plazo de reclamación por responsabilidad profesional.** A diferencia del plazo de vicios ocultos (6 meses), la reclamación por responsabilidad profesional prescribe a los **10 años** desde la emisión del certificado. Esto te da margen para actuar.
+
+## ¿Necesitas un abogado o basta con un informe técnico?
+
+Depende del tipo de reclamación y de la cantidad en juego.
+
+**Reclamación administrativa (colegio profesional o administración).** No necesitas abogado. Con el dictamen técnico firmado puedes iniciar el procedimiento por tu cuenta. Es un trámite administrativo que no requiere representación legal. El colegio profesional y la administración autonómica tienen procedimientos específicos para reclamaciones sin necesidad de abogado.
+
+**Reclamación civil por daños (si ya compraste).** Aquí sí es recomendable contar con abogado, sobre todo si la cantidad reclamada supera los 10.000€. El informe técnico será la prueba pericial que tu abogado presentará ante el juzgado. Un abogado especializado en derecho inmobiliario puede ayudarte a cuantificar el daño y presentar la demanda correctamente.
+
+**Coste orientativo.** Un abogado especializado puede costar entre 300€ y 600€ para una reclamación extrajudicial, y entre 1.000€ y 3.000€ si llega a juicio. El informe técnico de Certilab cuesta 59€ y sirve como prueba pericial en ambos casos. Si el error es grave, el coste del informe es recuperable en la reclamación.
+
 ## Preguntas frecuentes sobre reclamar el certificado energético
 
 **¿Puedo reclamar si el certificado lo pagó el vendedor?**
@@ -117,7 +97,31 @@ El coste principal es el dictamen técnico independiente (59€ con Certilab). L
 **¿Prescriben las reclamaciones por certificado incorrecto?**
 Sí, el plazo general de prescripción es de **3 años** desde que conoces el error. No dejes pasar el tiempo: cuanto antes actúes, más fácil será demostrar el perjuicio.
 
+**¿Y si solo quiero saber si mi certificado está mal?**
+Si aún no sabes si tu certificado tiene errores, [aquí te explicamos cómo detectarlos](/blog/certificado-energetico-incorrecto/). Para reclamar necesitas el dictamen técnico.
+
 ---
 
-**Antes de reclamar necesitas un dictamen técnico firmado. La Segunda Opinión de Certilab te da ese documento por 59€ IVA incluido en 24-48h.**
-[Solicitar Segunda Opinión →](/segunda-opinion/)
+## Próximos pasos
+
+Tienes dos opciones según tu situación:
+
+<div class="cta-doble">
+  <div class="cta-opcion">
+    <h3>Si aún no has verificado tu certificado</h3>
+    <p>Descubre si tiene errores con una Segunda Opinión. Por 59€ te confirmamos si tu certificado es fiable o contiene errores que te pueden costar dinero.</p>
+    <a href="/segunda-opinion/" class="cta-button">
+      Segunda Opinión →
+    </a>
+    <p class="cta-subtexto">Respuesta en 24-48h · Firmado por arquitecta colegiada CATEB 9457</p>
+  </div>
+  
+  <div class="cta-opcion">
+    <h3>Si necesitas pruebas para reclamar</h3>
+    <p>El Informe Técnico es el documento que necesitas para reclamar ante el técnico, el colegio profesional o la administración. Incluye análisis detallado y conclusiones técnicas firmadas.</p>
+    <a href="/informe-tecnico-energetico/" class="cta-button">
+      Informe Técnico →
+    </a>
+    <p class="cta-subtexto">Análisis completo · Válido como prueba pericial · 399€</p>
+  </div>
+</div>
