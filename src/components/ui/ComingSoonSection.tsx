@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./ComingSoonSection.module.css";
+import { CONTACTO } from "@/config";
 
 interface Props {
   serviceName: string;
@@ -26,7 +27,7 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
     setSent(true);
   };
 
-  const mailtoHref = `mailto:info@certilab.cat?subject=Interes%20en%20${encodeURIComponent(serviceName)}&body=Hola,%20estoy%20interesado%20en%20el%20servicio%20${encodeURIComponent(serviceName)}%20(${serviceUrl}).%20Avisadme%20cuando%20este%20disponible.%0A%0AMi%20email:%20${encodeURIComponent(email)}`;
+  const mailtoHref = `mailto:${CONTACTO.email}?subject=Interes%20en%20${encodeURIComponent(serviceName)}&body=Hola,%20estoy%20interesado%20en%20el%20servicio%20${encodeURIComponent(serviceName)}%20(${serviceUrl}).%20Avisadme%20cuando%20este%20disponible.%0A%0AMi%20email:%20${encodeURIComponent(email)}`;
 
   return (
     <section className={styles.comingSoonSection} id="coming-soon">

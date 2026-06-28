@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { footerLegal } from "@/data/navigation";
+import { COMPANY, RESPONSABLE, CONTACTO } from "@/config";
 
 export default function Footer() {
   return (
@@ -7,12 +8,12 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <p>
-            <strong>Certilab</strong> · Despacho de Auditoría Energética
+            <strong>{COMPANY.marca}</strong> · Despacho de Auditoría Energética
             <br />
-            Eva María González García · Arquitecta Técnica colegiada · Colegio de Arquitectos Técnicos de Barcelona
+            {RESPONSABLE.nombreCompleto} · {RESPONSABLE.titulo} colegiada · Colegio de Arquitectos Técnicos de Barcelona
           </p>
           <div className="footer-contacto">
-            <a href="mailto:info@certilab.cat">info@certilab.cat</a>
+            <a href={`mailto:${CONTACTO.email}`}>{CONTACTO.email}</a>
           </div>
         </div>
 
@@ -32,7 +33,7 @@ export default function Footer() {
       </div>
 
       <p className="footer-copy">
-        © 2026 Certilab · Todos los derechos reservados
+        {COMPANY.copyright} · Todos los derechos reservados
       </p>
 
     </footer>

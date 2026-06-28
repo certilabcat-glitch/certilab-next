@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./saas.css";
+import { CONTACTO } from "@/config";
 
 export const metadata: Metadata = {
   title: {
@@ -76,7 +77,7 @@ export default function SaasLayout({
           <div className="saas-footer-col">
             <h4>Contacto</h4>
             <a href="https://wa.me/34608515922">WhatsApp</a>
-            <a href="mailto:info@certilab.cat">info@certilab.cat</a>
+            <a href="mailto:${CONTACTO.email}">{CONTACTO.email}</a>
           </div>
         </div>
         <div className="saas-footer-bottom">

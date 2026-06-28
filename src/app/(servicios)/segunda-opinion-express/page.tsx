@@ -1,3 +1,4 @@
+import { COMPANY, CONTACTO, RESPONSABLE } from "@/config";
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import HeroSection from "@/components/sections/HeroSection";
@@ -193,9 +194,9 @@ export default function SegundaOpinionExpressPage() {
              url: "https://www.certilab.cat/segunda-opinion-express/",
              provider: {
                "@type": "ProfessionalService",
-               name: "Certilab - Eva María González García",
-               telephone: "+34608515922",
-               email: "info@certilab.cat",
+               name: `${COMPANY.marca} - ${RESPONSABLE.nombreCompleto}`,
+               telephone: `+34${CONTACTO.whatsappNumero.slice(3)}`,
+               email: CONTACTO.email,
                areaServed: { "@type": "Country", name: "ES" },
              },
              areaServed: { "@type": "Country", name: "España" },
@@ -239,7 +240,7 @@ export default function SegundaOpinionExpressPage() {
                 "@type": "HowToStep",
                 position: 1,
                 name: "Solicita por WhatsApp",
-                text: "Contáctanos al 608 51 59 22 con tu certificado y la dirección del inmueble.",
+                text: "Contáctanos al {CONTACTO.whatsappFormateado} con tu certificado y la dirección del inmueble.",
               },
               {
                 "@type": "HowToStep",

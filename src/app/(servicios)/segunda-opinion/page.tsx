@@ -1,3 +1,4 @@
+import { COMPANY, CONTACTO, RESPONSABLE } from "@/config";
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import HeroSection from "@/components/sections/HeroSection";
@@ -210,9 +211,9 @@ export default function SegundaOpinionPage() {
              url: "https://www.certilab.cat/segunda-opinion/",
              provider: {
                "@type": "ProfessionalService",
-               name: "Certilab - Eva María González García",
-               telephone: "+34608515922",
-               email: "info@certilab.cat",
+               name: `${COMPANY.marca} - ${RESPONSABLE.nombreCompleto}`,
+               telephone: `+34${CONTACTO.whatsappNumero.slice(3)}`,
+               email: CONTACTO.email,
                areaServed: { "@type": "Country", name: "ES" },
              },
              areaServed: { "@type": "Country", name: "España" },
@@ -265,7 +266,7 @@ export default function SegundaOpinionPage() {
                 "@type": "HowToStep",
                 position: 1,
                 name: "Envíanos tu certificado",
-                text: "Mándanos tu certificado energético por WhatsApp al 608 51 59 22 o a través del formulario de la web. Solo necesitas el PDF y la dirección del inmueble.",
+                text: "Mándanos tu certificado energético por WhatsApp al {CONTACTO.whatsappFormateado} o a través del formulario de la web. Solo necesitas el PDF y la dirección del inmueble.",
                 image: "https://www.certilab.cat/og-image.jpg",
               },
               {

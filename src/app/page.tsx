@@ -8,6 +8,7 @@ import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
 import TrustBlockSection from "@/components/sections/TrustBlockSection";
 import { homeFaq } from "@/data/faq";
+import { PRECIOS, fmtPrecio } from "@/config/pricing";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default function HomePage() {
           "20 años de experiencia",
           "Seguro RC Profesional",
         ]}
-        ctaPrimary={{ label: "Revisar mi certificado por 59€", href: "/segunda-opinion/" }}
+        ctaPrimary={{ label: `Revisar mi certificado por ${fmtPrecio(PRECIOS.segundaOpinion)}`, href: "/segunda-opinion/" }}
         ctaSecondary={{
           label: "Cómo funciona →",
           href: "#servicios",
@@ -58,7 +59,7 @@ export default function HomePage() {
       <CTASection
         title="¿Listo para proteger tu inversión?"
         text="Analizamos tu certificado energético de forma rigurosa. 100% online y remoto, sin visitas presenciales. Recibe tu Segunda Opinión en 24h. Sin compromiso."
-        buttonText="Revisar mi certificado por 59€"
+        buttonText={`Revisar mi certificado por ${fmtPrecio(PRECIOS.segundaOpinion)}`}
         buttonHref="/segunda-opinion/"
       />
 

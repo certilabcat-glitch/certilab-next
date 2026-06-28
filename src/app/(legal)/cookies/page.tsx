@@ -1,3 +1,4 @@
+import { CONTACTO } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -118,8 +119,8 @@ export default function Cookies() {
         Para cualquier duda sobre esta política de cookies:
       </p>
       <ul>
-        <li>Email: info@certilab.cat</li>
-        <li>Teléfono: +34 722 437 675</li>
+        <li>Email: {CONTACTO.email}</li>
+        <li>Teléfono: {CONTACTO.telefonoFormateado}</li>
         <li>Formulario de contacto: disponible en el sitio web</li>
       </ul>
 

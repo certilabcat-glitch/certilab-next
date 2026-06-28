@@ -1,3 +1,4 @@
+import { COMPANY, CONTACTO, RESPONSABLE } from "@/config";
 import type { Metadata } from "next";
 import InformeTecnicoContent from "./InformeTecnicoContent";
 
@@ -39,9 +40,9 @@ export default function InformeTecnicoPage() {
                url: "https://www.certilab.cat/informe-tecnico-energetico/",
                provider: {
                  "@type": "ProfessionalService",
-                 name: "Certilab - Eva María González García",
-                 telephone: "+34608515922",
-                 email: "info@certilab.cat",
+                 name: `${COMPANY.marca} - ${RESPONSABLE.nombreCompleto}`,
+                 telephone: `+34${CONTACTO.whatsappNumero.slice(3)}`,
+                 email: CONTACTO.email,
                  areaServed: { "@type": "Country", name: "ES" },
                },
                areaServed: { "@type": "Country", name: "España" },

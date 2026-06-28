@@ -1,3 +1,4 @@
+import { CONTACTO } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,10 +26,10 @@ export default function AvisoLegal() {
         <strong>Domicilio:</strong> C/ Pau Claris 163, 4º 2ª, 08037 Barcelona (España)
       </p>
       <p>
-        <strong>Teléfono:</strong> +34 722 437 675
+        <strong>Teléfono:</strong> {CONTACTO.telefonoFormateado}
       </p>
       <p>
-        <strong>Email:</strong> info@certilab.cat
+        <strong>Email:</strong> {CONTACTO.email}
       </p>
 
       <h2>2. Objeto del Sitio Web</h2>
@@ -112,8 +113,8 @@ export default function AvisoLegal() {
         Para cualquier duda o consulta sobre este aviso legal, puede contactar con Certilab a través de:
       </p>
       <ul>
-        <li>Email: info@certilab.cat</li>
-        <li>Teléfono: +34 722 437 675</li>
+        <li>Email: {CONTACTO.email}</li>
+        <li>Teléfono: {CONTACTO.telefonoFormateado}</li>
         <li>Formulario de contacto: disponible en el sitio web</li>
       </ul>
 

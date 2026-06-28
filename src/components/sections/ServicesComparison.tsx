@@ -1,4 +1,5 @@
 "use client";
+import { PRECIOS, fmtPrecio } from "@/config/pricing";
 
 import styles from "./ServicesComparison.module.css";
 
@@ -58,15 +59,15 @@ export default function ServicesComparison() {
                 <th className={styles.featureCol}>Característica</th>
                 <th className={styles.serviceCol}>
                   <span className={styles.serviceName}>Segunda Opinión</span>
-                  <span className={styles.servicePrice}>59€</span>
+                  <span className={styles.servicePrice}>{fmtPrecio(PRECIOS.segundaOpinion)}</span>
                 </th>
                 <th className={styles.serviceCol}>
                   <span className={styles.serviceName}>Express</span>
-                  <span className={styles.servicePrice}>79€</span>
+                  <span className={styles.servicePrice}>{fmtPrecio(PRECIOS.segundaOpinionExpress)}</span>
                 </th>
                 <th className={styles.serviceCol}>
                   <span className={styles.serviceName}>Informe Técnico</span>
-                  <span className={styles.servicePrice}>399€</span>
+                  <span className={styles.servicePrice}>{fmtPrecio(PRECIOS.informeTecnico)}</span>
                 </th>
               </tr>
             </thead>

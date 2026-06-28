@@ -1,3 +1,4 @@
+import { CONTACTO } from "@/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,10 +20,10 @@ export default function Privacidad() {
         <strong>Responsable:</strong> Eva María González García
       </p>
       <p>
-        <strong>Email:</strong> info@certilab.cat
+        <strong>Email:</strong> {CONTACTO.email}
       </p>
       <p>
-        <strong>Teléfono:</strong> +34 722 437 675
+        <strong>Teléfono:</strong> {CONTACTO.telefonoFormateado}
       </p>
 
       <h2>2. Información sobre el Tratamiento de Datos</h2>
@@ -101,7 +102,7 @@ export default function Privacidad() {
         <li><strong>Oposición:</strong> oponerte al tratamiento de tus datos.</li>
       </ul>
       <p>
-        Para ejercer estos derechos, contacta con nosotros en info@certilab.cat.
+        Para ejercer estos derechos, contacta con nosotros en {CONTACTO.email}.
       </p>
 
       <h2>9. Cookies</h2>
@@ -143,8 +144,8 @@ export default function Privacidad() {
         Para cualquier duda sobre esta política o para ejercer tus derechos:
       </p>
       <ul>
-        <li>Email: info@certilab.cat</li>
-        <li>Teléfono: +34 722 437 675</li>
+        <li>Email: {CONTACTO.email}</li>
+        <li>Teléfono: {CONTACTO.telefonoFormateado}</li>
         <li>Formulario de contacto: disponible en el sitio web</li>
       </ul>
       <p>
