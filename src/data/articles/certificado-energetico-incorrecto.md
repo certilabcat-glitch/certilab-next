@@ -17,7 +17,7 @@ canonicalUrl: https://certilab.cat/blog/certificado-energetico-incorrecto/
   </p>
 </div>
 
-Tu certificado energético puede estar mal. Y puede costarte hasta <strong>40.000€</strong> en una vivienda de 270.000€. Los errores en certificados son más frecuentes de lo que crees — y la mayoría de propietarios los descubren demasiado tarde.
+Tu certificado energético puede estar mal. Y puede costarte hasta <strong>40.000€</strong> en una vivienda de 270.000€. Los errores en certificados son más frecuentes de lo que crees — y la mayoría de propietarios los detectan demasiado tarde.
 
 <div class="respuesta-directa">
 Un certificado energético incorrecto es aquel que no refleja la realidad energética del inmueble. Puede contener datos inventados, calificaciones infladas o errores técnicos graves. Según el RD 390/2021, un certificado sin visita presencial del técnico es nulo de pleno derecho. Se puede detectar y reclamar.
@@ -66,9 +66,9 @@ Hay señales que cualquier propietario puede identificar sin ser técnico.
 
 <strong>Orientación equivocada:</strong> una vivienda orientada al norte con calificación B es técnicamente sospechosa.
 
-<strong>Instalaciones que no existen:</strong> si el certificado menciona caldera de condensación y tienes una caldera estándar de 15 años, los datos son falsos.
+<strong>Instalaciones que no existen:</strong> si el certificado menciona caldera de condensación y tienes una caldera estándar de 15 años, los datos no son correctos.
 
-<strong>Aislamiento inventado:</strong> si indica aislamiento térmico de 6cm y tus muros son de ladrillo simple sin cámara de aire, es fraudulento.
+<strong>Aislamiento inventado:</strong> si indica aislamiento térmico de 6cm y tus muros son de ladrillo simple sin cámara de aire, el certificado es incorrecto.
 
 <div class="cta-bloque">
   <a href="/segunda-opinion/" class="cta-button">

@@ -25,9 +25,9 @@ export default function ProblemSection() {
         <div className="problem-card">
           <h3>Independencia y transparencia</h3>
           <p>
-            Trabajamos sin conflictos de interés. Nuestro único objetivo es
-            ofrecerle una evaluación técnica honesta que le permita tomar
-            decisiones informadas con total confianza.
+            Sin conflictos de interés. El objetivo es
+            ofrecerte una evaluación técnica honesta para que puedas decidir
+            con información real.
           </p>
         </div>
         <div className="problem-card">
@@ -40,9 +40,9 @@ export default function ProblemSection() {
         </div>
       </div>
       <p className={styles["problem-afirmacion"]}>
-        En Certilab ofrecemos{" "}
+        {" "}
         <strong>
-          análisis técnico con responsabilidad profesional real.
+          Análisis técnico con responsabilidad profesional real.
         </strong>
       </p>
       <p className={styles["problem-data"]}>
@@ -51,7 +51,7 @@ export default function ProblemSection() {
         de mercado. Eso son hasta <strong>40.000€</strong> en una vivienda de
         270.000€.{" "}
         <Link href="/blog/brown-discount-precio-vivienda/">
-          Descubra qué es el Brown Discount →
+          Qué es el Brown Discount →
         </Link>
       </p>
 

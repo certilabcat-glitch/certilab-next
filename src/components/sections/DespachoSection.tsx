@@ -17,8 +17,8 @@ export default function DespachoSection() {
           <strong>Eva María González García</strong>,{" "}
           Arquitecta Técnica colegiada por el{" "}
           Colegio de Arquitectos Técnicos de Barcelona, realiza un análisis
-          riguroso e independiente de su certificado energético para que usted
-          pueda tomar la mejor decisión.
+          riguroso e independiente de tu certificado energético para que
+          puedas tomar la mejor decisión.
         </p>
 
         <div className={styles.badges}>

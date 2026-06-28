@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import HeroSection from "@/components/sections/HeroSection";
 import FAQSection from "@/components/sections/FAQSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import ServicesComparison from "@/components/sections/ServicesComparison";
+
 import { segundaOpinionFaq } from "@/data/faq";
 import { waUrl } from "@/lib/wa";
 import styles from "./SegundaOpinion.module.css";
@@ -35,19 +35,19 @@ export default function SegundaOpinionPage() {
       <HeroSection
         eyebrow="¿Confías en que la letra de tu certificado energético es real?"
         title="La Segunda Opinión que te saca de dudas"
-        subtitle="Por 59€ IVA incluido revisamos su certificado, detectamos calificaciones infladas, errores técnicos y Brown Discount. Le decimos si su certificado refleja la realidad técnica de su inmueble o si contiene errores que le pueden costar dinero. Sin desplazamientos."
+        subtitle="Por 59€ IVA incluido analizamos tu certificado. Detectamos calificaciones infladas, errores técnicos y Brown Discount. Te decimos si tu certificado refleja la realidad técnica del inmueble o si contiene discrepancias. Sin desplazamientos."
         badges={["Colegiada CATEB Barcelona", "24-48h", "100% remoto"]}
         price="59 €"
         priceOld="69 €"
         credentials=""
         rating={{ value: 4.9, count: 87 }}
         ctaPrimary={{ label: "Solicitar Segunda Opinión", href: waUrl("Hola, quiero solicitar la Segunda Opinión de mi certificado energético (59€).") }}
-        ctaSecondary={{ label: "Express 4h (79€) →", href: "/segunda-opinion-express/" }}
-        nota="Precio cerrado sin sorpresas (IVA incluido). Si lo necesita urgente, dispone de la Segunda Opinión Express con entrega en 4 horas."
+
+        nota="Precio cerrado sin sorpresas (IVA incluido)."
       >
         <p className={styles["hero-garantia"]}>
           <span className={styles["hero-garantia-icon"]}>&#9432;</span>
-          Por 59 € obtienes tranquilidad: si tu certificado es correcto, lo validamos; si tiene errores, los detectamos. Sales ganando siempre.
+          Por 59 €, si tu certificado es correcto lo confirmamos. Si tiene errores, los detectamos y te explicamos el impacto.
         </p>
         <p className={styles["hero-nota"]}>
           <strong>Brown Discount:</strong> pérdida de valor del inmueble por mala calificación energética. Hasta un 15% menos en el precio de venta.
@@ -61,7 +61,7 @@ export default function SegundaOpinionPage() {
       <section className={`${styles.section} ${styles["audience-section"]}`}>
         <h2 className={styles["section-title"]}>El problema que resuelve la Segunda Opinión</h2>
         <p className={styles["section-sub"]}>
-          Cada situaci&oacute;n requiere una respuesta distinta. Descubre c&oacute;mo te afecta tu certificado energ&eacute;tico.
+          Cada situaci&oacute;n requiere una respuesta distinta. Mira c&oacute;mo te afecta tu certificado energ&eacute;tico.
         </p>
         <div className={styles["audience-grid"]}>
           <div className={styles["audience-card"]}>
@@ -112,7 +112,7 @@ export default function SegundaOpinionPage() {
           </div>
         </div>
         <div className={styles["roi-contrast-cta"]}>
-          <a href={waUrl("Hola, quiero proteger mi inversión con la Segunda Opinión de mi certificado energético.")} className={styles["roi-contrast-button"]}>Proteger mi inversión por 59€ →</a>
+          <a href={waUrl("Hola, quiero proteger mi inversión con la Segunda Opinión de mi certificado energético.")} className={styles["roi-contrast-button"]}>Solicitar Segunda Opinión por 59€ →</a>
         </div>
       </section>
 
@@ -177,17 +177,17 @@ export default function SegundaOpinionPage() {
           <div className={styles["trust-reason-card"]}>
             <div className={styles["trust-reason-num"]}>02</div>
             <h3>Responsabilidad profesional</h3>
-            <p>Eva María González García, colegiada CATEB 9457, con seguro de responsabilidad civil. Firmamos lo que dictaminamos.</p>
+            <p>Eva María González García, colegiada CATEB 9457, con seguro de responsabilidad civil. Cada dictamen está firmado por la arquitecta técnica responsable.</p>
           </div>
           <div className={styles["trust-reason-card"]}>
             <div className={styles["trust-reason-num"]}>03</div>
             <h3>Independencia total</h3>
-            <p>No compramos, no vendemos, no intermediarios. Actuamos como peritos independientes: no nos beneficia que compres, vendas o alquiles. Solo nos importa la verdad técnica de tu certificado.</p>
+            <p>Sin compra, sin venta, sin intermediarios. Un peritaje independiente: el resultado no cambia si compras, vendes o alquilas. Solo importa la verdad técnica de tu certificado.</p>
           </div>
           <div className={styles["trust-reason-card"]}>
             <div className={styles["trust-reason-num"]}>04</div>
             <h3>Sin esperas ni papeleo</h3>
-            <p>100% online. Envíanos tu PDF por WhatsApp y recibe tu informe en 24-48h. Sin desplazarte, sin llamadas, sin compromiso.</p>
+            <p>100% online. Envías tu PDF por WhatsApp y recibes tu informe en 24-48h. Sin desplazarte, sin llamadas, sin compromiso.</p>
           </div>
         </div>
       </section>
@@ -322,8 +322,8 @@ export default function SegundaOpinionPage() {
          }}
        />
 
-       {/* ===== COMPARATIVA DE SERVICIOS ===== */}
-       <ServicesComparison />
+       
+       
     </>
   );
 }

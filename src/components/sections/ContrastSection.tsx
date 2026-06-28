@@ -9,7 +9,7 @@ export default function ContrastSection() {
         No todos los análisis son iguales
       </h2>
       <p className="section-sub">
-        Y su patrimonio no merece atajos. Compare lo que hay detrás de cada tipo
+        Y tu patrimonio no merece atajos. Compara lo que hay detrás de cada tipo
         de informe.
       </p>
       <div className={styles["contraste-duo"]}>
@@ -30,8 +30,8 @@ export default function ContrastSection() {
           <ul>
             <li>Revisado por arquitecta técnica colegiada, Cateb 9457</li>
             <li>Con seguro de responsabilidad civil profesional</li>
-            <li>Análisis basado en documentación real de su inmueble</li>
-            <li>Detecta el Brown Discount antes de que afecte a su precio</li>
+            <li>Análisis basado en documentación real de tu inmueble</li>
+            <li>Detecta el Brown Discount antes de que afecte a tu precio</li>
             <li>Informe de 10-15 páginas con validez ante notario y banco</li>
           </ul>
         </div>

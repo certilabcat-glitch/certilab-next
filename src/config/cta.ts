@@ -40,7 +40,7 @@ export const CATALOGO_CTAS: Record<string, CtaOficial> = {
   },
   "home-listopro": {
     id: "home-listopro",
-    texto: "¿Listo para proteger tu inversión?",
+    texto: "¿Quieres saber si tu certificado es fiable?",
     tipo: "primario",
     href: "/segunda-opinion/",
     paginas: ["home"],

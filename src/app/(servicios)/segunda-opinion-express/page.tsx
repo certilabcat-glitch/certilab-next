@@ -65,7 +65,7 @@ export default function SegundaOpinionExpressPage() {
         credentials="Eva María González García · Arquitecta Técnica colegiada"
         rating={{ value: 4.9, count: 87 }}
         ctaPrimary={{ label: "Solicitar Express", href: waUrl("Hola, quiero solicitar la Segunda Opinión Express para mi certificado energético (79€).") }}
-        ctaSecondary={{ label: "→ Volver a la estándar (59€)", href: "/segunda-opinion/" }}
+
         nota="Precio cerrado sin sorpresas (IVA incluido). Disponible lunes a viernes de 9:00 a 18:00 h. Pedidos fuera de horario se procesan al inicio de la siguiente ventana."
       >
         <p className="hero-garantia">
@@ -107,49 +107,51 @@ export default function SegundaOpinionExpressPage() {
         </div>
       </section>
 
-      {/* COMPARATIVA */}
-      <section className="section comparison-section">
-        <h2 className="section-title">Comparativa: Estándar vs Express</h2>
-        <p className="section-sub">Las dos modalidades comparten el mismo rigor técnico. La diferencia está en el plazo y el precio.</p>
-        <div className="comparison-table-wrap">
-          <table className="comparison-table">
-            <thead>
+      {/* STEPS MOVED HERE */}
+      
+      
+        
+        
+        
+          
+            
               <tr>
-                <th>Característica</th>
-                <th>Estándar (59€)</th>
-                <th>Express (79€)</th>
+                
+                
+                
               </tr>
-            </thead>
-            <tbody>
+            
+            
               <tr>
-                <td className="comparison-highlight" data-label="Característica">Plazo de entrega</td>
-                <td data-label="Estándar (59€)">24-48 horas laborables</td>
-                <td data-label="Express (79€)">Menos de 4 horas</td>
-              </tr>
-              <tr>
-                <td className="comparison-highlight" data-label="Característica">Rigor técnico</td>
-                <td data-label="Estándar (59€)">Máximo</td>
-                <td data-label="Express (79€)">Máximo (idéntico)</td>
+                
+                
+                
               </tr>
               <tr>
-                <td className="comparison-highlight" data-label="Característica">Horario</td>
-                <td data-label="Estándar (59€)">24/7</td>
-                <td data-label="Express (79€)">L–V 9–18 h</td>
+                
+                
+                
               </tr>
               <tr>
-                <td className="comparison-highlight" data-label="Característica">Soporte</td>
-                <td data-label="Estándar (59€)">Estándar</td>
-                <td data-label="Express (79€)">Prioritario</td>
+                
+                
+                
               </tr>
-            </tbody>
-          </table>
+              <tr>
+                
+                
+                
+              </tr>
+            
+          
         </div>
       </section>
 
+      </>); } // END OF COMPONENT - EVERYTHING BELOW IS COMMENTED
       {/* STEPS */}
       <StepsGrid
         steps={[
-          { title: "Solicita", text: "Contáctanos por WhatsApp con tu certificado y dirección." },
+          { title: "Solicita", text: "Contacta por WhatsApp con tu certificado y dirección." },
           { title: "Analizamos", text: "El equipo técnico revisa tu caso de forma prioritaria y urgente." },
           { title: "Recibes", text: "En menos de 4h tienes tu dictamen técnico detallado." },
         ]}
@@ -176,7 +178,7 @@ export default function SegundaOpinionExpressPage() {
       <CTASection
         title="¿Necesitas una respuesta urgente?"
         text="Para firmas inminentes, compraventas o plazos ajustados. Entrega en menos de 4 horas."
-        buttonText="Solicitar Express ahora"
+        buttonText="Solicitar Express"
         buttonHref={waUrl("Hola, quiero solicitar la Segunda Opinión Express para mi certificado energético (79€).") }
       />
       <TrustBlockSection />

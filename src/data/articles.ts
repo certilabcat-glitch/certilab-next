@@ -129,7 +129,7 @@ Puedes reclamar al vendedor por vicios ocultos hasta <strong>6 meses</strong> de
 ## Preguntas frecuentes
 
 <strong>¿Puedo reclamar si compré hace más de 6 meses?</strong>
-El plazo de vicios ocultos es de 6 meses desde la entrega. Pero si el certificado era fraudulento, puedes reclamar responsabilidad profesional al técnico hasta 10 años después de la emisión.
+El plazo de vicios ocultos es de 6 meses desde la entrega. Pero si el certificado tenía errores graves, puedes reclamar responsabilidad profesional al técnico hasta 10 años después de la emisión.
 
 <strong>¿Cómo sé si mi certificado tiene visita presencial real?</strong>
 Pide al técnico la fecha exacta y las fotografías tomadas durante la inspección. Si no puede aportarlas, es una señal de alerta.
@@ -3033,7 +3033,7 @@ No anula la compraventa, pero puedes reclamar daños y perjuicios si demuestras 
     slug: "certificado-energetico-f-g-correcto-o-error",
     title: "Certificado energético F o G: ¿es correcto o está mal calculado?",
     excerpt:
-      "Una calificación F o G en tu certificado puede ser correcta o un error del técnico. Descubre cómo saberlo y qué hacer en cada caso, con un dictamen técnico por 59€.",
+      "Una calificación F o G en tu certificado puede ser correcta o un error del técnico. Aprende a diferenciarlo y qué hacer en cada caso, con un dictamen técnico por 59€.",
     content: `
 
 <div class="respuesta-directa">

@@ -11,9 +11,9 @@ export default function GuiaDetectaFalsoCE() {
           Guía gratuita · Arquitecta Técnica Cateb 9457
         </p>
         <h1>
-          Guía para Detectar
+          Guía para detectar
           <br />
-          <span className={styles.heroLight}>un Certificado Energético Falso</span>
+          <span className={styles.heroLight}>un Certificado Energético Incorrecto</span>
         </h1>
         <p className={styles.heroSub}>
           ¿Desconfías de tu certificado energético? Cada año se emiten miles de
@@ -22,9 +22,9 @@ export default function GuiaDetectaFalsoCE() {
           técnicos.
         </p>
         <ul className={styles.heroBenefits}>
-          <li>✅ 5 pasos para detectar un certificado falso o mal hecho</li>
-          <li>✅ Diferencias entre errores inocentes y fraudes reales</li>
-          <li>✅ Qué hacer si has comprado una vivienda con certificado fraudulento</li>
+          <li>✅ 5 pasos para detectar un certificado incorrecto</li>
+          <li>✅ Diferencias entre errores técnicos e irregularidades graves</li>
+          <li>✅ Qué hacer si has comprado una vivienda con certificado irregular</li>
           <li>✅ Plantilla de reclamación para exigir una rectificación</li>
         </ul>
       </header>
@@ -50,7 +50,7 @@ export default function GuiaDetectaFalsoCE() {
             <h3>Comprueba los datos del inmueble</h3>
             <p>
               Errores en dirección, superficie o año de construcción son la
-              bandera roja más frecuente en certificados falsificados.
+              bandera roja más frecuente en certificados incorrectos.
             </p>
           </div>
           <div className={styles.previewCard}>
@@ -74,7 +74,7 @@ export default function GuiaDetectaFalsoCE() {
             <span className={styles.previewNum}>5</span>
             <h3>Actúa y reclama</h3>
             <p>
-              Pasos concretos para denunciar un certificado fraudulento ante
+              Pasos concretos para denunciar un certificado irregular ante
               el colegio profesional y el organismo competente de tu región.
             </p>
           </div>

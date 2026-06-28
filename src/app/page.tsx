@@ -30,7 +30,7 @@ export default function HomePage() {
       <HeroSection
         eyebrow="Despacho de Auditoría Energética · Análisis forense"
         title="Certilab · Arquitectura Técnica Forense y Consultoría Energética"
-        subtitle="Analizamos su certificado energético de forma rigurosa e independiente. 100% online y remoto, sin visitas presenciales. Con responsabilidad profesional."
+        subtitle="Análisis riguroso e independiente de tu certificado energético. 100% online y remoto, sin visitas. Con responsabilidad profesional."
         badges={[
           "Arquitecta Técnica colegiada · Cateb 9457",
           "20 años de experiencia",
@@ -57,8 +57,8 @@ export default function HomePage() {
       <FAQSection items={homeFaq} />
 
       <CTASection
-        title="¿Listo para proteger tu inversión?"
-        text="Analizamos tu certificado energético de forma rigurosa. 100% online y remoto, sin visitas presenciales. Recibe tu Segunda Opinión en 24h. Sin compromiso."
+        title="¿Quieres saber si tu certificado es fiable?"
+        text="Revisamos tu certificado energético con rigor técnico. 100% online, sin visitas. Recibes tu dictamen en 24-48h. Sin compromiso."
         buttonText={`Revisar mi certificado por ${fmtPrecio(PRECIOS.segundaOpinion)}`}
         buttonHref="/segunda-opinion/"
       />

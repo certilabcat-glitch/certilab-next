@@ -23,11 +23,11 @@ export const homeFaq: FAQItem[] = [
   },
   {
     q: "¿Esto sustituye a una inspección presencial de un técnico?",
-    a: "No. Nuestro análisis se basa en la documentación que usted nos aporta y en la información disponible del inmueble (catastro, registros públicos, documentación técnica). No realizamos visitas presenciales. Si necesita una inspección física, deberá contratar a un técnico local para esa labor.",
+    a: "No. Nuestro análisis se basa en la documentación que nos aportas y en la información disponible del inmueble (catastro, registros públicos, documentación técnica). No realizamos visitas presenciales. Si necesitas una inspección física, deberás contratar a un técnico local para esa labor.",
   },
   {
     q: "¿Qué valor aporta el Check-Up Inmobiliario respecto a otras opciones?",
-    a: "El Check-Up Inmobiliario incluye una revisión exhaustiva de la documentación registral, catastral y del certificado energético que otros servicios no ofrecen. Además, incorpora la detección de posibles riesgos y un análisis del impacto del Brown Discount en el valor del inmueble. Es una inversión que le proporciona seguridad y conocimiento antes de formalizar una compra.",
+    a: "El Check-Up Inmobiliario incluye una revisión exhaustiva de la documentación registral, catastral y del certificado energético que otros servicios no ofrecen. Además, incorpora la detección de posibles riesgos y un análisis del impacto del Brown Discount en el valor del inmueble. Es un análisis que te aporta información objetiva y conocimiento antes de formalizar una compra.",
   },
   {
     q: "¿Los informes de Certilab son válidos para un procedimiento judicial?",
@@ -66,7 +66,7 @@ export const segundaOpinionFaq: FAQItem[] = [
   },
   {
     q: "¿Qué pasa si tras la revisión el certificado resulta ser correcto?",
-    a: "Entonces has hecho la mejor inversión de 59 € posible. Si el certificado está bien emitido y la calificación es correcta, te entregamos un informe firmado que lo valida oficialmente. Esa validación te permite comprar, vender o firmar con total tranquilidad. Además, como reconocimiento a tu confianza, te damos un 30% de descuento en tu próximo servicio (Check‑Up Inmobiliario, Informe Técnico o el que necesites). Sales ganando siempre.",
+    a: "Entonces has hecho la mejor inversión de 59 € posible. Si el certificado está bien emitido y la calificación es correcta, te entregamos un informe firmado que lo valida oficialmente. Esa validación te permite comprar, vender o firmar con total certeza. Además, como reconocimiento a tu confianza, tienes un 30% de descuento en tu próximo servicio (Check‑Up Inmobiliario, Informe Técnico o el que necesites).",
   },
   {
     q: "¿Afecta el Brown Discount al valor de mi piso aunque no lo vaya a vender ahora?",
@@ -77,7 +77,7 @@ export const segundaOpinionFaq: FAQItem[] = [
     a: "Sí, y es uno de los usos más habituales. Si el certificado del vendedor está inflado y nuestro informe demuestra que la calificación real es menor, puedes argumentar una rebaja por el sobrecoste energético futuro y por el Brown Discount asociado. Es una herramienta de negociación real.",
   },
   {
-    q: "¿Puedo reclamar si compré un piso basándome en un certificado energético falso?",
+    q: "¿Puedo reclamar si compré un piso basándome en un certificado energético incorrecto?",
     a: "Nuestro informe no es un dictamen judicial, pero al estar firmado por una arquitecta técnica colegiada (CATEB 9457) con seguro de responsabilidad civil, tiene valor probatorio como prueba pericial de parte. Puedes aportarlo en una reclamación o procedimiento. Te recomendamos consultar con tu abogado para evaluar el caso concreto.",
   },
   {

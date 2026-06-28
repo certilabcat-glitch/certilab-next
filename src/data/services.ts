@@ -5,7 +5,7 @@ export const services: Service[] = [
     slug: "segunda-opinion",
     title: "Segunda Opinión del Certificado Energético",
     description:
-      "Revisamos tu certificado, detectamos errores o inflados y te explicamos qué significa realmente para tu inmueble. Entrega en 24 h.",
+      "Revisión de tu certificado. Detección de errores y explicación del impacto real. Entrega en 24-48h.",
     price: 59,
     badge: "Más solicitado",
     href: "/segunda-opinion/",
@@ -32,7 +32,7 @@ export const services: Service[] = [
     price: 79,
     badge: "Urgente",
     href: "/segunda-opinion-express/",
-    ctaLabel: "Lo necesito ya",
+    ctaLabel: "Solicitar Express",
     features: [
       "Mismo rigor técnico que la estándar",
       "Entrega en 4 horas",
@@ -54,7 +54,7 @@ export const services: Service[] = [
     price: 199,
     badge: "Próximamente",
     href: "/check-up-inmobiliario/",
-    ctaLabel: "Proteger mi compra",
+    ctaLabel: "Solicitar análisis",
     features: [
       "Nota Simple y Catastral",
       "Análisis de cargas y gravámenes",

@@ -31,7 +31,7 @@ export default function GraciasContentClient() {
   return (
     <div className={styles.graciasPage}>
       <div className={styles.graciasCard}>
-        <h1 className={styles.h1}>¡Gracias por confiar en Certilab!</h1>
+        <h1 className={styles.h1}>Hemos recibido tu solicitud</h1>
         <p className={styles.graciasTexto}>
           {magnet
             ? "Te hemos enviado el contenido solicitado por email. Revísalo en unos minutos."

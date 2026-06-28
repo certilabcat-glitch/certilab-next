@@ -23,7 +23,7 @@ const features = [
 ];
 
 const steps = [
-  { title: "Solicita el estudio", text: "Contáctanos y te explicamos qué documentación necesitamos. Sin compromiso." },
+  { title: "Solicita el estudio", text: "Contacta y te explicamos qué documentación se necesita. Sin compromiso." },
   { title: "Analizamos tu vivienda", text: "Revisamos planos, facturas, instalaciones y documentación técnica. Con rigor profesional." },
   { title: "Recibes tu plan de acción", text: "Informe completo con mejoras priorizadas, ahorros calculados y ayudas aplicables a tu caso." },
 ];
@@ -37,7 +37,7 @@ const trustReasons = [
   {
     num: "02",
     title: "Responsabilidad profesional",
-    text: "Eva María González García, colegiada CATEB 9457, con seguro de responsabilidad civil. Firmamos lo que dictaminamos.",
+    text: "Eva María González García, colegiada CATEB 9457, con seguro de responsabilidad civil. Cada dictamen está firmado por la arquitecta técnica responsable.",
   },
   {
     num: "03",
@@ -47,7 +47,7 @@ const trustReasons = [
   {
     num: "04",
     title: "Seguimiento personalizado",
-    text: "Resolveremos todas tus dudas después de la entrega. No desaparecemos al cobrar.",
+    text: "Resolveremos todas tus dudas después de la entrega. Seguimiento tras la entrega del informe.",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function InformeTecnicoContent() {
           <div className={styles.audienceCard}>
             <div className={styles.audienceIcon}>💰</div>
             <h3>Quieres reformar pero no sabes por dónde</h3>
-            <p>Sabes que necesitas mejorar tu vivienda pero no sabes qué actuaciones dan más resultado. Invertir sin un plan es tirar el dinero.</p>
+            <p>Sabes que necesitas mejorar tu vivienda pero no sabes qué actuaciones dan más resultado. Invertir sin un plan es malgastar el presupuesto.</p>
             <a href="#coming-soon" className={styles.audienceLink}>Quiero priorizar mi inversión →</a>
           </div>
           <div className={styles.audienceCard}>

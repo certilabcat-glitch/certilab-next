@@ -10,7 +10,7 @@ export default function ServicesGrid() {
     <section className={styles.serviciosSection} aria-labelledby="servicios-title">
       <div className={styles.serviciosHeader}>
         <h2 className={styles.sectionTitle} id="servicios-title">
-          Nuestros servicios
+          Servicios
         </h2>
         <p className={styles.sectionSub}>
           Cuatro servicios diseñados para distintas necesidades. Sin letra

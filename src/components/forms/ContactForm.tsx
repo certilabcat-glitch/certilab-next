@@ -71,7 +71,7 @@ export default function ContactForm() {
   return (
     <section className={styles.formSection}>
       <div className={styles.formCard}>
-        <h2>Solicita tu Diagnóstico Express Gratuito</h2>
+        <h2>Diagnóstico Express</h2>
         <p className={styles.formSub}>
           En menos de 5 minutos te orientamos sin compromiso.
         </p>

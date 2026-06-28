@@ -15,7 +15,7 @@ featured: false
 Sí, puedes reclamar un certificado energético incorrecto ante el técnico firmante, el colegio profesional y la administración autonómica. Sin embargo, el primer paso obligatorio antes de cualquier reclamación es contar con un dictamen técnico firmado que acredite los errores del certificado original. Sin ese informe, tu reclamación carece de base técnica y será rechazada en todos los casos.
 </div>
 
-Si todavía no sabes si tu certificado tiene errores, [descubre las señales de alerta aquí](/blog/certificado-energetico-incorrecto/).
+Si todavía no sabes si tu certificado tiene errores, [consulta las señales de alerta aquí](/blog/certificado-energetico-incorrecto/).
 
 ## ¿Se puede reclamar un certificado energético incorrecto?
 
@@ -70,9 +70,9 @@ El técnico que firma un certificado incorrecto asume varias responsabilidades l
 
 **Responsabilidad ante el colegio profesional.** El colegio profesional puede abrir expediente disciplinario, suspender la colegiación temporalmente o imponer sanciones económicas. Esto afecta directamente a su capacidad de ejercer la profesión.
 
-**Responsabilidad administrativa.** La administración autonómica (ICAEN en Cataluña) puede sancionar con multas de **300€ a 6.000€** por certificados fraudulentos, sin visita presencial o con datos falsos. Las sanciones más graves pueden llegar a **10.000€**.
+**Responsabilidad administrativa.** La administración autonómica (ICAEN en Cataluña) puede sancionar con multas de **300€ a 6.000€** por certificados con errores graves, sin visita presencial o con datos incorrectos. Las sanciones más graves pueden llegar a **10.000€**.
 
-**Responsabilidad penal.** En casos de fraude grave o falsificación de datos, el técnico puede enfrentar cargos penales por estafa o falsedad documental.
+**Responsabilidad penal.** En casos de error grave o alteración de datos, el técnico puede enfrentar cargos penales por falsedad documental o responsabilidad profesional.
 
 **Plazo de reclamación por responsabilidad profesional.** A diferencia del plazo de vicios ocultos (6 meses), la reclamación por responsabilidad profesional prescribe a los **10 años** desde la emisión del certificado. Esto te da margen para actuar.
 

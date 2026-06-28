@@ -107,7 +107,7 @@ export default function CheckUpInmobiliarioClient() {
       <HeroSection
         eyebrow="Próximamente"
         title="Check-Up Inmobiliario Forense"
-        subtitle="Evaluación técnica independiente de su futuro inmueble. Analizamos el certificado energético, la documentación registral del Catastro y el Registro de la Propiedad, las instalaciones técnicas y los riesgos ocultos que podrían afectar al valor de su inversión. Todo antes de formalizar la compra. Informe de 10-15 páginas firmado por arquitecta técnica colegiada Cateb 9457."
+        subtitle="Evaluación técnica independiente de tu futuro inmueble. Se analiza el certificado energético, la documentación registral del Catastro y el Registro de la Propiedad, las instalaciones técnicas y los riesgos ocultos. Todo antes de formalizar la compra. Informe de 10-15 páginas firmado por arquitecta técnica colegiada Cateb 9457."
         badges={["Cateb 9457", "48-72h", "100% remoto"]}
         price="199 €"
         priceOld={undefined}
@@ -207,7 +207,7 @@ export default function CheckUpInmobiliarioClient() {
       {/* MICRO-CONFIANZA */}
       <section className={styles.trustReasonsSection}>
         <h2 className={styles.sectionTitle}>¿Por qué confiar tu Check-Up a Certilab?</h2>
-        <p className={styles.sectionSub}>No somos una plataforma automática ni un comparador online. Somos profesionales colegiados con responsabilidad civil.</p>
+        <p className={styles.sectionSub}>No es una plataforma automática ni un comparador online. Es un servicio prestado por profesionales colegiados con responsabilidad civil.</p>
         <div className={styles.trustReasonsGrid}>
           {trustReasons.map((r, i) => (
             <div className={styles.trustReasonCard} key={i}>
@@ -224,7 +224,7 @@ export default function CheckUpInmobiliarioClient() {
 
       <CTASection
         title="¿Vas a comprar o vender una vivienda?"
-        text="Asegúrate de que todo está en orden antes de firmar. Por 199€ blindamos tu inversión con un análisis forense completo. Déjanos tu correo y te avisaremos cuando esté disponible."
+        text="Verifica que todo está en orden antes de firmar. Por 199€, un análisis forense completo de tu futura vivienda. Déjanos tu correo y te avisaremos cuando esté disponible."
         buttonText="Quiero que me avisen →"
         buttonHref="#coming-soon"
       />

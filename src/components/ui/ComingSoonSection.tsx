@@ -34,27 +34,27 @@ export default function ComingSoonSection({ serviceName, serviceUrl }: Props) {
       <div className={styles.comingSoonInner}>
         <span className={styles.comingSoonBadge}>En obras</span>
         <h2 className={styles.comingSoonTitle}>
-          {serviceName} estara disponible pronto
+          {serviceName} estará disponible pronto
         </h2>
         <p className={styles.comingSoonSub}>
           Estamos ultimando los detalles de este servicio. Si quieres que te
-          avisemos cuando este activo, dejame tu correo.
+          avisemos cuando esté activo, déjame tu correo.
         </p>
 
         {sent ? (
           <div className={styles.comingSoonSuccess}>
             <p className={styles.comingSoonSuccessText}>
-              Gracias! Te avisaremos cuando {serviceName} este disponible.
+              Gracias. Te avisaremos cuando {serviceName} esté disponible.
             </p>
             <p className={styles.comingSoonSuccessExtra}>
-              Mientras tanto, descubre nuestra{" "}
+              Mientras tanto, consulta nuestra{" "}
               <Link href="/segunda-opinion/">
-                Segunda Opinion del Certificado Energetico por 39EUR
+                Segunda Opinión del Certificado Energético por 59€
               </Link>
-              , el servicio que ya esta activo y operativo.
+              , el servicio que ya está activo y operativo.
             </p>
             <p className={styles.comingSoonSuccessWa}>
-              Tambien puedes escribirnos directamente por{" "}
+              También puedes escribir directamente por{" "}
               <a
                 href="https://wa.me/34608515922?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de"
                 target="_blank"

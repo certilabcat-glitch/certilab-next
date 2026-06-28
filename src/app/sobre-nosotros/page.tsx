@@ -30,17 +30,17 @@ export default function SobreNosotrosPage() {
 
       <section className="prose-block">
         <p>
-          Certilab nace de una vocación: ofrecer un análisis energético riguroso,
-          transparente y útil, donde cada informe está respaldado por la responsabilidad
-          de una arquitecta técnica colegiada.
+          Certilab ofrece un análisis energético riguroso,
+          transparente y útil. Cada informe está respaldado por la responsabilidad
+          profesional de una arquitecta técnica colegiada.
         </p>
         <p>
-          No somos una plataforma ni un agregador de técnicos. Somos una consultoría
-          técnica independiente que prioriza el cumplimiento normativo y la calidad
+          No es una plataforma ni un agregador de técnicos. Es una consultoría
+          técnica independiente. Prima el cumplimiento normativo y la calidad
           del análisis sobre la velocidad comercial.
         </p>
         <p>
-          Nuestro servicio consiste en analizar su certificado energético existente
+          El servicio consiste en analizar tu certificado energético existente
           para determinar si es fiable, si contiene errores y si la calificación
           se ajusta a las características reales del inmueble.
         </p>

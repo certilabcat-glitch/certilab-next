@@ -1,7 +1,7 @@
 ---
 slug: "certificado-energetico-f-g-correcto-o-error"
 title: "Certificado energético F o G: ¿es correcto o está mal calculado?"
-excerpt: "Una calificación F o G en tu certificado puede ser correcta o un error del técnico. Descubre cómo saberlo y qué hacer en cada caso, con un dictamen técnico por 59€."
+excerpt: "Una calificación F o G en tu certificado puede ser correcta o un error del técnico. Cómo saberlo y qué hacer en cada caso, con un dictamen técnico por 59€."
 date: "2026-06-19"
 author: "Eva María González García"
 tags: ["certificado energético", "calificación F", "calificación G", "error técnico", "Segunda Opinión"]

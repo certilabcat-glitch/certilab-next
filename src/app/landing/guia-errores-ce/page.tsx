@@ -17,7 +17,7 @@ export default function GuiaErroresPage() {
         </h1>
         <p className={styles.heroSub}>
           Descarga gratis esta guía y aprende a detectar certificados mal hechos
-          antes de comprar o vender tu vivienda. Eva María González Gracia,
+          antes de comprar o vender tu vivienda. Eva María González García,
           Arquitecta Técnica colegiada, te explica qué mirar y cómo evitarlo.
         </p>
         <ul className={styles.heroBenefits}>

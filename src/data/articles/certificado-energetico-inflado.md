@@ -4,7 +4,7 @@ title: "Certificado energético inflado: ¿qué hacer? Guía legal y práctica 2
 excerpt: "¿Sospechas que tu certificado energético tiene la calificación inflada? Te explicamos cómo detectarlo, qué consecuencias tiene y cómo reclamar con un dictamen técnico firmado."
 date: "2026-06-18"
 author: "Eva María González García"
-tags: ["certificado energético", "calificación inflada", "reclamar", "fraude", "Segunda Opinión"]
+tags: ["certificado energético", "calificación inflada", "reclamar", "errores", "Segunda Opinión"]
 readingTime: 9
 featured: false
 ---
@@ -28,7 +28,7 @@ Los técnicos recurren a varios métodos para inflar la calificación:
 - **Usar valores por defecto favorables** → El software permite "optimizar" ciertos parámetros
 - **No considerar puentes térmicos** → Omitir puntos débiles de la envolvente térmica
 
-> ⚠️ **Importante:** Inflar un certificado no solo es poco ético, sino que puede ser considerado **fraude documental** con consecuencias legales para el técnico y el vendedor.
+> ⚠️ **Importante:** Inflar un certificado no solo es poco ético, sino que puede ser considerado **irregularidad documental** con consecuencias legales para el técnico y el vendedor.
 
 ## ¿Cómo detectar si tu certificado está inflado?
 
@@ -55,12 +55,12 @@ Los técnicos recurren a varios métodos para inflar la calificación:
 
 - **Paga de más** por la vivienda (Brown Discount oculto)
 - **Asume costes imprevistos** de rehabilitación energética
-- **Dificultad para vender** en el futuro si el comprador descubre la calificación real
+- **Dificultad para vender** en el futuro si el comprador detecta la calificación real
 
 ### Para el vendedor
 
 - **Riesgo de reclamación** por parte del comprador
-- **Posible sanción** administrativa por certificado fraudulento
+- **Posible sanción** administrativa por certificado con errores graves
 - **Responsabilidad solidaria** si el comprador demuestra el sobreprecio
 
 ### Para el técnico
@@ -97,7 +97,7 @@ Como último recurso, denuncia ante el organismo autonómico competente (ICAEN e
 El dictamen técnico cuesta 59€ con Certilab. Las reclamaciones ante el colegio profesional o la administración no tienen coste de tramitación.
 
 **¿Puedo reclamar si ya compré la vivienda?**
-Sí. El plazo de prescripción es de 3 años desde que descubres el error. Si demostramos que el certificado estaba inflado, puedes reclamar el sobreprecio pagado.
+Sí. El plazo de prescripción es de 3 años desde que detectas el error. Si demostramos que el certificado estaba inflado, puedes reclamar el sobreprecio pagado.
 
 **¿El vendedor tiene obligación de decirme si el certificado está inflado?**
 Legalmente no, pero el certificado debe reflejar fielmente las características de la vivienda. Si el vendedor conocía la manipulación, puede ser considerado responsable solidario.
