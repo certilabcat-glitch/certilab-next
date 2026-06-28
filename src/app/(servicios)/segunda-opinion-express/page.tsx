@@ -121,24 +121,24 @@ export default function SegundaOpinionExpressPage() {
             </thead>
             <tbody>
               <tr>
-                <td className="comparison-highlight">Plazo de entrega</td>
-                <td>24-48 horas laborables</td>
-                <td>Menos de 4 horas</td>
+                <td className="comparison-highlight" data-label="Característica">Plazo de entrega</td>
+                <td data-label="Estándar (59€)">24-48 horas laborables</td>
+                <td data-label="Express (79€)">Menos de 4 horas</td>
               </tr>
               <tr>
-                <td className="comparison-highlight">Rigor técnico</td>
-                <td>Máximo</td>
-                <td>Máximo (idéntico)</td>
+                <td className="comparison-highlight" data-label="Característica">Rigor técnico</td>
+                <td data-label="Estándar (59€)">Máximo</td>
+                <td data-label="Express (79€)">Máximo (idéntico)</td>
               </tr>
               <tr>
-                <td className="comparison-highlight">Horario</td>
-                <td>24/7</td>
-                <td>L–V 9–18 h</td>
+                <td className="comparison-highlight" data-label="Característica">Horario</td>
+                <td data-label="Estándar (59€)">24/7</td>
+                <td data-label="Express (79€)">L–V 9–18 h</td>
               </tr>
               <tr>
-                <td className="comparison-highlight">Soporte</td>
-                <td>Estándar</td>
-                <td>Prioritario</td>
+                <td className="comparison-highlight" data-label="Característica">Soporte</td>
+                <td data-label="Estándar (59€)">Estándar</td>
+                <td data-label="Express (79€)">Prioritario</td>
               </tr>
             </tbody>
           </table>

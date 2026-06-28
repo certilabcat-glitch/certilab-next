@@ -69,10 +69,24 @@ function formatContent(raw: string): string {
     if (trimmed.startsWith("|")) {
       const lines = trimmed.split("\n");
       let output = '<div class="post-table-wrapper"><table class="post-table">';
-      lines.forEach((line, i) => {
-        const cells = line.split("|").filter(c => c.trim().length > 0);
-        output += `<tr>${cells.map(c => `<td>${processInline(c.trim())}</td>`).join("")}</tr>`;
-      });
+      const headerCells = lines[0].split("|").filter(c => c.trim().length > 0);
+      const headers = headerCells.map(c => processInline(c.trim()).replace(/<[^>]*>/g, ""));
+
+      output += `<thead><tr>${headerCells.map(c => `<th>${processInline(c.trim())}</th>`).join("")}</tr></thead>`;
+
+      output += "<tbody>";
+      for (let i = 1; i < lines.length; i++) {
+        const cells = lines[i].split("|").filter(c => c.trim().length > 0);
+        if (cells.length === 0) continue;
+        if (cells.length >= 1 && /^:?-{3,}:?$/.test(cells[0].trim())) continue;
+        output += `<tr>${cells.map((c, j) => {
+          const label = headers[j] || "";
+          return `<td data-label="${label}">${processInline(c.trim())}</td>`;
+        }).join("")}</tr>`;
+      }
+      output += "</tbody>";
+
+
       return output + '</table></div>';
     }
     if (trimmed.startsWith("- ")) return `<ul class="post-ul">${trimmed.split("\n").filter(l => l.startsWith("- ")).map(l => `<li>${processInline(l.replace("- ", ""))}</li>`).join("")}</ul>`;

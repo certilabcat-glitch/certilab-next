@@ -73,12 +73,12 @@ export default function ServicesComparison() {
             <tbody>
               {comparisonData.map((row, idx) => (
                 <tr key={idx} className={row.feature === "Cuándo elegirlo" ? styles.lastRow : ""}>
-                  <td className={styles.featureCell}>
+                  <td className={styles.featureCell} data-label="Característica">
                     <strong>{row.feature}</strong>
                   </td>
-                  <td className={styles.serviceCell}>{row.segundaOpinion}</td>
-                  <td className={styles.serviceCell}>{row.express}</td>
-                  <td className={styles.serviceCell}>{row.informeTecnico}</td>
+                  <td className={styles.serviceCell} data-label="Segunda Opinión">{row.segundaOpinion}</td>
+                  <td className={styles.serviceCell} data-label="Express">{row.express}</td>
+                  <td className={styles.serviceCell} data-label="Informe Técnico">{row.informeTecnico}</td>
                 </tr>
               ))}
             </tbody>
