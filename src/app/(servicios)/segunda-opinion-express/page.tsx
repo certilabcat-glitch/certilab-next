@@ -107,47 +107,6 @@ export default function SegundaOpinionExpressPage() {
         </div>
       </section>
 
-      {/* STEPS MOVED HERE */}
-      
-      
-        
-        
-        
-          
-            
-              <tr>
-                
-                
-                
-              </tr>
-            
-            
-              <tr>
-                
-                
-                
-              </tr>
-              <tr>
-                
-                
-                
-              </tr>
-              <tr>
-                
-                
-                
-              </tr>
-              <tr>
-                
-                
-                
-              </tr>
-            
-          
-        </div>
-      </section>
-
-      </>); } // END OF COMPONENT - EVERYTHING BELOW IS COMMENTED
       {/* STEPS */}
       <StepsGrid
         steps={[
