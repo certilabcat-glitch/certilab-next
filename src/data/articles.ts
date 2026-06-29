@@ -288,7 +288,7 @@ Sí. El plazo de prescripción es de 3 años desde que descubres el error. Si de
 Legalmente no, pero el certificado debe reflejar fielmente las características de la vivienda. Si el vendedor conocía la manipulación, puede ser considerado responsable solidario.
     `,
     date: "2026-06-19",
-    author: "Eva María González Gracia",
+    author: "Eva María González García",
     tags: ["certificado energético", "calificación inflada", "reclamar", "fraude"],
     readingTime: 9,
     featured: true,
@@ -352,7 +352,7 @@ Si sospechas que tu vivienda sufre Brown Discount por un certificado incorrecto,
 [Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
     `,
     date: "2026-01-15",
-    author: "Eva María González Gracia",
+    author: "Eva María González García",
     tags: ["brown discount", "calificación energética", "compraventa"],
     readingTime: 6,
     featured: true,
@@ -409,7 +409,7 @@ Sí. Si contrataste un certificado sin visita presencial y te lo entregaron como
 [Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
     `,
     date: "2026-02-20",
-    author: "Eva María González Gracia",
+    author: "Eva María González García",
     tags: ["certificado energético", "precios", "normativa"],
     readingTime: 6,
     featured: true,
@@ -473,7 +473,7 @@ Los certificados gratuitos suelen tener errores. ¿Tienes dudas del tuyo? Segund
 [Solicitar Segunda Opinión por 59€ →](/segunda-opinion/)
     `,
     date: "2026-03-10",
-    author: "Eva María González Gracia",
+    author: "Eva María González García",
     tags: ["certificado energético", "gratis", "guía"],
     readingTime: 5,
     featured: false,
