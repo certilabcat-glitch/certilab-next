@@ -1,0 +1,177 @@
+/* PITR QUESTION — Estilos */
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 0.5rem);
+  padding: var(--space-3, 0.75rem);
+  border-radius: var(--radius-md, 0.5rem);
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text, #111827);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.required {
+  color: var(--color-danger, #dc2626);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.help {
+  color: var(--color-muted, #6b7280);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.error {
+  color: var(--color-danger, #dc2626);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Inputs base */
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border, #d1d5db);
+  border-radius: var(--radius-sm, 0.375rem);
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--color-bg, #fff);
+  color: var(--color-text, #111827);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary, #2563eb);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.inputError {
+  border-color: var(--color-danger, #dc2626) !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+/* Radio y Checkbox */
+.radioGroup {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text, #111827);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 0.5rem);
+}
+
+.radioLabel,
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm, 0.25rem);
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--color-text, #374151);
+  transition: background 0.15s;
+}
+
+.radioLabel:hover,
+.checkboxLabel:hover {
+  background: var(--color-bg-hover, #f3f4f6);
+}
+
+.radioLabel input,
+.checkboxLabel input {
+  accent-color: var(--color-primary, #2563eb);
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* File upload */
+.fileUpload {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border: 2px dashed var(--color-border, #d1d5db);
+  border-radius: var(--radius-sm, 0.375rem);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  min-height: 2.75rem;
+}
+
+.fileUpload:hover {
+  border-color: var(--color-primary, #2563eb);
+  background: rgba(37, 99, 235, 0.03);
+}
+
+.fileInputHidden {
+  display: none;
+}
+
+.filePlaceholder {
+  color: var(--color-muted, #6b7280);
+  font-size: 0.9rem;
+}
+
+/* Firma */
+.firma {
+  border: 2px dashed var(--color-border, #d1d5db);
+  border-radius: var(--radius-sm, 0.375rem);
+  padding: 1.5rem;
+  min-height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firmaArea {
+  text-align: center;
+  color: var(--color-muted, #9ca3af);
+  font-size: 0.95rem;
+}
+
+/* Slot hints */
+.slotHint {
+  display: block;
+  color: var(--color-info, #0891b2);
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
