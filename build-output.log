@@ -1,41 +1,57 @@
 ▲ Next.js 16.2.6 (Turbopack)
+- Environments: .env.local
 
   Creating an optimized production build ...
-✓ Compiled successfully in 22.9s
+✓ Compiled successfully in 77s
   Running TypeScript ...
-  Finished TypeScript in 23.3s ...
+  Finished TypeScript in 50s ...
   Collecting page data using 3 workers ...
-  Generating static pages using 3 workers (0/47) ...
-  Generating static pages using 3 workers (11/47) 
-  Generating static pages using 3 workers (23/47) 
-  Generating static pages using 3 workers (35/47) 
-✓ Generating static pages using 3 workers (47/47) in 8.0s
+  Generating static pages using 3 workers (0/74) ...
+  Generating static pages using 3 workers (18/74) 
+  Generating static pages using 3 workers (36/74) 
+  Generating static pages using 3 workers (55/74) 
+✓ Generating static pages using 3 workers (74/74) in 14.2s
   Finalizing page optimization ...
 
 Route (app)
 ┌ ○ /
 ├ ○ /_not-found
+├ ƒ /api/capturar-lead
+├ ƒ /api/extraer-certificado
 ├ ƒ /api/meta/capi
 ├ ƒ /api/saas/demo
 ├ ○ /aviso-legal
 ├ ○ /ayudas-eficiencia-energetica
+├ ○ /backoffice/clientes
+├ ○ /backoffice/configuracion
+├ ○ /backoffice/expedientes
+├ ○ /backoffice/inmuebles
+├ ○ /backoffice/usuarios
 ├ ○ /blog
 ├ ● /blog/[slug]
+│ ├ /blog/certificado-energetico-incorrecto
+│ ├ /blog/certificado-energetico-inflado
 │ ├ /blog/brown-discount-precio-vivienda
-│ ├ /blog/cuanto-cuesta-certificado-energetico-2026
-│ ├ /blog/obtener-certificado-energetico-gratis
-│ └ [+11 more paths]
+│ └ [+23 more paths]
 ├ ○ /buscador-certificado-energetico-catalunya
 ├ ○ /calculadoracat
 ├ ○ /cercador-certificats-energetics
 ├ ○ /check-up-inmobiliario
+├ ○ /comprobador-certificado-energetico
+├ ○ /configuracion
 ├ ○ /configurar-auditoria
 ├ ○ /cookies
+├ ○ /dashboard
 ├ ○ /formulario
 ├ ○ /gracias
 ├ ○ /informe-tecnico-energetico
+├ ○ /landing/7-senales-ce
+├ ○ /landing/comprobador
 ├ ○ /landing/guia-detecta-falso-ce
 ├ ○ /landing/guia-errores-ce
+├ ○ /mis-expedientes
+├ ○ /nuevo-expediente
+├ ○ /pitr/segunda-opinion
 ├ ○ /privacidad
 ├ ○ /profesionales
 ├ ○ /resultado-auditoria
