@@ -10,12 +10,22 @@
 
 ---
 
-**Versión:** 1.0.0
-**Fecha:** 30/06/2026
-**Release actual:** v1.2.0
+**Versión:** 1.1.0
+**Fecha:** 01/07/2026
+**Release actual:** v1.3.0
 **Autor:** Equipo Certilab
-**Último commit:** a02e0e6
+**Último commit:** 040296d
 **Repositorio:** https://github.com/certilabcat-glitch/certilab-next.git
+
+---
+
+## SESSION START PROTOCOL
+
+> **Todas las sesiones de desarrollo comienzan ejecutando CF-001.**
+>
+> El protocolo definido en `docs/CF-001-SESSION-PROTOCOL.md` es obligatorio. Ninguna IA ni desarrollador puede escribir código, realizar commits o tomar decisiones técnicas sin haberlo ejecutado previamente.
+>
+> Ver `docs/CF-001-SESSION-PROTOCOL.md` para el protocolo completo.
 
 ---
 
@@ -456,6 +466,7 @@ Cliente → Web pública → Formulario → Pago (MyPOS) → Expediente creado
 web-garraf/
 ├── docs/                          # Documentación del proyecto
 │   ├── CF-000-PROJECT-BRAIN.md    # ← ESTE DOCUMENTO
+│   ├── CF-001-SESSION-PROTOCOL.md # Protocolo de inicio de sesión
 │   ├── CF-002-EXPEDIENTE-DIGITAL.md
 │   ├── CF-011-FOUNDATION.md
 │   ├── CF-012-PITR-MOTOR.md
@@ -555,6 +566,7 @@ web-garraf/
 ├── vercel.json
 ├── DEPLOY.md
 ├── README.md
+├── START_HERE.md                  # Flujo de inicio del proyecto
 ├── RELEASE_CLEANUP_V1.0_REPORT.md
 ├── CLAUDE.md
 └── AGENTS.md
@@ -593,6 +605,11 @@ El Framework Certilab (CF) es el sistema de documentación del proyecto. Cada do
 **Archivo:** `docs/CF-000-PROJECT-BRAIN.md`
 
 La constitución del proyecto. Visión, filosofía, historia, arquitectura general, roadmap, reglas absolutas. Es el punto de entrada para cualquier persona que se incorpore al proyecto. Debe leerse primero, antes que cualquier otro documento.
+
+### CF-001 — SESSION PROTOCOL
+**Archivo:** `docs/CF-001-SESSION-PROTOCOL.md`
+
+Protocolo obligatorio de inicio de sesión. Define los pasos que cualquier IA o desarrollador debe ejecutar antes de empezar una sesión de desarrollo: verificación Git, build de verificación, lectura de documentación, comparación documentación/repositorio y generación de informe. Es el primer documento que debe ejecutarse al comenzar cualquier sesión de trabajo.
 
 ### CF-002 — EXPEDIENTE DIGITAL
 **Archivo:** `docs/CF-002-EXPEDIENTE-DIGITAL.md`
@@ -1448,7 +1465,7 @@ Cada Release es una versión de la plataforma con funcionalidades incrementales.
 
 **Estado:** ✅ COMPLETADO. Q2 2025.
 
-## 13.4 V1.2 — OBSERVATORIO MÍNIMO FUNCIONAL (En curso 🔄)
+## 13.4 V1.2 — OBSERVATORIO MÍNIMO FUNCIONAL (Completado ✅)
 
 **Objetivo:** Publicar los primeros datos del Observatorio.
 
@@ -1461,9 +1478,9 @@ Cada Release es una versión de la plataforma con funcionalidades incrementales.
 - Artículo del blog presentando el Observatorio.
 - Metodología de investigación publicada.
 
-**Estado:** 🔄 EN CURSO. Q1 2026.
+**Estado:** ✅ COMPLETADO. Q1 2026.
 
-## 13.5 V1.3 — CONSOLIDACIÓN
+## 13.5 V1.3 — CONSOLIDACIÓN (En curso 🔄)
 
 **Objetivo:** Estabilizar, testear y optimizar.
 
@@ -1473,9 +1490,10 @@ Cada Release es una versión de la plataforma con funcionalidades incrementales.
 - Optimización de rendimiento (Lighthouse > 90).
 - Corrección de bugs reportados en V1.1-V1.2.
 - Mejora del backoffice (filtros avanzados, exportación CSV).
-- Documentación completa de la API interna.
+- Eliminación de deuda técnica de localStorage (migración a Supabase).
+- Sistema de notificaciones en tiempo real.
 
-**Estado:** 📋 PLANIFICADO.
+**Estado:** 🔄 EN CURSO. Q2 2026.
 
 ## 13.6 V1.4 — SEGUNDA OPINIÓN EXPRESS
 
@@ -1711,8 +1729,8 @@ Estas reglas no pueden romperse bajo ninguna circunstancia. Si una regla resulta
 | **Despliegue** | Vercel |
 | **Automatización** | n8n |
 | **Pagos** | MyPOS |
-| **Versión actual** | V1.1 (con elementos de V1.2 en desarrollo) |
-| **Último commit** | `a02e0e6` |
+| **Versión actual** | V1.3 (Consolidación) |
+| **Último commit** | `040296d` |
 
 ## 16.2 Módulos terminados
 
@@ -1736,9 +1754,11 @@ Estas reglas no pueden romperse bajo ninguna circunstancia. Si una regla resulta
 
 | Módulo | Versión | Estado |
 |--------|---------|--------|
-| Observatorio (modelo de datos) | V1.2 | 🔄 En desarrollo |
-| Workflow anonimización (n8n) | V1.2 | 🔄 Pendiente |
-| Página `/observatorio` | V1.2 | 🔄 Pendiente |
+| Tests unitarios PITR™ | V1.3 | 🔄 En desarrollo |
+| Tests integración expedientes | V1.3 | 🔄 En desarrollo |
+| Migración localStorage → Supabase | V1.3 | 🔄 En desarrollo |
+| Mejora backoffice (filtros, CSV) | V1.3 | 🔄 En desarrollo |
+| Sistema notificaciones en tiempo real | V1.3 | 🔄 Pendiente |
 
 ## 16.4 Módulos pendientes
 
@@ -1764,48 +1784,47 @@ Estas reglas no pueden romperse bajo ninguna circunstancia. Si una regla resulta
 | OCR dependiente de formato (sin IA) | Baja tasa de extracción en PDFs no estándar | V2.0 |
 | Backoffice con UI mínima | Poca eficiencia para técnicos | V1.3 |
 | Sin sistema de notificaciones realtime | Cliente debe recargar para ver cambios | V1.3 |
-| Observatorio sin datos reales | Sin valor público todavía | V1.2 |
+| Observatorio sin datos reales | Sin valor público todavía | V1.2 ✅ |
 
 ---
 
 # 17. PRÓXIMOS PASOS
 
-## 17.1 Siguiente Release: V1.2 — Observatorio Mínimo Funcional
+## 17.1 Siguiente Release: V1.3 — Consolidación
 
-La Release V1.2 está en curso. Es la prioridad absoluta ahora mismo.
+La Release V1.3 está en curso. Es la prioridad absoluta ahora mismo.
 
 **Qué DEBE hacerse:**
-1. Crear la tabla `observatorio` en Supabase con el modelo definido en la sección 10.2.
-2. Construir el workflow de anonimización en n8n que se dispara al cerrar un expediente.
-3. Crear la página `/observatorio` con el primer informe público.
-4. Generar gráficos SVG estáticos con datos de ejemplo (o datos reales si hay expedientes cerrados).
-5. Implementar Schema.org Dataset en la página.
-6. Publicar artículo del blog presentando el Observatorio.
-7. Actualizar el sitemap para incluir `/observatorio`.
+1. Escribir tests unitarios para el motor PITR™ (`src/lib/pitr/motor.ts`).
+2. Escribir tests de integración para el sistema de expedientes.
+3. Migrar la persistencia de PITR™ de localStorage a Supabase.
+4. Mejorar el backoffice: filtros avanzados, exportación CSV, paginación.
+5. Implementar sistema de notificaciones en tiempo real.
+6. Optimizar rendimiento (Lighthouse > 90).
+7. Corregir bugs reportados en V1.1 y V1.2.
 
-**Qué NO debe hacerse en V1.2:**
-- No añadir IA al Observatorio (es V2.5).
-- No crear dashboard interactivo (es V2.5).
-- No publicar API pública del Observatorio (es V2.5).
-- No integrar con portales inmobiliarios (es V4.0).
-- No refactorizar el motor PITR™ si no es necesario para V1.2.
-- No iniciar V1.3 hasta cerrar V1.2.
+**Qué NO debe hacerse en V1.3:**
+- No añadir IA (es V2.0).
+- No lanzar Segunda Opinión Express (es V1.4).
+- No crear templates de PITR™ adicionales (salvo que sean necesarios para bugs).
+- No refactorizar la máquina de estados.
+- No iniciar V1.4 hasta cerrar V1.3.
 
 ## 17.2 Decisiones ya tomadas
 
-1. **El Observatorio será público y gratuito.** Generará tráfico SEO y autoridad de dominio.
-2. **Los datos se anonimizan con truncado de CP a provincia y rangos.** Suficiente para investigación, insuficiente para identificar.
-3. **Los informes serán trimestrales.** Frecuencia suficiente para mostrar tendencias sin saturar.
-4. **Los gráficos serán SVG estáticos,** no JavaScript. Indexables por Google y rápidos en móvil.
-5. **El Observatorio se alimenta SOLO de expedientes cerrados.** Nunca de expedientes en curso.
+1. **Los tests serán escritos con Vitest.** Framework moderno, compatible con Vite/Next.js.
+2. **localStorage se migrará a Supabase con caché local.** Sesión persistente entre dispositivos.
+3. **Las notificaciones serán vía n8n (email + dashboard).** En tiempo real vía Supabase Realtime.
+4. **El backoffice se prioriza sobre nuevas funcionalidades.** Sin buena UX de backoffice no se escala.
+5. **Todos los bugs reportados se documentan en GitHub Issues.** Trazabilidad completa.
 
 ## 17.3 Decisiones pendientes
 
-1. **¿Publicar datos con 0 expedientes (placeholder con estimaciones) o esperar a tener N expedientes?** Impacto en credibilidad vs velocidad de lanzamiento.
-2. **¿Incluir comparativa con datos oficiales del MITECO?** Añade valor pero requiere scraping o carga manual.
-3. **¿Permitir descarga de datos en CSV/JSON desde V1.2 o esperar a V2.5?** V1.2 podría incluir CSV simple.
-4. **¿El Observatorio tendrá subpáginas por CCAA en V1.2 o solo una página agregada?** Depende del volumen de datos.
-5. **¿Crear un subdominio `observatorio.certilab.es` o ruta `/observatorio`?** Ruta por simplicidad, subdominio por independencia SEO.
+1. **¿Usar Supabase Realtime o WebSockets propios para notificaciones?** Impacto en coste vs control.
+2. **¿Incluir pruebas E2E con Playwright en V1.3 o solo unitarias + integración?** Depende del tiempo disponible.
+3. **¿Exportar CSV en frontend o generar en servidor?** El servidor escala mejor para grandes volúmenes.
+4. **¿Migrar datos de localStorage existentes a Supabase o empezar de cero?** Impacto en clientes activos.
+5. **¿Desplegar en staging antes de producción?** Reduciría riesgos de regresión.
 
 ---
 
@@ -1867,7 +1886,7 @@ Diagramas externos (SVG/PNG) se almacenan en `docs/diagrams/` cuando se generen.
 |-------|------|
 | **Q1 2025** | V1.0 — Lanzamiento web pública |
 | **Q2 2025** | V1.1 — Plataforma básica con expedientes y PITR™ |
-| **Q1 2026** | V1.2 — Observatorio mínimo funcional (en curso) |
+| **Q1 2026** | V1.2 — Observatorio mínimo funcional (completado ✅) |
 | **Q2 2026** | V1.3 — Consolidación y tests |
 | **Q3 2026** | V1.4 — Segunda Opinión Express |
 | **Q4 2026** | V2.0 — IA asistente |
@@ -2145,9 +2164,9 @@ Si una decision contradice este documento:
 2. Luego se implementa el cambio.
 3. Nunca al reves.
 
-**Version:** 1.0 — 30 de junio de 2026
-**Ultima actualizacion:** Commit `a02e0e6`
-**Proxima revision obligatoria:** Antes de iniciar V1.3
+**Version:** 1.1 — 1 de julio de 2026
+**Ultima actualizacion:** Commit `040296d`
+**Proxima revision obligatoria:** Antes de iniciar V1.4
 
 ---
 
