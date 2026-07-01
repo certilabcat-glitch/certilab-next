@@ -1,6 +1,6 @@
 # CF-020 — DATA MODEL: CONSTITUCIÓN DEL MODELO DE DATOS
 
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Fecha:** 01/07/2026  
 **Responsable:** Arquitectura Técnica Certilab  
 **Estado:** Documento de diseño (sin implementación)  
@@ -99,9 +99,9 @@ Todo dato personal está identificado con metadatos de RGPD:
 
 El sistema nunca almacena datos personales sin consentimiento explícito registrable.
 
-### P12. Event Sourcing parcial
+### P12. Auditoría Transaccional (Event Log)
 
-No se aplica Event Sourcing puro (reconstruir todo el estado desde eventos) por coste y complejidad. Se usa un modelo híbrido:
+No se aplica Event Sourcing puro (reconstruir todo el estado desde eventos) por coste y complejidad. Se usa un modelo híbrido de auditoría transaccional:
 - **Estado actual** en tablas de negocio (normalizadas, actualizables).
 - **Historial inmutable** en tablas de eventos (append-only).
 - **Reconstrucción** posible pero no necesaria para operaciones normales.
@@ -798,7 +798,8 @@ Cada entidad se define con los siguientes elementos:
 | `empresa_id` | UUID | ❌ | ✅ | ✅ | — | FK → `empresa.id` |
 | `expediente_id` | UUID | ❌ | ✅ | ❌ | NULL | FK → `expediente.id` (puede ser NULL para eventos globales) |
 | `usuario_id` | UUID | ❌ | ✅ | ✅ | — | FK → `usuario.id` (quién generó el evento) |
-| `tipo` | VARCHAR(50) | ❌ | ❌ | ✅ | — | Tipo de evento |
+| `tipo` | VARCHAR(50) | ❌ | ❌ | ✅ | — | Tipo de evento (ej: EXPEDIENTE.CAMBIO_ESTADO) |
+| `categoria` | VARCHAR(30) | ❌ | ❌ | ❌ | NULL | Categoría del evento: 'DOMINIO', 'TECNICO', 'SEGURIDAD', 'SISTEMA' |
 | `severidad` | VARCHAR(20) | ❌ | ❌ | ❌ | 'info' | 'info', 'warning', 'error', 'critical' |
 | `datos` | JSONB | ❌ | ❌ | ❌ | '{}' | Payload del evento |
 | `datos_anteriores` | JSONB | ❌ | ❌ | ❌ | NULL | Snapshot del estado anterior (si aplica) |
@@ -1222,7 +1223,7 @@ Cada entidad se define con los siguientes elementos:
 
 ## 3.21 Entidad: Prompt IA (`prompt_ia`)
 
-**Propósito:** Template de prompt versionado. Define el prompt del sistema para cada tipo de tarea de IA.
+**Propósito:** Template de prompt versionado. Define el prompt del sistema para cada tipo de tarea de IA, incluyendo el proveedor y modelo de destino.
 
 **Schema:** `ai.prompt_ia`
 
@@ -1232,10 +1233,11 @@ Cada entidad se define con los siguientes elementos:
 | `nombre` | VARCHAR(100) | ❌ | ❌ | ✅ | — | Nombre del prompt |
 | `tipo` | VARCHAR(50) | ❌ | ❌ | ✅ | — | Tipo de tarea |
 | `version` | VARCHAR(10) | ❌ | ❌ | ✅ | '1.0.0' | Versión semántica |
+| `proveedor` | VARCHAR(50) | ❌ | ❌ | ❌ | 'openai' | Proveedor destino: 'openai', 'anthropic', 'local', 'otro' |
+| `modelo_destino` | VARCHAR(100) | ❌ | ❌ | ❌ | NULL | Modelo recomendado (ej: gpt-4o, claude-sonnet-4) |
+| `temperatura_default` | NUMERIC(3,2) | ❌ | ❌ | ❌ | 0.3 | Temperatura por defecto del modelo |
 | `prompt_sistema` | TEXT | ❌ | ❌ | ✅ | — | Prompt del sistema |
 | `prompt_usuario` | TEXT | ❌ | ❌ | ❌ | NULL | Template de prompt de usuario |
-| `modelo_destino` | VARCHAR(100) | ❌ | ❌ | ❌ | NULL | Modelo recomendado |
-| `temperatura` | NUMERIC(3,2) | ❌ | ❌ | ❌ | 0.3 | Temperatura del modelo |
 | `max_tokens` | INTEGER | ❌ | ❌ | ❌ | 2000 | Máximo de tokens de salida |
 | `activo` | BOOLEAN | ❌ | ❌ | ✅ | true | ¿Prompt activo? |
 | `created_at` | TIMESTAMPTZ | ❌ | ❌ | ✅ | `now()` | Creación |
@@ -1942,7 +1944,7 @@ Cada documento puede tener metadatos en formato JSONB:
 
 ## 7.1 Arquitectura del sistema de eventos
 
-El sistema de eventos sigue un modelo **append-only** con **Event Sourcing parcial**:
+El sistema de eventos sigue un modelo **append-only** con **Auditoría Transaccional** (Event Log):
 
 ```
                         ┌──────────────────┐
@@ -1970,10 +1972,11 @@ El sistema de eventos sigue un modelo **append-only** con **Event Sourcing parci
 
 1. **Toda acción de negocio genera un evento.** No hay operación sin registro.
 2. **Los eventos son inmutables.** Una vez insertados, no se modifican ni eliminan.
-3. **Los eventos tienen tipo estricto.** `{DOMINIO}.{ACCION}` (ej: `EXPEDIENTE.CAMBIO_ESTADO`).
+3. **Los eventos tienen tipo estricto.** `{CATEGORIA}.{ACCION}` (ej: `EXPEDIENTE.CAMBIO_ESTADO`).
 4. **El estado actual es la fuente de verdad operativa.** No se reconstruye desde eventos para operaciones normales.
 5. **Los snapshots existen para auditoría** pero no son necesarios para el funcionamiento diario.
 6. **La reconstrucción es posible** para análisis forense, pero no es la operación normal.
+7. **Los eventos NO son la fuente de verdad del estado actual.** Las tablas de negocio (`core.expediente`, etc.) son la fuente de verdad. Los eventos son un registro histórico e inmutable.
 
 ## 7.2 Quién genera eventos
 
@@ -2251,7 +2254,17 @@ Los datos del Observatorio se agregan periódicamente en `analytics.agregado_obs
 
 Los agregados se generan con consultas SQL sobre `analytics.observatorio` y se cachean en `agregado_observatorio` para servir rápido al frontend público.
 
-## 9.4 Qué nunca podrá salir al Observatorio
+## 9.4 Garantía de k-anonimato
+
+El Observatorio debe garantizar un **k-anonimato mínimo de k=10**. Esto significa que, para cualquier combinación de atributos en un registro del Observatorio, deben existir al menos 10 registros indistinguibles en el mismo conjunto de datos.
+
+**Regla de aplicación:** si una consulta sobre `analytics.observatorio` devuelve menos de 10 registros para una combinación de filtros, los datos se agregan automáticamente (por ejemplo, agrupando provincias en comunidades autónomas o ampliando rangos de superficie).
+
+**Control técnico:** una función PostgreSQL (`verificar_k_anonimato`) se ejecuta antes de exponer cualquier dato del Observatorio al frontend público. Esta función rechaza consultas que no cumplan el umbral de k=10.
+
+**Excepción:** los agregados precalculados (`analytics.agregado_observatorio`) están exentos de esta verificación porque ya contienen datos suficientemente agregados.
+
+## 9.5 Qué nunca podrá salir al Observatorio
 
 **Datos que NUNCA salen de la base de datos principal hacia el Observatorio:**
 
@@ -2873,7 +2886,10 @@ CREATE TABLE core.expediente_archivado (LIKE core.expediente INCLUDING ALL);
 | 🟢 P2 | `idx_observatorio_dictamen` | Filtro del Observatorio |
 | 🟢 P2 | `idx_prediccion_expediente` | Consulta de predicciones IA |
 | 🟢 P2 | `idx_notificacion_usuario` | Notificaciones no leídas |
-| 🟢 P2 | `idx_cola_estado` | Worker de colas |
+| 🟢 P2 | `idx_cola_tarea_estado_prioridad` | Worker de colas (estado + prioridad) |
+| 🟢 P2 | `idx_pago_proveedor_estado` | Consulta de pagos por proveedor y estado |
+| 🟢 P2 | `idx_expediente_fecha_creacion` | Ordenación por fecha de creación |
+| 🟢 P2 | `idx_consentimiento_cliente_tipo` | Verificación de consentimiento por cliente y tipo |
 
 ## 15.4 Particionado
 
