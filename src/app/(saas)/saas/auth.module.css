@@ -77,3 +77,13 @@
   color: var(--color-terra);
   text-decoration: underline;
 }
+.authError {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  background: #fff5f5;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+}

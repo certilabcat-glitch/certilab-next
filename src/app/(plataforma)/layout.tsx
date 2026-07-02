@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import UserMenu from "@/components/auth/UserMenu";
 
 export const metadata: Metadata = {
   title: "Plataforma Certilab",
@@ -12,12 +13,13 @@ export default function PlatformaLayout({
 }) {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Placeholder: Navbar de plataforma */}
+      {/* Navbar de plataforma */}
       <nav className="bg-white border-b border-gray-200 px-6 py-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
           <h1 className="text-xl font-semibold text-gray-900">
             Plataforma Certilab
           </h1>
+          <UserMenu />
         </div>
       </nav>
 
