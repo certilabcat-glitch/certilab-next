@@ -30,14 +30,49 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (
-    !user &&
-    !request.nextUrl.pathname.startsWith("/login") &&
-    !request.nextUrl.pathname.startsWith("/auth")
-  ) {
-    // No user, redirect to login
+  // Paths that don't require authentication
+  const publicPrefixes = [
+    "/saas",
+    "/auth",
+    "/_next",
+    "/api",
+    "/",
+    "/blog",
+    "/aviso-legal",
+    "/privacidad",
+    "/cookies",
+    "/landing",
+    "/buscador-certificado-energetico-catalunya",
+    "/cercador-certificats-energetics",
+    "/comprobador-certificado-energetico",
+    "/check-up-inmobiliario",
+    "/calculadoracat",
+    "/segunda-opinion",
+    "/segunda-opinion-express",
+    "/pitr",
+    "/informe-tecnico-energetico",
+    "/profesionales",
+    "/ayudas-eficiencia-energetica",
+    "/gracias",
+    "/formulario",
+    "/resultado-auditoria",
+    "/configurar-auditoria",
+    "/sobre-nosotros",
+    "/guia",
+    "/sitemap.xml",
+    "/robots.txt",
+    "/favicon.png",
+  ];
+
+  const pathname = request.nextUrl.pathname;
+
+  // Allow public paths without auth
+  const isPublic = publicPrefixes.some((prefix) => pathname === prefix || pathname.startsWith(prefix + "/") || pathname.startsWith(prefix + "?"));
+
+  if (!user && !isPublic) {
+    // No user, redirect to login (public site page)
     const url = request.nextUrl.clone();
-    url.pathname = "/login";
+    url.pathname = "/saas/login/";
     return NextResponse.redirect(url);
   }
 

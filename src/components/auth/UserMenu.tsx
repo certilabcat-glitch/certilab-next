@@ -70,21 +70,21 @@ export default function UserMenu() {
 
           <div className="py-1">
             <Link
-              href="/plataforma/dashboard"
+              href="/dashboard"
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
               onClick={() => setOpen(false)}
             >
               Dashboard
             </Link>
             <Link
-              href="/plataforma/mis-expedientes"
+              href="/mis-expedientes"
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
               onClick={() => setOpen(false)}
             >
               Mis expedientes
             </Link>
             <Link
-              href="/plataforma/configuracion"
+              href="/configuracion"
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
               onClick={() => setOpen(false)}
             >
@@ -93,11 +93,7 @@ export default function UserMenu() {
           </div>
 
           <div className="border-t border-gray-100">
-            <form
-              action={async () => {
-                await logout();
-              }}
-            >
+            <form action={logout}>
               <button
                 type="submit"
                 className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors"
