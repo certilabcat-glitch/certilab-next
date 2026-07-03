@@ -1,10 +1,12 @@
 # CF-020 — DATA MODEL: CONSTITUCIÓN DEL MODELO DE DATOS
 
-**Versión:** 1.1  
-**Fecha:** 01/07/2026  
+**Versión:** 1.2  
+**Fecha:** 03/07/2026  
 **Responsable:** Arquitectura Técnica Certilab  
-**Estado:** Documento de diseño (sin implementación)  
+**Estado:** Documento de diseño (sin implementación) — MVP Single Tenant  
 **Build:** ✅ Compilado (0 errores)
+
+> **📌 ALCANCE MVP (V1):** Este documento describe el modelo de dominio del **MVP (V1)**, que opera en régimen **Single Tenant**. Las extensiones para multitenancy (`empresa_id`, `tenant`, RLS multiempresa) están agrupadas en la sección [V3 — Migración a Multitenancy](#v3--migración-a-multitenancy) al final de este documento. Hasta entonces, ninguna entidad incluye `empresa_id` en su definición activa.
 
 ---
 
@@ -160,9 +162,10 @@ Certilab se organiza en **ocho dominios** claramente delimitados:
 │                                                                     │
 │  ┌──────────┐       ┌───────────┐       ┌───────────┐              │
 │  │          │       │           │       │           │              │
-│  │ EMPRESA  │ 1──N  │  USUARIO  │ 1──N  │  CLIENTE  │              │
+│  │ USUARIO  │       │  CLIENTE  │       │           │              │
 │  │          │       │           │       │           │              │
 │  └──────────┘       └───────────┘       └─────┬─────┘              │
+>>>>>>> REPLACE (MVP: sin EMPRESA — se añade en V3)
 │                                                │                    │
 │                                                │ 1                  │
 │                                                │                    │
@@ -412,21 +415,28 @@ Cada entidad se define con los siguientes elementos:
 | `deleted_by` | UUID | ❌ | ✅ | ❌ | NULL | FK → `usuario.id` |
 | `version` | INTEGER | ❌ | ❌ | ✅ | 1 | Optimistic locking |
 
-**Relaciones:**
-- `cliente` N ── 1 `empresa` mediante `empresa_id`
+**Relaciones (V1 Single Tenant):**
 - `cliente` 1 ── 1 `usuario` mediante `usuario_id` (opcional)
 - `cliente` 1 ── N `inmueble` mediante `inmueble.cliente_id`
 - `cliente` 1 ── N `expediente` mediante `expediente.cliente_id`
 - `cliente` 1 ── N `consentimiento` mediante `consent_id`
 
-**Restricciones:**
-- UNIQUE(`email`, `empresa_id`)
-- CHECK(`retencion_dias` >= 365)
+> **Nota:** V1 es Single Tenant. No existe `empresa_id`. La relación `cliente` ── `empresa` se añadirá en V3 cuando se implemente multitenancy.
 
-**Índices:**
-- `idx_cliente_email` ON `cliente` (`email`) WHERE `deleted_at IS NULL`
-- `idx_cliente_empresa` ON `cliente` (`empresa_id`) WHERE `deleted_at IS NULL`
+**Restricciones (V1 Single Tenant):**
+- UNIQUE(`email`) — global uniqueness (single tenant)
+- CHECK(`retention_days` >= 365)
+- CHECK: al menos uno de `email` o `telefono` debe estar presente
+
+> **Nota V3:** En multitenancy, UNIQUE pasará a ser UNIQUE(`email`, `empresa_id`) para permitir emails duplicados entre empresas.
+
+**Índices (V1 Single Tenant):**
+- `idx_cliente_email` ON `cliente` (`email`) WHERE `deleted_at IS NULL AND email IS NOT NULL`
 - `idx_cliente_usuario` ON `cliente` (`usuario_id`) WHERE `deleted_at IS NULL`
+- `idx_cliente_nombre` ON `cliente` (`nombre`, `apellidos`) WHERE `deleted_at IS NULL`
+- `idx_cliente_created_at` ON `cliente` (`created_at`) WHERE `deleted_at IS NULL`
+
+> **Nota V3:** En multitenancy se añadirá `idx_cliente_empresa` ON `cliente` (`empresa_id`).
 
 **Versionado:** No. Los cambios en datos del cliente se registran como eventos.
 
@@ -443,7 +453,6 @@ Cada entidad se define con los siguientes elementos:
 | Campo | Tipo | PK | FK | Obligatorio | Default | Descripción |
 |-------|------|----|----|-------------|---------|-------------|
 | `id` | UUID | ✅ | ❌ | ✅ | `gen_random_uuid()` | Identificador único |
-| `empresa_id` | UUID | ❌ | ✅ | ✅ | — | FK → `empresa.id` |
 | `cliente_id` | UUID | ❌ | ✅ | ✅ | — | FK → `cliente.id` |
 | `ref_catastral` | VARCHAR(20) | ❌ | ❌ | ❌ | NULL | Referencia catastral (20 dígitos) |
 | `direccion` | TEXT | ❌ | ❌ | ✅ | — | Dirección completa |
@@ -476,18 +485,21 @@ Cada entidad se define con los siguientes elementos:
 | `deleted_by` | UUID | ❌ | ✅ | ❌ | NULL | FK → `usuario.id` |
 | `version` | INTEGER | ❌ | ❌ | ✅ | 1 | Optimistic locking |
 
-**Relaciones:**
-- `inmueble` N ── 1 `empresa` mediante `empresa_id`
+> **Nota:** V1 es Single Tenant. No existe `empresa_id`. La relación `inmueble` ── `empresa` y UNIQUE multitenant se añadirán en V3.
+
+**Relaciones (V1 Single Tenant):**
 - `inmueble` N ── 1 `cliente` mediante `cliente_id`
 - `inmueble` 1 ── N `expediente` mediante `expediente.inmueble_id`
 - `inmueble` 1 ── N `documento` mediante `documento.inmueble_id`
 
-**Restricciones:**
-- UNIQUE(`ref_catastral`, `empresa_id`) — La ref catastral es única por empresa
+**Restricciones (V1 Single Tenant):**
+- UNIQUE(`ref_catastral`) — La ref catastral es única globalmente (single tenant)
 - CHECK(`ano_construccion` >= 1800 AND `ano_construccion` <= EXTRACT(YEAR FROM CURRENT_DATE) + 1)
 - CHECK(`superficie` IS NULL OR `superficie` > 0)
 
-**Índices:**
+> **Nota V3:** En multitenancy, UNIQUE pasará a ser UNIQUE(`ref_catastral`, `empresa_id`) para permitir refs catastrales duplicadas entre empresas. También se añadirá `idx_inmueble_empresa` ON `inmueble` (`empresa_id`) y la relación `inmueble` N ── 1 `empresa`.
+
+**Índices (V1 Single Tenant):**
 - `idx_inmueble_cliente` ON `inmueble` (`cliente_id`) WHERE `deleted_at IS NULL`
 - `idx_inmueble_cp` ON `inmueble` (`codigo_postal`) WHERE `deleted_at IS NULL`
 - `idx_inmueble_refcat` ON `inmueble` (`ref_catastral`) WHERE `deleted_at IS NULL`

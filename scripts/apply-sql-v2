@@ -1,0 +1,46 @@
+/**
+ * Apply migration to Supabase via Service Role API
+ * Run: node scripts/apply-sql-v2.mjs
+ */
+import { readFileSync } from 'fs';
+import { createClient } from '@supabase/supabase-js';
+
+const sql = readFileSync('supabase/migrations/20260702_00001_create_expedientes.sql', 'utf-8');
+
+const SERVICE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZjbnRtZ25lYmRvcHRubGR2dW1kIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4Mjk1MjkzNCwiZXhwIjoyMDk4NTI4OTM0fQ.0QxHTrJ4vLWnjz0wvjuHCN8nXGOXPEsePef5Oc1PzFg';
+const SUPABASE_URL = 'https://vcntmgnebdoptnldvumd.supabase.co';
+
+const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
+
+async function main() {
+  // First try: Use the pg_dump endpoint or raw SQL via rest
+  const { data, error } = await supabase.from('_schema').select('*').limit(1);
+  console.log('Schema check:', error ? error.message : 'OK');
+  
+  // Try via the Supabase management API endpoint
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': SERVICE_KEY,
+      'Authorization': `Bearer ${SERVICE_KEY}`,
+    },
+    body: JSON.stringify({})
+  });
+  
+  console.log('RPC endpoint status:', res.status);
+  
+  // Check if expedientes table exists
+  const { error: checkError } = await supabase.from('expedientes').select('id').limit(1);
+  if (checkError && checkError.message?.includes('relation')) {
+    console.log('Table expedientes does not exist yet. Need to create via Supabase Dashboard.');
+    console.log('SQL to execute (open Supabase Dashboard > SQL Editor and paste):');
+    console.log('---');
+    console.log(sql);
+    return;
+  }
+  
+  console.log('Table expedientes already exists. Migration not needed.');
+}
+
+main().catch(console.error);
