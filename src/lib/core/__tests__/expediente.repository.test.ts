@@ -397,6 +397,93 @@ describe('ExpedienteRepository', () => {
   });
 
   // ------------------------------------------------------------------
+  // findByEstado (FIFO queue)
+  // ------------------------------------------------------------------
+  describe('findByEstado', () => {
+    const mockRows: ExpedienteRow[] = [
+      {
+        id: '0191f1c0-0000-7000-8000-000000000200',
+        numero_expediente: 'EXP-2026-07-0001',
+        cliente_id: '0191f1c0-0000-7000-8000-000000000001',
+        inmueble_id: null,
+        estado: 'PteDocumentacion',
+        servicio: 'segunda_opinion',
+        titulo: 'Documentación completa',
+        notas: null,
+        created_at: '2026-07-01T10:00:00.000Z',
+        created_by: '0191f1c0-0000-7000-8000-000000000001',
+        updated_at: '2026-07-01T10:00:00.000Z',
+        updated_by: '0191f1c0-0000-7000-8000-000000000001',
+        deleted_at: null,
+        deleted_by: null,
+        version: 2,
+      },
+      {
+        id: '0191f1c0-0000-7000-8000-000000000201',
+        numero_expediente: 'EXP-2026-07-0002',
+        cliente_id: '0191f1c0-0000-7000-8000-000000000002',
+        inmueble_id: null,
+        estado: 'PteDocumentacion',
+        servicio: 'segunda_opinion',
+        titulo: null,
+        notas: null,
+        created_at: '2026-07-02T08:00:00.000Z',
+        created_by: '0191f1c0-0000-7000-8000-000000000002',
+        updated_at: '2026-07-02T08:00:00.000Z',
+        updated_by: '0191f1c0-0000-7000-8000-000000000002',
+        deleted_at: null,
+        deleted_by: null,
+        version: 2,
+      },
+    ];
+
+    it('should query by estado and order ASC (FIFO)', async () => {
+      mockQuery.range.mockResolvedValue({ data: mockRows, error: null });
+
+      const result = await repo.findByEstado('PteDocumentacion');
+
+      expect(result).toEqual(mockRows);
+      expect(result.length).toBe(2);
+      expect(mockSupabase.from).toHaveBeenCalledWith('core.expediente');
+      expect(mockQuery.eq).toHaveBeenCalledWith('estado', 'PteDocumentacion');
+      expect(mockQuery.is).toHaveBeenCalledWith('deleted_at', null);
+      expect(mockQuery.order).toHaveBeenCalledWith('created_at', { ascending: true });
+      expect(mockQuery.range).toHaveBeenCalledWith(0, 49);
+    });
+
+    it('should apply custom limit and offset', async () => {
+      mockQuery.range.mockResolvedValue({ data: [mockRows[0]], error: null });
+
+      const result = await repo.findByEstado('PteDocumentacion', {
+        limit: 1,
+        offset: 0,
+      });
+
+      expect(result.length).toBe(1);
+      expect(mockQuery.range).toHaveBeenCalledWith(0, 0);
+    });
+
+    it('should return empty array when no matching estado', async () => {
+      mockQuery.range.mockResolvedValue({ data: [], error: null });
+
+      const result = await repo.findByEstado('Solicitud');
+
+      expect(result).toEqual([]);
+    });
+
+    it('should throw error on query failure', async () => {
+      mockQuery.range.mockResolvedValue({
+        data: null,
+        error: { message: 'DB connection failed', code: '500' },
+      });
+
+      await expect(
+        repo.findByEstado('PteDocumentacion')
+      ).rejects.toThrow('Error al buscar expedientes por estado');
+    });
+  });
+
+  // ------------------------------------------------------------------
   // count
   // ------------------------------------------------------------------
   describe('count', () => {

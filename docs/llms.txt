@@ -1,0 +1,103 @@
+# Certilab — Índice de Documentación del Proyecto
+
+> Índice ligero para agentes de IA que necesiten descubrir la documentación oficial del proyecto Certilab.
+>
+> Sigue la convención [llms.txt](https://llmstxt.org/): enlaces clasificados con breve descripción.
+>
+> **Proyecto:** Certilab — Despacho de Auditoría Energética
+> **Repositorio:** https://github.com/certilabcat-glitch/certilab-next.git
+> **Estado:** V1 — Arquitectura congelada (CF-001A)
+
+---
+
+## Documentos normativos (lectura obligatoria)
+
+Estos documentos deben leerse **antes de modificar cualquier código**. Definen la constitución, gobernanza y reglas del proyecto.
+
+- [AGENTS.md](../AGENTS.md) — Gobernanza permanente del proyecto. Reglas de sesión, arquitectura congelada, MVP Discipline, No Overengineering.
+- [docs/CF-000-PROJECT-BRAIN.md](../docs/CF-000-PROJECT-BRAIN.md) — **Constitución del proyecto.** Visión, filosofía, arquitectura general, principios de desarrollo, reglas absolutas.
+- [docs/CF-001-SESSION-PROTOCOL.md](../docs/CF-001-SESSION-PROTOCOL.md) — Protocolo obligatorio de inicio de sesión. Debe ejecutarse al inicio de cada sesión de desarrollo.
+- [docs/CF-001A-ACTA-CIERRE-ARQUITECTURA-V1.md](../docs/CF-001A-ACTA-CIERRE-ARQUITECTURA-V1.md) — Acta de cierre de arquitectura V1. Lista de decisiones congeladas que no pueden modificarse sin ADR.
+- [docs/adr/ADR-001-CERTILAB-ENGINEERING-SYSTEM.md](../docs/adr/ADR-001-CERTILAB-ENGINEERING-SYSTEM.md) — ADR que define el Sistema Ligero de Ingeniería adoptado por el proyecto.
+
+---
+
+## Dominio: Expediente Digital y PITR
+
+- [docs/CF-002-EXPEDIENTE-DIGITAL.md](../docs/CF-002-EXPEDIENTE-DIGITAL.md) — Modelo de Expediente Digital: entidad raíz del dominio.
+- [docs/CF-012-PITR-MOTOR.md](../docs/CF-012-PITR-MOTOR.md) — Motor de Inspección Técnica Remota (PITR) y su arquitectura.
+- [docs/CF-026-EXPEDIENTE-DESIGN.md](../docs/CF-026-EXPEDIENTE-DESIGN.md) — Diseño detallado del agregado Expediente para implementación.
+- [docs/CF-030-PITR-EXPERT-KNOWLEDGE-ENGINE.md](../docs/CF-030-PITR-EXPERT-KNOWLEDGE-ENGINE.md) — Motor de conocimiento experto PITR: reglas, inferencias y base de conocimiento.
+- [docs/CF-031-PITR-QUESTION-TREE.md](../docs/CF-031-PITR-QUESTION-TREE.md) — Árbol de preguntas PITR para la inspección remota.
+- [docs/CF-032-ARQUITECTO-TECNICO-INSPECTION-MANUAL.md](../docs/CF-032-ARQUITECTO-TECNICO-INSPECTION-MANUAL.md) — Manual de inspección técnica para Arquitecto Técnico.
+
+---
+
+## Dominio: Modelo de Datos y Dominio
+
+- [docs/CF-020-DATA-MODEL.md](../docs/CF-020-DATA-MODEL.md) — Modelo de datos completo del sistema (entidades, relaciones, constraints).
+- [docs/CF-021-DOMAIN-MODEL.md](../docs/CF-021-DOMAIN-MODEL.md) — Modelo de dominio DDD: agregados, value objects, eventos.
+- [docs/CF-022-AGGREGATE-BOUNDARIES.md](../docs/CF-022-AGGREGATE-BOUNDARIES.md) — Límites de agregados y reglas de consistencia.
+- [docs/CF-025-INMUEBLE-DESIGN.md](../docs/CF-025-INMUEBLE-DESIGN.md) — Diseño detallado del agregado Inmueble.
+- [docs/CF-040-BUSINESS-POLICIES.md](../docs/CF-040-BUSINESS-POLICIES.md) — Políticas de negocio: reglas de dominio, restricciones legales y lógica de negocio.
+
+---
+
+## Dominio: Infraestructura y Plataforma
+
+- [docs/CF-011-FOUNDATION.md](../docs/CF-011-FOUNDATION.md) — Fundación técnica del proyecto: arquitectura Next.js, organización de carpetas, patrones.
+- [docs/CF-021-SUPABASE-ARCHITECTURE.md](../docs/CF-021-SUPABASE-ARCHITECTURE.md) — Arquitectura Supabase: RLS, políticas, migraciones, esquemas.
+- [docs/CF-022-IMPLEMENTATION-BACKLOG.md](../docs/CF-022-IMPLEMENTATION-BACKLOG.md) — Backlog de implementación técnica con estado actual.
+
+---
+
+## Roadmap, Producto y Estrategia
+
+- [docs/ROADMAP-V1.md](../docs/ROADMAP-V1.md) — Roadmap V1: épicas, prioridades, estado.
+- [docs/PROPUESTA-MODELO-MVP.md](../docs/PROPUESTA-MODELO-MVP.md) — Propuesta de modelo MVP para el producto.
+- [docs/IMPLEMENTACION-V1.1.md](../docs/IMPLEMENTACION-V1.1.md) — Plan de implementación V1.1.
+- [docs/RELEASE-V1.2.md](../docs/RELEASE-V1.2.md) — Plan de release V1.2.
+- [docs/CERTILAB-OS-DISCOVERY.md](../docs/CERTILAB-OS-DISCOVERY.md) — Documento de Discovery EP-000A que motivó la ADR-001.
+- [docs/AUDITORIA-ESTRATEGICA-V2.md](../docs/AUDITORIA-ESTRATEGICA-V2.md) — Auditoría estratégica para V2.
+- [docs/INVESTOR-DUE-DILIGENCE-V2.md](../docs/INVESTOR-DUE-DILIGENCE-V2.md) — Due diligence para inversores.
+
+---
+
+## Auditorías
+
+- [docs/audits/AUDITORIA-CONSTITUCIONAL-DEFINITIVA.md](../docs/audits/AUDITORIA-CONSTITUCIONAL-DEFINITIVA.md) — Auditoría constitucional definitiva.
+- [docs/audits/SPRINT-05-CIERRE-DOMINIO-V1.md](../docs/audits/SPRINT-05-CIERRE-DOMINIO-V1.md) — Cierre del dominio V1.
+- [docs/audits/SESSION_REPORT.md](../docs/audits/SESSION_REPORT.md) — Reporte de sesión actual.
+
+Resto de auditorías: [docs/audits/](../docs/audits/)
+
+---
+
+## Guías de Recuperación
+
+- [docs/recovery/01-RECOVERY-GUIDE.md](../docs/recovery/01-RECOVERY-GUIDE.md) — Guía principal de recuperación del proyecto.
+- [docs/recovery/02-ENVIRONMENT-CHECKLIST.md](../docs/recovery/02-ENVIRONMENT-CHECKLIST.md) — Checklist de verificación de entorno.
+- [docs/recovery/03-BACKUP-CHECKLIST.md](../docs/recovery/03-BACKUP-CHECKLIST.md) — Checklist de backup.
+- [docs/recovery/04-NEW-COMPUTER.md](../docs/recovery/04-NEW-COMPUTER.md) — Configuración de ordenador nuevo.
+- [docs/recovery/05-DISASTER-RECOVERY.md](../docs/recovery/05-DISASTER-RECOVERY.md) — Plan de desastre.
+- [docs/recovery/07-CHANGE-DEVICE.md](../docs/recovery/07-CHANGE-DEVICE.md) — Cambio de dispositivo.
+- [docs/recovery/08-CHECK-SCRIPT.md](../docs/recovery/08-CHECK-SCRIPT.md) — Script de verificación post-configuración.
+
+---
+
+## Web pública (negocio)
+
+- [public/llms.txt](../public/llms.txt) — Índice de servicios y contenidos del sitio web para LLMs.
+- [public/llms-full.txt](../public/llms-full.txt) — Contenido completo de artículos del blog para LLMs.
+
+---
+
+## Uso por agentes de IA
+
+1. **Lectura obligatoria al inicio de sesión:** AGENTS.md, CF-000, CF-001, CF-001A
+2. **Navegación por dominio:** usar las secciones anteriores según el área de trabajo (expedientes, inmuebles, infraestructura, roadmap)
+3. **ADR:** antes de proponer cambios arquitectónicos, consultar ADR-001
+4. **Auditorías:** al finalizar una épica, revisar las auditorías relevantes
+5. **Recovery:** si el entorno de desarrollo está corrupto o es nuevo, seguir las guías de recovery
+
+> Este índice se actualiza manualmente. Si un documento parece desactualizado o falta, verificar el directorio `docs/` completo.

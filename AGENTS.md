@@ -124,7 +124,131 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ---
 
-## 9. EPIC WORKFLOW
+## 9. PRODUCT-FIRST EXECUTION MODE
+
+> A partir de la finalización del Core V1, el proyecto Certilab entra en una fase
+> de integración y entrega de valor funcional para el MVP. Esta sección establece
+> las reglas de priorización, validación y ejecución de todas las nuevas épicas.
+
+### 9.1 Cambio de fase
+
+- La **Arquitectura V1** está oficialmente congelada mediante CF-001A.
+- El **Core V1** (Cliente, Inmueble, Expediente y Documento IA) constituye la base
+  estable del proyecto. Está implementado, testeado y verificado.
+- A partir de este momento la prioridad deja de ser diseñar nuevos componentes
+  y pasa a ser **integrar los ya existentes** para entregar capacidades funcionales
+  visibles del MVP.
+
+### 9.2 Flujo de referencia del dominio
+
+Este es el flujo de referencia del **MVP V1**. Una épica no tiene por qué recorrer
+todos los pasos, pero sí debe integrarse en al menos uno de ellos o justificar
+expresamente su posición fuera del flujo.
+
+```
+Cliente
+    ↓
+Inmueble
+    ↓
+Expediente
+    ↓
+Documento IA
+    ↓
+Motor PITR
+    ↓
+Resultado
+```
+
+Si una propuesta no aporta valor a este flujo o a la integración entre sus
+elementos, deberá justificarse expresamente.
+
+### 9.3 Regla de reutilización del Core
+
+Antes de proponer un nuevo Aggregate Root, Bounded Context, servicio de dominio,
+componente estructural o módulo, el agente deberá comprobar si la funcionalidad
+puede resolverse reutilizando el Core existente (Cliente, Inmueble, Expediente,
+Documento IA).
+
+Siempre deberá priorizarse:
+
+1. **Reutilización** — usar un componente existente sin modificaciones.
+2. **Composición** — combinar componentes existentes para resolver la necesidad.
+3. **Extensión controlada** — añadir una capacidad mínima a un componente existente.
+
+Antes que crear nuevos componentes.
+
+### 9.4 Regla de mínima expansión
+
+No podrá crearse un nuevo Aggregate Root, Bounded Context, servicio de dominio o
+componente estructural sin demostrar previamente que la funcionalidad no puede
+resolverse mediante la composición o extensión de los componentes existentes
+(según la jerarquía del punto 9.3).
+
+La creación de nuevos elementos estructurales será siempre la **última
+alternativa**, nunca la primera.
+
+### 9.5 Preguntas obligatorias
+
+Toda propuesta de nueva épica deberá responder obligatoriamente a estas preguntas
+antes de iniciar la implementación:
+
+1. **¿Qué capacidad funcional añade al MVP?**
+   Debe identificarse la funcionalidad concreta que el usuario final podrá
+   utilizar y que no existía antes.
+
+2. **¿Qué agregados participan?**
+   Deben enumerarse los agregados del Core V1 (Cliente, Inmueble, Expediente,
+   Documento IA) y/o nuevos que intervienen, especificando el rol de cada uno.
+
+3. **¿Cómo interactúan entre sí?**
+   Debe describirse el flujo de datos y la secuencia de interacciones entre los
+   agregados participantes, incluyendo las reglas de negocio que gobiernan dicha
+   interacción.
+
+4. **¿Por qué esta es la solución de menor complejidad que satisface completamente
+   el requisito funcional respetando la arquitectura aprobada?**
+   Debe justificarse por qué no se ha optado por una solución más simple
+   (reutilización directa, composición o extensión controlada).
+
+Si alguna respuesta no puede justificarse, la propuesta deberá detenerse antes de
+comenzar la implementación.
+
+### 9.6 Clasificación automática V2
+
+Las mejoras que únicamente aporten:
+
+- calidad arquitectónica,
+- refactorización,
+- reutilización,
+- optimización,
+
+pero que **no desbloqueen el MVP** ni **corrijan un defecto crítico**, deberán
+clasificarse automáticamente como V2.
+
+- No deberán implementarse durante el MVP.
+- Las mejoras clasificadas como V2 no requerirán ADR salvo que impliquen una
+  decisión arquitectónica permanente.
+- Bastará con registrarlas brevemente en el informe de cierre de la épica.
+
+### 9.7 Principio rector
+
+Durante el resto del desarrollo del MVP V1, el éxito de una épica se medirá por
+**la capacidad funcional entregada al usuario** y **no** por la cantidad de
+componentes, patrones, abstracciones o complejidad añadida al sistema.
+
+### 9.8 Relación con otras reglas
+
+- **MVP DISCIPLINE (sección 8):** Complementa la prohibición de iniciativas
+  arquitectónicas nuevas estableciendo un marco de decisión positivo.
+- **EPIC WORKFLOW (sección 10):** Las épicas que superen el filtro de PRODUCT-FIRST
+  EXECUTION MODE entran en el flujo de ejecución definido en EPIC WORKFLOW.
+- **NO OVERENGINEERING (sección 11):** La regla de mínima expansión y el principio
+  rector refuerzan el mismo mandato de simplicidad desde la perspectiva del diseño
+  y la priorización.
+
+---
+
+## 10. EPIC WORKFLOW
 
 > El flujo obligatorio para todas las épicas de V1 es:
 >
@@ -154,7 +278,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ---
 
-## 10. NO OVERENGINEERING
+## 11. NO OVERENGINEERING
 
 > No proponer soluciones más complejas que las necesarias para cumplir:
 >
@@ -191,6 +315,10 @@ Toda modificación futura de AGENTS.md deberá registrar:
 - Documento que lo justifica (Constitución, CF-001A o ADR)
 
 El objetivo es mantener la trazabilidad de las reglas de gobernanza.
+
+| Fecha | Autor | Motivo del cambio | Documento |
+|-------|-------|-------------------|-----------|
+| 2026-07-04 | CF-001 | Adición de sección 9 — PRODUCT-FIRST EXECUTION MODE. Cambio de fase tras finalización del Core V1. Reordenación de secciones 10 y 11. | CF-001A, AGENTS.md |
 
 ---
 

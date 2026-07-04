@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 const estadoLabels: Record<string, string> = {
+  Solicitud: "Solicitud",
   pendiente: "Pendiente",
   pago_pendiente: "Pago pendiente",
   pago_recibido: "Pago recibido",
@@ -20,6 +21,7 @@ const estadoLabels: Record<string, string> = {
 };
 
 const estadoColors: Record<string, string> = {
+  Solicitud: "bg-blue-100 text-blue-800",
   pendiente: "bg-yellow-100 text-yellow-800",
   pago_pendiente: "bg-orange-100 text-orange-800",
   pago_recibido: "bg-blue-100 text-blue-800",

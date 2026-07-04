@@ -22,7 +22,9 @@ EP-025 Inmueble
 Estado: ✅ COMPLETADA
 
 EP-026 Expediente
-Estado: 🔄 PENDIENTE IMPLEMENTACIÓN
+Estado:
+- E26-T01 — Ruta Cliente → Expediente: ✅ COMPLETADA
+- E26-T02 — Resto de tareas: 🔄 PENDIENTE
 
 EP-027 Documento
 Estado: ⏳

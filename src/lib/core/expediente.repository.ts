@@ -267,6 +267,39 @@ export class ExpedienteRepository {
   }
 
   /**
+   * Find expedientes by estado, ordered FIFO (oldest first)
+   * Método específico para la bandeja de trabajo del Área Técnica.
+   * No hereda el orden DESC de findMany para garantizar FIFO.
+   */
+  async findByEstado(
+    estado: string,
+    opts?: { limit?: number; offset?: number }
+  ): Promise<ExpedienteRow[]> {
+    const supabase = await createClient();
+
+    const limit = opts?.limit ?? 50;
+    const offset = opts?.offset ?? 0;
+
+    const query = supabase
+      .from(TABLE)
+      .select(SOFT_DELETE_COLS)
+      .eq('estado', estado)
+      .is('deleted_at', null)
+      .order('created_at', { ascending: true })
+      .range(offset, offset + limit - 1);
+
+    const { data, error } = await query;
+
+    if (error) {
+      throw new Error(`Error al buscar expedientes por estado: ${error.message}`, {
+        cause: error,
+      });
+    }
+
+    return data as ExpedienteRow[];
+  }
+
+  /**
    * Count expedientes by filter (useful for pagination)
    */
   async count(filter: ExpedienteFilter): Promise<number> {

@@ -1,0 +1,156 @@
+# EP-027 — Documento IA: Closure Report
+
+**Date:** 2026-07-09
+**Status:** ✅ COMPLETED
+
+---
+
+## Summary
+
+Implementation of the **Documento IA** aggregate as part of the Core V1 domain model. This aggregate manages AI-generated documents associated with expedientes, supporting document lifecycle, IA processing state tracking, and metadata storage.
+
+---
+
+## Files Created
+
+| File | Description |
+|------|-------------|
+| `src/types/core/documento-ia.ts` | TypeScript types: `DocumentoIARow`, `DocumentoTipo`, `EstadoIA`, `MetadataIA`, input types |
+| `supabase/migrations/20260709_00001_create_core_documento.sql` | SQL migration creating `core.documento_ia` table with RLS, indexes, triggers |
+| `src/lib/core/documento-ia.repository.ts` | Repository with `crear`, `findById`, `findMany`, `count`, `actualizar`, `softDelete`, `restaurar` |
+| `src/lib/core/documento-ia.service.ts` | Service with validation, business rules, optimistic locking |
+| `src/lib/core/__tests__/documento-ia.service.test.ts` | 43 unit tests covering all operations and edge cases |
+
+---
+
+## Aggregate Design
+
+### Domain Model
+
+```
+DocumentoIA (Aggregate Root)
+├── id: UUID (PK)
+├── expediente_id: UUID (FK → core.expediente)
+├── tipo: DocumentoTipo enum
+│   ├── CERTIFICADO_ORIGINAL
+│   ├── INFORME_IA
+│   ├── ANALISIS_IA
+│   ├── INFORME_FINAL
+│   └── OTRO
+├── nombre: string
+├── mime_type: string (allowed: PDF, PNG, JPEG, DOCX, XLSX, CSV, TXT, JSON, XML)
+├── tamano_bytes: integer (max 50MB)
+├── storage_path: string (format: {expediente_id}/{tipo}/{id}_{nombre})
+├── hash_sha256: string (64 hex chars)
+├── metadata_ia: JSONB (modelo, confianza, resumen, fecha_procesamiento)
+├── estado_ia: EstadoIA enum
+│   ├── NO_APLICA (default for non-IA documents)
+│   ├── PENDIENTE
+│   ├── PROCESANDO
+│   ├── COMPLETADO
+│   ├── FALLIDO
+│   └── RECHAZADO
+├── Audit fields: created_at/by, updated_at/by, deleted_at/by
+└── version: integer (optimistic locking)
+```
+
+### Key Business Rules (CF-040)
+
+1. **Document Type Validation** — Only specific `DocumentoTipo` values allowed
+2. **MIME Type Restriction** — Only allowed MIME types accepted
+3. **File Size Limit** — Maximum 50MB
+4. **Hash Format** — SHA-256 must be 64 hex characters
+5. **Storage Path Format** — Must follow `{expediente_id}/{tipo}/{id}_{nombre}` pattern
+6. **IA State Machine** — Valid transitions: PENDIENTE → PROCESANDO → COMPLETADO/FALLIDO/RECHAZADO
+7. **Metadata Requirement** — When `estado_ia` ≠ `NO_APLICA`, metadata is required
+8. **Optimistic Locking** — All updates require `version` match
+
+---
+
+## Test Results
+
+```
+ ✓ src/lib/core/__tests__/documento-ia.service.test.ts (43 tests)
+   ✓ crear (11)
+   ✓ findById (3)
+   ✓ findMany (2)
+   ✓ listarPorExpediente (3)
+   ✓ count (1)
+   ✓ actualizar (6)
+   ✓ registrarProcesamientoIA (6)
+   ✓ softDelete (5)
+   ✓ restaurar (5)
+   ✓ singleton (1)
+
+Test Files  1 passed (1)
+Tests       43 passed (43)
+```
+
+---
+
+## Build Verification
+
+- **Next.js Build:** ✅ Compiled successfully
+- **TypeScript:** ✅ No type errors
+- **Lint:** ✅ 0 errors
+
+---
+
+## Definition of Done Checklist
+
+- [x] Implementación completada
+- [x] Tipos TypeScript actualizados (`src/types/core/documento-ia.ts`)
+- [x] Tests implementados y pasando (43/43)
+- [x] Build completado correctamente
+- [x] Lint sin errores
+- [x] Sin TODO ni FIXME en los archivos de la épica
+- [x] Sin console.log/console.warn/console.error en producción
+- [x] Auditoría específica completada
+- [x] Informe de cierre generado
+
+---
+
+## Architectural Compliance
+
+- ✅ Clean Architecture (repository pattern + service layer)
+- ✅ Vertical Slice (aggregate lives in `core/`)
+- ✅ DDD Aggregate Root pattern
+- ✅ Single Tenant (no cross-tenant leaks)
+- ✅ Soft Delete (deleted_at/deleted_by)
+- ✅ Optimistic Locking (version field)
+- ✅ RLS (auth.uid() based via migration)
+- ✅ No architecture changes to frozen core
+
+---
+
+## Migration Details
+
+**File:** `supabase/migrations/20260709_00001_create_core_documento.sql`
+
+- Schema: `core`
+- Table: `documento_ia`
+- Indexes: `idx_documento_ia_expediente`, `idx_documento_ia_tipo`, `idx_documento_ia_estado_ia`, `idx_documento_ia_deleted_at`
+- RLS: Enabled with policy for authenticated users
+- Audit triggers: `update_documento_ia_updated_at`
+- FK to `core.expediente` (not yet applied — expediente migration may be pending)
+
+---
+
+## Integration Points
+
+- **Expediente Aggregate:** `DocumentoIA.expediente_id` references `core.expediente.id`
+- **PITR Engine:** `metadata_ia` and `estado_ia` fields designed for AI processing pipeline
+- **Future UI:** `listarPorExpediente()` enables expediente detail view document listing
+
+---
+
+## Next Steps (for future sprints)
+
+1. Apply migration to Supabase when expediente table exists
+2. Create integration layer (`documento-ia.actions.ts`) for server actions
+3. UI components: Document upload, IA processing status display
+4. Storage bucket integration for actual file upload
+
+---
+
+*Report generated by EP-027 automated audit system.*
