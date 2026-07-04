@@ -237,6 +237,36 @@ export class ClienteRepository {
   }
 
   /**
+   * Restore a soft-deleted cliente
+   */
+  async restaurar(id: string, updatedBy: string): Promise<ClienteRow | null> {
+    const supabase = await createClient();
+
+    const { data, error } = await supabase
+      .from(TABLE)
+      .update({
+        deleted_at: null,
+        deleted_by: null,
+        updated_by: updatedBy,
+      })
+      .eq('id', id)
+      .not('deleted_at', 'is', null)
+      .select(SOFT_DELETE_COLS)
+      .single();
+
+    if (error) {
+      if (error.code === 'PGRST116') {
+        return null;
+      }
+      throw new Error(`Error al restaurar cliente: ${error.message}`, {
+        cause: error,
+      });
+    }
+
+    return data as ClienteRow;
+  }
+
+  /**
    * Count clientes by filter (useful for pagination)
    */
   async count(filter: ClienteFilter): Promise<number> {

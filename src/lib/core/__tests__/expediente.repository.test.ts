@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
-import type { ClienteRow, CrearClienteInput, ActualizarClienteInput } from '@/types/core/cliente';
-import { ClienteRepository } from '@/lib/core/cliente.repository';
+import type { ExpedienteRow, CrearExpedienteInput, ActualizarExpedienteInput } from '@/types/core/expediente';
+import { ExpedienteRepository } from '@/lib/core/expediente.repository';
 
 // Mock the server client
 vi.mock('@/lib/supabase/server', () => ({
@@ -26,8 +26,8 @@ interface MockSupabase {
   from: Mock;
 }
 
-describe('ClienteRepository', () => {
-  let repo: ClienteRepository;
+describe('ExpedienteRepository', () => {
+  let repo: ExpedienteRepository;
   let mockSupabase: MockSupabase;
   let mockQuery: MockQuery;
 
@@ -38,7 +38,7 @@ describe('ClienteRepository', () => {
       not: vi.fn().mockReturnThis(),
       or: vi.fn().mockReturnThis(),
       order: vi.fn().mockReturnThis(),
-      range: vi.fn().mockReturnThis(),
+      range: vi.fn().mockResolvedValue({ data: [], error: null }),
       single: vi.fn().mockResolvedValue({ data: null, error: null }),
       select: vi.fn().mockReturnThis(),
       insert: vi.fn().mockReturnThis(),
@@ -57,62 +57,53 @@ describe('ClienteRepository', () => {
     mockSupabase = mocks.client;
     mockQuery = mocks.query;
     (createClient as Mock).mockResolvedValue(mockSupabase);
-    repo = new ClienteRepository();
+    repo = new ExpedienteRepository();
   });
 
   // ------------------------------------------------------------------
   // crear
   // ------------------------------------------------------------------
   describe('crear', () => {
-    const mockClienteRow: ClienteRow = {
-      id: '0191f1c0-0000-7000-8000-000000000001',
-      usuario_id: null,
-      email: 'cliente.test@certilab.com',
-      nombre: 'Juan',
-      apellidos: 'Pérez García',
-      telefono: '+34 600 000 000',
-      dni: null,
-      direccion: null,
-      ciudad: null,
-      codigo_postal: null,
+    const mockExpedienteRow: ExpedienteRow = {
+      id: '0191f1c0-0000-7000-8000-000000000200',
+      numero_expediente: 'EXP-2026-07-0001',
+      cliente_id: '0191f1c0-0000-7000-8000-000000000001',
+      inmueble_id: null,
+      estado: 'pendiente',
+      servicio: 'segunda_opinion',
+      titulo: 'Segunda opinión Certificado Energético',
       notas: null,
-      origen: 'web',
-      consent_id: '00000000-0000-0000-0000-000000000000',
-      retention_days: 2190,
-      anonymized_at: null,
-      created_at: '2026-07-03T07:00:00.000Z',
+      created_at: '2026-07-08T07:00:00.000Z',
       created_by: '00000000-0000-0000-0000-000000000000',
-      updated_at: '2026-07-03T07:00:00.000Z',
+      updated_at: '2026-07-08T07:00:00.000Z',
       updated_by: '00000000-0000-0000-0000-000000000000',
       deleted_at: null,
       deleted_by: null,
       version: 1,
     };
 
-    it('should create a cliente successfully', async () => {
+    it('should create an expediente successfully', async () => {
       mockQuery.select.mockReturnThis();
-      mockQuery.single.mockResolvedValue({ data: mockClienteRow, error: null });
+      mockQuery.single.mockResolvedValue({ data: mockExpedienteRow, error: null });
 
-      const input: CrearClienteInput = {
-        email: mockClienteRow.email ?? undefined,
-        nombre: mockClienteRow.nombre,
-        apellidos: mockClienteRow.apellidos,
-        telefono: mockClienteRow.telefono ?? undefined,
-        origen: 'web',
-        consent_id: mockClienteRow.consent_id,
-        created_by: mockClienteRow.created_by,
-        updated_by: mockClienteRow.updated_by,
+      const input: CrearExpedienteInput = {
+        numero_expediente: mockExpedienteRow.numero_expediente,
+        cliente_id: mockExpedienteRow.cliente_id,
+        servicio: 'segunda_opinion',
+        titulo: mockExpedienteRow.titulo!,
+        created_by: mockExpedienteRow.created_by,
+        updated_by: mockExpedienteRow.updated_by,
       };
 
       const result = await repo.crear(input);
 
-      expect(result).toEqual(mockClienteRow);
-      expect(mockSupabase.from).toHaveBeenCalledWith('core.cliente');
+      expect(result).toEqual(mockExpedienteRow);
+      expect(mockSupabase.from).toHaveBeenCalledWith('core.expediente');
       expect(mockQuery.insert).toHaveBeenCalledWith(
         expect.objectContaining({
-          email: mockClienteRow.email,
-          nombre: mockClienteRow.nombre,
-          retention_days: 2190,
+          numero_expediente: mockExpedienteRow.numero_expediente,
+          cliente_id: mockExpedienteRow.cliente_id,
+          servicio: 'segunda_opinion',
         })
       );
       expect(mockQuery.select).toHaveBeenCalled();
@@ -122,27 +113,25 @@ describe('ClienteRepository', () => {
     it('should throw error when creation fails', async () => {
       mockQuery.single.mockResolvedValue({
         data: null,
-        error: { message: 'duplicate key', code: '23505' },
+        error: { message: 'insert error', code: '23505' },
       });
 
-      const input: CrearClienteInput = {
-        email: 'duplicate@certilab.com',
-        nombre: 'Dup',
-        apellidos: 'Test',
-        consent_id: '00000000-0000-0000-0000-000000000000',
+      const input: CrearExpedienteInput = {
+        numero_expediente: 'EXP-2026-07-9999',
+        cliente_id: '0191f1c0-0000-7000-8000-000000000001',
         created_by: '00000000-0000-0000-0000-000000000000',
         updated_by: '00000000-0000-0000-0000-000000000000',
       };
 
-      await expect(repo.crear(input)).rejects.toThrow('Error al crear cliente');
+      await expect(repo.crear(input)).rejects.toThrow('Error al crear expediente');
     });
   });
 
   // ------------------------------------------------------------------
-  // findById
+  // findById (includes soft-delete filter)
   // ------------------------------------------------------------------
   describe('findById', () => {
-    it('should return null when cliente not found', async () => {
+    it('should return null when expediente not found', async () => {
       mockQuery.single.mockResolvedValue({
         data: null,
         error: { code: 'PGRST116', message: 'no rows', details: '' },
@@ -153,26 +142,19 @@ describe('ClienteRepository', () => {
       expect(result).toBeNull();
     });
 
-    it('should find a cliente by id', async () => {
-      const mockRow: ClienteRow = {
-        id: '0191f1c0-0000-7000-8000-000000000001',
-        usuario_id: null,
-        email: 'test@certilab.com',
-        nombre: 'Test',
-        apellidos: 'User',
-        telefono: null,
-        dni: null,
-        direccion: null,
-        ciudad: null,
-        codigo_postal: null,
+    it('should find an expediente by id', async () => {
+      const mockRow: ExpedienteRow = {
+        id: '0191f1c0-0000-7000-8000-000000000200',
+        numero_expediente: 'EXP-2026-07-0001',
+        cliente_id: '0191f1c0-0000-7000-8000-000000000001',
+        inmueble_id: null,
+        estado: 'pendiente',
+        servicio: 'segunda_opinion',
+        titulo: null,
         notas: null,
-        origen: 'web',
-        consent_id: '00000000-0000-0000-0000-000000000000',
-        retention_days: 2190,
-        anonymized_at: null,
-        created_at: '2026-07-03T07:00:00.000Z',
+        created_at: '2026-07-08T07:00:00.000Z',
         created_by: '00000000-0000-0000-0000-000000000000',
-        updated_at: '2026-07-03T07:00:00.000Z',
+        updated_at: '2026-07-08T07:00:00.000Z',
         updated_by: '00000000-0000-0000-0000-000000000000',
         deleted_at: null,
         deleted_by: null,
@@ -184,7 +166,7 @@ describe('ClienteRepository', () => {
       const result = await repo.findById(mockRow.id);
 
       expect(result).toEqual(mockRow);
-      expect(mockSupabase.from).toHaveBeenCalledWith('core.cliente');
+      expect(mockSupabase.from).toHaveBeenCalledWith('core.expediente');
       expect(mockQuery.eq).toHaveBeenCalledWith('id', mockRow.id);
       expect(mockQuery.is).toHaveBeenCalledWith('deleted_at', null);
     });
@@ -194,26 +176,19 @@ describe('ClienteRepository', () => {
   // actualizar (optimistic locking)
   // ------------------------------------------------------------------
   describe('actualizar', () => {
-    it('should update a cliente with optimistic locking', async () => {
-      const updatedRow: ClienteRow = {
-        id: '0191f1c0-0000-7000-8000-000000000001',
-        usuario_id: null,
-        email: 'updated@certilab.com',
-        nombre: 'Updated',
-        apellidos: 'Name',
-        telefono: '+34 600 000 001',
-        dni: null,
-        direccion: null,
-        ciudad: null,
-        codigo_postal: null,
-        notas: 'Updated notes',
-        origen: 'web',
-        consent_id: '00000000-0000-0000-0000-000000000000',
-        retention_days: 2190,
-        anonymized_at: null,
-        created_at: '2026-07-03T07:00:00.000Z',
+    it('should update an expediente with optimistic locking', async () => {
+      const updatedRow: ExpedienteRow = {
+        id: '0191f1c0-0000-7000-8000-000000000200',
+        numero_expediente: 'EXP-2026-07-0001',
+        cliente_id: '0191f1c0-0000-7000-8000-000000000001',
+        inmueble_id: '0191f1c0-0000-7000-8000-000000000100',
+        estado: 'pago_pendiente',
+        servicio: 'segunda_opinion',
+        titulo: 'Segunda opinión Certificado Energético',
+        notas: 'Cliente ha solicitado revisión urgente',
+        created_at: '2026-07-08T07:00:00.000Z',
         created_by: '00000000-0000-0000-0000-000000000000',
-        updated_at: '2026-07-03T07:01:00.000Z',
+        updated_at: '2026-07-08T08:00:00.000Z',
         updated_by: '00000000-0000-0000-0000-000000000002',
         deleted_at: null,
         deleted_by: null,
@@ -222,11 +197,11 @@ describe('ClienteRepository', () => {
 
       mockQuery.single.mockResolvedValue({ data: updatedRow, error: null });
 
-      const input: ActualizarClienteInput = {
-        email: 'updated@certilab.com',
-        nombre: 'Updated',
-        notas: 'Updated notes',
-        telefono: '+34 600 000 001',
+      const input: ActualizarExpedienteInput = {
+        estado: 'pago_pendiente',
+        inmueble_id: '0191f1c0-0000-7000-8000-000000000100',
+        titulo: 'Segunda opinión Certificado Energético',
+        notas: 'Cliente ha solicitado revisión urgente',
         updated_by: '00000000-0000-0000-0000-000000000002',
         version: 1,
       };
@@ -245,8 +220,8 @@ describe('ClienteRepository', () => {
         error: { code: 'PGRST116', message: 'no rows', details: '' },
       });
 
-      const input: ActualizarClienteInput = {
-        email: 'conflict@certilab.com',
+      const input: ActualizarExpedienteInput = {
+        titulo: 'Updated title',
         updated_by: 'user-id',
         version: 99, // Stale version
       };
@@ -261,10 +236,10 @@ describe('ClienteRepository', () => {
   // softDelete
   // ------------------------------------------------------------------
   describe('softDelete', () => {
-    it('should soft delete a cliente', async () => {
+    it('should soft delete an expediente', async () => {
       const deleteResult = {
-        id: '0191f1c0-0000-7000-8000-000000000001',
-        deleted_at: '2026-07-03T08:00:00.000Z',
+        id: '0191f1c0-0000-7000-8000-000000000200',
+        deleted_at: '2026-07-08T09:00:00.000Z',
         version: 2,
       };
 
@@ -285,7 +260,7 @@ describe('ClienteRepository', () => {
       );
     });
 
-    it('should return null when cliente already deleted', async () => {
+    it('should return null when expediente already deleted', async () => {
       mockQuery.single.mockResolvedValue({
         data: null,
         error: { code: 'PGRST116', message: 'no rows', details: '' },
@@ -301,26 +276,19 @@ describe('ClienteRepository', () => {
   // restaurar (restore from soft delete)
   // ------------------------------------------------------------------
   describe('restaurar', () => {
-    it('should restore a soft-deleted cliente', async () => {
-      const restoredRow: ClienteRow = {
-        id: '0191f1c0-0000-7000-8000-000000000001',
-        usuario_id: null,
-        email: 'deleted@certilab.com',
-        nombre: 'Deleted',
-        apellidos: 'User',
-        telefono: null,
-        dni: null,
-        direccion: null,
-        ciudad: null,
-        codigo_postal: null,
+    it('should restore a soft-deleted expediente', async () => {
+      const restoredRow: ExpedienteRow = {
+        id: '0191f1c0-0000-7000-8000-000000000200',
+        numero_expediente: 'EXP-2026-07-0001',
+        cliente_id: '0191f1c0-0000-7000-8000-000000000001',
+        inmueble_id: null,
+        estado: 'pendiente',
+        servicio: 'segunda_opinion',
+        titulo: 'Segunda opinión Certificado Energético',
         notas: null,
-        origen: 'web',
-        consent_id: '00000000-0000-0000-0000-000000000000',
-        retention_days: 2190,
-        anonymized_at: null,
-        created_at: '2026-07-03T07:00:00.000Z',
+        created_at: '2026-07-08T07:00:00.000Z',
         created_by: '00000000-0000-0000-0000-000000000000',
-        updated_at: '2026-07-03T08:00:00.000Z',
+        updated_at: '2026-07-08T09:00:00.000Z',
         updated_by: '00000000-0000-0000-0000-000000000001',
         deleted_at: null,
         deleted_by: null,
@@ -332,7 +300,7 @@ describe('ClienteRepository', () => {
       const result = await repo.restaurar(restoredRow.id, 'restorer-user-id');
 
       expect(result).toEqual(restoredRow);
-      expect(mockSupabase.from).toHaveBeenCalledWith('core.cliente');
+      expect(mockSupabase.from).toHaveBeenCalledWith('core.expediente');
       expect(mockQuery.update).toHaveBeenCalledWith(
         expect.objectContaining({
           deleted_at: null,
@@ -345,7 +313,7 @@ describe('ClienteRepository', () => {
       expect(mockQuery.single).toHaveBeenCalled();
     });
 
-    it('should return null when cliente not found for restore', async () => {
+    it('should return null when expediente not found for restore', async () => {
       mockQuery.single.mockResolvedValue({
         data: null,
         error: { code: 'PGRST116', message: 'no rows', details: '' },
@@ -361,16 +329,56 @@ describe('ClienteRepository', () => {
   // findMany with filters
   // ------------------------------------------------------------------
   describe('findMany', () => {
-    it('should query without empresa_id filter (MVP single tenant)', async () => {
+    it('should query without empresa_id filter (MVP)', async () => {
       mockQuery.select.mockReturnThis();
       mockQuery.order.mockReturnThis();
       mockQuery.range.mockResolvedValue({ data: [], error: null });
 
       await repo.findMany({});
 
-      expect(mockSupabase.from).toHaveBeenCalledWith('core.cliente');
-      // MVP: Single tenant. No empresa_id filter. Multitenancy en V3.
+      expect(mockSupabase.from).toHaveBeenCalledWith('core.expediente');
+      // MVP: No empresa_id filter. Preparado para migración a multitenant en V3.
+      expect(mockQuery.eq).not.toHaveBeenCalled();
       expect(mockQuery.is).toHaveBeenCalledWith('deleted_at', null);
+    });
+
+    it('should apply estado filter correctly', async () => {
+      mockQuery.select.mockReturnThis();
+      mockQuery.order.mockReturnThis();
+      mockQuery.range.mockResolvedValue({ data: [], error: null });
+
+      await repo.findMany({
+        estado: 'pendiente',
+      });
+
+      expect(mockQuery.eq).toHaveBeenCalledWith('estado', 'pendiente');
+    });
+
+    it('should apply cliente_id filter correctly', async () => {
+      mockQuery.select.mockReturnThis();
+      mockQuery.order.mockReturnThis();
+      mockQuery.range.mockResolvedValue({ data: [], error: null });
+
+      await repo.findMany({
+        cliente_id: '0191f1c0-0000-7000-8000-000000000001',
+      });
+
+      expect(mockQuery.eq).toHaveBeenCalledWith(
+        'cliente_id',
+        '0191f1c0-0000-7000-8000-000000000001'
+      );
+    });
+
+    it('should apply servicio filter correctly', async () => {
+      mockQuery.select.mockReturnThis();
+      mockQuery.order.mockReturnThis();
+      mockQuery.range.mockResolvedValue({ data: [], error: null });
+
+      await repo.findMany({
+        servicio: 'segunda_opinion',
+      });
+
+      expect(mockQuery.eq).toHaveBeenCalledWith('servicio', 'segunda_opinion');
     });
 
     it('should apply search filter correctly', async () => {
@@ -379,11 +387,11 @@ describe('ClienteRepository', () => {
       mockQuery.range.mockResolvedValue({ data: [], error: null });
 
       await repo.findMany({
-        search: 'Juan',
+        search: 'EXP-2026',
       });
 
       expect(mockQuery.or).toHaveBeenCalledWith(
-        'nombre.ilike.%Juan%,apellidos.ilike.%Juan%,email.ilike.%Juan%'
+        'numero_expediente.ilike.%EXP-2026%,titulo.ilike.%EXP-2026%'
       );
     });
   });
@@ -393,25 +401,41 @@ describe('ClienteRepository', () => {
   // ------------------------------------------------------------------
   describe('count', () => {
     it('should return count with head query', async () => {
-      // Mock supabase to return a custom query that supports chaining then resolves
       const countQuery: Record<string, Mock | unknown> = {
         eq: vi.fn().mockReturnThis(),
         is: vi.fn().mockReturnThis(),
         then: vi.fn((resolve: (value: unknown) => void) =>
-          resolve({ data: null, count: 42, error: null })
+          resolve({ data: null, count: 10, error: null })
         ),
       };
       mockQuery.select = vi.fn().mockReturnValue(countQuery);
 
       const countResult = await repo.count({});
 
-      expect(countResult).toBe(42);
+      expect(countResult).toBe(10);
       expect(mockQuery.select).toHaveBeenCalledWith(
         'id, deleted_at',
         { count: 'exact', head: true }
       );
-      // MVP: Single tenant. No empresa_id filter. Multitenancy en V3.
       expect((countQuery.is as Mock)).toHaveBeenCalledWith('deleted_at', null);
+    });
+
+    it('should filter by estado in count', async () => {
+      const countQuery: Record<string, Mock | unknown> = {
+        eq: vi.fn().mockReturnThis(),
+        is: vi.fn().mockReturnThis(),
+        then: vi.fn((resolve: (value: unknown) => void) =>
+          resolve({ data: null, count: 3, error: null })
+        ),
+      };
+      mockQuery.select = vi.fn().mockReturnValue(countQuery);
+
+      const countResult = await repo.count({
+        estado: 'pendiente',
+      });
+
+      expect(countResult).toBe(3);
+      expect((countQuery.eq as Mock)).toHaveBeenCalledWith('estado', 'pendiente');
     });
   });
 });

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
 import type { InmuebleRow, CrearInmuebleInput, ActualizarInmuebleInput } from '@/types/core/inmueble';
 import { InmuebleRepository } from '@/lib/core/inmueble.repository';
 
@@ -9,26 +9,42 @@ vi.mock('@/lib/supabase/server', () => ({
 
 import { createClient } from '@/lib/supabase/server';
 
+interface MockQuery {
+  eq: Mock;
+  is: Mock;
+  or: Mock;
+  order: Mock;
+  range: Mock;
+  single: Mock;
+  select: Mock;
+  insert: Mock;
+  update: Mock;
+}
+
+interface MockSupabase {
+  from: Mock;
+}
+
 describe('InmuebleRepository', () => {
   let repo: InmuebleRepository;
-  let mockSupabase: ReturnType<typeof createMockQuery>;
-  let mockQuery: ReturnType<typeof createMockQuery>;
+  let mockSupabase: MockSupabase;
+  let mockQuery: MockQuery;
 
-  function createMockQuery() {
-    const query: Record<string, ReturnType<typeof vi.fn>> = {};
-
-    query.eq = vi.fn().mockReturnThis();
-    query.is = vi.fn().mockReturnThis();
-    query.or = vi.fn().mockReturnThis();
-    query.order = vi.fn().mockReturnThis();
-    query.range = vi.fn().mockReturnThis();
-    query.single = vi.fn().mockResolvedValue({ data: null, error: null });
-    query.select = vi.fn().mockReturnThis();
-    query.insert = vi.fn().mockReturnThis();
-    query.update = vi.fn().mockReturnThis();
+  function createMockQuery(): { client: MockSupabase; query: MockQuery } {
+    const query: MockQuery = {
+      eq: vi.fn().mockReturnThis(),
+      is: vi.fn().mockReturnThis(),
+      or: vi.fn().mockReturnThis(),
+      order: vi.fn().mockReturnThis(),
+      range: vi.fn().mockReturnThis(),
+      single: vi.fn().mockResolvedValue({ data: null, error: null }),
+      select: vi.fn().mockReturnThis(),
+      insert: vi.fn().mockReturnThis(),
+      update: vi.fn().mockReturnThis(),
+    };
 
     const fromFn = vi.fn().mockReturnValue(query);
-    const client = { from: fromFn };
+    const client: MockSupabase = { from: fromFn };
 
     return { client, query };
   }
@@ -36,27 +52,10 @@ describe('InmuebleRepository', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     const mocks = createMockQuery();
-    mockSupabase = mocks.client as any;
+    mockSupabase = mocks.client;
     mockQuery = mocks.query;
-    (createClient as any).mockResolvedValue(mockSupabase);
+    (createClient as Mock).mockResolvedValue(mockSupabase);
     repo = new InmuebleRepository();
-  });
-
-  // ------------------------------------------------------------------
-  // Type tests (compile-time)
-  // ------------------------------------------------------------------
-  it('should have correct type exports', () => {
-    const input: CrearInmuebleInput = {
-      cliente_id: '0191f1c0-0000-7000-8000-000000000001',
-      direccion: 'Carrer Test 123',
-      municipio: 'Barcelona',
-      provincia: 'Barcelona',
-      codigo_postal: '08001',
-      created_by: '00000000-0000-0000-0000-000000000000',
-      updated_by: '00000000-0000-0000-0000-000000000000',
-    };
-    expect(input.direccion).toBe('Carrer Test 123');
-    expect(input.municipio).toBe('Barcelona');
   });
 
   // ------------------------------------------------------------------
@@ -107,29 +106,29 @@ describe('InmuebleRepository', () => {
 
       const input: CrearInmuebleInput = {
         cliente_id: mockInmuebleRow.cliente_id,
-        referencia_catastral: mockInmuebleRow.referencia_catastral!,
+        referencia_catastral: mockInmuebleRow.referencia_catastral ?? undefined,
         direccion: mockInmuebleRow.direccion,
         municipio: mockInmuebleRow.municipio,
         provincia: mockInmuebleRow.provincia,
         codigo_postal: mockInmuebleRow.codigo_postal,
-        latitud: mockInmuebleRow.latitud!,
-        longitud: mockInmuebleRow.longitud!,
-        altitud: mockInmuebleRow.altitud!,
+        latitud: mockInmuebleRow.latitud ?? undefined,
+        longitud: mockInmuebleRow.longitud ?? undefined,
+        altitud: mockInmuebleRow.altitud ?? undefined,
         uso: mockInmuebleRow.uso,
         tipo: mockInmuebleRow.tipo,
-        tipo_edificio: mockInmuebleRow.tipo_edificio!,
-        superficie_util: mockInmuebleRow.superficie_util!,
-        superficie_construida: mockInmuebleRow.superficie_construida!,
-        ano_construccion: mockInmuebleRow.ano_construccion!,
-        numero_plantas: mockInmuebleRow.numero_plantas!,
-        altura_libre: mockInmuebleRow.altura_libre!,
-        orientacion_principal: mockInmuebleRow.orientacion_principal!,
-        zona_climatica_cte: mockInmuebleRow.zona_climatica_cte!,
-        zona_climatica_verano: mockInmuebleRow.zona_climatica_verano!,
-        certificado_existente_url: mockInmuebleRow.certificado_existente_url!,
-        certificado_letra: mockInmuebleRow.certificado_letra!,
-        certificado_consumo: mockInmuebleRow.certificado_consumo!,
-        certificado_emisiones: mockInmuebleRow.certificado_emisiones!,
+        tipo_edificio: mockInmuebleRow.tipo_edificio ?? undefined,
+        superficie_util: mockInmuebleRow.superficie_util ?? undefined,
+        superficie_construida: mockInmuebleRow.superficie_construida ?? undefined,
+        ano_construccion: mockInmuebleRow.ano_construccion ?? undefined,
+        numero_plantas: mockInmuebleRow.numero_plantas ?? undefined,
+        altura_libre: mockInmuebleRow.altura_libre ?? undefined,
+        orientacion_principal: mockInmuebleRow.orientacion_principal ?? undefined,
+        zona_climatica_cte: mockInmuebleRow.zona_climatica_cte ?? undefined,
+        zona_climatica_verano: mockInmuebleRow.zona_climatica_verano ?? undefined,
+        certificado_existente_url: mockInmuebleRow.certificado_existente_url ?? undefined,
+        certificado_letra: mockInmuebleRow.certificado_letra ?? undefined,
+        certificado_consumo: mockInmuebleRow.certificado_consumo ?? undefined,
+        certificado_emisiones: mockInmuebleRow.certificado_emisiones ?? undefined,
         created_by: mockInmuebleRow.created_by,
         updated_by: mockInmuebleRow.updated_by,
       };
@@ -362,8 +361,8 @@ describe('InmuebleRepository', () => {
   describe('findMany', () => {
     it('should query without empresa_id filter (MVP)', async () => {
       mockQuery.select.mockReturnThis();
-      mockQuery.order = vi.fn().mockReturnThis();
-      mockQuery.range = vi.fn().mockResolvedValue({ data: [], error: null });
+      mockQuery.order.mockReturnThis();
+      mockQuery.range.mockResolvedValue({ data: [], error: null });
 
       await repo.findMany({});
 
@@ -375,8 +374,8 @@ describe('InmuebleRepository', () => {
 
     it('should apply cliente_id filter correctly', async () => {
       mockQuery.select.mockReturnThis();
-      mockQuery.order = vi.fn().mockReturnThis();
-      mockQuery.range = vi.fn().mockResolvedValue({ data: [], error: null });
+      mockQuery.order.mockReturnThis();
+      mockQuery.range.mockResolvedValue({ data: [], error: null });
 
       await repo.findMany({
         cliente_id: '0191f1c0-0000-7000-8000-000000000001',
@@ -390,8 +389,8 @@ describe('InmuebleRepository', () => {
 
     it('should apply geographic filters correctly', async () => {
       mockQuery.select.mockReturnThis();
-      mockQuery.order = vi.fn().mockReturnThis();
-      mockQuery.range = vi.fn().mockResolvedValue({ data: [], error: null });
+      mockQuery.order.mockReturnThis();
+      mockQuery.range.mockResolvedValue({ data: [], error: null });
 
       await repo.findMany({
         provincia: 'Barcelona',
@@ -406,8 +405,8 @@ describe('InmuebleRepository', () => {
 
     it('should apply climactic zone filters correctly', async () => {
       mockQuery.select.mockReturnThis();
-      mockQuery.order = vi.fn().mockReturnThis();
-      mockQuery.range = vi.fn().mockResolvedValue({ data: [], error: null });
+      mockQuery.order.mockReturnThis();
+      mockQuery.range.mockResolvedValue({ data: [], error: null });
 
       await repo.findMany({
         zona_climatica_cte: 'C2',
@@ -420,8 +419,8 @@ describe('InmuebleRepository', () => {
 
     it('should apply search filter correctly', async () => {
       mockQuery.select.mockReturnThis();
-      mockQuery.order = vi.fn().mockReturnThis();
-      mockQuery.range = vi.fn().mockResolvedValue({ data: [], error: null });
+      mockQuery.order.mockReturnThis();
+      mockQuery.range.mockResolvedValue({ data: [], error: null });
 
       await repo.findMany({
         search: 'Comte',
@@ -438,10 +437,10 @@ describe('InmuebleRepository', () => {
   // ------------------------------------------------------------------
   describe('count', () => {
     it('should return count with head query', async () => {
-      const countQuery: any = {
+      const countQuery: Record<string, Mock | unknown> = {
         eq: vi.fn().mockReturnThis(),
         is: vi.fn().mockReturnThis(),
-        then: vi.fn((resolve: any) =>
+        then: vi.fn((resolve: (value: unknown) => void) =>
           resolve({ data: null, count: 42, error: null })
         ),
       };
@@ -454,14 +453,14 @@ describe('InmuebleRepository', () => {
         'id, deleted_at',
         { count: 'exact', head: true }
       );
-      expect(countQuery.is).toHaveBeenCalledWith('deleted_at', null);
+      expect((countQuery.is as Mock)).toHaveBeenCalledWith('deleted_at', null);
     });
 
     it('should filter by cliente_id in count', async () => {
-      const countQuery: any = {
+      const countQuery: Record<string, Mock | unknown> = {
         eq: vi.fn().mockReturnThis(),
         is: vi.fn().mockReturnThis(),
-        then: vi.fn((resolve: any) =>
+        then: vi.fn((resolve: (value: unknown) => void) =>
           resolve({ data: null, count: 5, error: null })
         ),
       };
@@ -472,7 +471,7 @@ describe('InmuebleRepository', () => {
       });
 
       expect(countResult).toBe(5);
-      expect(countQuery.eq).toHaveBeenCalledWith(
+      expect((countQuery.eq as Mock)).toHaveBeenCalledWith(
         'cliente_id',
         '0191f1c0-0000-7000-8000-000000000001'
       );

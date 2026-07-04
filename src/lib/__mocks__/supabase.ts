@@ -5,7 +5,9 @@
 type MockQuery = {
   eq: ReturnType<typeof vi.fn>;
   is: ReturnType<typeof vi.fn>;
+  not: ReturnType<typeof vi.fn>;
   or: ReturnType<typeof vi.fn>;
+  neq: ReturnType<typeof vi.fn>;
   order: ReturnType<typeof vi.fn>;
   range: ReturnType<typeof vi.fn>;
   single: ReturnType<typeof vi.fn>;
@@ -20,7 +22,9 @@ function createMockQuery(): MockQuery {
 
   query.eq = vi.fn().mockReturnThis();
   query.is = vi.fn().mockReturnThis();
+  query.not = vi.fn().mockReturnThis();
   query.or = vi.fn().mockReturnThis();
+  query.neq = vi.fn().mockReturnThis();
   query.order = vi.fn().mockReturnThis();
   query.range = vi.fn().mockReturnThis();
   query.single = vi.fn().mockResolvedValue({ data: null, error: null });
