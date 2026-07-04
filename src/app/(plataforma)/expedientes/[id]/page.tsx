@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getExpedienteById } from "@/lib/actions/crear-expediente";
+import { DocumentUpload } from "@/components/expedientes/DocumentUpload";
+import { DocumentList } from "@/components/expedientes/DocumentList";
 
 export const metadata: Metadata = {
   title: "Expediente | Plataforma Certilab",
@@ -147,6 +149,55 @@ export default async function ExpedienteDetailPage({
             </div>
           )}
         </dl>
+      </div>
+
+      {/* Documentos */}
+      <div className="bg-white rounded-lg shadow overflow-hidden">
+        <div className="px-6 py-5 border-b border-gray-200">
+          <h2 className="text-lg font-semibold text-gray-900">
+            Documentos del Expediente
+          </h2>
+          <p className="text-sm text-gray-500 mt-1">
+            Adjunta el certificado energético original y fotografías del
+            inmueble para comenzar el análisis.
+          </p>
+        </div>
+
+        <div className="px-6 py-5 space-y-6">
+          {/* Certificado Energético Original */}
+          <div>
+            <DocumentUpload
+              expedienteId={id}
+              tipo="CERTIFICADO_ORIGINAL"
+              label="Certificado Energético Original"
+              accept="application/pdf"
+            />
+          </div>
+
+          {/* Fotografías del Inmueble */}
+          <div>
+            <DocumentUpload
+              expedienteId={id}
+              tipo="FOTOGRAFIA"
+              label="Fotografía del Inmueble"
+            />
+          </div>
+
+          {/* Separador */}
+          <hr className="border-gray-200" />
+
+          {/* Lista de documentos subidos */}
+          <div>
+            <h3 className="text-sm font-medium text-gray-700 mb-3">
+              Documentos subidos
+            </h3>
+            <DocumentList expedienteId={id} />
+          </div>
+
+          {/* Separador */}
+          <hr className="border-gray-200" />
+
+        </div>
       </div>
 
       {/* Timeline placeholder */}
