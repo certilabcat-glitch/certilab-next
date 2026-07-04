@@ -438,6 +438,89 @@ describe('ExpedienteService', () => {
   });
 
   // ================================================================
+  // entregarExpediente
+  // ================================================================
+  describe('entregarExpediente', () => {
+    const updatedBy = USER_ID;
+    const version = 1;
+
+    it('should transition Aprobado -> Entregado successfully', async () => {
+      const expedienteAprobado: ExpedienteRow = {
+        ...mockExpedienteRow,
+        estado: 'Aprobado',
+        version: 1,
+      };
+      const expedienteEntregado: ExpedienteRow = {
+        ...expedienteAprobado,
+        estado: 'Entregado',
+        version: 2,
+      };
+
+      vi.mocked(expedienteRepository.findById).mockResolvedValue(expedienteAprobado);
+      vi.mocked(expedienteRepository.actualizar).mockResolvedValue(expedienteEntregado);
+
+      const result = await service.entregarExpediente(
+        mockExpedienteRow.id,
+        updatedBy,
+        version
+      );
+
+      expect(result.success).toBe(true);
+      expect(result.estado_nuevo).toBe('Entregado');
+      expect(result.estado_anterior).toBe('Aprobado');
+      expect(result.expediente.estado).toBe('Entregado');
+      expect(result.expediente.version).toBe(2);
+      expect(expedienteRepository.findById).toHaveBeenCalledWith(
+        mockExpedienteRow.id
+      );
+    });
+
+    it('should throw validation error for empty ID', async () => {
+      await expect(
+        service.entregarExpediente('', updatedBy, version)
+      ).rejects.toThrow('El ID del expediente es obligatorio.');
+    });
+
+    it('should throw validation error for empty updatedBy', async () => {
+      await expect(
+        service.entregarExpediente(mockExpedienteRow.id, '', version)
+      ).rejects.toThrow('El usuario (updated_by) es obligatorio');
+    });
+
+    it('should throw validation error for invalid estado transition', async () => {
+      // Estado actual es 'Solicitud', transición a 'Entregado' inválida
+      vi.mocked(expedienteRepository.findById).mockResolvedValue(mockExpedienteRow);
+
+      await expect(
+        service.entregarExpediente(mockExpedienteRow.id, updatedBy, version)
+      ).rejects.toThrow('Estado inválido del expediente: Solicitud');
+    });
+
+    it('should throw not found error for nonexistent expediente', async () => {
+      vi.mocked(expedienteRepository.findById).mockResolvedValue(null);
+
+      await expect(
+        service.entregarExpediente('nonexistent', updatedBy, version)
+      ).rejects.toThrow('Expediente no encontrado');
+    });
+
+    it('should throw version conflict error', async () => {
+      const expedienteAprobado: ExpedienteRow = {
+        ...mockExpedienteRow,
+        estado: 'Aprobado',
+        version: 2, // version real es 2, pero pasamos 1
+      };
+
+      vi.mocked(expedienteRepository.findById).mockResolvedValue(expedienteAprobado);
+      vi.mocked(expedienteRepository.actualizar).mockResolvedValue(null);
+
+      await expect(
+        service.entregarExpediente(mockExpedienteRow.id, updatedBy, 1)
+      ).rejects.toThrow('Conflicto de versión');
+    });
+  });
+
+  // ================================================================
   // Singleton
   // ================================================================
   describe('singleton', () => {

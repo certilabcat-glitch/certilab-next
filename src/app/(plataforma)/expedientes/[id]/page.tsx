@@ -4,13 +4,29 @@ import { notFound } from "next/navigation";
 import { getExpedienteById } from "@/lib/actions/crear-expediente";
 import { DocumentUpload } from "@/components/expedientes/DocumentUpload";
 import { DocumentList } from "@/components/expedientes/DocumentList";
-
+import { EntregarResultadoButton } from "@/components/expedientes/EntregarResultadoButton";
 export const metadata: Metadata = {
   title: "Expediente | Plataforma Certilab",
   description: "Detalle del expediente",
 };
 
+/**
+ * Labels canónicos de estado (CF-026 §6.1)
+ * Mapea los estados del dominio a etiquetas legibles para el cliente.
+ */
 const estadoLabels: Record<string, string> = {
+  Solicitud: "Solicitud",
+  PteDocumentacion: "Pendiente de documentación",
+  EnRevisionPITR: "En revisión automática",
+  Auditado: "Auditado",
+  RequiereRevisionManual: "Requiere revisión manual",
+  RevisionManual: "En revisión técnica",
+  Aprobado: "Aprobado",
+  Rechazado: "Rechazado",
+  Entregado: "Resultado entregado",
+  Cancelado: "Cancelado",
+  Devuelto: "Devuelto para correcciones",
+  // Legacy states (pre-core)
   pendiente: "Pendiente",
   pago_pendiente: "Pago pendiente",
   pago_recibido: "Pago recibido",
@@ -18,11 +34,21 @@ const estadoLabels: Record<string, string> = {
   en_revision: "En revisión",
   informe_enviado: "Informe enviado",
   cerrado: "Cerrado",
-  rechazado: "Rechazado",
-  cancelado: "Cancelado",
 };
 
 const estadoColors: Record<string, string> = {
+  Solicitud: "bg-yellow-100 text-yellow-800",
+  PteDocumentacion: "bg-orange-100 text-orange-800",
+  EnRevisionPITR: "bg-purple-100 text-purple-800",
+  Auditado: "bg-blue-100 text-blue-800",
+  RequiereRevisionManual: "bg-red-100 text-red-800",
+  RevisionManual: "bg-indigo-100 text-indigo-800",
+  Aprobado: "bg-green-100 text-green-800",
+  Rechazado: "bg-red-100 text-red-800",
+  Entregado: "bg-emerald-100 text-emerald-800",
+  Cancelado: "bg-gray-100 text-gray-800",
+  Devuelto: "bg-yellow-100 text-yellow-800",
+  // Legacy states (pre-core)
   pendiente: "bg-yellow-100 text-yellow-800",
   pago_pendiente: "bg-orange-100 text-orange-800",
   pago_recibido: "bg-blue-100 text-blue-800",
@@ -30,8 +56,6 @@ const estadoColors: Record<string, string> = {
   en_revision: "bg-purple-100 text-purple-800",
   informe_enviado: "bg-green-100 text-green-800",
   cerrado: "bg-gray-100 text-gray-800",
-  rechazado: "bg-red-100 text-red-800",
-  cancelado: "bg-red-100 text-red-800",
 };
 
 export default async function ExpedienteDetailPage({
@@ -199,6 +223,14 @@ export default async function ExpedienteDetailPage({
 
         </div>
       </div>
+
+      {/* Resultado de la revisión (auto-entrega si está Aprobado) */}
+      <EntregarResultadoButton
+        expedienteId={id}
+        estado={expediente.estado}
+        version={expediente.version}
+        notas={expediente.notas}
+      />
 
       {/* Timeline placeholder */}
       <div className="bg-white rounded-lg shadow overflow-hidden">

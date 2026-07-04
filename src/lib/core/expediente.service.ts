@@ -376,6 +376,24 @@ export class ExpedienteService {
   }
 
   /**
+   * Entregar resultado al cliente.
+   * Transición: Aprobado -> Entregado
+   * 
+   * Se ejecuta automáticamente cuando el cliente visualiza el resultado
+   * de un expediente en estado Aprobado (Alternativa C del análisis).
+   * 
+   * V1 MVP: sin notificaciones automáticas. La entrega se produce
+   * al cargar la vista de detalle del expediente.
+   */
+  async entregarExpediente(
+    id: string,
+    updatedBy: string,
+    version: number
+  ): Promise<ExpedienteTransitionResult> {
+    return this.cambiarEstado(id, 'Entregado', updatedBy, version);
+  }
+
+  /**
    * Rechazar expediente tras revisión manual del AT.
    * Transición: RevisionManual -> Rechazado
    * 
