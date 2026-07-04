@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { solicitarSegundaOpinion } from "@/lib/actions/expedientes";
+import { crearExpediente } from "@/lib/actions/crear-expediente";
 
 export default function SolicitarSegundaOpinionForm() {
   const router = useRouter();
@@ -13,7 +13,7 @@ export default function SolicitarSegundaOpinionForm() {
     setIsSubmitting(true);
     setError(null);
 
-    const result = await solicitarSegundaOpinion({
+    const result = await crearExpediente({
       titulo: "Solicitud de Segunda Opinión",
     });
 

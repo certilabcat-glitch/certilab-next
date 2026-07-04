@@ -4,6 +4,50 @@
  * Single Tenant V1: Sin empresa_id. Multitenancy en V3.
  */
 
+// ============================================================
+// Tipos de Error
+// ============================================================
+
+/**
+ * Error de validación para operaciones con Cliente
+ */
+export class ClienteValidationError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'ClienteValidationError';
+  }
+}
+
+/**
+ * Error cuando un cliente no se encuentra
+ */
+export class ClienteNotFoundError extends Error {
+  constructor(id: string) {
+    super(`Cliente no encontrado: ${id}`);
+    this.name = 'ClienteNotFoundError';
+  }
+}
+
+/**
+ * Error de conflicto en operaciones con Cliente
+ */
+export class ClienteConflictError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'ClienteConflictError';
+  }
+}
+
+/**
+ * Error de conflicto de versión (optimistic locking)
+ */
+export class ClienteVersionConflictError extends Error {
+  constructor(id: string) {
+    super(`Conflicto de versión al actualizar cliente ${id}. Recarga los datos e inténtalo de nuevo.`);
+    this.name = 'ClienteVersionConflictError';
+  }
+}
+
 export type OrigenCliente =
   | 'web'
   | 'whatsapp'

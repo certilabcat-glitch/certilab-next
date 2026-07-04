@@ -69,7 +69,7 @@ describe('ExpedienteRepository', () => {
       numero_expediente: 'EXP-2026-07-0001',
       cliente_id: '0191f1c0-0000-7000-8000-000000000001',
       inmueble_id: null,
-      estado: 'pendiente',
+      estado: 'Solicitud',
       servicio: 'segunda_opinion',
       titulo: 'Segunda opinión Certificado Energético',
       notas: null,
@@ -148,7 +148,7 @@ describe('ExpedienteRepository', () => {
         numero_expediente: 'EXP-2026-07-0001',
         cliente_id: '0191f1c0-0000-7000-8000-000000000001',
         inmueble_id: null,
-        estado: 'pendiente',
+        estado: 'Solicitud',
         servicio: 'segunda_opinion',
         titulo: null,
         notas: null,
@@ -182,7 +182,7 @@ describe('ExpedienteRepository', () => {
         numero_expediente: 'EXP-2026-07-0001',
         cliente_id: '0191f1c0-0000-7000-8000-000000000001',
         inmueble_id: '0191f1c0-0000-7000-8000-000000000100',
-        estado: 'pago_pendiente',
+        estado: 'PteDocumentacion',
         servicio: 'segunda_opinion',
         titulo: 'Segunda opinión Certificado Energético',
         notas: 'Cliente ha solicitado revisión urgente',
@@ -198,7 +198,7 @@ describe('ExpedienteRepository', () => {
       mockQuery.single.mockResolvedValue({ data: updatedRow, error: null });
 
       const input: ActualizarExpedienteInput = {
-        estado: 'pago_pendiente',
+        estado: 'PteDocumentacion',
         inmueble_id: '0191f1c0-0000-7000-8000-000000000100',
         titulo: 'Segunda opinión Certificado Energético',
         notas: 'Cliente ha solicitado revisión urgente',
@@ -282,7 +282,7 @@ describe('ExpedienteRepository', () => {
         numero_expediente: 'EXP-2026-07-0001',
         cliente_id: '0191f1c0-0000-7000-8000-000000000001',
         inmueble_id: null,
-        estado: 'pendiente',
+        estado: 'Solicitud',
         servicio: 'segunda_opinion',
         titulo: 'Segunda opinión Certificado Energético',
         notas: null,
@@ -348,10 +348,10 @@ describe('ExpedienteRepository', () => {
       mockQuery.range.mockResolvedValue({ data: [], error: null });
 
       await repo.findMany({
-        estado: 'pendiente',
+        estado: 'Solicitud',
       });
 
-      expect(mockQuery.eq).toHaveBeenCalledWith('estado', 'pendiente');
+      expect(mockQuery.eq).toHaveBeenCalledWith('estado', 'Solicitud');
     });
 
     it('should apply cliente_id filter correctly', async () => {
@@ -431,11 +431,11 @@ describe('ExpedienteRepository', () => {
       mockQuery.select = vi.fn().mockReturnValue(countQuery);
 
       const countResult = await repo.count({
-        estado: 'pendiente',
+        estado: 'Solicitud',
       });
 
       expect(countResult).toBe(3);
-      expect((countQuery.eq as Mock)).toHaveBeenCalledWith('estado', 'pendiente');
+      expect((countQuery.eq as Mock)).toHaveBeenCalledWith('estado', 'Solicitud');
     });
   });
 });

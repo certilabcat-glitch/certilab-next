@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getMisExpedientes } from "@/lib/actions/expedientes";
+import { getMisExpedientes } from "@/lib/actions/crear-expediente";
 
 export const metadata: Metadata = {
   title: "Mis Expedientes | Plataforma Certilab",

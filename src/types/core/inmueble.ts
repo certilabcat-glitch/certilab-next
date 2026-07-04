@@ -4,6 +4,54 @@
  * Optimizado para CE3X - auditoría remota de certificados energéticos
  */
 
+// ============================================================
+// Tipos de Error
+// ============================================================
+
+/**
+ * Error de validación para operaciones con Inmueble
+ */
+export class InmuebleValidationError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'InmuebleValidationError';
+  }
+}
+
+/**
+ * Error cuando un inmueble no se encuentra
+ */
+export class InmuebleNotFoundError extends Error {
+  constructor(id: string) {
+    super(`Inmueble no encontrado: ${id}`);
+    this.name = 'InmuebleNotFoundError';
+  }
+}
+
+/**
+ * Error de conflicto en operaciones con Inmueble
+ */
+export class InmuebleConflictError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'InmuebleConflictError';
+  }
+}
+
+/**
+ * Error de conflicto de versión (optimistic locking)
+ */
+export class InmuebleVersionConflictError extends Error {
+  constructor(id: string) {
+    super(`Conflicto de versión al actualizar inmueble ${id}. Recarga los datos e inténtalo de nuevo.`);
+    this.name = 'InmuebleVersionConflictError';
+  }
+}
+
+// ============================================================
+// Tipos de inmueble
+// ============================================================
+
 export type TipoInmueble =
   | 'piso'
   | 'unifamiliar'
