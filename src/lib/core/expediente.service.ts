@@ -348,6 +348,48 @@ export class ExpedienteService {
   }
 
   /**
+   * Iniciar revisión manual del expediente por el AT.
+   * Transición: PteDocumentacion -> RevisionManual
+   * 
+   * El AT toma el expediente de la bandeja y comienza su análisis.
+   */
+  async iniciarRevision(
+    id: string,
+    updatedBy: string,
+    version: number
+  ): Promise<ExpedienteTransitionResult> {
+    return this.cambiarEstado(id, 'RevisionManual', updatedBy, version);
+  }
+
+  /**
+   * Aprobar expediente tras revisión manual del AT.
+   * Transición: RevisionManual -> Aprobado
+   * 
+   * El AT finaliza su análisis y aprueba el resultado técnico.
+   */
+  async aprobarExpediente(
+    id: string,
+    updatedBy: string,
+    version: number
+  ): Promise<ExpedienteTransitionResult> {
+    return this.cambiarEstado(id, 'Aprobado', updatedBy, version);
+  }
+
+  /**
+   * Rechazar expediente tras revisión manual del AT.
+   * Transición: RevisionManual -> Rechazado
+   * 
+   * El AT determina que el certificado no es válido y lo rechaza.
+   */
+  async rechazarExpediente(
+    id: string,
+    updatedBy: string,
+    version: number
+  ): Promise<ExpedienteTransitionResult> {
+    return this.cambiarEstado(id, 'Rechazado', updatedBy, version);
+  }
+
+  /**
    * Restaurar un expediente eliminado (soft undelete).
    * Solo para administradores.
    */

@@ -77,9 +77,11 @@ export default async function AtDashboardPage() {
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {bandeja.data.map((exp) => (
-            <tr key={exp.id} className="hover:bg-gray-50 transition-colors">
+            <tr key={exp.id} className="hover:bg-gray-50 transition-colors cursor-pointer">
               <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-blue-600">
-                {exp.numero_expediente}
+                <a href={`/at/expedientes/${exp.id}`} className="hover:underline">
+                  {exp.numero_expediente}
+                </a>
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 capitalize">
                 {exp.servicio?.replace(/_/g, " ") ?? "—"}
@@ -97,9 +99,9 @@ export default async function AtDashboardPage() {
                 })}
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                <a href={`/at/expedientes/${exp.id}`} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 hover:bg-yellow-200 transition-colors">
                   {exp.estado}
-                </span>
+                </a>
               </td>
             </tr>
           ))}

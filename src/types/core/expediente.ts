@@ -226,7 +226,7 @@ export interface ExpedienteTransitionResult {
  */
 export const TRANSICIONES_ESTADO: Record<EstadoExpediente, EstadoExpediente[]> = {
   Solicitud: ['PteDocumentacion', 'Cancelado'],
-  PteDocumentacion: ['EnRevisionPITR', 'Cancelado'],
+  PteDocumentacion: ['EnRevisionPITR', 'RevisionManual', 'Cancelado'],
   EnRevisionPITR: ['Auditado', 'RequiereRevisionManual'],
   Auditado: ['RevisionManual', 'Aprobado'],
   RequiereRevisionManual: ['RevisionManual'],
