@@ -290,9 +290,15 @@ export async function aprobarExpedienteAT(
 
 /**
  * Server Action: Rechazar expediente tras revisión manual.
- * Transición: RevisionManual -> Rechazado
+ * Transición: RevisionManual -> Rechazado -> Devuelto (automática)
  *
  * El AT determina que el certificado no es válido.
+ * Automáticamente se marca como Devuelto para que el cliente
+ * pueda corregir la documentación y solicitar una nueva revisión.
+ *
+ * EP-033: Corrección de documentación.
+ * Tras rechazar, se transiciona automáticamente a Devuelto
+ * porque la máquina de estados lo permite (Rechazado → Devuelto).
  */
 export async function rechazarExpedienteAT(
   expedienteId: string,
@@ -320,11 +326,22 @@ export async function rechazarExpedienteAT(
       version = actual.version;
     }
 
+    // 1. Rechazar el expediente: RevisionManual → Rechazado
     const result = await expedienteService.rechazarExpediente(
       expedienteId,
       userId,
       version
     );
+
+    // 2. Transición automática a Devuelto: Rechazado → Devuelto
+    //    El cliente podrá corregir la documentación y reenviar.
+    await expedienteService.cambiarEstado(
+      expedienteId,
+      "Devuelto",
+      userId,
+      result.expediente.version
+    );
+
     return { success: true, expediente: result.expediente };
   } catch (error) {
     const msg =

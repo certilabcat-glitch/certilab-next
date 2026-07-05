@@ -124,12 +124,15 @@ export async function subirDocumento(
       updated_by: user.id,
     });
 
-    // 5. Transición automática: Solicitud → PteDocumentacion
-    //    Si el expediente está en Solicitud y ya cumple los requisitos mínimos:
-    //    - Al menos 1 CERTIFICADO_ORIGINAL
-    //    - Al menos 3 FOTOGRAFIA
+    // 5. Transición automática: Solicitud/Devuelto → PteDocumentacion
+    //    Si el expediente está en Solicitud o Devuelto y ya cumple los requisitos mínimos:
+    //    - Al menos 1 CERTIFICADO_ORIGINAL (certificado energético)
+    //    - Al menos 3 FOTOGRAFIA (fotos del inmueble)
     //    (CF-028 §5.2 — Documentación mínima para comenzar el análisis)
-    if (expediente.estado === "Solicitud") {
+    //
+    //    EP-033: Se añade Devuelto para que el cliente pueda corregir
+    //    la documentación tras un rechazo del AT.
+    if (expediente.estado === "Solicitud" || expediente.estado === "Devuelto") {
       const todosDocs = await documentoIARepository.findMany({
         expediente_id: expedienteId,
         include_deleted: false,
