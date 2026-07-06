@@ -96,7 +96,7 @@ export default function Privacidad() {
       <ul>
         <li><strong>Acceso:</strong> conocer qué datos tenemos sobre ti.</li>
         <li><strong>Rectificación:</strong> corregir datos inexactos.</li>
-        <li><strong>Supresión:</strong> solicitar la eliminación de tus datos ("derecho al olvido").</li>
+        <li><strong>Supresión:</strong> solicitar la eliminación de tus datos (&ldquo;derecho al olvido&rdquo;).</li>
         <li><strong>Limitación:</strong> restringir el tratamiento de tus datos.</li>
         <li><strong>Portabilidad:</strong> recibir tus datos en formato estructurado.</li>
         <li><strong>Oposición:</strong> oponerte al tratamiento de tus datos.</li>

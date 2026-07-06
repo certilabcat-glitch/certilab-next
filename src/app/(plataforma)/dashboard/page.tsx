@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import Button from "@/components/ui/Button";
+import Badge from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
   title: "Dashboard | Plataforma Certilab",
@@ -15,7 +18,7 @@ export default function DashboardPage() {
         </p>
       </div>
 
-      {/* Placeholder: Resumen de expedientes */}
+      {/* Resumen de expedientes */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="bg-white rounded-lg shadow p-6">
           <h3 className="text-sm font-medium text-gray-500">Total Expedientes</h3>
@@ -35,30 +38,27 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Placeholder: Acciones rápidas */}
+      {/* Acciones rápidas */}
       <div className="bg-white rounded-lg shadow p-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">
           Acciones Rápidas
         </h2>
-        <div className="space-y-2">
-          <a
-            href="/plataforma/mis-expedientes"
-            className="block text-blue-600 hover:text-blue-800"
-          >
-            → Ver mis expedientes
-          </a>
-          <a
-            href="/plataforma/nuevo-expediente"
-            className="block text-blue-600 hover:text-blue-800"
-          >
-            → Crear nuevo expediente
-          </a>
-          <a
-            href="/plataforma/backoffice/expedientes"
-            className="block text-blue-600 hover:text-blue-800"
-          >
-            → Ir a backoffice
-          </a>
+        <div className="space-y-3">
+          <Link href="/plataforma/mis-expedientes">
+            <Button variant="link" className="!justify-start">
+              → Ver mis expedientes
+            </Button>
+          </Link>
+          <Link href="/plataforma/nuevo-expediente">
+            <Button variant="link" className="!justify-start">
+              → Crear nuevo expediente
+            </Button>
+          </Link>
+          <Link href="/plataforma/backoffice/expedientes">
+            <Button variant="link" className="!justify-start">
+              → Ir a backoffice
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

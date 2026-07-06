@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Getting Started/Accessibility" />
+
+# Accessibility
+
+Certilab is committed to WCAG 2.1 AA compliance as a minimum standard.
+
+## Principles
+
+1. **Perceivable** — Information must be presentable to users in ways they can perceive.
+2. **Operable** — UI components and navigation must be operable by all users.
+3. **Understandable** — Information and UI operation must be understandable.
+4. **Robust** — Content must be robust enough to be interpreted by assistive technologies.
+
+## Color and Contrast
+
+- Text must have a contrast ratio of at least 4.5:1 (AA normal text) or 3:1 (AA large text).
+- Color is never the sole indicator of state or meaning.
+- Use icons, labels, or patterns alongside color.
+
+## Keyboard Navigation
+
+- All interactive elements must be reachable via keyboard.
+- Focus indicators must be visible (minimum 2px outline).
+- Tab order must follow logical reading order.
+
+## Screen Readers
+
+- Use semantic HTML elements.
+- ARIA labels where native semantics are insufficient.
+- Form inputs must have associated labels.
+
+## Testing
+
+- All stories should be tested with the Storybook Accessibility addon.
+- Run automated accessibility checks before merging.
+- Manual testing with screen readers for critical flows.

@@ -1,4 +1,6 @@
 import { obtenerBandejaTecnica, contarPendientes } from "@/lib/actions/at";
+import BandejaTecnicaTable from "./BandejaTecnicaTable";
+import Badge from "@/components/ui/Badge";
 
 /**
  * Dashboard del Área Técnica
@@ -25,6 +27,18 @@ export default async function AtDashboardPage() {
     );
   }
 
+  const emptyState = (
+    <div className="text-center py-16">
+      <div className="text-6xl mb-4">✅</div>
+      <h2 className="text-xl font-semibold text-gray-700 mb-2">
+        No hay expedientes pendientes
+      </h2>
+      <p className="text-gray-500">
+        Todos los expedientes han sido procesados.
+      </p>
+    </div>
+  );
+
   return (
     <div className="p-8 max-w-7xl mx-auto">
       {/* Cabecera */}
@@ -35,79 +49,18 @@ export default async function AtDashboardPage() {
         <p className="text-gray-600 mt-2">
           Expedientes pendientes de análisis técnico
           {pendientes.error ? null : (
-            <span className="ml-2 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+            <Badge variant="warning" className="ml-2">
               {pendientes.count} pendiente{pendientes.count !== 1 ? "s" : ""}
-            </span>
+            </Badge>
           )}
         </p>
       </div>
 
       {/* Bandeja de expedientes */}
       {bandeja.data.length === 0 ? (
-        <div className="text-center py-16">
-          <div className="text-6xl mb-4">✅</div>
-          <h2 className="text-xl font-semibold text-gray-700 mb-2">
-            No hay expedientes pendientes
-          </h2>
-          <p className="text-gray-500">
-            Todos los expedientes han sido procesados.
-          </p>
-        </div>
+        emptyState
       ) : (
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200 shadow-sm rounded-lg overflow-hidden">
-            <thead className="bg-gray-50">
-              <tr>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Nº Expediente
-            </th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Servicio
-            </th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Título
-            </th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Recibido
-            </th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Estado
-            </th>
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
-          {bandeja.data.map((exp) => (
-            <tr key={exp.id} className="hover:bg-gray-50 transition-colors cursor-pointer">
-              <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-blue-600">
-                <a href={`/at/expedientes/${exp.id}`} className="hover:underline">
-                  {exp.numero_expediente}
-                </a>
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 capitalize">
-                {exp.servicio?.replace(/_/g, " ") ?? "—"}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 max-w-xs truncate">
-                {exp.titulo ?? "—"}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                {new Date(exp.created_at).toLocaleDateString("es-ES", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                })}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap">
-                <a href={`/at/expedientes/${exp.id}`} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 hover:bg-yellow-200 transition-colors">
-                  {exp.estado}
-                </a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        <BandejaTecnicaTable expedientes={bandeja.data} />
       )}
     </div>
   );

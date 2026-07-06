@@ -98,7 +98,7 @@ function extractFAQs(content: string): { question: string; answer: string }[] {
   const faqSection = content.match(/## Preguntas frecuentes[\s\S]*?(?=\n---|\n## |$)/);
   if (!faqSection) return [];
   const regex = /\*\*¿([^?]+)\?\*\*\n+([\s\S]*?)(?=\n\n\*\*¿|\n---|\n## |$)/g;
-  let match, faqs = [];
+  let match; const faqs: { question: string; answer: string }[] = [];
   while ((match = regex.exec(faqSection[0])) !== null) faqs.push({ question: match[1].trim(), answer: match[2].trim() });
   return faqs;
 }

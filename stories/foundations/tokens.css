@@ -1,0 +1,44 @@
+/* Certilab Design Tokens
+ * These tokens match exactly the @theme block in src/app/globals.css
+ * They are exported explicitly for Storybook documentation and consumer reference.
+ */
+
+:root {
+  /* Typography */
+  --font-serif: 'Crimson Pro', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Colors */
+  --color-terra: #8B6F47;
+  --color-terra-dark: #5C4A2A;
+  --color-terra-light: #C4A882;
+  --color-crema: #F5EFE6;
+  --color-verde: #4A7C59;
+  --color-black: #0A0A0A;
+  --color-dark: #333333;
+  --color-grey: #4A4A4A;
+  --color-border: #E8E4DD;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --shadow-card: 0 2px 8px rgba(139,111,71,0.08), 0 1px 3px rgba(139,111,71,0.04);
+  --shadow-card-hover: 0 8px 24px rgba(139,111,71,0.12), 0 2px 6px rgba(139,111,71,0.06);
+
+  /* Spacing */
+  --space-section: 5rem;
+  --space-section-mobile: 3rem;
+  --space-element: 1.5rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Motion */
+  --ease-default: 0.2s ease;
+  --ease-smooth: 0.3s ease;
+  --ease-spring: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}

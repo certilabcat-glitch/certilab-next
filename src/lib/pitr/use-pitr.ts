@@ -67,7 +67,7 @@ export function usePitr({ template, expedienteId }: UsePitrOptions): UsePitrRetu
   );
 
   // ── REFS ──
-  const startTimeRef = useRef<number>(Date.now());
+  const startTimeRef = useRef<number>(0);
   const autoSaveRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // ── DATOS DERIVADOS ──
@@ -121,8 +121,11 @@ export function usePitr({ template, expedienteId }: UsePitrOptions): UsePitrRetu
       // Validar antes de avanzar
       if (template.config.validateOnNext && currentSection) {
         const results = motor.validarSeccion(currentSection, state.answers, allQuestions);
+        if (results.some((r) => !r.valid)) {
+          setValidationResults(results);
+          return;
+        }
         setValidationResults(results);
-        if (results.some((r) => !r.valid)) return;
       }
       // Completar sección actual
       updateState((prev) => {
@@ -130,7 +133,7 @@ export function usePitr({ template, expedienteId }: UsePitrOptions): UsePitrRetu
         return motor.navegarASeccion(completed, next.id);
       });
     }
-  }, [template, state, currentSection, allQuestions, updateState]);
+  }, [template, state, currentSection, allQuestions, updateState, setValidationResults]);
 
   const goToSection = useCallback(
     (sectionId: string) => {
@@ -147,7 +150,7 @@ export function usePitr({ template, expedienteId }: UsePitrOptions): UsePitrRetu
     const results = motor.validarSeccion(currentSection, state.answers, allQuestions);
     setValidationResults(results);
     return results;
-  }, [currentSection, state.answers, allQuestions]);
+  }, [currentSection, state.answers, allQuestions, setValidationResults]);
 
   // ── BORRADOR ──
   const saveDraft = useCallback(() => {
@@ -196,14 +199,8 @@ export function usePitr({ template, expedienteId }: UsePitrOptions): UsePitrRetu
     return () => clearInterval(timer);
   }, [updateState]);
 
-  // ── REEVALUAR VALIDACIONES AL CAMBIAR RESPUESTAS ──
-  useEffect(() => {
-    if (currentSection && template.config.validateOnNext) {
-      const results = motor.validarSeccion(currentSection, state.answers, allQuestions);
-      setValidationResults(results);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.answers, state.currentSectionId]);
+  // Nota: la validación se reevalúa en goNext() antes de avanzar.
+  // Mantener un efecto que llame a setState provocaría re-renders en cascada.
 
   return {
     state,

@@ -25,7 +25,7 @@ export default function BuscadorPage() {
         <h3>Registro oficial</h3>
         <p>
           El registro oficial de certificadores energéticos de Cataluña lo
-          gestiona el ICAEN (Institut Català d'Energia). En su web puedes
+          gestiona el ICAEN (Institut Català d&rsquo;Energia). En su web puedes
           buscar técnicos habilitados por provincia y municipio.
         </p>
 
@@ -36,7 +36,7 @@ export default function BuscadorPage() {
             rel="noopener noreferrer"
             className={styles.dirLink}
           >
-            🔗 Registro de Certificadores de Cataluña (ICAEN)
+            &nbsp;🔗 Registro de Certificadores de Cataluña (ICAEN)
           </a>
           <a
             href="https://www.gencat.cat/icaen/"
@@ -44,7 +44,7 @@ export default function BuscadorPage() {
             rel="noopener noreferrer"
             className={styles.dirLink}
           >
-            🔗 Institut Català d'Energia
+            &nbsp;🔗 Institut Català d&rsquo;Energia
           </a>
         </div>
 

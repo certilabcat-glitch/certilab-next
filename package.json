@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.105.0",
@@ -23,13 +25,28 @@
     "tesseract.js": "^7.0.0"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.18",
+    "@storybook/addon-docs": "^8.6.18",
+    "@storybook/addon-essentials": "^8.6.18",
+    "@storybook/addon-interactions": "^8.6.18",
+    "@storybook/blocks": "^8.6.18",
+    "@storybook/builder-vite": "^8.6.18",
+    "@storybook/nextjs": "^8.6.18",
+    "@storybook/react": "^8.6.18",
+    "@storybook/react-vite": "^8.6.18",
+    "@storybook/test": "^8.6.18",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.20",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "jsdom": "^29.1.1",
+    "storybook": "^8.6.18",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.9"

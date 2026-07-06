@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Configuración | Plataforma Certilab",
-  description: "Configuración de tu cuenta",
-};
+import Input from "@/components/ui/Input";
+import Button from "@/components/ui/Button";
 
 export default function ConfiguracionPage() {
   return (
@@ -15,86 +13,70 @@ export default function ConfiguracionPage() {
         </p>
       </div>
 
-      {/* Placeholder: Secciones de configuración */}
+      {/* Secciones de configuración */}
       <div className="space-y-6">
+        {/* Perfil */}
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">
             Perfil
           </h2>
           <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Nombre
-              </label>
-              <input
-                type="text"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-                placeholder="Tu nombre"
-                disabled
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
-              <input
-                type="email"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-                placeholder="tu@email.com"
-                disabled
-              />
-            </div>
-            <button
-              className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 disabled:opacity-50"
+            <Input
+              type="text"
+              label="Nombre"
+              placeholder="Tu nombre"
               disabled
-            >
+            />
+            <Input
+              type="email"
+              label="Email"
+              placeholder="tu@email.com"
+              disabled
+            />
+            <Button disabled>
               Guardar Cambios
-            </button>
+            </Button>
           </div>
         </div>
 
+        {/* Seguridad */}
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">
             Seguridad
           </h2>
-          <div className="space-y-4">
-            <button
-              className="w-full text-left px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50"
-              disabled
-            >
+          <div className="space-y-3">
+            <Button variant="secondary" disabled className="w-full justify-start">
               Cambiar Contraseña
-            </button>
-            <button
-              className="w-full text-left px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50"
-              disabled
-            >
+            </Button>
+            <Button variant="secondary" disabled className="w-full justify-start">
               Autenticación de Dos Factores
-            </button>
+            </Button>
           </div>
         </div>
 
+        {/* Notificaciones */}
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">
             Notificaciones
           </h2>
           <div className="space-y-4">
-            <label className="flex items-center">
+            <label className="flex items-center gap-3">
               <input
                 type="checkbox"
                 className="rounded border-gray-300"
                 disabled
               />
-              <span className="ml-2 text-sm text-gray-700">
+              <span className="text-sm text-gray-700">
                 Notificaciones por email
               </span>
             </label>
-            <label className="flex items-center">
+            <label className="flex items-center gap-3">
               <input
                 type="checkbox"
                 className="rounded border-gray-300"
                 disabled
               />
-              <span className="ml-2 text-sm text-gray-700">
+              <span className="text-sm text-gray-700">
                 Notificaciones por SMS
               </span>
             </label>

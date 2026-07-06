@@ -5,6 +5,9 @@ import { getExpedienteById } from "@/lib/actions/crear-expediente";
 import { DocumentUpload } from "@/components/expedientes/DocumentUpload";
 import { DocumentList } from "@/components/expedientes/DocumentList";
 import { EntregarResultadoButton } from "@/components/expedientes/EntregarResultadoButton";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
+
 export const metadata: Metadata = {
   title: "Expediente | Plataforma Certilab",
   description: "Detalle del expediente",
@@ -36,26 +39,26 @@ const estadoLabels: Record<string, string> = {
   cerrado: "Cerrado",
 };
 
-const estadoColors: Record<string, string> = {
-  Solicitud: "bg-yellow-100 text-yellow-800",
-  PteDocumentacion: "bg-orange-100 text-orange-800",
-  EnRevisionPITR: "bg-purple-100 text-purple-800",
-  Auditado: "bg-blue-100 text-blue-800",
-  RequiereRevisionManual: "bg-red-100 text-red-800",
-  RevisionManual: "bg-indigo-100 text-indigo-800",
-  Aprobado: "bg-green-100 text-green-800",
-  Rechazado: "bg-red-100 text-red-800",
-  Entregado: "bg-emerald-100 text-emerald-800",
-  Cancelado: "bg-gray-100 text-gray-800",
-  Devuelto: "bg-yellow-100 text-yellow-800",
+const estadoVariants: Record<string, "default" | "success" | "warning" | "error" | "info"> = {
+  Solicitud: "warning",
+  PteDocumentacion: "warning",
+  EnRevisionPITR: "info",
+  Auditado: "info",
+  RequiereRevisionManual: "error",
+  RevisionManual: "info",
+  Aprobado: "success",
+  Rechazado: "error",
+  Entregado: "success",
+  Cancelado: "default",
+  Devuelto: "warning",
   // Legacy states (pre-core)
-  pendiente: "bg-yellow-100 text-yellow-800",
-  pago_pendiente: "bg-orange-100 text-orange-800",
-  pago_recibido: "bg-blue-100 text-blue-800",
-  expediente_creado: "bg-blue-100 text-blue-800",
-  en_revision: "bg-purple-100 text-purple-800",
-  informe_enviado: "bg-green-100 text-green-800",
-  cerrado: "bg-gray-100 text-gray-800",
+  pendiente: "warning",
+  pago_pendiente: "warning",
+  pago_recibido: "info",
+  expediente_creado: "info",
+  en_revision: "info",
+  informe_enviado: "success",
+  cerrado: "default",
 };
 
 export default async function ExpedienteDetailPage({
@@ -89,13 +92,9 @@ export default async function ExpedienteDetailPage({
               {expediente.numero_expediente}
             </p>
           </div>
-          <span
-            className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-              estadoColors[expediente.estado] ?? "bg-gray-100 text-gray-800"
-            }`}
-          >
+          <Badge variant={estadoVariants[expediente.estado] ?? "default"}>
             {estadoLabels[expediente.estado] ?? expediente.estado}
-          </span>
+          </Badge>
         </div>
       </div>
 
@@ -126,14 +125,9 @@ export default async function ExpedienteDetailPage({
           <div className="px-6 py-4 grid grid-cols-3 gap-4">
             <dt className="text-sm font-medium text-gray-500">Estado</dt>
             <dd className="text-sm text-gray-900 col-span-2">
-              <span
-                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                  estadoColors[expediente.estado] ??
-                  "bg-gray-100 text-gray-800"
-                }`}
-              >
+              <Badge variant={estadoVariants[expediente.estado] ?? "default"} size="sm">
                 {estadoLabels[expediente.estado] ?? expediente.estado}
-              </span>
+              </Badge>
             </dd>
           </div>
           <div className="px-6 py-4 grid grid-cols-3 gap-4">
