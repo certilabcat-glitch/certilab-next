@@ -46,13 +46,22 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
-# stray debris
--1
--1){
-console.log*
-links.txt
-certilab-next/
-certilab-next/src/
+# research artifacts — web scraping outputs (fase PRD-001 / ATI03)
+boe_*.html
+ddg*.html
+duckduckgo_*.html
+google_*.html
+google_search*.html
+idealista*.html
+fotocasa_*.html
+gloval_*.html
+q*.html
+eseficiencia.html
+ficherotecnia.html
+min_energia.html
+test_result.html
+cecu_report.pdf
+all_links.txt
 
 # vercel
 .vercel
