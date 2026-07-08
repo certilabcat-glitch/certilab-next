@@ -87,9 +87,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 ## 6. SESSION STATUS
 
 > □ **CF-001 ejecutado**
+> □ **CF-003 autoevaluación realizada**
 >
-> - **Si no está ejecutado:** Solo pueden realizarse tareas de consulta y análisis.
-> - Antes de modificar código deberá ejecutarse CF-001.
+> - **Si CF-001 no está ejecutado:** Solo pueden realizarse tareas de consulta y análisis.
+> - **Si CF-003 no se ha evaluado:** Deberá realizarse la autoevaluación de capacidad del modelo antes de modificar código.
+> - Antes de modificar código deberá ejecutarse CF-001 y la autoevaluación CF-003.
 > - **Nunca indicar que la sesión es inválida.**
 
 ---
@@ -101,7 +103,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 > - `docs/CF-000-PROJECT-BRAIN.md` (CF-000)
 > - `docs/CF-001-SESSION-PROTOCOL.md` (CF-001)
 > - `docs/CF-001A-ACTA-CIERRE-ARQUITECTURA-V1.md` (CF-001A)
->
 > El agente deberá leerlos automáticamente antes de modificar código.
 >
 > **No deberá esperar confirmación del usuario.**
@@ -290,6 +291,27 @@ componentes, patrones, abstracciones o complejidad añadida al sistema.
 
 ---
 
+## 12. AI EXECUTION POLICY
+
+> **CF-003 — AI Execution Policy v1.0**
+>
+> `docs/CF-003-AI-EXECUTION-POLICY.md`
+>
+> Antes de comenzar cualquier tarea, el agente deberá realizar una autoevaluación
+> de la capacidad del modelo según lo establecido en CF-003. Esta evaluación es
+> independiente de las WORKING-RULES y no modifica la metodología del proyecto.
+>
+> **Regla fundamental:**
+>
+> - No improvisar.
+> - No generar respuestas de baja calidad.
+> - No completar tareas para las que el modelo no tiene capacidad suficiente.
+> - La honestidad técnica tiene prioridad sobre completar la tarea.
+> - Cuando sea posible, reducir el contexto o dividir el trabajo antes de
+>   recomendar un modelo superior.
+
+---
+
 ## RULE PRECEDENCE
 
 En caso de conflicto entre documentos, el orden de prioridad será:
@@ -319,6 +341,7 @@ El objetivo es mantener la trazabilidad de las reglas de gobernanza.
 | Fecha | Autor | Motivo del cambio | Documento |
 |-------|-------|-------------------|-----------|
 | 2026-07-04 | CF-001 | Adición de sección 9 — PRODUCT-FIRST EXECUTION MODE. Cambio de fase tras finalización del Core V1. Reordenación de secciones 10 y 11. | CF-001A, AGENTS.md |
+| 2026-07-08 | CF-003 | Adición de sección 12 — AI EXECUTION POLICY. Nueva política de autoevaluación de capacidad del modelo. Actualización de SESSION STATUS (sección 6). Eliminación de CF-003 del AUTOLOAD (sección 7) por ser política de ejecución, no fuente de verdad del producto. | CF-003 |
 
 ---
 
