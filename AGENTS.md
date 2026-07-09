@@ -49,6 +49,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 > - RLS basada en auth.uid()
 >
 > Solo podrán modificarse mediante una ADR aprobada.
+>
+> Durante el MVP no se requieren revisiones arquitectónicas periódicas.
+> La revisión arquitectónica será obligatoria al cierre de cada épica
+> relevante o cuando un cambio propuesto tenga impacto sobre el dominio,
+> la arquitectura o las políticas del proyecto.
 
 ---
 
@@ -67,6 +72,10 @@ This version has breaking changes — APIs, conventions, and file structure may 
 > **No deben iniciarse discusiones arquitectónicas nuevas.**
 >
 > Debe continuarse el desarrollo.
+>
+> Para decisiones arquitectónicas **nuevas** (no cerradas) en las que
+> exista desacuerdo, el agente deberá presentar las alternativas
+> según CF-004 y el usuario actuará como autoridad final.
 
 ---
 
@@ -277,6 +286,45 @@ componentes, patrones, abstracciones o complejidad añadida al sistema.
 >
 > No puede saltarse ningún paso.
 
+### 10.1 — ADR (Architecture Decision Record)
+
+Toda decisión arquitectónica que afecte a los elementos protegidos por
+ARCHITECTURE FREEZE (§3) o que tenga impacto permanente en la estructura
+del sistema **requiere una ADR**.
+
+Formato obligatorio de una ADR:
+
+- **Título:** ADR-NNN — Descripción breve
+- **Estado:** Draft | Review | Approved | Superseded
+- **Contexto:** Problema o decisión a resolver
+- **Decisión:** Opción seleccionada
+- **Consecuencias:** Impacto positivo y negativo
+- **Alternativas consideradas:** Opciones descartadas con justificación
+
+Las ADRs se numeran secuencialmente (ADR-001, ADR-002, ...) y se
+almacenan en `docs/adr/`.
+
+Una ADR pasa a estado **Approved** cuando el usuario la aprueba
+explícitamente en sesión. Una ADR **Superseded** debe referenciar
+la ADR que la reemplaza.
+
+### 10.2 — Criterios de auditoría arquitectónica
+
+La auditoría específica de cada épica deberá verificar **al menos**:
+
+□ El código respeta los Aggregate Roots definidos en CF-022.
+□ No se han introducido nuevas dependencias entre Bounded Contexts
+  no autorizadas.
+□ No se ha modificado el modelo de datos sin ADR.
+□ No se han introducido patrones prohibidos por MVP DISCIPLINE (§8).
+□ La solución implementada es la de menor complejidad posible
+  (según §9.4 y §11).
+□ No hay duplicación de lógica que deba estar en el Core existente.
+
+Si alguna verificación falla, la épica no puede pasar a «Informe de
+cierre» hasta que se resuelva la desviación o se justifique mediante
+ADR.
+
 ---
 
 ## 11. NO OVERENGINEERING
@@ -342,6 +390,7 @@ El objetivo es mantener la trazabilidad de las reglas de gobernanza.
 |-------|-------|-------------------|-----------|
 | 2026-07-04 | CF-001 | Adición de sección 9 — PRODUCT-FIRST EXECUTION MODE. Cambio de fase tras finalización del Core V1. Reordenación de secciones 10 y 11. | CF-001A, AGENTS.md |
 | 2026-07-08 | CF-003 | Adición de sección 12 — AI EXECUTION POLICY. Nueva política de autoevaluación de capacidad del modelo. Actualización de SESSION STATUS (sección 6). Eliminación de CF-003 del AUTOLOAD (sección 7) por ser política de ejecución, no fuente de verdad del producto. | CF-003 |
+| 2026-07-09 | AGENTE | Formalización de ADR (§10.1), auditoría arquitectónica (§10.2), periodicidad (§3) y escalado de disputas (§4). | AGENTS.md |
 
 ---
 
