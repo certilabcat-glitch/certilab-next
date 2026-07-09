@@ -9,7 +9,10 @@ import {
   aprobarExpedienteAT,
   rechazarExpedienteAT,
 } from "@/lib/actions/at";
+import { obtenerEstadoDiagnostico } from "@/lib/actions/diagnostico";
+import AsistenteDecisionTecnica from "@/components/expedientes/AsistenteDecisionTecnica";
 import type { DetalleExpedienteAT } from "@/lib/actions/at";
+import type { EstadoDiagnostico, DiagnosticoCompleto } from "@/types/core/diagnostico";
 
 /**
  * PITR V1 — Página de Revisión Manual del Arquitecto Técnico
@@ -18,11 +21,11 @@ import type { DetalleExpedienteAT } from "@/lib/actions/at";
  * - Ver datos completos del expediente, cliente, inmueble y documentos
  * - Escribir notas técnicas
  * - Iniciar revisión (PteDocumentacion → RevisionManual)
- * - Aprobar (RevisionManual → Aprobado)
- * - Rechazar (RevisionManual → Rechazado)
+ * - Usar el Asistente de Decisión Técnica (ADT) para construir el diagnóstico
+ * - Aprobar (solo si el diagnóstico está completado)
+ * - Rechazar (solo si el diagnóstico está completado)
  *
- * Sin IA. Sin OCR. Sin procesamiento automático.
- * Todo lo que el AT ve y decide es manual.
+ * La aprobación queda bloqueada hasta que el ADT haya completado el DiagnosticoData.
  */
 export default function AtExpedienteDetailPage({
   params,
@@ -40,6 +43,12 @@ export default function AtExpedienteDetailPage({
   const [notas, setNotas] = useState("");
   const [notasOriginal, setNotasOriginal] = useState("");
 
+  // Estado del diagnóstico (ADT) — valores iniciales antes de comenzar el ADT
+  const [diagnosticoEstado, setDiagnosticoEstado] = useState<EstadoDiagnostico>("SinDiagnostico");
+  const [diagnosticoVersion, setDiagnosticoVersion] = useState<number>(1);
+  const [diagnosticoData, setDiagnosticoData] = useState<DiagnosticoCompleto | null>(null);
+  const [cargandoDiagnostico, setCargandoDiagnostico] = useState(false);
+
   // Estado de acciones
   const [accionando, setAccionando] = useState<string | null>(null);
   const [mensaje, setMensaje] = useState<{
@@ -47,7 +56,7 @@ export default function AtExpedienteDetailPage({
     texto: string;
   } | null>(null);
 
-      // Cargar detalle al montar
+  // Cargar detalle al montar
   useEffect(() => {
     async function cargar() {
       const result = await obtenerDetalleExpediente(id);
@@ -59,6 +68,22 @@ export default function AtExpedienteDetailPage({
         setNotasOriginal(result.data.expediente.notas ?? "");
       }
       setCargando(false);
+
+      // Cargar estado del diagnóstico si ya está en revisión
+      if (result.data && (result.data.expediente.estado === "RevisionManual")) {
+        setCargandoDiagnostico(true);
+        const diagResult = await obtenerEstadoDiagnostico(id);
+        if (diagResult.data && diagResult.data.estado) {
+          setDiagnosticoEstado(diagResult.data.estado);
+          setDiagnosticoVersion(diagResult.data.version);
+          setDiagnosticoData(diagResult.data.diagnostico ?? null);
+        } else {
+          // Si no hay diagnóstico aún, asumir SinDiagnostico
+          setDiagnosticoEstado("SinDiagnostico");
+          setDiagnosticoVersion(result.data.expediente.version);
+        }
+        setCargandoDiagnostico(false);
+      }
     }
     cargar();
   }, [id]);
@@ -93,8 +118,11 @@ export default function AtExpedienteDetailPage({
   const pendiente = expediente.estado === "PteDocumentacion";
   const finalizado = expediente.estado === "Aprobado" || expediente.estado === "Rechazado";
   const puedeIniciar = pendiente && !!user;
-  const puedeAprobarRechazar = enRevision && !!user;
+  const diagnosticoCompletado = diagnosticoEstado === "Completado";
+  const puedeAprobarRechazar = enRevision && !!user && diagnosticoCompletado;
   const notasModificadas = notas !== notasOriginal;
+  const revisionSinDiagnostico = enRevision && diagnosticoEstado === "SinDiagnostico";
+  const revisionEnBorrador = enRevision && diagnosticoEstado === "Borrador";
 
   async function handleIniciarRevision() {
     if (!user) return;
@@ -107,6 +135,9 @@ export default function AtExpedienteDetailPage({
         return { ...prev, expediente: result.expediente! };
       });
       setMensaje({ tipo: "success", texto: "Revisión iniciada correctamente." });
+      // Inicializar diagnóstico como SinDiagnostico al iniciar revisión
+      setDiagnosticoEstado("SinDiagnostico");
+      setDiagnosticoVersion(result.expediente.version);
     } else {
       setMensaje({ tipo: "error", texto: result.error ?? "Error al iniciar revisión." });
     }
@@ -157,6 +188,27 @@ export default function AtExpedienteDetailPage({
       setMensaje({ tipo: "error", texto: result.error ?? "Error al rechazar expediente." });
     }
     setAccionando(null);
+  }
+
+  function handleDiagnosticoCompletado() {
+    setDiagnosticoEstado("Completado");
+    // Refrescar detalle del expediente para obtener la nueva versión
+    obtenerDetalleExpediente(id).then((result) => {
+      if (result.data) {
+        setDetalle(result.data);
+      }
+    });
+  }
+
+  function handleDiagnosticoGuardado() {
+    // Refrescar estado del diagnóstico para obtener la versión actualizada
+    obtenerEstadoDiagnostico(id).then((result) => {
+      if (result.data) {
+        setDiagnosticoEstado(result.data.estado);
+        setDiagnosticoVersion(result.data.version);
+        setDiagnosticoData(result.data.diagnostico ?? null);
+      }
+    });
   }
 
   return (
@@ -326,6 +378,19 @@ export default function AtExpedienteDetailPage({
         )}
       </div>
 
+      {/* Asistente de Decisión Técnica (solo en revisión) */}
+      {enRevision && (
+        <AsistenteDecisionTecnica
+          expedienteId={id}
+          userId={user?.id ?? ""}
+          expedienteVersion={diagnosticoVersion}
+          estadoInicial={diagnosticoEstado}
+          diagnosticoInicial={diagnosticoData}
+          onCompletado={handleDiagnosticoCompletado}
+          onGuardado={handleDiagnosticoGuardado}
+        />
+      )}
+
       {/* Notas Técnicas */}
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <div className="px-6 py-4 border-b border-gray-200 bg-gray-50">
@@ -374,8 +439,12 @@ export default function AtExpedienteDetailPage({
           <p className="text-sm text-gray-600">
             {pendiente &&
               "El expediente está pendiente de documentación. Si ya has revisado los documentos, puedes iniciar la revisión manual."}
-            {enRevision &&
-              "El expediente está en revisión manual. Una vez completado tu análisis, puedes aprobarlo o rechazarlo."}
+            {revisionSinDiagnostico &&
+              "El expediente está en revisión manual. Utiliza el Asistente de Decisión Técnica (ADT) para completar el diagnóstico."}
+            {revisionEnBorrador &&
+              "Estás elaborando el diagnóstico con el ADT. Complétalo antes de aprobar el expediente."}
+            {diagnosticoCompletado &&
+              "Diagnóstico completado. Puedes aprobar o rechazar el expediente."}
             {finalizado &&
               "Este expediente ha sido finalizado. No se pueden realizar más acciones."}
           </p>
@@ -394,8 +463,8 @@ export default function AtExpedienteDetailPage({
               </button>
             )}
 
-            {/* Botón: Aprobar (solo en RevisionManual) */}
-            {puedeAprobarRechazar && (
+            {/* Botón: Aprobar (solo si diagnóstico completado) */}
+            {puedeAprobarRechazar && diagnosticoCompletado && (
               <button
                 onClick={handleAprobar}
                 disabled={accionando !== null}
@@ -407,8 +476,8 @@ export default function AtExpedienteDetailPage({
               </button>
             )}
 
-            {/* Botón: Rechazar (solo en RevisionManual) */}
-            {puedeAprobarRechazar && (
+            {/* Botón: Rechazar (solo si diagnóstico completado) */}
+            {puedeAprobarRechazar && diagnosticoCompletado && (
               <button
                 onClick={handleRechazar}
                 disabled={accionando !== null}
@@ -418,6 +487,14 @@ export default function AtExpedienteDetailPage({
                   ? "Rechazando..."
                   : "✕ Rechazar Expediente"}
               </button>
+            )}
+
+            {/* Mensaje informativo cuando no se puede aprobar/rechazar por diagnóstico pendiente */}
+            {enRevision && !diagnosticoCompletado && (
+              <p className="text-sm text-amber-600 bg-amber-50 border border-amber-200 rounded-md px-4 py-3 w-full">
+                ⚠️ La aprobación o rechazo del expediente requiere completar primero el
+                Asistente de Decisión Técnica (ADT) más arriba.
+              </p>
             )}
           </div>
         </div>
