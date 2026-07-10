@@ -11,6 +11,7 @@ import type { DocumentoIARow } from "@/types/core/documento-ia";
 interface DocumentListProps {
   expedienteId: string;
   refreshKey?: number;
+  readOnly?: boolean;
 }
 
 /**
@@ -58,6 +59,7 @@ function formatDate(dateStr: string): string {
 export function DocumentList({
   expedienteId,
   refreshKey = 0,
+  readOnly = false,
 }: DocumentListProps) {
   const [documentos, setDocumentos] = useState<DocumentoIARow[]>([]);
   const [loading, setLoading] = useState(true);
@@ -216,13 +218,15 @@ export function DocumentList({
                 >
                   {downloadingId === doc.id ? "..." : "Descargar"}
                 </button>
-                <button
-                  onClick={() => handleDelete(doc)}
-                  disabled={deletingId === doc.id}
-                  className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-red-700 bg-red-50 rounded-md hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-50"
-                >
-                  {deletingId === doc.id ? "..." : "Eliminar"}
-                </button>
+                {!readOnly && (
+                  <button
+                    onClick={() => handleDelete(doc)}
+                    disabled={deletingId === doc.id}
+                    className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-red-700 bg-red-50 rounded-md hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-50"
+                  >
+                    {deletingId === doc.id ? "..." : "Eliminar"}
+                  </button>
+                )}
               </div>
             </li>
           ))}

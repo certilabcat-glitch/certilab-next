@@ -16,7 +16,7 @@ export default async function MisExpedientesPage() {
     (e) => !["cerrado", "rechazado", "cancelado"].includes(e.estado)
   );
   const completados = expedientes.filter((e) =>
-    ["cerrado", "rechazado", "cancelado"].includes(e.estado)
+    ["cerrado", "rechazado", "cancelado", "DictamenEntregado"].includes(e.estado)
   );
 
   return (

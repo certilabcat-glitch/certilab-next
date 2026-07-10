@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getExpedienteById } from "@/lib/actions/crear-expediente";
+import { obtenerDictamen } from "@/lib/actions/obtener-dictamen";
 import { DocumentUpload } from "@/components/expedientes/DocumentUpload";
 import { DocumentList } from "@/components/expedientes/DocumentList";
 import { EntregarResultadoButton } from "@/components/expedientes/EntregarResultadoButton";
+import DictamenView from "@/components/expedientes/DictamenView";
 import Badge from "@/components/ui/Badge";
-import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Expediente | Plataforma Certilab",
@@ -29,6 +30,8 @@ const estadoLabels: Record<string, string> = {
   Entregado: "Resultado entregado",
   Cancelado: "Cancelado",
   Devuelto: "Devuelto para correcciones",
+  DictamenEmitido: "Dictamen emitido",
+  DictamenEntregado: "Dictamen entregado",
   // Legacy states (pre-core)
   pendiente: "Pendiente",
   pago_pendiente: "Pago pendiente",
@@ -51,6 +54,8 @@ const estadoVariants: Record<string, "default" | "success" | "warning" | "error"
   Entregado: "success",
   Cancelado: "default",
   Devuelto: "warning",
+  DictamenEmitido: "info",
+  DictamenEntregado: "success",
   // Legacy states (pre-core)
   pendiente: "warning",
   pago_pendiente: "warning",
@@ -71,6 +76,18 @@ export default async function ExpedienteDetailPage({
 
   if (error || !expediente) {
     notFound();
+  }
+
+  // Obtener dictamen si está en estado emitido o entregado
+  let dictamen = null;
+  if (
+    expediente.estado === "DictamenEmitido" ||
+    expediente.estado === "DictamenEntregado"
+  ) {
+    const result = await obtenerDictamen(id);
+    if (result.data) {
+      dictamen = result.data;
+    }
   }
 
   return (
@@ -225,6 +242,26 @@ export default async function ExpedienteDetailPage({
         version={expediente.version}
         notas={expediente.notas}
       />
+
+      {/* Dictamen Técnico (visible si emitido o entregado) */}
+      {dictamen && expediente.estado === "DictamenEntregado" && (
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-6 py-5 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-900">
+              Dictamen Técnico
+            </h2>
+            <p className="text-sm text-gray-500 mt-1">
+              Resultado completo de la revisión técnica
+            </p>
+          </div>
+          <div className="px-6 py-5">
+            <DictamenView
+              dictamen={dictamen}
+              estado="Entregado"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Timeline placeholder */}
       <div className="bg-white rounded-lg shadow overflow-hidden">

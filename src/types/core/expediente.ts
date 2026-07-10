@@ -40,6 +40,8 @@ export type EstadoExpediente =
   | 'Aprobado'
   | 'Rechazado'
   | 'Entregado'
+  | 'DictamenEmitido'
+  | 'DictamenEntregado'
   | 'Cancelado'
   | 'Devuelto';
 
@@ -118,6 +120,10 @@ export interface ExpedienteRow {
   servicio: string; // TipoServicio
   titulo: string | null;
   notas: string | null;
+
+  // Diagnóstico (S1-T01) y Dictamen (S1-T02) como JSONB
+  diagnostico?: unknown;
+  dictamen?: unknown;
 
   // Auditoría (V1 core pattern)
   created_at: string;
@@ -231,8 +237,10 @@ export const TRANSICIONES_ESTADO: Record<EstadoExpediente, EstadoExpediente[]> =
   Auditado: ['RevisionManual', 'Aprobado'],
   RequiereRevisionManual: ['RevisionManual'],
   RevisionManual: ['Aprobado', 'Rechazado'],
-  Aprobado: ['Entregado'],
+  Aprobado: ['DictamenEmitido', 'Entregado'],
   Rechazado: ['Devuelto'],
+  DictamenEmitido: ['DictamenEntregado'],
+  DictamenEntregado: [],
   Entregado: [],
   Cancelado: [],
   Devuelto: ['PteDocumentacion'],
