@@ -16,19 +16,23 @@ Implementación de la visualización del **Dictamen Técnico** en las vistas del
 
 ### Creados en épicas anteriores (reutilizados, sin cambiar)
 
+DictamenTecnico es un **Value Object** dentro del agregado Expediente.
+Persiste como columna `core.expediente.dictamen JSONB` — no existe tabla independiente ni nuevo Aggregate Root.
+
 | Archivo | Propósito |
 |---------|-----------|
-| `src/types/core/dictamen.ts` | Tipo DictamenTecnico |
-| `src/lib/actions/obtener-dictamen.ts` | Server Action para obtener dictamen |
-| `src/lib/actions/entregar-dictamen.ts` | Server Action para entregar dictamen |
-| `src/lib/actions/emitir-dictamen.ts` | Server Action para emitir dictamen |
-| `src/types/core/expediente.ts` | Tipo Expediente con relación a dictamen |
+| `src/types/core/dictamen.ts` | Tipo DictamenTecnico (Value Object) |
+| `src/types/core/expediente.ts` | Tipo Expediente con campo `dictamen?: DictamenTecnico` |
+| `supabase/migrations/20260711_00001_add_dictamen.sql` | Migración: añade columna `dictamen JSONB` a `core.expediente` |
+| `src/lib/actions/obtener-dictamen.ts` | Server Action para obtener dictamen desde JSONB |
+| `src/lib/actions/entregar-dictamen.ts` | Server Action para entregar dictamen al cliente |
+| `src/lib/actions/emitir-dictamen.ts` | Server Action para emitir dictamen (escribe JSONB) |
+| `src/lib/actions/__tests__/dictamen.test.ts` | Tests del flujo de dictamen (27 tests) |
 | `src/components/expedientes/DictamenView.tsx` | Componente de visualización de dictamen |
 | `src/components/expedientes/DictamenStatusBadge.tsx` | Badge de estado del dictamen |
 | `src/components/expedientes/EntregarDictamenButton.tsx` | Botón de entrega (AT) |
 | `src/components/expedientes/EmitirDictamenButton.tsx` | Botón de emisión (AT) |
 | `src/components/expedientes/EmitirDictamenModal.tsx` | Modal de emisión (AT) |
-| `src/lib/actions/__tests__/dictamen.test.ts` | Tests del flujo de dictamen |
 
 ### Modificados en esta épica
 
