@@ -1,5 +1,10 @@
 # CF-021 — SUPABASE ARCHITECTURE
 
+> **⚠️ V2+ — Documento de diseño sin implementación en MVP**
+> Este documento describe la arquitectura objetivo de Supabase para la versión completa del sistema.
+> Durante V1 no se implementará esta arquitectura. Se utiliza la configuración mínima de Supabase según lo definido en los servicios actuales.
+> No debe implementarse hasta nueva orden.
+
 **Versión:** 1.0  
 **Fecha:** 01/07/2026  
 **Responsable:** Arquitectura Técnica Certilab  

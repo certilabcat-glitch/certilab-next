@@ -125,34 +125,19 @@ export async function subirDocumento(
     });
 
     // 5. Transición automática: Solicitud/Devuelto → PteDocumentacion
-    //    Si el expediente está en Solicitud o Devuelto y ya cumple los requisitos mínimos:
-    //    - Al menos 1 CERTIFICADO_ORIGINAL (certificado energético)
-    //    - Al menos 3 FOTOGRAFIA (fotos del inmueble)
-    //    (CF-028 §5.2 — Documentación mínima para comenzar el análisis)
+    //    Al subir el primer documento, el expediente sale del estado Solicitud
+    //    y pasa a PteDocumentacion (CF-028 §5.1 — Inicio del periodo
+    //    de recepción documental).
     //
-    //    EP-033: Se añade Devuelto para que el cliente pueda corregir
-    //    la documentación tras un rechazo del AT.
+    //    En estado Devuelto, cualquier subida del cliente reabre el periodo
+    //    de corrección documental.
     if (expediente.estado === "Solicitud" || expediente.estado === "Devuelto") {
-      const todosDocs = await documentoIARepository.findMany({
-        expediente_id: expedienteId,
-        include_deleted: false,
-      });
-
-      const tieneCertificado = todosDocs.some(
-        (d) => d.tipo === "CERTIFICADO_ORIGINAL"
+      await expedienteService.cambiarEstado(
+        expedienteId,
+        "PteDocumentacion",
+        user.id,
+        expediente.version
       );
-      const numFotografias = todosDocs.filter(
-        (d) => d.tipo === "FOTOGRAFIA"
-      ).length;
-
-      if (tieneCertificado && numFotografias >= 3) {
-        await expedienteService.cambiarEstado(
-          expedienteId,
-          "PteDocumentacion",
-          user.id,
-          expediente.version
-        );
-      }
     }
 
     revalidatePath(`/plataforma/expedientes/${expedienteId}`);

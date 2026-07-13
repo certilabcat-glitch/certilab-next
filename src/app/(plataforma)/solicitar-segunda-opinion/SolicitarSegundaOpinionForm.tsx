@@ -18,8 +18,8 @@ export default function SolicitarSegundaOpinionForm() {
       titulo: "Solicitud de Segunda Opinión",
     });
 
-    if (result.success) {
-      router.push("/plataforma/mis-expedientes");
+    if (result.success && result.expedienteId) {
+      router.push(`/plataforma/expedientes/${result.expedienteId}`);
     } else {
       setError(result.error ?? "Error al crear el expediente.");
       setIsSubmitting(false);

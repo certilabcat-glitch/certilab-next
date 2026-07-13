@@ -6,6 +6,7 @@ import { obtenerDictamen } from "@/lib/actions/obtener-dictamen";
 import { DocumentUpload } from "@/components/expedientes/DocumentUpload";
 import { DocumentList } from "@/components/expedientes/DocumentList";
 import { EntregarResultadoButton } from "@/components/expedientes/EntregarResultadoButton";
+import { CorregirExpedienteButton } from "@/components/expedientes/CorregirExpedienteButton";
 import DictamenView from "@/components/expedientes/DictamenView";
 import Badge from "@/components/ui/Badge";
 
@@ -234,6 +235,13 @@ export default async function ExpedienteDetailPage({
 
         </div>
       </div>
+
+      {/* Corrección de expediente (visible si está Devuelto) */}
+      <CorregirExpedienteButton
+        expedienteId={id}
+        estado={expediente.estado}
+        version={expediente.version}
+      />
 
       {/* Resultado de la revisión (auto-entrega si está Aprobado) */}
       <EntregarResultadoButton

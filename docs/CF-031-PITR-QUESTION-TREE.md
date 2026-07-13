@@ -1,5 +1,8 @@
 # CF-031 — PITR™ Intelligent Question Tree
 
+> ⚠️ **V2+ — NO IMPLEMENTAR EN MVP V1**
+> Este documento corresponde al módulo avanzado de inspección PITR™, planificado para V2+. Define el árbol de decisión adaptativo para auditoría remota de certificados energéticos, un producto/servicio futuro fuera del alcance del MVP V1. No debe implementarse ni integrarse durante el desarrollo del MVP.
+
 | Campo | Descripción |
 |-------|-------------|
 | **Código** | CF-031 |
@@ -7,7 +10,7 @@
 | **Versión** | 1.0 |
 | **Fecha** | 2026-07-02 |
 | **Autor** | Certilab® — Metodología PITR™ |
-| **Propósito** | Definir el árbol de decisión adaptativo que guía la recogida de evidencia fotográfica y documental, determina la confianza por variable CE3X, identifica contradicciones y decide cuándo es necesaria revisión manual. |
+| **Propósito** | Definir el árbol de decisión adaptativo que guía la recogida de evidencia fotográfica y documental, determina la confianza por variable CE3X, identifica contradicciones y decide cuándo es necesaria revisión manual. ⚠️ **V2+ — NO IMPLEMENTAR EN MVP V1** |
 | **Dependencias** | CF-030 (catálogo de evidencia fotográfica), CF-020 (modelo de datos), CF-012 (motor PITR), CF-000 (project brain) |
 | **Audiencia** | Arquitectos Técnicos, desarrolladores del motor PITR, auditores de certificación energética |
 

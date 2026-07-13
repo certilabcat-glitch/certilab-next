@@ -1,9 +1,14 @@
 # CF-011 — FOUNDATION ARCHITECTURE
 
+> ⚠️ **ADVERTENCIA:** Este documento describe una arquitectura fundacional explorada
+> pero **NO implementada en V1**. La arquitectura real del Core V1 se define en
+> CF-025 (Inmueble), CF-026 (Expediente), CF-027 (Documento IA) y el acta
+> CF-001A. Este documento se conserva como referencia histórica para V2+.
+
 **Versión:** 1.0  
 **Fecha:** 29/06/2026  
 **Responsable:** Arquitectura Técnica Certilab  
-**Estado:** Documento de diseño final (sin implementación)
+**Estado:** 🔴 V2+ (diseño no implementado en V1)
 
 ---
 

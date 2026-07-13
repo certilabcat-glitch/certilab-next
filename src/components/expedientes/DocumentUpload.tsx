@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { subirDocumento } from "@/lib/actions/documentos-expediente";
 import type { TipoDocumento } from "@/types/core/documento-ia";
 
@@ -32,6 +33,7 @@ export function DocumentUpload({
   accept,
   onSuccess,
 }: DocumentUploadProps) {
+  const router = useRouter();
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
@@ -69,6 +71,10 @@ export function DocumentUpload({
       setSuccess(true);
       formRef.current?.reset();
       onSuccess?.();
+
+      // Refrescar datos del servidor para actualizar el badge de estado
+      // y la lista de documentos (usa la revalidación de subirDocumento)
+      router.refresh();
 
       // Ocultar mensaje de éxito tras 3 segundos
       setTimeout(() => setSuccess(false), 3000);

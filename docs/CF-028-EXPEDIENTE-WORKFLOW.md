@@ -10,36 +10,45 @@
 
 ---
 
-**Versión:** 1.0.0  
-**Fecha:** 04/07/2026  
+**Versión:** 1.1.0  
+**Fecha:** 11/07/2026  
 **Autor:** Certilab Core Engineering  
-**Estado:** ✅ Vigente  
+**Estado:** ✅ **APPROVED** — Congelado como referencia oficial del workflow MVP V1  
 **Tipo:** Diseño de orquestación  
-**Relación:** CF-022, CF-026, CF-030, CF-031, CF-032, CF-040, PROPUESTA-MODELO-MVP
+**Relación:** CF-022, CF-026, CF-030, CF-031, CF-032, CF-040, CF-050, ADR-002, PROPUESTA-MODELO-MVP  
+**Última auditoría:** `docs/audits/CF-028-NORMALIZACION-AUDITORIA.md` (11/07/2026)  
+**Gobernanza:** Conforme a CF-002 — Documentación normalizada y etiquetada V1/V2+
 
 ---
 
-## ÍNDICE
+## ÍNDICE V1 / V2+
+
+> Este documento utiliza las siguientes marcas para distinguir el alcance:
+> - **[V1]** — Capacidad incluida en el MVP (según CF-050).
+> - **[V2+]** — Capacidad diferida a V2 o posterior. Se documenta para mantener la visión de producto, pero no se implementa en V1.
+> - **[V1+V2]** — Capacidad que aplica a ambas versiones sin cambios de comportamiento.
 
 1. [Propósito y alcance](#1-propósito-y-alcance)
 2. [Diagrama general del flujo](#2-diagrama-general-del-flujo)
-3. [Fase 0 — Pre-creación: Identificación del cliente e inmueble](#3-fase-0--pre-creación-identificación-del-cliente-e-inmueble)
-4. [Fase 1 — Creación del expediente](#4-fase-1--creación-del-expediente)
-5. [Fase 2 — Recepción de documentación](#5-fase-2--recepción-de-documentación)
-6. [Fase 3 — Análisis PITR automático](#6-fase-3--análisis-pitr-automático)
-7. [Fase 4 — Revisión manual del Arquitecto Técnico](#7-fase-4--revisión-manual-del-arquitecto-técnico)
-8. [Fase 5 — Entrega del resultado](#8-fase-5--entrega-del-resultado)
-9. [Fase de cancelación y rechazo](#9-fase-de-cancelación-y-rechazo)
-10. [Matriz de responsabilidades por agregado](#10-matriz-de-responsabilidades-por-agregado)
-11. [Mapa de eventos entre agregados](#11-mapa-de-eventos-entre-agregados)
-12. [Validaciones por paso](#12-validaciones-por-paso)
-13. [Gestión de fallos](#13-gestión-de-fallos)
+3. [Fase 0 — Pre-creación: Identificación del cliente e inmueble](#3-fase-0--pre-creación-identificación-del-cliente-e-inmueble) [V1+V2]
+4. [Fase 1 — Creación del expediente](#4-fase-1--creación-del-expediente) [V1+V2]
+5. [Fase 2 — Recepción de documentación](#5-fase-2--recepción-de-documentación) [V1+V2]
+6. [Fase 3 — Análisis PITR](#6-fase-3--análisis-pitr) [V1+V2]
+   - [6.1 Flujo V1 — Revisión manual del AT](#61-flujo-v1--revisión-manual-del-at) [V1]
+   - [6.2 Flujo V2+ — Análisis PITR automático](#62-flujo-v2--análisis-pitr-automático) [V2+]
+7. [Fase 4 — Revisión manual del Arquitecto Técnico](#7-fase-4--revisión-manual-del-arquitecto-técnico) [V1+V2]
+8. [Fase 5 — Entrega del resultado](#8-fase-5--entrega-del-resultado) [V1+V2]
+9. [Fase de cancelación y rechazo](#9-fase-de-cancelación-y-rechazo) [V1+V2]
+10. [Matriz de responsabilidades por agregado](#10-matriz-de-responsabilidades-por-agregado) [V1+V2]
+11. [Mapa de eventos entre agregados](#11-mapa-de-eventos-entre-agregados) [V1+V2]
+12. [Validaciones por paso](#12-validaciones-por-paso) [V1+V2]
+13. [Gestión de fallos](#13-gestión-de-fallos) [V1+V2]
 14. [Manual vs. Automatizado en V1](#14-manual-vs-automatizado-en-v1)
-15. [Glosario de la orquestación](#15-glosario-de-la-orquestación)
+15. [Glosario de la orquestación](#15-glosario-de-la-orquestación) [V1+V2]
 
 ---
 
-## 1. Propósito y alcance
+## 1. Propósito y alcance [V1+V2]
 
 ### 1.1 ¿Qué es este documento?
 
@@ -47,8 +56,11 @@ Define la secuencia orquestada de interacciones entre los cuatro agregados del C
 para completar el flujo funcional completo del MVP de Certilab:
 
 ```text
-Cliente → Inmueble → Expediente → Documento IA → PITR → Resultado
+Cliente → Inmueble → Expediente → Documento IA → Revisión AT → Resultado
 ```
+
+> **Nota:** En V1, el flujo no incluye Motor PITR automático. La revisión es 100% manual
+> por el Arquitecto Técnico. El Motor PITR automático se añadirá en V2+ (ver §6.2).
 
 ### 1.2 ¿Qué NO es este documento?
 
@@ -59,7 +71,7 @@ Cliente → Inmueble → Expediente → Documento IA → PITR → Resultado
 - ❌ No sustituye el diseño del Expediente (CF-026) ni del Documento IA (EP-027).
 - ❌ No es un documento de infraestructura (no define colas, workers, schedules).
 
-### 1.3 Principios de la orquestación
+### 1.3 Principios de la orquestación [V1+V2]
 
 1. **Cada agregado es autónomo.** Ningún agregado accede directamente a los datos internos de otro. Toda comunicación ocurre mediante referencias por ID y eventos.
 2. **El Expediente es el coordinador del flujo.** Es el agregado que contiene la máquina de estados y determina cuándo debe actuar cada agregado.
@@ -69,11 +81,13 @@ Cliente → Inmueble → Expediente → Documento IA → PITR → Resultado
 
 ---
 
-## 2. Diagrama general del flujo
+## 2. Diagrama general del flujo [V1+V2]
+
+### 2.1 Flujo V1 (MVP)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                        FLUJO COMPLETO DEL MVP                       │
+│                        FLUJO V1 — MVP                                │
 │                                                                     │
 │  FASE 0                    FASE 1              FASE 2               │
 │  PRE-CREACIÓN              CREACIÓN            DOCUMENTACIÓN        │
@@ -95,6 +109,55 @@ Cliente → Inmueble → Expediente → Documento IA → PITR → Resultado
 │  │Inmueble  │            │                    │ Expediente   │      │
 │  │ existente│            │                    │documentado   │      │
 │  └──────────┘            │                    └──────┬───────┘      │
+│                                                    │              │
+│  FASE 3/4                 FASE 5                    │              │
+│  REVISIÓN MANUAL AT       ENTREGA                   │              │
+│  ┌──────────────┐                            │              │
+│  │ AT revisa    │                            │              │
+│  │ manualmente  │                            │              │
+│  └──────┬───────┘                            │              │
+│         │                                     │              │
+│         │(8a)                                 │              │
+│         ▼                                     ▼              │
+│  ┌──────────────┐                        ┌──────────────┐    │
+│  │ Aprobado     │                        │ Expediente   │    │
+│  │ por AT       │────(9)──────────────▶  │ Entregado    │    │
+│  └──────┬───────┘                        └──────────────┘    │
+│         │                                                      │
+│         │(8b)                                                  │
+│         ▼                                                      │
+│  ┌──────────────┐                                              │
+│  │ Rechazado    │                                              │
+│  │ por AT       │                                              │
+│  └──────┬───────┘                                              │
+│         │                                                      │
+│         ▼                                                      │
+│  ┌──────────────┐                                              │
+│  │  Devuelto    │──(10)──→ PteDocumentacion (corrección)      │
+│  └──────────────┘                                              │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+**Transiciones V1:**
+```
+Solicitud → PteDocumentacion → RevisionManual → Aprobado → Entregado
+                                                    ↓
+                                              Rechazado → Devuelto → PteDocumentacion
+                                                    ↓
+                                              Cancelado
+```
+
+> **Nota V1:** No existe el estado `EnRevisionPITR` ni `Auditado`. La transición desde
+> `PteDocumentacion` va directamente a `RevisionManual`. No hay análisis PITR automático.
+> La auto-entrega está soportada (ver nota ADR-002 en §8).
+
+### 2.2 Flujo V2+ (con Motor PITR automático)
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                        FLUJO V2+ — COMPLETO                          │
+│                                                                     │
+│  ... (Fases 0-2 idénticas a V1) ...                                 │
 │                                                    │              │
 │  FASE 3                   FASE 4                  │  FASE 5       │
 │  ANÁLISIS PITR            REVISIÓN MANUAL          │  ENTREGA      │
@@ -125,9 +188,23 @@ Cliente → Inmueble → Expediente → Documento IA → PITR → Resultado
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
+**Transiciones V2+:**
+```
+Solicitud → PteDocumentacion → EnRevisionPITR → Auditado → Aprobado → Entregado
+                                                    ↓
+                                              RevisionManual → Aprobado
+                                                                  ↓
+                                                            Rechazado → Devuelto
+                                                                  ↓
+                                                            Cancelado
+```
+
+> **Nota:** En V2+, el flujo V1 sigue siendo válido como ruta alternativa. El Motor PITR
+> automático complementa pero no sustituye la revisión manual.
+
 ---
 
-## 3. Fase 0 — Pre-creación: Identificación del cliente e inmueble
+## 3. Fase 0 — Pre-creación: Identificación del cliente e inmueble [V1+V2]
 
 ### 3.1 Descripción
 
@@ -238,7 +315,7 @@ Inicio de solicitud
 
 ---
 
-## 4. Fase 1 — Creación del expediente
+## 4. Fase 1 — Creación del expediente [V1+V2]
 
 ### 4.1 Descripción
 
@@ -343,7 +420,7 @@ con los datos mínimos del servicio solicitado.
 
 ---
 
-## 5. Fase 2 — Recepción de documentación
+## 5. Fase 2 — Recepción de documentación [V1+V2]
 
 ### 5.1 Descripción
 
@@ -413,11 +490,16 @@ Expediente en Solicitud
 │  │                                                            │
 │  ├─ NO → PteDocumentación (espera)                           │
 │  │                                                            │
-│  └─ SÍ → Expediente → PteDocumentación → EnRevisionPITR     │
+│  └─ SÍ → V1:   PteDocumentación → RevisionManual            │
+│          V2+:  PteDocumentación → EnRevisionPITR             │
 │                                                              │
 │ Evento emitido: DocumentacionMinimaCompleta                  │
 └──────────────────────────────────────────────────────────────┘
 ```
+
+> **Nota V1:** En el MVP, la transición desde `PteDocumentación` va directamente a
+> `RevisionManual`. No existe el estado intermedio `EnRevisionPITR` en V1.
+> Ver §2.1 para el diagrama completo del flujo V1.
 
 ### 5.3 Agregado responsable
 
@@ -427,7 +509,7 @@ Expediente en Solicitud
 | Validación de tipo/tamaño/integridad | **Documento IA** | Verifica mime_type, tamano_bytes, hash |
 | Conteo de documentos por tipo | **Documento IA** | Consulta documentos del expediente agrupados por tipo |
 | Verificación de documentación mínima | **Expediente** | Decide si se cumplen los requisitos para avanzar |
-| Transición de estado | **Expediente** | Solicitud → PteDocumentación → EnRevisionPITR |
+| Transición de estado | **Expediente** | Solicitud → PteDocumentación → RevisionManual (V1) / EnRevisionPITR (V2+) |
 
 ### 5.4 Información intercambiada
 
@@ -443,7 +525,8 @@ Expediente en Solicitud
 |----------|----------------|--------------|
 | Expediente | Solicitud | **PteDocumentación** |
 | Expediente | PteDocumentación | **PteDocumentación** (sigue esperando) |
-| Expediente | PteDocumentación | **EnRevisionPITR** (mínimo cumplido) |
+| Expediente | PteDocumentación | **RevisionManual** (V1, mínimo cumplido) |
+| Expediente | PteDocumentación | **EnRevisionPITR** (V2+, mínimo cumplido) |
 | Documento IA (certificado) | — | `PENDIENTE` → `COMPLETADO` (tras validación) |
 | Documento IA (fotos) | — | `PENDIENTE` → `COMPLETADO` (tras validación) |
 | Documento IA (cualquier doc) | — | `PENDIENTE` → `ERROR` (si falla validación) |
@@ -482,9 +565,38 @@ Expediente en Solicitud
 
 ---
 
-## 6. Fase 3 — Análisis PITR automático
+## 6. Fase 3 — Análisis PITR [V1+V2]
 
-### 6.1 Descripción
+> **Nota general:** El concepto de dominio PITR (revisión técnica) permanece tanto en V1
+> como en V2+. La diferencia está en el grado de automatización:
+> - **V1:** 100% manual por el Arquitecto Técnico
+> - **V2+:** Automatización progresiva mediante Motor PITR
+
+### 6.1 Flujo V1 — Revisión manual del AT [V1]
+
+En V1, el flujo no incluye análisis PITR automático. Cuando la documentación mínima está
+completa, el expediente transiciona directamente a `RevisionManual` (ver §7).
+
+```
+PteDocumentación → RevisionManual
+```
+
+El AT realiza manualmente todo el proceso:
+1. Revisa el certificado original y las evidencias aportadas.
+2. Introduce las variables CE3X manualmente en el sistema.
+3. Evalúa la coherencia entre certificado y evidencias.
+4. Identifica y resuelve contradicciones.
+5. Decide si el certificado es válido (Aprobado) o no (Rechazado).
+
+> **Estados V1 involucrados:** `PteDocumentación` → `RevisionManual` → `Aprobado` | `Rechazado`
+
+### 6.2 Flujo V2+ — Análisis PITR automático [V2+]
+
+> **Nota:** Esta sección describe la funcionalidad futura del Motor PITR automático,
+> que NO está incluida en el MVP V1. Se documenta aquí para mantener la visión de producto.
+> La implementación de esta capacidad está planificada para V2+ según CF-050 §4.
+
+#### 6.2.1 Descripción
 
 El motor PITR procesa automáticamente el certificado original y la documentación
 aportada para generar un nivel de confianza global y detectar contradicciones.
@@ -493,7 +605,7 @@ aportada para generar un nivel de confianza global y detectar contradicciones.
 > que opera sobre los datos del Expediente y del Documento IA. Su diseño detallado
 > está en CF-030, CF-031 y CF-032.
 
-### 6.2 Flujo
+#### 6.2.2 Flujo
 
 ```
 Expediente en EnRevisionPITR
@@ -506,7 +618,7 @@ Expediente en EnRevisionPITR
 │    Destino: Expediente (especificacionCertificado)           │
 │                                                              │
 │    En V1: El AT introduce manualmente las variables.         │
-│    Futuro: Extracción automática mediante OCR/IA.            │
+│    V2+: Extracción automática mediante OCR/IA.               │
 └──────────────────────────────────────────────────────────────┘
        │
        ▼
@@ -566,18 +678,18 @@ Expediente en EnRevisionPITR
 └──────────────────────────────────────────────────────────────┘
 ```
 
-### 6.3 Agregado responsable
+#### 6.2.3 Agregado responsable
 
 | Paso | Agregado/Servicio | Acción |
 |------|-------------------|--------|
-| Extracción de variables CE3X | **AT** (V1 manual) / **Motor PITR** (futuro) | Introduce o extrae variables en Expediente |
+| Extracción de variables CE3X | **Motor PITR** (V2+) | Extrae variables automáticamente mediante OCR/IA |
 | Evaluación por variable | **Motor PITR** | Aplica reglas de CF-030. Escribe nivelConfianzaPorVariable en Expediente |
 | Cálculo de confianza global | **Motor PITR** | Calcula media ponderada. Escribe nivelConfianzaGlobal en Expediente |
 | Detección de contradicciones | **Motor PITR** | Aplica matriz de CF-030 §18. Escribe contradicciones en Expediente |
 | Generación de informe | **Motor PITR** | Genera texto informePITR. Almacena en Expediente y Documento IA |
 | Decisión de ruta | **Expediente** | Evalúa confianza y contradicciones. Decide transición |
 
-### 6.4 Información intercambiada
+#### 6.2.4 Información intercambiada
 
 | Origen | Destino | Datos |
 |--------|---------|-------|
@@ -586,7 +698,7 @@ Expediente en EnRevisionPITR
 | Motor PITR | Expediente | nivelConfianzaPorVariable, nivelConfianzaGlobal, contradicciones, informePITR |
 | Motor PITR | Documento IA | Informe PITR generado (INFORME_IA) |
 
-### 6.5 Estados afectados
+#### 6.2.5 Estados afectados
 
 | Agregado | Estado anterior | Estado nuevo |
 |----------|----------------|--------------|
@@ -595,7 +707,7 @@ Expediente en EnRevisionPITR
 | Documento IA | — | Nuevo documento tipo INFORME_IA, estado_ia = COMPLETADO |
 | Expediente (auditoría PITR) | — | nivelConfianzaGlobal, nivelConfianzaPorVariable, contradicciones establecidos |
 
-### 6.6 Validaciones
+#### 6.2.6 Validaciones
 
 | # | Validación | ¿Bloqueante? | ¿Quién valida? |
 |---|-----------|-------------|----------------|
@@ -606,7 +718,7 @@ Expediente en EnRevisionPITR
 | V-PITR-05 | Contradicciones tienen tipo y gravedad válidos | Sí | Motor PITR |
 | V-PITR-06 | Informe PITR no vacío | Sí | Motor PITR |
 
-### 6.7 Gestión de fallos
+#### 6.2.7 Gestión de fallos
 
 | Fallo | Acción | ¿Recuperable? |
 |-------|--------|--------------|
@@ -616,35 +728,33 @@ Expediente en EnRevisionPITR
 | Timeout en procesamiento | Cancelar análisis. Transición a RevisionManual | Sí |
 | Confianza global indeterminada (demasiadas variables sin datos) | Transición a RevisionManual con alerta | Sí |
 
-### 6.8 Manual vs. Automatizado en V1
+#### 6.2.8 Manual vs. Automatizado en V2+
 
-| Paso | V1 | Futuro |
-|------|-----|--------|
+| Paso | V1 | V2+ |
+|------|-----|------|
 | Extracción de variables CE3X del certificado | **Manual** (AT introduce datos) | Automático (OCR + IA) |
 | Evaluación por variable con reglas de CF-030 | **Manual** (AT aplica criterio) | Semiautomático (reglas + IA) |
 | Cálculo de confianza global | Automático | — |
 | Detección de contradicciones | **Manual** (AT identifica) | Automático (matriz CF-030) |
 | Generación de informe PITR | **Manual** (AT redacta) | Automático (plantillas + IA) |
-| Decisión de ruta (Auditado vs. RevisionManual) | Automático basado en confianza | — |
+| Decisión de ruta (Auditado vs. RevisionManual) | No aplica en V1 (siempre RevisionManual) | Automático basado en confianza |
 
 ---
 
-## 7. Fase 4 — Revisión manual del Arquitecto Técnico
+## 7. Fase 4 — Revisión manual del Arquitecto Técnico [V1+V2]
 
 ### 7.1 Descripción
 
-Cuando el análisis PITR automático no alcanza la confianza suficiente, o cuando
-existen contradicciones críticas, el expediente pasa a revisión manual por un
-Arquitecto Técnico.
-
-> Esta fase también ocurre SIEMPRE cuando el expediente alcanza el estado `Auditado`
-> con confianza ≥ 80%, pero en ese caso la revisión se limita a validación del informe.
-> En V1, **todo expediente pasa por revisión manual**, incluso los de alta confianza.
+En V1, todo expediente pasa por revisión manual del AT después de `PteDocumentación`.
+En V2+, solo pasan por revisión manual los expedientes con confianza baja o
+contradicciones críticas, aunque el AT también puede revisar expedientes auditados
+si lo considera necesario.
 
 ### 7.2 Flujo
 
 ```
-Expediente en RevisionManual (desde EnRevisionPITR)
+Expediente en RevisionManual (desde PteDocumentación en V1,
+                              o desde EnRevisionPITR/Auditado en V2+)
        │
        ▼
 ┌──────────────────────────────────────────────────────────────┐
@@ -656,7 +766,7 @@ Expediente en RevisionManual (desde EnRevisionPITR)
 │  - Certificado original (Documento IA)                       │
 │  - Fotografías y documentación (Documento IA)                │
 │  - Variables CE3X introducidas (Expediente)                  │
-│  - Informe PITR generado (Expediente + Documento IA)         │
+│  - Informe PITR (V2+: generado automáticamente)             │
 │  - Contradicciones detectadas (Expediente)                   │
 │  - Niveles de confianza por variable (Expediente)            │
 │                                                              │
@@ -708,7 +818,7 @@ Expediente en RevisionManual (desde EnRevisionPITR)
 | Cliente (repo) | AT (UI) | nombre, email, teléfono (solo lectura) |
 | Inmueble (repo) | AT (UI) | referencia catastral, dirección, tipo, superficie (solo lectura) |
 | Documento IA (repo) | AT (UI) | URLs de certificado original, fotografías, informes |
-| Expediente | AT (UI) | variablesCE3X, nivelConfianzaGlobal, contradicciones, informePITR |
+| Expediente | AT (UI) | variablesCE3X, nivelConfianzaGlobal (V2+), contradicciones, informePITR (V2+) |
 | AT (UI) | Expediente | Variables corregidas, contradicciones resueltas, decisión (Aprobado/Rechazado) |
 
 ### 7.5 Estados afectados
@@ -717,8 +827,8 @@ Expediente en RevisionManual (desde EnRevisionPITR)
 |----------|----------------|--------------|
 | Expediente | RevisionManual | **Aprobado** |
 | Expediente | RevisionManual | **Rechazado** |
-| Expediente | Auditado | **RevisionManual** (si el AT decide que necesita más revisión) |
-| Expediente | Auditado | **Aprobado** (si el AT confirma sin cambios) |
+| Expediente | Auditado (V2+) | **RevisionManual** (si el AT decide que necesita más revisión) |
+| Expediente | Auditado (V2+) | **Aprobado** (si el AT confirma sin cambios) |
 | Expediente (contradicciones) | `detectada` / `en_resolución` | **`resuelta`** |
 | Expediente (variables CE3X) | — | Posiblemente corregidas |
 
@@ -739,7 +849,7 @@ Expediente en RevisionManual (desde EnRevisionPITR)
 | AT no puede resolver contradicciones | Deriva a otro AT o solicita más documentación | Sí (vuelve a PteDocumentación) |
 | AT detecta que faltan datos críticos | Transición a PteDocumentación con solicitud de docs | Sí |
 | AT no completa revisión en plazo | Reasignar a otro AT | Sí |
-| AT rechaza pero cliente discrepa | Cliente puede solicitar reconsideración (nuevo expediente) | No en este expediente |
+| AT rechaza pero cliente discrepa | Cliente puede corregir documentación (Devuelto → PteDocumentacion) | Sí (nuevo ciclo) |
 
 ### 7.8 Manual vs. Automatizado en V1
 
@@ -753,12 +863,17 @@ Expediente en RevisionManual (desde EnRevisionPITR)
 
 ---
 
-## 8. Fase 5 — Entrega del resultado
+## 8. Fase 5 — Entrega del resultado [V1+V2]
 
 ### 8.1 Descripción
 
 Una vez aprobado (o rechazado), el expediente se cierra y se entrega el resultado
 al cliente. En V1, la entrega incluye la generación del informe final.
+
+> **Nota ADR-002 (Auto-entrega):** Según ADR-002 aprobada, la transición
+> `Aprobado → Entregado` puede ocurrir automáticamente sin intervención adicional
+> del AT. El sistema permite la auto-entrega del resultado al cliente una vez el
+> expediente alcanza el estado `Aprobado`.
 
 ### 8.2 Flujo
 
@@ -776,7 +891,7 @@ Expediente en Aprobado
 │  - Certificado original analizado                            │
 │  - Variables CE3X validadas                                  │
 │  - Resultado: APROBADO / RECHAZADO                           │
-│  - Nivel de confianza global                                 │
+│  - Nivel de confianza global (V2+)                           │
 │  - Observaciones del AT                                      │
 │                                                              │
 │ El informe se almacena en:                                   │
@@ -803,11 +918,13 @@ Expediente en Aprobado
 ┌──────────────────────────────────────────────────────────────┐
 │ Notificación al cliente                                      │
 │                                                              │
-│  - Email con resumen del resultado                           │
-│  - Enlace para descargar el informe final                    │
-│  - Enlace para ver el expediente en la plataforma            │
+│  V1: Manual (el AT o administrador notifica)                │
+│  V2+: Automática (email, SMS, notificación push)             │
 └──────────────────────────────────────────────────────────────┘
 ```
+
+> **Nota V1:** En el MVP, las notificaciones son manuales (según CF-050 §2.3).
+> No existe sistema automático de emails, SMS ni notificaciones push en V1.
 
 ### 8.3 Agregado responsable
 
@@ -816,7 +933,7 @@ Expediente en Aprobado
 | Generación de informe final | **Expediente** | Compila datos del resultado |
 | Almacenamiento del informe | **Documento IA** | Guarda INFORME_FINAL asociado al expediente |
 | Transición a Entregado | **Expediente** | Cambia estado, establece fecha de cierre |
-| Notificación | **Sistema externo** | Envía email al cliente (infraestructura) |
+| Notificación | **Manual (V1)** / **Sistema externo (V2+)** | Informa al cliente del resultado |
 
 ### 8.4 Información intercambiada
 
@@ -832,7 +949,7 @@ Expediente en Aprobado
 | Agregado | Estado anterior | Estado nuevo |
 |----------|----------------|--------------|
 | Expediente | Aprobado | **Entregado** (terminal) |
-| Expediente | Rechazado | **Devuelto** (terminal, pero puede reingresar) |
+| Expediente | Rechazado | **Devuelto** (terminal, pero puede reingresar vía corrección) |
 | Documento IA | — | Nuevo documento tipo INFORME_FINAL |
 
 ### 8.6 Validaciones
@@ -850,7 +967,7 @@ Expediente en Aprobado
 |-------|--------|--------------|
 | Error al generar informe | Reintentar. Si persiste, notificar al AT | Sí |
 | Error al almacenar en Documento IA | Reintentar. Si persiste, mantener estado Aprobado | Sí |
-| Error en notificación al cliente | Reintentar. Registrar como pendiente | Sí |
+| Error en notificación al cliente | Reintentar (V2+). Registrar como pendiente | Sí |
 | Intento de modificar expediente entregado | Rechazar (I-EX-05). No permitir operación | No |
 
 ### 8.8 Manual vs. Automatizado en V1
@@ -859,13 +976,13 @@ Expediente en Aprobado
 |------|-----|--------|
 | Generación de informe final | Automático (plantilla) | — |
 | Almacenamiento del informe | Automático | — |
-| Notificación al cliente | Automático (email) | Canales adicionales (WhatsApp, SMS) |
-| Publicación en dashboards | Automático | — |
+| Notificación al cliente | **Manual** (AT o administrador) | Canales adicionales (WhatsApp, SMS, email) |
+| Auto-entrega (Aprobado → Entregado) | Automático (ADR-002) | — |
 | Adición de notas/anexos post-entrega | **Manual** (AT) | — |
 
 ---
 
-## 9. Fase de cancelación y rechazo
+## 9. Fase de cancelación y rechazo [V1+V2]
 
 ### 9.1 Cancelación voluntaria
 
@@ -894,7 +1011,7 @@ Evento emitido: ExpedienteRechazadoFaltaDatos
 - Si el cliente aporta documentación después del plazo, se requiere un nuevo expediente.
 - El sistema debe enviar recordatorios automáticos antes de alcanzar el plazo.
 
-### 9.3 Rechazado por el AT → Devuelto
+### 9.3 Rechazado por el AT → Devuelto (con flujo de corrección)
 
 Cuando el AT rechaza el certificado:
 
@@ -904,8 +1021,20 @@ Motivo: obligatorio
 Evento emitido: ExpedienteDevuelto
 ```
 
-El expediente en `Devuelto` no es técnicamente terminal: el cliente puede corregir
-el certificado e iniciar un **nuevo expediente** referenciando al anterior.
+El expediente en `Devuelto` no es terminal: el cliente puede corregir la documentación
+y reiniciar el ciclo de revisión.
+
+**Flujo de corrección V1 (según CF-050 §2.2 y EP-033B/034):**
+
+```
+Devuelto → PteDocumentacion → RevisionManual → Aprobado → Entregado
+                                                    ↓
+                                              Rechazado → Devuelto (nuevo ciclo)
+```
+
+> **Nota V1:** No hay límite de iteraciones de corrección en V1. La gestión del ciclo
+> corresponde al AT. El cliente sube nueva documentación, el AT revisa de nuevo,
+> y el ciclo se repite hasta aprobación o abandono.
 
 ### 9.4 Reactivación desde Devuelto
 
@@ -925,11 +1054,11 @@ Nuevo expediente (con referencia al anterior Devuelto)
 | Entregado | Sí | No (mismo certificado ya auditado) |
 | Cancelado | Sí | Sí (nuevo expediente) |
 | RechazadoFaltaDatos | Sí | Sí (nuevo expediente con documentación completa) |
-| Devuelto | No (véase 9.4) | Sí (nuevo expediente vinculado) |
+| Devuelto | No (véase 9.3 y 9.4) | Sí (corrección directa a PteDocumentacion) |
 
 ---
 
-## 10. Matriz de responsabilidades por agregado
+## 10. Matriz de responsabilidades por agregado [V1+V2]
 
 ### 10.1 Cliente
 
@@ -957,7 +1086,7 @@ Nuevo expediente (con referencia al anterior Devuelto)
 | Máquina de estados (todas las transiciones) | 1-5 | No |
 | Validación I-EX-01 a I-EX-10 | 1-5 | No |
 | Almacenamiento de variables CE3X | 3 | No |
-| Almacenamiento de confianza y contradicciones | 3 | No |
+| Almacenamiento de confianza y contradicciones | 3 (V2+) | No |
 | Resolución de contradicciones | 4 | No |
 | Decisión final (aprobado/rechazado) | 4 | No |
 | Cierre del expediente | 5 | No |
@@ -969,13 +1098,13 @@ Nuevo expediente (con referencia al anterior Devuelto)
 | Recepción y validación de documentos subidos | 2 | No |
 | Almacenamiento de certificado original | 2 | No |
 | Almacenamiento de fotografías | 2 | No |
-| Almacenamiento de informe PITR | 3 | No |
+| Almacenamiento de informe PITR | 3 (V2+) | No |
 | Almacenamiento de informe final | 5 | No |
 | Provisión de documentos al AT | 4 | Sí |
 
 ---
 
-## 11. Mapa de eventos entre agregados
+## 11. Mapa de eventos entre agregados [V1+V2]
 
 ### 11.1 Eventos del agregado Cliente
 
@@ -994,33 +1123,34 @@ Nuevo expediente (con referencia al anterior Devuelto)
 
 ### 11.3 Eventos del agregado Expediente
 
-| Evento | Emisor | Receptores | Fase |
-|--------|--------|------------|------|
-| `ExpedienteCreado` | Expediente | Sistema, Documento IA (prepara recepción) | 1 |
-| `ExpedienteDocumentacionCompleta` | Expediente | Motor PITR (inicia análisis) | 2 |
-| `PITRAnalisisCompletado` | Motor PITR | Expediente (procesa resultado) | 3 |
-| `PITRConfianzaAlta` | Motor PITR | Expediente (transición a Auditado) | 3 |
-| `PITRConfianzaBaja` | Motor PITR | Expediente (transición a RevisionManual) | 3 |
-| `AprobadoPorAT` | Expediente | Sistema, Documento IA (genera informe) | 4 |
-| `RechazadoPorAT` | Expediente | Sistema (notifica al cliente) | 4 |
-| `ExpedienteEntregado` | Expediente | Sistema (notifica al cliente) | 5 |
-| `ExpedienteCancelado` | Expediente | Sistema | — |
-| `ExpedienteRechazadoFaltaDatos` | Expediente | Sistema | — |
-| `ExpedienteDevuelto` | Expediente | Sistema | — |
+| Evento | Emisor | Receptores | Fase | Alcance |
+|--------|--------|------------|------|---------|
+| `ExpedienteCreado` | Expediente | Sistema, Documento IA (prepara recepción) | 1 | V1+V2 |
+| `ExpedienteDocumentacionCompleta` | Expediente | Sistema (notifica AT en V1) / Motor PITR (V2+) | 2 | V1+V2 |
+| `PITRAnalisisCompletado` | Motor PITR | Expediente (procesa resultado) | 3 | **V2+** |
+| `PITRConfianzaAlta` | Motor PITR | Expediente (transición a Auditado) | 3 | **V2+** |
+| `PITRConfianzaBaja` | Motor PITR | Expediente (transición a RevisionManual) | 3 | **V2+** |
+| `AprobadoPorAT` | Expediente | Sistema, Documento IA (genera informe) | 4 | V1+V2 |
+| `RechazadoPorAT` | Expediente | Sistema (notifica al cliente) | 4 | V1+V2 |
+| `ExpedienteEntregado` | Expediente | Sistema (notifica al cliente) | 5 | V1+V2 |
+| `ExpedienteCancelado` | Expediente | Sistema | — | V1+V2 |
+| `ExpedienteRechazadoFaltaDatos` | Expediente | Sistema | — | V1+V2 |
+| `ExpedienteDevuelto` | Expediente | Sistema | — | V1+V2 |
+| `ExpedienteCorregido` | Expediente | Sistema | — | V1+V2 |
 
 ### 11.4 Eventos del agregado Documento IA
 
-| Evento | Emisor | Receptores | Fase |
-|--------|--------|------------|------|
-| `DocumentoSubido` | Documento IA | Expediente (actualiza conteo) | 2 |
-| `DocumentoValidado` | Documento IA | Expediente (actualiza estado de documentación) | 2 |
-| `DocumentoError` | Documento IA | Expediente, Sistema (notifica al cliente) | 2 |
-| `InformePITRGenerado` | Motor PITR | Documento IA (almacena informe) | 3 |
-| `InformeFinalGenerado` | Documento IA | Expediente (confirma entrega) | 5 |
+| Evento | Emisor | Receptores | Fase | Alcance |
+|--------|--------|------------|------|---------|
+| `DocumentoSubido` | Documento IA | Expediente (actualiza conteo) | 2 | V1+V2 |
+| `DocumentoValidado` | Documento IA | Expediente (actualiza estado de documentación) | 2 | V1+V2 |
+| `DocumentoError` | Documento IA | Expediente, Sistema (notifica al cliente) | 2 | V1+V2 |
+| `InformePITRGenerado` | Motor PITR | Documento IA (almacena informe) | 3 | **V2+** |
+| `InformeFinalGenerado` | Documento IA | Expediente (confirma entrega) | 5 | V1+V2 |
 
 ---
 
-## 12. Validaciones por paso
+## 12. Validaciones por paso [V1+V2]
 
 ### 12.1 Validaciones globales (aplican siempre)
 
@@ -1032,25 +1162,27 @@ Nuevo expediente (con referencia al anterior Devuelto)
 
 ### 12.2 Validaciones por transición de estado
 
-| Transición | Validaciones |
-|------------|-------------|
-| Solicitud → PteDocumentación | V-CR-01, V-CR-02, V-CR-03, V-CR-04, V-CR-05, I-EX-01, I-EX-02, I-EX-03 |
-| PteDocumentación → EnRevisionPITR | V-DOC-01, V-DOC-04, I-EX-10 |
-| EnRevisionPITR → Auditado | V-PITR-01, V-PITR-02, V-PITR-03, V-PITR-04, V-PITR-05, V-PITR-06, I-EX-06, I-EX-09 |
-| EnRevisionPITR → RevisionManual | V-PITR-01, V-PITR-06 (fallo parcial) |
-| Auditado → RevisionManual | Decisión del AT |
-| Auditado → Aprobado | V-REV-01, V-REV-02, V-REV-03, I-EX-08, I-EX-09 |
-| RevisionManual → Aprobado | V-REV-01, V-REV-02, V-REV-03, V-REV-05, I-EX-08, I-EX-09 |
-| RevisionManual → Rechazado | V-REV-04 |
-| Aprobado → Entregado | V-ENT-01, V-ENT-02, V-ENT-03, I-EX-08 |
-| Rechazado → Devuelto | V-ENT-01 (automático tras Rechazado) |
-| Cualquiera → Cancelado | V-CAN-01, V-CAN-02 |
-| PteDocumentación → RechazadoFaltaDatos | Plazo de 30 días sin documentación mínima |
-| Cualquiera (post-entrega) → modificación | I-EX-05 (denegado) |
+| Transición | Validaciones | Alcance |
+|------------|-------------|---------|
+| Solicitud → PteDocumentación | V-CR-01, V-CR-02, V-CR-03, V-CR-04, V-CR-05, I-EX-01, I-EX-02, I-EX-03 | V1+V2 |
+| PteDocumentación → RevisionManual | V-DOC-01, V-DOC-04, I-EX-10 | **V1** |
+| PteDocumentación → EnRevisionPITR | V-DOC-01, V-DOC-04, I-EX-10 | **V2+** |
+| EnRevisionPITR → Auditado | V-PITR-01, V-PITR-02, V-PITR-03, V-PITR-04, V-PITR-05, V-PITR-06, I-EX-06, I-EX-09 | **V2+** |
+| EnRevisionPITR → RevisionManual | V-PITR-01, V-PITR-06 (fallo parcial) | **V2+** |
+| Auditado → RevisionManual | Decisión del AT | **V2+** |
+| Auditado → Aprobado | V-REV-01, V-REV-02, V-REV-03, I-EX-08, I-EX-09 | **V2+** |
+| RevisionManual → Aprobado | V-REV-01, V-REV-02, V-REV-03, V-REV-05, I-EX-08, I-EX-09 | V1+V2 |
+| RevisionManual → Rechazado | V-REV-04 | V1+V2 |
+| Aprobado → Entregado | V-ENT-01, V-ENT-02, V-ENT-03, I-EX-08 | V1+V2 |
+| Rechazado → Devuelto | V-ENT-01 (automático tras Rechazado) | V1+V2 |
+| Devuelto → PteDocumentacion | V-COR-01 (corrección vinculada al expediente original) | V1+V2 |
+| Cualquiera → Cancelado | V-CAN-01, V-CAN-02 | V1+V2 |
+| PteDocumentación → RechazadoFaltaDatos | Plazo de 30 días sin documentación mínima | V1+V2 |
+| Cualquiera (post-entrega) → modificación | I-EX-05 (denegado) | V1+V2 |
 
 ---
 
-## 13. Gestión de fallos
+## 13. Gestión de fallos [V1+V2]
 
 ### 13.1 Fallos por transición
 
@@ -1075,14 +1207,17 @@ Nuevo expediente (con referencia al anterior Devuelto)
 │     → Se informa al usuario de que los datos han cambiado       │
 │     → Se solicita recargar y reintentar                         │
 │                                                                 │
-│  4. Timeout en procesamiento PITR                               │
+│  4. Timeout en procesamiento PITR (V2+)                         │
 │     → Se transiciona automáticamente a RevisionManual           │
 │     → Se registra el timeout en el expediente                   │
 │     → El AT decide si reintentar o proceder manualmente         │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### 13.2 Fallos en el flujo PITR
+### 13.2 Fallos en el flujo PITR [V2+]
+
+> **Nota:** Esta sección aplica exclusivamente al Motor PITR automático de V2+.
+> En V1 no existe el motor PITR automático, por lo que estos fallos no se producen.
 
 Si el motor PITR no puede completar el análisis (por error interno, timeout o
 datos insuficientes), el sistema debe:
@@ -1101,7 +1236,7 @@ datos insuficientes), el sistema debe:
 |-----------------|--------------------------|------------------------|
 | Error en subida de documento | No (requiere re-subida del cliente) | Notificar al cliente |
 | Error en validación de documento | No (requiere re-subida) | Notificar al cliente |
-| Timeout PITR | Sí (→ RevisionManual) | AT decide siguiente paso |
+| Timeout PITR (V2+) | Sí (→ RevisionManual) | AT decide siguiente paso |
 | Error de almacenamiento | Sí (reintento 3x) | Si persiste, notificar admin |
 | Conflicto de versión | No (requiere recarga) | Informar al usuario |
 | Error de notificación | Sí (reintento 3x) | Si persiste, registrar pendiente |
@@ -1117,10 +1252,16 @@ datos insuficientes), el sistema debe:
 | **0 — Pre-creación** | 6 | 4 (67%) | 2 (33%) | 2 |
 | **1 — Creación** | 4 | 3 (75%) | 1 (25%) | 1 |
 | **2 — Documentación** | 6 | 4 (67%) | 2 (33%) | 2 |
-| **3 — Análisis PITR** | 6 | 2 (33%) | 4 (67%) | 5 |
+| **3 — Análisis PITR (V1)** | 0 | 0 (0%) | 0 (0%) — Fase no existe en V1 | 5 |
+| **3 — Análisis PITR (V2+)** | 6 | 2 (33%) | 4 (67%) | — |
 | **4 — Revisión AT** | 6 | 1 (17%) | 5 (83%) | 3 |
 | **5 — Entrega** | 4 | 3 (75%) | 1 (25%) | 0 |
 | **Cancelación/Rechazo** | 3 | 3 (100%) | 0 (0%) | 0 |
+
+> **Nota importante V1:** La Fase 3 (Análisis PITR) **no existe como fase independiente
+> en V1**. En V1, desde `PteDocumentación` se transiciona directamente a `RevisionManual`,
+> donde el AT realiza todo el análisis manualmente. El concepto de "Fase 3 — Análisis
+> PITR automático" es exclusivo de V2+.
 
 ### 14.2 Mapa completo manual vs. automático
 
@@ -1140,17 +1281,17 @@ datos insuficientes), el sistema debe:
 | **Validación de que el PDF es CE3X** | Manual | OCR + IA | Alta |
 | **Extracción de variables CE3X** | Manual | OCR + IA | Crítica |
 | **Evaluación por variable** | Manual | Reglas + IA | Alta |
-| **Cálculo de confianza global** | Automático | — | — |
+| **Cálculo de confianza global** | **No aplica en V1** | Automático en V2+ | — |
 | **Detección de contradicciones** | Manual | Matriz CF-030 | Alta |
-| **Generación de informe PITR** | Manual | Plantillas + IA | Media |
-| **Decisión de ruta (confianza)** | Automático | — | — |
+| **Generación de informe PITR** | **No aplica en V1** | Plantillas + IA en V2+ | — |
+| **Decisión de ruta (confianza)** | **No aplica en V1** | Automático en V2+ | — |
 | **Revisión de calidad del certificado** | Manual | IA asistida | Alta |
 | **Resolución de contradicciones** | Manual | Reglas avanzadas | Media |
 | **Corrección de variables CE3X** | Manual | Sugerencias IA | Media |
 | **Decisión aprobado/rechazado** | Manual | Solo para ≥ 95% | Media |
 | **Generación de informe final** | Automático | — | — |
 | **Almacenamiento de informe** | Automático | — | — |
-| **Notificación al cliente** | Automático | — | — |
+| **Notificación al cliente** | **Manual** (AT o administrador) | Canales adicionales (WhatsApp, SMS, email) | Alta |
 | **Cancelación por cliente** | Automático | — | — |
 | **Rechazo por falta de docs** | Automático | — | — |
 | **Reactivación desde Devuelto** | Automático | — | — |
@@ -1165,7 +1306,7 @@ datos insuficientes), el sistema debe:
 
 ---
 
-## 15. Glosario de la orquestación
+## 15. Glosario de la orquestación [V1+V2]
 
 | Término | Definición |
 |---------|------------|
@@ -1174,13 +1315,15 @@ datos insuficientes), el sistema debe:
 | **Transición de estado** | Cambio de un estado a otro dentro de la máquina de estados del Expediente, gobernado por reglas de validación. |
 | **Estado terminal** | Estado del Expediente tras el cual no pueden ocurrir más transiciones. |
 | **Evento de dominio** | Notificación emitida por un agregado cuando ocurre un cambio de estado significativo. |
-| **Motor PITR** | Servicio de dominio que aplica las reglas de conocimiento experto (CF-030) para evaluar variables CE3X. No es un agregado. |
-| **Nivel de confianza** | Valor numérico (0-100) que indica la fiabilidad de una variable CE3X o del conjunto del análisis. |
+| **Motor PITR** | Servicio de dominio que aplica las reglas de conocimiento experto (CF-030) para evaluar variables CE3X. No es un agregado. **V2+.** |
+| **Nivel de confianza** | Valor numérico (0-100) que indica la fiabilidad de una variable CE3X o del conjunto del análisis. **V2+.** |
 | **Contradicción** | Discrepancia entre dos fuentes de evidencia (certificado vs. fotografía, dos fotografías, etc.). |
 | **Documentación mínima** | Conjunto de documentos requerido para iniciar el análisis: certificado original + 3 fotografías mínimas. |
 | **Datos de solo lectura** | Información de un agregado que otro agregado o actor puede consultar pero no modificar. |
 | **Bloqueante** | Validación que, si falla, impide la transición de estado. |
 | **Recuperable** | Fallo que puede resolverse sin perder el progreso del expediente. |
+| **Flujo de corrección** | Ciclo Devuelto → PteDocumentacion → RevisionManual que permite al cliente corregir documentación rechazada. |
+| **Auto-entrega** | Transición automática Aprobado → Entregado sin intervención adicional del AT (ADR-002). |
 
 ---
 
@@ -1189,3 +1332,4 @@ datos insuficientes), el sistema debe:
 | Fecha | Versión | Autor | Motivo |
 |-------|---------|-------|--------|
 | 04/07/2026 | 1.0.0 | Certilab Core Engineering | Creación inicial del documento de orquestación. |
+| 11/07/2026 | 1.1.0 | Fase 2 — Normalización | Normalización V1/V2: añadido índice V1/V2, etiquetado de secciones, separación de flujos V1 y V2 en §2, §5, §6, §7, §11, §12, §14. Añadida transición V1 PteDocumentación → RevisionManual. Movido contenido PITR automático a §6.2 como V2+. Añadida nota ADR-002 (auto-entrega) en §8. Añadido flujo de corrección (Devuelto → PteDocumentacion) en §9.3. Actualizado §14 para reflejar Fase 3 como 100% manual en V1. Estados Dictamen marcados como V2+. |

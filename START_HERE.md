@@ -11,7 +11,7 @@ Sigue este orden estrictamente. No te saltes ningún paso.
        ↓
 3. CF-000 — PROJECT BRAIN
        ↓
-4. Resto del Framework CF
+4. docs/INDEX.md — Navegación completa
 ```
 
 ### Paso a paso
@@ -25,8 +25,8 @@ Sigue este orden estrictamente. No te saltes ningún paso.
 3. **CF-000 — PROJECT BRAIN** (`docs/CF-000-PROJECT-BRAIN.md`)
    La Constitución de Certilab. Contiene la visión, filosofía, arquitectura y reglas absolutas.
 
-4. **Resto del Framework**
-   Documentos específicos según el objetivo de la sesión (ver CF-001, paso 5).
+4. **docs/INDEX.md — Navegación completa** (`docs/INDEX.md`)
+   Índice clasificado de toda la documentación activa del proyecto. Úsalo para localizar cualquier documento según el objetivo de la sesión.
 
 ---
 

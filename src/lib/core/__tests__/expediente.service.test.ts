@@ -438,6 +438,93 @@ describe('ExpedienteService', () => {
   });
 
   // ================================================================
+  // corregirExpediente
+  // ================================================================
+  describe('corregirExpediente', () => {
+    const updatedBy = USER_ID;
+    const version = 1;
+
+    it('should transition Devuelto -> PteDocumentacion successfully', async () => {
+      const expedienteDevuelto: ExpedienteRow = {
+        ...mockExpedienteRow,
+        estado: 'Devuelto',
+        version: 1,
+      };
+      const expedienteCorregido: ExpedienteRow = {
+        ...expedienteDevuelto,
+        estado: 'PteDocumentacion',
+        version: 2,
+      };
+
+      vi.mocked(expedienteRepository.findById).mockResolvedValue(expedienteDevuelto);
+      vi.mocked(expedienteRepository.actualizar).mockResolvedValue(expedienteCorregido);
+
+      const result = await service.corregirExpediente(
+        mockExpedienteRow.id,
+        updatedBy,
+        version
+      );
+
+      expect(result.success).toBe(true);
+      expect(result.estado_nuevo).toBe('PteDocumentacion');
+      expect(result.estado_anterior).toBe('Devuelto');
+      expect(result.expediente.estado).toBe('PteDocumentacion');
+      expect(result.expediente.version).toBe(2);
+      expect(expedienteRepository.findById).toHaveBeenCalledWith(
+        mockExpedienteRow.id
+      );
+    });
+
+    it('should throw validation error for empty ID', async () => {
+      await expect(
+        service.corregirExpediente('', updatedBy, version)
+      ).rejects.toThrow('El ID del expediente es obligatorio.');
+    });
+
+    it('should throw validation error for empty updatedBy', async () => {
+      await expect(
+        service.corregirExpediente(mockExpedienteRow.id, '', version)
+      ).rejects.toThrow('El usuario (updated_by) es obligatorio');
+    });
+
+    it('should throw validation error for invalid estado transition', async () => {
+      // Estado actual es 'Aprobado', transición a 'PteDocumentacion' inválida
+      const expedienteAprobado: ExpedienteRow = {
+        ...mockExpedienteRow,
+        estado: 'Aprobado',
+      };
+      vi.mocked(expedienteRepository.findById).mockResolvedValue(expedienteAprobado);
+
+      await expect(
+        service.corregirExpediente(mockExpedienteRow.id, updatedBy, version)
+      ).rejects.toThrow('Estado inválido del expediente: Aprobado');
+    });
+
+    it('should throw not found error for nonexistent expediente', async () => {
+      vi.mocked(expedienteRepository.findById).mockResolvedValue(null);
+
+      await expect(
+        service.corregirExpediente('nonexistent', updatedBy, version)
+      ).rejects.toThrow('Expediente no encontrado');
+    });
+
+    it('should throw version conflict error', async () => {
+      const expedienteDevuelto: ExpedienteRow = {
+        ...mockExpedienteRow,
+        estado: 'Devuelto',
+        version: 2, // version real es 2, pero pasamos 1
+      };
+
+      vi.mocked(expedienteRepository.findById).mockResolvedValue(expedienteDevuelto);
+      vi.mocked(expedienteRepository.actualizar).mockResolvedValue(null);
+
+      await expect(
+        service.corregirExpediente(mockExpedienteRow.id, updatedBy, 1)
+      ).rejects.toThrow('Conflicto de versión');
+    });
+  });
+
+  // ================================================================
   // entregarExpediente
   // ================================================================
   describe('entregarExpediente', () => {

@@ -362,6 +362,22 @@ export class ExpedienteService {
   }
 
   /**
+   * Corregir documentación del expediente por el cliente.
+   * Transición: Devuelto -> PteDocumentacion
+   * 
+   * El cliente corrige la documentación tras la devolución del AT
+   * y solicita una nueva revisión.
+   * La validación de propiedad del expediente se realiza en la Server Action.
+   */
+  async corregirExpediente(
+    id: string,
+    updatedBy: string,
+    version: number
+  ): Promise<ExpedienteTransitionResult> {
+    return this.cambiarEstado(id, 'PteDocumentacion', updatedBy, version);
+  }
+
+  /**
    * Aprobar expediente tras revisión manual del AT.
    * Transición: RevisionManual -> Aprobado
    * 

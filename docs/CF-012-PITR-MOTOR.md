@@ -1,5 +1,10 @@
 # CF-012-PITR-MOTOR
 
+> **⚠️ V2+ — Documento de diseño sin implementación en MVP**
+> Este documento describe la arquitectura objetivo del Motor PITR™ completo.
+> Durante V1 únicamente estará disponible la versión simplificada definida en CF-028 (Expediente Workflow).
+> No debe implementarse según esta especificación hasta nueva orden.
+
 **PITR™ — Protocolo de Inspección Técnica Remota**
 Documentación técnica del motor de inspección reutilizable.
 

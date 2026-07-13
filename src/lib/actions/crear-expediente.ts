@@ -96,6 +96,7 @@ export async function crearExpediente(input: {
     // Revalidar caché de expedientes
     revalidatePath("/plataforma/mis-expedientes");
     revalidatePath("/plataforma/solicitar-segunda-opinion");
+    revalidatePath(`/plataforma/expedientes/${expediente.id}`);
 
     return { success: true, expedienteId: expediente.id };
   } catch (error) {

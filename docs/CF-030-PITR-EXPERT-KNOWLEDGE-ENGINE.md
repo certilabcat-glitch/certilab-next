@@ -1,4 +1,8 @@
-# CF-030 — PITR™ EXPERT KNOWLEDGE ENGINE
+# CF-030 — PITR™ Expert Knowledge Engine
+
+> **⚠️ V2+ — NO IMPLEMENTAR EN MVP V1**
+> Este documento corresponde al módulo avanzado de inspección PITR™, planificado para V2+. Define el motor de conocimiento experto para auditoría remota de certificados energéticos, un producto/servicio futuro fuera del alcance del MVP V1. No debe implementarse ni integrarse durante el desarrollo del MVP.
+> Durante V1 se utiliza el flujo simplificado definido en CF-028 (Expediente Workflow) en lugar de este motor completo.
 
 > **El activo más importante de Certilab no es código. No es un formulario. Es la metodología PITR™.**
 >

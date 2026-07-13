@@ -4,11 +4,14 @@
 |-------|-------------|
 | **Código** | CF-022 |
 | **Título** | Aggregate Boundaries — Límites definitivos de los agregados del dominio de Certilab |
-| **Versión** | 1.0 |
+| **Versión** | 1.2.0 |
 | **Fecha** | 2026-07-03 |
+| **Última normalización** | 2026-07-11 |
+| **Estado** | APPROVED |
+| **Auditoría** | CF-022-STRUCTURAL-AUDIT.md |
 | **Autor** | Certilab® — Arquitectura de Dominio |
-| **Propósito** | Definir con precisión quirúrgica los límites de cada agregado del dominio, sus raíces, invariantes, consistencia transaccional y reglas de referencia. Este documento es la referencia oficial para implementar todas las entidades restantes. |
-| **Dependencias** | CF-020 (Data Model), CF-021 (Domain Model), CF-030 (PITR Expert Knowledge Engine), CF-031 (PITR Question Tree), CF-032 (Arquitecto Técnico Inspection Manual) |
+| **Propósito** | Definir con precisión quirúrgica los límites de cada agregado del dominio, sus raíces, invariantes, consistencia transaccional y reglas de referencia. Este documento es la referencia oficial para implementar todas las entidades restantes. CF-022 es el documento canónico del modelo de dominio V1 (congelado). Contenido V2+ está claramente etiquetado como [V2+]. |
+| **Dependencias** | CF-000 (Constitución), CF-001A (Arquitectura V1), CF-002 (Gobernanza documental), CF-028 (Workflow expediente), CF-050 (MVP Freeze) |
 | **Audiencia** | Arquitectos de software, desarrolladores del núcleo de dominio, implementadores de repositorios |
 | **Lenguaje** | DDD estricto — términos del negocio con precisión de límites transaccionales |
 
@@ -25,13 +28,14 @@
 7. [Relaciones entre agregados](#7-relaciones-entre-agregados)
 8. [Referencias permitidas vs. prohibidas](#8-referencias-permitidas-vs-prohibidas)
 9. [Consistencia transaccional](#9-consistencia-transaccional)
-10. [Invariantes por agregado](#10-invariantes-por-agregado)
-11. [Eventos por agregado](#11-eventos-por-agregado)
+10. [Invariantes por agregado [V1]](#10-invariantes-por-agregado-v1)
+11. [Eventos por agregado [V1]](#11-eventos-por-agregado-v1)
 12. [Información derivada](#12-información-derivada)
 13. [Datos que nunca deben duplicarse](#13-datos-que-nunca-deben-duplicarse)
 14. [Errores de modelado prohibidos](#14-errores-de-modelado-prohibidos)
-15. [Evolución V2](#15-evolución-v2)
-16. [Evolución V3](#16-evolución-v3)
+15. [Evolución V2 [V2+]](#15-evolución-v2-v2)
+16. [Evolución V3 [V3+]](#16-evolución-v3-v3)
+17. [V2+ Evolution Summary](#17-v2-evolution-summary)
 
 ---
 
@@ -236,7 +240,7 @@ Ningún agregado contiene a otro.
 - **Identificador único:** `expediente_id`
 - **Identificador de negocio:** `codigoExpediente` (generado como EXP-YYYY-NNNNNN)
 
-### 4.2 Límite del agregado — ATENCIÓN: Este es el agregado más complejo
+### 4.2 Límite del agregado [V1] — ATENCIÓN: Este es el agregado más complejo
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -317,7 +321,7 @@ Ningún agregado contiene a otro.
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-### 4.3 Estados del Expediente
+### 4.3 Estados del Expediente [V1]
 
 ```
 [Solicitud] ──> [PteDocumentación] ──> [EnRevisionPITR] ──> [Auditado] ──> [Entregado]
@@ -644,9 +648,9 @@ Ejemplos permitidos:
 
 ---
 
-## 10. Invariantes por agregado
+## 10. Invariantes por agregado [V1]
 
-### 10.1 Resumen de invariantes
+### 10.1 Resumen de invariantes [V1]
 
 | Agregado | Invariantes | ¿Se validan siempre? |
 |----------|-------------|----------------------|
@@ -656,7 +660,7 @@ Ejemplos permitidos:
 | Organización | I-OR-01 a I-OR-03 | Sí, en cada operación de escritura. |
 | Usuario | I-US-01 a I-US-04 | Sí, en cada operación de escritura. |
 
-### 10.2 Invariantes transaccionales vs. de dominio
+### 10.2 Invariantes transaccionales vs. de dominio [V1]
 
 **Invariantes transaccionales** (se validan dentro de la transacción):
 - Unicidad de IDs (cliente_id, inmueble_id, etc.)
@@ -674,9 +678,9 @@ Ejemplos permitidos:
 
 ---
 
-## 11. Eventos por agregado
+## 11. Eventos por agregado [V1]
 
-### 11.1 Matriz de eventos
+### 11.1 Matriz de eventos [V1]
 
 | Agregado | Eventos que EMITE | Eventos que CONSUME (de otros agregados) |
 |----------|-------------------|------------------------------------------|
@@ -686,7 +690,7 @@ Ejemplos permitidos:
 | **Organización** | OrganizacionRegistrada, OrganizacionEstadoCambiado, OrganizacionConfiguracionActualizada | — (ninguno, es raíz independiente) |
 | **Usuario** | UsuarioInvitado, UsuarioActivado, UsuarioEstadoCambiado, UsuarioPerfilCambiado, UsuarioDatosActualizados, UsuarioBaja | OrganizacionEstadoCambiado (para suspender usuarios si la organización se suspende) |
 
-### 11.2 Suscripciones críticas
+### 11.2 Suscripciones críticas [V1]
 
 | Evento | Suscriptor | Acción |
 |--------|------------|--------|
@@ -812,9 +816,9 @@ Ejemplos permitidos:
 
 ---
 
-## 15. Evolución V2
+## 15. Evolución V2 [V2+]
 
-### 15.1 Nuevo agregado: Contrato
+### 15.1 Nuevo agregado: Contrato [V2+]
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -840,7 +844,7 @@ Ejemplos permitidos:
 └──────────────────────────────────────────────────────────┘
 ```
 
-### 15.2 Nuevo agregado: Factura
+### 15.2 Nuevo agregado: Factura [V2+]
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -857,7 +861,7 @@ Ejemplos permitidos:
 └──────────────────────────────────────────────────────────┘
 ```
 
-### 15.3 Nuevas referencias V2
+### 15.3 Nuevas referencias V2 [V2+]
 
 | Desde | Hacia | Tipo |
 |-------|-------|------|
@@ -868,7 +872,7 @@ Ejemplos permitidos:
 | Factura | Expediente (expedienteId) | Por ID (opcional) |
 | Factura | Cliente (clienteId) | Por ID |
 
-### 15.4 Nuevos eventos V2
+### 15.4 Nuevos eventos V2 [V2+]
 
 | Evento | Agregado origen |
 |--------|-----------------|
@@ -879,7 +883,7 @@ Ejemplos permitidos:
 | FacturaPagada | Factura |
 | FacturaVencida | Factura |
 
-### 15.5 Nuevos invariantes V2
+### 15.5 Nuevos invariantes V2 [V2+]
 
 | # | Invariante | Agregado |
 |---|------------|----------|
@@ -887,16 +891,16 @@ Ejemplos permitidos:
 | I-CO-02 | **Expedientes dentro del límite** | Un contrato por_expediente no puede exceder su maxExpedientes. |
 | I-FA-01 | **Número de factura único** | Cada factura tiene un número secuencial único dentro de la organización. |
 
-### 15.6 Nuevos datos que nunca deben duplicarse (V2)
+### 15.6 Nuevos datos que nunca deben duplicarse (V2) [V2+]
 
 - **Importe del contrato**: No debe copiarse en la Factura. La factura referencia al contrato y calcula su importe en el momento de emisión.
 - **Datos del cliente en la factura**: No. Solo clienteId. El nombre y NIF se resuelven al generar el PDF.
 
 ---
 
-## 16. Evolución V3
+## 16. Evolución V3 [V3+]
 
-### 16.1 Nuevo agregado: Edificio
+### 16.1 Nuevo agregado: Edificio [V3+]
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -917,7 +921,7 @@ Ejemplos permitidos:
 └──────────────────────────────────────────────────────────┘
 ```
 
-### 16.2 Nuevo agregado: Dispositivo IoT
+### 16.2 Nuevo agregado: Dispositivo IoT [V3+]
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -936,7 +940,7 @@ Ejemplos permitidos:
 └──────────────────────────────────────────────────────────┘
 ```
 
-### 16.3 Nuevas referencias V3
+### 16.3 Nuevas referencias V3 [V3+]
 
 | Desde | Hacia | Tipo |
 |-------|-------|------|
@@ -944,7 +948,7 @@ Ejemplos permitidos:
 | DispositivoIoT | Inmueble (inmuebleId) | Por ID |
 | Expediente | Edificio (edificioId) | Por ID (si el expediente es sobre el edificio completo) |
 
-### 16.4 Nuevos eventos V3
+### 16.4 Nuevos eventos V3 [V3+]
 
 | Evento | Agregado origen |
 |--------|-----------------|
@@ -954,7 +958,7 @@ Ejemplos permitidos:
 | LecturaIoTRecibida | DispositivoIoT (evento de integración, no de dominio puro) |
 | CertificadorExternoAsignado | Expediente (nueva referencia a un nuevo tipo de Usuario) |
 
-### 16.5 Nuevos invariantes V3
+### 16.5 Nuevos invariantes V3 [V3+]
 
 | # | Invariante | Agregado |
 |---|------------|----------|
@@ -963,7 +967,7 @@ Ejemplos permitidos:
 | I-IoT-01 | **Identificador de hardware único** | Cada dispositivo IoT tiene un identificador de hardware único en el sistema. |
 | I-IoT-02 | **Un dispositivo por tipo por inmueble** | Un inmueble no puede tener dos dispositivos IoT del mismo tipo (ej. dos sensores de temperatura). En ese caso, se promedian. |
 
-### 16.6 Proyecciones V3
+### 16.6 Proyecciones V3 [V3+]
 
 - **Vista de edificio completo**: Combina Inmueble + Edificio + Expedientes activos para mostrar el estado energético del conjunto.
 - **Dashboard de monitorización**: Combina DispositivoIoT + Inmueble para mostrar datos en tiempo real.
@@ -971,4 +975,68 @@ Ejemplos permitidos:
 
 ---
 
+## 17. V2+ Evolution Summary
+
+> Esta sección es un **índice de referencias cruzadas** para localizar rápidamente qué partes de CF-022 corresponden a [V1], [V2+] o [V3+].
+
+### 17.1 Mapa de versiones por sección
+
+| Sección | Contenido | Versión |
+|---------|-----------|---------|
+| §1 | Principios fundamentales de agregados | [V1] |
+| §2 | Agregado: Cliente | [V1] |
+| §3 | Agregado: Inmueble | [V1] |
+| §4.1 | Expediente — Identidad | [V1] |
+| §4.2 | Expediente — Límite del agregado | [V1] |
+| §4.3 | Expediente — Estados | [V1] |
+| §4.4 | Expediente — Ownership | [V1] |
+| §4.5 | Expediente — Invariantes | [V1] |
+| §5 | Agregado: Organización | [V1] |
+| §6 | Agregado: Usuario | [V1] |
+| §7 | Relaciones entre agregados | [V1] |
+| §8 | Referencias permitidas vs. prohibidas | [V1] |
+| §9 | Consistencia transaccional | [V1] |
+| §10 | Invariantes por agregado | [V1] |
+| §11 | Eventos por agregado | [V1] |
+| §11.2 | Suscripciones críticas (incluye `generar factura (V2)`) | [V1] con mención aislada V2 |
+| §12 | Información derivada | [V1] |
+| §13 | Datos que nunca deben duplicarse | [V1] |
+| §14 | Errores de modelado prohibidos | [V1] |
+| §15 | Evolución V2 — Agregados Contrato y Factura | [V2+] |
+| §15.1 | Agregado Contrato | [V2+] |
+| §15.2 | Agregado Factura | [V2+] |
+| §15.3 | Nuevas referencias V2 | [V2+] |
+| §15.4 | Nuevos eventos V2 | [V2+] |
+| §15.5 | Nuevos invariantes V2 | [V2+] |
+| §15.6 | Nuevos datos no duplicables V2 | [V2+] |
+| §16 | Evolución V3 — Edificio e IoT | [V3+] |
+| §16.1 | Agregado Edificio | [V3+] |
+| §16.2 | Dispositivo IoT | [V3+] |
+| §16.3 | Nuevas referencias V3 | [V3+] |
+| §16.4 | Nuevos eventos V3 | [V3+] |
+| §16.5 | Nuevos invariantes V3 | [V3+] |
+| §16.6 | Proyecciones V3 | [V3+] |
+
+### 17.2 Notas sobre contenido V2+ mezclado en secciones V1
+
+Las siguientes secciones V1 contienen menciones aisladas de funcionalidad V2+ que no han sido extraídas:
+
+| Sección | Contenido V2+ | Justificación de permanencia |
+|---------|---------------|------------------------------|
+| §9.1 (Expediente) | `generar factura (V2)` | Es una nota de consistencia eventual, no una especificación de implementación. No afecta al modelo V1. |
+| §12.1 | `calificación energética final ponderada` | Es cálculo V1. El motor PITR es V1. |
+| §13.1 (listas de datos prohibidos) | `calificación energética histórica` | Es una regla de modelo de datos, no de implementación. Aplica también en V1. |
+
+---
+
 > **Nota final:** Este documento define con precisión quirúrgica los límites de cada agregado del dominio de Certilab. Cualquier implementación que cruce estos límites (referenciando entidades internas de otro agregado, duplicando datos, o realizando transacciones multi-agregado) será considerada una violación arquitectónica y deberá ser corregida. Los agregados son la unidad de consistencia, escalabilidad y evolución del dominio. Respetar sus límites es la regla más importante de la arquitectura de Certilab.
+
+---
+
+## CHANGELOG
+
+| Versión | Fecha | Autor | Motivo del cambio | Documento |
+|---------|-------|-------|-------------------|-----------|
+| 1.2.0 | 2026-07-11 | CF-022-NORMALIZACION | Normalización completa: etiquetado [V1]/[V2+]/[V3+] en todas las secciones, creación de §17 V2+ Evolution Summary, actualización de índices y changelog | CF-022-STRUCTURAL-AUDIT.md, CF-002 |
+| 1.1.0 | 2026-07-03 | CF-022 | Corrección de estado a UNDER REVIEW, adición de campo Última normalización | CF-022-STRUCTURAL-AUDIT.md |
+| 1.0.0 | 2026-07-01 | CF-022 | Versión inicial del documento de límites de agregados | CF-001A |

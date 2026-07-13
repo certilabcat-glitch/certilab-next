@@ -1,6 +1,8 @@
-# Certilab — Índice de Documentación del Proyecto
+# Certilab — Punto de entrada para IA (llms.txt)
 
-> Índice ligero para agentes de IA que necesiten descubrir la documentación oficial del proyecto Certilab.
+> Punto de entrada ligero para agentes de IA.
+>
+> **Índice completo de navegación:** [docs/INDEX.md](INDEX.md) — documento principal de navegación con todos los documentos activos clasificados por temática.
 >
 > Sigue la convención [llms.txt](https://llmstxt.org/): enlaces clasificados con breve descripción.
 >
