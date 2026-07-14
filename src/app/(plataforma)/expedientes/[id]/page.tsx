@@ -251,8 +251,8 @@ export default async function ExpedienteDetailPage({
         notas={expediente.notas}
       />
 
-      {/* Dictamen Técnico (visible si emitido o entregado) */}
-      {dictamen && expediente.estado === "DictamenEntregado" && (
+      {/* Dictamen Técnico (visible si emitido o entregado por AT) */}
+      {dictamen && (expediente.estado === "DictamenEmitido" || expediente.estado === "DictamenEntregado") && (
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="px-6 py-5 border-b border-gray-200">
             <h2 className="text-lg font-semibold text-gray-900">
@@ -265,8 +265,48 @@ export default async function ExpedienteDetailPage({
           <div className="px-6 py-5">
             <DictamenView
               dictamen={dictamen}
-              estado="Entregado"
+              estado={expediente.estado === "DictamenEntregado" ? "Entregado" : "Emitido"}
             />
+          </div>
+        </div>
+      )}
+
+      {/* Resultado entregado (auto-entrega vía ADR-002: Aprobado -> Entregado) */}
+      {expediente.estado === "Entregado" && (
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-6 py-5 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-900">
+              Resultado entregado
+            </h2>
+            <p className="text-sm text-gray-500 mt-1">
+              El resultado de la revisión ha sido entregado
+            </p>
+          </div>
+          <div className="px-6 py-5 space-y-4">
+            <div className="flex items-start gap-3 p-4 bg-green-50 rounded-lg border border-green-200">
+              <svg className="w-6 h-6 text-green-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <p className="text-sm font-medium text-green-800">
+                  Tu expediente ha sido revisado y el resultado está disponible.
+                </p>
+                <p className="text-sm text-green-700 mt-1">
+                  El certificado energético ha sido evaluado según los criterios técnicos establecidos.
+                  Puedes consultar las notas incluidas a continuación.
+                </p>
+              </div>
+            </div>
+            {expediente.notas && (
+              <div>
+                <h3 className="text-sm font-medium text-gray-700 mb-2">
+                  Notas de la revisión
+                </h3>
+                <div className="p-3 bg-gray-50 rounded-lg text-sm text-gray-700 whitespace-pre-wrap">
+                  {expediente.notas}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
