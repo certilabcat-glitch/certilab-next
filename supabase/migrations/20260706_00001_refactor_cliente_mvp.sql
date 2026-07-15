@@ -7,9 +7,9 @@
 -- ============================================================
 -- STEP 1: Drop RLS policies that depend on empresa_id
 -- ============================================================
-DROP POLICY IF EXISTS "Usuarios ven clientes de su empresa" ON core.cliente;
-DROP POLICY IF EXISTS "Usuarios pueden crear clientes en su empresa" ON core.cliente;
-DROP POLICY IF EXISTS "Usuarios pueden actualizar clientes de su empresa" ON core.cliente;
+DROP POLICY IF EXISTS "Usuarios pueden ver sus clientes" ON core.cliente;
+DROP POLICY IF EXISTS "Usuarios pueden crear clientes" ON core.cliente;
+DROP POLICY IF EXISTS "Usuarios pueden actualizar sus clientes" ON core.cliente;
 DROP POLICY IF EXISTS "Solo servicio puede hard-delete" ON core.cliente;
 DROP POLICY IF EXISTS "Service role acceso completo" ON core.cliente;
 

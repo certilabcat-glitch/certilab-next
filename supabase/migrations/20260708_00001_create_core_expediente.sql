@@ -116,7 +116,11 @@ ALTER TABLE core.expediente ENABLE ROW LEVEL SECURITY;
 -- STEP 4: Create RLS Policies (Single Tenant V1)
 -- Sigue el mismo patrón que core.inmueble
 -- ============================================================
-
+DROP POLICY IF EXISTS "Usuarios pueden ver expedientes de sus clientes" ON core.expediente;
+DROP POLICY IF EXISTS "Usuarios pueden crear expedientes" ON core.expediente;
+DROP POLICY IF EXISTS "Usuarios pueden actualizar expedientes" ON core.expediente;
+DROP POLICY IF EXISTS "Solo servicio puede hard-delete expedientes" ON core.expediente;
+DROP POLICY IF EXISTS "Service role acceso completo expedientes" ON core.expediente;
 -- Policy 1: SELECT - Usuarios autenticados ven expedientes de sus clientes
 --           En V1: basado en cliente_id (temporalmente auth.uid())
 CREATE POLICY "Usuarios pueden ver expedientes de sus clientes"

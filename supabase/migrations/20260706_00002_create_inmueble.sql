@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS core.inmueble (
   cliente_id UUID NOT NULL,
 
   -- Identificación catastral
-  referencia_catastral VARCHAR(20),
+  referencia_catastral VARCHAR(30),
 
   -- Dirección completa (CE3X requiere todos estos campos)
   direccion TEXT NOT NULL,
@@ -86,10 +86,10 @@ CREATE TABLE IF NOT EXISTS core.inmueble (
   longitud NUMERIC(10, 7),
   altitud INTEGER,
 
-  -- Clasificación del inmueble
-  uso uso_inmueble NOT NULL DEFAULT 'residencial',
-  tipo tipo_inmueble NOT NULL DEFAULT 'piso',
-  tipo_edificio tipo_edificio,
+ -- Clasificación del inmueble
+uso core.uso_inmueble NOT NULL DEFAULT 'residencial',
+tipo core.tipo_inmueble NOT NULL DEFAULT 'piso',
+tipo_edificio core.tipo_edificio,
 
   -- Superficies (CE3X: útil + construida)
   superficie_util NUMERIC(10, 2) CHECK (superficie_util IS NULL OR superficie_util > 0),
@@ -101,12 +101,12 @@ CREATE TABLE IF NOT EXISTS core.inmueble (
   altura_libre NUMERIC(5, 2) CHECK (altura_libre IS NULL OR altura_libre > 0),
 
   -- Orientación (CE3X)
-  orientacion_principal orientacion,
-  orientacion_secundaria orientacion,
+  orientacion_principal core.orientacion,
+orientacion_secundaria core.orientacion,
 
-  -- Zonificación climática CTE (CE3X)
-  zona_climatica_cte zona_climatica_cte,
-  zona_climatica_verano zona_climatica_verano,
+   -- Zonificación climática CTE (CE3X)
+  zona_climatica_cte core.zona_climatica_cte,
+zona_climatica_verano core.zona_climatica_verano,
 
   -- Certificado energético existente
   certificado_existente_url TEXT,

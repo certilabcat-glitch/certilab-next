@@ -123,7 +123,18 @@ ALTER TABLE core.documento ENABLE ROW LEVEL SECURITY;
 -- ============================================================
 -- STEP 5: Create RLS Policies
 -- ============================================================
+-- ============================================================
+-- STEP 5: Create RLS Policies
+-- ============================================================
 
+DROP POLICY IF EXISTS "Usuarios pueden ver documentos de sus expedientes" ON core.documento;
+DROP POLICY IF EXISTS "Usuarios pueden crear documentos" ON core.documento;
+DROP POLICY IF EXISTS "Usuarios pueden actualizar documentos" ON core.documento;
+DROP POLICY IF EXISTS "Solo servicio puede hard-delete documentos" ON core.documento;
+DROP POLICY IF EXISTS "Service role acceso completo documentos" ON core.documento;
+
+-- Policy 1: SELECT - Usuarios autenticados ven documentos de sus expedientes
+CREATE POLICY "Usuarios pueden ver documentos de sus expedientes"
 -- Policy 1: SELECT - Usuarios autenticados ven documentos de sus expedientes
 --           En V3: AND empresa_id IN (SELECT empresa_id FROM auth.users...)
 CREATE POLICY "Usuarios pueden ver documentos de sus expedientes"
