@@ -68,7 +68,7 @@ export async function corregirExpediente(
 
     // Revalidar caché
     revalidatePath(`/plataforma/expedientes/${expedienteId}`);
-    revalidatePath("/plataforma/mis-expedientes");
+    revalidatePath("/mis-expedientes");
     revalidatePath("/plataforma/at/dashboard");
 
     return { success: true };

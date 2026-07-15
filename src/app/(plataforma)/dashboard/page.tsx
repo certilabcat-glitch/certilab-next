@@ -44,17 +44,17 @@ export default function DashboardPage() {
           Acciones Rápidas
         </h2>
         <div className="space-y-3">
-          <Link href="/plataforma/mis-expedientes">
+          <Link href="/mis-expedientes">
             <Button variant="link" className="!justify-start">
               → Ver mis expedientes
             </Button>
           </Link>
-          <Link href="/plataforma/nuevo-expediente">
+          <Link href="/nuevo-expediente">
             <Button variant="link" className="!justify-start">
               → Crear nuevo expediente
             </Button>
           </Link>
-          <Link href="/plataforma/backoffice/expedientes">
+          <Link href="/backoffice/expedientes">
             <Button variant="link" className="!justify-start">
               → Ir a backoffice
             </Button>

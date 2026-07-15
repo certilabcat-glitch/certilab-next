@@ -96,7 +96,7 @@ export default async function ExpedienteDetailPage({
       {/* Header */}
       <div>
         <Link
-          href="/plataforma/mis-expedientes"
+          href="/mis-expedientes"
           className="text-sm text-blue-600 hover:text-blue-800 mb-4 inline-block"
         >
           ← Volver a Mis Expedientes

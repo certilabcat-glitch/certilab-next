@@ -84,7 +84,7 @@ export async function entregarResultado(
 
     // Revalidar caché
     revalidatePath(`/plataforma/expedientes/${expedienteId}`);
-    revalidatePath("/plataforma/mis-expedientes");
+    revalidatePath("/mis-expedientes");
 
     return { success: true };
   } catch (error) {

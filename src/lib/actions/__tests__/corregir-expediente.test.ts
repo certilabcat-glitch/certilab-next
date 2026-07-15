@@ -231,7 +231,7 @@ describe("corregirExpediente Server Action", () => {
         `/plataforma/expedientes/${mockExpedienteId}`
       );
       expect(revalidatePath).toHaveBeenCalledWith(
-        "/plataforma/mis-expedientes"
+        "/mis-expedientes"
       );
       expect(revalidatePath).toHaveBeenCalledWith(
         "/plataforma/at/dashboard"

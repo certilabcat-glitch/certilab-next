@@ -65,7 +65,7 @@ export async function solicitarSegundaOpinion(
     return { success: false, error: "Error al crear el expediente. Intenta de nuevo." };
   }
 
-  revalidatePath("/plataforma/mis-expedientes");
+  revalidatePath("/mis-expedientes");
   return { success: true, expedienteId: data.id };
 }
 

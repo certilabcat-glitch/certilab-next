@@ -28,7 +28,7 @@ export default async function MisExpedientesPage() {
             Aquí puedes ver todos tus expedientes
           </p>
         </div>
-        <Link href="/plataforma/solicitar-segunda-opinion">
+        <Link href="/solicitar-segunda-opinion">
           <Button>
             <svg
               className="w-5 h-5"
@@ -73,7 +73,7 @@ export default async function MisExpedientesPage() {
               No tienes expedientes activos en este momento.
             </p>
             <Link
-              href="/plataforma/solicitar-segunda-opinion"
+              href="/solicitar-segunda-opinion"
               className="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium"
             >
               Solicitar una Segunda Opinión →
