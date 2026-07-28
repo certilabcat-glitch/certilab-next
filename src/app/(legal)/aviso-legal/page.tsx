@@ -111,8 +111,7 @@ export default function AvisoLegal() {
       </p>
       <ul>
         <li>Email: {CONTACTO.email}</li>
-        <li>Formulario de contacto: disponible en el sitio web</li>
-      </ul>
+              </ul>
 
       <p style={{ marginTop: "3rem", fontSize: "0.85rem", color: "#999" }}>
         Última actualización: {new Date().toLocaleDateString("es-ES")}
