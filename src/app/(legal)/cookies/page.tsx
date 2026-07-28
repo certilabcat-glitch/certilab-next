@@ -31,7 +31,7 @@ export default function Cookies() {
 
       <h3>2.2 Cookies de Analítica</h3>
       <p>
-        Utilizamos Google Analytics para entender cómo usas el sitio web. Estas cookies recopilan información anónima sobre:
+        Utilizamos herramientas de analítica para entender cómo usas el sitio web. Estas cookies recopilan información anónima sobre:
       </p>
       <ul>
         <li>Páginas visitadas.</li>
@@ -43,14 +43,14 @@ export default function Cookies() {
         <strong>Necesitan tu consentimiento.</strong> Puedes rechazarlas sin afectar el funcionamiento del sitio.
       </p>
 
-      <h3>2.3 Cookies de Marketing</h3>
+      <h3>2.3 Cookies de Marketing y Publicidad</h3>
       <p>
         Utilizamos cookies de terceros para:
       </p>
       <ul>
-        <li>Mostrar anuncios relevantes en otros sitios web.</li>
+        <li>Mostrar anuncios relevantes en otros sitios web y redes sociales.</li>
         <li>Medir la efectividad de campañas publicitarias.</li>
-        <li>Personalizar contenido según tus intereses.</li>
+        <li>Personalizar contenido según tus intereses (Remarketing).</li>
       </ul>
       <p>
         <strong>Necesitan tu consentimiento.</strong> Puedes rechazarlas sin problemas.
@@ -62,7 +62,9 @@ export default function Cookies() {
       </p>
       <ul>
         <li><strong>Google Analytics:</strong> analítica web (analytics.google.com).</li>
+        <li><strong>Google Ads:</strong> publicidad y remarketing (google.com).</li>
         <li><strong>Meta Pixel:</strong> seguimiento de conversiones (facebook.com).</li>
+        <li><strong>TikTok Pixel:</strong> seguimiento de conversiones (tiktok.com).</li>
         <li><strong>Vercel Analytics:</strong> rendimiento del sitio (vercel.com).</li>
       </ul>
 
@@ -120,8 +122,6 @@ export default function Cookies() {
       </p>
       <ul>
         <li>Email: {CONTACTO.email}</li>
-        <li>Teléfono: {CONTACTO.telefonoFormateado}</li>
-        <li>Formulario de contacto: disponible en el sitio web</li>
       </ul>
 
       <h2>9. Información Adicional</h2>
