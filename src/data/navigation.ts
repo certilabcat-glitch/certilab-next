@@ -24,4 +24,5 @@ export const footerLegal = [
   { label: "Privacidad", href: "/privacidad/" },
   { label: "Cookies", href: "/cookies/" },
   { label: "Aviso legal", href: "/aviso-legal/" },
+  { label: "Reembolso", href: "/politica-de-reembolso/" },
 ];
