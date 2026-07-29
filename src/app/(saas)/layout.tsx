@@ -73,6 +73,7 @@ export default function SaasLayout({
             <Link href="/saas/precios/">Precios</Link>
             <Link href="/privacidad/">Privacidad</Link>
             <Link href="/aviso-legal/">Aviso legal</Link>
+            <Link href="/condiciones-de-venta">Condiciones de Venta</Link>
           </div>
           <div className="saas-footer-col">
             <h4>Contacto</h4>

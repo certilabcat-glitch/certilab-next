@@ -38,9 +38,7 @@ export async function updateSession(request: NextRequest) {
     "/api",
     "/",
     "/blog",
-    "/aviso-legal",
-    "/privacidad",
-    "/cookies",
+    "/condiciones-de-venta",
     "/landing",
     "/buscador-certificado-energetico-catalunya",
     "/cercador-certificats-energetics",
@@ -64,10 +62,20 @@ export async function updateSession(request: NextRequest) {
     "/favicon.png",
   ];
 
+  // Public legal routes — exact match only to avoid false positives via startsWith
+  const publicLegalRoutes = [
+    "/privacidad",
+    "/aviso-legal",
+    "/politica-de-reembolso",
+    "/cookies",
+  ];
+
   const pathname = request.nextUrl.pathname;
 
   // Allow public paths without auth
-  const isPublic = publicPrefixes.some((prefix) => pathname === prefix || pathname.startsWith(prefix + "/") || pathname.startsWith(prefix + "?"));
+  const isPublic =
+    publicPrefixes.some((prefix) => pathname === prefix || pathname.startsWith(prefix + "/") || pathname.startsWith(prefix + "?")) ||
+    publicLegalRoutes.some((route) => pathname === route);
 
   if (!user && !isPublic) {
     // No user, redirect to login (public site page)
