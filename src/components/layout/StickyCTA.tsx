@@ -4,14 +4,19 @@ import { useState, useEffect } from 'react';
 import styles from './StickyCTA.module.css';
 
 export default function StickyCTA() {
+  const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [isCookieAccepted, setIsCookieAccepted] = useState(() => {
-    if (typeof window === 'undefined') return true;
-    const cookieConsent = localStorage.getItem('cookie-consent');
-    return cookieConsent === 'accepted';
-  });
+  const [isCookieAccepted, setIsCookieAccepted] = useState(true);
 
   useEffect(() => {
+    setMounted(true);
+    // Leer consentimiento de cookies solo en cliente, después de hidratación
+    const cookieConsent = localStorage.getItem('cookie-consent');
+    setIsCookieAccepted(cookieConsent === 'accepted');
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     // Mostrar CTA sticky solo en móvil y después de scroll
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -21,8 +26,9 @@ export default function StickyCTA() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [mounted]);
 
+  if (!mounted) return null;
   if (!isVisible || !isCookieAccepted) return null;
 
   return (
