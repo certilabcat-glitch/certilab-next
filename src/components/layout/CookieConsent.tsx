@@ -1,31 +1,49 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './CookieConsent.module.css';
 
 export default function CookieConsent() {
-  const [isVisible, setIsVisible] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    const hasConsent = localStorage.getItem('cookie-consent');
-    return !hasConsent;
-  });
+  const [mounted, setMounted] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    try {
+      const hasConsent = localStorage.getItem('cookie-consent');
+      if (!hasConsent) {
+        setIsVisible(true);
+      }
+    } catch {
+      // localStorage no disponible (entorno de pruebas/SSR/privacidad estricta)
+      setIsVisible(true);
+    }
+  }, []);
 
   const handleAccept = () => {
-    localStorage.setItem('cookie-consent', 'accepted');
+    try {
+      localStorage.setItem('cookie-consent', 'accepted');
+    } catch {
+      // localStorage no disponible
+    }
     setIsVisible(false);
   };
 
   const handleReject = () => {
-    localStorage.setItem('cookie-consent', 'rejected');
+    try {
+      localStorage.setItem('cookie-consent', 'rejected');
+    } catch {
+      // localStorage no disponible
+    }
     setIsVisible(false);
   };
 
-  // SSR: no renderizar nada para evitar mismatch de hidratación
-  if (typeof window === 'undefined') return null;
+  // No renderizar nada hasta que la hidratación esté completa
+  if (!mounted) return null;
   if (!isVisible) return null;
 
   return (
-    <div className={styles.cookieConsent}>
+    <div className={styles.cookieConsent} suppressHydrationWarning>
       <div className={styles.cookieContent}>
         <div className={styles.cookieText}>
           <h3 className={styles.cookieTitle}>Consentimiento de cookies</h3>
