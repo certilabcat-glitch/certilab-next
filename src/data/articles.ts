@@ -189,6 +189,7 @@ Un certificado energético incorrecto puede costarte decenas de miles de euros. 
     tags: ["certificado energético", "errores", "reclamación", "compraventa"],
     readingTime: 12,
     featured: true,
+    image: "/images/blog/certificado-energetico-incorrecto.png",
   },
 {
     slug: "certificado-energetico-inflado",
