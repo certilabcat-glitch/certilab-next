@@ -358,6 +358,7 @@ Si sospechas que tu vivienda sufre Brown Discount por un certificado incorrecto,
     tags: ["brown discount", "calificación energética", "compraventa"],
     readingTime: 6,
     featured: true,
+    image: "/images/blog/brown-discount-precio-vivienda.png",
   },
 {
     slug: "cuanto-cuesta-certificado-energetico-2026",
