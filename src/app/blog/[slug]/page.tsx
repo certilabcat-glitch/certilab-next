@@ -132,6 +132,16 @@ export default async function BlogPostPage({ params }: Props) {
 
       <article className="post">
         <header className="post-header">
+          {article.image && (
+            <img
+              src={article.image}
+              alt={article.title}
+              className="post-image"
+              width={1200}
+              height={630}
+              loading="eager"
+            />
+          )}
           <p className="post-meta">{article.date} · {article.readingTime} min de lectura</p>
           <h1>{article.title}</h1>
         </header>
