@@ -293,6 +293,7 @@ Legalmente no, pero el certificado debe reflejar fielmente las características 
     tags: ["certificado energético", "calificación inflada", "reclamar", "fraude"],
     readingTime: 9,
     featured: true,
+    image: "/images/blog/certificado-energetico-inflado.png",
   },
 {
     slug: "brown-discount-precio-vivienda",
