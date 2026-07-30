@@ -481,8 +481,9 @@ Los certificados gratuitos suelen tener errores. ¿Tienes dudas del tuyo? Segund
     tags: ["certificado energético", "gratis", "guía"],
     readingTime: 5,
     featured: false,
+    image: "/images/blog/certificado-energetico-gratis.png",
   },
-{
+  {
     slug: "errores-certificado-energetico",
     title: "Errores comunes en el certificado energético: cómo detectarlos y solucionarlos",
     excerpt:
