@@ -365,6 +365,7 @@ Si sospechas que tu vivienda sufre Brown Discount por un certificado incorrecto,
     title: "Precio del Certificado Energético 2026: claves para entender las diferencias",
     excerpt:
       "¿Cuánto debería costar un certificado energético en 2026? Analizamos los precios del mercado y las diferencias entre las distintas opciones disponibles.",
+    image: "/images/blog/precio-certificado-energetico-2026.png",
     content: `
 
 <div class="respuesta-directa">
