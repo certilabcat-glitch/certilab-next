@@ -488,6 +488,7 @@ Los certificados gratuitos suelen tener errores. ¿Tienes dudas del tuyo? Segund
     title: "Errores comunes en el certificado energético: cómo detectarlos y solucionarlos",
     excerpt:
       "Los 5 errores más frecuentes que encontramos en los certificados energéticos y cómo identificarlos antes de que te cuesten dinero.",
+    image: "/images/blog/errores-comunes-certificado-energetico.png",
     content: `
 
 <div class="respuesta-directa">
