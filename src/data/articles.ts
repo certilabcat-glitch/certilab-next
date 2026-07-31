@@ -670,6 +670,7 @@ La mayoría de programas Next Generation tienen como fecha límite diciembre de 
     title: "¿Tu certificado energético es falso? 5 señales para detectarlo",
     excerpt:
       "Guía práctica para detectar si tu certificado energético es falso: 5 señales de alerta, precios orientativos, cómo reclamar y qué alternativas tienes.",
+    image: "/images/blog/certificado-energetico-falso-senales.png",
     content: `
 
 <div class="respuesta-directa">
