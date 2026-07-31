@@ -738,6 +738,7 @@ Debes informar al comprador lo antes posible y gestionar un certificado válido.
     title: "¿Es obligatorio el certificado energético para alquilar una vivienda en 2026?",
     excerpt:
       "Sí, el certificado energético es obligatorio para alquilar desde 2013. Te contamos qué dice la ley, las excepciones reales y qué pasa si alquilas sin él.",
+    image: "/images/blog/certificado-energetico-obligatorio-alquiler.png",
     content: `
 
 <div class="respuesta-directa">
