@@ -579,6 +579,7 @@ Si ya lo usaste para vender o alquilar, solicita una corrección inmediata al t�
     title: "Ayudas Next Generation para Rehabilitación Energética 2026: guía completa",
     excerpt:
       "Guía completa de las ayudas Next Generation EU para rehabilitación energética de viviendas. ¿Cumples los requisitos? ¿Cómo solicitarlas?",
+    image: "/images/blog/ayudas-next-generation-rehabilitacion-2026.png",
     content: `
 
 <div class="respuesta-directa">
