@@ -204,7 +204,7 @@ export default function SegundaOpinionPage() {
          dangerouslySetInnerHTML={{
            __html: JSON.stringify({
              "@context": "https://schema.org",
-             "@type": "Service",
+             "@type": "ProfessionalService",
              name: "Segunda Opinión Certificado Energético",
              description: "Análisis técnico forense de certificados energéticos. Detectamos calificaciones infladas, errores técnicos y Brown Discount. Firmado por arquitecta técnica colegiada CATEB 9457 con seguro de responsabilidad civil.",
              image: "https://www.certilab.cat/og-image.jpg",

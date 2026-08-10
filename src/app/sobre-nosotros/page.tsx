@@ -49,7 +49,7 @@ export default function SobreNosotrosPage() {
       <CTASection
         title="¿Hablamos?"
         text="Si tienes cualquier duda sobre tu certificado energético o tu vivienda, escríbenos. Sin compromiso. Sin presión."
-        buttonText="Hablar con Eva"
+        buttonText="Saber Más"
         buttonHref={waUrl()}
       />
       <TrustBlockSection />

@@ -32,7 +32,7 @@ export default function InformeTecnicoPage() {
            __html: JSON.stringify([
              {
                "@context": "https://schema.org",
-               "@type": "Service",
+               "@type": "ProfessionalService",
                name: "Informe Técnico Energético (399€)",
                description:
                  "Análisis técnico completo del comportamiento energético del inmueble. Mejoras priorizadas, ahorro estimado y mapa de ayudas. Firmado por arquitecta técnica colegiada CATEB 9457.",
