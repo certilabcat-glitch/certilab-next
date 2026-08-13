@@ -109,13 +109,12 @@ export default function Header() {
               <Image
                 src="/images/logo-certilab.png"
                 alt="Logo de Certilab"
-                width={66}
-                height={40}
+                width={82}
+                height={50}
                 priority
                 className={styles["nav-logo-img"]}
               />
             </div>
-            <span className={styles["nav-logo-sub"]}>Despacho de Auditoría Energética</span>
           </Link>
 
           <button
