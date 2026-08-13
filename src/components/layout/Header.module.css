@@ -52,8 +52,17 @@
   font-weight: 400;
 }
 
+.nav-logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .nav-logo-img {
-  margin-right: 12px;
+  width: 60px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* ===== Hamburger ===== */

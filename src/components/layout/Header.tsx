@@ -105,16 +105,17 @@ export default function Header() {
       <nav className={styles.nav} aria-label="Navegación principal">
         <div className={styles["nav-inner"]}>
           <Link href="/" className={styles["nav-logo"]} aria-label="Certilab — inicio">
-            <Image
-              src="/images/logo-certilab.jpeg"
-              alt="Logo de la empresa"
-              width={40}
-              height={40}
-              priority
-              className={styles["nav-logo-img"]}
-              style={{ borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
-            />
-            <span className={styles["nav-logo-title"]}>Certilab</span>
+            <div className={styles["nav-logo-brand"]}>
+              <Image
+                src="/images/logo-certilab.jpeg"
+                alt="Logo de Certilab"
+                width={60}
+                height={40}
+                priority
+                className={styles["nav-logo-img"]}
+              />
+              <span className={styles["nav-logo-title"]}>Certilab</span>
+            </div>
             <span className={styles["nav-logo-sub"]}>Despacho de Auditoría Energética</span>
           </Link>
 
