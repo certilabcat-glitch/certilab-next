@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation } from "@/data/navigation";
@@ -104,6 +105,15 @@ export default function Header() {
       <nav className={styles.nav} aria-label="Navegación principal">
         <div className={styles["nav-inner"]}>
           <Link href="/" className={styles["nav-logo"]} aria-label="Certilab — inicio">
+            <Image
+              src="/images/logo-certilab.jpeg"
+              alt="Logo de la empresa"
+              width={40}
+              height={40}
+              priority
+              className={styles["nav-logo-img"]}
+              style={{ borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+            />
             <span className={styles["nav-logo-title"]}>Certilab</span>
             <span className={styles["nav-logo-sub"]}>Despacho de Auditoría Energética</span>
           </Link>

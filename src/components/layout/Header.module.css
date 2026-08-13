@@ -52,6 +52,10 @@
   font-weight: 400;
 }
 
+.nav-logo-img {
+  margin-right: 12px;
+}
+
 /* ===== Hamburger ===== */
 .nav-toggle {
   display: none;
