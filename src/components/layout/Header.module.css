@@ -34,24 +34,6 @@
   flex-shrink: 0;
 }
 
-.nav-logo-title {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 300;
-  color: var(--color-terra);
-}
-
-.nav-logo-sub {
-  font-family: var(--font-sans);
-  font-size: 0.6rem;
-  letter-spacing: 0.05em;
-  color: var(--color-grey);
-  text-transform: none;
-  font-weight: 400;
-}
-
 .nav-logo-brand {
   display: flex;
   align-items: center;
