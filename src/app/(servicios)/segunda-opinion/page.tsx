@@ -9,7 +9,7 @@ import { segundaOpinionFaq } from "@/data/faq";
 import { waUrl } from "@/lib/wa";
 import styles from "./SegundaOpinion.module.css";
 
-import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from "next/script";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 export const metadata: Metadata = {
@@ -28,7 +28,19 @@ export const metadata: Metadata = {
 export default function SegundaOpinionPage() {
   return (
     <>
-      <GoogleAnalytics gaId="G-6831ECDTJ7" />
+      {/* Google Analytics 4 — solo esta página */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-6831ECDTJ7"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-6831ECDTJ7');
+        `}
+      </Script>
 
       <Breadcrumbs
         items={[
