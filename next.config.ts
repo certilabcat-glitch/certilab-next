@@ -35,7 +35,7 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.facebook.com https://*.googleapis.com; connect-src 'self' https://api.certilab.cat https://n8n.certilab.cat; frame-src 'self' https://www.facebook.com; font-src 'self' https://fonts.gstatic.com;",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.facebook.com https://*.googleapis.com; connect-src 'self' https://api.certilab.cat https://n8n.certilab.cat https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com; frame-src 'self' https://www.facebook.com; font-src 'self' https://fonts.gstatic.com;",
           },
         ],
       },
